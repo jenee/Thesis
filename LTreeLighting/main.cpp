@@ -38,6 +38,11 @@ GLfloat light_amb[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_diff[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 
+
+double halfRadius = .25;
+double cylinderHeight = 2.0;
+
+
 int mat = 0;
 //set up some materials
 typedef struct materialStruct {
@@ -153,9 +158,9 @@ void drawcube() {
 
 void drawCylinder() {
     {
-        double radiiTop = 0.25;
-        double radiiBase = 0.20;
-        double height = 1.0;
+        double radiiTop = halfRadius;
+        double radiiBase = halfRadius*.80;
+        double height = cylinderHeight;
         int sliceNum = 30;
         int stackNum = 30;
         glPushMatrix();
@@ -256,9 +261,9 @@ void display() {
    drawCylinder();
     
     double halfRadius = .25;
-    double cylinderHeight = 1.0;
+    double cylinderHeight = 2.0;
     
-    drawBranchesRecursive(2, 45, halfRadius, cylinderHeight*.90);
+    drawBranchesRecursive(2, 45, halfRadius, cylinderHeight*.75);
 
     /*
     for (int i = 1; i < 50; i++) {
