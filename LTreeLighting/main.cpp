@@ -192,7 +192,7 @@ void drawBranches(double tiltAngle, double xOffset, double yOffset) {
     }
     glPopMatrix();
 }
-/*
+
 void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, double yOffset) {
     if( countLeft == 0) {
         return;
@@ -201,14 +201,14 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
     {
         //Draw right branch
         glTranslated(xOffset, yOffset, 0.0);
-        glRotated(tiltAngle, 0, 0, 1.0);
+        glRotated(-tiltAngle, 0, 0, 1.0);
         drawCylinder();
         
-        glPushMatrix();
-        {
+        //glPushMatrix();
+        //{
             drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset*2, yOffset);
-        }
-        glPopMatrix();
+        //}
+        //glPopMatrix();
 
     }
     glPopMatrix();
@@ -217,20 +217,19 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
         //draw left branch
         glTranslated(-xOffset, yOffset, 0.0);
         
-        glRotated(-tiltAngle, 0, 0, 1.0);
+        glRotated(tiltAngle, 0, 0, 1.0);
         
         drawCylinder();
-        glPushMatrix();
-        {
+        //glPushMatrix();
+        //{
             drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset*2, yOffset);
-        }
-        glPopMatrix();
+        //}
+        //glPopMatrix();
 
         
     }
     glPopMatrix();
 }
-*/
 
 
 void display() {
@@ -259,14 +258,16 @@ void display() {
     double halfRadius = .25;
     double cylinderHeight = 1.0;
     
-    //drawBranchesRecursive(4, 45, halfRadius, cylinderHeight*.90);
+    drawBranchesRecursive(2, 45, halfRadius, cylinderHeight*.90);
 
+    /*
     for (int i = 1; i < 50; i++) {
         //for (int i = 0; i < 50; i++) {
         //drawBranches(-30.0, i*halfRadius+i*halfRadius, (i+1)*(cylinderHeight) );
         drawBranches(-30.0, i*halfRadius, i*(cylinderHeight) );
 
     }
+     */
     
    glPopMatrix();
    
