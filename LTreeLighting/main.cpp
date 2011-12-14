@@ -167,7 +167,7 @@ void drawCylinder() {
             gluCylinder(myCylinder, radiiBase, radiiTop, height, sliceNum, stackNum);
         }
         glPopMatrix();
-    }
+    } 
 }
 
 void drawBranches(double tiltAngle, double xOffset, double yOffset) {
