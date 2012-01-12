@@ -42,6 +42,7 @@ GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 double halfRadius = .25;
 double cylinderHeight = 2.0;
 
+int treeHeight = 0;
 
 int mat = 0;
 //set up some materials
@@ -202,16 +203,18 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
     if( countLeft == 0) {
         return;
     }
+
     glPushMatrix();
     {
         //Draw right branch
         glTranslated(xOffset, yOffset, 0.0);
+
         glRotated(-tiltAngle, 0, 0, 1.0);
         drawCylinder();
         
         //glPushMatrix();
         //{
-            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset*2, yOffset);
+            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
         //}
         //glPopMatrix();
 
@@ -227,7 +230,7 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
         drawCylinder();
         //glPushMatrix();
         //{
-            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset*2, yOffset);
+            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
         //}
         //glPopMatrix();
 
@@ -263,7 +266,7 @@ void display() {
     double halfRadius = .25;
     double cylinderHeight = 2.0;
     
-    drawBranchesRecursive(2, 45, halfRadius, cylinderHeight*.75);
+    drawBranchesRecursive(treeHeight, 45, halfRadius, cylinderHeight*.75);
 
     /*
     for (int i = 1; i < 50; i++) {
@@ -298,7 +301,7 @@ void reshape(int w, int h) {
 void keyboard(unsigned char key, int x, int y )
 {
    switch( key ) {
-      case 'l':
+      case 'l': case 'L':
          light = !light;
          if (light)
             glEnable(GL_LIGHTING);
@@ -306,14 +309,23 @@ void keyboard(unsigned char key, int x, int y )
             glDisable(GL_LIGHTING);
          break;
          //simple way to toggle the materials
-      case 'm':
+      case 'm': case 'M':
          mat++;
          if (mat%2 == 0)
             materials(RedFlat);
          else if (mat%2 == 1)
             materials(GreenShiny);
          break;
-         
+      case 'g': case 'G':
+         treeHeight++;
+         printf("Grow tree height to %d\n",treeHeight);
+         break;  
+      case 's': case 'S':
+         if ( treeHeight > 0 ) {
+            treeHeight--;
+            printf("Shrink tree height to %d\n",treeHeight);    
+         }
+         break;
       case 'q': case 'Q' :
          exit( EXIT_SUCCESS );
          break;
@@ -392,6 +404,8 @@ int main(int argc, char** argv) {
    GW = 400;
    GH = 400;
    light = 0;
+    
+   treeHeight = 10;
    
    doLSystemsString(2);
     printf("\n\n");
