@@ -26,6 +26,9 @@
 
 using namespace std;
 
+
+void growTreeByVal(int val);
+
 int GW;
 int GH;
 
@@ -317,13 +320,11 @@ void keyboard(unsigned char key, int x, int y )
             materials(GreenShiny);
          break;
       case 'g': case 'G':
-         treeHeight++;
-         printf("Grow tree height to %d\n",treeHeight);
+         growTreeByVal( treeHeight + 1 );
          break;  
       case 's': case 'S':
          if ( treeHeight > 0 ) {
-            treeHeight--;
-            printf("Shrink tree height to %d\n",treeHeight);    
+            growTreeByVal( treeHeight - 1 );   
          }
          break;
       case 'q': case 'Q' :
@@ -331,6 +332,16 @@ void keyboard(unsigned char key, int x, int y )
          break;
    }
    glutPostRedisplay();
+}
+
+void growTreeByVal(int val) {
+   treeHeight+=val;
+   if(val >=0 ) {
+      printf("Grow tree height by %d to %d\n",val,treeHeight);
+   } else {
+      printf("Shrink tree height by %d to %d\n",val, treeHeight);    
+   }
+
 }
 
 void doLSystemsString(int numIterations) { //, string seedStr, string pat1, string rplc1, string pat2, string rplc2) {

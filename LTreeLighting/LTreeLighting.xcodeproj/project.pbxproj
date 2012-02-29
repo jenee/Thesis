@@ -14,6 +14,7 @@
 		8417AC52146A51330094714A /* LTreeStruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8417AC51146A51330094714A /* LTreeStruct.cpp */; };
 		8417AC54146A51D50094714A /* LTreeRuleset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8417AC53146A51D50094714A /* LTreeRuleset.cpp */; };
 		8417AC56146A52D50094714A /* TestLTreeRuleset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8417AC55146A52D50094714A /* TestLTreeRuleset.cpp */; };
+		84A196B714FEB14A00D9EC80 /* Metrics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84A196B614FEB14A00D9EC80 /* Metrics.cpp */; };
 		8D0C4E8D0486CD37000505A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
 		8D0C4E900486CD37000505A6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20286C2BFDCF999611CA2CEA /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8D0C4E920486CD37000505A6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
@@ -32,6 +33,8 @@
 		8417AC53146A51D50094714A /* LTreeRuleset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LTreeRuleset.cpp; sourceTree = "<group>"; };
 		8417AC55146A52D50094714A /* TestLTreeRuleset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLTreeRuleset.cpp; sourceTree = "<group>"; };
 		8417AC57146A53280094714A /* LTreeRuleset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTreeRuleset.h; sourceTree = "<group>"; };
+		84A196B614FEB14A00D9EC80 /* Metrics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Metrics.cpp; sourceTree = "<group>"; };
+		84A196B914FEB15A00D9EC80 /* Metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metrics.h; sourceTree = "<group>"; };
 		8D0C4E960486CD37000505A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0C4E970486CD37000505A6 /* BASEPROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASEPROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +82,8 @@
 				8417AC53146A51D50094714A /* LTreeRuleset.cpp */,
 				8417AC57146A53280094714A /* LTreeRuleset.h */,
 				8417AC55146A52D50094714A /* TestLTreeRuleset.cpp */,
+				84A196B614FEB14A00D9EC80 /* Metrics.cpp */,
+				84A196B914FEB15A00D9EC80 /* Metrics.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				8417AC52146A51330094714A /* LTreeStruct.cpp in Sources */,
 				8417AC54146A51D50094714A /* LTreeRuleset.cpp in Sources */,
 				8417AC56146A52D50094714A /* TestLTreeRuleset.cpp in Sources */,
+				84A196B714FEB14A00D9EC80 /* Metrics.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
