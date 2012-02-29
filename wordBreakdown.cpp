@@ -7,6 +7,7 @@
 #include <assert.h>
 
 #include <sqlite3.h>
+//#include "SQLite/sqlite-amalgamation-3071000/sqlite3.h"
 
 using namespace std;
 
@@ -24,7 +25,42 @@ vector<string> dictLookup( string sampaStr );
 vector<string> splitSampaIntoLetters( string phrase );
 
 
+static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+   int i;
+   for(i=0; i<argc; i++){
+      printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+   }
+   printf("\n");
+   return 0;
+}
+
+
 int main() {
+   sqlite3 *db;
+   char *zErrMsg = 0;
+   int rc;
+   
+   char* tablename = "finalDictTable";//argv[1];
+   char* query = "SELECT SAMPAspelling FROM finalDictTable WHERE ortho = 'zoologically'";//argv[2];
+   
+   rc = sqlite3_open(tablename, &db);
+   if( rc ){
+      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+      sqlite3_close(db);
+      return(1);
+   }
+   
+   
+   rc = sqlite3_exec(db, query, callback, 0, &zErrMsg);
+   if( rc!=SQLITE_OK ){
+      fprintf(stderr, "SQL error: %s\n", zErrMsg);
+      sqlite3_free(zErrMsg);
+   }
+   
+   sqlite3_close(db);
+   return 0;
+
+   /*
    cout << "HTTP/1.1 200 OK\n";
    cout << "Cache-Control: private\n";
    cout << "Content-Type: text/plain\n";
@@ -43,6 +79,7 @@ int main() {
 
    cout << output;
    return 0;
+    */
 }
 
 
@@ -95,7 +132,7 @@ vector<phone> getSampa( string orthoWord ) {
 
 vector<string> dictLookup( string sampaStr ) {
    vector<string> orthoMatches;
-   vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaString);
+   vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaStr);
    assert(0); // PUT SQL QUERY HERE
    
    return orthoMatches;
