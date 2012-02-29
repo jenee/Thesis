@@ -24,10 +24,19 @@
 #include <assert.h>
 #include <string>
 
+
+#include "Metrics.h"
+
+
+
 using namespace std;
 
 
 void growTreeByVal(int val);
+int calcGrowth();
+
+int lyricWordIndex = 0;
+vector<clarityVal> wordClarities;
 
 int GW;
 int GH;
@@ -319,8 +328,12 @@ void keyboard(unsigned char key, int x, int y )
          else if (mat%2 == 1)
             materials(GreenShiny);
          break;
+      case 'n': case 'N':
+         //int growth = calcGrowth();
+         growTreeByVal( calcGrowth() );
+         break;
       case 'g': case 'G':
-         growTreeByVal( treeHeight + 1 );
+         growTreeByVal( treeHeight + 1 );  
          break;  
       case 's': case 'S':
          if ( treeHeight > 0 ) {
@@ -333,6 +346,22 @@ void keyboard(unsigned char key, int x, int y )
    }
    glutPostRedisplay();
 }
+
+int calcGrowth() {
+   clarityVal clarval = wordClarities[lyricWordIndex];
+   int length = wordClarities.size();  // establish size of array
+   int max = wordClarities[0];       // start with max = first element
+   
+   for(int i = 1; i<length; i++)
+   {
+      if(wordClarities[i] > max)
+         max = wordClarities[i];
+   }
+   int growth = max / clarval;
+   return growth;
+}
+
+
 
 void growTreeByVal(int val) {
    treeHeight+=val;
@@ -384,6 +413,12 @@ void doLSystemsString(int numIterations) { //, string seedStr, string pat1, stri
         seedString = finalSeedlingString;
     }
 
+}
+
+void initStuff() {
+   vector<lyricWord> lyrics;
+   //dummy stub method with dummy return val
+   wordClarities =  measureClarity( lyrics );
 }
 
 //* credit to Dae here: http://cboard.cprogramming.com/cplusplus-programming/118266-strings-find-replace.html *//
