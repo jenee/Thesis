@@ -1,0 +1,100 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\fswiss\fcharset0 ArialMT;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;\red255\green255\blue189;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Useful website:\
+    CSV files:\
+        http://www.sqlite.org/cvstrac/wiki?p=ImportingFiles\
+    Command Line Shell For SQLite:\
+        http://www.sqlite.org/sqlite.html\
+    Quick Start:\
+        http://www.sqlite.org/quickstart.html\
+\
+\
+\
+Open the database with sqlite from the command line:\
+	
+\f1 $ sqlite3 phoneticDict 
+\f0 \
+Exit the sqlite prompt thingy:\
+	
+\f1 > .quit\
+
+\f0 Get help in the sqlite prompt thingy:\
+	
+\f1 > .help
+\f0 \
+Get first ten rows from table: \
+	
+\f1 > select * from phoneticDictTable limit 10;
+\f0 \
+Get first ten orthographic entries from table:\
+
+\f1 	> select ortho from phoneticDictTable limit 10;\
+
+\f0 get first ten sampa entries from table whose ortho begins with a:\
+
+\f1 	> select sampa FROM phoneticDictTable WHERE ortho LIKE 'a%' limit 10;\
+
+\f0 \
+\
+query the sampa string for a particular ortho:\
+
+\f1 	> select sampa FROM phoneticDictTable WHERE ortho = '<some ortho string>';\
+\
+\
+\pard\pardeftab720
+
+\f2\fs26 \cf2 \cb3 Hello Jenee,\
+\
+This is the schema for the Orthograph table:\
+\
+\pard\pardeftab720
+
+\f3 \cf2 ORTHOGRAPH\
+UQIDENT\
+GRAMMAR\
+SAMPA\
+EXTEND_ORTHO\
+FREQUENCY\
+\pard\pardeftab720
+
+\f2 \cf2 These columns are in the order they appeared in your spreadsheet.\
+\
+To query for the sampa string for an orthoraph, you could use this SQL:\
+\pard\pardeftab720
+
+\f3 \cf2 \cb4 SELECT\cb3  SAMPA \
+FROM\'a0\'a0 SAMP_DICTIONARY
+\f2 \
+\pard\pardeftab720
+
+\f3 \cf2 WHERE\'a0 ORTHOGRAPH = '<some string>';\
+\pard\pardeftab720
+
+\f2 \cf2 To query for the possible orthographs based on the first characters of the sampa would be:\
+\pard\pardeftab720
+
+\f3 \cf2 \cb4 SELECT\cb3  ORTHOGRAPH\
+FROM\'a0\'a0 SAMPA_DICTIONARY\
+WHERE\'a0 SAMPA LIKE '<some string>%';\
+\pard\pardeftab720
+
+\f2 \cf2 The '%' character in SQL is a wildcard matching none or more characters.\'a0 The like query is not very efficient.\'a0 An optimization would be to add several columns, such as FIRST_SAMPA_CHAR, SECOND_SAMPA_CHAR, THIRD_SAMPA_CHAR, etc, and query like this:\
+\pard\pardeftab720
+
+\f3 \cf2 \cb4 SELECT\cb3  ORTHOGRAPH\
+FROM\'a0\'a0 SAMPA_DICTIONARY\
+WHERE\'a0 FIRST_SAMPA_CHAR = '<some char>'\
+AND\'a0\'a0\'a0 SECOND_SAMPA_CHAR = '<some char>'\
+...\
+\pard\pardeftab720
+
+\f2 \cf2 In all of these queries, you could get multiple rows.\
+\
+Regards,\
+Elliott Perkins}
