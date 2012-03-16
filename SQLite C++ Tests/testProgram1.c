@@ -24,6 +24,6 @@ int main(int argc, char* argv[]) {
    }
    
 
-
+   sqlite3_close( conn );
 	return 0;
 }
