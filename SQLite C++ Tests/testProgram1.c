@@ -18,6 +18,9 @@ int main(int argc, char* argv[]) {
    if ( error ) {
       fprintf(stderr,"Cannot open database %s",argv[1]); 
       exit(0);
+   } else {
+      fprintf(stdout,"Sucessful connection to database %s",argv[1]); 
+   
    }
    
 
