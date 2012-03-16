@@ -1,5 +1,5 @@
 CC    = g++
-CFLAGS   = 
+CFLAGS   = -lsqlite3 
 
 all: testProgram1
    
