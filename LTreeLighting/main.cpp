@@ -51,7 +51,7 @@ GLfloat light_diff[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 
 //Globals for animation
-int refreshMills = 30;    // refresh interval in milliseconds
+int refreshMills = 1000;    // refresh interval in milliseconds
 int treeHeight = 0;
 
 
@@ -255,6 +255,13 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
     glPopMatrix();
 }
 
+void Timer(int value) {
+   
+   growTreeByVal( value );  
+   
+	glutPostRedisplay();      // Post re-paint request to activate display()
+	glutTimerFunc(refreshMills, Timer, value ); // next Timer call milliseconds later
+}
 
 void display() {
    
@@ -470,7 +477,7 @@ int main(int argc, char** argv) {
    glEnable(GL_DEPTH_TEST);
    //only do this once
    init_lighting();
-   
+   glutTimerFunc(0, Timer, 1);
    glutMainLoop();
    
 }
