@@ -42,7 +42,7 @@ int GW;
 int GH;
 
 int light;
-//globals for lighting - use a white light and apply materials
+//Globals for lighting - use a white light and apply materials
 //light position
 GLfloat light_pos[4] = {0.0, 0.0, 1.5, 1.0};
 //light color (ambiant, diffuse and specular)
@@ -50,11 +50,15 @@ GLfloat light_amb[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_diff[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 
+//Globals for animation
+int refreshMills = 30;    // refresh interval in milliseconds
+int treeHeight = 0;
+
+
 
 double halfRadius = .25;
 double cylinderHeight = 2.0;
 
-int treeHeight = 0;
 
 int mat = 0;
 //set up some materials
@@ -456,7 +460,7 @@ int main(int argc, char** argv) {
    GH = 400;
    light = 0;
     
-   treeHeight = 10;
+   treeHeight = 0;
    
    doLSystemsString(2);
     printf("\n\n");
