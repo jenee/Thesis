@@ -34,6 +34,8 @@ using namespace std;
 
 void growTreeByVal(int val);
 int calcGrowth();
+void changeRefreshRateBy( int val );
+void changeTempoBy( int val );
 
 int lyricWordIndex = 0;
 vector<clarityVal> wordClarities;
@@ -52,6 +54,7 @@ GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 
 //Globals for animation
 int refreshMills = 1000;    // refresh interval in milliseconds
+int deltaRefreshMills = 100;  // the amount by which to change the refresh rate per change
 int treeHeight = 0;
 
 
@@ -353,11 +356,29 @@ void keyboard(unsigned char key, int x, int y )
             growTreeByVal( -1 );   
          }
          break;
+      case '>': case '.':
+         //then make tempo faster!
+         changeTempoBy( 1 );
+         break;
+      case '<': case ',':
+         //then make tempo slower!
+         changeTempoBy( -1 );
+         break;
       case 'q': case 'Q' :
          exit( EXIT_SUCCESS );
          break;
    }
    glutPostRedisplay();
+}
+
+void changeTempoBy( int val ) {
+   changeRefreshRateBy( -1 * val * deltaRefreshMills );
+
+}
+
+void changeRefreshRateBy( int val ) {
+   refreshMills += val;
+   printf("Refresh every %d ms\n",refreshMills);
 }
 
 int calcGrowth() {
