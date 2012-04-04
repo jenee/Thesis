@@ -36,6 +36,7 @@ void growTreeByVal(int val);
 int calcGrowth();
 void changeRefreshRateBy( int val );
 void changeTempoBy( int val );
+void pauseMine();
 
 int lyricWordIndex = 0;
 vector<clarityVal> wordClarities;
@@ -54,8 +55,9 @@ GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 
 //Globals for animation
 int refreshMills = 1000;    // refresh interval in milliseconds
-int deltaRefreshMills = 100;  // the amount by which to change the refresh rate per change
+int deltaRefreshMills = 500;  // the amount by which to change the refresh rate per change
 int treeHeight = 0;
+int deltaTreeGrow = 1;
 
 
 
@@ -260,10 +262,18 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
 
 void Timer(int value) {
    
-   growTreeByVal( value );  
+   growTreeByVal( deltaTreeGrow );  
    
 	glutPostRedisplay();      // Post re-paint request to activate display()
-	glutTimerFunc(refreshMills, Timer, value ); // next Timer call milliseconds later
+	glutTimerFunc(refreshMills, Timer, deltaTreeGrow ); // next Timer call milliseconds later
+}
+
+void pauseMine() {
+   if ( deltaTreeGrow == 0 ) {
+      deltaTreeGrow = 1;
+   } else {
+      deltaTreeGrow = 0;
+   }
 }
 
 void display() {
@@ -349,7 +359,7 @@ void keyboard(unsigned char key, int x, int y )
       case 'g': case 'G':
          //printf("keypress G");
          growTreeByVal( 1 );  
-         break;  
+         break;
       case 's': case 'S':
          //printf("keypress S");
          if ( treeHeight > 0 ) {
@@ -363,7 +373,11 @@ void keyboard(unsigned char key, int x, int y )
       case '<': case ',':
          //then make tempo slower!
          changeTempoBy( -1 );
-         break;
+         break;  
+      case 'p': case 'P':
+         //printf("keypress P");
+         pauseMine(); 
+         break;  
       case 'q': case 'Q' :
          exit( EXIT_SUCCESS );
          break;
@@ -498,7 +512,7 @@ int main(int argc, char** argv) {
    glEnable(GL_DEPTH_TEST);
    //only do this once
    init_lighting();
-   glutTimerFunc(0, Timer, 1);
+   glutTimerFunc(0, Timer, deltaTreeGrow );
    glutMainLoop();
    
 }
