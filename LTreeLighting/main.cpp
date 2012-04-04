@@ -350,7 +350,7 @@ void keyboard(unsigned char key, int x, int y )
 }
 
 int calcGrowth() {
-   printf("entering calc growth");
+   //printf("entering calc growth");
    clarityVal clarval = wordClarities[lyricWordIndex];
    int length = wordClarities.size();  // establish size of array
    int max = wordClarities[0];       // start with max = first element
@@ -367,7 +367,7 @@ int calcGrowth() {
 
 
 void growTreeByVal(int val) {
-   printf("entering growTreeByVal");
+   //printf("entering growTreeByVal");
 
    treeHeight+=val;
    if(val >=0 ) {
