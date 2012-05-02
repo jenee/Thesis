@@ -1,0 +1,55 @@
+.Free_Form {
+    color: #000000;
+    font-family: 'Times-Roman', 'Times', 'Times New Roman', 'serif';
+    font-size: 12pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 14pt;
+    margin-bottom: 0pt;
+    margin-left: 0pt;
+    margin-right: 0pt;
+    margin-top: 0pt;
+    opacity: 1.00;
+    padding-bottom: 0pt;
+    padding-top: 0pt;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0pt;
+    text-transform: none;
+}
+.Normal, .layout_style_1 {
+    width: 451pt;
+}
+.layout_style_1 {
+    width: 451pt;
+}
+.graphic_shape_style_default {
+    background: #63a32c;
+    border: 1pt #000000 solid;
+    float: none;
+    margin: 0pt;
+    opacity: 1.00;
+}
+.Spacer {display: inline; }
+.Spacer {display: inline-block; }
+ol {
+    list-style-image: none;
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+.Bullet {    border: none;
+    text-decoration: none;
+}
+div {
+    overflow: visible;
+}
+img {
+    border: none;
+}
+.searchtext {
+}
