@@ -1,0 +1,497 @@
+%&LaTeX
+% !TEX encoding = UTF-8 Unicode
+\documentclass{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+\label{HToc120798031}\label{HToc197578258}\newcommand{\tab}{\hspace{5mm}}
+
+\begin{document}
+Melody Matcher \label{HToc120798032}
+
+Project Proposal
+
+Jennifer Hughes\pagebreak{}
+
+Melody Matcher\tab \pageref{HToc197578258}
+
+Abstract (System purpose and tasks to be performed):\tab \pageref{HToc197578259}
+
+Usage Domain and Environment:\tab \pageref{HToc197578260}
+
+Comparison to Existing Systems:\tab \pageref{HToc197578261}
+
+Specification:\tab \pageref{HToc197578262}
+
+User Feedback:\tab \pageref{HToc197578263}
+
+System Design:\tab \pageref{HToc197578264}
+
+Prototype and Implementation\tab \pageref{HToc197578265}
+
+Syllable Structure\tab \pageref{HToc197578266}
+
+Length and Weight of Individual Phones\tab \pageref{HToc197578267}
+
+Vowels\tab \pageref{HToc197578268}
+
+Consonants\tab \pageref{HToc197578269}
+
+Calculating Consonant Phone Length\tab \pageref{HToc197578270}
+
+Full Table of Phone Makeup and Length\tab \pageref{HToc197578271}
+
+This page was intentionally left blank because Word doesn't like me being table-happy.\tab \pageref{HToc197578272}
+
+Structure of a Syllable\tab \pageref{HToc197578273}
+
+Examples\tab \pageref{HToc197578274}
+
+System Design:\tab \pageref{HToc197578275}
+
+Prototype and Implementation\tab \pageref{HToc197578276}
+
+Data Format\tab \pageref{HToc197578277}
+
+Fickle Phones in the Coda\tab \pageref{HToc197578278}
+
+Calculating Weight/Length of Independent Syllables\tab \pageref{HToc197578279}
+
+Psuedo Code Formula for Determining Semi-Stand-Alone Weight\tab \pageref{HToc197578280}
+
+Actual Excel Formula:\tab \pageref{HToc197578281}
+
+Calculating Length of Syllables in Relation to Each Other\tab \pageref{HToc197578282}
+
+Psuedo Code Formula for Determining Syllable ``fit'' with the music.\tab \pageref{HToc197578283}
+
+Patterns for Musical Emphases\tab \pageref{HToc197578284}
+
+Effect of Note Intervals on Musical Emphases\tab \pageref{HToc197578285}
+
+Parsible Phonetic Dictionary\tab \pageref{HToc197578286}
+
+Parsable Dictionary\tab \pageref{HToc197578287}
+
+Final Phonetic Dictionary Choice\tab \pageref{HToc197578288}
+
+Timeline:\tab \pageref{HToc197578289}
+
+(Modified)\tab \pageref{HToc197578290}\pagebreak{}
+
+So. I bet you're all wondering what's happening with my thesis. If so, you fit 
+into one of these groups:
+
+1) you're working on a thesis? What's it about?
+
+2) oh, that melody matcher thing you've been mumbling about for the past few years? 
+How's that work again?
+
+3) yeah, I know you're working on your thesis. I keep hearing you talk about all 
+the gory details. But what does it look like?
+
+4) But how do you know it really works?
+
+I'll be addressing group \#3 today.
+
+As you already know, Melody matcher is an algorithm that measures inherent understand 
+ability of a song when sung by a person with a General America accent.
+
+This is sort of a fudge, because the general American accent is not actually the 
+accent that singers use while singing, nor is it the accent spoken by most americans. 
+It's the newscaster accent, and is generally agreed upon to have come from somewhere 
+in the midwest. ~It is heavy on understandability, and therefore fudges NO consonant 
+or vowel sounds, whereas singers do this all the time. However, the alterations 
+singers make to their phonemes while singing are not generally agrees upon, and 
+there is no \texttt{"} singing accent\texttt{"}.
+
+There are a few generally agreed upon rules about context -based pronunciation 
+changes in singing:
+
+\texttt{"}the\texttt{"}: if the word 'the' is followed by a word that begins with 
+a vowel sound, it is then sung as \texttt{"}thee\texttt{"}, instead of 'thuh'
+
+\texttt{"}and\texttt{"}: this one is strange, and I'm not sure about, but it often 
+becomes \texttt{"}an' \texttt{"}
+
+\texttt{"}a\texttt{"}: there a a few different ways this can be pronounced: \texttt{"}eh\texttt{"}, 
+\texttt{"}uh\texttt{"}, or \_\_\_\_
+
+Glottal stops:
+
+Coda-pushing: it is generally agreed upon by most all singers that, when singing 
+a word, you sing the vowel. ~This \texttt{"}vowel\texttt{"} can be more accurately 
+described as the nucleus of a syllable
+
+Anyway! Didn't meant to get bogged down in that. You're probably winding what my 
+thesis end product actually *looks* like.
+
+So, I like gardening. It's really obvious when you're doing something right with 
+a plant, because it grows and florishes.
+
+Warning: this is not a perfect metaphor.
+
+So, for my thesis, I pretended that we live on a world where plants are nourished 
+and grow by being fed music. ~Each tree feeds upon a single. ~The very first lyrics 
+of the song cause the tree to begin to grow, the the tree stops growing when the 
+song is over. ~You want a tall, green tree with few branches at the end, not a 
+browning bush with way too many branches and forks. Like any good gardener, a good 
+lyricist prunes back branches that are unwanted.
+
+The growth rate of the tree depends upon the tempo of the song fed into it.
+
+The tree splits off and creates new branches whenever a phonetic sequence can be 
+understood in more than one way. For example, i stink, an ice cold shower. ~This 
+means that the branch points must be on the phoneme level, and not on the word 
+level.
+
+The tree's color will remain green if all the words in the lyrics are a good fit 
+for their notes. If there is any cramming or bleeding, then the tree branch for 
+that sequence will be browned, depending on the severity of the cramming/bleeding.
+
+How is this achieved?
+
+0- we must substitute and account for pronunciation variations caused by singing 
+the words instead of speaking them. This includes:
+
+The/a/glottal-stops/coda-pushing
+
+1- before we break our words into individual sounds, we much break them into syllables, 
+and check for cramming and bleeding.
+
+//TBC\pagebreak{}\label{HToc120798034}\label{HToc197578259}
+
+Abstract (System purpose and tasks to be performed):
+
+This project aims to facilitate semi-automated composition of melody and accompanying 
+lyrics, by way of matching the musical emphases of a piece with the textual emphases 
+of the lyrical phrases.~The program will ultimately rely upon user input for \texttt{"}fitness\texttt{"} 
+criteria, but will initially match lyrics with melodies based upon some rules.\label{HToc120798035}\label{HToc197578260}
+
+Usage Domain and Environment:
+
+This program will be used as a compositional aid by anyone who wants to write songs 
+and make them sound good, technically.  Its should allow the song writer to focus 
+on more subjective criteria of what makes a song ``good'', because it will make 
+the structural rules of lyric composition immediately apparent.  The first version 
+of this will probably be only for users that already understand the structural 
+rules, unfortunately, because the composer must be able to understand that there 
+IS a need to properly place lyrics in songs.  
+
+The structural rules of lyric placement are important, because without them, lyrics 
+can become muddled and/or unintelligible. For example, in the song ``Groovin' (on 
+a Sunday Afternoon'', by the Young Rascals, there's a part in the bridge that everyone 
+always hears as ``Life would be ecstasy, you an' me an' Leslie''.  In fact, the 
+line is ``Life would be ecstasy, you and me endlessly''.  The confusion lies with 
+the last three syllables of the phrase.  The pronunciation of each version, if 
+spoken normally, is as follows:
+
+\begin{longtable}{llll}
+\hline
+% ROW 1
+\multicolumn{1}{|p{1.726in}|}{\begin{minipage}[t]{1.726in}\raggedright
+and       Les-   lie\end{minipage}} & \multicolumn{1}{p{2.656in}|}{\begin{minipage}[t]{2.656in}\raggedright
+end-       less-       ly\end{minipage}}\\
+\hline
+% ROW 2
+\multicolumn{1}{p{0.059in}|}{\begin{minipage}[t]{0.059in}\raggedright
+@nd   ``lEs     li\end{minipage}} & \multicolumn{1}{p{0.059in}|}{\begin{minipage}[t]{0.059in}\raggedright
+``End      l@s       li\end{minipage}}\\
+\hline
+\end{longtable}
+
+A `` preceding a syllable means that syllable is emphasized. 
+
+So, in the first phrase, we see that the emphasis pattern goes something like dum-DUM-dum, 
+where the first syllable of ``Leslie'' is emphasized.  The second phrase's emphasis 
+pattern is ``DUM-dum-dum'', so the first syllable of endlessly is emphasized.
+
+When words are put to music, however, the musical emphasis basically overrides 
+the textual emphasis. Sometimes, if a previously un-emphasized syllable becomes 
+emphasized, or a previously emphasized syllable loses its emphasis, the meaning 
+of the phrase can change.
+
+For ``Groovin''', the lyrics match up to the music in the song as follows:
+
+\begin{center}
+\includegraphics[width=384pt, height=47pt]{ALL Documentation as of 2012-05-07-fig001.emf}
+\end{center}
+
+Life   would be  ec-            sta-    sy,        You  an'  me   end-  less- ly 
+
+In all music, the emphasis always goes on the first part of a beat.  
+
+In this case, in the first measure is emphasized for the notes that correspond 
+to the lyrics, ``Life'', ``be'', ``ec-''(as in ec-sta-sy)  and ``sy''(again, as 
+in ec-sta-sy) (This is a vast oversimplification, but it works for now). So, the 
+lyrics would be emphasized as such:
+
+Life would be ec-sta-sy
+
+This musical emphasis matches the spoken emphasis of the phrase, so it is intelligible 
+as a lyric.  (Though ecstasy's first syllable doesn't start on the first part of 
+beat three, it is still on the first part of beat three, and therefore still emphasized. 
+ Alternatively, since the first part of beat two didn't have a hard stop to it, 
+the emphasis could have rolled over to the second part,  ``ec'', which does have 
+a hard stop. These are the sorts of things I need to figure out formal rules for. 
+ I only know them by intuition right now.)
+
+In contrast, take the second measure:  the syllables ``You'', ``me'', and ``less'' 
+are emphasized.  This leads to conflicting musical and spoken phrasing:
+
+Musical Phrasing:\tab You and me  endlessly
+
+Spoken Phrasing: \tab You and me  endlessly
+
+The singer is now singing the phrase, syllable by syllable, which they think of 
+as syllable-note combinations:
+
+YOU and ME end LESS lee
+
+The singer, for his part, is doing what many singers are taught to do, to make 
+it easier to sustain the singing of words that end with unsingable consonants: 
+the unsingable consonant is displaced onto the front of the next word.  In this 
+case, the consonant ``d'' is not singable, so he displaces it onto the next syllable, 
+when he can:  ``and ME'' becomes ``an   dME'', and ``end LESS''  becomes ``en  
+dLESS''.  So, the singer can effectively think of the sung phrase as:
+
+YOU an  dME en dLESS lee
+
+This doesn't cause confusion to listeners, because they're used to hearing it. 
+ This does mean, however, that lyric placement does not provide an accurate barometer 
+of where a word actually ends.   
+
+In addition, the singer is singing fudging his vowels, like singers are taught 
+to do,   so ``and'' and ``end'' sound almost indistinguishable.  So, really, what 
+listeners are hearing is this:
+
+YOU en dME en dLESS lee
+
+Now, the listener's brain has to take this syllabic gobbldygook, and parse it into 
+something useful.  They've currently got this mess to deal with (represented in 
+SAMPA syllables):
+
+ju En dmi En dl@s li
+
+They parse the first part just fine, because the emphases match:
+
+you and me En dl@s li
+
+But no one says endLESSly.  People say ENDlessly.  So,  the listeners don't recognize 
+it. they have to work with what they have.  They already turned one ``En d'' into 
+an ``and'', so they do it again:
+
+you and me and l@s li
+
+Now, they're just left with LESS lee.  And that fits Leslie, a proper noun that 
+fits in context and in emphasis placement.  So, the final heard lyric is:
+
+you and me and Les- lie
+
+The misunderstanding can be traced by to improper emphasis placement.  The songwriter 
+probably didn't even think of that, and now he's stuck:  a one-hit-wonder with 
+a misunderstood song.  I bet that in interview after interview, someone asks him 
+who Leslie is.  It's probably very frustrating---especially since he could have 
+just moved the word an eight note later, and it would have been understood perfectly. 
+ That's the sort of situation this program is going to help avoid.\label{HToc197578261}
+
+Comparison to Existing Systems:
+
+Tra-la-lyrics\footnote{BIBLIOGRAPHY:
+
+H.R. Oliveira, F.A. Cardoso, and F.C. Pereira, ``Tra-la-Lyrics: An approach to 
+generate text based on rhythm,'' Proceedings of the 4th. International Joint Workshop 
+on Computational Creativity, London, UK, 2007.} is the closest system that exists 
+to the proposed system.  It takes lyrics in Portuguese, and matches them via emphases 
+to the music.  This is different from our system, because our system will use English-language 
+lyrics.
+
+There are many systems that take lyrics and match them with notes, but very few 
+use any sort of rhythmic rule set to do so\footnote{P. Bellini, I. Bruno, and P. 
+Nesi, Multilingual Lyric Modeling and Management, Visual Perception of Music Notation: 
+On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003. ~ 
+}.  Karaoke systems match lyrics to music on a time-based system, which is inadequate 
+for our purposes.  However, the Wedelmusic model of a composition can be easily 
+extended to include support for musical emphases, because of the way it separates 
+out music and lyrics. Also, since it can be easily converted into an XML format, 
+the composition can be transferred between programs, given the correct parser.\label{HToc197578262}
+
+Specification:
+
+A user must minimally be able to do the following
+
+\ensuremath{\Sigma}\tab Be able to import, compose and mutate a melody in a program
+
+\ensuremath{\Sigma}\tab Be able to import, compose, and mutate a lyric set in a 
+program
+
+\ensuremath{\Sigma}\tab See which lyrics have emphases that  are at odds with the 
+musical emphases, based upon predefined rule sets.
+
+Optional user functionality:
+
+\ensuremath{\Sigma}\tab A user should be able to add a word to a dictionary, giving 
+each word an orthography, a part-of-speech, and a pronunciation using the symbols 
+from the SAMPA\footnote{``SAMPA computer readable phonetic alphabet.'' \texttt{<}http://www.phon.ucl.ac.uk/home/sampa/index.html\texttt{>}, 
+Accessed 9-29-09}
+
+ASCII translation of the IPA.
+
+\ensuremath{\Sigma}\tab A user should be able to develop multiple melodies and 
+lyric phrases simultaneously, using a pseudo-genetic algorithm to generate new 
+combinations.
+
+The system shall include
+
+\ensuremath{\Sigma}\tab An interactive GUI interface, with music and lyric text, 
+that allows the user to mutate both the notes and the lyrics
+
+\ensuremath{\Sigma}\tab A dictionary of words, with orthography(i.e. spelling), 
+part of speech, and a pronunciation
+
+\ensuremath{\Sigma}\tab Functionality to save and import compositions.\label{HToc120798036}\label{HToc197578263}
+
+User Feedback:
+
+I have no new user feedback.  I do, however, have some new requirements specification 
+data from running my own trials on sample data.
+
+Steps to Completion of Project:
+
+(1) Acquire access to a linguistic database, where every word has at least the 
+following attributes: 
+
+--emphasis placement
+
+--part of speech
+
+--synonyms
+
+(Optional:~ \texttt{"}mood\texttt{"}, if applicable)
+
+(2)Find out precisely how to determine where the emphasis of a musical phrase lies, 
+by emailing or asking some music professors at Cal Poly, and by independent research.
+
+(3) Design parallel data structure representations for the textual and musical 
+phrases.~ Figure out the best way to partition these so that they can still act 
+independently, but so that they can still be compared.
+
+(4) figure out how to compare the emphases in the text with the emphases in the 
+music.~ 
+
+(5) Make sure that the music fits some constraints:
+
+-----the number of syllables in a textual phrase cannot exceed the number of notes 
+in a musical phrase
+
+-----A word can have more than one note, but a note cannot have more than one word.
+
+-----The phrase, if we're generating lyrics, creates a sentence that makes sense, 
+grammaticality. 
+
+(5) Incorporate the interactive component, by allowing a user to (in no particular 
+order):
+
+-----modify the notes in a phrase, by making them longer, transposing them, or 
+deleting them, etc (see DANCING NOTE COMPOSER)
+
+-----allow selection of notes and note phrases
+
+-----allow selection of words, and replacement with synonyms, or entered text
+
+-----allow users to change the distribution of notes-to-words, giving some indication 
+of whether or not the song is breaking the rules of emphases.\pagebreak{}\label{HToc120798037}\label{HToc197578264}
+
+System Design:
+
+Currently, my project prototype is a series of excel spreadsheets, partially generated 
+from manual input and input from .csv files, which were partially generated by 
+some command-line text parsing. \label{HToc120798038}\label{HToc197578265}
+
+Prototype and Implementation\label{HToc120798039}\label{HToc197578266}
+
+Syllable Structure
+
+As a reminder, a syllable has a nucleus, a coda, and an onset.  The nucleus consists 
+of a vowel (or semivowel), the coda consists of zero to four consonant phones, 
+and the onset consists of zero to three consonant phones.\label{HToc120798040}\label{HToc197578267}
+
+Length and Weight of Individual Phones
+
+I've developed several tables to determine the weight and length of individual 
+phones, divided by type.\label{HToc120798041}\label{HToc197578268}
+
+Vowels
+
+\begin{longtable}{llllll}
+\hline
+% ROW 1
+\multicolumn{1}{|p{0.901in}|}{\begin{minipage}[t]{0.901in}\raggedright
+Vowel Type\end{minipage}} & \multicolumn{1}{p{0.817in}|}{\begin{minipage}[t]{0.817in}\raggedright
+Weighted Worth\end{minipage}} & \multicolumn{1}{p{0.651in}|}{\begin{minipage}[t]{0.651in}\raggedright
+Weight\end{minipage}}\\
+\hline
+% ROW 2
+\multicolumn{1}{p{0.069in}|}{\begin{minipage}[t]{0.069in}\raggedright
+semivowel\end{minipage}} & \multicolumn{1}{p{0.069in}|}{\begin{minipage}[t]{0.069in}\raggedright
+0.25\end{minipage}} & \multicolumn{1}{p{0.069in}|}{\begin{minipage}[t]{0.069in}\raggedright
+0.5\end{minipage}}\\
+\hline
+% ROW 3
+\multicolumn{1}{|p{0.901in}|}{\begin{minipage}[t]{0.901in}\raggedright
+short\end{minipage}} & \multicolumn{1}{p{0.817in}|}{\begin{minipage}[t]{0.817in}\raggedright
+0.25\end{minipage}} & \multicolumn{1}{p{0.651in}|}{\begin{minipage}[t]{0.651in}\raggedright
+0.5\end{minipage}}\\
+\hline
+% ROW 4
+\multicolumn{1}{p{0.069in}|}{\begin{minipage}[t]{0.069in}\raggedright
+long\end{minipage}} & \multicolumn{1}{p{0.069in}|}{\begin{minipage}[t]{0.069in}\raggedright
+0.75\end{minipage}} & \multicolumn{1}{p{0.069in}|}{\begin{minipage}[t]{0.069in}\raggedright
+1.5\end{minipage}}\\
+\hline
+% ROW 5
+\multicolumn{1}{|p{0.901in}|}{\begin{minipage}[t]{0.901in}\raggedright
+diphthong\end{minipage}} & \multicolumn{1}{p{0.817in}|}{\begin{minipage}[t]{0.817in}\raggedright
+~sum of parts\end{minipage}}\\
+\hline
+\end{longtable}
+
+Vowels, unlike consonants, do not have any sort of sub-variables to make extensive 
+calculations necessary.  A vowel can be long, short, a semivowel, or a diphthong. 
+A long vowel weighs more than a short vowel, which weighs about the same as a semivowel. 
+ A diphthong's weight/length is just the sum of its parts.  A diphthong is a combination 
+of two vowels or semivowels.  You just add the lengths/weights of its members to 
+get its value.\pagebreak{}\label{HToc120798042}\label{HToc197578269}
+
+Consonants
+
+Consonants have a few variables that affect their weight.  
+
+First, ``manner of articulation'': plosives, affricates, and fricatives weigh the 
+most, with plosives being the heaviest (effectively, though, they're the same weight). 
+ Nasals, laterals, approximants, and semivowels are all effectively ``weightless'', 
+in and of themselves. 
+
+Second, voicing:  to ``voice'' a phone means to cause the vocal chords to vibrate. 
+ ``Voiced'' phones are singable, whereas ``voiceless'' phones are not.  ``Voiceless'' 
+phones are really nothing more than a hiss, or directing streams of escaping air.
+
+Third, the manner of starting and ending a sound has a bearing on weight.  A ``block'' 
+means that you must fully stop airflow through the mouth to make the correct noise 
+to start the sound. A block is basically a buildup-then-release of a stream of 
+air.  ``Continuous frication'' is simply a continuous release of a directed air 
+stream, without the primarily buildup.  An ``end'', which is the only type of start/end 
+that I made up a name for, is a variation of a block without the full stop of airflow 
+through the mouth. It's a distinctive change in the sound of a phone, but does 
+not ``build up'' the air stream; it

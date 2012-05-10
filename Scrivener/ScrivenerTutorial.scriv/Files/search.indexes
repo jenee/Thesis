@@ -1,0 +1,2301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="21">
+            <Title>Step 17: Compiling the Draft</Title>
+            <Text>Scrivener’s purpose is to provide a sort of writer’s studio; a place where you throw everything, all of your research, ideas and scribblings, with the aim of mashing it together into a draft which you can then either print for posting off to a publisher, or export, whether to another program for tweaking or to an e-book format for self-publishing. This is where Scrivener’s Compile feature comes in.
+The Compile feature takes everything that is in the Draft folder and generates a single, formatted document from it. You have complete control over the output - you can choose from various file formats (or print directly from Scrivener), you can choose whether to include document titles (or synopses and notes for that matter), set up headers and footers, and even completely change the font and paragraph formatting if you so desire—so there’s no need to write in the same font you use for printing and exporting unless you want to.
+
+“Compile…” can be found at the bottom of the File menu. Try selecting it now, but then click “Cancel” and come back here.
+
+At first glance, it probably doesn’t look like much. This is because it is set up by default to show only the most basic options - you can choose a preset from the “Format As” pop-up button and a file format from the “Compile For” button, modify a few basic optoins, change the font if you so wish, and then click on “Compile” to create a basic document containing the merged contents of your Draft folder.
+
+Let’s try that now - we’ll generate a PDF preview of the draft of this tutorial project:
+
+1) Go to File > Compile…
+2) Ensure that “Original” is chosen next to “Format As” (this is the default setting, and exports all of the text in your draft as it appears in Scrivener).
+3) Ensure “Print” is selected next to “Compile For”.
+4) Click on “Compile”.
+5) The print preview pane will appear. You could click on “Print” to print your manuscript, but we want to see it as a PDF. So instead, click on the “PDF” button in the bottom-left of the panel and select “Open PDF in Preview” (note that you can choose “Save as PDF…” to save a PDF document to disk, which does exactly the same as choosing “PDF” from the “Compile For” menu).
+
+Preview will open to show you the entire contents of the Draft folder combined into one long document… It seems I wrote a lot.
+
+You can choose from one of the other “Format As” presets to format your draft differently. For instance, try compiling again, just as you did above, but this time choose “Novel” format (be sure you choose “Print” from the “Compile For” list again, as changing the “Format As” option can affect the selected file format). This time, you will find that the draft has been compiled using a Courier 12-point font with double line-spacing.
+
+The other most important options in this area are “Add front matter” and “Font”. “Add front matter” allows you to choose a document, or a folder of documents, in the binder that should be used to provide front matter for your manuscript (title page, contents page, dedication and so on). You could just insert the title page and other front matter at the top of the Draft folder and not worry about this option. The benefit of using this setting, though, is that it makes it easy to switch between different sets of front matter for different formats: while your body text will always stay the same, you may want different front matter depending on whether you are submitting to an editor using standard manuscript format, self-publishing, or creating an e-book.
+The “font” setting allows you to change the font for everything in the manuscript to a particular font face. This is just a quick and easy way of changing the font - much more control is available, as we’ll see (this setting the same as “Quick Font Override” - see the yellow tip box below for more information).
+
+That’s all you need to know for creating basic print-outs and exported files from your draft. You may have noticed, though, that the options we have currently been looking at are all inside the “Summary” tab of the Compile panel. It’s called the “Summary” tab because it just shows a few of the most commonly-used options, and allows you to make quick changes to existing formats. At some point, however, you may find that you want more control over the document being produced—at which time you’ll want to play with the full range of options available. Let’s look at them now. Try going back to the Compile sheet and clicking on “All Options”:
+
+#
+
+The Compile sheet will expand to show a whole raft of options. You don’t really need to worry too much about all of these settings at the moment - the main thing to know is just that this is where you come to export or print your entire manuscript, and that the Compile settings provide complete control over how your manuscript will be formatted should you need it.
+Let’s try a quick custom compile though. (You may wish to open this document in a QuickReference window, by clicking on the “QuickRef” panel in the toolbar, so that you can refer to it easily while the Compile sheet is open.) This time, with the compile sheet expanded to show all of the advanced options, try the following:
+
+1) Choose “Original” from the “Format As” list again, to reset the formatting.
+2) Take a look at the “Contents” pane. This allows you to choose which documents get compiled. The pop-up button at the top, which currently says “Draft”, can be used to choose only a subfolder of the Draft (so that you could compile and print only a single chapter, for instance) or to choose one of the collections we created in Part 2 (so you can compile only the documents that appear in a particular collection). You can uncheck the “Include” button for any document you don’t want included in your compiled document, and there are some filter options at the bottom of this pane, too. You can thus fine-tune which documents go into your final manuscript. All we’re going to do is click on the pop-up button at the top that currently says “Draft”, and choose “Part 1: Basics” - that is, we are only going to compile the “Part 1” folder.
+3) Now, from the list of settings on the left, choose “Separators”. This section allows us to choose how our documents should get stitched together - whether we should put page breaks between the different components or just line breaks and so forth.
+4) For the “Text separator”, choose “Page break”.
+5) For the “Folder and text separator”, choose “Single return”. This will ensure that the text of any documents following our folder get added straight after the folder titles—which we will now set up in our formatting options.
+6) Click on “Formatting”. This is the part of the Compile sheet that allows you to choose how your text looks - what font it uses and suchlike. At the top is a list with a folder, text group and text document in it, each saying “Level 1+” next to them (text groups are just text documents that have other text documents grouped inside them - have a look at “Step 5: The Inspector” to see an example of one). Each document type can be formatted separately.
+7) At the top of this pane you will see a button entitled “Override text and notes formatting”. It is unchecked at the moment, which means that the text (and notes should you choose to include them) of each document will appear in your compiled manuscript exactly as they do in the editor, just as they did the first time you compiled using the “Original” setting. We’re going to override the formatting, though, so click on this button to tick it. You’ll see that the text in the blue text area at the bottom turns black - it was grey before to indicate that its format wasn’t being overridden.
+8) Click on the top item in the “Type” list, the “Level+” row with the folder icon in it. Note that each row has tick boxes for “Title”, “Meta-Data”, “Synopsis”, “Notes” and “Text”. These tick boxes determine which parts of the document will get included in your text. So at the moment, only the text of folder documents, text groups and text documents will be included, because only the “Text” button is ticked for each. Let’s change this. Click on the “Text” button in the folder row to remove “Text” and then tick the “Title” button instead. Note how the text in the bottom pane has changed to show the word “Title” in bold. This bottom text area gives you a preview of what the document will look like, so in this case it shows us what folder documents will look like when exported or printed - they will show only their titles, in bold text.
+9) Click into the bold “Title” text. Note how the ruler and formatting bar become active when you do so. Click on the centred text button, and click on the “A” button to choose a different font. Make the font big.
+10) Above the formatting bar, click on the “Page padding” stepper control to change the page padding to “8 lines”. This will add eight lines of blank space at the top of folder documents whenever they start on a new page. (You’ll see what I mean in a minute.)
+11) Next, click on the text group row (the middle one), and tick the “Title” button. Leave the “Text” button ticked for this one, though. The blue text area at the bottom will be updated to reflect your changes.
+12) Click in the bold title in the blue text area. Get rid of the bold and change it to underlined and italicised instead using the format bar, and change its colour to blue using the colour control (hold down on the black rectangle next to the yellow one for a second to see a palette with colour choices in it - this will allow you to change the colour).
+13) Click into the main text area and change the formatting to whatever you want - use the “A” button to change the font, the ruler to change the paragraph indenting, and the line spacing control in the format bar to change the (who’d have thought it?) line spacing.
+14) Click on the last row, the text icon with “Level 1+” next to it, and do the same again, but this time choosing a different format for the title and text.
+15) Right, at last, click on “Compile” and open a PDF preview in Preview.app again.
+
+Take a look through the PDF document to see what you’ve done - you’ve added titles and completely changed the way the text looks.
+
+TIP: The “Formatting” pane gives you complete control over the fonts, indents, line spacing and other paragraph styling that the various elements of your compiled document will use. If all you want to do is change the font face, however, you can use the “Quick Font Override” pane instead. This allows you to change the font used throughout the compiled document without having to worry about all of the other settings. It’s mainly useful for making a quick change to an existing compile format. For example, suppose you select the “Novel” format from the “Format As” menu. As noted above, this is set up to compile your manuscript using a Courier 12pt font and double-line spacing, using Courier headers and footers too. What if you want to print or export using this exact novel format, except that you want to use Times New Roman or Arial instead of Courier? In this case, all the settings are just as you want them except for the font face. You could go through the “Formatting” pane and change the fonts for all the various elements there, and change the font used for headers and footers in the “Page Settings” pane too. But if all you want to do is change the font face, then it’s much easier to use “Quick Font Override” for this instead. In that pane, simply tick “Override all fonts with face” and choose the font face you want to use, and you’re done.
+
+Once you’re happy with the PDF file you’ve created, return to Scrivener and select “Compile” again - you can just click on the button in the toolbar to save going through the File menu. We’re going to make another tweak, as follows:
+
+1) Choose the “Formatting” pane again.
+2) Select the third row, the “Level 1+” with the single text icon next it.
+3) Click on the “Add formatting level” button next to the “Options…” button:
+
+￼
+
+A “Level 2+” row will appear, slightly indented below the “Level 1” text row. The “Level 1” row will no longer have the plus sign after it, either. I’ll explain what this means in a moment. If you click between the “Level 1” and “Level 2+” rows, you will see that the formatting in the text area at the bottom is the same for each - that’s because the new formatting level is created using the same formatting as the selected row by default.
+4) Click on the “Add formatting level” button again so that a “Level 3+” row is created.
+5) Make sure the “Level 3+” row is selected and then click into the blue text area and change formatting to something glaring. Change the text colour to bright green or suchlike.
+6) Click on the “Compile” button again and once more view the results in Preview, this time looking out for the green or lurid text formatting you added.
+
+What just happened?
+What you should have seen is that all documents contained inside the “Step 5: The Inspector” group came out using your lurid formatting, but everything else stayed the same as the previous compile. Why? Because you can set up the formatting on a per-document-level basis if you like, and that’s what we just did. If you look at the binder, the folders “Part 1: Basics” and so on are all contained in the Draft folder at the first level - that is, they are one level deep in the Draft folder. If you then look at “Step 1”, “Step 2” and so on, these are two levels deep in the Draft folder, because they are contained inside the “Part 1” folder which itself is contained in the Draft folder. “5a: The Synopsis Index Card” and the other documents grouped inside the “Step 5: The Inspector” document are on the third level. And so it was only these documents that were affected by our “Level 3+” formatting settings. Incidentally, the “+” indicates that this is the last level we have set up formatting options for, and so it will be applied to any levels of document in the Draft that go deeper (so if we’ve only set up two formatting levels, documents three or four deep in the binder will receive the same formatting as those at two levels deep).
+
+Right, one final tweak. Because this is a tutorial project, I have numbered all the documents in the binder - “Part 1: Basics”, “Step 3: Footer View”, and so on. You wouldn’t normally do this. Instead, you would just give documents meaningful titles and let Compile handle the numbering for you using the auto-numbering tags available from Edit > Insert > Auto-Number. To see what I mean, let’s go back to the “Formatting” pane of Compile once again and do the following:
+
+1) Click on the “Level 1+” folder item at the top of the list.
+2) Click on “Level Settings…”.
+3) In the “Title Prefix and Suffix” tab, enter “Chapter &lt;$t>” followed by a single return in the “Prefix” box, then click “OK”.
+4) You will see that “Chapter One” now appears at the top of the preview area - “&lt;$t>” is the tag for title-case numbering. You can format this the same way as you do anything else, by clicking into the text and using the format strip to change the font, spacing, alignment and suchlike.
+5) Click on “Compile” and once again check the results in Preview. Note how “Part 1: Basics” now has “Chapter One” above it.
+6) Back in the “Formatting” pane of Compile, untick “Title” for the “Level 1+” folder icon, compile, and open in Preview again.
+
+Note how the prefix can be used on its own - now it just says “Chapter One” at the top of the document. Chapter numbers are added to the novel template and other templates that come with Scrivener in exactly the same way. A complete list of tags that can be used with Compile is available by going to the Help menu and selecting “Placeholder Tags List…”.
+
+There’s a lot more, but this should be enough to get you started - take a poke through the various option panes available in Compile (the list on the left will change to show different options depending on the export format). Also take a look at the “Options…” and other “Level Settings…” panels available from the “Formatting” pane - you’ll see that you can do all sorts of things, such as choose the case for titles and set the first pararagraphs of each section to have no first line indent.
+
+Now onto the fourth part…</Text>
+        </Document>
+        <Document ID="4">
+            <Title>Step 1: Beginnings</Title>
+            <Synopsis>This is where you would type a synopsis of the document.</Synopsis>
+            <Text>Just a quick note before we begin: this tutorial assumes that you are using the default preferences. If necessary, you can reset them to the defaults by clicking on the “Defaults” button in the Preferences pane, available under Scrivener > Preferences… (click on “Show All” in the Preferences toolbar to see the “Defaults” button if it is not visible); if you haven’t made any changes to the preferences, you don’t need to worry about this. Right, on with the tutorial.
+
+When you first open a Scrivener project, by default you are presented with two panes:
+
+1. THE BINDER
+On the left, you can see a list of files: the “binder”. This is an outline view that contains three default folders: “Draft”, “Research”, and “Trash”. You can rename these folders to whatever you like by double-clicking on them (in some of the templates, for instance, the Draft folder has been renamed to “Manuscript”). The binder is where you organise your project by creating a structure and dragging and dropping your documents around.
+The contents of the Draft folder represent the text fragments that will be compiled into one long document when you export or print using File > Compile…, which is the standard way of preparing your finished project for printing or final formatting in a dedicated word processor. This is very much the raison d’être of Scrivener - to assemble the text of your manuscript in the Draft folder for printing or export. (As such, the Draft folder is unique in that it can only hold text files.)
+The Research folder can hold text or media files (images, PDF files, video files and so on), and is where media files will be placed by default if you accidentally try to import them into the Draft folder at any point. You don’t have to put all research files into the Research folder, though - you can create other folders for your support materials anywhere you want (and even give them custom icons).
+The Trash folder speaks for itself; whenever you delete a document it ends up there. Documents aren’t deleted completely until you select “Empty Trash…” from the File menu - so there’s no way you can accidentally delete a file in Scrivener.
+
+2. THE EDITOR
+Next to the binder you have the main editor, which displays the current document. The main editor is what you are looking at right now as you read this text document. There are several ways to load a document in the editor, but the one you will use most often is simply selecting a file in the binder, as you did to load this one. Scrivener allows you to create or import any number of text documents. You can also import image, web, QuickTime and PDF documents. To import documents, use File > Import > Files… or simply drag the files you wish to import from the Finder into the binder of your Scrivener project.
+You can change the current document by clicking on another item in the binder. Try that now—click on “Alhambra” inside the “Research” folder (you may need to expand the Research folder by clicking on the triangle next to it first) and then return here (“Step 1: Beginnings”).
+
+Done that? So now you know that this area can be used to view different types of document, not just text.
+
+Let’s try switching between documents again. You see the document on the left beneath this one, the one entitled “Step 2: Header View”? Click on it now.</Text>
+        </Document>
+        <Document ID="30">
+            <Title>Step 18: Split and Merge</Title>
+            <Text>Okay, so you imported all your work into Scrivener. But you had a lot of long documents and now you want to chop them up so that you can experiment with moving the various parts around. No problem. The Documents menu features Split > At Selection and Split > with Selection as Title. These features allow you to chop up existing documents very easily and quickly. With “Split at Selection”, you simply click inside a text document so that the cursor is at the point where you want to split the document. Selecting this menu option will split the document into two at the cursor point.
+
+“Split with Selection as Title” works in much the same way, except you select a range of text before clicking on it. The selected text will become the title of the newly-created document. This is useful, for instance, if you have a long document containing several chapters each with a title you want to use as the document title.
+
+You can also merge documents. Selecting several documents in the binder and then choosing Documents > Merge will merge the selected documents into one (their meta-data—the stuff that appears in the inspector—will be merged too).
+
+Next we’ll look at some of the text options available in Scrivener.</Text>
+        </Document>
+        <Document ID="13">
+            <Title>Step 8: Splits</Title>
+            <Synopsis>Here’s another synopsis.</Synopsis>
+            <Text>Before delving further into the view modes, let’s pause to check out another important feature of Scrivener. The chances are that from time to time you are going to want to split the editor so that you can view two parts of the same document, or two entirely different documents, alongside one another. So let’s do that now. Go to View > Layout > Split Horizontally. Alternatively, click on the button in the right of the header view above (the square with the horizontal line through its middle):
+
+#
+
+Suddenly, this document is displayed in two panes. Note that through the Layout menu, you can also choose a vertical split, to get rid of the split altogether, or to hide the header and footer views for the current document view. (You can also Opt-click on the header button to create a vertical split, or to toggle to a vertical split if you already have a horizontal one and vice versa.)
+
+All well and good, but we don’t want to be limited to viewing only one document at a time, do we? We can do that in any word processor worth its salt (whatever that means), after all. And naturally, we’re not. Click on any document in the binder, and it will be shown in the editor that currently has the focus. You can tell which editor currently has the focus because when there is a split, the header bar of the focussed editor turns blue. You can also drag a document from the binder to the header view of the editor in which you wish to view it. Let’s do that now. Make sure that this document, “Step 8”, is visible in the bottom pane, and then drag “ThisIsBuzzAldrin” from inside the “Research” folder onto the header view of the top pane. “ThisIsBuzzAldrin” is an audio file, so you won’t see much other than a media control bar in the lower part of the top pane (actually, that audio file is the beginning of the coolest phone message I ever picked up; sadly, the message was not for me).
+
+Now you can play the audio file in the top pane whilst typing in this bottom pane. You can control the media file using the keyboard shortcuts defined in the View > Media menu. Cmd-Enter will play or pause the file, for instance—without you having to click outside of this text. These shortcuts are very useful for transcription work, or for referring to a video file while writing. Also note the button in the lower-right of the media control bar:
+
+￼
+
+That is the “pause and rewind” button. If you click it, it will turn blue, indicating that it is on. When “pause and rewind” is turned on, whenever you pause the media file it will automatically be rewound a couple of seconds (you can determine exactly how many seconds it gets rewound in the Navigation pane of the Preferences). This is another useful feature for transcription work.
+
+But of course, you can use the split view to view any two documents in Scrivener alongside one another. The snazziness of this feature should immediately be apparent: you can refer to another text, PDF, image or QuickTime document in one view while typing in another. You could hide the toolbar, the header and footer views and the binder and just have the two documents side-by-side while you work.
+
+Make sure this bottom pane has the focus (click in it if you are not sure) so that its header view is blue, and click on “Step 9” so that it opens here.</Text>
+            <Comments>No need to write in: it refers to the fact that Roman soldiers used to get paid in salt. (The great thing about these tutorials is that you’re always getting users writing in to point out your mistakes or tell you stuff about Romans. If you spot any mistakes or have any interesting but relevant factoids, please don’t hesitate to write to contact@literatureandlatte.com.)</Comments>
+        </Document>
+        <Document ID="5">
+            <Title>Step 2: Header View</Title>
+            <Text>You have just switched between documents. You might use different documents for different chapters, different scenes, different ideas, articles, characters, whatever you want. There are other ways of switching between documents, too. Another one you will use frequently is the header view. See that bar at the top of the text, the one that has the arrows on the left of it and says “Step 2: Header View” in it? Well, that is the header view (which is sometimes also referred to as the “header bar”). You can rename the document by clicking into the title of the header view, and there are several options available in a menu if you click on the icon next to the title.
+The arrows on the left of the header view that point left and right are the history navigation buttons and work much like Safari’s navigation arrows - they allow you step back and forth through the documents you have had open in the editor. The white up and down arrows on the right of the header bar step through the contents of the binder sequentially. To see the difference, try the following:
+
+•	Click on the “Alhambra” image document in the Research folder again and then click on the left arrow in the header view. You will be returned to this document, because this was the one you had open last.
+•	Click on the right arrow and you will be returned to the “Alhambra” image document again. (Make sure you come back here afterwards though!)
+•	Now, with this document open, click on the down arrow on the right and then click on the up arrow again to return here. Note how the down arrow takes you to the next document in the binder, whereas the right arrow takes you to the next document in the navigation history.
+
+While we’re here, note that the selection highlight in the binder does not necessarily follow what is being displayed in the main editor—if you change the contents of the editor using the navigation arrows, for instance, the selection in the binder will not change. You can thus navigate around using the header view without losing track of the original document on which you were working in the binder. Note however that the up/down arrows do affect binder selection because they are intended as an alternative way of navigating through the binder contents.
+
+ Another useful way of switching documents is to drag a document from the binder into a header view. Try this now—grab the document entitled “Step 3: Footer View” on the left and drag it into the header view above. The navigation bar will turn grey, and when you let go the document will change…</Text>
+        </Document>
+        <Document ID="22">
+            <Title>5g: Snapshots</Title>
+            <Text>As a writer, the chances are that you will on occasion be nervous about committing changes to your text. This is what the “Snapshots” feature is for. Before embarking on the editing of a document, you can click on “Take Snapshot” (cmd-5) in the Documents > Snapshots menu. You will hear the sound of a camera shutter which indicates that the snapshot has been taken. Let’s try that now…
+
+Once you have taken a snapshot, you can edit your document safe in the knowledge that you can return to the old version any time you so wish. Click on the “Snapshots” button (the one with the picture of a camera on it) in the inspector footer bar to see what I mean (you can also switch directly to the Snapshots pane and have the inspector open if necessary by going to Documents > Snapshots > Show Snapshots). The inspector now shows a list of snapshots at the top, which should consist of the one you took and one I took while writing the first version of this tutorial back in 2006. Clicking on a snapshot in the list reveals its text in the lower part of the inspector. You can restore an older version of your text by selecting the version you want from the list and then clicking on “Roll Back” at the top (at which point, you will be given the option of taking another snapshot of your current version, just in case you forgot).
+
+If you wish to know what you have changed in the document since the snapshot was taken, click on “Compare”. Do that now - select the snapshot that was taken on the 23rd August 2006 and click on “Compare”. The text in the inspector will change to show what has been added or removed. Text that has been added to the document since the snapshot was taken appears underlined and in blue; text that has been deleted appears struck out and in red. Note that the comparison only shows textual changes - it does not show changes to the formatting.
+
+Click on the left and right arrows at the top of the inspector, next to the “Roll Back” button, to navigate between the changes.
+
+You can alter the granularity (level of detail) of the comparison by clicking on the downwards-pointing arrow next to the “Compare” button (which should now read “Original”, because clicking on it again will switch back to showing the text of the snapshot without any comparisons). Often you will find that changing the granularity will give you different results on different documents, depending on the scope of the edits. You will usually get the best results by leaving “By Paragraph” ticked but playing with “By Clause” and “By Word”.
+
+You can also compare the differences between two snapshots by selecting two different snapshots in the list and clicking on “Compare”: if one snapshot is selected, clicking on “Compare” compares it with the current version of the text; if two snapshots are selected, they are compared against each other.
+
+If you ever want more space to read through a snapshot - if you find the inspector too cramped - you can drag a snapshot from the list in the inspector onto the header view (see Step 2) of the main editor to load it there. If you hold the Option key down while dragging it, the snapshot will show comparisons to the current version of the text when loaded into the editor.
+
+So: Snapshots are very useful for keeping old versions of your text around and for checking what you have changed.
+
+Now let’s move onto Step 5h for information on the comments and footnotes pane.</Text>
+        </Document>
+        <Document ID="6">
+            <Title>Step 3: Footer View</Title>
+            <Synopsis>You made it to step 3!</Synopsis>
+            <Text>You may notice that as with the history navigation buttons, dragging a document into the header bar does not affect the binder selection. If you ever find that after navigating through multiple documents you are not sure where the current document is located in the binder, you can simply use View > Reveal in Binder (Opt-Cmd-R) to force the binder to show you where you are. Try that now.
+
+Okay, so let’s get familiar with the editor. At the bottom of the window, you can see a grey bar containing a pop-up button with a percentage in it (100% by default) and a live word and character count. This is the “footer view”. Try typing something in the yellow area below:
+
+
+
+Done that? You will see that the word and character count in the footer view changes as you type. Now try changing the percentage in the popup-button at the bottom, too (click on it and select a new percentage)—you will see that you can make the text bigger or smaller; useful for tired eyes.
+
+SCRIPTWRITING MODE
+The footer view will change depending on what you are viewing inside the document. For instance, if you are typing a script (such as a movie screenplay), the footer view will give you information on the various script elements. Try selecting Format > Scriptwriting > Script Mode - Screenplay from the main menu now. The word and character count will disappear and you will see another pop-up menu appear on the right saying “General Text” (this just means that the currently selected text isn’t recognised as a part of a screenplay). Click into the text on the line below:
+
+Click into this text.
+
+Now try selecting different elements from the pop-up menu on the right of the footer view. You will see that the above text automatically gets reformatted to the script element you selected, and the footer view will show what will happen if you press the tab or enter keys (which will move you to the next script element). Note that you can hit Shift-Cmd-Y to bring up that menu automatically and then hit one of the keys specified in the menu to select an element without taking your hands off the keyboard (you can also use Opt-Cmd and the number keys to change elements).
+Scriptwriting mode is saved on a document-by-document basis, so you can switch between documents that use script formatting and regular text documents. The icons of documents in the binder that use scriptwriting mode are yellow so that you can easily tell them apart from other text documents.
+Right, let’s return to normal prose mode now - select Format > Scriptwriting > Script Mode - Screenplay again to deselect screenplay mode.
+
+NOTE:
+If you ever find that the word and character count has disappeared from the footer bar, it is most likely because you have accidentally switched into scriptwriting mode, so even if you’re not writing a script it’s a good idea to familiarise yourself with how to enter or leave scriptwriting mode, as described above.
+
+OTHER FILES
+For PDF files, the footer view allows you to navigate between the pages. Click on “spacewalk_info” in the Research folder to test this out, and then come back here by clicking on the “back” arrow in the header view.
+
+All good so far, I hope. Now let’s familiarise ourselves with some other basic features. Click on “Step 4: Composition Mode” in the binder.</Text>
+        </Document>
+        <Document ID="31">
+            <Title>Step 19: Text Editing</Title>
+            <Text>PAGE LAYOUT VIEW
+You can switch to page layout view to view your text on virtual pages by clicking on the “Wrap” button in the toolbar or by going to View menu and selecting Page View > Show Page View. Note, however, that the pages you see on screen may not match exactly what you see when the text is compiled for print or export. The concept of pages is largely meaningless in Scrivener, because you work on the different parts of your manuscript in smaller pieces and can completely change the formatting and insert other elements, such as titles, during the Compile process. So the final arrangement of the pages isn’t really known until the text is compiled into one document. Thus, unlike traditional word processors where the page layout view is intended to show you exactly what you will see when you print out your text, in Scrivener it is intended mainly for writers who just feel more comfortable seeing pages fill up on the screen. To that end, you can set up the virtual pages so that they are smaller or larger than printed pages. To do so, select “Use Preferences Page Size” from the View > Page View menu and choose the size of the pages you’d like to work with on screen in the “Editor” pane of the Preferences (under the “Wrap to Page Mode” section). Choosing “Use Printed Size” will use the current print settings as the basis of the page size.
+The page layout view is also useful for screenwriters who use the rule of thumb that one page of script equals one minute of screen time.
+
+
+THE FORMAT BAR
+The format bar runs horizontally just below the toolbar and allows you to access common formatting commands easily. From the format bar you can change the font, text alignment, line spacing, text and highlight colour, and create lists. You can turn the format bar on or off by choosing “Hide Format Bar” from the Format menu. Note that if you click and hold the text colour or highlight buttons in the format bar for a second, a menu will appear that allows you to choose from a list of colours (clicking on the buttons applies the currently-selected colour). You can add colours to these menus by dragging colours to the swatch in the standard colour palette (available by choosing “Show Colors” from the Format > Font menu).
+
+
+THE FORMAT MENU
+The Format menu provides various ways of formatting your text which are standard in many Cocoa applications (such as TextEdit) along with some that are unique to Scrivener, the latter of which are listed below.
+
+HIGHLIGHT
+Pretty straightforward, this one. Choose from several standard highlighter pen colours to highlight your text. (Note that to change the highlighter pen colour via the toolbar, click and hold the Highlight toolbar icon for a second; you will need to add the Highlight icon to the toolbar via View > Customize Toolbar first.)
+
+#
+
+INLINE ANNOTATION AND FOOTNOTES
+We looked at inspector comments and footnotes in step 5h, but there’s another way of adding notes to your text, too. Inline annotations and footnotes allow you to make notes right inside your text (whereas inspector comments and footnotes are hidden away in the inspector until you need them). The two types each have their own advantages, so it’s up to you which you use - or you can use a mixture of both. Inline footnotes and annotations look like this:
+
+This text has a footnote after it. This is a footnote. When the text is compiled, exported or printed, this footnote will be turned into a “real” footnote (or endnote).
+
+And this is an annotation. Annotations can be completely removed from the text when you compile, print or export.
+
+Each was created by selecting the text and choosing either “Inline Annotation” or “Inline Footnote” from the Format menu. Alternatively, you can also just choose “Inline Annotation” or “Inline Footnote” with no selection and start typing (note that you can change the colour of an annotation by clicking in it and changing the font colour using the Show Colors panel or the format bar). When you export your work, ranges of text defined as footnotes can be turned into real RTF footnotes that can be read by Word, Nisus Writer, Mellel and other major word processors. Ranges of text defined as annotations can be turned into RTF comments (which Word can read) or omitted altogether. One thing to note is that when you create inline footnotes, the grey bubble should start exactly where you want the footnote marker to appear in the printed or exported text.
+
+REVISION MODE
+Revision mode simply allows you to use a different text colour while editing or revising your text, without having to change the colour again every time you click into a different part of the text. To enter revision mode, select one of the colours (“First Revision”, “Second Revision” and so on) from the Format > Revision Mode menu (you can set your preferred revision colours in the “Appearance” pane of the Preferences). In revision mode, no matter where you click in the text, when you start typing the text will appear in the chosen revision colour.
+
+SCRIVENER LINKS
+Scrivener links are much like web hyperlinks, except that they link to other documents within the current Scrivener project. To create a Scrivener link, select the name of the document to which you wish to make a link from the Scrivener Links menu in the Edit menu. This will create a hyperlink in your text document. Alternatively, choose “New Link…” to bring up a sheet that allows you to create a new document to which to link, or to choose from existing documents in the project. Clicking on a Scrivener link will open the linked document in a QuickReference panel by default, but you can change this behaviour in the “Navigation” pane of the preferences and choose how you would like links opened. You can also create Scrivener links by dragging a document from the binder, outliner view or corkboard and holding down the Option key while dropping the document into the text (if you don’t hold down the Option key, the content of the document will get dropped into the text if possible). Scrivener links can be useful for creating tables of contents or references within your research.
+
+Try clicking on the Scrivener link below:
+
+spacewalk_info
+
+A PDF document will be opened in a QuickReference panel. Close the panel and then move on to “Step 20” in the binder.</Text>
+        </Document>
+        <Document ID="14">
+            <Title>Step 10: Outliner</Title>
+            <Text>The binder is a very useful organisational tool, but one of the key concepts behind Scrivener is the linking of synopses to documents – and the binder does not show synopses (well, actually, it does show them in tool tips if you hover the mouse over items there, but the binder is more intended as a table of contents). The corkboard, as we have seen, is a good way of viewing and editing the synopses of multiple documents, but not everyone likes corkboards and besides, the corkboard only shows one level of a group’s subdocuments at a time. This is where the outliner comes in: it provides a way of structuring multiple levels of your project at the same time as seeing much of the data associated with your documents.
+
+Click into the upper pane (which should still show the corkboard) so that it receives the focus (its header bar will turn blue), and then click on the “Draft” folder in the binder.  Next, select the “Outliner” segment of the “Group Mode” capsule in the toolbar:
+
+#
+
+ The upper view will now have turned into an outliner, showing all of the items contained inside the Draft (because that is what we selected in the binder). Click on a disclosure triangle next to one of the folders to reveal more documents (or Opt-click on a disclosure triangle) to open all subfolders inside the folder too.
+
+Next, with the outliner still focussed, click on “Part 2: Organisation” in the binder. The outliner will now show only the subdocuments of the “Part 2” folder.
+
+You can click on the “Hide Synopses” button in the outliner footer bar to get rid of the synopses and show titles only.
+
+Choose which columns appear by clicking on the “>>” button in the top-right of the outliner title bar, or via the View > Outliner Columns menu. The outliner allows you to edit the titles and synopses of various documents, assign the label or status, set the “Include in Compile”, “Page Break Before” and “Compile As-Is” flags and reorganise documents by dragging them around. You can also view various other meta-data, such as the word and character counts of documents. The “Characters” and “Date” custom meta-data you created in Step 5f are also available in the list of columns, so you can add those for viewing and editing in the outliner if you wish.
+
+Dragging Tip: By default, when you drag items around you can drop them on other items as well as between them (dropping “on” places the dropped document inside the document it was dropped on, below the other subdocuments). Holding the Option key down while dragging restricts drops to between-only – this can be useful when you want a little more accuracy.
+
+Some traditional outlining features are available in Scrivener via the Documents menu (such as Move > Up, Down etc), so be sure to check that out.
+
+The columns of the outliner can be sorted by clicking on the column headers. Click once to sort in ascending order (e.g. alphabetical), click again to sort in descending order, and click again to get rid of the sort:
+
+￼
+
+As with the corkboard, you can select multiple folders in the binder to view their subdocuments in the outliner - try clicking into the outliner (to give it the focus) and then selecting “Part 1” and “Part 2” in the binder, for instance.
+
+We can get rid of the split now. To do so, click on the button in the right of the header bar for this editor:
+
+￼
+
+Once you’ve done that, go to Step 11.</Text>
+        </Document>
+        <Document ID="7">
+            <Title>Step 4: Composition Mode</Title>
+            <Synopsis>- No synopsis -</Synopsis>
+            <Text>Composition Mode is a very nice feature for blocking everything else out while you write. I’m not going to pretend it’s innovative or anything—I think Blue-Tec (now called The Soulmen), the creators of Ulysses, were the first to implement something like this for a text editor—but it is very handy. Either hit Opt-Cmd-F or click on “Compose” in the toolbar above – do it now!
+
+You should now be in composition mode—it’s just you and your text. (“Composition Mode” is essentially a full screen mode, but we call it “Composition Mode” to avoid confusion with OS X Lion’s full screen feature, which Scrivener also supports.)
+
+Some things you need to know about composition mode:
+
+1) Move your mouse to the bottom of the screen. You will see that a control panel appears, similar to the one in iPhoto. From here you can change the text scale, set the position and width of the “paper” (the text column), fade the background in and out and view the word and character counts of the document. There are also buttons for displaying the keywords panel and Inspector (we won’t go into that right now, though, as we have yet to talk about keywords and notes—come back and try them out once you’ve gone through the rest of the tutorial) and for exiting composition mode. You can also hit Opt-Cmd-F or the Escape key to exit composition mode.
+
+2) You can only enter composition mode for text documents.
+
+3) By default, composition mode uses “typewriter” scrolling (another Ulysses first, I believe). This simply means that as you type, the text will remain in the centre of the screen vertically so that you don’t have to stare at the bottom of the screen all the time. You can turn this off via Format > Options > Typewriter Scrolling (Ctrl-Cmd-T), and you can also turn it on for the main editor if you wish.
+
+4) You can customise the look of composition mode. You can use the Appearance pane of the Preferences to change the background colours and you can change the colour of the text in composition mode via the Compose pane of the Preferences (so you could set it up to have a retro green-text-on-black-background look, for instance). You can even add a background image, if you want, by going to View > Composition Mode Backdrop.
+
+Okay, let’s move on to “Step 5: The Inspector” while still in composition mode. To do so, move the cursor to the top of the screen so that the menu bar appears. Then, from the View menu, choose Go To > Draft > Part 1: Basics > Step 5: The Inspector.</Text>
+        </Document>
+        <Document ID="32">
+            <Title>Step 23: And Finally...</Title>
+            <Text>This has been a fairly thorough tour of all of the main features of Scrivener. You probably won’t use half of the features you’ve just learned about for some time - in fact, on a daily basis, you will probably only use the most basic features of writing in the editor, creating new documents, and moving documents around in the binder. Everything in Scrivener gets out of your way until you need it - but at least you know what’s available and have a good idea of what you can do.
+
+There’s plenty of other stuff in there, too. For instance, I neglected to mention the project targets and statistics features in the Project menu, which you may well use frequently if you need to to write to a particular length. They are fairly self-explanatory, though, so just try them out.
+
+What else? Well, once again, remember that Scrivener expects you to put everything that you want to export as part of your manuscript (okay, typescript for the pedants) inside the Draft folder. And remember that Scrivener is really about “hammering out” that draft; it is not a word processor or full page layout program, so at some point—unless you just want a very basic manuscript—you may well want to move your work into a word processor for final formatting.
+
+Experiment! You should be able to work out the rest by playing with the program. If you get stuck, be sure to check out the comprehensive Scrivener Help from the Help menu. If you still have a problem, check out the FAQ on our wiki, or take a look at some of our tutorial videos on the web page:
+
+http://www.literatureandlatte.com/wiki
+http://www.literatureandlatte.com/videos.php
+
+And of course, if you are still baffled, post a question on the user forums!
+
+http://www.literatureandlatte.com/forum
+
+Likewise, if you encounter any bugs or glitches, no matter how small—and especially if you experience a crash—please post to the forums or e-mail us at support@literatureandlatte.com.
+
+I hope you enjoy using Scrivener and find it a useful tool, and offer my heartfelt thanks to you for choosing Scrivener (or considering it) as the tool for your own writing.
+
+NEXT STEPS
+You are now ready to begin your own project - go to File > New Project to get going. Happy writing!</Text>
+        </Document>
+        <Document ID="8">
+            <Title>Step 11: Scrivenings</Title>
+            <Text>Let’s take a closer look at “Scrivenings” mode. The whole point of Scrivener is to make working on a long text easier by allowing you to break it up into smaller pieces, but you will often want to see how those smaller pieces fit into the greater whole. This is what Scrivenings mode does.
+
+There are two ways of entering Scrivenings mode:
+
+1) You can select a folder or container in the binder that contains text subdocuments, and use Scrivenings mode to view all of the documents inside the folder (including the folder itself, if it has text associated with it) as though they were one long document.
+
+2) You can select arbitrary documents in the binder and view them as though they were a single document.
+
+We already did (1) in Step 7, so let’s try viewing arbitrary documents this time. Once you’ve finished reading this paragraph, click on “START HERE” at the top of the binder and then, holding down the Command key, click on “Step 7: Changing Editor Views” and “Step 11: Scrivenings”, so that all three documents get selected. Once that’s done, ensure that the stack of papers is selected in the “Group Mode” control in the toolbar, and then scroll down towards the bottom of the text that gets loaded into in this editor and look for the pink highlighting below—do that now.
+
+#
+
+Back here yet?
+
+Do you see what just happened? “Scrivenings” temporarily combines the selected documents into a single text. You can select non-contiguous documents or you can choose to view and edit the contents of a folder or group. If you were writing a novel, you could therefore write each scene of a chapter in isolation and then view and edit the whole chapter as though it were a single document using Scrivenings; or you might run a search on a particular character and view the results as one long text so that you can see how the storyline for that character pans out in isolation.
+So that you can see where one document ends and the next begins, there is a horizontal dividing line between sections, but if you prefer you can also display the document titles above each section by going to the View menu and selection Editor > Show Titles in Scrivenings.
+The Inspector displays information about the chunk of text you are currently editing.
+An important point to note about Scrivenings is that you cannot make textual edits across the individual document boundaries, so if you select a range of text that spans more than one document block and try to edit it, you will just hear a beep. (You can change formatting across boundaries though.)
+Now it’s time to click on “Step 12”...</Text>
+        </Document>
+        <Document ID="41">
+            <Title>Step 22: Creating a New Project</Title>
+            <Text>At this point, we’ve covered all of the major features of Scrivener. If you haven’t done so already, then soon you are going to want to create your own project so that you can start work. Generally you will want a separate Scrivener project for each writing project you are working on. To create a new project, select “New Project…” from the File menu, which will open the project templates chooser panel. From there, you can choose a project type from one of the categories (novel, screenplay, thesis and so on). Once you’ve done so, click on “Choose…” to specify a location at which to save the project. Scrivener projects have the file extension “scriv” and act just like any other file - you can double-click on them in the Finder to open them, or choose to open an existing project file via the File > Open… menu.
+
+Note that the “Blank” project type is the basis for all other project types. That is, all the other project templates were created by starting from a blank project, adding some documents and changing the settings relevant for the project type, and then saving the resulting project as a template. If you find that none of the existing templates are quite right for the sort of writing you do, you can create your own project templates in the same way, like this:
+
+1)	Create a new project - either from the Blank template or from any other template - and edit it so that it contains all the elements and settings you will want in a new project whenever it is created from your template.
+2)	Select “Save As Template…” from the File menu.
+3)	From the “Save As Template” sheet that appears, enter a title and description for the new template, and choose a category and icon, then click on “OK”.
+4)	Go to File > New From Template… You will find the template you just created available as the basis for new projects. At this point you can delete the project from which you created the template, if you wish.
+
+Okay, on to Step 23, the “And Finally…” bit.</Text>
+        </Document>
+        <Document ID="24">
+            <Title>Other Stuff You Might Want to Know</Title>
+            <Synopsis>NEW STUFF
+
+This is where I will put anything you need to know before using a new beta version.
+
+19 N...</Synopsis>
+            <Text>SAVING
+A very important aspect of a program such as Scrivener is how it saves documents. Scrivener auto-saves so that you don’t have to worry about saving at all if you don’t want to. That said, if you’re anything like me, “not worrying” about saving is an impossibility, so here is how things work: every time you make a change to a document, the red “close” button in the top-left corner of the window (which will be grey if you are using the Graphite theme) will become “dirtied” (i.e. a dot will appear inside it) to indicate that there are unsaved changes, just as in many Mac programs. At this point, Scrivener knows that it needs to save as soon as possible. It does so as soon as there is no activity for two seconds or more (although you can change the amount of time it waits in the “General” pane of the Preferences)—that way, saving a large document will not interrupt what you are doing. It also checks whether it needs to save when a project is closed and when you quit the application, and saves if so. Once things are saved, the red button returns to normal.
+Although the auto-save feature keeps your work safe 99.99999% of the time, and while I hope you never experience any crashes, every program has the occasional bug lurking around, so for the sake of your—and my—own sanity, there is a “force save” feature. This just works the same way as a normal save in a regular app. Hit Cmd-S or go to File > Save to force any changes you have made to be saved without having to wait the two seconds for an auto-save. Note that because of the auto-save feature, if you close a project while the red button is dirtied, you will not be asked whether you want to save your changes, as many programs do, because the changes will be saved automatically.
+
+LAYOUTS
+If you find yourself opening and closing the binder and inspector frequently, or spending a lot of time setting up the corkboard or outliner view to appear in the right place for a particular task, check out the Layouts feature, which can be accessed by selecting “Manage Layouts…” from the Window > Layouts menu. This allows you to save the state of the interface and quickly return to it at a later time.
+
+SCRATCH PAD AND CLIPPING SERVICES
+If you have to gather a lot of research in other applications and find yourself doing a lot of copying and pasting into Scrivener, the Scratch Pad and clippings features may be useful. The scratch pad is a panel that can be called up from any other application using a keyboard shortcut that you set in the “General” pane of the Preferences. You can then paste or type any notes into it and send them to one of your open projects straight away or at some point later (scratch pad notes are saved in a folder on your hard drive that you can specify in the preferences). Scrivener also makes some clipping features available via the global OS X Services menu (note that on Snow Leopard you will need to turn them on in the System Preferences, in the “Keyboard Shortcuts” tab of the “Keyboard” pane).
+
+BACKING UP YOUR WORK
+Back Up To... (available from the File > Back Up menu) is your friend... Use it frequently to save copies of your project (you can save copies as archived .zip files, too) to ensure that your work is always backed up. You can also set up your projects to be backed up automatically whenever they are opened or closed, using the “Backup” pane of the Preferences.
+
+FILE FORMAT
+Just a quick note on the file format, by the way: .scriv files are actually OS X packages (which is to say, folders that just happen to look like files). This means that you can ctrl-click on them in the Finder and select “Show Package Contents”. If you do this, you will (reassuringly, I hope) discover that all of your work is actually stored as multiple RTF and XML files inside various subfolders. This means that even in the worst possible crash case, if a .scriv file became hopelessly corrupted (although I hope this will never happen), you would still be able to open and edit all of your work in another program (such as TextEdit). That said, you should not edit the RTF files inside a .scriv package in any other program if you intend to keep using them inside Scrivener, as this may cause problems with Scrivener’s footnotes, comments, links and search features. Use the Export Files feature if you want to get your files out of Scrivener.</Text>
+        </Document>
+        <Document ID="50">
+            <Title>5a: The Synopsis Index Card</Title>
+            <Text>The first thing you will notice is the index card at the top. This appears in the Notes, References and Keywords panes of the inspector (but not in the Snapshots or Comments panes which require more space). The index card is an important concept in Scrivener. You can type a synopsis of your document into the body of the index card (note the header of the index card can be used to rename the document, too). One of the core ideas behind Scrivener is that every document (or chunk of text, or image, or whatever) is associated with a synopsis, which is represented in the inspector by the index card. You can then view these synopses in different ways (which we will come to later) which will make outlining and organising your work easier. The best way to understand this is to imagine that each document in Scrivener is a sheet of paper that has an index card clipped to it containing a summary of the document’s contents, which can then be viewed alongside other index cards to get an overview of the whole.
+You can auto-generate a synopsis by clicking on the # button in the top-right of the inspector: if any text is selected in the editor, it will be copied into the synopsis; if no text is selected, the first few lines of text will be used.
+You can also display an image in this area if you want. To do so, just click on the icon of the index card with two arrows next to it in the header at the top of the inspector and choose the image icon. The synopsis will be replaced by a blank area containing the text, “Drag in an image.” You can then drag image files from the binder or from the Finder into this area. (If an image is selected for a document in the synopsis area of the inspector, it will also be used to represent the document on the corkboard instead of the synopsis text - we will come to the corkboard a little later.)
+
+So that’s the index card. Below the index card are other tools to help you organise your work, starting with the General pane. Note that the Synopsis and General panes can be collapsed by clicking on the disclosure triangle in their respective header bars.
+
+Please click on “5b: Meta-Data”.</Text>
+        </Document>
+        <Document ID="42">
+            <Title>Step 20: Custom Icons</Title>
+            <Synopsis>Note on: Step 1: Beginnings</Synopsis>
+            <Text>As you have learned, by default any new Scrivener project will have three root folders - the Draft, Research and Trash folders. These folders cannot be deleted or moved into other folders (although they can be moved into a different order). You’re not limited to having only these three main folders, though - you can create as many as you need. Let’s try that now:
+
+1) Lock the editor again so that this document stays on screen (by clicking on the icon in the header view and selecting “Lock in Place” from the menu that appears).
+2) Click on the Research folder.
+3) Click on the “Add folder” button in the footer bar right at the bottom of the binder (or hit Opt-Cmd-N).
+4) Note that a new folder is created inside the “Research” folder. Rename the new folder “Characters”.
+5) From the Documents menu, choose Move > Left. Your new folder is now a root folder - that is, it is now as far left as it can go, on the same level as the Draft, Research and Trash folders.
+
+So, we’ve created a new root-level folder, but at the moment it looks fairly generic. This is where Scrivener’s custom icons feature comes in - you can assign a custom icon to any file or folder in the binder so that its purpose is more immediately recognisable. In our example, we are going to use our new folder to store notes about different characters in a novel, so we want to assign an icon to it that will allow us to find it easily and quickly. Here’s how:
+
+1) Ctrl-click on the “Characters” folder.
+2) Select “Change Icon” from the contextual menu that appears. Choose the “Characters” or “Characters (Photo)” icon (although you could just as easily choose any icon).
+
+A number of icons are provided with Scrivener for use in your projects, but you can also create your own (or download some) and import them by choosing “Manage Icons…” from the Documents > Change Icon menu.
+
+In this way you can customise your projects to contain whatever main folders you need (note that you can assign custom icons to individual documents, too, but the feature is more likely to be useful for customising folder icons). If you create a Scrivener project from one of the templates that are provided (such as the novel template), you will find folders in the binder that have been created and customised in just this way.
+
+Unlock the editor and move on to Step 21.</Text>
+        </Document>
+        <Document ID="51">
+            <Title>5b: General Meta-Data</Title>
+            <Text>The “General” pane in the middle of the inspector contains several meta-data elements:
+
+Label and Status
+Label and status are just arbitrary tags you can assign to your document. You can set up the project labels and status list via Project > Meta-Data Settings… You might, for instance, rename “Label” to “POV” (for Point of View) and use it to hold the name of the point-of-view character for each document. This way, you could easily run a search on all chapters that have a particular character as the protagonist by searching on label only (by typing the name of the character in the search field in the toolbar and then choosing “Label”—or “POV” if you have renamed it such—from “Search in” in the search options menu, which can be accessed by clicking on the arrow next to the magnifying glass in the search field). Status works much the same, except that it is meant to keep track of the state of the document—for instance, “Finished”, “To do”, “A mess” and so forth—although you can rename it and use it for something completely different, should you so wish.
+
+Created/Modified Date
+Switch between the created and modified date by clicking on the arrows next to where it says “Created:” or “Modified:”. No surprises here—as you would expect, the created date holds the date and time the document was first created and the modified date holds the date and time the document was last modified and saved.
+
+Include in Compile, Page Break Before and Compile As-Is
+These options affect how the document is compiled when you come to export or print the draft (which we will come to later). They only have any meaning if the document is contained inside the Draft folder. They are mostly self-explanatory: “Include in Compile” specifies whether the document should be included in or omitted from the draft when exported or printed; “Page Break Before” specifies whether the document should have a page break before it (useful if it marks the beginning of a chapter, for instance); “Compile As-Is” tells the compilation process not to change the formatting or insert a title for this particular document, no matter what the Compile settings are.
+
+Next, let’s look at the “Notes” pane.</Text>
+        </Document>
+        <Document ID="60">
+            <Title>Step 14: Collections</Title>
+            <Synopsis>- No sleep till Brooklyn -</Synopsis>
+            <Text>Are you still with us? We’re most of the way there, I promise.
+We’re going to look at a feature called “Collections” next. Collections provide a way of keeping lists of documents that have nothing to do with their binder order. The easiest way to understand what I mean is to create a collection, so let’s do that now.
+
+CREATING AN ARBITRARY COLLECTION
+Click on the “Collections” button on the left-hand side of the toolbar. You will see an extra area appear at the top of the binder with a blue and purple tab in it, entitled “Binder” and “Search Results”. Try clicking on the “Search Results” tab.
+See what happened? The last search you ran gets run again, and its results appear where the binder was.
+Now click on the “Binder” tab to return to the binder.
+Next, click on the icon in the header view to bring up the header bar menu, and click on “Lock in Place”:
+
+#
+
+
+The header bar will turn pink. This indicates that the editor is now “locked”, which means that clicks in the binder will have no effect. Try clicking on different documents in the binder to see what I mean - they will no longer get loaded into the editor when selected as they normally do.
+Now hold down the Command key and click on several documents in the binder to select them. Once you have selected five or six - it doesn’t matter which ones - click on the “+” button in “Collections” bar at the very top of the binder:
+
+￼
+
+The binder will temporarily disappear, to be replaced by a flat list showing only the documents you selected. You haven’t moved those documents, though - they are all still in their rightful places in the binder. No, you’ve just created a collection (more specifically, an arbitrary collection) and when you created it, the selected documents were automatically added to it. To see what I mean click on one of the documents in the collection list and select “Reveal in Binder” from the View menu. This will show you where the document is located in the binder. Click back on the collection tab once you’ve tried this, to return to the collection.
+You can rename the collection to anything you want, and you can change its colour by double-clicking on its colour chip:
+
+￼
+
+Go ahead and try changing the title and colour.
+
+Note that the new collection gets created behind whichever collection is selected. Because we had the binder open when we created our new collection, it got added behind the binder tab. You can drag and drop the tab to be behind the Search Results tab again if you want, though.
+
+Let’s add some more documents to the collection. Click back on the Binder tab and select some different documents. Once you’ve selected some, drag and drop them onto your collection tab.
+
+￼
+
+Then click on the tab again to return to the collection - you will see that the documents you dragged onto the tab are now in the collection too. (Note that if you hold the mouse over the tab for a moment before you drop, the collection will be shown automatically.)
+
+TIP: If you hold the Option key down while dragging a folder onto a collection, then all its subdocuments will get added to the collection too.
+
+You can drag and drop the documents in the collection list to arrange them into any order you want. If we unlocked this editor, clicking on documents in the collection would open them in the editor, just as happens when selecting documents in the binder.
+
+Collections can be used for whatever you like. You might, for instance, use them to gather together documents you need to do more work on, or you might use a collection to experiment with the order of documents before committing to the arrangement. (Once you were happy with the arrangement, you could select all the documents, ctrl-click on them, and use Move To from the contextual menu to move them all to the location in the binder you want them.)
+
+SEARCH COLLECTIONS
+There’s another way of creating collections, too - you can save your search results as collections. Let’s create a collection of all documents with their status marked “To Do”:
+
+1) Click on the downwards-pointing arrow next to the magnifying glass in the search field in the toolbar, and select “Status”.
+2) Click in the search field and type “To Do”. The binder will be replaced by the regular purple search results list (with its associated “Search Results” tab selected in the Collections pane above). You will see that the status for each is marked “To Do”, as you would expect.
+3) Click on the downwards-pointing arrow next to the magnifying glass in the search field again, and this time select “Save Search…” from the bottom of the menu.
+4) Enter a name for the search, e.g. “To Do” (it will use the search phrase by default) and hit “OK”.
+
+The search results will now change colour and you will see that a new tab has appeared in the list of collections named “To Do”. Again, you can rename this or change the colour to one of your choosing. The magnifying glass icon on the left of the tab indicates that this is a search collection. These are different to regular, “arbitrary” collections in that you can’t arbitrarily add documents to them or move them around. Instead, every time you click on a search collection, the search gets run again. To see what I mean:
+
+1) Click back on the Binder tab.
+2) Click on the “START HERE” document at the top of the binder and hit the space bar to bring up a QuickReference panel.
+3) Click on the pop-up button in the top-right of the QuickReference panel and choose “To Do” from the list of options to change the status.
+4) Repeat this with a couple of other documents if you like.
+5) Now click on the “To Do” collection again.
+
+Note how the “START HERE” document is now part of the “To Do” collection, because we set up the “To Do” collection to include any documents that have “To Do” set as their status.
+Search collections can be used in various ways. You could use one to keep track of the storyline of a character in a novel, to highlight documents that contain a word you know you over use, and so on.
+The “Search Results” tab is itself really just a special type of search collection - it will always show the results of the most recent search - even after you close and reopen the project.
+
+To delete a collection, just select its tab and then click on the “-” button in the “Collections” bar. Deleting a collection has no effect on its constituent documents - they are not deleted and remain in their place in the binder.
+
+There’s lots you can do with collections - or you don’t have to use them at all. Like most things in Scrivener, they are available if you need them but can be ignored if you don’t.
+
+Let’s unlock the editor now. Click on the icon in the header view again and this time deselect “Lock in Place”. You can also click on the “Collections” icon in the toolbar to hide the collections pane if you want.
+
+Now it’s on to “Part 3”. Expand the “Part 3” folder if it is collapsed, and then click straight on “Step 15: Importing”.</Text>
+        </Document>
+        <Document ID="17">
+            <Title>Step 9: Corkboard</Title>
+            <Synopsis>Okay, I admit it: I’m too lazy to think of anything witty to place in the other synopses.</Synopsis>
+            <Text>The corkboard is one of Scrivener’s most distinctive structural tools, so let’s look at that now.
+
+BASIC USAGE
+The corkboard shows the immediate subdocuments of the selected document. To see what I mean, click into the top editor to give it the focus (it should still be showing the “ThisIsBuzzAldrin” media file; if so, click somewhere in the control panel - near the volume control slider for instance - so that the header bar of the top editor turns blue, or blue-grey if you use the Graphite theme in your system Preferences). Once the top editor has the focus, click on the “Draft” folder in the binder, and ensure that the capsule “Group Mode” control in the toolbar has the corkboard selected.
+
+Note how the corkboard in the top editor now shows the folders, “Part 1” through to “Part 5”, represented as index cards. If you look in the binder, you will notice that these five folders are the immediate subdocuments of the Draft folder - that is, they are only indented one level from the Draft folder. The corkboard thus allows you to concentrate on different levels of your structure.
+
+Next, in the corkboard itself, double-click on the folder icon in the second card, which is titled “Part 2: Organisation”. This will drill down to show the contents of the “Part 2” folder represented as index cards. Each card shows the title of the document and a synopsis area that can be used to remind you of the content of the document or to note what you intend to write in the document later. You can edit the synopsis or title by double-clicking into a card, and you can drag the cards around (and into the binder) to reorder your documents.
+
+If the inspector is open while the corkboard (or outliner) is open, it will show information for the currently selected document.
+
+You can change the corkboard settings - the number of cards that get drawn across, their width and so on - by clicking on the button with the image of four index cards in it in the right of the footer bar beneath the corkboard:
+
+#
+
+(Incidentally, if you don’t like the corkboard background, you can change it to a colour of your choice in the Appearance section of the Preferences. You can also change the way the cards look, to get rid of the rounded corners and make them look more like real index cards.)
+
+CONTROLLING THE OTHER EDITOR FROM THE CORKBOARD
+Note the button containing the two arrows facing in opposite directions in the corkboard footer bar:
+￼
+
+Click on it now. You will notice that it turns blue, to indicate that it is on. When this button is on, selecting documents in the corkboard (or outliner) will open them in the other editor if there is a split. Try clicking on the “Step 7” card, then on the “Step 8” card, and then on the “Step 9” card (which should bring you back here).
+
+See how clicking on the cards opened the documents associated with them in this editor? That’s a useful trick, as it means you can hide the binder and use the corkboard or outliner to navigate if you want to, or just use the corkboard or outliner as secondary navigation tools.
+
+Click on the arrows button again so that the arrows turn back to grey, then try clicking on the cards in the corkboard once more - this time nothing will happen, because the button has been deselected.
+
+FREEFORM MODE
+Scrivener’s corkboard is not like a real corkboard in that it is linear and is really just another way of displaying the subdocuments of a folder or container. However, you can enter a freeform mode, which allows you to move cards where you want and experiment. You switch between freeform and regular modes using the capsule control on the right-hand side of the corkboard’s footer bar - try clicking on the part of the segment with the three stacked cards now:
+
+￼
+
+The corkboard background will change and you will be presented with the cards arranged in no particular order. You can drag cards around, and you can select multiple cards by clicking and dragging the mouse to create a marquee rectangle to enclose the cards you wish to select. Dragging the cards around in freeform mode has no effect on the order of their associated documents in the binder (unlike in regular mode). If you arrange the cards in an order you would like to be used in the binder, though, you can click on the “Commit Order” button in the footer bar to have Scrivener change the order of the documents in the binder to best-fit their arrangement on the freeform corkboard.
+
+Feel free to play around with the cards (but don’t commit the order unless you want to mess up the order of the tutorial!), and once you have finished, return to regular corkboard mode by selecting the grid segment of the capsule in the corkboard footer bar.
+
+CORKBOARD STACKS
+You aren’t limited to displaying the contents of only one container on the corkboard - you can show the subdocuments of several containers by “stacking” the corkboard. This is really easy to do:
+
+1. Click into the corkboard in the top editor to make sure that it has the focus (remember, the header bar of the top editor should be blue to indicate it has the focus).
+2. Click on the “Part 1” folder in the binder.
+3. Holding down the Command key, click on “Part 2” in the binder.
+4. Holding down the Command key again, click on “Part 3” in the binder.
+5. Repeat with “Part 4” and “Part 5”.
+
+Now scroll down through the corkboard. Note how the subdocuments of each of the folders you selected are now all displayed on the corkboard, with a dividing line between each section (and alternate sections have a darker background colour).
+
+Also take a look at how the regular mode/freeform mode capsule control in the corkboard footer bar has now been replaced by a capsule control that allows you to choose how the different sections should be arranged - as a grid, in rows, or in columns:
+
+￼
+
+Try clicking on each of the different of the different options to see how they affect the corkboard.
+
+VIEW OPTIONS
+Go to View > Corkboard Options > Show Pins. The result will depend on the look you have chosen for the index cards in the Preferences. If you are using the default, rounded look, then each card that has a label associated with it will now have a colour chip in is top-right corner; if you are using a more traditional index card look, then each index card will now display a pin holding it in place that is the colour of the label associated with the document. Alternatively, you can select View > Use Label Color In > Index Cards to tint the actual cards with the colour of the label. You can also select Show Stamps via View > Corkboard Options, which places a diagonal stamp on the cards—this stamp shows the status associated with the document represented by the index card.
+
+Ctrl-clicking on an index card brings up a contextual menu that allows you to change the label (and thus the colour of the pin) and status - you can use the contextual menu to assign a label or status to multiple cards, too, by selecting all the cards you wish to affect before Control-clicking on one of them.
+
+There are other viewing options available in the View > Corkboard Options menu, but we won’t cover them here (they are all explained in the Help file though of course).
+
+One more thing to note, before we move on, is that media files get displayed on the corkboard as Polaroids. Click in the corkboard above to ensure it has the focus, and then click on the “Research” folder to see what I mean. (You can turn off this behaviour in the Preferences if you would prefer all files, even images, to be represented as regular index cards.)
+
+Okay, we covered a lot there! Remember that you don’t have to use the features that don’t appeal to you, though. Not all writers like corkboards - some Scrivener users never touch the corkboard at all, preferring the outliner, which we’ll come to next.
+
+When you’re ready then - after a stretch of the legs, a glass of wine, a good curse at the prolixity of this tutorial’s author, whichever helps - let’s move on to “Step 10” and look at the outliner in more depth.</Text>
+        </Document>
+        <Document ID="26">
+            <Title>Step 5: The Inspector</Title>
+            <Synopsis>This is the index card where you write your synopsis...</Synopsis>
+            <Text>You can leave composition mode now by hitting the Escape key on your keyboard.
+
+We’ve now covered the basics of navigating between documents and using composition mode for distraction-free writing. Now it’s time to meet the Inspector.
+
+Click on “Inspector” in the toolbar (the blue disc on the right, with the “i” inside it - you may need to widen the window a little if it’s not visible). A third pane will appear on the right of this view.
+
+You may find this text a little scrunched up now. If so, click on the green “zoom” button at the very the top-left of the window (the third traffic-light button that appears in most OS X windows - if you have changed your system settings to Graphite, the traffic light buttons will all be grey, of course). In Scrivener, the “zoom” button is your friend. When you click on it, Scrivener does its best to resize the window to accommodate all elements. (You can change the default width of the editor in Preferences.)
+
+Right, let’s look at the inspector. At the bottom of the inspector, in the footer bar, you will see these buttons:
+
+#
+
+The padlock button on the far right allows you to “lock” the inspector to a particular editor when the editor is split - we won’t worry about that for now, though, as we haven’t looked at splitting the editor yet. The other buttons allow you to choose what to view in the inspector (the number of buttons that appear will depend on what you are viewing in the current editor). The last two buttons, “Snapshots” and “Comments” (the one with the camera and the one with the “n” inside a square speech bubble) are only available for text documents, for instance. An asterisk next to one of the icons tells you that there is content in that part of the inspector.
+
+To begin with, make sure the leftmost button, “Notes”, is selected, and then click on the next document in the binder, “5a: The Synopsis Index Card”.</Text>
+        </Document>
+        <Document ID="52">
+            <Title>5c: Notes</Title>
+            <Text>At the bottom of the inspector is the notes area, where you can jot down anything you want that will help you with your document. If you click in the notes header bar (where it says “Document Notes”), you can flip between Document Notes and Project Notes. As you would imagine, document notes are specific to each document and will change depending on the document you are viewing in the current editor, whereas project notes can be viewed from any document (project notes can also be seen in the inspector when you select one of the special root folders—Draft, Research and Trash—which have no associated meta-data or synopses). You can have multiple project notes associated with your project (new project notes can be added using the Project Notes window, available from the Project menu).
+
+Please click on “5d: References” in the binder.</Text>
+            <Notes>This is the notes area right here... Here you can jot down any thoughts about your current document or drag in images if you so wish. Images will be resized to fit the width of the notes area...
+
+￼</Notes>
+        </Document>
+        <Document ID="18">
+            <Title>Part 3: Import, Export and Printing</Title>
+            <Synopsis>In Part 3, we cover how to import and export documents in Scrivener.</Synopsis>
+        </Document>
+        <Document ID="44">
+            <Title>Alhambra</Title>
+        </Document>
+        <Document ID="27">
+            <Title>Step 6: End of Part One</Title>
+            <Text>This brings us to the end of Part 1 of the tutorial. In the next section you will learn about different ways of viewing and organising the documents in your Scrivener project. With that in mind, in a moment you will be asked to click on “Part 2: Organisation” in the binder. As will be explained, folders - not just folders, but we’ll come to that shortly - can be viewed in several modes, but for now all you need to know is that when you click on “Part 2”, you want to see the text of the folder document (folders are really just a special type of text document, and can contain text just as regular text documents can).
+
+So after you click on “Part 2: Organisation”, take a look at the “Group Mode” segmented control in the toolbar and ensure that all modes are turned off. The control should look like this (note how nothing is selected):
+
+#
+
+If one of the segments is selected, just click on the selected segment to turn it off. This will leave you with just the text of “Part 2” in the editor, ready to read.
+
+Go ahead and try that now.</Text>
+        </Document>
+        <Document ID="53">
+            <Title>5d: References</Title>
+            <Text>Click on the next button in the inspector footer bar, the one with the picture of several book spines on it. This switches to the “References” pane (the index card and meta-data area will remain where they are, only the notes will disappear to be replaced by a list of references). The references pane allows you to store references to other documents within the project, on your hard-disk or on the internet. By clicking on the “+” button, you can choose to add a reference to a file on disk or you can select a document inside the project. You can also drag documents from the binder or the Finder (or the URL from a browser address field) into the references table. Double-clicking on the icon of a reference will open it: external references open in their default application; internal references open inside Scrivener (you can determine exactly where the latter get opened in the “Navigation” pane of the Preferences). Note that, as with notes, you can store references at the document or project level - click on the bar where it says “Document References” to flip between Document References (which are specific to the current document) and Project References (which can be viewed from any document).
+
+Next click on the key button at the bottom of the inspector to view the keywords pane and then move onto “5e: Keywords”.</Text>
+        </Document>
+        <Document ID="36">
+            <Title>START HERE</Title>
+            <Text>Scrivener
+
+IMPORTANT NOTE BEFORE WE BEGIN
+This tutorial is a Scrivener project which has been provided to help you get started. Once you’ve finished the tutorial, go to File > New Project to begin your own project.
+
+WELCOME TO THE TUTORIAL
+Hello, and welcome to Scrivener. I hope you find Scrivener a useful addition to the tools you use for writing. This tutorial is designed to get you up and running as quickly as possible by introducing you to Scrivener’s main features. For further help and a more comprehensive description of all of Scrivener’s features, please refer to the manual, which is available from the Help menu. You can also find video tutorials showing how to use various features of Scrivener here:
+
+http://www.literatureandlatte.com/videos.php
+
+Feel free to ask for further assistance—and to report any bugs or problems you find—on the forums:
+
+http://www.literatureandlatte.com/forum
+
+WHAT IS SCRIVENER?
+Scrivener is aimed at writers of all kinds—novelists, journalists, academics, screenwriters, playwrights—who need to structure a long piece of text while referring to research documents. Scrivener is a ring-binder, a scrapbook, a corkboard, an outliner and text editor all rolled into one. It is primarily intended to be a first draft tool - although it is possible to complete a project that requires only basic formatting - such as a novel or short story - in Scrivener, often you will want to take your draft to a dedicated word processor or layout program for final formatting. Scrivener is intended to be a kind of “writer’s shed” for those of us who don’t have a spare shed.
+This tutorial should take less than an hour to complete and will give you a good idea about the sorts of things Scrivener can do, and whether or not it is the tool for you. By the time you have completed this tutorial, you should have a good grasp of how to start using Scrivener for your own projects, and you will be able to learn other features as you need them. So, without further ado, click on “Step 1: Beginnings” in the list on the left to begin.
+
+BEFORE YOU BEGIN
+This tutorial refers to items in the toolbar by title, but the titles may not be displayed in the toolbar by default. It may therefore be helpful to turn on toolbar titles while going through this tutorial. To do so, ctrl-click anywhere on the toolbar (the grey area at the top of the window with the horizontal row of icons in it) and select “Icon and Text” from the menu that appears.
+
+NOTE TO USERS OF SCRIVENER 1.0
+If you’ve used earlier versions of Scrivener and just want to get up to speed with what’s new in version 2.0, click on “Collections” in the toolbar and then choose the “What’s New in 2.0” tab in the pane that appears above the binder. The binder will be replaced with a list of the documents from the tutorial that contain most of the new features. (The ability to keep such lists—“Collections”—is of course a new feature in itself.)</Text>
+        </Document>
+        <Document ID="62">
+            <Title>Step 13: Project Search</Title>
+            <Text>At the risk of telling you the blindingly obvious, project search allows you to search for documents inside your project that contain a particular word, phrase, label, keyword and suchlike. The way it works will be familiar to anyone who has used Mail - just click in the search field on the right-hand side of the toolbar and type the phrase you wish to search for.
+
+TIP: Clicking on the downwards-pointing triangle next to the magnifying glass in the search field brings up a menu that allows you to modify the search options. For instance, you can tell Scrivener only to search in the main text of documents, or only in the labels, and so on. If you hold down the Option or Command keys while clicking on one of the search parameters, the selected parameter will be added to any already selected. That is, normally if you have previously chosen “Synopsis” under “Search In” in the search menu and then choose “Notes”, this will tell Scrivener to search in document notes instead of in document synopses. However, if you hold down Command or Option while clicking on “Notes”, this will tell Scrivener to search in document notes as well as document synopsis.
+
+Click in the search field now and type “collection”.
+Note how the binder is replaced by a purple-striped “Search Results” list. This is a list of documents that contain the word “collection” somewhere within them. Also note that the search term - in this case “collection” - is now highlighted in red in the current document. So you can click on the documents in the search results list to and easily see at a glance where the term you searched for is in the document. For longer documents, just click into them and go to Edit > Find > Find… (or hit cmd-F) to bring up the Find panel, which will be automatically loaded with the current search term, so that you can search through the document contents.
+To get rid of the search results list, you can click on the “close” button on the right of the search field:
+
+#
+
+Or on the button in the footer bar of the search results:
+
+￼
+
+Simples.
+Now onto “Step 14: Collections”.</Text>
+        </Document>
+        <Document ID="19">
+            <Title>Step 15: Importing</Title>
+            <Text>If you decide Scrivener is the program for you, the first thing you are going to want to do is import your existing work. This is simple. Just go to File > Import > Files…, select the files you wish to import, and click the “Import” button. All files and folders that are supported by Scrivener will be imported, including subdirectories, maintaining the file structure from the Finder in the binder. (Note that if you have selected a document that is contained inside the “Draft” folder in the binder, when you go to File > Import > Files… you will only have the option of importing text file types; this is because files are imported at the location of the selection in the binder and the “Draft” folder only supports text files. Thus, if you wish to import media files, make sure that the selection is not in the “Draft” folder.) You can also drag files directly from the Finder into Scrivener’s binder.
+
+The following file types are supported by Scrivener’s import feature:
+
+	▪	RTFD
+	▪	RTF
+	▪	DOC
+	▪	DOCX (Leopard and above only)
+	▪	ODT (Leopard and above only)
+	▪	TXT / plain text
+	▪	PDF
+	▪	Final Draft FDX
+	▪	Final Draft FCF
+	▪	HTML
+	▪	HTM
+	▪	WEBARCHIVE
+	▪	Most image files
+	▪	Any file supported by Quicktime (video and audio)
+
+(Note that the one main file format we are unable to support is the Apple Pages format. This is because Apple does not make the .pages format publicly available, and so it is not possible for developers or companies outside of Apple to read and write files in the .pages format. To import Pages files, you should therefore use the “Share” feature of Pages to create copies of your documents in one of Scrivener’s supported formats - Pages can create documents in RTF, RTFD, DOC and DOCX formats.)
+
+It is important to note that some attributes may be lost for certain document types upon import. For instance, while Scrivener can export footnotes, comments, annotations and images to RTF and Microsoft Word .doc formats, when importing Microsoft Word .doc and .docx documents, these attributes get lost. This is a limitation of the standard Cocoa OS X text importers. However, Scrivener can import footnotes, comments and images from RTF files, so if you want to import Microsoft Word files that contain these features, first use Word to save them as RTF and import the RTF files rather than the .doc files. (If your Word documents don’t contain footnotes or images—or if you don’t mind losing them—you don’t need to worry about this.)
+
+You can also import web archives directly from the internet by selecting Import > Web Page… From the File menu.
+
+You can actually import any file at all - it doesn’t have to be one of the supported formats listed above. If you import an unsupported file type, it will appear in the editor as an icon. Double-clicking on the icon will open the file in the program associated with it on your machine.
+
+On to Step 16...</Text>
+        </Document>
+        <Document ID="28">
+            <Title>ThisIsBuzzAldrin</Title>
+        </Document>
+        <Document ID="54">
+            <Title>5e: Keywords</Title>
+            <Text>As well as Label and Status, you can also assign keywords to your documents. Keywords are useful for adding arbitrary tags to documents that you can use when searching. So, for instance, you could add keywords for characters that occur in a scene, the location a scene takes place, the theme, authors referenced, or anything else (or you can just ignore keywords completely). You can add keywords by clicking on the “+” button, or by hitting enter while another keyword is selected. You can also assign keywords via the keywords panel. Open that now by clicking on the “Keywords” button in the toolbar (the black box with the key inside it).
+
+A translucent black panel will appear. This shows all of the keywords that you have created or assigned to documents so far. You can also create keywords inside this panel and drag them to the keywords table in the Inspector. You can change the colour associated with a keyword by double-clicking on the colour chip in the keywords panel. (Another way of assigning keywords is by dragging them onto documents in the binder or the outliner and corkboard views that we will look at later, or by dragging them into the header view. You can assign keywords to multiple documents at once by selecting the documents in the binder and then dragging the keywords from the keywords panel onto the selection.)
+
+Try dragging the keyword entitled “Assign this one” to the keywords table.
+
+When assigning keywords from the panel, you can optionally assign the groups to which they belong as well. To see this in action, click on the triangle next to “Characters” in the black keywords panel to reveal the names of some characters. If you dragged the name of one of these characters to the keywords pane in the inspector, only the name of the character would get assigned. However, try holding down the Option key whilst dragging “John” to the keywords pane in the inspector. Note how not only the keyword “John” gets added, but also the name of its group, “Characters”.
+
+A quick way of searching for documents that have been assigned particular keywords is to select the keywords you want to search for in the keywords panel and then click on the “Search” button at the bottom. (If you hold down the Option key, the “Search” button will change to “Search All”, which will search for the selected keywords wherever they occur in the project, including text, notes and so on, rather than limiting the search to the keywords associated with documents.)
+
+Now click on “5f: Custom Meta-Data” in the binder.</Text>
+        </Document>
+        <Document ID="37">
+            <Title>spacewalk_info</Title>
+            <Synopsis>A PDF document from NASA about space walking.</Synopsis>
+            <Text>2.11 EXTRAVEHICULAR ACTIVITY 
+(EVA) 
+CONTENTS 
+Description........................................... 2.11-1 
+Extravehicular Mobility Unit............. 2.11-2 
+Airlock.................................................. 2.11-11 
+EVA Support Equipment................... 2.11-15 
+Simplified Aid for EVA Rescue......... 2.11-17 
+Operations............................................ 2.11-19 
+EVA Summary Data............................ 2.11-22 
+EVA Rules of Thumb.......................... 2.11-22 
+Description 
+An EVA occurs when a crewmember leaves the 
+protective environment of a spacecraft's pres- 
+surized cabin and ventures out into the vacuum 
+of space wearing a space suit.  An EVA is com- 
+monly referred to as a spacewalk.  The current 
+space suit, designed for a total maximum dura- 
+tion of 7 hours, provides environmental protec- 
+tion, mobility, life support, and communica- 
+tions.  Two suits are included in each baseline 
+orbiter mission, and consumables are provided 
+for three two-person, 6-hour EVAs.  Two EVAs 
+are available for payload use, with the third 
+reserved for orbiter contingency operations. 
+EVA has been demonstrated to be useful in 
+satellite repair, retrieval, and refueling as well 
+as with space station development. 
+There are three basic categories of EVA: 
+scheduled, unscheduled, and contingency.  A 
+scheduled EVA is defined as any EVA incorpo- 
+rated into the nominal flight plan in order to 
+complete a specific mission objective.  An 
+unscheduled EVA is not part of the flight plan; 
+rather, it is conducted to achieve payload opera- 
+tion success or to advance overall mission 
+accomplishments.  A contingency EVA is also 
+unscheduled, but is required to ensure safe 
+return of the orbiter and flight crew. 
+A subcategory of scheduled EVA is the quick- 
+response EVA.  A quick-response EVA must be 
+performed within a few hours after a problem is 
+discovered, and it is usually associated with 
+payload deployment.  Quick-response EVAs are 
+planned pre-flight, and the crew prepares for 
+the EVA even though it may not be performed. 
+Mission Date Purpose of EVA EVA crew No. EVA/ 
+mission 
+Duration, 
+man-hours 
+STS-6 Apr 4-9, 83 System Functional Demo Musgrave/Peterson 1 8 hr, 34 min 
+STS-41B Feb 3-11, 84 MMU Capability Demo NcCandless/Stewart 2 23 hr, 14 min 
+STS-41C Apr 6-13. 84 Solar Max Satellite Repair Van Hoften/Nelson 2 20 hr, 12 min 
+STS-41G Oct 5-13, 84 Orbiter Fuel Transfer Demo Leestma/Sullivan 1 6 hr, 58 min 
+STS-51A Nov 8-16, 84 Westar/Palapa Satellite Retrieval Allen/Gardner 2 24 hr, 28 min 
+STS-51D Apr 12-19, 85 Syncome F3 Satellite Repair Griggs/Hoffman 1 6 hr, 20 min 
+STS-51I Aug 27-Sep 3, 85 Syncome F3 Satellite Repair Fisher/Van Hoften 2 23 hr, 42 min 
+STS-61B Nov 26-Dec 3, 85 Large Structure Assembly Spring/Ross 2 24 hr, 40 min 
+STS-37 Apr 5-10, 91 GRO Satellite Repair/Locomotion Studies Ross/Apt 2 20 hr, 58 min 
+STS-49 May 10-14, 92 Intelsat Repair and Assembly of Station by 
+EVA Methods (ASEM) 
+Thuot, Hieb, Akers, 
+Hornton, 
+4 59 hr, 51 min 
+STS-54 Jan 17, 93 First EVA Detailed Test Objective (DTO 
+1210) 
+Harbaugh, Runco 1 8 hr, 56 min 
+STS-57 Jun 25, 93 EURECA Antenna Stow and Second EVA 
+DTO (1210) 
+Low, Wisoff 1 11 hr, 40 min 
+STS-51 Sep 16, 93 Third EVA DTO (1210) Walz, Newman 1 14 hr, 10 min 
+STS-61 Dec 4-8, 93 Hubble Space Telescope Repair Mission Musgrave, Hoffman, 
+Akers, Thornton 
+5 70 hr, 58 min 
+STS-64 Sep 16, 94 SAFER First Flight Lee, Meade 1 13 hr, 42 min 
+STS-63 Feb 9, 95 First EVA Development Flight Test (EDFT) 
+(Spartan Mass Handling) 
+Foale, Harris 1 13 hr, 18 min 
+STS-69 Sept 16, 95 Second EDFT (Task board with station EVA 
+interfaces) 
+Voss, Gernhardt 1 13 hr, 32 min 
+STS-72 Jan 14-16, 95 Third EDFT  (Station assembly  and 
+maintenance hardware) 
+Chiao, Barry, Scott 2 26 hr, 4 min 
+STS-76 Mar 27, 96 Fourth EDFT (MEEP - Mir Environmental 
+Effects Payload) 
+Godwin, Clifford 1 12 hr, 4 min 
+Space Shuttle EVA Chronology
+Extravehicular Mobility Unit 
+Extravehicular activities are classified according 
+to level of complexity: simple, intermediate, or 
+complex.  A simple payload EVA requires mini- 
+mal unique tools, mockups, or mobility aids. 
+Existing procedures and techniques may be 
+adapted to particular EVA needs, thus requiring 
+minimal crew training.  An intermediate pay- 
+load EVA requires development of new tools 
+and equipment.  Some procedure and technique 
+development is required, with more extensive 
+training necessary.  A complex payload EVA 
+requires the design and development of com- 
+plex or elaborate tools and equipment.  The 
+tasks require extension of basic capabilities and 
+may pose difficulty in access or restraint.  Proce- 
+dure and technique development is extensive, as 
+are crew training requirements. 
+Extravehicular Mobility Unit 
+The extravehicular mobility unit (EMU) is an 
+independent anthropomorphic system that pro- 
+vides environmental protection, mobility, life 
+support, and communications for the crewmem- 
+ber to perform EVA in Earth orbit.  For EMU 
+design considerations, an EVA is defined as any 
+time the EMU external environmental pressure 
+is below 4.0 psia.  The EMU is designed to
+accommodate an EVA mission with a total 
+maximum duration of 7 hours, consisting of 15 
+minutes for egress, 6 hours for useful EVA 
+tasks, 15 minutes for ingress, and a 30-minute 
+reserve.  The EMU also accommodates specific 
+metabolic rate limits, including (1) an average 
+metabolic rate not exceeding 1600 Btu/hr in any 
+given EVA hour and not exceeding 1000 Btu/hr 
+for the entire duration, (2) a peak metabolic rate 
+not exceeding 2000 Btu/hr for a period of 15 
+minutes, and (3) a minimum metabolic rate not 
+less than 400 Btu/hr for a period of 30 minutes. 
+The EMU is an integrated assembly, primarily 
+composed of the space suit assembly, life 
+support system, and numerous items of associ- 
+ated support and ancillary equipment. 
+Space Suit Assembly 
+The space suit assembly (SSA) is the anthro- 
+pomorphic pressure vessel that encloses the 
+crewmember's torso, limbs, and head.  The SSA 
+provides a variety of functions while the 
+crewmember performs an EVA, including suit 
+pressure retention, crewmember mobility, crew- 
+member liquid cooling distribution, oxygen 
+ventilation gas circulation, downlink of crew- 
+member's electrocardiogram data via EMU 
+radio, crewmember interface with EMU radio, 
+crewmember in-suit drinking water, and urine 
+containment.  The SSA operates under specific 
+pressure requirements and leakage criteria. 
+The space suit assembly consists of the 
+following: 
+􏰀 
+Hard upper torso/arms 
+􏰀 
+Lower torso assembly 
+􏰀 
+Extravehicular gloves 
+􏰀 
+Helmet/extravehicular visor assembly 
+􏰀 
+Liquid cooling and ventilation garment 
+􏰀 
+Operational bioinstrumentation system 
+􏰀 
+Communications carrier assembly 
+􏰀 
+In-suit drink bag 
+􏰀 
+Urine collection device 
+􏰀 
+Maximum absorption garment. 
+The hard upper torso (HUT) provides pressure 
+containment for the upper torso as well as being 
+the central component from which the mechani- 
+cal, electrical, and fluid interfaces of the EMU 
+branch.  The HUT is available in four sizes to 
+accommodate 5th through 95th percentile-sized 
+crewmembers.  The planar HUT, which deletes 
+the arm gimbal and bellows assembly, will be 
+available in two sizes.  The HUT includes the 
+following components:  fiberglass shell (with 
+water tubes and oxygen ducts), assorted 
+mounting brackets, waterline and vent tube 
+assembly, multiple water connector, EMU 
+electrical harness, shoulder bearing assemblies, 
+waist disconnect ring (passive half), helmet 
+disconnect ring, and thermal micrometeoroid 
+garment (TMG).  The right and left arm assem- 
+blies are flexible, anthropomorphic pressure 
+vessels that encompass the arms.  Each arm 
+assembly includes the following components: 
+upper arm assembly, rotating scye bearing, 
+lower arm assembly, rotating arm bearing, wrist 
+disconnect ring, urethane pressure bladders, 
+cloth restraint systems, and TMGs for the upper 
+and lower arm assemblies. 
+The lower torso assembly (LTA) consists of a 
+flexible anthropomorphic pressure vessel that 
+encompasses the waist, lower torso, legs, and 
+feet.  The LTA includes the following compo- 
+nents:  waist assembly, waist disconnect ring, 
+trouser assembly, rotating waist bearing 
+between the waist and trouser assemblies, boot 
+assembly, urethane pressure bladders, cloth 
+restraint systems, and TMGs for the waist, 
+trouser, and boot assemblies. 
+The current sizing of the arm/leg assemblies is 
+accomplished on the ground using different 
+sizes of each assembly for a particular crew- 
+member.  An enhanced EMU has been devel- 
+oped to provide an on-orbit capability of EMU 
+resizing by using various arm/leg segments and 
+sizing rings.  The on-orbit quick-sizing capabil- 
+ity, uses threaded quick-disconnects, softgood 
+sizing elements, aluminum sizing rings, and 
+adjustable-length restraint lines.  This suit incor- 
+porates dual lip seal mobility bearings and low- 
+torque fabric joints.  The enhanced EMU will 
+phase out the current space suit for future 
+station and shuttle operations.
+SSA Arm Assembly 
+Lower Torso Assembly with TMG Removed
+The extravehicular gloves consist of a detach- 
+able, flexible pressure vessel, encompassing 
+each hand for use during EVA.  The extrave- 
+hicular gloves include the following compo- 
+nents: urethane pressure bladder and cloth 
+restraint system, wrist disconnect ring with 
+rotating wrist bearing, wrist gimbal ring, 
+adjustable palm restraint bar/strap, wrist tether 
+strap, and TMG with palm restraint bar.  The 
+current 4000 series gloves incorporate a stan- 
+dard nine-size system to size the gloves for a 
+comfortable fit.  The glove fingers use a sizing 
+feature that consists of a pair of polyester 
+dacron cords to provide finger length adjust- 
+ments.  Customized gloves can be manufactured 
+for the crewmember if a proper fit cannot be 
+obtained from the standard size glove. 
+Enhanced Arm Assembly 
+The helmet, a "one-size-fits-all" model, consists 
+of a detachable, transparent, hard pressure 
+vessel encompassing the head.  The helmet 
+includes the following components: hard trans- 
+parent bubble, helmet disconnect ring, helmet 
+purge valve, and vent pad.  Two crew optional 
+items are also available for the helmet.  One of 
+these items is the Fresnel lens, which is mounted 
+to the lower front inside of the helmet to 
+improve display control module visibility for 
+the crewmember.  The other item is the valsalva 
+device, attached to the inside of the bubble, 
+which allows the crewmember to clear his or her 
+ears during pressure changes.  The extravehicu- 
+lar visor assembly (EVVA) attaches to the 
+helmet to provide the crewmember with visual, 
+thermal, impact, and micrometeoroid protec- 
+tion.  The EVVA includes the following compo- 
+nents: clear protective visor, sun visor, center 
+and side eyeshades, fiberglass shell, and latch 
+mechanisms and supporting structure for the 
+visor and eyeshades. 
+Enhanced Lower Torso Assembly 
+The liquid cooling and ventilation garment 
+(LCVG) is a form-fitting elastic garment worn 
+against the crewmember's body.  The LCVG 
+includes the following components: outer 
+restraint fabric, inner liner assembly, crew 
+optional comfort pads, biomed pocket, dosime- 
+ter pocket, water tubing network, paramanifold 
+assembly, ventilation ducting network, vent 
+plenum assembly, multiple water connector, 
+and full torso zipper.  The garment supports a 
+network of tubing that circulates water over the 
+body to provide cooling to the crewmember.  It 
+also supports a network of ducting that draws 
+ventilation gas from the suit extremities and 
+routes it back to the primary life support system 
+to complete the suit ventilation loop.  Connec- 
+tions to the ducting in the HUT for both cooling 
+water and ventilation flow are made at the 
+LCVG half of the multiple water connector.  The 
+LCVG is sized to fit the crewmember based on a 
+sizing system with six size ranges.
+The communications carrier assembly (CCA) is 
+a cloth aviator-type cap that positions and 
+supports the electronics for interface with the 
+EMU radio for crewmember communications. 
+The CCA contains the microphones and ear- 
+phones necessary for the EVA crewmembers to 
+communicate with each other or with the 
+orbiter.  The CCA also allows the EVA crew- 
+members to talk to Mission Control via the 
+orbiter communications system.  Six sizes allow 
+the CCA to fit 5th through 95th percentile-sized 
+crewmembers.  The CCA includes the following 
+components: skull cap, ear cups, ear phones, ear 
+seals, microphone modules, microphone booms, 
+summing module, interconnect wiring, interface 
+cable, neck strap, crew-optional chin strap, and 
+perspiration absorption strap. 
+The in-suit drink bag is a dielectrically sealed 
+bag assembly attached to the interior of the 
+HUT that supplies drinking water to the 
+crewmember during EVA.  The drink bag is 
+available in two sizes with the capacity for 21 or 
+32 fluid ounces of water.  The in-suit drink bag 
+includes the following components: bladder, 
+inlet valve, drink valve, drink tube, and velcro 
+attachments. 
+The urine collection device (UCD) is a 
+disposable, flexible container that has the 
+capacity to hold up to 32 fluid ounces of urine. 
+The UCD is worn under the LCVG by male 
+crewmembers during EVA.  It is designed for 
+one-time use, then disposed of as wet trash.  The 
+UCD includes the following components: 
+collection bag, attachment straps, one-way 
+check valve, and disposable roll-on cuff. 
+The maximum absorption garment (MAG) 
+consists of multiple layers of material designed 
+to rapidly absorb and store urine.  The MAG is 
+designed to be worn under the LCVG by male 
+or female crewmembers during EVA.  It has the 
+capacity to hold 32 fluid ounces of urine and is 
+disposable after use.  The MAG includes the 
+following components, multilayer absorbent 
+material and tape attachment straps. 
+Life Support System 
+The life support system (LSS) provides a safe 
+living environment inside the EMU.  The LSS 
+provides a variety of functions while the crew- 
+member performs an EVA, including provision 
+of breathing oxygen, suit pressurization, crew- 
+member cooling, crewmember communications, 
+displays and controls for crewmember opera- 
+tion of the EMU, and monitoring of EMU 
+consumables and operational integrity.  The life 
+support system consists of the following: 
+􏰀 
+Primary oxygen system 
+􏰀 
+Secondary oxygen pack 
+􏰀 
+Oxygen ventilation circuit 
+􏰀 
+Liquid transport system 
+􏰀 
+Feedwater circuit 
+􏰀 
+Electrical interfaces 
+The primary oxygen system, oxygen ventilation 
+circuit, liquid transport system, feedwater 
+circuit, electrical interfaces, extravehicular com- 
+municator, and the caution and warning system 
+make up the primary life support subsystem 
+(PLSS).  The secondary oxygen pack is a 
+separate unit that is attached to the bottom of 
+the PLSS.  Together, the PLSS and the secondary 
+oxygen pack make up the backpack of the EMU. 
+The primary oxygen system provides a 
+crewmember with breathing oxygen and 
+satisfies pressure requirements for EVA.  The 
+system stores 1.217 pounds of oxygen at 850 
+psia and 90° F.  It delivers oxygen during EVA 
+at 4.3 ± 0.1 psid, and maintains a metabolic use 
+rate range of 0.02 to 0.33 lb/hr.  The system is 
+charged through a common multiple connection 
+to the orbiter environmental control and life 
+support system.  Charging pressure is 850 ± 50 
+psig.  The minimum usable pressure is 60 psi. 
+The system performs various functions, 
+including suit pressurization, provision of 
+breathing oxygen, and water pressurization. 
+The primary oxygen system includes the 
+following components: oxygen tanks, oxygen 
+tank pressure sensor, flow limiter, oxygen 
+shutoff valve, oxygen actuator, suit pressure 
+regulator, water pressure regulator, high mode 
+relief valve, and low mode relief valve.
+The secondary oxygen system, also known as 
+the secondary oxygen pack (SOP), is the backup 
+assembly to the primary oxygen system.  This 
+backup system provides a minimum of 30 
+minutes of emergency oxygen in the purge 
+mode.  The SOP functions include suit pressuri- 
+zation, provision of breathing oxygen, and some 
+degree of cooling in the purge mode.  There is 
+no required crewmember interface to activate 
+the SOP; it automatically activates whenever the 
+oxygen actuator is in the EVA position and suit 
+pressure is less than 3.9 psid.  The SOP includes 
+two oxygen tanks, containing a total of 2.65 
+pounds of oxygen at 5800 psia and 70° F.  The 
+system includes the following components: 
+oxygen tanks, SOP inlet pressure gauge, first- 
+stage regulator, interstage gauge, second-stage 
+regulator/shutoff valve/flow restrictor, PLSS/ 
+SOP interface connector, and oxygen tank 
+pressure sensor. 
+The oxygen ventilation circuit forms a closed 
+loop with the space suit assembly.  The circuit 
+provides oxygen for breathing, suit pressuriza- 
+tion for intravehicular activity (IVA) and EVA 
+operation, and ventilation for cooling and 
+elimination of exhaled gases.  The oxygen flow 
+picks up heat, humidity, carbon dioxide, and 
+other contaminants, which are removed from 
+the EMU by the ventilation circuit components. 
+The system includes the following components: 
+fan/water separator, slurper/ sublimator, vent 
+flow sensor/backflow check valve, suit pressure 
+sensor, suit pressure gauge, contaminant control 
+(lithium hydroxide) cartridge (CCC), carbon 
+dioxide sensor, display control module purge 
+valve, helmet purge valve, positive pressure 
+relief valve, negative pressure relief valve, SOP 
+checkout package, muffler, and SOP checkout 
+fixture.  Ventilation flow is picked up at the 
+body extremities and returned to the upper 
+torso via a vent duct manifold that is part of the 
+LCVG.  From the upper torso, the gas is routed 
+back into the PLSS and the CCC.  The CCC is 
+sized to absorb 1.48 pounds of carbon dioxide 
+associated with 7000 Btu of metabolic activity 
+over a 7-hour EVA period.  The cartridge is 
+installed in the back of the PLSS and is 
+replaceable on orbit.  On the ground, the used 
+cartridge can be recharged for future use. 
+The liquid transport system uses the centrifugal 
+pump to circulate approximately 240 lb/hr of 
+water through the LCVG.  The function served 
+by the liquid transport system is to provide 
+cooling to the crewmember.  The system in- 
+cludes the following components: pump, tem- 
+perature control valve, LCVG, gas trap, pump 
+priming valve, pump check valve, sublimator 
+temperature sensor, and service and cooling 
+umbilical bypass valve.  During IVA operation, 
+the pump circulates water not only through the 
+EMU, but also through the service and cooling 
+umbilical to the orbiter heat exchanger. 
+Secondary Oxygen Pack
+LiOH Cartridge 
+The feedwater circuit contains the equipment 
+and water to dissipate heat loads imposed on 
+the system by the crewmember, the PLSS, and 
+the environment.  It also contains equipment to 
+remove moisture from the ventilation circuit 
+and gas from the transport circuit, to separate 
+the water and gas, and to put them back in their 
+respective loops.  The feedwater circuit func- 
+tions involve heat rejection, LCVG water 
+makeup, and vent loop condensate separation 
+and storage.  The system includes the following 
+components: feedwater tanks (2 primary/1 
+reserve), feedwater tank pressure sensors, 
+reserve feedwater tank check valve, feedwater 
+pressure regulator, feedwater shutoff valve, 
+feedwater pressure sensor, sublimator, feed- 
+water relief valve, condensate water relief valve, 
+water separator, and coolant isolation valve. 
+The primary and reserve tanks store approxi- 
+mately 10 pounds of feedwater at 15 psig.  The 
+reserve feedwater tank provides 30 minutes of 
+water for EMU cooling in the event that primary 
+feedwater is depleted.  Potable water from the 
+orbiter ECLSS is used to fill or recharge the tanks. 
+The EMU electrical system is composed of the 
+following main components: battery, feedwater 
+shutoff valve, coolant isolation valve, motor, 
+instrumentation, extravehicular communicator, 
+display and control module, and caution and 
+warning system.  Electrical interfaces exist 
+between the display and control module and 
+parts of the PLSS, SOP, and C/W.  The power 
+supply for operation of all electrical components 
+of the EMU is a battery installed in the back of the 
+PLSS.  The EMU battery consists of eleven sealed, 
+silver-zinc, high current density cells connected in 
+series.  The battery provides a minimum of 26.6 
+amp-hr of power over a 7-hour EVA mission at a 
+nominal voltage of 16.5 V dc. 
+The extravehicular communicator (EVC) is 
+composed of two parts, the orbiter-based equip- 
+ment and the EMU-based equipment.  The 
+orbiter equipment consists of the EVA/air 
+traffic control transceivers and antennas.  This 
+configuration provides communication with the 
+EVA crewmembers and relay between EVA 
+crewmembers and the ground (including down- 
+link ECG and real-time data system (RTDS) 
+telemetry).  The EMU equipment consists of the 
+EMU radio and antenna.  It provides voice 
+communications with other EVA crewmembers 
+and the orbiter, ECG/RTDS telemetry to the 
+orbiter for recording and/or downlink, and 
+caution and warning tones to alert the EVA 
+crewmember of anomalies or other significant 
+events.  The EVC includes the following compo-
+nents: orbiter UHF system, EMU radio, EMU 
+electrical harness, communications carrier 
+assembly, biomed sensors, COMM MODE selec- 
+tor switch, COMM switch, volume controls, and 
+real-time data system.  Orbiter panels O6, A1R, 
+and R10 are the crew communication interfaces. 
+The panels control UHF operation, air-to-air or 
+ground transmission, and biomed data down- 
+link/recording respectively. 
+The display and control module (DCM) contains 
+all controls and displays necessary for nominal 
+operation and monitoring of EMU systems.  The 
+DCM includes the following components: 
+POWER mode switch, DISPL switch, FAN 
+switch, COMM switch, communications volume 
+controls, display intensity control, oxygen 
+actuator, temperature control valve, pressure 
+gauge, DCM purge valve, alphanumeric display 
+COMM mode selector, and WATER switch.  The 
+DCM is installed on the hard upper torso, with 
+the surfaces covered with a TMG.  This TMG 
+contains the labels for the controls and displays. 
+The EMU caution and warning system (CWS) 
+consists of instrumentation and a microprocessor 
+to obtain, process, and visually display 
+information for use by the EVA crewmember in 
+the operation and management of the EMU.  The 
+system contains built-in test equipment (BITE), 
+consisting of software and hardware that verify 
+proper CWS operation.  CWS serial data are also 
+routed to the ground by the real-time data 
+system.  The CWS functions involve displaying 
+EMU leak check procedures, monitoring and 
+displaying EMU consumables status, monitoring 
+EMU operational integrity, and alerting 
+crewmembers to EMU anomalies.  The system 
+includes the following components: 
+alphanumeric display with BITE indicator, dis- 
+play (DISPL) switch, alert/status/warning tones, 
+sensors, and "black box" processor.  The CWS 
+receives inputs from EMU sensors and from the 
+DISPL switch located on the DCM.  Sensors gather 
+information throughout the EMU system and relay 
+it to the CWS.  Information is provided on 
+pressures, temperatures, currents, and voltages. 
+Display and Control Module
+EMU Ancillary Equipment 
+The EMU ancillary equipment consists of 
+hardware necessary to support the EMU during 
+all phases of EVA (prep/post/operation).  The 
+following list itemizes the components with a 
+brief description of their functions. 
+EMU helmet lights - attach to the helmet EVVA 
+and provide two functionally independent sets of 
+lights for portable lighting during an EVA task. 
+EMU scissors - steel cutters with one serrated 
+edge capable of cutting anything from fabric 
+bags and straps to lightweight steel cable and 
+Kevlar cord. 
+EMU wrist mirror - attaches to the wrist of the 
+EVA glove to allow the EVA crewmember to 
+view the controls and displays on the front of 
+the EMU. 
+EVA cuff checklist - a set of reference cards 
+bound by an aluminum alloy bracket attached 
+to a wrist band.  The reference cards, approxi- 
+mately 4 inches by 5 inches in size, contain 
+procedures and reference data for performing 
+EVA tasks and for aiding in the diagnosis and 
+resolution of EMU malfunctions. 
+Food stick - a fruit bar contained in an edible 
+wrapper, positioned just above the neck ring 
+adjacent to the drink valve on the in-suit drink 
+bag. 
+In-suit drink bag syringe - a device used to 
+remove gas from the water in the drink bag. 
+The needle of the syringe is inserted in the inlet 
+valve of the bag, and gas is suctioned out of the 
+bag with the syringe. 
+Thermal mittens - an adjustable enclosure 
+composed of several layers of thermal blankets 
+and aluminized Mylar with a layer of Nomex 
+felt on the palm and undersides of the fingers 
+that fit conformally around the EV gloves to 
+provide greater thermal hand protection at 
+extreme high and low temperature worksites. 
+Lower torso assembly donning handles - left and 
+right handles that aid in the mating of the hard 
+upper torso and lower torso assembly halves of 
+the waist ring. 
+Contingency tool - a pry bar used to disconnect 
+the LTA and HUT halves of the waist ring in the 
+event that the latching mechanism becomes 
+jammed.  Operation of the pry bar may damage 
+the latching mechanism; therefore, it should be 
+used only if the waist ring becomes jammed and 
+the crewmember is entrapped in the space suit. 
+Bends treatment adapter (BTA) - an emergency 
+device that may be used on-orbit in the event an 
+EVA crewmember contracts decompression 
+sickness (bends).  The BTA converts the EMU 
+into a hyperbaric treatment chamber, pressuriz- 
+ing the EMU to 8.0 psid over ambient cabin 
+pressure. 
+SOP checkout fixture - a flight support test item 
+installed on the HUT half of the neck ring 
+during pre-EVA operations. 
+DCM plug - a cover that attaches to the multiple 
+connector on the DCM in the event that water 
+begins leaking from the connector after the 
+service and cooling umbilical multiple connector 
+is removed. 
+Prep kit - items necessary for preparing the EMU 
+for EVA, such as antifog wipes, tissue-type 
+wipes, scissors, and urine collection device 
+clamps. 
+Maintenance kit - additional equipment neces- 
+sary for routine EMU maintenance, including 
+valsalva devices, stericide wipes, lubricant 
+wipes, antifog wipes, and urine collection 
+device roll-on cuffs. 
+Bio kit - equipment associated with the biomed 
+instrumentation, including EVA cables, over- 
+tapes, electrode placement illustration, alcohol 
+wipes, stoma seals, and electrode paste. 
+Airlock stowage bag - a Nomex bag used for 
+temporary storage and transfer of items used in 
+prep- and post-EVA operations.  When stowed 
+in the airlock over the inner hatch, the bag and 
+its contents are removed from the airlock prior 
+to airlock depressurization. 
+EVA bag - used to stow various items (camera, 
+thermal mittens, tool caddy) in the airlock for 
+possible use during EVA.  The EVA bag remains 
+in the airlock during the EVA.
+Airlock 
+An airlock on the orbiter accommodates 
+astronaut EVA operations.  The airlock permits 
+EVA crewmembers to transfer from the mid- 
+deck crew compartment into the payload bay in 
+EMUs, without depressuring the orbiter crew 
+cabin.  The internal airlock provides launch and 
+entry stowage of up to four EMUs, while the 
+external airlock can stow two EMUs.  Both types 
+of airlock contain the interfaces and associated 
+displays and controls for the orbiter systems 
+that support EMU operation and servicing. 
+Sized to accommodate a two-person EVA, the 
+internal airlock dimensions have a diameter of 
+63 inches, a length of 83 inches, and two 
+D-shaped 40-inch-diameter openings (three for 
+external airlock). The internal airlock's volume 
+measures 150 cubic feet, while the external 
+airlock has a volume of 185 cubic feet.  Support 
+functions performed in the airlock include 
+depressurization and repressurization, EVA 
+equipment recharge, LCVG water cooling, and 
+EVA equipment checkout, donning, and 
+communications.  All EVA gear, checkout panel, 
+and recharge stations are located against the 
+internal walls of the airlock. 
+Airlock Hatches 
+Two pressure-sealing hatches are mounted on the 
+internal airlock, while the external airlock 
+contains three of these hatches.  The inner hatch is 
+located on the exterior of the airlock opening into 
+the middeck.  The inner hatch isolates the airlock 
+from the crew cabin.  The outer hatch isolates the 
+airlock from the unpressurized payload bay 
+when closed and permits the EVA crewmembers 
+to exit from the airlock to the payload bay when 
+open.  The external airlock's third hatch is an 
+additional upper, outer hatch that will be used 
+for docking operations.  Each hatch has six 
+interconnected latches with gearbox and actuator, 
+a window, a hinge mechanism with hold-open 
+device, a differential pressure gauge on each side, 
+and two equalization valves. 
+Airlock repressurization is controlled from the 
+middeck or inside the airlock.  It is performed 
+by equalizing the airlock and cabin pressure 
+with airlock-hatch-mounted equalization valves 
+on the inner hatch.  Depressurization of the air- 
+lock is controlled from inside the airlock.  The 
+airlock is depressurized by venting the airlock 
+pressure overboard.  The two D-shaped airlock 
+hatches are installed to open toward the pri- 
+mary pressure source, the orbiter crew cabin, to 
+achieve pressure-assist sealing when closed. 
+Each hatch opening is 40 inches in diameter, yet 
+with one side being flat, the minimum dimen- 
+sion is 36 inches. 
+The 4-inch-diameter window in each airlock 
+hatch is used for crew observation from the 
+cabin to the airlock and the airlock to the 
+payload bay.  The dual window panes are made 
+of polycarbonate plastic and are mounted di- 
+rectly to the hatch using bolts fastened through 
+the panes.  Each airlock hatch has dual pressure 
+seals to maintain the airlock's pressure integrity. 
+One seal is mounted on the airlock hatch and 
+the other on the airlock structure.  A leak check 
+quick disconnect is installed between the hatch 
+and the airlock pressure seals to verify hatch 
+pressure integrity before flight. 
+Each airlock hatch has the following design 
+characteristics:  (1) capable of being fully 
+locked/unlocked from either side, (2) designed 
+for 2000 open/close cycles, (3) one-handed 
+operation by astronaut in pressure suit, (4) 
+capable of opening against 0.2 psid maximum, (5) 
+latches capable of withstanding 20 g's in the +X 
+direction, and (6) actuator handle load of 30 
+pounds maximum. 
+The gearbox with latch mechanisms on each 
+hatch allows the flight crew to open or close the 
+hatch during transfers and EVA operations.  The 
+gearbox and the latches are mounted on the 
+low-pressure side  of each hatch, with a gearbox 
+handle installed on both sides to permit opera- 
+tion from either side of the hatch.  Three of the 
+six latches on each hatch are double-acting with 
+cam surfaces that force the sealing surfaces 
+apart when the latches are opened, thereby 
+acting as crew-assist devices.  To latch or 
+unlatch the hatch, the gearbox handle must be 
+rotated 440°. 
+The hatch actuator/gearbox is used to provide 
+the mechanical advantage to open and close the 
+latches.  The hatch actuator lock lever requires a 
+force of 8 to 10 pounds through an angle of 180° 
+to unlatch the actuator.  A minimum rotation of 
+440° with a maximum force of 30 pounds 
+applied to the actuator handle is required to 
+operate the latches to their fully unlatched 
+positions.
+Airlock in Middeck External Airlock 
+(port side view) 
+External Airlock ISS Configuration 
+(planned for OV-103, OV-104, OV-105)
+Airlock Repressurization, Schematic Diagram 
+The hinge mechanism for each hatch permits a 
+minimum opening sweep into the airlock or the 
+crew cabin middeck. 
+The inner hatch of the internal airlock (airlock to 
+crew cabin) is pulled or pushed forward to the 
+crew cabin approximately 6 inches.  The hatch 
+pivots up and to the right side.  Positive locks 
+are provided to hold the hatch in both an 
+intermediate and a full-open position.  The 
+outer hatch of the internal airlock (airlock to 
+payload bay) opens and closes to the contour of 
+the airlock wall.  The hatch is hinged to be 
+pulled first into the airlock and then forward at 
+the bottom and rotated down until it rests with 
+the low-pressure (outer) side facing the airlock 
+ceiling (middeck  floor).  The hatch has a hold- 
+open hook that snaps into place over a flange 
+when the hatch is fully open.  To support and 
+protect the hatch against the airlock ceiling, the 
+hatch incorporates two deployable struts. 
+The configuration of the external airlock, 
+planned for International Space Station (ISS) 
+operations, contains an inner hatch, an EV 
+hatch, and a docking hatch.  The inner hatch of 
+the external airlock (airlock to crew cabin mid- 
+deck) has the same opening mechanism as the 
+outer hatch of the internal airlock.  The hatch is 
+hinged so that it can be pulled into the middeck 
+and rotated down until it rests on the middeck 
+floor.  The EV hatch of the external airlock 
+(airlock to payload bay) also opens in the same 
+manner.  The docking hatch, located on the floor 
+of the external airlock (toward the payload bay 
+doors), is hinged to be pulled into the airlock 
+and then rotated until the low pressure side 
+rests against the airlock wall facing toward the 
+nose of the orbiter.  The external airlock hatches 
+also have hold-open protection and deployable 
+struts for support against the airlock structure.
+Airlock Hatch Latches, Schematic Diagram 
+Airlock in middeck 
+Tunnel adapter 
+Aft hatch 
+Upper hatch for 
+extravehicular 
+activity operations 
+X0 576.00 
+bulkhead 
+Pressurized 
+Crew 
+Compartment 
+Forward 
+fuselage 
+Tunnel adapter provides 
+• Shirt-sleeve passage 
+    to Spacelab 
+• EVA capability (with airlock) 
+Spacelab 
+Pressurize 
+Module 
+444.cvs 
+Airlock/Tunnel Adapter
+Airlock Subsystems 
+The airlock air circulation system provides 
+conditioned air to the airlock during non-EVA 
+periods.  The airlock revitalization system duct 
+is attached to the outside airlock wall at launch. 
+Upon airlock hatch opening in flight, the duct is 
+rotated by the flight crew through the 
+cabin/airlock hatch and installed in the airlock. 
+The duct has a removable air diffuser cap, 
+installed on the end of the flexible duct, which 
+can adjust the air flow from 216 pounds per 
+hour.  The duct must be rotated out of the 
+airlock before the cabin/airlock hatch is closed 
+for chamber depressurization.  During the EVA 
+preparation period, the duct is rotated out of the 
+airlock and can be used for supplemental air 
+circulation in the middeck. 
+To assist the crewmember before and after EVA 
+operations, the airlock incorporates handrails 
+and foot restraints.  Handrails are located 
+alongside the avionics and ECLSS panels, with 
+aluminum alloy handholds mounted on each 
+side of the hatches.  Each handrail has a 
+clearance of 2.25 inches between the airlock wall 
+and the handrail to allow crewmembers to grip 
+it while wearing a pressurized glove.  Foot 
+restraints, sized for the EMU boot, can be 
+installed on the airlock floor nearer the payload 
+bay side.  The ceiling handhold is installed 
+nearer the cabin side of the airlock.  A rotation 
+release knob on the foot restraint is designed for 
+shirt-sleeve operation and, therefore, must be 
+positioned before the suit is donned.  The foot 
+restraint is bolted to the floor and cannot be 
+removed in flight. 
+Airlock-based EMU support components 
+provide for EMU stowage, EMU operational 
+support, and EMU recharge during intravehicu- 
+lar activity operations.  These components 
+include the EMU mount, the service and cooling 
+umbilical, and the lower torso restraint bag.  The 
+EMU mount provides a mechanical interface 
+between the EMU and airlock wall for EMU 
+stowage.  The mount attaches to the back side of 
+the EMU and engages with three fixtures on the 
+wall of the airlock.  The mount is also used to 
+maintain the EMU in a fixed position on orbit 
+for EMU donning and doffing operations.  If 
+necessary, the EMU mount can be removed 
+from the airlock wall while on orbit. 
+The service and cooling umbilical consists of 
+three water hoses, a high pressure oxygen hose, 
+electrical wiring, water pressure regulators, and 
+a strain relief tether.  The system is used to 
+interconnect the EMU and the orbiter airlock for 
+two major functions: electrical power, hardline 
+communications, oxygen supply, wastewater 
+drainage, and water cooling capability from the 
+orbiter during IVA operation; and recharge 
+capability for the PLSS oxygen tanks, water 
+reservoir, and battery. 
+The lower torso restraint bag is attached to the 
+bottom of the EMU mount and covers the lower 
+torso of the EMU to restrain it during launch 
+and entry.  Straps on either side of the bag are 
+attached to points on the upper part of the EMU 
+mount and are tightened to ensure that the 
+EMU is fully restrained. 
+For Spacelab/Spacehab module missions, the 
+internal airlock is used along with a tunnel 
+adapter that mates with the airlock and a 
+Spacelab/Spacehab tunnel that is installed in 
+the payload bay.  The airlock tunnel adapter, 
+hatches, tunnel extension, and tunnel permit the 
+flightcrew to transfer from the orbiter's pressur- 
+ized middeck compartment to the Spacelab/ 
+Spacehab pressurized shirt-sleeve environment. 
+An upper hatch in the tunnel adapter provides 
+egress/ingress for EVA operations.  The exter- 
+nal airlock is used in conjunction with the tunnel 
+adapter during Spacelab/Spacehab missions 
+when the orbiter is docked to Mir or the ISS.  In 
+the event of an EVA, the flightcrew is not pres- 
+ent in the Spacelab/Spacehab. 
+EVA Support Equipment 
+A variety of equipment is available to support 
+the EVA crewmember.  Depending on the task 
+to be performed, the proper tool is available 
+outside the airlock.  The general equipment 
+functions include securing the crewmember to 
+the orbiter/RMS, providing the crewmember 
+with mechanical assistance, and assisting the 
+crewmember in mobility.  The following list 
+itemizes the EVA support components with a 
+brief description of their functions. 
+Crewmember safety tether - ensures the crewmem- 
+ber is positively tethered to the orbiter while 
+providing access to all areas of the payload bay.
+Before airlock egress, this 55-foot safety tether is 
+attached to a waist tether and remains attached 
+at all times during EVA, while the crewmember 
+translates from one area of the payload bay to 
+another. 
+Slidewires - facilitate the translation of a 
+crewmember and equipment in the forward and 
+aft directions of the payload bay.  Two slide- 
+wires are installed for all STS flights on either 
+side of the payload bay for a length of approxi- 
+mately 46 feet. 
+Tethers - include waist and wrist tethers.  Waist 
+tethers are used to attach the crewmember to 
+the orbiter safety tether system and to provide 
+additional crewmember restraint at a worksite 
+when required.  Waist tethers use a large hook 
+to be attached to various tether points 
+(including the crewmember safety tether) and a 
+small hook that attaches to an EMU waist 
+tether ring.  Wrist tethers are used to secure 
+tools and hardware to the EVA crewmember 
+and to tether points.  Wrist tethers are both 
+fixed and adjustable, attaching to loops on the 
+EMU glove. 
+Handrails - aluminum tubing strategically 
+located to aid in crewmember translation or 
+restraint to accomplish a specific task.  Hand- 
+rails are located on the forward and aft bulk- 
+heads, the hingeline of the payload bay doors, 
+and the RMS end effector.  Handrails are 
+designed with tether attach points. 
+Portable foot restraint - a working platform 
+designed to restrain the EVA crewmember 
+while performing contingency operations on 
+various components of the payload bay systems. 
+The portable foot restraint stabilizes the 
+crewmember by using a system of toe guides 
+and heel clips designed to interface with the 
+EMU boots. 
+EVA Winch - allows the EVA crewmember to 
+close the payload bay doors in the event of a 
+payload bay door drive system failure.  Prior to 
+launch, the winch is mounted on both the 
+forward and aft payload bay bulkheads.  The 
+winch consists of a reel, assisted by spring 
+energy, housing 24 feet of 3/8-inch-diameter 
+Kevlar rope with a hook attached to the 
+free end. 
+Provisions stowage assembly (PSA) - an aluminum 
+tool stowage container mounted under the 
+cargo bay liner, flush with the bottom of the 
+payload bay.  Tool box tether protocol: when 
+stowing the tools in the PSA, the tools/tool 
+caddies are tethered before they are removed 
+from the mini-workstation and untethered only 
+after they are securely placed in their corre- 
+sponding storage cavity.  The tools listed below 
+are contained within the PSA. 
+Mini-workstation - a mechanical device that 
+mounts on the front of the EMU to stow tools 
+and to provide a means of tether restraint for an 
+EVA crewmember at a worksite. 
+Tube cutter - used for a contingency door-closing 
+operation.  The tool consists of spring-loaded 
+retention rollers, a cutter wheel mounted on a 
+slide, a blade ratchet handle, a rotating body, a 
+control lever, and a tube-cutter ratchet handle. 
+It is designed to cut drive door linkages. 
+Payload bay doors disconnect tools - used to 
+disengage the payload bay doors power drive 
+unit(s) (two) from the power-drive-unit torque 
+shaft, allowing manual closing of the doors.  The 
+tool is approximately 6-3/4 inches long from the 
+tip of the tether ring to the end of the 3/8-inch 
+steel square drive extension.  Additional tools 
+for disconnecting the door drive linkage system 
+include vise-grip, ratcheting box-end wrench, 
+adjustable wrench, loop pin extractor, Velcro/ 
+tape caddy, bolt puller, and trash bag. 
+Three-point latch tool - used to compensate for failed 
+bulkhead latches.  The tool consists of a stowable 
+ratchet handle, two interchangeable tool handles, a 
+ratchet control selection lever, a spring-loaded 
+compensator, and two fixed-load pickup points. 
+Centerline latch tool - used to compensate for a failed 
+payload bay door centerline latch.  The tool 
+consists of a fixed-load and a spring-loaded pickup 
+point, plus a reversible ratchet with a stowable 
+handle and a pair of trigger release buttons with a 
+safety that prevents an accidental release. 
+Airlock latch disconnect tool - a common, EVA- 
+modified, crescent wrench used to force open a 
+jammed latch and/or latches disconnected from 
+the rotary actuator.  The other contingency air- 
+lock disconnect tool is a drive ratchet with a 
+7/16-inch hex socket and 4-inch extension.
+RMS rope reel - used in conjunction with the 
+snatch blocks in the event of an RMS joint 
+failure.  The reel consists of a rope spool, spool 
+bracket, rope guide, and cam cleats.  The rope 
+reel contains approximately 80 feet of 5/16- 
+inch-diameter Kexlon rope. 
+Snatch block - a common marine device used, in 
+the event of an RMS failure, in conjunction with 
+the RMS rope reel and EVA winch to backdrive 
+the RMS  to a stowed position. 
+Payload retention device (PRD) - used as an on- 
+orbit temporary tiedown tool so that the article 
+or payload being secured can be repositioned as 
+necessary to prevent damage.  It consists of a 
+housing that encloses a 15-foot Kevlar webbing 
+strap on a spring-loaded reel. 
+RMS manipulator positioning mechanism wrench 
+(RMS MPM wrench) - a double-ended, open-end 
+steel wrench used to deploy or stow the MPMs 
+(in the event the MPM motors fail) by manually 
+turning the drive shaft in the appropriate 
+direction, thus allowing for payload deployment 
+and/or payload bay door closing. 
+RMS shoulder brace release - a flat steel bar with 
+an angled foot used to disengage the RMS 
+shoulder brace locking mechanism, thus releas- 
+ing the shoulder brace.  If the lock is not 
+released, the RMS is inoperative. 
+Grapple fixture release tools - used to remove a grapple 
+fixture shaft should an end effector malfunction, 
+failing to release a payload.  The tools include a 
+probe and 1/2-inch ratcheting box-end wrench. 
+Radiator actuator disconnect tools - A 3/8-inch 
+drive ratchet and 1/4-inch allen wrench exten- 
+sion used to disconnect a failed radiator 
+actuator and support stowage of the radiators. 
+External tank umbilical door tool - used to override 
+a failed external tank door centerline latch and 
+support ET door closure. 
+Generic jam removal tools - diagonal cutter, cable 
+cutter, needle nose pliers, probe, hammer, pry- 
+bar, forceps, trash bag.  For use in disconnecting 
+or dislodging jams in various orbiter mecha- 
+nisms, such as PLBD hinges, latches, etc. 
+Portable foot restraint (PFR) bridge clamp - provides 
+a PFR socket that mounts on the sill of the PLB in 
+available locations on existing bridge rails. 
+Simplified Aid for EVA Rescue 
+The simplified aid for EVA rescue (SAFER) is a 
+small, self-contained, propulsive backpack 
+system used to provide a free-flying rescue 
+capability for an EVA crewmember.  SAFER is a 
+"simplified," single-string system that fits on the 
+bottom of the EMU PLSS and attaches to existing 
+mounts on the sides of the PLSS.  In essence, 
+SAFER is a small simplified version of the 
+manned maneuvering unit (MMU).  Because it is 
+intended for self rescue use only, SAFER does not 
+have the propellant capacity and systems 
+redundancy that was provided with the MMU. 
+SAFER is designed to be used as a self-rescue device 
+for a separated EVA crewmember in situations 
+where the orbiter is unavailable to provide rescue 
+capability.  Such situations would include when the 
+orbiter is docked to a large payload or structure, 
+such as the Russian Mir Space Station or ISS.  The 
+SAFER will also be used during all future ISS EVA 
+operations where the orbiter might not be present at 
+the ISS during an EVA. 
+To provide self-rescue capability, the SAFER 
+offers 13 minutes of propellant and control 
+authority to stabilize and return a tumbling/ 
+separating EVA crewmember. The SAFER has 
+24  gaseous-nitrogen (GN2) thrusters to provide 
+6 degrees-of-freedom maneuvering control.  The 
+SAFER is controlled by a single hand controller 
+housed in a hand controller module box located 
+on the bottom of the unit.  The SAFER propul- 
+sion subsystem provides a total delta velocity of 
+at least 10 ft/sec with an initial charge.  The 
+flight unit weighs approximately 85 pounds and 
+folds for launch, landing, and on-orbit stowage. 
+The SAFER is the product of a Johnson Space 
+Center (JSC) in-house project to develop, build, 
+and produce a rescue device for the instances 
+when the orbiter cannot provide rescue capability 
+and for ISS EVA operations.  An on-orbit SAFER 
+detailed test objective (DTO) conducted on space 
+shuttle mission STS-64 was very successful.  This 
+DTO demonstrated SAFER's operational 
+capabilities and collected performance data to 
+augment the design and development of the final 
+operational SAFER. The STS-76 SAFER was a 
+transitional unit between the DTO unit flown on 
+STS-64 and the final production unit that will be 
+manifested for ISS.  The operational unit will be 
+capable of being stationed on-orbit for 1 year; 
+however, after use on orbit, the unit will be 
+returned to Earth for refurbishing.
+Simplified Aid for EVA 
+Rescue (SAFER) 
+Attachment of SAFER Unit to EMU
+Operations 
+As previously discussed, there are three types of 
+EVA:  scheduled, unscheduled, and contin- 
+gency.  A scheduled EVA is defined as any EVA 
+incorporated into the normal flight plan in order 
+to complete a specific mission objective.  An 
+unscheduled EVA is not part of the flight plan; 
+rather, it is conducted to achieve payload opera- 
+tion success or to advance overall mission 
+accomplishments.  A contingency EVA is also 
+unscheduled, but is required to ensure safe 
+return of the orbiter and flight crew. 
+Regardless of the EVA type, a series of proce- 
+dures are required to initiate and terminate an 
+EVA.  These procedures cover an integrated 
+timeline sequence from the EVA checklist.  The 
+detailed procedures are summarized for refer- 
+ence in the following steps: 
+1. Quick don mask prebreathe - Donning 
+of the mask for prebreathe and cabin 
+depressurization. 
+2. Cabin depressurization to 10.2 psi - 
+Reducing the cabin pressure from 14.7 
+psi to 10.2 psi. 
+3. EMU checkout - Preliminary checkout 
+of the EMU systems prior to EMU 
+donning. 
+4. Middeck preparation and preparation 
+for donning - Configuration of the 
+EMU and its ancillary components for 
+crewmember donning. 
+5. Suit donning - Crewmember donning 
+of the EMU and ancillary components, 
+approximately 40 minutes duration. 
+6. EMU check - Configuration and check- 
+out of the EMU prior to EMU purge. 
+7. EMU purge - Nitrogen purge of the 
+EMU prior to prebreathe. 
+8. Prebreathe - Crewmember acclimation 
+to lower chamber pressure, over a 
+period of 40 to 70 minutes. 
+9. Preparation for depressurization - 
+Configuration of the airlock and 
+closing the inner hatch prior to airlock 
+depressurization. 
+10. Airlock depressurization - Configura- 
+tion and checkout of the EMU, airlock 
+depressurization to vacuum, and 
+opening of the outer hatch. 
+11. Airlock repressurization - Airlock 
+repressurization and opening of the 
+inner hatch. 
+12. Post-EVA - Shutdown of the EMU 
+systems and doffing of the EMU and 
+ancillary components. 
+13. EMU maintenance/recharge - Change- 
+out or recharge of the EMU battery 
+and lithium hydroxide cartridge and 
+general cleaning of the EMU for 
+subsequent EVA; recharge of the EMU 
+water system. 
+14. Post-EVA entry preparation - Recon- 
+figuration and restowage of the EMU 
+and airlock equipment. 
+A set of procedures are followed when a 
+crewmember has contracted the bends during 
+an EVA.  The crewmember discontinues the 
+EVA and returns to the airlock to connect to the 
+service and cooling umbilical.  The airlock is 
+repressed to 10.2 psia, and the cabin is repressed 
+to 14.7 psia.  The helmet is doffed, and the 
+crewmember drinks a minimum of 32 ounces of 
+fluids.  After proper EMU reconfiguration, the 
+bends treatment adapter is installed for bends 
+recovery. 
+Scheduling an EVA is a very complex and 
+involved task.  The following list outlines  the 
+general mission constraints regarding EVA, but 
+does not attempt to define the detailed specific 
+activities. 
+􏰀 
+The maximum scheduled duration for 
+an EVA is 6 hours. 
+􏰀 
+All scheduled and unscheduled EVAs 
+require two crewmembers. 
+􏰀 
+No scheduled or unscheduled EVA shall 
+occur on flight day 1 (~24 hours MET).
+􏰀 
+No scheduled EVA shall be planned to 
+occur prior to flight day 4 (~72 hours 
+MET) unless: 
+i) A specific flight is dedicated to 
+scheduled EVA activity, and 
+ii) That payload customer has 
+specifically negotiated with NASA 
+for the early scheduled EVA 
+capability, and an exemption is 
+processed. 
+􏰀 
+The latest an EVA may be scheduled in 
+preflight planning is EOM-2. 
+􏰀 
+No unscheduled EVA shall be planned 
+to occur prior to flight day 3 (~48 hours 
+MET) unless: 
+i) A specific payload has no alterna- 
+tive but to utilize an EVA as its 
+third level of redundancy for the 
+purpose of a critical backup to 
+deploy/operations that would 
+prevent loss of the payload, and 
+ii) That payload customer has been 
+made aware of the inherent risk 
+that the EVA may not be able to 
+be performed due to crew status, 
+and the customer has agreed to 
+accept the risk, and 
+iii) That payload customer has spe- 
+cifically negotiated with NASA 
+for the early unscheduled EVA 
+capability, and an exemption is 
+processed. 
+􏰀 
+The following are required response times 
+prior to an unscheduled payload EVA: 
+i) Upon the discovery  of a failure 
+leading to an EVA, approximately 
+24 hours are allotted for EVA 
+preparation prior to starting 
+actual EVA maintenance on a 
+failed component. 
+ii) If the case above occurs on launch 
+day, then approximately 44 hours 
+are allotted prior to starting EVA 
+maintenance. 
+iii) If a payload requires a shorter 
+EVA response time, then the 
+requirement for that EVA must be 
+negotiated with NASA, and an 
+exemption must be processed. 
+􏰀 
+Payload activities that could require an 
+unscheduled EVA at the end of a 
+mission may only be scheduled if there 
+are sufficient consumables and landing 
+opportunities to extend the mission to 
+perform the EVA and preserve 2 wave- 
+off days. 
+􏰀 
+A minimum of 1 flight day must sepa- 
+rate two scheduled EVAs, for any given 
+EVA crewmember. 
+􏰀 
+A contingency EVA will be scheduled in 
+real time whenever it is necessary to 
+restore the orbiter to a configuration for 
+safe return. 
+Contingency EVAs occur if orbiter hardware 
+sustains a malfunction.  Procedures, tools, and 
+specified work locations are identified for 
+practice on any STS mission.  The recognized 
+failures pertain to the following orbiter systems: 
+radiator actuator, payload bay doors, bulkhead 
+latches, centerline latches, airlock hatch, remote 
+manipulator system (RMS), bulkhead camera, 
+Ku-band antenna, and external tank doors.  The 
+corrective actions for each system failure are 
+itemized in the following table.
+FAILURE CORRECTIVE ACTION 
+Radiator actuator Radiator actuator disconnect 
+Payload bay door system PDU 
+Winch operations 
+PLBD drive system linkage cut 
+PLBD drive system disconnect 
+Electrical crossover disconnect 
+Jam removal 
+Bulkhead latch 3-point latch tool installation 
+Jam removal 
+Centerline latch Centerline latch tool installation 
+Jam removal 
+Airlock hatch Airlock latch disconnect 
+Hinge disconnect 
+RMS RMS joint alignment 
+RMS tiedown 
+MPM stow/deploy 
+RMS shoulder brace release 
+Grapple fixture release 
+Bulkhead camera Disconnect and remove camera 
+Ku-band antenna fails to align for stowing Ku-band antenna gimbal alignment 
+External tank door ET door centerline latch release 
+System Failure Corrective Actions Table
+EVA Summary Data 
+􏰀 
+EVA refers to operations performed outside 
+the spacecraft crew compartment. 
+􏰀 
+For generic orbiter missions, two suits are 
+included with consumables provided for 
+three, two-person, 6-hour EVAs. 
+􏰀 
+There are three basic categories of EVA: 
+scheduled, unscheduled, and contingency. 
+􏰀 
+The extravehicular mobility unit (EMU) is an 
+independent anthropomorphic system that 
+provides environmental protection, mobility, 
+life support, and communications for the 
+crewmember to perform EVA in Earth orbit. 
+An EVA is defined, for EMU design consid- 
+erations, as any time the EMU external 
+environmental pressure is below 4.0. 
+􏰀 
+The EMU is an integrated assembly, primar- 
+ily composed of the space suit assembly, life 
+support system, and numerous items of 
+associated support and ancillary equipment. 
+􏰀 
+The orbiter's airlock permits EVA flight crew 
+members to transfer from the middeck crew 
+compartment into the payload bay in EMUs 
+without depressurizing the orbiter crew 
+cabin.  The airlock also provides launch and 
+entry stowage of up to three EMUs. 
+zation and repressurization, 
+EVA equipment recharge, LCVG water cool- 
+ing, EVA equipment checkout, donning, and 
+communications. 
+􏰀 
+Depending on the task to be performed, the 
+proper tool is available outside the airlock. 
+The general EVA-support equipment func- 
+tions include securing the crewmember to the 
+orbiter/RMS, providing the crewmember 
+with mechanical assistance, and assisting the 
+crewmember in mobility. 
+􏰀 
+A standard series of procedures (pre and post 
+operations) are required to initiate and termi- 
+nate an EVA, regardless of the EVA type. 
+EVA Rules of Thumb 
+􏰀 
+Always use "make before break" tether proto- 
+col. 
+􏰀 
+Don't use the glove as a hammer. 
+􏰀 
+EVA crewmember and equipment must 
+remain tethered at all times. 
+􏰀 
+Slow and deliberate motion provides much 
+greater stability than quick, jerky motions. 
+􏰀 
+Body positioning is 90 percent of the task. 
+􏰀 
+Each EVA crewmember should check out his 
+or her own EMU.</Text>
+        </Document>
+        <Document ID="29">
+            <Title>Part 4: Text Tools</Title>
+            <Synopsis>Part 4... Well, Part 4 covers the other stuff.</Synopsis>
+        </Document>
+        <Document ID="64">
+            <Title>Sheets</Title>
+        </Document>
+        <Document ID="47">
+            <Title>Step 12: QuickReference Panels</Title>
+            <Text>We’ve looked at how to split the editor so that you can view more than one document at the same time. The main window limits you to two editors, because of the way they interact with one another (and for space reasons), but sometimes you may wish to have more than two documents open at the same time - and this is what QuickReference panels are for.
+QuickReference panels are Scrivener’s internal variation on Mac OS X’s Quick Look feature. They allow you quickly to open, view and edit the contents of any document in the project. Let’s try opening a couple now.
+We’ll start by opening this document in a QuickReference panel so that we can keep it open while we open some others. Click on the “QuickRef” icon in the toolbar, and then resize the window that appears as you wish, and scroll to the bottom of its text.
+…
+Right, you should now be reading this document inside the QuickReference panel. Next, go to the Window menu and select “Float QuickReference Panels”. This will make it so that QuickReference panels always  stay open and on top of the main window as we open other documents. Now click on “Alhambra” in the Research folder of the binder and then hit the space bar.
+You should now have a second QuickReference panel open, this one with an image in it.
+Now, go to View > QuickReference > Research > spacewalk_info. Now you should have a PDF file open in a separate window too.
+Note that you can change the label and status associated with the document using the pop-up buttons in the top corners of the Quick Reference panel. You can also view the synopsis, notes and other meta-data associated with the document using the pop-up button in the bottom-right of the window, which currently says “None”. Click on that button in this window and select “Notes” to see what I mean.
+You can therefore use QuickReference panels to refer to other documents while you write, and they work great with composition mode too.
+Let’s return to where we were in the binder. Make sure this QuickReference panel has the focus (click into it if you are not sure) and then select “Reveal in Binder” from the View menu. Once you’ve done that, close all of the QuickReference panels and move on to Step 13.</Text>
+            <Notes>These are the notes associated with this document... Not exactly informative, but hey, this is just an example.</Notes>
+        </Document>
+        <Document ID="56">
+            <Title>5h: Comments &amp; Footnotes</Title>
+            <Text>Now we’ll look at the “Comments &amp; Footnotes” pane - don’t worry about clicking on the button in the inspector footer bar just yet though (for your reference, though, the “Comments &amp; Footnotes” button is the one with the “n.” inside a square speech bubble).
+
+Comments and footnotes in Scrivener work a little like comments in Word, Nisus Writer or Pages, but they’re not exactly the same. Let’s take a look at them.
+
+For a start, click on the yellow highlighted text in the sentence below:
+
+This sentence has a comment attached.
+
+Note how the inspector automatically switches to the Comments &amp; Footnotes pane, and the comment associated with the text gets highlighted.
+
+Next, click on the grey footnote directly below the comment in the footnote.
+
+This sentence has a footnote attached.
+
+See how clicking on the note in the inspector automatically selects the text associated with it in the main editor?
+
+If you click on a note in the inspector, the editor will automatically scroll to the position in the text where the note has been placed. This allows you to use the comments and footnotes to navigate the text, so that they act like bookmarks in a way, too. Try scrolling to the bottom of this document, and then clicking the comment to return to the top.
+
+
+ADDING COMMENTS AND FOOTNOTES
+Let’s try adding some comments and footnotes. There are a couple of ways of doing this. First, select some of the text in the following sentence:
+
+Select some of the text in this sentence.
+
+Once you’ve selected a word or two in the above sentence, either click on “Comment” in the toolbar, the “+” button in the top “Comments &amp; Footnotes” bar in the inspector, or hit shift-cmd-8. A new comment will be created in the inspector and it will be selected ready for editing - add some text. Once you’ve finished typing in the comment, hit the Escape key to return the focus to the main editor.
+
+Alternatively, you can just click into or after a word to add a comment or footnote to it. This time, just click into the word “commented” below so that the blinking insertion point (or caret) is somewhere inside it:
+
+This sentence will be commented.
+
+Again, click on “Comment” in the toolbar, the “+” button in the inspector, or hit shift-cmd-8. Note how the whole word “commented” gets a comment associated with it.
+
+Let’s try it with a footnote too. This time, place the cursor right at the end of this sentence, after the full stop:
+
+This sentence will have a footnote after it when exported or printed.
+
+This time, click on the “+fn” button in the inspector (note that you can add a “Footnote” icon to the toolbar by using View > Customize Toolbar…, and although there is no default keyboard shortcut associated with this action you can add one using the OS X system preferences).
+
+Note how the footnote gets attached to the word “printed” and the full stop after it. It generally doesn’t matter where you attach comments, because they are usually for your own (or collaborators’) reference only, but with footnotes you should always ensure that the footnote link the (the grey highlight) ends at exactly the place you want the footnote number to appear when printed or exported. So, because we associated the footnote with the word “printed” and the footnote ends at, but includes, the period at the end of the sentence, the footnote number in the exported or printed text will appear straight after the full stop, which is usually what you would want.
+
+
+CHANGING THE COLOUR OF COMMENTS
+You can change the colour of comments by ctrl-clicking on a comment (or comments) in the inspector. The contextual menu offers a choice of default colours, or you can open the colour panel to choose a custom colour. You can also select a comment and hit shift-cmd-C to open the colour panel directly and change the colour that way. (Note that you cannot change the colour of footnotes, which use a single colour to differentiate them from comments, although you can choose the colour for all footnotes in the “Appearance” pane of the Preferences.
+
+The contextual (ctrl-click) menu also allows you to convert comments to footnotes and vice versa, and to revert comments or footnotes to their default formatting (you can set the default fonts in the Preferences).
+
+If you have a lot of comments, you can collapse individual comments and footnotes by clicking on the disclosure triangle (the downward-pointing arrow) in the top-left of each comment box. (You can also collapse or expand all using cmd-0 or cmd-9 when the focus is in the inspector.)
+
+Comments and footnotes are thus tucked away in the inspector until you need them. When you come to export or print - which we’ll come to later - you have a lot of control over how comments and footnotes get included in the document. For instance, you could have all comments removed but footnotes included as proper footnotes, or you could have comments exported as footnotes and footnotes exported as endnotes. But if that sounds complicated, it’s not something you need to worry about right now - just know that if you want to make notes on your document, or add footnotes, this is one way to do it.
+
+Right, onto “Step 6: End of Part One”!</Text>
+            <Comments>Comments get displayed and selected as soon as they are clicked on in the main editor.
+This is a footnote. In order for footnotes to get exported properly, it’s important to add them in such a way that the link ends exactly where you want the footnote to appear in the exported or printed text.</Comments>
+        </Document>
+        <Document ID="65">
+            <Title>Character Sheet</Title>
+            <Text>Character Name	Age / Gender
+Role in story
+
+Physical description:
+
+Personality:
+
+Plots involved in:
+	◆	
+
+Relationship with other characters:
+	◆	
+
+</Text>
+        </Document>
+        <Document ID="48">
+            <Title>Part 5: Customising Projects</Title>
+            <Synopsis>Part 5 shows you how to create customised projects.</Synopsis>
+        </Document>
+        <Document ID="57">
+            <Title>Step 7: Changing Editor Views</Title>
+            <Synopsis>You should now be looking at the subdocuments of the “Part 2: Organisation” folder on the corkboard. (This card is used for the synopsis of Step 7.)</Synopsis>
+            <Text>Scrivener’s editor has four modes - four different ways of viewing your work - and learning how and when to switch between them will make your Scrivener experience much more comfortable. The four modes are as follows:
+
+1. SINGLE DOCUMENT MODE
+In this mode, the editor shows the contents of a single document, whether it’s a text document, an image, a PDF file or whatever. The editor is in single document mode right now.
+
+
+2. CORKBOARD MODE
+In corkboard mode, the editor shows the subdocuments of the current document as index cards on a corkboard. Let’s take a look at how that works right now:
+
+a) Try clicking on the “Part 2: Organisation” folder in the binder, and then click on the image of the corkboard in the toolbar (the one in the middle of the group of three View/Group Mode icons) so that it is selected:
+
+#
+
+Once you’ve taken a look at the corkboard, return here. See how the subdocuments of the folder you had selected appeared as index cards? If you open the inspector right now and select the “Notes” pane, you will see the index card associated with this document - which you will have seen on the corkboard, because this document is a subdocument of the “Part 2: Organisation” folder.
+
+b) Now - well, after you’ve read this bit, so you know how to get back - click on the corkboard icon again, while viewing this document. You will see that the corkboard is blank. This is because this document (“Step 7: Changing Editor Views”) doesn’t have any subdocuments - but it could. After you’ve seen the blank corkboard, click on the text icon to the left of the corkboard icon in the toolbar icon to see the text of the document again:
+
+￼
+
+
+3. OUTLINER MODE
+Outliner mode is much like the corkboard mode, allowing you to see the subdocuments of the current document, except that it shows them as rows and allows you to view various columns of information. Try repeating everything you did for the corkboard mode above, but this time instead of choosing the corkboard icon, click the outliner icon on the right (and remember to come back here afterwards):
+
+￼
+
+
+4. “SCRIVENINGS” MODE
+“Scrivenings” is the term for Scrivener’s combined text mode, and it is one of Scrivener’s coolest features. It allows you to view or edit multiple text documents as a composite - as though they were one long document. Scrivenings mode is available when there are multiple documents available to view as one. If you look at the “View Mode” control in the toolbar at the moment, you will see that the left-most icon shows a single sheet of paper. This indicates that the composite text mode is not available here, because you are viewing a single document that has no subdocuments. So, let’s look at one that does.
+
+After reading this part, once more click on “Part 2: Organisation” in the binder. When you do so, you will notice that the “View Mode” icon in the toolbar changes. In fact, it even gets renamed - it becomes “Group Mode”:
+
+￼
+
+(You will notice that when you select the “Part 2” folder again, it returns to outliner mode - this is because Scrivener remembers which mode you last used to view a group, and will automatically use it for viewing groups until you change it again.)
+
+The single text icon on the left has now changed into a stack of paper. This means that it is possible to enter Scrivenings mode. To do so, you simply click on the button with the icon of the stack of papers. Try that with the “Part 2” folder now, and after selecting the stack of papers icon scroll all the way down to the bottom of the editor, then return here by clicking back on “Step 7” in the binder.
+
+Done that? You should have seen that the text from all the various subdocuments of the “Part 2” folder - including this one - were combined into one long document, with dividers between them. You could have edited the text, and your changes would have automatically been applied to all of the individual files you altered.
+
+
+WHAT TO REMEMBER WHEN SWITCHING VIEWS
+You’ve now switched between all the main views. The main thing to remember is that when you are viewing a single document that has no subdocuments, there are only three view modes available - because you can’t enter Scrivenings (composite text) mode when viewing only a single document. In this case, the three view mode icons in the toolbar are labelled “View Mode” and the left-most icon is a single sheet of text. You click on the mode you want to view - single document mode, corkboard mode, or outliner mode.
+
+When you are viewing a folder or a document that has subdocuments, though, there are four modes available - the single document, corkboard and outliner mode, and also Scrivenings mode. When this is the case, the three view mode icons in the toolbar are labelled “Group Mode” and the left-most icon is a stack of papers. In this mode, you can return to single document mode by deselecting all of the segments of the Group Mode control - that is, click on the one that is selected to deselect it - just as you did at the end of Step 6 to view the text of the “Part 2” folder.
+
+You can also switch between view modes using the top three items in the View menu, or using the cmd-1, cmd-2 and cmd-3 keyboard shortcuts.
+
+I know, I know - now you really do need that cup of tea, and probably another biscuit too. Once you’re done, we’ll take a look at some of these view modes in more detail.</Text>
+        </Document>
+        <Document ID="66">
+            <Title>Location Sheet</Title>
+            <Text>Place Name	Location
+Role in story
+
+Description:
+
+
+Plots involved in:
+	◆	
+
+Thematic Relevance:
+	◆	
+
+</Text>
+        </Document>
+        <Document ID="67">
+            <Title>5f: Custom Meta-Data</Title>
+            <Text>If you click on the button at the bottom of the inspector with the icon of a tag on it, you will by default be presented with a blank grey area with the message “No Meta-Data Fields Defined” and a button with the title “Define Meta-Data Fields…”. This area can be populated with custom meta-data that you create for your project, and the data that can be viewed here can also be viewed as custom columns in the outliner. This provides a way of assigning arbitrary information to your documents. For instance, if writing fiction, you could add a meta-data field for the time at which a scene takes place (tip: because custom meta-data fields are text-only, enter the date and time backwards so that it sorts properly, e.g. “1984-12-31”), or you could add a list of characters that appear.
+We first need to define some custom meta-data fields, though. Let’s do that now:
+
+1)  Click on the “Define Meta-Data Fields…” button (alternatively, you can choose “Edit Custom Meta-Data Fields…” from the menu that appears when you click on the gear button in the “Custom Meta-Data” bar, or select “Meta-Data Settings…” from the Project menu and then choose the “Custom Meta-Data” tab).
+2)	Click on the “+” button in the bottom-left of the sheet that you’ve opened, and enter “Date” into the row that gets added to the table.
+3)	Click on the “+” button again and this time enter “Characters”. For this one, also click on the “Wrap Text” button.
+4) Click “OK” to accept the changes and dismiss the sheet.
+
+The Custom Meta-Data pane in the inspector will now show the two fields you created above. Click into the field under “Date” and type something, then do the same for “Characters”. Note that the “Characters” field will expand to fit the text, because you selected “Wrap Text”.
+
+You can view all custom meta-data in columns in the outliner view, too (which is covered in Part 2).
+
+For many projects you may not need to touch custom meta-data at all, but if you ever find yourself wishing for an extra piece of information in the outliner or inspector, then it’s good to know that it’s there.
+
+Next onto one of Scrivener’s most useful features for editing documents: “Snapshots”.</Text>
+        </Document>
+        <Document ID="10">
+            <Title>Part 1: Basics</Title>
+            <Synopsis>In the first part, we look at the basic features of Scrivener that you will be using most of the time.</Synopsis>
+        </Document>
+        <Document ID="59">
+            <Title>Step 21: Document Templates</Title>
+            <Text>One of the key philosophies behind Scrivener is that it shouldn’t try to force you into a particular workflow. You should be able to write any sort of long-form text in Scrivener and set up your project to fit the task at hand. Likewise, if you’re using Scrivener to write a novel, Scrivener doesn’t automatically assume that you must therefore want character sheets to fill in for each character, or prompt sheets for information about locations and so on (I apologise for the fiction-biased examples). Every writer is different - some novelists find filling in character sheets an essential part of their process, others hate such things. So, just as Scrivener allows you to create top-level folders and customise their icons, it also gives you the means to set up document templates for generating things such as character sheets. Document templates allow you to set up a document in the project and use it as the basis for creating new documents.
+
+(Note: Document templates should not be confused with project templates. A project template is something you pick from the New Project panel, which is used as the basis for creating an entire project - see Step 22 - whereas a document template is a file inside a project.)
+
+This probably sounds more complicated than it is in practice. Let’s create a couple of document templates to see what I mean.
+
+First, go to the Project menu and select “New From Template”. Note how there is just a dummy menu item in there saying “No templates folder set for this project”. Then, try clicking and holding down the green “Add” button in the toolbar - hold it down until a menu appears (but don’t choose anything - we’re not going to add anything, we just want to take a look). You’ll see there are three items in there: “New Text”, “New Folder” and “Import Web Page” (which will be disabled if a document contained in the Draft folder is selected in the binder, because you can’t import web pages into the Draft folder, which is text-only). We’re going to add a couple of different types of document to these menus.
+
+Next, take a look inside the Research folder in the binder (expand it if necessary by clicking on the disclosure triangle next to it). Inside it you will find a “Sheets” folder, which contains two documents - “Character Sheet” and “Location Sheet”. Take a look at these documents. They contain text that could be used for very basic character or location sheets, which you might fill in for each character or location you are going to write about in a novel. They are just regular text documents, though - you can have whatever you want in there. To see what I mean, select the “Location” document and then click on “Add” in the toolbar so that a new blank document gets created. Name it to anything you want, and then type something inside the document.
+
+Now we’re going to tell Scrivener that the documents inside the “Sheets” folder should be treated as document templates - that is, that we want to be able to create new documents based on them:
+
+1) Click on the “Sheets” folder to select it.
+2) Go to the Project menu and choose “Set Selection as Templates Menu”.
+
+The icon of the “Sheets” folder will change to be a white “T” against a blueprint, and the “T” will appear in the corner of each document inside it. This indicates that the folder is now acting as the templates folder and that anything inside it can be used as the basis for a new document.
+
+What does this mean? Let’s try returning to the menus we looked at a little earlier:
+
+1) Click on the “Characters” folder with the custom icon that you created in step 20. It should currently be empty.
+2) Go to the Project menu and select “New From Template” again. You’ll notice that it’s no longer empty - it shows the contents of the “Sheets” templates folder.
+3) From the menu, select “Character Sheet”. A new document will be created inside the “Characters” folder - a document that is identical to the “Character Sheet” document in the templates folder. Change the title and edit the text in the document itself.
+4) Now click on the green “Add” button and hold it down for a second again. This time there will be more items in the menu that appears - the contents of our templates folder is there, too. This time choose “Location Sheet”.
+
+The two new documents you just created are copies of the documents in the templates folder. And that’s really all the templates folder is - somewhere for you to put documents that you want to use as the basis for other documents, and which, in combination with the New From Template menu, makes it very easy to create copies of those documents anywhere you want in the project.
+
+We’re nearly there. On to Step 22…</Text>
+        </Document>
+        <Document ID="11">
+            <Title>Part 2: Organisation</Title>
+            <Synopsis>In the second part, we look at the different tools available for organising your work in Scrivener.</Synopsis>
+            <Text>Welcome to Part 2 of the tutorial—you can close “Part 1” by clicking on the triangle next to where it says “Part 1” in the binder on the left. You can also hide the Inspector by clicking on the blue disc icon in the toolbar again.
+
+You have now learned some of the fundamental features of Scrivener. Now it’s time to move on to some of the organisational features. Firstly, notice that this document is actually a folder in the binder. There is no real difference between text and folder documents aside from their icons, and the fact that folder documents always have “disclosure triangles” next to them in the binder (and other outline views) regardless of whether or not they have anything inside them. Note that the folder icon for this document (“Part 2: Organisation”) has a little text icon in its corner. This means that this folder contains text - the text you are reading now. (It does not have anything to do with the fact that it also has text documents inside it, such as “Step 7” and so on.) The other major difference between folders and text documents is the default way they get viewed when you open them. We’ll come to that in Step 7.
+
+In fact, you can convert a folder document into a text document and vice versa very easily. Click on “Part 2: Organisation” in the binder to make sure it is selected, and then go to Documents > Convert > To File in the main menu. The folder icon changes into a text stack (the stack indicates that the text document has subdocuments). If you go back to the Documents > Convert menu, you will see that now you have the option of converting it back to a folder - do that now. The idea behind this flexibility is that you can choose to have different visual indicators for different levels of organisation, and also you don’t have to plan in advance how you structure your project, because if you end up using a text document as a container for other files, you can always convert it to a folder later, and vice versa.
+
+To create new documents, click “Add” in the toolbar. If you hold the add button down for half a second, a menu appears that lets you choose which kind of document you would like to add. You can also add documents via the Project menu, footer views and contextual menus. Hitting enter in the binder, outliner or corkboard will also create a new document (although this behaviour can be turned off via the Preferences).
+
+Okay, move on to Step 7 when you’re ready (you will need to expand “Part 2” by clicking on the disclosure triangle next to it). Or go get a cup of tea and a biscuit.</Text>
+        </Document>
+        <Document ID="20">
+            <Title>Step 16: Exporting Files</Title>
+            <Text>What if you want to use Scrivener but are worried about being locked in? The Scrivener project file format (.scriv) is unique, so what happens if you want to move your work elsewhere? Fear not: you are not locked in at all. Simply select all of the files you want to export in the binder (everything if you so wish) and then go to File > Export > Files… Enter the name of the directory that will be created to hold all of the files, choose your preferred text file format and whether you want to include notes and meta-data in the export (which will include the synopses), then hit “Export”. All the selected files will be exported with the binder structure intact; that is, the virtual folders in the binder will become actual folders in the Finder. (Wait, the folders in the Finder are virtual, too… I need to get out more.)
+
+That’s how you can get anything out of Scrivener. Generally, however, the files you have inside a Scrivener project are there to support your writing - the text you have been slaving over - writing, editing, cutting up, rearranging - in the Draft folder. The whole point of Scrivener is to produce that text, so at some point you are going to want to export or print it as a single document or manuscript.
+
+To find out how, go to Step 17.</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

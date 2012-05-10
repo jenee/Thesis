@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Links Version="1.0">
+    <ScrivenerLinks>
+        <TextLinks>
+            <LinkID Range="60,12">122</LinkID>
+            <LinkID Range="88,32">118</LinkID>
+            <LinkID Range="126,28">120</LinkID>
+            <LinkID Range="158,6">30</LinkID>
+            <LinkID Range="168,21">106</LinkID>
+            <LinkID Range="193,33">105</LinkID>
+            <LinkID Range="230,24">46</LinkID>
+            <LinkID Range="258,10">31</LinkID>
+            <LinkID Range="272,42">90</LinkID>
+            <LinkID Range="318,59">91</LinkID>
+            <LinkID Range="381,50">92</LinkID>
+            <LinkID Range="435,47">93</LinkID>
+            <LinkID Range="486,53">50</LinkID>
+            <LinkID Range="543,40">53</LinkID>
+            <LinkID Range="617,8">68</LinkID>
+            <LinkID Range="732,53">48</LinkID>
+        </TextLinks>
+    </ScrivenerLinks>
+</Links>

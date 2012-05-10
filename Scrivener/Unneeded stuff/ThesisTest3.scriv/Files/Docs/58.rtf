@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f0\b\fs28 \cf0 Parsible Phonetic Dictionary \
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\i \cf0 Parsable Dictionary\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\i0\b0\fs24 \cf0 I started off by looking at MIT\'92s .  Eventually, I was led to a paper that, while not really related to my topic, had a list of phonetic dictionaries in it: CMU dictionary, LC-STAR dictionary and UNISYN dictionary.  I started out by looking at the LC-STAR dictionary, but I quickly decided that it wasn\'92t going to be as useful to me, because the LC-Star project is relatively focused on Speech-to-Speech or Text-to-Speech tech. Also, the website had not been maintained since 2006.   I then tried the CMU dictionary, which, for a while, seemed like it was going to work.  It had a very simple way of encoding words:  first the word, then the identifier number in parents (if needed), then a space, then a one-to-two char code for each sound in the word, with the numbers 0, 1, 2 appended to indicate emphasis (if needed), separated by spaces:\
+ABBREVIATE  AH0 B R IY1 V IY0 EY2 T\
+The problem that arose with this format, was that there was no explicit definition of where to hyphenate the word when splitting it up.  This causes problems if I want to use the word in lyrics, where each note has is own syllable underneath it, and each syllable might have many different sounds. \
+The benefits of the CMU dictionary over some other dictionaries were that (1) it was actively maintained, (2) it included proper nouns, which are often found in lyrics, but not in dictionaries, and (3) it was ridiculously easy to read.\
+The downsides were that (1) it included no part of speech data or hyphenation data, and (2) it used non-standard symbols for its phonetic alphabet.  \
+With the downsides and benefits in mind, the CMU dictionary could not be used in isolation, especially if I someday want to attempt generation of original lyrics (which part of speech data would be vital for).  \
+The UNISYN dictionary is used primarily to phonetically translate words into multiple accents.  It has its own formated dictionary, with a bunch of wildcards in it.  They also provide some semi-functioning perl scripts that allow you to specify a dialect you\'92d like to use (For example, I would say \'93cooking\'94 differently than someone from the Deep South, and we both would say it differently than someone from London.  However, we\'92re all speaking English.  The UNISYN dictionary facilitates this translation).  \
+It had all the information I needed, and then some.  However, it did not include proper nouns, like the CMU dictionary did.  The obvious conclusion, then, was to combine them.  I decided that anything that was in the CMU dictionary, but not in the UNISYN dictionary, would be counted as a proper noun.  And with that, I started to massage both data sets into mergable forms.\
+However, I ran into a setback, mentioned in the very first article I found references to both dictionaries in:  the dictionaries were inconsistent.  They didn\'92t always put stresses in the same place, nor did they always have the same pronunciation.  Because of this, it was difficult to match words\'97especially words that were homographic heteronyms (same writing, different sounds).  For now, I have decided to use the UNISYN dictionary exclusively, and if I have time, I\'92ll try to parse out the proper nouns from the CMU dictionary. This removes added unnecessary complexity, but does not structurally prevent me from adding that complexity later, so its a good sacrifice.}

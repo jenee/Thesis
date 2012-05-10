@@ -1,0 +1,589 @@
+\documentclass[10pt,oneside]{memoir}
+\usepackage{layouts}[2001/04/29]
+\makeglossary
+\makeindex
+
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+\def\revision{}
+
+%%% need more space for ToC page numbers
+\setpnumwidth{2.55em}
+\setrmarg{3.55em}
+
+%%% need more space for ToC section numbers
+\cftsetindents{part}{0em}{3em}
+\cftsetindents{chapter}{0em}{3em}
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4.5em}{3.9em}
+\cftsetindents{subsubsection}{8.4em}{4.8em}
+\cftsetindents{paragraph}{10.7em}{5.7em}
+\cftsetindents{subparagraph}{12.7em}{6.7em}
+
+%%% need more space for LoF numbers
+\cftsetindents{figure}{0em}{3.0em}
+
+%%% and do the same for the LoT
+\cftsetindents{table}{0em}{3.0em}
+
+%%% set up the page layout
+\settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setulmarginsandblock{1.5in}{1.5in}{*}
+
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{booktabs}			% Better tables
+\usepackage{tabulary}			% Support longer table cells
+\usepackage[utf8]{inputenc}		% For UTF-8 support
+\usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
+\usepackage{xcolor}				% Allow for color (annotations)
+
+%\geometry{landscape}			% Activate for rotated page geometry
+
+%\usepackage[parfill]{parskip}	% Activate to begin paragraphs with an empty
+								% line rather than an indent
+
+
+\def\myauthor{Author}			% In case these were not included in metadata
+\def\mytitle{Title}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\bibliocommand{}
+
+\VerbatimFootnotes
+\def\myauthor{Anonymous}
+\def\baseheaderlevel{1}
+\def\format{complete}
+\def\mytitle{Tutorial}
+
+
+%
+%	PDF Stuff
+%
+
+%\ifpdf							% Removed for XeLaTeX compatibility
+%  \pdfoutput=1					% Removed for XeLaTeX compatibility
+  \usepackage[
+  	plainpages=false,
+  	pdfpagelabels,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+  \usepackage{memhfixc}
+%\fi							% Removed for XeLaTeX compatibility
+
+
+%
+% Title Information
+%
+
+
+\ifx\latexauthor\undefined
+\else
+	\def\myauthor{\latexauthor}
+\fi
+
+\ifx\subtitle\undefined
+\else
+	\addtodef{\mytitle}{}{ \\ \subtitle}
+\fi
+
+\ifx\affiliation\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \affiliation}
+\fi
+
+\ifx\address\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \address}
+\fi
+
+\ifx\phone\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \phone}
+\fi
+
+\ifx\email\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \email}
+\fi
+
+\ifx\web\undefined
+	\else
+		\addtodef{\myauthor}{}{ \\ \web}
+\fi
+
+\title{\mytitle}
+\author{\myauthor}
+
+\begin{document}
+
+\chapterstyle{\mychapterstyle}
+\pagestyle{\mypagestyle}
+
+%
+%		Front Matter
+%
+
+\frontmatter
+
+
+% Title Page
+
+\maketitle
+\clearpage
+
+% Copyright Page
+\vspace*{\fill}
+
+\setlength{\parindent}{0pt}
+
+\ifx\mycopyright\undefined
+\else
+	\textcopyright{} \mycopyright
+\fi
+
+\revision
+
+\begin{center}
+\framebox{ \parbox[t]{1.5in}{\centering Formatted for \LaTeX  \\ 
+ by MultiMarkdown}}
+\end{center}
+
+\setlength{\parindent}{1em}
+\clearpage
+
+% Table of Contents
+\tableofcontents
+%\listoffigures			% activate to include a List of Figures
+%\listoftables			% activate to include a List of Tables
+
+
+%
+% Main Content
+%
+
+
+% Layout settings
+\setlength{\parindent}{1em}
+
+\mainmatter
+\part{Chapter One}
+\label{chapterone}
+
+\#  
+
+
+\chapter{Step 1: Beginnings}
+\label{step1:beginnings}
+
+Just a quick note before we begin: this tutorial assumes that you are using the default preferences. If necessary, you can reset them to the defaults by clicking on the ``Defaults'' button in the Preferences pane, available under Scrivener $>$ Preferences{\ldots} (click on ``Show All'' in the Preferences toolbar to see the ``Defaults'' button if it is not visible); if you haven't made any changes to the preferences, you don't need to worry about this. Right, on with the tutorial.
+
+
+When you first open a Scrivener project, by default you are presented with two panes:
+
+
+\begin{enumerate}
+
+
+\item THE BINDER
+On the left, you can see a list of files: the ``binder''. This is an outline view that contains three default folders: ``Draft'', ``Research'', and ``Trash''. You can rename these folders to whatever you like by double-clicking on them (in some of the templates, for instance, the Draft folder has been renamed to ``Manuscript''). The binder is where you organise your project by creating a structure and dragging and dropping your documents around.
+The contents of the Draft folder represent the text fragments that will be compiled into one long document when you export or print using File $>$ Compile{\ldots}, which is the standard way of preparing your finished project for printing or final formatting in a dedicated word processor. This is very much the raison d'être of Scrivener - to assemble the text of your manuscript in the Draft folder for printing or export. (As such, the Draft folder is unique in that it can only hold text files.)
+The Research folder can hold text or media files (images, PDF files, video files and so on), and is where media files will be placed by default if you accidentally try to import them into the Draft folder at any point. You don't have to put all research files into the Research folder, though - you can create other folders for your support materials anywhere you want (and even give them custom icons).
+The Trash folder speaks for itself; whenever you delete a document it ends up there. Documents aren't deleted completely until you select ``Empty Trash{\ldots}'' from the File menu - so there's no way you can accidentally delete a file in Scrivener.
+
+
+
+
+\item THE EDITOR
+Next to the binder you have the main editor, which displays the current document. The main editor is what you are looking at right now as you read this text document. There are several ways to load a document in the editor, but the one you will use most often is simply selecting a file in the binder, as you did to load this one. Scrivener allows you to create or import any number of text documents. You can also import image, web, QuickTime and PDF documents. To import documents, use File $>$ Import $>$ Files{\ldots} or simply drag the files you wish to import from the Finder into the binder of your Scrivener project.
+You can change the current document by clicking on another item in the binder. Try that now---click on ``Alhambra'' inside the ``Research'' folder (you may need to expand the Research folder by clicking on the triangle next to it first) and then return here (``Step 1: Beginnings'').
+
+
+
+\end{enumerate}
+
+Done that? So now you know that this area can be used to view different types of document, not just text.
+
+
+Let's try switching between documents again. You see the document on the left beneath this one, the one entitled ``Step 2: Header View''? Click on it now.
+
+
+\pagebreak \chapter{Step 2: Header View}
+\label{step2:headerview}
+
+You have just switched between documents. You might use different documents for different chapters, different scenes, different ideas, articles, characters, whatever you want. There are other ways of switching between documents, too. Another one you will use frequently is the header view. See that bar at the top of the text, the one that has the arrows on the left of it and says ``Step 2: Header View'' in it? Well, that is the header view (which is sometimes also referred to as the ``header bar''). You can rename the document by clicking into the title of the header view, and there are several options available in a menu if you click on the icon next to the title.
+The arrows on the left of the header view that point left and right are the history navigation buttons and work much like Safari's navigation arrows - they allow you step back and forth through the documents you have had open in the editor. The white up and down arrows on the right of the header bar step through the contents of the binder sequentially. To see the difference, try the following:
+
+
+• Click on the ``Alhambra'' image document in the Research folder again and then click on the left arrow in the header view. You will be returned to this document, because this was the one you had open last.
+• Click on the right arrow and you will be returned to the ``Alhambra'' image document again. (Make sure you come back here afterwards though!)
+• Now, with this document open, click on the down arrow on the right and then click on the up arrow again to return here. Note how the down arrow takes you to the next document in the binder, whereas the right arrow takes you to the next document in the navigation history.
+
+
+While we're here, note that the selection highlight in the binder does not necessarily follow what is being displayed in the main editor---if you change the contents of the editor using the navigation arrows, for instance, the selection in the binder will not change. You can thus navigate around using the header view without losing track of the original document on which you were working in the binder. Note however that the up/down arrows do affect binder selection because they are intended as an alternative way of navigating through the binder contents.
+
+
+Another useful way of switching documents is to drag a document from the binder into a header view. Try this now---grab the document entitled ``Step 3: Footer View'' on the left and drag it into the header view above. The navigation bar will turn grey, and when you let go the document will change{\ldots}
+
+
+\pagebreak \chapter{Step 3: Footer View}
+\label{step3:footerview}
+
+You may notice that as with the history navigation buttons, dragging a document into the header bar does not affect the binder selection. If you ever find that after navigating through multiple documents you are not sure where the current document is located in the binder, you can simply use View $>$ Reveal in Binder (Opt-Cmd-R) to force the binder to show you where you are. Try that now.
+
+
+Okay, so let's get familiar with the editor. At the bottom of the window, you can see a grey bar containing a pop-up button with a percentage in it (100\% by default) and a live word and character count. This is the ``footer view''. Try typing something in the yellow area below:
+
+
+Done that? You will see that the word and character count in the footer view changes as you type. Now try changing the percentage in the popup-button at the bottom, too (click on it and select a new percentage)---you will see that you can make the text bigger or smaller; useful for tired eyes.
+
+
+SCRIPTWRITING MODE
+The footer view will change depending on what you are viewing inside the document. For instance, if you are typing a script (such as a movie screenplay), the footer view will give you information on the various script elements. Try selecting Format $>$ Scriptwriting $>$ Script Mode - Screenplay from the main menu now. The word and character count will disappear and you will see another pop-up menu appear on the right saying ``General Text'' (this just means that the currently selected text isn't recognised as a part of a screenplay). Click into the text on the line below:
+
+
+Click into this text.
+
+
+Now try selecting different elements from the pop-up menu on the right of the footer view. You will see that the above text automatically gets reformatted to the script element you selected, and the footer view will show what will happen if you press the tab or enter keys (which will move you to the next script element). Note that you can hit Shift-Cmd-Y to bring up that menu automatically and then hit one of the keys specified in the menu to select an element without taking your hands off the keyboard (you can also use Opt-Cmd and the number keys to change elements).
+Scriptwriting mode is saved on a document-by-document basis, so you can switch between documents that use script formatting and regular text documents. The icons of documents in the binder that use scriptwriting mode are yellow so that you can easily tell them apart from other text documents.
+Right, let's return to normal prose mode now - select Format $>$ Scriptwriting $>$ Script Mode - Screenplay again to deselect screenplay mode.
+
+
+NOTE:
+If you ever find that the word and character count has disappeared from the footer bar, it is most likely because you have accidentally switched into scriptwriting mode, so even if you're not writing a script it's a good idea to familiarise yourself with how to enter or leave scriptwriting mode, as described above.
+
+
+OTHER FILES
+For PDF files, the footer view allows you to navigate between the pages. Click on ``spacewalk\_info'' in the Research folder to test this out, and then come back here by clicking on the ``back'' arrow in the header view.
+
+
+All good so far, I hope. Now let's familiarise ourselves with some other basic features. Click on ``Step 4: Composition Mode'' in the binder.
+
+
+\pagebreak \chapter{Step 4: Composition Mode}
+\label{step4:compositionmode}
+
+Composition Mode is a very nice feature for blocking everything else out while you write. I'm not going to pretend it's innovative or anything---I think Blue-Tec (now called The Soulmen), the creators of Ulysses, were the first to implement something like this for a text editor---but it is very handy. Either hit Opt-Cmd-F or click on ``Compose'' in the toolbar above -- do it now!
+
+
+You should now be in composition mode---it's just you and your text. (``Composition Mode'' is essentially a full screen mode, but we call it ``Composition Mode'' to avoid confusion with OS X Lion's full screen feature, which Scrivener also supports.)
+
+
+Some things you need to know about composition mode:
+
+
+1) Move your mouse to the bottom of the screen. You will see that a control panel appears, similar to the one in iPhoto. From here you can change the text scale, set the position and width of the ``paper'' (the text column), fade the background in and out and view the word and character counts of the document. There are also buttons for displaying the keywords panel and Inspector (we won't go into that right now, though, as we have yet to talk about keywords and notes---come back and try them out once you've gone through the rest of the tutorial) and for exiting composition mode. You can also hit Opt-Cmd-F or the Escape key to exit composition mode.
+
+
+2) You can only enter composition mode for text documents.
+
+
+3) By default, composition mode uses ``typewriter'' scrolling (another Ulysses first, I believe). This simply means that as you type, the text will remain in the centre of the screen vertically so that you don't have to stare at the bottom of the screen all the time. You can turn this off via Format $>$ Options $>$ Typewriter Scrolling (Ctrl-Cmd-T), and you can also turn it on for the main editor if you wish.
+
+
+4) You can customise the look of composition mode. You can use the Appearance pane of the Preferences to change the background colours and you can change the colour of the text in composition mode via the Compose pane of the Preferences (so you could set it up to have a retro green-text-on-black-background look, for instance). You can even add a background image, if you want, by going to View $>$ Composition Mode Backdrop.
+
+
+Okay, let's move on to ``Step 5: The Inspector'' while still in composition mode. To do so, move the cursor to the top of the screen so that the menu bar appears. Then, from the View menu, choose Go To $>$ Draft $>$ Part 1: Basics $>$ Step 5: The Inspector.
+
+
+\pagebreak \chapter{Step 5: The Inspector}
+\label{step5:theinspector}
+
+You can leave composition mode now by hitting the Escape key on your keyboard.
+
+
+We've now covered the basics of navigating between documents and using composition mode for distraction-free writing. Now it's time to meet the Inspector.
+
+
+Click on ``Inspector'' in the toolbar (the blue disc on the right, with the ``i'' inside it - you may need to widen the window a little if it's not visible). A third pane will appear on the right of this view.
+
+
+You may find this text a little scrunched up now. If so, click on the green ``zoom'' button at the very the top-left of the window (the third traffic-light button that appears in most OS X windows - if you have changed your system settings to Graphite, the traffic light buttons will all be grey, of course). In Scrivener, the ``zoom'' button is your friend. When you click on it, Scrivener does its best to resize the window to accommodate all elements. (You can change the default width of the editor in Preferences.)
+
+
+Right, let's look at the inspector. At the bottom of the inspector, in the footer bar, you will see these buttons:
+
+
+\begin{figure}
+\begin{center}
+\resizebox{1\linewidth}{!}{\includegraphics{Tutorial-Step5_TheInspector-1.png}}
+\end{center}
+\label{tutorial-step5_theinspector-1.png}
+\end{figure}
+
+
+
+The padlock button on the far right allows you to ``lock'' the inspector to a particular editor when the editor is split - we won't worry about that for now, though, as we haven't looked at splitting the editor yet. The other buttons allow you to choose what to view in the inspector (the number of buttons that appear will depend on what you are viewing in the current editor). The last two buttons, ``Snapshots'' and ``Comments'' (the one with the camera and the one with the ``n'' inside a square speech bubble) are only available for text documents, for instance. An asterisk next to one of the icons tells you that there is content in that part of the inspector.
+
+
+To begin with, make sure the leftmost button, ``Notes'', is selected, and then click on the next document in the binder, ``5a: The Synopsis Index Card''.
+
+
+\pagebreak \section{5a: The Synopsis Index Card}
+\label{a:thesynopsisindexcard}
+
+The first thing you will notice is the index card at the top. This appears in the Notes, References and Keywords panes of the inspector (but not in the Snapshots or Comments panes which require more space). The index card is an important concept in Scrivener. You can type a synopsis of your document into the body of the index card (note the header of the index card can be used to rename the document, too). One of the core ideas behind Scrivener is that every document (or chunk of text, or image, or whatever) is associated with a synopsis, which is represented in the inspector by the index card. You can then view these synopses in different ways (which we will come to later) which will make outlining and organising your work easier. The best way to understand this is to imagine that each document in Scrivener is a sheet of paper that has an index card clipped to it containing a summary of the document's contents, which can then be viewed alongside other index cards to get an overview of the whole.
+You can auto-generate a synopsis by clicking on the \begin{figure}
+\begin{center}
+\resizebox{1\linewidth}{!}{\includegraphics{Tutorial-Step5_TheInspector.png}}
+\end{center}
+\label{tutorial-step5_theinspector.png}
+\end{figure}
+ button in the top-right of the inspector: if any text is selected in the editor, it will be copied into the synopsis; if no text is selected, the first few lines of text will be used.
+You can also display an image in this area if you want. To do so, just click on the icon of the index card with two arrows next to it in the header at the top of the inspector and choose the image icon. The synopsis will be replaced by a blank area containing the text, ``Drag in an image.'' You can then drag image files from the binder or from the Finder into this area. (If an image is selected for a document in the synopsis area of the inspector, it will also be used to represent the document on the corkboard instead of the synopsis text - we will come to the corkboard a little later.)
+
+
+So that's the index card. Below the index card are other tools to help you organise your work, starting with the General pane. Note that the Synopsis and General panes can be collapsed by clicking on the disclosure triangle in their respective header bars.
+
+
+Please click on ``5b: Meta-Data''.
+
+
+\pagebreak \section{5b: General Meta-Data}
+\label{b:generalmeta-data}
+
+The ``General'' pane in the middle of the inspector contains several meta-data elements:
+
+
+Label and Status
+Label and status are just arbitrary tags you can assign to your document. You can set up the project labels and status list via Project $>$ Meta-Data Settings{\ldots} You might, for instance, rename ``Label'' to ``POV'' (for Point of View) and use it to hold the name of the point-of-view character for each document. This way, you could easily run a search on all chapters that have a particular character as the protagonist by searching on label only (by typing the name of the character in the search field in the toolbar and then choosing ``Label''---or ``POV'' if you have renamed it such---from ``Search in'' in the search options menu, which can be accessed by clicking on the arrow next to the magnifying glass in the search field). Status works much the same, except that it is meant to keep track of the state of the document---for instance, ``Finished'', ``To do'', ``A mess'' and so forth---although you can rename it and use it for something completely different, should you so wish.
+
+
+Created/Modified Date
+Switch between the created and modified date by clicking on the arrows next to where it says ``Created:'' or ``Modified:''. No surprises here---as you would expect, the created date holds the date and time the document was first created and the modified date holds the date and time the document was last modified and saved.
+
+
+Include in Compile, Page Break Before and Compile As-Is
+These options affect how the document is compiled when you come to export or print the draft (which we will come to later). They only have any meaning if the document is contained inside the Draft folder. They are mostly self-explanatory: ``Include in Compile'' specifies whether the document should be included in or omitted from the draft when exported or printed; ``Page Break Before'' specifies whether the document should have a page break before it (useful if it marks the beginning of a chapter, for instance); ``Compile As-Is'' tells the compilation process not to change the formatting or insert a title for this particular document, no matter what the Compile settings are.
+
+
+Next, let's look at the ``Notes'' pane.
+
+
+\pagebreak \section{5c: Notes}
+\label{c:notes}
+
+At the bottom of the inspector is the notes area, where you can jot down anything you want that will help you with your document. If you click in the notes header bar (where it says ``Document Notes''), you can flip between Document Notes and Project Notes. As you would imagine, document notes are specific to each document and will change depending on the document you are viewing in the current editor, whereas project notes can be viewed from any document (project notes can also be seen in the inspector when you select one of the special root folders---Draft, Research and Trash---which have no associated meta-data or synopses). You can have multiple project notes associated with your project (new project notes can be added using the Project Notes window, available from the Project menu).
+
+
+Please click on ``5d: References'' in the binder.
+
+
+\pagebreak \section{5d: References}
+\label{d:references}
+
+Click on the next button in the inspector footer bar, the one with the picture of several book spines on it. This switches to the ``References'' pane (the index card and meta-data area will remain where they are, only the notes will disappear to be replaced by a list of references). The references pane allows you to store references to other documents within the project, on your hard-disk or on the internet. By clicking on the ``+'' button, you can choose to add a reference to a file on disk or you can select a document inside the project. You can also drag documents from the binder or the Finder (or the URL from a browser address field) into the references table. Double-clicking on the icon of a reference will open it: external references open in their default application; internal references open inside Scrivener (you can determine exactly where the latter get opened in the ``Navigation'' pane of the Preferences). Note that, as with notes, you can store references at the document or project level - click on the bar where it says ``Document References'' to flip between Document References (which are specific to the current document) and Project References (which can be viewed from any document).
+
+
+Next click on the key button at the bottom of the inspector to view the keywords pane and then move onto ``5e: Keywords''.
+
+
+\pagebreak \section{5e: Keywords}
+\label{e:keywords}
+
+As well as Label and Status, you can also assign keywords to your documents. Keywords are useful for adding arbitrary tags to documents that you can use when searching. So, for instance, you could add keywords for characters that occur in a scene, the location a scene takes place, the theme, authors referenced, or anything else (or you can just ignore keywords completely). You can add keywords by clicking on the ``+'' button, or by hitting enter while another keyword is selected. You can also assign keywords via the keywords panel. Open that now by clicking on the ``Keywords'' button in the toolbar (the black box with the key inside it).
+
+
+A translucent black panel will appear. This shows all of the keywords that you have created or assigned to documents so far. You can also create keywords inside this panel and drag them to the keywords table in the Inspector. You can change the colour associated with a keyword by double-clicking on the colour chip in the keywords panel. (Another way of assigning keywords is by dragging them onto documents in the binder or the outliner and corkboard views that we will look at later, or by dragging them into the header view. You can assign keywords to multiple documents at once by selecting the documents in the binder and then dragging the keywords from the keywords panel onto the selection.)
+
+
+Try dragging the keyword entitled ``Assign this one'' to the keywords table.
+
+
+When assigning keywords from the panel, you can optionally assign the groups to which they belong as well. To see this in action, click on the triangle next to ``Characters'' in the black keywords panel to reveal the names of some characters. If you dragged the name of one of these characters to the keywords pane in the inspector, only the name of the character would get assigned. However, try holding down the Option key whilst dragging ``John'' to the keywords pane in the inspector. Note how not only the keyword ``John'' gets added, but also the name of its group, ``Characters''.
+
+
+A quick way of searching for documents that have been assigned particular keywords is to select the keywords you want to search for in the keywords panel and then click on the ``Search'' button at the bottom. (If you hold down the Option key, the ``Search'' button will change to ``Search All'', which will search for the selected keywords wherever they occur in the project, including text, notes and so on, rather than limiting the search to the keywords associated with documents.)
+
+
+Now click on ``5f: Custom Meta-Data'' in the binder.
+
+
+\pagebreak \section{5f: Custom Meta-Data}
+\label{f:custommeta-data}
+
+If you click on the button at the bottom of the inspector with the icon of a tag on it, you will by default be presented with a blank grey area with the message ``No Meta-Data Fields Defined'' and a button with the title ``Define Meta-Data Fields{\ldots}''. This area can be populated with custom meta-data that you create for your project, and the data that can be viewed here can also be viewed as custom columns in the outliner. This provides a way of assigning arbitrary information to your documents. For instance, if writing fiction, you could add a meta-data field for the time at which a scene takes place (tip: because custom meta-data fields are text-only, enter the date and time backwards so that it sorts properly, e.g.\ ``1984-12-31''), or you could add a list of characters that appear.
+We first need to define some custom meta-data fields, though. Let's do that now:
+
+
+1)  Click on the ``Define Meta-Data Fields{\ldots}'' button (alternatively, you can choose ``Edit Custom Meta-Data Fields{\ldots}'' from the menu that appears when you click on the gear button in the ``Custom Meta-Data'' bar, or select ``Meta-Data Settings{\ldots}'' from the Project menu and then choose the ``Custom Meta-Data'' tab).
+2)  Click on the ``+'' button in the bottom-left of the sheet that you've opened, and enter ``Date'' into the row that gets added to the table.
+3)  Click on the ``+'' button again and this time enter ``Characters''. For this one, also click on the ``Wrap Text'' button.
+4) Click ``OK'' to accept the changes and dismiss the sheet.
+
+
+The Custom Meta-Data pane in the inspector will now show the two fields you created above. Click into the field under ``Date'' and type something, then do the same for ``Characters''. Note that the ``Characters'' field will expand to fit the text, because you selected ``Wrap Text''.
+
+
+You can view all custom meta-data in columns in the outliner view, too (which is covered in Part 2).
+
+
+For many projects you may not need to touch custom meta-data at all, but if you ever find yourself wishing for an extra piece of information in the outliner or inspector, then it's good to know that it's there.
+
+
+Next onto one of Scrivener's most useful features for editing documents: ``Snapshots''.
+
+
+\pagebreak \section{5g: Snapshots}
+\label{g:snapshots}
+
+As a writer, the chances are that you will on occasion be nervous about committing changes to your text. This is what the ``Snapshots'' feature is for. Before embarking on the editing of a document, you can click on ``Take Snapshot'' (cmd-5) in the Documents $>$ Snapshots menu. You will hear the sound of a camera shutter which indicates that the snapshot has been taken. Let's try that now{\ldots}
+
+
+Once you have taken a snapshot, you can edit your document safe in the knowledge that you can return to the old version any time you so wish. Click on the ``Snapshots'' button (the one with the picture of a camera on it) in the inspector footer bar to see what I mean (you can also switch directly to the Snapshots pane and have the inspector open if necessary by going to Documents $>$ Snapshots $>$ Show Snapshots). The inspector now shows a list of snapshots at the top, which should consist of the one you took and one I took while writing the first version of this tutorial back in 2006. Clicking on a snapshot in the list reveals its text in the lower part of the inspector. You can restore an older version of your text by selecting the version you want from the list and then clicking on ``Roll Back'' at the top (at which point, you will be given the option of taking another snapshot of your current version, just in case you forgot).
+
+
+If you wish to know what you have changed in the document since the snapshot was taken, click on ``Compare''. Do that now - select the snapshot that was taken on the 23rd August 2006 and click on ``Compare''. The text in the inspector will change to show what has been added or removed. Text that has been added to the document since the snapshot was taken appears underlined and in blue; text that has been deleted appears struck out and in red. Note that the comparison only shows textual changes - it does not show changes to the formatting.
+
+
+Click on the left and right arrows at the top of the inspector, next to the ``Roll Back'' button, to navigate between the changes.
+
+
+You can alter the granularity (level of detail) of the comparison by clicking on the downwards-pointing arrow next to the ``Compare'' button (which should now read ``Original'', because clicking on it again will switch back to showing the text of the snapshot without any comparisons). Often you will find that changing the granularity will give you different results on different documents, depending on the scope of the edits. You will usually get the best results by leaving ``By Paragraph'' ticked but playing with ``By Clause'' and ``By Word''.
+
+
+You can also compare the differences between two snapshots by selecting two different snapshots in the list and clicking on ``Compare'': if one snapshot is selected, clicking on ``Compare'' compares it with the current version of the text; if two snapshots are selected, they are compared against each other.
+
+
+If you ever want more space to read through a snapshot - if you find the inspector too cramped - you can drag a snapshot from the list in the inspector onto the header view (see Step 2) of the main editor to load it there. If you hold the Option key down while dragging it, the snapshot will show comparisons to the current version of the text when loaded into the editor.
+
+
+So: Snapshots are very useful for keeping old versions of your text around and for checking what you have changed.
+
+
+Now let's move onto Step 5h for information on the comments and footnotes pane.
+
+
+\pagebreak \section{5h: Comments \& Footnotes}
+\label{h:commentsfootnotes}
+
+Now we'll look at the ``Comments \& Footnotes'' pane - don't worry about clicking on the button in the inspector footer bar just yet though (for your reference, though, the ``Comments \& Footnotes'' button is the one with the ``n.'' inside a square speech bubble).
+
+
+Comments and footnotes in Scrivener work a little like comments in Word, Nisus Writer or Pages, but they're not exactly the same. Let's take a look at them.
+
+
+For a start, click on the yellow highlighted text in the sentence below:
+
+
+This sentence has a comment attached[Comments get displayed and selected as soon as they are clicked on in the main editor.].
+
+
+Note how the inspector automatically switches to the Comments \& Footnotes pane, and the comment associated with the text gets highlighted.
+
+
+Next, click on the grey footnote directly below the comment in the footnote.
+
+
+This sentence has a footnote attached.\footnote{This is a footnote. In order for footnotes to get exported properly, it's important to add them in such a way that the link ends exactly where you want the footnote to appear in the exported or printed text.}
+
+
+See how clicking on the note in the inspector automatically selects the text associated with it in the main editor?
+
+
+If you click on a note in the inspector, the editor will automatically scroll to the position in the text where the note has been placed. This allows you to use the comments and footnotes to navigate the text, so that they act like bookmarks in a way, too. Try scrolling to the bottom of this document, and then clicking the comment to return to the top.
+
+
+ADDING COMMENTS AND FOOTNOTES
+Let's try adding some comments and footnotes. There are a couple of ways of doing this. First, select some of the text in the following sentence:
+
+
+Select some of the text in this sentence.
+
+
+Once you've selected a word or two in the above sentence, either click on ``Comment'' in the toolbar, the ``+'' button in the top ``Comments \& Footnotes'' bar in the inspector, or hit shift-cmd-8. A new comment will be created in the inspector and it will be selected ready for editing - add some text. Once you've finished typing in the comment, hit the Escape key to return the focus to the main editor.
+
+
+Alternatively, you can just click into or after a word to add a comment or footnote to it. This time, just click into the word ``commented'' below so that the blinking insertion point (or caret) is somewhere inside it:
+
+
+This sentence will be commented.
+
+
+Again, click on ``Comment'' in the toolbar, the ``+'' button in the inspector, or hit shift-cmd-8. Note how the whole word ``commented'' gets a comment associated with it.
+
+
+Let's try it with a footnote too. This time, place the cursor right at the end of this sentence, after the full stop:
+
+
+This sentence will have a footnote after it when exported or printed.
+
+
+This time, click on the ``+fn'' button in the inspector (note that you can add a ``Footnote'' icon to the toolbar by using View $>$ Customize Toolbar{\ldots}, and although there is no default keyboard shortcut associated with this action you can add one using the OS X system preferences).
+
+
+Note how the footnote gets attached to the word ``printed'' and the full stop after it. It generally doesn't matter where you attach comments, because they are usually for your own (or collaborators') reference only, but with footnotes you should always ensure that the footnote link the (the grey highlight) ends at exactly the place you want the footnote number to appear when printed or exported. So, because we associated the footnote with the word ``printed'' and the footnote ends at, but includes, the period at the end of the sentence, the footnote number in the exported or printed text will appear straight after the full stop, which is usually what you would want.
+
+
+CHANGING THE COLOUR OF COMMENTS
+You can change the colour of comments by ctrl-clicking on a comment (or comments) in the inspector. The contextual menu offers a choice of default colours, or you can open the colour panel to choose a custom colour. You can also select a comment and hit shift-cmd-C to open the colour panel directly and change the colour that way. (Note that you cannot change the colour of footnotes, which use a single colour to differentiate them from comments, although you can choose the colour for all footnotes in the ``Appearance'' pane of the Preferences.
+
+
+The contextual (ctrl-click) menu also allows you to convert comments to footnotes and vice versa, and to revert comments or footnotes to their default formatting (you can set the default fonts in the Preferences).
+
+
+If you have a lot of comments, you can collapse individual comments and footnotes by clicking on the disclosure triangle (the downward-pointing arrow) in the top-left of each comment box. (You can also collapse or expand all using cmd-0 or cmd-9 when the focus is in the inspector.)
+
+
+Comments and footnotes are thus tucked away in the inspector until you need them. When you come to export or print - which we'll come to later - you have a lot of control over how comments and footnotes get included in the document. For instance, you could have all comments removed but footnotes included as proper footnotes, or you could have comments exported as footnotes and footnotes exported as endnotes. But if that sounds complicated, it's not something you need to worry about right now - just know that if you want to make notes on your document, or add footnotes, this is one way to do it.
+
+
+Right, onto ``Step 6: End of Part One''!
+
+
+\pagebreak \chapter{Step 6: End of Part One}
+\label{step6:endofpartone}
+
+This brings us to the end of Part 1 of the tutorial. In the next section you will learn about different ways of viewing and organising the documents in your Scrivener project. With that in mind, in a moment you will be asked to click on ``Part 2: Organisation'' in the binder. As will be explained, folders - not just folders, but we'll come to that shortly - can be viewed in several modes, but for now all you need to know is that when you click on ``Part 2'', you want to see the text of the folder document (folders are really just a special type of text document, and can contain text just as regular text documents can).
+
+
+So after you click on ``Part 2: Organisation'', take a look at the ``Group Mode'' segmented control in the toolbar and ensure that all modes are turned off. The control should look like this (note how nothing is selected):
+
+
+\begin{figure}
+\begin{center}
+\resizebox{1\linewidth}{!}{\includegraphics{Tutorial-Part2_Organisation.png}}
+\end{center}
+\label{tutorial-part2_organisation.png}
+\end{figure}
+
+
+
+If one of the segments is selected, just click on the selected segment to turn it off. This will leave you with just the text of ``Part 2'' in the editor, ready to read.
+
+
+Go ahead and try that now.
+
+
+%
+% Back Matter
+%
+
+\backmatter
+%\appendixpage
+
+%	Bibliography
+\bibliographystyle{\mybibliostyle}
+\bibliocommand
+
+%	Glossary
+\printglossary
+
+
+%	Index
+\printindex
+
+\end{document}

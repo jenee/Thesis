@@ -1,0 +1,244 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fmodern\fcharset0 Courier;
+\f3\fmodern\fcharset0 Courier-Bold;\f4\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red51\green153\blue102;\red255\green0\blue0;}
+\deftab720
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f0\b\fs32 \cf0 Evaluation Plan:
+\f1\b0\fs24 \uc0\u8232 \u8232 At this time, evaluators should read through this document, and check out the Excel Spreadsheet with the examples in it.\
+\
+\
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f0\b\fs32 \cf0 Timeline:\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\fs26 \cf0 (Modified)\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b0\fs24 \cf0 Again, the research and development of the algorithm has taken much more time than I thought it would. At this point, my goal is to get some sort of demonstration of the algorithm together by Week 10, along with full documentation of how it works.\
+BIBLIOGRAPHY:\
+ H.R. Oliveira, F.A. Cardoso, and F.C. Pereira, \'93Tra-la-Lyrics: An approach to generate text based on rhythm,\'94 
+\i Proceedings of the 4th. International Joint Workshop on Computational Creativity, London, UK
+\i0 , 2007.\
+P. Bellini, I. Bruno, and P. Nesi, 
+\i Multilingual Lyric Modeling and Management
+\i0 , Visual Perception of Music Notation: On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003. \'a0 \
+\'93SAMPA computer readable phonetic alphabet.\'94 <http://www.phon.ucl.ac.uk/home/sampa/index.html>, Accessed 9-29-09\
+\
+\pard\pardeftab720\fi630\sl300\sb60\sa60\pardirnatural
+\cf0  SAMPA (Speech Assessment Methods Phonetic Alphabet) is a computer-readable phonetic \'93alphabet\'94 that uses 1-2 ASCII characters to represent all the sounds in words. It\'92s based upon the symbols found in the more-standard-but-not-easily-computer-readable  IPA (International Phonetic Alphabet).\
+ Though the current implementation of this program does not use the pronunciation data at this time, I\'92d like to eventually get it working so that the program can also evaluate rhyme scheme.  It was easier in the long term to find a dictionary with both, instead of having to add pronunciations later.\
+ [1] P. Bellini, I. Bruno, and P. Nesi, Multilingual Lyric Modeling and Management, Visual Perception of Music Notation: On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003.\
+ G. Lees, 
+\i The Modern Rhyming Dictionary
+\i0 , Cherry Lane Music, 1987.\
+\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\fs22 \cf0 \super **\nosupersub  The UNISYN dictionary was created in the UK, and as such, sometimes has funny pronunciation mixes.  This mainly presents itself in the \'93I\'94/\'94i\'94 and \'93U\'94/\'94u\'94 gaps.  A person from the South would pronounce \'93here\'94 as \'93hI`r\'94, but a person from the West Coast pronouces it \'93hir\'94.  UNISYN pronounces it as \'93hI`r\'94. The usage of the Southern accent for i vs I is consistent, but UNISYN has some West Coast accent.  It actually uses an accent called \'93General American\'94, which is spoken in the midwest. Who decided to make Nebraska and Illinois the linguistic flag-bearers of our tongue? Honestly.\
+\super #\nosupersub  This sound does not exist on its own in American English, but can be found as part of dipthongs like \'93now\'94 (naU).\
+\super ~\nosupersub  All pronunciation guides say \'93boy\'94 is pronounced \'93OI\'94, but I always thought I say it \'93Oi\'94. Regardless, UNISYN consistently says \'93OI\'94 for that sound, so I\'92m sticking with it.\
+\super *\nosupersub  OI is not a prefix-free code.  Both O and I exist as separate entities. This may cause some special-case parsing that will need to be done.\
+\super +\nosupersub  Though this is correct, in the UNISYN dictionary, they use \'93ou\'94.  That\'92s also how I pronouce it, so I\'92ll be keeping UNISYN\'92s standard, though it\'92s non-SAMPA.
+\fs24 \
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0  Though I use the waltz as an example here, I chose to test only songs with 4/4 time for simplicity's sake, since the binary rhythmic sequence per measure for that is  "1 \'96 0 \'96 1 \'96 0 ", which is delightfully repetitive.\
+ The wikipedia page explains the concept of musical accents more than adequately, so I won't restate it here. http://en.wikipedia.org/wiki/Accent_%28music%29\
+\pard\pardeftab720\fi630\sl300\sb60\sa60\pardirnatural
+\cf0  Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ or maybe it does.  I'm still not sure if having 
+\b any
+\b0  emphasized beat in the Music BRS during a syllable counts as a "fit" for an emphasized syllable. That's why I'm going through these use cases.  I'm pretty much convinced, though, that it has more to do with note intervals.\
+ Measured in the value of the shortest beat in the phrase.\
+ T. Polyakova and A. Bonafonte, \'93Fusion of dictionaries in voice creation and synthesis task,\'94 Proc. of the 12th International conference on Speech and Computer, SPECOM, 2007.\
+ \'93LCStar.\'94, http://www.lc-star.com/schedule.htm\
+\
+ T. Polyakova and A. Bonafonte, \'93Fusion of dictionaries in voice creation and synthesis task,\'94 Proc. of the 12th International conference on Speech and Computer, SPECOM, 2007.\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0  INCLUDE THE PARTS OF SPEECH TABLE!\
+\pard\pardeftab720\fi630\sl300\sb60\sa60\pardirnatural
+\cf0  The number of \'93SyllableBreakdown\'93s corresponds to the number of syllables in the word. \
+ \'93SQLite Database Browser.\'94 [Online]. Available: http://sqlitebrowser.sourceforge.net/. [Accessed: 02-May-2012].\
+\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0  Most of my use cases came from here: 
+\b http://www.wordinfo.info/words/index/info/view_unit/3347/  \
+
+\b0  according to UNISYN\
+ according to UNISYN\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\pardirnatural
+\cf0 PAGE  \
+\pard\tqc\tx4320\tqr\tx8640\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\tqc\tx4320\tqr\tx8640\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 PAGE  1\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\
+\
+\
+\pard\pardeftab720\sl300\pardirnatural
+
+\f2\fs23 \cf0 =IF($D2=$K$2,\
+	$M$2,\
+	IF($D2=$K$3,\
+		$M$3,\
+		IF($D2=$K$4,\
+			$M$4,\
+			IF($D2=$K$5,\
+				$M$5,\
+				IF($D2=$K$6,\
+					$M$6,\
+					IF($D2=$K$7,\
+						$M$7,\
+						IF($D2=$K$8,\
+							$M$8,\
+							0\
+)	)	)	)	)	)	)  \
++ IF($E2=$K$9,\
+	$M$9,\
+	$M$10) \
++ IF($F2=$K$12,\
+	$M$12,\
+	IF($F2=$K$13,\
+		$M$13,\
+		IF($F2=$K$14,\
+			$M$14,\
+			IF($F2=$K$16,\
+				$M$16,\
+				$M$15\
+)	)	)	)\
++ IF($G2=$K$12,\
+	$M$12,\
+	IF($G2=$K$13,\
+		$M$13,\
+		IF($G2=$K$14,\
+			$M$14,\
+			IF($G2=$K$16,\
+				$M$16,\
+				$M$15\
+)	)	)	)\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\sl300\pardirnatural
+
+\f2\fs23 \cf0 int sum = 0;\
+switch( 
+\f3\b this
+\f2\b0 .MannerOfArticulation )\{\
+	case 
+\f4\i plosive
+\f2\i0 :\
+	case affricate:\
+	case fricative:\
+		sum += 1;\
+		break;\
+\}\
+if ( 
+\f3\b this
+\f2\b0 .voice == 
+\f4\i voiceless
+\f2\i0 ) \{\
+	sum +=1;\
+\}\
+switch( 
+\f3\b this
+\f2\b0 .StartsAs )\{\
+	case 
+\f4\i block
+\f2\i0 :\
+		sum += 3;\
+		break; \
+	case continuousFrication:\
+		sum += 1;\
+		break;\
+	case 
+\f4\i end
+\f2\i0 :\
+		sum += 2;\
+		break;\
+	case redirect:\
+		sum += 0.5;\
+		break;\
+\} \
+switch( 
+\f3\b this
+\f2\b0 .EndsAs )\{\
+	case 
+\f4\i block
+\f2\i0 :\
+		sum += 3;\
+		break; \
+	case continuousFrication:\
+		sum += 1;\
+		break;\
+	case 
+\f4\i end
+\f2\i0 :\
+		sum += 2;\
+		break;\
+	case redirect:\
+		sum += 0.5;\
+		break;\
+\}\
+return sum;\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\fs24 \cf0 \
+ EMBED Word.Picture.8  \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\fi630\sl360\pardirnatural
+
+\b \cf0  You and me______ba- by, ain't_______ noth-ing but  mam-mals\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\b0 \cf0 \
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\b \cf0                noth-ing but \cf2 mam\cf0 -\cf3 mals\cf0 \
+\pard\pardeftab720\sb120\sa120\pardirnatural
+
+\f2\b0 \cf0     
+\fs22    
+\f3\b 1 \'96 0 \'96 1 \'96 \cf2 1\cf0  \'96 \cf3 0}

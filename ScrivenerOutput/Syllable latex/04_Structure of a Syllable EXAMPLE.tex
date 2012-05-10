@@ -1,0 +1,353 @@
+\documentclass[10pt,oneside]{memoir}
+\usepackage{layouts}[2001/04/29]
+\makeglossary
+\makeindex
+
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+\def\revision{}
+
+%%% need more space for ToC page numbers
+\setpnumwidth{2.55em}
+\setrmarg{3.55em}
+
+%%% need more space for ToC section numbers
+\cftsetindents{part}{0em}{3em}
+\cftsetindents{chapter}{0em}{3em}
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4.5em}{3.9em}
+\cftsetindents{subsubsection}{8.4em}{4.8em}
+\cftsetindents{paragraph}{10.7em}{5.7em}
+\cftsetindents{subparagraph}{12.7em}{6.7em}
+
+%%% need more space for LoF numbers
+\cftsetindents{figure}{0em}{3.0em}
+
+%%% and do the same for the LoT
+\cftsetindents{table}{0em}{3.0em}
+
+%%% set up the page layout
+\settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setulmarginsandblock{1.5in}{1.5in}{*}
+
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{booktabs}			% Better tables
+\usepackage{tabulary}			% Support longer table cells
+\usepackage[utf8]{inputenc}		% For UTF-8 support
+\usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
+\usepackage{xcolor}				% Allow for color (annotations)
+
+%\geometry{landscape}			% Activate for rotated page geometry
+
+%\usepackage[parfill]{parskip}	% Activate to begin paragraphs with an empty
+								% line rather than an indent
+
+
+\def\myauthor{Author}			% In case these were not included in metadata
+\def\mytitle{Title}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\bibliocommand{}
+
+\VerbatimFootnotes
+\def\myauthor{Jenee Hughes}
+\def\baseheaderlevel{1}
+\def\format{complete}
+\def\mytitle{ThesisDocumentsMelodyMatcher}
+
+
+%
+%	PDF Stuff
+%
+
+%\ifpdf							% Removed for XeLaTeX compatibility
+%  \pdfoutput=1					% Removed for XeLaTeX compatibility
+  \usepackage[
+  	plainpages=false,
+  	pdfpagelabels,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+  \usepackage{memhfixc}
+%\fi							% Removed for XeLaTeX compatibility
+
+
+%
+% Title Information
+%
+
+
+\ifx\latexauthor\undefined
+\else
+	\def\myauthor{\latexauthor}
+\fi
+
+\ifx\subtitle\undefined
+\else
+	\addtodef{\mytitle}{}{ \\ \subtitle}
+\fi
+
+\ifx\affiliation\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \affiliation}
+\fi
+
+\ifx\address\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \address}
+\fi
+
+\ifx\phone\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \phone}
+\fi
+
+\ifx\email\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \email}
+\fi
+
+\ifx\web\undefined
+	\else
+		\addtodef{\myauthor}{}{ \\ \web}
+\fi
+
+\title{\mytitle}
+\author{\myauthor}
+
+\begin{document}
+
+\chapterstyle{\mychapterstyle}
+\pagestyle{\mypagestyle}
+
+%
+%		Front Matter
+%
+
+\frontmatter
+
+
+% Title Page
+
+\maketitle
+\clearpage
+
+% Copyright Page
+\vspace*{\fill}
+
+\setlength{\parindent}{0pt}
+
+\ifx\mycopyright\undefined
+\else
+	\textcopyright{} \mycopyright
+\fi
+
+\revision
+
+\begin{center}
+\framebox{ \parbox[t]{1.5in}{\centering Formatted for \LaTeX  \\ 
+ by MultiMarkdown}}
+\end{center}
+
+\setlength{\parindent}{1em}
+\clearpage
+
+% Table of Contents
+\tableofcontents
+%\listoffigures			% activate to include a List of Figures
+%\listoftables			% activate to include a List of Tables
+
+
+%
+% Main Content
+%
+
+
+% Layout settings
+\setlength{\parindent}{1em}
+
+\mainmatter
+Examples
+For simplicity's sake, the note length will not vary on all the following examples.
+
+
+\pagebreak Example 1: ``o'' 
+(Single Syllable, Single Phone)               .
+o::IN/NNP/NN/LS: ``ou :\{o\}
+WORD
+o
+NOTE\_LEN
+1
+EMPH
+
+
+SAMPSYL
+ou
+SYL\_PART
+on
+nu
+cd
+
+
+ou
+
+
+Example 3: ``on'' 
+(Single Syllable, No Onset, Single-Phone Nucleus and Coda)
+on::IN/JJ: ``An :\{on\}
+WORD
+on
+NOTE\_LEN
+1
+EMPH
+
+
+SAMPSYL
+An
+SYL\_PART
+on
+nu
+cd
+
+
+A
+n
+
+
+Example 2: ``no'' 
+(Single Syllable, No Coda, Single-Phone Nucleus and Onset)
+67992:no::DT/RB/UH: ``nou :\{no\}
+WORD
+no
+NOTE\_LEN
+1
+EMPH
+
+
+SAMPSYL
+nou
+SYL\_PART
+on
+nu
+cd
+
+
+n
+ou
+
+
+Example 4: ``non'' 
+(Single Syllable, Single-Phone Onset Nucleus and Coda)
+non::FW/NN/NNP: ``nAn :\{non\}
+WORD
+non
+NOTE\_LEN
+1
+EMPH
+
+
+SAMPSYL
+nAn
+SYL\_PART
+on
+nu
+cd
+
+
+n
+A
+n
+
+
+\pagebreak Example 5: ``notes'' 
+(Single Syllable, Single-Phone Onset and Nucleus, Double-Phone Coda)
+notes::NNS/VBZ: ``nouts :\{note\}$>$s$>$
+WORD
+notes
+NOTE\_LEN
+1
+EMPH
+
+
+SAMPSYL
+nouts
+SYL\_PART
+on
+nu
+cd
+
+
+n
+ou
+t
+
+
+s
+
+
+Example 6: ``yes'' 
+(Single Syllable, No Onset, Double-Phone Nucleus, Single-Phone Coda)
+yes::UH/NN: ``jEs :\{yes\}
+WORD
+yes
+NOTE\_LEN
+1
+EMPH
+
+
+SAMPSYL
+jEs
+SYL\_PART
+on
+nu
+cd
+
+
+j
+s
+
+
+E
+
+
+\pagebreak Example 7: ``stringy'' 
+(Single Syllable, Multi-Phone Onset, Single-Phone Nucleus and Coda)
+stringy::JJ: ``strIN\$i :\{string\}$>$y$>$
+//TODO: INSERT TABLE
+
+
+Example 8: ``nonmembership'' (Multi-Syllable Word with Two-Tier Emphases) 
+nonmembership::NN: nAn''mEm\$b@`r\%SIp :$<$non$<$\{member\}$>$ship$>$
+//TODO: INSERT TABLE
+
+
+%
+% Back Matter
+%
+
+\backmatter
+%\appendixpage
+
+%	Bibliography
+\bibliographystyle{\mybibliostyle}
+\bibliocommand
+
+%	Glossary
+\printglossary
+
+
+%	Index
+\printindex
+
+\end{document}

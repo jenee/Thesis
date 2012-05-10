@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScrivenerProject Version="1.0" Creator="SCRMAC-2.2-15858">
+    <Binder>
+        <BinderItem ID="36" Type="Text" Created="2007-01-14 15:04:52 -0800" Modified="2011-10-13 07:07:22 -0700">
+            <Title>START HERE</Title>
+            <MetaData>
+                <LabelID>0</LabelID>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>2497,433</TextSelection>
+            </TextSettings>
+        </BinderItem>
+        <BinderItem ID="0" Type="DraftFolder" Created="2005-10-18 13:12:20 -0700" Modified="2005-10-18 13:12:20 -0700">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <FileExtension></FileExtension>
+            </MetaData>
+            <Children>
+                <BinderItem ID="10" Type="Folder" Created="2006-08-23 16:45:29 -0700" Modified="2010-10-14 19:18:46 -0700">
+                    <Title>Part 1: Basics</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>5</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="4" Type="Text" Created="2006-08-23 13:26:35 -0700" Modified="2012-05-08 20:02:21 -0700">
+                            <Title>Step 1: Beginnings</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>3159,1</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="5" Type="Text" Created="2006-08-23 12:59:15 -0700" Modified="2010-10-24 06:26:23 -0700">
+                            <Title>Step 2: Header View</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="6" Type="Text" Created="2006-08-23 13:09:09 -0700" Modified="2011-10-13 07:16:23 -0700">
+                            <Title>Step 3: Footer View</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="7" Type="Text" Created="2006-08-23 13:11:26 -0700" Modified="2011-10-13 07:15:38 -0700">
+                            <Title>Step 4: Composition Mode</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="26" Type="Text" Created="2006-08-23 13:20:57 -0700" Modified="2011-10-13 07:32:40 -0700">
+                            <Title>Step 5: The Inspector</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                            <Keywords>
+                                <KeywordID>6</KeywordID>
+                            </Keywords>
+                            <Children>
+                                <BinderItem ID="50" Type="Text" Created="2010-09-15 06:31:09 -0700" Modified="2011-10-13 07:32:45 -0700">
+                                    <Title>5a: The Synopsis Index Card</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>0</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                    <Keywords>
+                                        <KeywordID>6</KeywordID>
+                                    </Keywords>
+                                </BinderItem>
+                                <BinderItem ID="51" Type="Text" Created="2010-09-15 06:31:31 -0700" Modified="2011-10-13 07:35:43 -0700">
+                                    <Title>5b: General Meta-Data</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>1</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                    <Keywords>
+                                        <KeywordID>6</KeywordID>
+                                    </Keywords>
+                                </BinderItem>
+                                <BinderItem ID="52" Type="Text" Created="2010-09-15 06:32:10 -0700" Modified="2011-10-13 07:32:51 -0700">
+                                    <Title>5c: Notes</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>0</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>200,0</TextSelection>
+                                    </TextSettings>
+                                    <Keywords>
+                                        <KeywordID>6</KeywordID>
+                                    </Keywords>
+                                </BinderItem>
+                                <BinderItem ID="53" Type="Text" Created="2010-09-15 06:32:27 -0700" Modified="2011-10-13 07:12:01 -0700">
+                                    <Title>5d: References</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>0</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                    <Keywords>
+                                        <KeywordID>6</KeywordID>
+                                    </Keywords>
+                                    <References>
+                                        <Reference BinderID="27" Destination="[Internal Link]">Step 7: End of Part One</Reference>
+                                    </References>
+                                </BinderItem>
+                                <BinderItem ID="54" Type="Text" Created="2010-09-15 06:32:40 -0700" Modified="2011-10-13 07:34:37 -0700">
+                                    <Title>5e: Keywords</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>1</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                    <Keywords>
+                                        <KeywordID>6</KeywordID>
+                                    </Keywords>
+                                </BinderItem>
+                                <BinderItem ID="67" Type="Text" Created="2011-10-13 07:28:38 -0700" Modified="2011-10-13 07:57:26 -0700">
+                                    <Title>5f: Custom Meta-Data</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>0</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="22" Type="Text" Created="2006-08-23 14:10:07 -0700" Modified="2011-10-13 07:34:37 -0700">
+                                    <Title>5g: Snapshots</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>0</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="56" Type="Text" Created="2010-09-15 07:36:42 -0700" Modified="2011-10-13 07:28:54 -0700">
+                                    <Title>5h: Comments &amp; Footnotes</Title>
+                                    <MetaData>
+                                        <LabelID>0</LabelID>
+                                        <StatusID>0</StatusID>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                        <BinderItem ID="27" Type="Text" Created="2006-08-23 13:25:49 -0700" Modified="2010-10-24 16:52:04 -0700">
+                            <Title>Step 6: End of Part One</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="11" Type="Folder" Created="2006-08-23 13:47:31 -0700" Modified="2010-10-24 16:52:13 -0700">
+                    <Title>Part 2: Organisation</Title>
+                    <MetaData>
+                        <LabelID>1</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs></SelectedSubdocumentIDs>
+                        <CorkboardSettings>
+                            <FreeformMode>No</FreeformMode>
+                            <FreeformCorkboardDocuments>
+                                <IndexCardBinderID Position="2.279,0.572" TimeStamp="2010-09-28 03:52:21 -0700">17</IndexCardBinderID>
+                                <IndexCardBinderID Position="1.6186,1.0" TimeStamp="2010-09-28 03:52:24 -0700">8</IndexCardBinderID>
+                                <IndexCardBinderID Position="0.586,1.43721" TimeStamp="2010-09-28 03:52:28 -0700">60</IndexCardBinderID>
+                                <IndexCardBinderID Position="2.37674,0.0" TimeStamp="2010-09-28 03:52:23 -0700">13</IndexCardBinderID>
+                                <IndexCardBinderID Position="0.0,0.497674" TimeStamp="2010-09-28 04:01:31 -0700">14</IndexCardBinderID>
+                                <IndexCardBinderID Position="2.66977,0.92" TimeStamp="2010-09-28 03:52:20 -0700">47</IndexCardBinderID>
+                                <IndexCardBinderID Position="0.967442,0.0" TimeStamp="2010-09-28 03:52:25 -0700">57</IndexCardBinderID>
+                            </FreeformCorkboardDocuments>
+                        </CorkboardSettings>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="57" Type="Text" Created="2010-09-17 06:12:55 -0700" Modified="2010-10-31 04:59:53 -0700">
+                            <Title>Step 7: Changing Editor Views</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="13" Type="Text" Created="2006-08-23 13:37:13 -0700" Modified="2010-10-30 04:53:00 -0700">
+                            <Title>Step 8: Splits</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="17" Type="Text" Created="2006-08-23 13:52:17 -0700" Modified="2011-10-13 07:27:01 -0700">
+                            <Title>Step 9: Corkboard</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>1</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="14" Type="Text" Created="2006-08-23 13:44:43 -0700" Modified="2011-10-13 07:59:45 -0700">
+                            <Title>Step 10: Outliner</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2136,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="8" Type="Text" Created="2006-08-23 13:13:20 -0700" Modified="2010-10-24 16:13:41 -0700">
+                            <Title>Step 11: Scrivenings</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="47" Type="Text" Created="2010-09-11 07:47:24 -0700" Modified="2011-10-13 07:16:23 -0700">
+                            <Title>Step 12: QuickReference Panels</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                            <References>
+                                <Reference BinderID="31" Destination="[Internal Link]">Step 18: Text Editing</Reference>
+                            </References>
+                        </BinderItem>
+                        <BinderItem ID="62" Type="Text" Created="2010-10-07 08:02:34 -0700" Modified="2011-05-19 06:16:07 -0700">
+                            <Title>Step 13: Project Search</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="60" Type="Text" Created="2010-09-28 02:25:35 -0700" Modified="2011-04-04 07:12:33 -0700">
+                            <Title>Step 14: Collections</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>1</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="18" Type="Folder" Created="2006-08-23 13:52:38 -0700" Modified="2010-10-07 10:09:17 -0700">
+                    <Title>Part 3: Import, Export and Printing</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="19" Type="Text" Created="2006-08-23 14:03:15 -0700" Modified="2010-10-30 05:04:02 -0700">
+                            <Title>Step 15: Importing</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="20" Type="Text" Created="2006-08-23 14:05:07 -0700" Modified="2010-10-31 04:56:17 -0700">
+                            <Title>Step 16: Exporting Files</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="21" Type="Text" Created="2006-08-23 14:07:52 -0700" Modified="2011-07-19 14:59:21 -0700">
+                            <Title>Step 17: Compiling the Draft</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="29" Type="Folder" Created="2006-08-23 14:09:21 -0700" Modified="2010-10-10 08:14:43 -0700">
+                    <Title>Part 4: Text Tools</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="30" Type="Text" Created="2006-08-23 14:13:17 -0700" Modified="2010-10-30 04:56:45 -0700">
+                            <Title>Step 18: Split and Merge</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="31" Type="Text" Created="2006-08-23 14:20:31 -0700" Modified="2011-10-13 08:00:17 -0700">
+                            <Title>Step 19: Text Editing</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="48" Type="Folder" Created="2010-09-11 07:52:47 -0700" Modified="2010-09-28 03:24:29 -0700">
+                    <Title>Part 5: Customising Projects</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="42" Type="Text" Created="2010-09-11 06:10:24 -0700" Modified="2010-10-30 04:58:29 -0700">
+                            <Title>Step 20: Custom Icons</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>1</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                            <References>
+                                <Reference BinderID="4" Destination="[Internal Link]">Step 1: Beginnings</Reference>
+                            </References>
+                        </BinderItem>
+                        <BinderItem ID="59" Type="Text" Created="2010-09-28 02:25:24 -0700" Modified="2010-10-31 04:57:41 -0700">
+                            <Title>Step 21: Document Templates</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="41" Type="Text" Created="2010-09-11 06:08:33 -0700" Modified="2010-10-30 04:58:29 -0700">
+                            <Title>Step 22: Creating a New Project</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="32" Type="Text" Created="2006-08-23 14:25:09 -0700" Modified="2010-10-30 04:57:02 -0700">
+                            <Title>Step 23: And Finally...</Title>
+                            <MetaData>
+                                <LabelID>1</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="24" Type="Text" Created="2006-08-23 14:33:00 -0700" Modified="2011-11-04 12:21:18 -0700">
+            <Title>Other Stuff You Might Want to Know</Title>
+            <MetaData>
+                <LabelID>0</LabelID>
+                <StatusID>0</StatusID>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+        </BinderItem>
+        <BinderItem ID="1" Type="ResearchFolder" Created="2005-10-18 13:12:20 -0700" Modified="2005-10-18 13:12:20 -0700">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <FileExtension></FileExtension>
+            </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs>44</SelectedSubdocumentIDs>
+            </CorkboardAndOutliner>
+            <Children>
+                <BinderItem ID="64" Type="Folder" Created="2010-10-10 09:05:16 -0700" Modified="2010-10-10 09:05:21 -0700">
+                    <Title>Sheets</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="65" Type="Text" Created="2010-10-10 09:05:25 -0700" Modified="2010-10-10 12:30:50 -0700">
+                            <Title>Character Sheet</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>145,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="66" Type="Text" Created="2010-10-10 09:07:22 -0700" Modified="2010-10-10 12:30:52 -0700">
+                            <Title>Location Sheet</Title>
+                            <MetaData>
+                                <LabelID>0</LabelID>
+                                <StatusID>0</StatusID>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>92,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="44" Type="Image" Created="2010-09-11 06:29:32 -0700" Modified="2010-09-11 06:33:11 -0700">
+                    <Title>Alhambra</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>jpg</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <ImageScaleFactor>1.0</ImageScaleFactor>
+                        <ImageRotation>None</ImageRotation>
+                        <ImageScalesProportionally>Yes</ImageScalesProportionally>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="37" Type="PDF" Created="2001-11-28 03:03:14 -0800" Modified="2010-09-28 04:16:37 -0700">
+                    <Title>spacewalk_info</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>pdf</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <MediaSettings>
+                        <CurrentPDFPage>0</CurrentPDFPage>
+                    </MediaSettings>
+                </BinderItem>
+                <BinderItem ID="28" Type="Media" Created="2006-07-28 11:36:56 -0700" Modified="2006-07-28 11:36:56 -0700">
+                    <Title>ThisIsBuzzAldrin</Title>
+                    <MetaData>
+                        <LabelID>0</LabelID>
+                        <StatusID>0</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>wav</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                    </MetaData>
+                    <MediaSettings>
+                        <PlaybackPosition>0.0</PlaybackPosition>
+                    </MediaSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="2" Type="TrashFolder" Created="2006-08-23 07:24:40 -0700" Modified="2006-08-23 07:24:40 -0700">
+            <Title>Trash</Title>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="115E7ACB-9F78-43A0-A71B-2AAEF91D0DD3" Color="0.782988 0.815995 0.850718">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="9CC37990-EC42-4B5C-8420-52DBEF214B94" Color="0.922 0.91 0.98">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">Start Here</SearchSettings>
+        </Collection>
+        <Collection Type="Arbitrary" ID="2ABB38B8-A38E-4D9D-83B5-E2333DC480E6" Color="0.967126 0.97798 0.96867">
+            <Title>What's New in 2.0</Title>
+            <BinderIDs>
+                <BinderID>67</BinderID>
+                <BinderID>22</BinderID>
+                <BinderID>56</BinderID>
+                <BinderID>57</BinderID>
+                <BinderID>17</BinderID>
+                <BinderID>14</BinderID>
+                <BinderID>8</BinderID>
+                <BinderID>47</BinderID>
+                <BinderID>60</BinderID>
+                <BinderID>21</BinderID>
+                <BinderID>31</BinderID>
+                <BinderID>42</BinderID>
+                <BinderID>59</BinderID>
+            </BinderIDs>
+        </Collection>
+    </Collections>
+    <Keywords>
+        <Keyword ID="0">
+            <Title>Assign this one</Title>
+            <Color>0.936552 0.125866 0.17</Color>
+        </Keyword>
+        <Keyword ID="1">
+            <Title>Characters</Title>
+            <Color>0.895928 0.661628 0.47547</Color>
+            <Children>
+                <Keyword ID="2">
+                    <Title>Aeryn</Title>
+                    <Color>0.9457 0.884244 0.0</Color>
+                </Keyword>
+                <Keyword ID="3">
+                    <Title>John</Title>
+                    <Color>0.31 0.546528 0.286868</Color>
+                </Keyword>
+            </Children>
+        </Keyword>
+        <Keyword ID="4">
+            <Title>Locations</Title>
+            <Color>0.0 0.384585 0.676959</Color>
+            <Children>
+                <Keyword ID="5">
+                    <Title>Wessex</Title>
+                    <Color>0.464251 0.377279 0.861833</Color>
+                </Keyword>
+            </Children>
+        </Keyword>
+        <Keyword ID="6">
+            <Title>Themes</Title>
+            <Color>0.683258 0.426293 0.525647</Color>
+            <Children>
+                <Keyword ID="7">
+                    <Title>Darkness</Title>
+                    <Color>0.7 0.8 0.555</Color>
+                </Keyword>
+                <Keyword ID="8">
+                    <Title>Water</Title>
+                    <Color>0.137555 0.16 0.343891</Color>
+                </Keyword>
+            </Children>
+        </Keyword>
+    </Keywords>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>0</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.832833 0.773218 0.936773">Concept</Label>
+            <Label ID="1" Color="0.893344 0.794242 0.526725">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>0</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">N/A</Status>
+            <Status ID="1">To Do</Status>
+            <Status ID="2">Rough Draft</Status>
+            <Status ID="3">Final Draft</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-06-30 13:12:08 -0700" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2012-05-08 20:00:52 -0700"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="595.289978,841.890015" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>

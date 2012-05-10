@@ -1,0 +1,122 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fmodern\fcharset0 Courier;
+\f3\fmodern\fcharset0 Courier-Bold;\f4\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red51\green153\blue102;\red255\green0\blue0;\red0\green0\blue255;
+\red255\green0\blue255;}
+\deftab720
+\pard\pardeftab720\sl288\slmult1\sb240\sa60
+
+\f0\i\b\fs28 \cf0 Calculating Weight/Length of Independent Syllables\
+\pard\pardeftab720\fi630\sl288\slmult1\sb60\sa60
+
+\f1\i0\b0\fs24 \cf0 The \'93Full Table of Phone Makeup and Length\'94 table shows all the lengths and weights for all the phones, as stand-alone values.  However, it does not take into account what effect that the surrounding phones might have on a phone\'92s length.  To determine that, we need to figure out the length/ weight for the whole syllable.\
+\
+\pard\pardeftab720\sl288\slmult1\sb240\sa60
+
+\f0\b\fs26 \cf0 Pseudo Code Formula for Determining Semi-Stand-Alone Weight\
+\pard\pardeftab720\fi630\sl288\slmult1\sb60\sa60
+
+\f1\b0\fs24 \cf0 \
+\pard\pardeftab720
+
+\f2\fs23 \cf0 =IF(\ul THIS\ulnone .\cf2 NUCLEUSWEIGHT\cf0 ==0,\
+	0,\
+	(SUM OF (
+\f3\b \ul THIS
+\f2\b0 \ulnone .
+\f3\b \cf3 ONSETVALS[1-2]
+\f2\b0 \cf0  )/ [( COUNT OF (
+\f3\b \cf3 ONSETVALS[1-2]
+\f2\b0 \cf0  ) * 8)]\
+)\
++IF(\ul THIS\ulnone .\cf4 CODAVALS[0]\cf0 ==0,\
+	IF(\ul THIS\ulnone .\cf2 NUCLEUSWEIGHT\cf0 >1, \
+		1,\
+		\ul THIS\ulnone .NUCLEUSWEIGHT\
+	),\
+	\ul THIS\ulnone .NUCLEUSWEIGHT\
+)\
++ [SUM OF(
+\f3\b \ul THIS
+\f2\b0 \ulnone .
+\f3\b \cf4 CODAVALS[1-4]
+\f2\b0 \cf0 ) ] /  [COUNT OF(
+\f3\b \ul THIS
+\f2\b0 \ulnone .
+\f3\b \cf4 CODAVALS[1-4]
+\f2\b0 \cf0 )* 8]\
+\
+- IF(
+\f4\i \cf5 NEXT\cf0 .
+\f2\i0 \cf3 ONSETVALS[0]\cf0  ==0,\
+	IF( THERE IS ONLY ONE CODA VAL, \
+		IF(\ul THIS\ulnone .\cf2 NUCLEUSWEIGHT\cf0 >1,\
+			(\ul THIS\ulnone .\cf2 NUCLEUSWEIGHT\cf0 -1)+
+\f4\i  
+\f2\i0 [(\ul THIS\ulnone .CODAVALS[ last non-empty index ]) /  8 ],\
+			[ (\ul THIS\ulnone .CODAVALS[ last non-empty index ]) /  8 ]\
+		),\
+		[ (\ul THIS\ulnone .CODAVALS[ last non-empty index ]) /  8 ]\
+	),\
+	0\
+)\
+\pard\pardeftab720\fi630\sl288\slmult1\sb60\sa60
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\sl288\slmult1\sb240\sa60
+
+\f0\b\fs26 \cf0 Actual Excel Formula:\
+\pard\pardeftab720\fi630\sl288\slmult1\sb60\sa60
+
+\f1\b0\fs24 \cf0 \
+\pard\pardeftab720
+
+\f2\fs23 \cf0 =IF(O2=0,\
+	0,\
+	(SUM(L2:M2)/(COUNT(L2:M2)*$AE$2))\
+)\
++ IF(P2=0,\
+	IF(O2>1,\
+		1,\
+		O2\
+	),\
+	O2\
+)\
++(SUM(Q2:T2)/(COUNT(Q2:T2)*$AE$2))\
+\
+-IF(N3=0,\
+	IF(OFFSET(T2,0,-COUNTIF(P2:T2,0))=P2,\
+		IF(O2>1,\
+			(O2-1)+((OFFSET(T2,0,-COUNTIF(P2:T2,0)))/((COUNT(Q2:T2)-COUNTBLANK(Q2:T2))*$AE$2)),\
+			OFFSET(T2,0,-COUNTIF(P2:T2,0))/ ((COUNT(Q2:T2)-COUNTBLANK(Q2:T2))*$AE$2)\
+	 	),\
+		OFFSET(T2,0,-COUNTIF(P2:T2,0))/((COUNT(Q2:T2)-COUNTBLANK(Q2:T2))*$AE$2)\
+	),\
+	0\
+)\
+\pard\pardeftab720\fi630\sl288\slmult1\sb60\sa60
+
+\f1\fs24 \cf0 I could get even more complicated here, due to differing consonant lengths. However, vowel length is much more distinctive than consonant length. In the interest of time, I\'92ve decided to simplify the way that the coda and onset add weight/length to a syllable.\
+There are a few major types of consonants:\
+plosives\
+affricatives\
+fricatives\
+nasal stops\
+semivowels\
+\
+I know there\'92s a hierarchy of length between  them, but I haven\'92t yet figured that out.  What I have figured out is that you get one phone in the coda and one phone in the onset for \'93free\'94, i.e. you\'92re allowed to discount its length in calculating the length of the whole syllable.\
+	\
+SIDE NOTES:	\
+Problems encountered with consonants:\
+2 unique plosives should not be next to each other\
+Ways to solve:\
+Change the word (not an option in this iteration)\
+Make the note for the first plosive\'92s syllable longer, and put a small rest in between\
+put a small rest in between\
+Take a breath in between.\
+If  the (Number of sounds a word\'92s coda) plus the (Number of sounds in the NEXT word\'92s onset) is greater than four, then it\'92s generally unpronounceable.\
+Ways to solve:\
+Change the word (not an option in this iteration)\
+Make the note for the first plosive\'92s syllable longer, and put a small rest in between\
+put a small rest in between\
+Take a breath in between.}

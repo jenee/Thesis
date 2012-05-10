@@ -1,0 +1,481 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-BoldOblique;\f2\fmodern\fcharset0 Courier-Oblique;
+\f3\froman\fcharset0 TimesNewRomanPSMT;\f4\fswiss\fcharset0 ArialMT;\f5\fmodern\fcharset0 Courier-Bold;
+\f6\fnil\fcharset0 Verdana;\f7\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue128;\red255\green102\blue0;\red0\green0\blue255;
+\red255\green0\blue0;\red204\green153\blue255;\red191\green191\blue191;\red51\green153\blue102;}
+\deftab720
+\pard\pardeftab720\fi720\sb120\sa120\pardirnatural\qc
+
+\f0\fs24 \cf0 > | <uniqIDString> | : | <partOfSpeech> | : | <extendedOrtho> | : | <freq> |  <FullSAMPAstring> | : | 
+\f1\i\b syllableBreakdown
+\f2\b0 (see below)...
+\f0\i0  | '\\n' |\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3 \cf0 \
+\pard\pardeftab720\fi720\sb120\sa120\pardirnatural
+
+\f1\i\b \cf0 syllableBreakdown:\
+\pard\pardeftab720\fi720\sb120\sa120\pardirnatural\qc
+
+\f0\i0\b0 \cf0 <charSeparator> | <sampaSyllableSubstring> \
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3 \cf0 \
+\
+The end of each word entry will be indicated with a newline.\
+After I got the dictionary in this format, I opened it as a CSV in excel, inserted a column of commas between each field, a  column of ' ));' after the last field, and a column with with string \'93dict.add(Word(\'93 before the first field. \
+This was my hack-y way of making constructors for all the words in my dictionary.  All I had to do was highlight the table, then copy and paste it as plain text into my code's dictionary constructor.  \
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f4\b\fs28 \cf0 \page Adjustment for the CLIPS format\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3\b0\fs24 \cf0 For the second iteration of Melody Matcher, we used a rule-based system based on CLIPS and C++, so some adjustments had to be made.  We decided that, instead of a Dictionary class which populated itself upon construction, we would store the dictionary words as CLIPS facts.  \
+I created a template for a "word" fact as the primary housing for my dictionary entries.\
+\pard\pardeftab720\li1440\fi720\ri1440\sl360\sa120\pardirnatural
+
+\f0 \cf0 ( deftemplate word\
+		( slot 
+\f5\b \cf2 orthoSpelling 
+\f0\b0 \cf0 )\
+		( slot 
+\f5\b \cf3 uniqueID 
+\f0\b0 \cf0 )\
+		( slot 
+\f5\b \cf4 partOfSpeech 
+\f0\b0 \cf0 )\
+		( slot 
+\f5\b \cf5 FullSAMPAstring 
+\f0\b0 \cf0 )\
+		( multislot syllables ) \
+		( slot
+\f5\b \cf6  etymology
+\f0\b0 \cf0  )\
+		( slot 
+\f5\b \cf3 freq
+\f0\b0 \cf0  )\
+)\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3 \cf0 I did some text manipulation to get the dictionary file into this form, and then loaded it into CLIPS.\
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f4\b\fs28 \cf0 \page \page Transfer of Phonetic dictionary into SQL Database\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3\b0\fs24 \cf0 The time eventually came for me to transfer the csv into a usable form: a database. I decided to use SQLite3, because it seemed like a good idea at the time. I\'92m sure I had good justification.  I should have written it down, dang it!\
+To turn the csv into a SQLite database, I decided to use a program called the \'93SQLite Database Browser\'94, an open source, public domain, freeware visual tool to create, design, and edit SQLite3.x database files.  I specifically used version 2.0b1 of the program, which was built with version 3.6.18 of the SQLite engine.\
+From that point on, it was just a matter of changing my \'91:\'92 delimiter in my .csv to a \'91|\'92 delimiter, and letting the program convert the csv into a sqlite database.\
+\
+\
+\pard\pardeftab720\fi630\sl360\sb240\pardirnatural\qc
+
+\f4\b\fs32 \cf0 \page Evaluation of the Suitability of Rule-Based Systems for Melody Matcher\
+\pard\pardeftab720\sl300\pardirnatural\qc
+
+\b0\fs24 \cf0 Jennifer Hughes\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3 \cf0 \
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f4\b\fs32 \cf0 Overview of Melody Matcher\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3\b0\fs24 \cf0 Melody Matcher aims to replicate the human ability to identify lyrics in a song that are easily misheard.  Lyrics can be misunderstood due to:\
+\pard\pardeftab720\fi630\sl300\pardirnatural
+\cf0 Lyric/Music emphasis mismatch, due to:\
+Note intervals\
+Phrase emphases \
+Word emphases\
+Word "cramming", due to \
+syllable lengths that exceed that of note length\
+Mouth movement delta time intervals\
+Word misidentification, due to\
+Altered pronunciation of words\
+Phone similarity\
+Voicing (voiced vs. voiceless)\
+Beginning/end mouth positions\
+Type (Plosive, Fricative, affricate, nasal, lateral, approximant, semivowel)\
+Improper cognitive parsing of phone sequences\
+Phone sequences that can be parsed more than one way\
+Non-deterministic interpretations of phone sequences.\
+Phone sequences with multiple interpretations and/or tokenizations\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f4\b\fs32 \cf0 Suitability of Current Implementations\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f3\b0\fs24 \cf0 Currently, Melody Matcher has two partial implementations.  One is rule-based, using the CLIPS system, and one uses conditional equations embedded in an Excel Spreadsheet.  In the following section, I explain the advantages and disadvantages of both. Ultimately I decided that, for the exploratory iteration of my project, a rule-based system is better than a purely equation-based one. \
+\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f4\i\b\fs28 \cf0 \page Benefits of a Rule-Based Approach\
+\pard\pardeftab720\li360\fi432\sl320\sb120\pardirnatural
+
+\i0\fs24 \cf0 Easy Modification Due to Modularization\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\b0 \cf0 A rule-based approach using templates and facts allows for less-messy modification of all components.  If an end user decides that they want a song to be deliberately ambiguous-sounding at a certain point, they can disable certain rules for that section.  If I decide that the phone "
+\f5\b jU"
+\f3\b0  needs to be categorized as a syllabic consonant instead of a semivowel, all I have to do is go into the fact that uses 
+\f5\b phone
+\f3\b0  template to store the data about "
+\f5\b jU"
+\f3\b0 , and change it there.  \
+\pard\pardeftab720\li360\fi432\sl320\sb120\pardirnatural
+
+\f4\b \cf0 Meaningful and educational results\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\b0 \cf0 By using rules to determine fitness, you can determine exactly where and why a lyric went wrong.  The algorithm conveys and explains its "thought processs" and rationale to the user, then the user can learn from that. \
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f4\i\b\fs28 \cf0 Downsides of a Rule-Based Approach\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\i0\b0\fs24 \cf0 The only downside I really see to a rule-based approach is that there will be a 
+\b lot
+\b0  of rules. Thought I won't be able to directly correlate a rule-based approach to lyrical suitability with the algorithms that determine instrumental suitability, that's not really my main goal (It's more of a "Wouldn't it be cool if\'85?" thing).\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f4\i\b\fs28 \cf0 \page Benefits of an Equation-Based Approach\
+\pard\pardeftab720\li360\sl360\sb60\sa60\pardirnatural
+
+\f3\i0\b0\fs24 \cf0 This is the approach that I started with, not so much because it was the best fit, but because it fit the medium I was using (Excel Spreadsheet).  There are, however, several reasons that an equation-based approach might be preferred.\
+\pard\pardeftab720\li360\fi432\sl320\sb120\pardirnatural
+
+\f4\b \cf0 Parallels to instrumental composition\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\b0 \cf0 The construction of instrumental music is intrinsically algorithmic and/or mathematical.  One of my side-goals with Melody Matcher was to discover a 
+\i complementary
+\i0  algorithm to these for  for the composition musical 
+\b texts
+\b0 . \
+By pursuing a math-based approach, I can parallel the way that instrumental compositions are structured, and maybe even eventually incorporate my work into algorithm-based music theory.  \
+\pard\pardeftab720\li360\fi432\sl320\sb120\pardirnatural
+
+\f4\b \cf0 Uniform measurement of results\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\b0 \cf0 An equation will give me a concrete number that represents the fitness of a lyric.  This allows for easier comparison, and perhaps an overall fitness score for the lyrical and instrumental structure of a composition.\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f4\i\b\fs28 \cf0 Downsides of an Equation-Based Approach\
+\pard\pardeftab720\li360\sl360\sb60\sa60\pardirnatural
+
+\f3\i0\b0\fs24 \cf0 There are several aspects of an equation-based approach that are less than desirable.\
+\pard\pardeftab720\li360\fi432\sl320\sb120\pardirnatural
+
+\f4\b \cf0 Lack of atomicity\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\b0 \cf0 With an equation-based approach, I either have to address all the factors that go into lyric fitness in one monster-mega-equation, or make a bunch of smaller equations, and combine their results after computation.  Both of these are exceedingly hard to modify.  If I come to the conclusion that the phone "
+\f5\b jU"
+\f3\b0  needs to be categorized as a syllabic consonant instead of a semivowel, I have to figure out where in the equation I computed its value, and make sure I modify any parts of the equation that depend on "
+\f5\b jU"
+\f3\b0  being a semivowel. Since I've still not yet nailed down all the intricacies of how the parts of a lyric interrelate and/or contribute to the fitness of a lyrics' structure, the lack of easy modification is kind of a dealbreaker.\
+\pard\pardeftab720\li360\fi432\sl320\sb120\pardirnatural
+
+\f4\b \cf0 Ambiguous interpretation of results\
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\b0 \cf0 A single number can't accurately reflect all the nuances that go into why a lyric might not be structurally sound.  For example, if Melody Matcher gave a song lyric a score of 1.33 out of 1.1, that means that it failed one or more fitness criteria.  However, there's no way to know exactly what's wrong with it.  This lack of explanation and/or reasoning makes it difficult to use Melody Matcher as a teaching tool, which is one of my ultimate goals.\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f4\i\b\fs28 \cf0 \page Verdict on Rule-Based vs Equation-Based \
+\pard\pardeftab720\li360\fi720\sl360\sb60\sa60\pardirnatural
+
+\f3\i0\b0\fs24 \cf0 Since Melody Matcher's fundamental concepts are still in constant revision, the easy modifiability provided by a rule-based approach makes it the optimal choice.  Eventually, once I've nailed down all the intricacies of how a lyric is built and structured, I might want to move to an equation-based approach, so that I could maybe incorporate my work into a complement to Harmonic Theory.  As things stand now, though,  I don't have confidence that I've fully understood and quantified the structure of a song lyric.   My equation-based approach is a spaghetti-like mess.  You know the movie "Cloudy With A Chance Of Meatballs"?  There's this spaghetti tornado. That's what my equations are like.  They're a twisted and tangled together, and they get unneeded objects stuck in them.  Okay, it's not a perfect metaphor. I'm just saying, it's not pretty.\
+\pard\pardeftab720\fi720\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f4\b\fs32 \cf0 \page Using Search to Identify Phone Sequences in Lyrics with Multiple Interpretations\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\f3\b0\fs24 \cf0 \
+Main use cases are from the site in the footnote.\
+\
+Oronyms: Sentences that can be interpreted by the ear as two different sequences of words, without any of the sounds or emphases changing.\
+Example: \
+\pard\pardeftab720\li1440\ri1440\sl300\sa120\pardirnatural
+\cf0 I'm taking a nice cold shower.\uc0\u8232 I'm taking an ice cold shower.\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1440 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx1728
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx3456
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx5184
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6912
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural
+
+\f5\b\fs20 \cf0 WORD\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+
+\f0\b0 \cf0 a\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 nice\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 cold\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 shower\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1440 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx1728
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx3456
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx5184
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6912
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural
+
+\f5\b \cf0 SAMPSYL\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+
+\f0\b0 \cf0 V\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 naIs\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 kould\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 SaU`r\cell \lastrow\row
+\pard\pardeftab720\sl280\pardirnatural
+
+\f5\b \cf0 SYL_PART
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\fs24 
+\f5\fs20 
+\f0\b0 VnaIskoulSaU`r
+\f3\fs24 
+\f5\b\fs20 
+\f0\b0 d
+\f3\fs24 
+\f5\b\fs20 
+\f0\b0 
+\f3\fs24 
+\f5\b\fs20 
+\f0\b0 
+\f3\fs24 \
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1440 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx1728
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx3456
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx5184
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6912
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural
+
+\f5\b\fs20 \cf0 WORD\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+
+\f0\b0 \cf0 an\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 ice\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 cold\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 shower\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1440 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx1728
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx3456
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx5184
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6912
+\clvertalt \clshdrawnil \clminw1425 \clminh260 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural
+
+\f5\b \cf0 SAMPSYL\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+
+\f0\b0 \cf0 Vn\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 aIs\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 kould\cell 
+\pard\intbl\itap1\pardeftab720\sl280\pardirnatural\qc
+\cf0 SaU`r\cell \lastrow\row
+\pard\pardeftab720\sl280\pardirnatural
+
+\f5\b \cf0 SYL_PART
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\f5 on
+\f6 
+\f5 nu
+\f6 
+\f5 cd
+\f6 
+\fs24 
+\f5\fs20 
+\f0\b0 VnaIskoulSaU`r
+\f3\fs24 
+\f5\b\fs20 
+\f0\b0 d
+\f3\fs24 
+\f5\b\fs20 
+\f0\b0 
+\f3\fs24 
+\f5\b\fs20 
+\f0\b0 
+\f3\fs24 \
+The phone sequence for both is:\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+
+\f0 \cf0 V n aI s k ou l d S aU 'r\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\f3 \cf0 \
+\page The ideal way to think about searching for patterns is by picturing the phoenetic dictionary in a tree form.  Each node has at least 45 child nodes: one for each phone.  A node might also have "word" nodes, if the node's path constructs a valid word:\
+\
+\
+\
+When there are ties for word nodes, you can determine the most likely interpretation by checking the frequency of each word.  For example, the sequence "n aI s" is much more likely to be "nice" than "gneiss".\
+\page So, back to our original oronym: "A nice cold shower/An ice cold shower".  Using the dictionary tree method above, we can break down the phones according to the following diagram:\
+\
+\pard\pardeftab720\sl300\sb240\pardirnatural
+
+\f4\b\fs26 \cf0 \page First Option for Algorithm/Approach \
+\pard\pardeftab720\sl300\sa120\pardirnatural
+
+\f7\b0\fs20 \cf0 MatchLists is an array contains n lists of Word Matches, where n is the number of phones in the origPhoneSequence.\
+foreach(Phone p in origPhoneSequence) \
+\{\
+	set SubSequence to be empty;\
+	set the list of Matches to be empty;\
+	set the list of Candidates to be the whole dictionary\
+	set Phone* curLast to &p\
+	do\
+	\{	\
+		append curLast to SubSequence\
+		remove words in Candidates that don't begin with SubSequence\
+		if any word in Candidates is an exact match of SubSequence\
+		\{	\
+			add word to Matches\
+		\}\
+		increment curLast to point to the next phone in origPhoneSequence \
+	\}\
+	while ( curLast != NULL) (there are phones left in origPhoneSequence)\
+	copy Matches list to a list of MatchLists\
+\}\
+Word* findValidOronyms( SequenceToInterpret)\
+foreach (Phone p in SequenceToInterpret) \
+\{\
+	clear LyricOption (a list of possible wordLyrics);\
+	get p's associated Matches from MatchLists\
+	foreach ( Word w in p's Matches)\
+	\{\
+		extract phones from w into wordPhones\
+		call findValidOronyms on (sequenceToInterpret \'96 wordPhones at front)\
+		if findValidOronyms returns NULL, move on to next word W\
+		else ////SOMEHOW GET THE WORD SEQUENCE\'85.\
+	\}\
+\}\
+\pard\pardeftab720\sl300\sb240\pardirnatural
+
+\f4\b\fs26 \cf0 \page Second Approrach option\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\f3\b0\fs24 \cf0 \
+Variables and Types of Data Structures:\
+\pard\pardeftab720\li2880\sl300\sb60\sa60\pardirnatural
+\cf5 origPhonePhrase\cf0 :  	The lyrics of the song, broken down into phonemes.  (Could be encompass all the lyrics, or just a lyric segment) \
+\pard\tx2340\pardeftab720\li2880\sl300\sb60\sa60\pardirnatural
+\cf0 \
+allPhoneSubPhrases:	A list of phoneSubPhrase structures.  There's one structure per phoneme in the \cf5 origPhonePhrase\cf0 .\
+		\
+\cf8 phoneSubPhrases\cf0 :	Per phoneme in the \cf5 origPhonePhrase\cf0 , create a \cf8 phoneSubPhrase\cf0  structure.  In this structure, for each phone following the phone that is the basis for that \cf8 phoneSubPhrase\cf0 , concatenate them to create a \cf4 phoneSubSubPhrase\cf0 .  Stop adding phones when the interpretation of the \cf4 phoneSubSubPhrase\cf0  is the empty set. \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw9198 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx2160
+\clmrg \clvertalt \clshdrawnil \clminw9198 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clminw9198 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6480
+\clmrg \clvertalt \clshdrawnil \clminw9198 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+
+\b \cf8 PhoneSubPhrase\cf0  for "V" 
+\b0 (basically a list of phones and their associated likelihoods)\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clminw2178 \clminh413 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clminw2340 \clminh413 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clminw2340 \clminh413 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clminw2340 \clminh413 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\b \cf0 Phoneme\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+
+\b0 \cf0 V\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+\cf0 n\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+\cf0 aI\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clminw2178 \clminh620 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clminw2340 \clminh620 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clminw2340 \clminh620 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clminw2340 \clminh620 \clbrdrt\brdrs\brdrw20\brdrcf7 \clbrdrl\brdrs\brdrw20\brdrcf7 \clbrdrb\brdrs\brdrw20\brdrcf7 \clbrdrr\brdrs\brdrw20\brdrcf7 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\b \cf0 Complete matching words \cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+
+\b0 \cf0 a (freq = 7536297)\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+\cf0 an (freq = 794169)\
+an' (freq = 794169)\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+\cf0 \{empty set\}\cell \lastrow\row}

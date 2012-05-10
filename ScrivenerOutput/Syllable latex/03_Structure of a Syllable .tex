@@ -1,0 +1,241 @@
+\documentclass[10pt,oneside]{memoir}
+\usepackage{layouts}[2001/04/29]
+\makeglossary
+\makeindex
+
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+\def\revision{}
+
+%%% need more space for ToC page numbers
+\setpnumwidth{2.55em}
+\setrmarg{3.55em}
+
+%%% need more space for ToC section numbers
+\cftsetindents{part}{0em}{3em}
+\cftsetindents{chapter}{0em}{3em}
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4.5em}{3.9em}
+\cftsetindents{subsubsection}{8.4em}{4.8em}
+\cftsetindents{paragraph}{10.7em}{5.7em}
+\cftsetindents{subparagraph}{12.7em}{6.7em}
+
+%%% need more space for LoF numbers
+\cftsetindents{figure}{0em}{3.0em}
+
+%%% and do the same for the LoT
+\cftsetindents{table}{0em}{3.0em}
+
+%%% set up the page layout
+\settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setulmarginsandblock{1.5in}{1.5in}{*}
+
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{booktabs}			% Better tables
+\usepackage{tabulary}			% Support longer table cells
+\usepackage[utf8]{inputenc}		% For UTF-8 support
+\usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
+\usepackage{xcolor}				% Allow for color (annotations)
+
+%\geometry{landscape}			% Activate for rotated page geometry
+
+%\usepackage[parfill]{parskip}	% Activate to begin paragraphs with an empty
+								% line rather than an indent
+
+
+\def\myauthor{Author}			% In case these were not included in metadata
+\def\mytitle{Title}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\bibliocommand{}
+
+\VerbatimFootnotes
+\def\myauthor{Jenee Hughes}
+\def\baseheaderlevel{1}
+\def\format{complete}
+\def\mytitle{ThesisDocumentsMelodyMatcher}
+
+
+%
+%	PDF Stuff
+%
+
+%\ifpdf							% Removed for XeLaTeX compatibility
+%  \pdfoutput=1					% Removed for XeLaTeX compatibility
+  \usepackage[
+  	plainpages=false,
+  	pdfpagelabels,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+  \usepackage{memhfixc}
+%\fi							% Removed for XeLaTeX compatibility
+
+
+%
+% Title Information
+%
+
+
+\ifx\latexauthor\undefined
+\else
+	\def\myauthor{\latexauthor}
+\fi
+
+\ifx\subtitle\undefined
+\else
+	\addtodef{\mytitle}{}{ \\ \subtitle}
+\fi
+
+\ifx\affiliation\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \affiliation}
+\fi
+
+\ifx\address\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \address}
+\fi
+
+\ifx\phone\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \phone}
+\fi
+
+\ifx\email\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \email}
+\fi
+
+\ifx\web\undefined
+	\else
+		\addtodef{\myauthor}{}{ \\ \web}
+\fi
+
+\title{\mytitle}
+\author{\myauthor}
+
+\begin{document}
+
+\chapterstyle{\mychapterstyle}
+\pagestyle{\mypagestyle}
+
+%
+%		Front Matter
+%
+
+\frontmatter
+
+
+% Title Page
+
+\maketitle
+\clearpage
+
+% Copyright Page
+\vspace*{\fill}
+
+\setlength{\parindent}{0pt}
+
+\ifx\mycopyright\undefined
+\else
+	\textcopyright{} \mycopyright
+\fi
+
+\revision
+
+\begin{center}
+\framebox{ \parbox[t]{1.5in}{\centering Formatted for \LaTeX  \\ 
+ by MultiMarkdown}}
+\end{center}
+
+\setlength{\parindent}{1em}
+\clearpage
+
+% Table of Contents
+\tableofcontents
+%\listoffigures			% activate to include a List of Figures
+%\listoftables			% activate to include a List of Tables
+
+
+%
+% Main Content
+%
+
+
+% Layout settings
+\setlength{\parindent}{1em}
+
+\mainmatter
+Structure of a Syllable
+A syllable, defined here in the traditional, colloquial sense, is represented in my program as such: 
+WORD
+[Syllable]
+NOTE\_LEN
+[length of associated note]
+EMPH
+[syllable emphasis value]
+SAMPSYL
+[syllable in SAMPA]
+SYL\_PART
+on
+nu
+cd
+
+
+$<$-1$>$
+$<$0$>$
+$<$+1$>$
+
+
+$<$-2$>$
+$<$1$>$
+$<$+2$>$
+
+
+$<$-3$>$
+$<$2$>$
+$<$+3$>$
+
+
+$<$+4$>$
+WORD (required field) is the orthographic (regular-spelling) syllable.  If this field only has a \^{} in it, then it represents a rest.
+NOTE\_LEN (required field) is the length of the note that the syllable is associated with, represented as a number from 1 to N, where N is the denominator of the shortest note length. (for example, if the shortest note is an eighth note, then N would be 8.)  N represents a whole note, and 1 would represent the shortest-length note.  (In our previous example, an eighth note would be 1, and a whole note would be 8).
+EMPH (conditionally-required field) is the emphasis value of the syllable, relative to the rest of the syllables in the word. It's required only if the syllable is a part of a multi-syllable word.  If the syllable is a rest or a single-syllable word, then this field should be left blank.
+SAMPASYL (conditionally-optional field) is the SAMPA spelling of the syllable. This field can be left blank only if the syllable is a rest.
+SYL\_PART (conditionally-optional multi-part field) is a multi-part field, representing the parts of a syllable.  All of the values are written in SAMPA. This field can be left completely blank only if the syllable is a rest.
+on (optional array-like field-column) is a column of cells representing a syllable onset.  It contains four cells, but only up to three may be used. Each cell has a single SAMPA phone/``letter'' in it.   The phone at the top of the column is closest to the syllable nucleus, and as you go further down, the closer you get to the beginning of the syllable.  Not all fields must be filled out. Valid values are consonants (meaning plosives, affricatives, fricatives, nasals, laterals, approximants, and semi-vowels).  Semi-vowels that are directly adjacent to the nucleus should be part of the nucleus, not the onset.
+nu (conditionally-optional array-like field-column) is a column of cells representing the syllable nucleus. It contains four cells, but only up to three may be used. Each cell has a single SAMPA phone/``letter'' in it. The phone at the top of the column is closest to the onset, and those further down are closer to the coda.  At least one field must be filled out, unless the syllable is a rest.  Valid values are vowels, semivowels (j in yes, w in we), nasals-with-semivowels (n= in ``hidden'', .m= in ``winsome''), and laterals-with-semivowels (l= in ``waffle'').
+cd (optional array-like field-column) is a column of cells representing a syllable coda.  It contains four cells, all of which may be used. Each cell has a single SAMPA phone/``letter'' in it.   The phone at the top of the column is closest to the syllable nucleus, and as you go further down, the closer you get to the end of the word.  Not all fields must be filled out. Valid values are consonants (meaning plosives, affricatives, fricatives, nasals, laterals, approximants, and semi-vowels). Semi-vowels that are directly adjacent to the nucleus should be part of the nucleus, not the coda.
+
+
+%
+% Back Matter
+%
+
+\backmatter
+%\appendixpage
+
+%	Bibliography
+\bibliographystyle{\mybibliostyle}
+\bibliocommand
+
+%	Glossary
+\printglossary
+
+
+%	Index
+\printindex
+
+\end{document}

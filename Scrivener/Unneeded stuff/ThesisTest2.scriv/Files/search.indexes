@@ -1,0 +1,2187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="3">
+            <Title>Untitled</Title>
+        </Document>
+        <Document ID="4">
+            <Title>ALL Documentation as of 2012-05-07</Title>
+            <Text>Melody Matcher 
+Project Proposal
+
+Jennifer Hughes
+ TOC \o "1-4" 
+MELODY MATCHER	 PAGEREF _TOC197578258 \H 1
+ABSTRACT (SYSTEM PURPOSE AND TASKS TO BE PERFORMED):	 PAGEREF _TOC197578259 \H 6
+USAGE DOMAIN AND ENVIRONMENT:	 PAGEREF _TOC197578260 \H 6
+COMPARISON TO EXISTING SYSTEMS:	 PAGEREF _TOC197578261 \H 9
+SPECIFICATION:	 PAGEREF _TOC197578262 \H 9
+USER FEEDBACK:	 PAGEREF _TOC197578263 \H 10
+SYSTEM DESIGN:	 PAGEREF _TOC197578264 \H 12
+PROTOTYPE AND IMPLEMENTATION	 PAGEREF _TOC197578265 \H 12
+SYLLABLE STRUCTURE	 PAGEREF _TOC197578266 \H 12
+LENGTH AND WEIGHT OF INDIVIDUAL PHONES	 PAGEREF _TOC197578267 \H 12
+Vowels	 PAGEREF _Toc197578268 \h 12
+Consonants	 PAGEREF _Toc197578269 \h 13
+Calculating Consonant Phone Length	 PAGEREF _Toc197578270 \h 14
+FULL TABLE OF PHONE MAKEUP AND LENGTH	 PAGEREF _TOC197578271 \H 16
+THIS PAGE WAS INTENTIONALLY LEFT BLANK BECAUSE WORD DOESN’T LIKE ME BEING TABLE-HAPPY.	 PAGEREF _TOC197578272 \H 17
+STRUCTURE OF A SYLLABLE	 PAGEREF _TOC197578273 \H 18
+Examples	 PAGEREF _Toc197578274 \h 19
+SYSTEM DESIGN:	 PAGEREF _TOC197578275 \H 25
+PROTOTYPE AND IMPLEMENTATION	 PAGEREF _TOC197578276 \H 26
+DATA FORMAT	 PAGEREF _TOC197578277 \H 27
+FICKLE PHONES IN THE CODA	 PAGEREF _TOC197578278 \H 32
+CALCULATING WEIGHT/LENGTH OF INDEPENDENT SYLLABLES	 PAGEREF _TOC197578279 \H 33
+Psuedo Code Formula for Determining Semi-Stand-Alone Weight	 PAGEREF _Toc197578280 \h 33
+Actual Excel Formula:	 PAGEREF _Toc197578281 \h 33
+CALCULATING LENGTH OF SYLLABLES IN RELATION TO EACH OTHER	 PAGEREF _TOC197578282 \H 36
+Psuedo Code Formula for Determining Syllable “fit” with the music.	 PAGEREF _Toc197578283 \h 42
+PATTERNS FOR MUSICAL EMPHASES	 PAGEREF _TOC197578284 \H 43
+EFFECT OF NOTE INTERVALS ON MUSICAL EMPHASES	 PAGEREF _TOC197578285 \H ERROR! BOOKMARK NOT DEFINED.
+PARSIBLE PHONETIC DICTIONARY	 PAGEREF _TOC197578286 \H 56
+PARSABLE DICTIONARY	 PAGEREF _TOC197578287 \H 56
+FINAL PHONETIC DICTIONARY CHOICE	 PAGEREF _TOC197578288 \H 58
+TIMELINE:	 PAGEREF _TOC197578289 \H 75
+(Modified)	 PAGEREF _Toc197578290 \h 75
+
+
+
+So. I bet you're all wondering what's happening with my thesis. If so, you fit into one of these groups:  1) you're working on a thesis? What's it about?  2) oh, that melody matcher thing you've been mumbling about for the past few years? How's that work again?  3) yeah, I know you're working on your thesis. I keep hearing you talk about all the gory details. But what does it look like?
+
+4) But how do you know it really works?  I'll be addressing group #3 today.  As you already know, Melody matcher is an algorithm that measures inherent understand ability of a song when sung by a person with a General America accent.  This is sort of a fudge, because the general American accent is not actually the accent that singers use while singing, nor is it the accent spoken by most americans. It's the newscaster accent, and is generally agreed upon to have come from somewhere in the midwest.  It is heavy on understandability, and therefore fudges NO consonant or vowel sounds, whereas singers do this all the time. However, the alterations singers make to their phonemes while singing are not generally agrees upon, and there is no " singing accent".  There are a few generally agreed upon rules about context -based pronunciation changes in singing: "the": if the word 'the' is followed by a word that begins with a vowel sound, it is then sung as "thee", instead of 'thuh' "and": this one is strange, and I'm not sure about, but it often becomes "an' " "a": there a a few different ways this can be pronounced: "eh", "uh", or ____ Glottal stops: Coda-pushing: it is generally agreed upon by most all singers that, when singing a word, you sing the vowel.  This "vowel" can be more accurately described as the nucleus of a syllable  Anyway! Didn't meant to get bogged down in that. You're probably winding what my thesis end product actually *looks* like.  So, I like gardening. It's really obvious when you're doing something right with a plant, because it grows and florishes.  Warning: this is not a perfect metaphor.  So, for my thesis, I pretended that we live on a world where plants are nourished and grow by being fed music.  Each tree feeds upon a single.  The very first lyrics of the song cause the tree to begin to grow, the the tree stops growing when the song is over.  You want a tall, green tree with few branches at the end, not a browning bush with way too many branches and forks. Like any good gardener, a good lyricist prunes back branches that are unwanted.  The growth rate of the tree depends upon the tempo of the song fed into it.  The tree splits off and creates new branches whenever a phonetic sequence can be understood in more than one way. For example, i stink, an ice cold shower.  This means that the branch points must be on the phoneme level, and not on the word level.  The tree's color will remain green if all the words in the lyrics are a good fit for their notes. If there is any cramming or bleeding, then the tree branch for that sequence will be browned, depending on the severity of the cramming/bleeding.  How is this achieved?  0- we must substitute and account for pronunciation variations caused by singing the words instead of speaking them. This includes: The/a/glottal-stops/coda-pushing 1- before we break our words into individual sounds, we much break them into syllables, and check for cramming and bleeding.
+
+//TBC
+
+Abstract (System purpose and tasks to be performed):
+This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases. The program will ultimately rely upon user input for "fitness" criteria, but will initially match lyrics with melodies based upon some rules.
+
+Usage Domain and Environment:
+
+This program will be used as a compositional aid by anyone who wants to write songs and make them sound good, technically.  Its should allow the song writer to focus on more subjective criteria of what makes a song “good”, because it will make the structural rules of lyric composition immediately apparent.  The first version of this will probably be only for users that already understand the structural rules, unfortunately, because the composer must be able to understand that there IS a need to properly place lyrics in songs.  
+
+The structural rules of lyric placement are important, because without them, lyrics can become muddled and/or unintelligible. For example, in the song “Groovin’ (on a Sunday Afternoon”, by the Young Rascals, there’s a part in the bridge that everyone always hears as “Life would be ecstasy, you an’ me an’ Leslie”.  In fact, the line is “Life would be ecstasy, you and me endlessly”.  The confusion lies with the last three syllables of the phrase.  The pronunciation of each version, if spoken normally, is as follows:
+
+and       Les-   lie
+end-       less-       ly
+@nd   “lEs     li
+“End      l@s       li
+
+A “ preceding a syllable means that syllable is emphasized. 
+
+So, in the first phrase, we see that the emphasis pattern goes something like dum-DUM-dum, where the first syllable of “Leslie” is emphasized.  The second phrase’s emphasis pattern is “DUM-dum-dum”, so the first syllable of endlessly is emphasized.
+
+When words are put to music, however, the musical emphasis basically overrides the textual emphasis. Sometimes, if a previously un-emphasized syllable becomes emphasized, or a previously emphasized syllable loses its emphasis, the meaning of the phrase can change.
+
+For “Groovin’”, the lyrics match up to the music in the song as follows:
+
+
+Life   would be  ec-            sta-    sy,        You  an’  me   end-  less- ly 
+
+
+In all music, the emphasis always goes on the first part of a beat.  
+
+In this case, in the first measure is emphasized for the notes that correspond to the lyrics, “Life”, “be”, “ec-”(as in ec-sta-sy)  and “sy”(again, as in ec-sta-sy) (This is a vast oversimplification, but it works for now). So, the lyrics would be emphasized as such:
+
+Life would be ec-sta-sy
+
+This musical emphasis matches the spoken emphasis of the phrase, so it is intelligible as a lyric.  (Though ecstasy’s first syllable doesn’t start on the first part of beat three, it is still on the first part of beat three, and therefore still emphasized.  Alternatively, since the first part of beat two didn’t have a hard stop to it, the emphasis could have rolled over to the second part,  “ec”, which does have a hard stop. These are the sorts of things I need to figure out formal rules for.  I only know them by intuition right now.)
+
+In contrast, take the second measure:  the syllables “You”, “me”, and “less” are emphasized.  This leads to conflicting musical and spoken phrasing: 
+Musical Phrasing:	You and me  endlessly
+Spoken Phrasing: 	You and me  endlessly
+	 
+
+The singer is now singing the phrase, syllable by syllable, which they think of as syllable-note combinations:
+YOU and ME end LESS lee
+The singer, for his part, is doing what many singers are taught to do, to make it easier to sustain the singing of words that end with unsingable consonants: the unsingable consonant is displaced onto the front of the next word.  In this case, the consonant “d” is not singable, so he displaces it onto the next syllable, when he can:  “and ME” becomes “an   dME”, and “end LESS”  becomes “en  dLESS”.  So, the singer can effectively think of the sung phrase as:
+
+YOU an  dME en dLESS lee
+
+This doesn’t cause confusion to listeners, because they’re used to hearing it.  This does mean, however, that lyric placement does not provide an accurate barometer of where a word actually ends.   
+
+ In addition, the singer is singing fudging his vowels, like singers are taught to do,   so “and” and “end” sound almost indistinguishable.  So, really, what listeners are hearing is this:
+  YOU en dME en dLESS lee
+
+Now, the listener’s brain has to take this syllabic gobbldygook, and parse it into something useful.  They’ve currently got this mess to deal with (represented in SAMPA syllables):
+ju En dmi En dl@s li
+
+
+They parse the first part just fine, because the emphases match:
+you and me En dl@s li
+
+
+But no one says endLESSly.  People say ENDlessly.  So,  the listeners don’t recognize it. they have to work with what they have.  They already turned one “En d” into an “and”, so they do it again:
+you and me and l@s li
+
+Now, they’re just left with LESS lee.  And that fits Leslie, a proper noun that fits in context and in emphasis placement.  So, the final heard lyric is:
+
+you and me and Les- lie
+
+The misunderstanding can be traced by to improper emphasis placement.  The songwriter probably didn’t even think of that, and now he’s stuck:  a one-hit-wonder with a misunderstood song.  I bet that in interview after interview, someone asks him who Leslie is.  It’s probably very frustrating—especially since he could have just moved the word an eight note later, and it would have been understood perfectly.  That’s the sort of situation this program is going to help avoid.
+
+
+
+Comparison to Existing Systems:
+
+Tra-la-lyrics is the closest system that exists to the proposed system.  It takes lyrics in Portuguese, and matches them via emphases to the music.  This is different from our system, because our system will use English-language lyrics.
+
+There are many systems that take lyrics and match them with notes, but very few use any sort of rhythmic rule set to do so.  Karaoke systems match lyrics to music on a time-based system, which is inadequate for our purposes.  However, the Wedelmusic model of a composition can be easily extended to include support for musical emphases, because of the way it separates out music and lyrics. Also, since it can be easily converted into an XML format, the composition can be transferred between programs, given the correct parser.
+ 
+Specification:
+
+A user must minimally be able to do the following
+Be able to import, compose and mutate a melody in a program
+Be able to import, compose, and mutate a lyric set in a program
+See which lyrics have emphases that  are at odds with the musical emphases, based upon predefined rule sets.
+
+Optional user functionality:
+A user should be able to add a word to a dictionary, giving each word an orthography, a part-of-speech, and a pronunciation using the symbols from the SAMPA ASCII translation of the IPA.
+A user should be able to develop multiple melodies and lyric phrases simultaneously, using a pseudo-genetic algorithm to generate new combinations.
+
+The system shall include
+An interactive GUI interface, with music and lyric text, that allows the user to mutate both the notes and the lyrics
+A dictionary of words, with orthography(i.e. spelling), part of speech, and a pronunciation
+Functionality to save and import compositions.
+
+
+User Feedback:
+I have no new user feedback.  I do, however, have some new requirements specification data from running my own trials on sample data.
+
+Steps to Completion of Project:  (1) Acquire access to a linguistic database, where every word has at least the following attributes:  --emphasis placement --part of speech --synonyms (Optional:  "mood", if applicable)  (2)Find out precisely how to determine where the emphasis of a musical phrase lies, by emailing or asking some music professors at Cal Poly, and by independent research.  (3) Design parallel data structure representations for the textual and musical phrases.  Figure out the best way to partition these so that they can still act independently, but so that they can still be compared.  (4) figure out how to compare the emphases in the text with the emphases in the music.    (5) Make sure that the music fits some constraints: -----the number of syllables in a textual phrase cannot exceed the number of notes in a musical phrase -----A word can have more than one note, but a note cannot have more than one word. -----The phrase, if we're generating lyrics, creates a sentence that makes sense, grammaticality.   (5) Incorporate the interactive component, by allowing a user to (in no particular order): -----modify the notes in a phrase, by making them longer, transposing them, or deleting them, etc (see DANCING NOTE COMPOSER) -----allow selection of notes and note phrases -----allow selection of words, and replacement with synonyms, or entered text -----allow users to change the distribution of notes-to-words, giving some indication of whether or not the song is breaking the rules of emphases.
+
+System Design:
+Currently, my project prototype is a series of excel spreadsheets, partially generated from manual input and input from .csv files, which were partially generated by some command-line text parsing. 
+
+ Prototype and Implementation
+Syllable Structure
+As a reminder, a syllable has a nucleus, a coda, and an onset.  The nucleus consists of a vowel (or semivowel), the coda consists of zero to four consonant phones, and the onset consists of zero to three consonant phones.
+Length and Weight of Individual Phones
+I’ve developed several tables to determine the weight and length of individual phones, divided by type.
+Vowels
+Vowel Type
+Weighted Worth
+Weight
+semivowel
+0.25
+0.5
+short
+0.25
+0.5
+long
+0.75
+1.5
+diphthong
+ sum of parts
+Vowels, unlike consonants, do not have any sort of sub-variables to make extensive calculations necessary.  A vowel can be long, short, a semivowel, or a diphthong. A long vowel weighs more than a short vowel, which weighs about the same as a semivowel.  A diphthong’s weight/length is just the sum of its parts.  A diphthong is a combination of two vowels or semivowels.  You just add the lengths/weights of its members to get its value.
+Consonants
+Consonants have a few variables that affect their weight.  
+First, “manner of articulation”: plosives, affricates, and fricatives weigh the most, with plosives being the heaviest (effectively, though, they’re the same weight).  Nasals, laterals, approximants, and semivowels are all effectively “weightless”, in and of themselves. 
+Second, voicing:  to “voice” a phone means to cause the vocal chords to vibrate.  “Voiced” phones are singable, whereas “voiceless” phones are not.  “Voiceless” phones are really nothing more than a hiss, or directing streams of escaping air.
+Third, the manner of starting and ending a sound has a bearing on weight.  A “block” means that you must fully stop airflow through the mouth to make the correct noise to start the sound. A block is basically a buildup-then-release of a stream of air.  “Continuous frication” is simply a continuous release of a directed air stream, without the primarily buildup.  An “end”, which is the only type of start/end that I made up a name for, is a variation of a block without the full stop of airflow through the mouth. It’s a distinctive change in the sound of a phone, but does not “build up” the air stream; it just releases it.  A “continuous” start or end is fully open, and does not require any sort of change in mouth position or air direction.  A “redirect” is a combination of a continuous start/end and a block:  it does not allow air to escape through the mouth, but does allow a continuous sound through the nose.
+CONSTANTS
+Type
+Un-weighted worth
+Weighted worth
+Manner of Articulation
+ 
+ 
+ 
+ 
+ 
+ 
+plosive
+7
+1.000
+affricate
+7
+1.000
+fricative
+7
+1.000
+nasal
+0
+0.000
+lateral
+0
+0.000
+approximant
+0
+0.000
+semivowel
+0
+0.000
+
+
+
+
+Voicing
+ 
+voiceless
+2
+1.000
+voiced
+0
+0.000
+ 
+ 
+ 
+ 
+Starts/ends as
+ 
+ 
+ 
+ 
+block
+3
+3.000
+continuous frication
+1
+1.000
+end
+2
+2.000
+continuous
+0
+0.000
+redirect
+0.5
+0.500
+Calculating Consonant Phone Length
+To figure out the length, based on all these variables, there’s a pretty complicated formula.  It didn’t already exist, so I spent several days determining it via trial and error.  Here’s the Excel formula for determining the length of a phone in line 2 of the spreadsheet, which will be followed by psuedocode that should explain it.
+
+Psuedocode: (where this is a phone)
+In the interest of space, I’ve not included conditions that would add zero to the sum.
+Full Table of Phone Makeup and Length
+SAMPA
+Example
+Type/
+Manner of Articulation
+Voiced/ Voiceless
+Starts as
+Ends as
+Cat.
+Weight
+p
+pen, spin, tip
+plosive
+voiceless
+block
+block
+Con.
+8
+b
+but, web
+plosive
+voiced
+block
+block
+Con.
+7
+t
+two, sting, bet
+plosive
+voiceless
+block
+block
+Con.
+8
+d
+do, odd
+plosive
+voiced
+block
+block
+Con.
+7
+tS
+chair, nature, teach
+affricate
+voiceless
+block
+cont fric
+Con.
+6
+dZ
+gin, joy, edge
+affricate
+voiced
+block
+cont fric
+Con.
+5
+k
+cat,kill,queen,thick
+plosive
+voiceless
+block
+block
+Con.
+8
+g
+go, get, beg
+plosive
+voiced
+block
+block
+Con.
+7
+f
+fool, enough, leaf
+fricative
+voiceless
+cont fric
+cont fric
+Con.
+4
+v
+voice, have, of
+fricative
+voiced
+cont fric
+cont fric
+Con.
+3
+T
+thing, breath
+fricative
+voiceless
+cont fric
+cont fric
+Con.
+4
+D
+this, breathe
+fricative
+voiced
+cont fric
+cont fric
+Con.
+3
+s
+see, city, pass
+fricative
+voiceless
+cont fric
+cont fric
+Con.
+4
+z
+zoo, rose
+fricative
+voiced
+cont fric
+cont fric
+Con.
+3
+S
+she,sure,emotion,leash
+fricative
+voiceless
+cont fric
+cont fric
+Con.
+4
+Z
+pleasure, beige
+fricative
+voiced
+cont fric
+cont fric
+Con.
+3
+h
+ham
+fricative
+voiceless
+cont fric
+cont fric
+Con.
+4
+m
+man, ham
+nasal
+voiced
+redirect
+redirect
+Con.
+1
+n
+no, tin
+nasal
+voiced
+redirect
+redirect
+Con.
+1
+N
+singer, ring
+nasal
+voiced
+redirect
+redirect
+Con.
+1
+l
+left, bell
+lateral
+voiced
+continuous
+continuous
+Con.
+0
+r
+run, very
+approximant
+voiced
+continuous
+continuous
+Con.
+0
+w
+we
+semivowel
+voiced
+continuous
+end
+Con.
+2
+j
+yes
+semivowel
+voiced
+continuous
+end
+Con.
+2
+W
+what (Scottish)
+approximant
+voiceless
+continuous
+end
+Con.
+3
+x
+loch (Scottish)
+fricative
+voiceless
+cont fric
+cont fric
+Con.
+4
+A
+father, not, law
+short
+
+
+
+Vow.
+0.25
+I
+city
+short
+
+
+
+Vow.
+0.25
+E
+bed
+short
+
+
+
+Vow.
+0.25
+3`/`r
+bird, winner
+short
+
+
+
+Vow.
+0.25
+{
+lad, cat, ran
+short
+
+
+
+Vow.
+0.25
+u
+soon, through
+short
+
+
+
+Vow.
+0.25
+@
+about
+short
+
+
+
+Vow.
+0.25
+jU/ju
+use, pupil
+diphthong
+
+semivowel
+short
+Dip.
+0.5
+i
+see
+long
+
+
+
+Vow.
+0.75
+V
+run, enough
+short
+
+
+
+Vow.
+0.25
+U
+put
+long
+
+
+
+Vow.
+0.75
+e
+day
+long
+
+
+
+Vow.
+0.75
+O
+or, shore
+long
+
+
+
+Vow.
+0.75
+a
+DNE in GenAm
+long
+
+
+
+Vow.
+0.75
+aI
+my, height
+diphthong
+
+long
+short
+Dip.
+1
+OI
+boy
+diphthong
+
+long
+short
+Dip.
+1
+oU/ou
+boat
+diphthong
+
+short
+long
+Dip.
+1
+aU
+now
+diphthong
+
+long
+long
+Dip.
+1.5
+=
+ridden
+semivowel
+
+
+
+Vow.
+0.25
+
+This page was intentionally left blank because Word doesn’t like me being table-happy.
+Structure of a Syllable
+A syllable, defined here in the traditional, colloquial sense, is represented as such: 
+WORD
+&lt;syllable>
+NOTE_LEN
+&lt;length of associated note>
+EMPH
+&lt;syllable emphasis value>
+SAMPSYL
+&lt;syllable in SAMPA>
+SYL_PART
+on
+nu
+cd
+
+&lt;-1>
+&lt;0>
+&lt;+1>
+
+&lt;-2>
+&lt;1>
+&lt;+2>
+
+&lt;-3>
+&lt;2>
+&lt;+3>
+
+
+
+&lt;+4>
+WORD (required field) is the orthographic (regular-spelling) syllable.  If this field only has a ^ in it, then it represents a rest.
+NOTE_LEN (required field) is the length of the note that the syllable is associated with, represented as a number from 1 to N, where N is the denominator of the shortest note length. (for example, if the shortest note is an eighth note, then N would be 8.)  N represents a whole note, and 1 would represent the shortest-length note.  (In our previous example, an eighth note would be 1, and a whole note would be 8).
+EMPH (conditionally-required field) is the emphasis value of the syllable, relative to the rest of the syllables in the word. It’s required only if the syllable is a part of a multi-syllable word.  If the syllable is a rest or a single-syllable word, then this field should be left blank.
+SAMPASYL (conditionally-optional field) is the SAMPA spelling of the syllable. This field can be left blank only if the syllable is a rest.
+SYL_PART (conditionally-optional multi-part field) is a multi-part field, representing the parts of a syllable.  All of the values are written in SAMPA. This field can be left completely blank only if the syllable is a rest.
+on (optional array-like field-column) is a column of cells representing a syllable onset.  It contains four cells, but only up to three may be used. Each cell has a single SAMPA phone/“letter” in it.   The phone at the top of the column is closest to the syllable nucleus, and as you go further down, the closer you get to the beginning of the syllable.  Not all fields must be filled out. Valid values are consonants (meaning plosives, affricatives, fricatives, nasals, laterals, approximants, and semi-vowels).  Semi-vowels that are directly adjacent to the nucleus should be part of the nucleus, not the onset.
+nu (conditionally-optional array-like field-column) is a column of cells representing the syllable nucleus. It contains four cells, but only up to three may be used. Each cell has a single SAMPA phone/“letter” in it. The phone at the top of the column is closest to the onset, and those further down are closer to the coda.  At least one field must be filled out, unless the syllable is a rest.  Valid values are vowels, semivowels (j in yes, w in we), nasals-with-semivowels (n= in “hidden”, .m= in “winsome"), and laterals-with-semivowels (l= in “waffle”).
+cd (optional array-like field-column) is a column of cells representing a syllable coda.  It contains four cells, all of which may be used. Each cell has a single SAMPA phone/“letter” in it.   The phone at the top of the column is closest to the syllable nucleus, and as you go further down, the closer you get to the end of the word.  Not all fields must be filled out. Valid values are consonants (meaning plosives, affricatives, fricatives, nasals, laterals, approximants, and semi-vowels). Semi-vowels that are directly adjacent to the nucleus should be part of the nucleus, not the coda.
+Examples
+For simplicity’s sake, the note length will not vary on all the following examples.
+Example 1: “o” 
+(Single Syllable, Single Phone)               .
+o::IN/NNP/NN/LS: "ou :{o}
+WORD
+o
+NOTE_LEN
+1
+EMPH
+
+SAMPSYL
+ou
+SYL_PART
+on
+nu
+cd
+
+
+ou
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example 3: “on” 
+(Single Syllable, No Onset, Single-Phone Nucleus and Coda)
+on::IN/JJ: "An :{on}
+WORD
+on
+NOTE_LEN
+1
+EMPH
+
+SAMPSYL
+An
+SYL_PART
+on
+nu
+cd
+
+
+A
+n
+
+
+
+
+
+
+
+
+
+
+
+
+Example 2: “no” 
+(Single Syllable, No Coda, Single-Phone Nucleus and Onset)
+67992:no::DT/RB/UH: "nou :{no}
+WORD
+no
+NOTE_LEN
+1
+EMPH
+
+SAMPSYL
+nou
+SYL_PART
+on
+nu
+cd
+
+n
+ou
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example 4: “non” 
+(Single Syllable, Single-Phone Onset Nucleus and Coda)
+non::FW/NN/NNP: "nAn :{non}
+WORD
+non
+NOTE_LEN
+1
+EMPH
+
+SAMPSYL
+nAn
+SYL_PART
+on
+nu
+cd
+
+n
+A
+n
+
+
+
+
+
+
+
+
+
+
+
+
+Example 5: “notes” 
+(Single Syllable, Single-Phone Onset and Nucleus, Double-Phone Coda)
+notes::NNS/VBZ: "nouts :{note}>s>
+WORD
+notes
+NOTE_LEN
+1
+EMPH
+
+SAMPSYL
+nouts
+SYL_PART
+on
+nu
+cd
+
+n
+ou
+t
+
+
+
+s
+
+
+
+
+
+
+
+
+
+Example 6: “yes” 
+(Single Syllable, No Onset, Double-Phone Nucleus, Single-Phone Coda)
+yes::UH/NN: "jEs :{yes}
+WORD
+yes
+NOTE_LEN
+1
+EMPH
+
+SAMPSYL
+jEs
+SYL_PART
+on
+nu
+cd
+
+
+j
+s
+
+
+E
+
+
+
+
+
+
+
+
+
+Example 7: “stringy” 
+(Single Syllable, Multi-Phone Onset, Single-Phone Nucleus and Coda)
+stringy::JJ: "strIN$i :{string}>y>
+WORD
+string-
+y
+NOTE_LEN
+1
+1
+EMPH
+1
+0
+SAMPSYL
+strIN
+i
+SYL_PARTonnucdonnucd
+r
+I
+N
+
+i
+
+
+t
+
+
+
+
+
+
+s
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example 8: “nonmembership” (Multi-Syllable Word with Two-Tier Emphases) 
+nonmembership::NN: nAn"mEm$b@`r%SIp :&lt;non&lt;{member}>ship>
+WORD
+non-
+mem-
+ber-
+ship
+NOTE_LEN
+1
+1
+1
+1
+EMPH
+0
+2
+0
+1
+SAMPSYL
+nAn
+mEm
+b@`r
+SIp
+SYL_PARTonnucdonnucdonnucdonnucdnAnmEmb@`rSIp
+CLIPS definition of a phone and its subparts
+( deftemplate mannerOfArticulation 
+	(slot label)
+	(slot weight)
+)
+
+(deffacts moaTypes  "Types of manners of articulation" 
+	( mannerOfArticulation ( label "plosive") ( weight 1 ) )
+	( mannerOfArticulation ( label "affricate") ( weight 1 ) )
+	( mannerOfArticulation ( label "fricative") ( weight 1 ) )
+	( mannerOfArticulation ( label "nasal") ( weight 0 ) )
+	( mannerOfArticulation ( label "lateral") ( weight 0 ) )
+	( mannerOfArticulation ( label "approximate") ( weight 0 ) )
+	( mannerOfArticulation ( label "semivowel") ( weight 0 ) )
+	( mannerOfArticulation ( label "syllabic consonant semivowel") ( weight 0.25 ) )
+	( mannerOfArticulation ( label "diphthong") ( weight 0 ) )  
+	( mannerOfArticulation ( label "short vowel") (weight .25 ) )
+	( mannerOfArticulation ( label "long vowel") (weight .75 ) )
+	
+)
+
+( deftemplate voicing
+	(slot label)
+	(slot weight)
+)
+
+(deffacts voicingTypes "Whether it's voiced or not"
+	( voicing ( label "voiceless" ) (weight 1) )
+	( voicing ( label "voiced" ) (weight 0) )
+)
+
+(deftemplate startsOrEndsAs 
+	(slot label)
+	(slot weight)
+)
+
+(deffacts startOrEndAsTypes 
+	( startsOrEndsAs ( label "block") (weight 3 ) )
+	( startsOrEndsAs ( label "cont fric") (weight 1 ) ) ;; continuous frication
+	( startsOrEndsAs ( label "end") (weight 2 ) )
+	( startsOrEndsAs ( label "continuous") (weight 0 ) )
+	( startsOrEndsAs ( label "redirect") (weight .5 ) )
+	( startsOrEndsAs ( label "syllabic consonant semivowel") ( weight 0.25 ) )
+	( startsOrEndsAs ( label "short vowel") (weight .25 ) )
+	( startsOrEndsAs ( label "long vowel") (weight .75 ) )
+)
+
+( deftemplate phoneCategory
+	(slot label) ;; for vowel vs. consonant
+)
+
+(deffacts phoneCategoryTypes 
+	( phoneCategory (label "consonant") )  
+	( phoneCategory (label "diphthong")  )  
+	( phoneCategory (label "vowel") )
+)
+
+(deftemplate sampaPhone
+	(slot sampaSpelling)	
+	(slot phoneCategory )
+	(slot mannerOfArticulation)
+	(slot voicing)
+	(slot startAs ) ;;(is-a startsOrEndsAs)
+	(slot endAs )  ;;(is-a startsOrEndsAs)
+	(slot weight ) ;;CALCULATE_ELSEWHERE
+)
+
+
+System Design:
+I will be using pre-existing music-composition data formats, modified to fit my needs.  First, I will be using parts of the WEDELMUSIC music and lyrics format, with a few changes:
+I will modify the Syllable class to include two more fields: an enum emphasis, whose values can be PRIMARY, SECONDARY, TERTIARY, or NEUTRAL; and a string sampa, whose value is the SAMPA representation of the syllable.
+I will create a parent class Word for Syllable objects that belong in the same word. 
+I will (likely) not be implementing a display mechanism for the multi-bar or multi-note-per-bar functionality inherent in the design.  However, I’ll probably keep the functionality intact.
+Specifically, I will be focusing on implementing the following classes:
+MainScore
+SquareBrk
+Part
+Measure
+Figure (Abstract Class)
+Note (subclassed into Note1_N, where 1/N is the note duration.  EX: Note1, Note1_2, Note1_4, Note1_8, Note1_16)
+Rest (similarly subclassed)
+Anchor (represents a point between two Figures, like a breath.
+Space (represents a symbol that takes up space, but has no duration, like a Clef or Key Signature)
+Chord (contains a group of simple Notes with the same duration)
+Beam (contains a sequence of Figures that should have a bar drawn across the top, i.e., consecutive Notes with a duration of 1/8 note or less.)
+Header
+Syllable
+HorizontalSym (Abstract Class)
+Slur
+Tie
+Tuple
+Crescendo
+Diminuendo
+Wave
+TrillAWave
+Change8va
+Arrow
+KeySignature
+Time
+
+Overall, use-case specifications have not changed. much.  Under “Specifications”-> ”Optimal User Functionality” on the preliminary proposal doc, I’ve dropped the second bullet point.  This means the idea of developing multiple melodies has been removed, as well as multiple lyric phrases.
+
+Prototype and Implementation
+
+As per my original schedule for completion, I do not yet have a program prototype.  I felt it was more important to get the data format nailed down, because it’s the majority of the problem.  Also important at this point was finding a usable dictionary, separated by syllables and pronunciation.  
+
+Data Format
+I first started to create my own composition format, but in my literature review, I stumbled upon a remarkable comprehensive data structure in  the article “ Multilingual Lyric Modeling and Management”, found in the book, “Visual Perception of Music Notation: On-Line and Off-Line Recognition”.  I have attached some relevant figures from this book below this paragraph. The only figure that I plan to change significantly is Figure 12, due to my modification of the Syllable object.  I have drawn a new class diagram for that one in lieu of including the original in this document
+The main object that contains all other objects is the MainScore (see Figure 5). It has a list of Parts (which represent different staffs), and a list of Brackets, which show which staves are to be played in parallel.  I will most likely not be implementing multi-Part music for this project, but I plan to build in support for it anyway.  Each part has a series of Measures (among other things, to be mentioned later).
+
+On the other side of the scale, the most granular object related to the transcription of music is a Figure.  Figure is an abstract class that is a parent to the Note and Rest classes, among others. Figure 6 from the book shows the relationship very well:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The main building block of a composition is a Measure.  A Measure has a HeaderList (where a Header includes the key signature and the time, i.e. tempo), and more importantly, a LayerList.  A Layer contains a sequence of Figures (See Figure 7).
+My addition to this model is in the Part object.  A Part normally includes a HorizontalList (not important for this application), a MeasureList, and a Syllable List (See Figure 9, included here, and 12, which is in the book on page 182).
+
+
+	
+
+
+
+
+
+
+In addition to these three lists, I am adding a third list, WordList, which introduces a new object, Word.  A Word contains:
+an orthographic spelling of the full word (ortho), 
+a part of Speech code as defined by the UNISYN dictionary (PoS), 
+an optional unique identifier, if needed (uniqID)
+a list of pointers to Syllables called “WordSyllableList”.  
+Each Syllable represents one traditional syllable of a word.  For example, in the word “winter”, there would be two Syllable objects in the WordSyllableList: one for “win”, and one for “ter”.  A Syllable object has the following fields (fields added by me are denoted with *):
+text:  the orthographic text of the syllable 
+start: a pointer to the Figure where this Syllable starts being enunciated
+end (conditionally optional): a pointer to the Figure where enunciation should end.  If it only spans one Figure, then this is not set. Otherwise, it is set to the point where the next Syllable’s start is positoned, or to the point where you’re supposed to stop enunciating it.
+sep: the separator to indicate how this syllable connects to the next
+ “n” means the syllable is a full word, or the end of a word, and is not extended to multiple Figures.
+“ “ means the same as “n”.
+“/” means the syllable is not the last in a word and is not extended.
+“-“ means the syllable is not the last in a word and is extended.
+“_” means the syllable is the last in a word and is extended. 
+*sampa:  the SAMPA representation of this syllable.
+*emph:  the emphasis value placed on this syllable 
+PRIMARY means primary emphasis
+SECONDARY means secondary emphasis
+TERTIARY means tertiary emphasis
+NEUTRAL means there is no extraordinary emphasis on the syllable.
+A rough diagram to show how these interact with the whole structure is below:
+The class “Word” is needed, because otherwise, I would have no way to eventually extend my parser to include things like rhyme-matching, synonym-swapping, etc.  I may still need to add fields to Word, as I think of them, but these are sufficient for now.
+
+
+Fickle Phones in the Coda
+Look, phones in the coda are like an easily-distracted dog.  One moment, you think they’re with you, right behind you, and then next, you turn around, and notice that they’re less “behind you” than they are “in front of the person behind you”.  You are the syllable in this metaphor, and the person behind you is the syllable that comes after you.  Your dog is the last consonant in your coda.  Certain “dogs” will go join the “person” behind you, while others will stick with you!  Don’t judge—it’s just the way they are.  But you need to know if your dog’s going to stick with you or not.  
+Phones That Stay In Coda:
+“m” in “sam-ba”
+Phones That Move to Next Syllable’s Onset:
+“d” in “un-a-void-a-ble”
+Calculating Weight/Length of Independent Syllables
+The “Full Table of Phone Makeup and Length” table shows all the lengths and weights for all the phones, as stand-alone values.  However, it does not take into account what effect that the surrounding phones might have on a phone’s length.  To determine that, we need to figure out the length/ weight for the whole syllable.
+
+Pseudo Code Formula for Determining Semi-Stand-Alone Weight
+
+=IF(THIS.NUCLEUSWEIGHT==0,
+	0,
+	(SUM OF (THIS.ONSETVALS[1-2] )/ [( COUNT OF (ONSETVALS[1-2] ) * 8)]
+)
++IF(THIS.CODAVALS[0]==0,
+	IF(THIS.NUCLEUSWEIGHT>1, 
+		1,
+		THIS.NUCLEUSWEIGHT
+	),
+	THIS.NUCLEUSWEIGHT
+)
++ [SUM OF(THIS.CODAVALS[1-4]) ] /  [COUNT OF(THIS.CODAVALS[1-4])* 8]
+
+- IF(NEXT.ONSETVALS[0] ==0,
+	IF( THERE IS ONLY ONE CODA VAL, 
+		IF(THIS.NUCLEUSWEIGHT>1,
+			(THIS.NUCLEUSWEIGHT-1)+ [(THIS.CODAVALS[ last non-empty index ]) /  8 ],
+			[ (THIS.CODAVALS[ last non-empty index ]) /  8 ]
+		),
+		[ (THIS.CODAVALS[ last non-empty index ]) /  8 ]
+	),
+	0
+)
+
+Actual Excel Formula:
+
+=IF(O2=0,
+	0,
+	(SUM(L2:M2)/(COUNT(L2:M2)*$AE$2))
+)
++ IF(P2=0,
+	IF(O2>1,
+		1,
+		O2
+	),
+	O2
+)
++(SUM(Q2:T2)/(COUNT(Q2:T2)*$AE$2))
+
+-IF(N3=0,
+	IF(OFFSET(T2,0,-COUNTIF(P2:T2,0))=P2,
+		IF(O2>1,
+			(O2-1)+((OFFSET(T2,0,-COUNTIF(P2:T2,0)))/((COUNT(Q2:T2)-COUNTBLANK(Q2:T2))*$AE$2)),
+			OFFSET(T2,0,-COUNTIF(P2:T2,0))/ ((COUNT(Q2:T2)-COUNTBLANK(Q2:T2))*$AE$2)
+	 	),
+		OFFSET(T2,0,-COUNTIF(P2:T2,0))/((COUNT(Q2:T2)-COUNTBLANK(Q2:T2))*$AE$2)
+	),
+	0
+)
+I could get even more complicated here, due to differing consonant lengths. However, vowel length is much more distinctive than consonant length. In the interest of time, I’ve decided to simplify the way that the coda and onset add weight/length to a syllable.
+There are a few major types of consonants:
+plosives
+affricatives
+fricatives
+nasal stops
+semivowels
+
+I know there’s a hierarchy of length between  them, but I haven’t yet figured that out.  What I have figured out is that you get one phone in the coda and one phone in the onset for “free”, i.e. you’re allowed to discount its length in calculating the length of the whole syllable.
+	
+SIDE NOTES:	
+Problems encountered with consonants:
+2 unique plosives should not be next to each other
+Ways to solve:
+Change the word (not an option in this iteration)
+Make the note for the first plosive’s syllable longer, and put a small rest in between
+put a small rest in between
+Take a breath in between.
+If  the (Number of sounds a word’s coda) plus the (Number of sounds in the NEXT word’s onset) is greater than four, then it’s generally unpronounceable.
+Ways to solve:
+Change the word (not an option in this iteration)
+Make the note for the first plosive’s syllable longer, and put a small rest in between
+put a small rest in between
+Take a breath in between.
+
+Calculating Length of Syllables in Relation to Each Other
+Just like the weight of phones cannot be fully quantified in isolation, syllable length/weight is affected by surrounding syllables.
+If a syllable’s last phone is the same as the next syllable’s first phone, then it you can disregard the weight of one of them.  Singers often only sing one of them, and use it for both words. For example:  Bake cookies becomes : bay-cookies  Stars shining becomes : star-shining.  Yelp peppers becomes: yell-peppers.  
+There are several other rules, which I’ve put in the algorithm/formula, but haven’t written out yet. That’s on the menu for the Week 10 update.
+
+Syllable Length
+I had not thought of the issue of note-length/weight vs. syllable-length/weight when matching lyrics to music, but came to my attention during the literature review. The general idea is that it takes longer to say some sounds than it does others, and that some sounds flow better into one sound as opposed to another.  I’ve decided that this is important enough for the success of the project that I need to include it, and figure out the rules involved.
+The Basic Structure of a Syllable
+A syllable has a syllable nucleus, an optional onset and an optional coda. 
+The syllable nucleus is the anchor of the syllable, and as such, is typically the sound that a singer will “hold” while on a note.  It is normally a vowel, but can also be a sonorant, or “singable” consonant, like m, n, l, or r, if no vowel exists.  All syllables must have nuclei, for the purposes of this project.
+The onset is all the sounds that occur before the syllable nucleus.  Typically, these are consonants.  The existence of a syllable onset is common, but not guaranteed. In English, it can contain between zero and three consonants.
+The coda of a syllable is all the sounds that occur after the syllable nucleus.  Again, these are typically consonants. The having a syllable coda is more rare than having a syllable onset.  In English, it can contain between zero and four consonants (five with pluralization).
+Example:   cat
+Part        Ortho	    SAMPA	
+Onset: 	c		k
+Nucleus:	a		{
+Coda:		t		 t
+Determining Syllable Weight and Length
+Though syllable weight is a generally infinite relative scale, there are three main classifications of syllable weight:  Light, Heavy, and SuperHeavy.  Some important indicators of a long, or heavy, syllable are as follows:
+a long vowel in the nucleus
+a dipthong/tripthong in the nucleus
+one or more coda.
+This means that the two main things we need to look at when determining syllable weight and length are vowel type in the nucleus, and coda complexity.
+
+Vowel Types
+The English language only has five (and a half) letters representing vowels: a, e, i, o, u, and sometimes y.  However, there are many, many different vowel sounds.  Thankfully, the SAMPA alphabet already helps us enumerate them.  The following charts are adapted from the Wikipedia entry for “SAMPA Chart for English”, primarily using the GenAm accent).
+SAMPA vowels
+Notation
+
+Example(s)
+Type
+Heaviness
+A
+
+father, not, law
+short (o)
+0
+i
+
+see
+long (e)
+1
+I**
+city
+short (i)
+0
+
+E
+
+bed
+short (e)
+0
+3` or `
+
+bird, winner
+short (u?)
+0
+{
+
+lad, cat, ran
+short (a)
+0
+V
+
+run, enough
+long (central vowel)
+1
+U
+
+put
+long (u?)
+1
+u
+
+soon, through
+short(u)
+0
+@
+
+about
+short (schwa)
+0
+e
+
+day
+long (a)
+1
+aI
+
+my, height
+dipthong, long(I), short (i)
+2
+O
+
+or, shore
+long (o)
+1
+a#
+DNE in GenAm
+long (I)
+DNE in GenAm
+OI~ *
+boy
+dipthong, long (o), short(i)
+2
+oU or ou+
+boat
+dipthong, long (o) long(u)
+3
+aU**
+now
+dipthong, long(I) long(u)
+3
+
+ju
+
+use, pupil
+dipthong, sonorant, short(u)
+1.5
+
+Consonant Types in the Coda and Onset
+I could get even more complicated here, due to differing consonant lengths. However, vowel length is much more distinctive than consonant length. In the interest of time, I’ve decided to simplify the way that the coda and onset add weight/length to a syllable.
+There are a few major types of consonants:
+plosives
+affricatives
+fricatives
+nasal stops
+semivowels
+
+I know there’s a hierarchy of length between  them, but I haven’t yet figured that out.  What I have figured out is that you get one phone in the coda and one phone in the onset for “free”, i.e. you’re allowed to discount its length in calculating the length of the whole syllable.
+	
+SIDE NOTES:	
+Problems encountered with consonants:
+2 unique plosives should not be next to each other
+Ways to solve:
+Change the word (not an option in this iteration)
+Make the note for the first plosive’s syllable longer, and put a small rest in between
+put a small rest in between
+Take a breath in between.
+If  the (Number of sounds a word’s coda) plus the (Number of sounds in the NEXT word’s onset) is greater than four, then it’s generally unpronounceable.
+Ways to solve:
+Change the word (not an option in this iteration)
+Make the note for the first plosive’s syllable longer, and put a small rest in between
+put a small rest in between
+Take a breath in between.
+
+
+Psuedo Code Formula for Determining Syllable “fit” with the music.
+
+=IF(U18 > A18,
+	 IF(D19=F18, 
+		IF( (U18 - 1 &lt;= A18 + A19 ) ,
+			 1, 
+			0
+		),
+		IF(D19 = 0, 
+			IF(U18 &lt;= A18 + A19,
+				 1,
+				0
+			),
+			0
+		)
+	),
+	1
+)
+=IF(U18 >= A18,  IF(D19=F18, IF( (U18 - 1 &lt;= A18 + A19 ) , 1, 0),   IF(D19 = 0, IF(U18 &lt;= A18 + A19, 1, 0),   0) ),   1)
+
+=IF(U18 > A18,  IF(D19=F18,    IF( (U18 - 1 &lt; A18 + A19 ),  1, 0),     IF(D19 = 0,  IF(U18 &lt; A18 + A19, 1, 0),   0),   1)
+
+=IF(U18 > A18, 
+	IF(N19 = 0, 
+		IF(U18 &lt; A18 + A19, 
+			1,
+			0
+		),
+		0
+	), 
+	1
+)
+
+Patterns for Musical Emphases
+Similar to iambic pentameter in a Shakespearian sonnet, music (even when devoid of words) has a repeatable ebb and flow to its emphases.  This is called “meter”.  It is actually remarkable similar to poetic meter (which is why they share the same term).  Most music is patterned with the emphasis on the first part of a beat.  So, if we have a measure of  four quarter notes, the count would go like this:
+1-and 2-and 3-and 4-and
+The emphasis would go like this:
+1-and 2-and 3-and 4-and
+The emphasis goes on the first part of each note.
+Now, say we exchanged the first quarter note for  two eighth notes.  The count and emphases would now be like this:
+1-a-half-and 2-and 3-and 4-and
+I’m not sure how clear it is, but the “1-and half-and” is the same length as the “2-and” or “3-and” or “4-and”.  However, because we’ve broken our quarter note “1-and” into two eighths “1-a-half-and”, we get an extra emphasis where there used to be none:  “half” and the old “and” occupy the same space, musically, but since we split the quarter note, we now get an emphasis in that same space.
+This still needs work—I’ve got to be able to codify the emphases into a generaliz-able form.  Ideally, that’s what I would have finished this week, but the syllable thing set me back a bit.
+RULES:
+Single syllable words are useful as “filler”, in that they can be used to fill emphasized or un-emphasized “slots” in the music.
+Multi-syllable words must have their emphasized and unemphasized syllables match up with the emphasized or unemphasized “slots” in the music.
+
+There are several other rules, which I’ve implemented, but haven’t written out yet. That’s on the menu for the Week 10 update.
+
+
+Effect of Note Intervals on Musical Emphasis Patterns
+A “note interval” is a change in pitch between two notes.  Note intervals are one of the most noticeable factor in figuring out if a lyric matches a musical emphasis.  They also have the most direct analogy to lyrical emphases.  
+
+Original Approach
+
+I have been representing the pattern of musical emphases as constant binary rhythmic sequences.  In a binary rhythmic sequence, the number "1" is used to represent an emphasized beat, and "0" represents an unemphasized beat.
+Originally in my research, I was deriving the binary rhythmic sequence (BRS) solely using the time signature of a piece.  For example, the sequence for a waltz would be "1 – 0 – 0,  1 – 0 – 0,  1 – 0 – 0", since the only emphasized beat in a piece with ¾ time is the first beat. 
+As it turned out, I was oversimplifying.  You need to consider all sorts of musical accents when determining how to make a lyric fit a melody. I had only been considering the case of simple meter, in which there is a strict succession of regularly spaced strong and weak beats.  
+I realized my omission when attempting to apply my algorithm to the chorus of The Bloodhound Gang’s, “The Bad Touch”. The first threes clauses of the chorus are as follows:
+“You and me” “baby ain’t” “nothing but mammals”
+This breaks down like this:
+WORD
+You
+and
+me
+ba-
+by
+ain’t
+NOTE_LEN
+1
+1
+2
+1
+1
+2
+EMPH
+
+
+
+1
+0
+
+SAMPSYL
+ju
+@nd
+mi
+be
+bi
+ent
+SYL_PARTonnucdonnucdonnucdonnucdonnucdonnucdju@nmibebiendt
+WORD
+no-
+thing
+but
+mam-
+mals
+
+NOTE_LEN
+1
+1
+1
+1
+1
+EMPH
+1
+0
+
+1
+0
+SAMPSYL
+nV
+TIN
+bVt
+m{
+ml=z
+SYL_PARTonnucdonnucdonnucdonnucdonnucdnVTINbVtm{m	l=z
+The main thing to notice here is the emphasis pattern:
+  		     you  – and – me  –  ba – by  – aint – no – thing – but – mam - mals
+x – x – xx – 1 – 0 – xx – 1 – 0 – x – 1 – 0
+( x is a wild-card syllable from a single-syllable word. 1 is an emphasized syllable in a multi-syllable word.  0 is an un-emphasized syllable in a multi-syllable word. )
+Using my original assumptions, the beat of a 4/4 measure should always be 1 – 0 – 1 – 0.  In this case, though, there's no way to  fit that structure, because the two-syllable words “nothing” and “mammals” are only separated by a single syllable.  This means that our emphasis pattern according to our current algorithm where we only look at syllable length and emphasis patterns, must be one of the following:
+  	   you  – and – me  –  ba – by  – aint – no – thing – but – mam - mals
+1 – 0 – 10 – 1 – 0 – 10 – 1 – 0 – 1 – 1 – 0
+OR
+you  – and – me  –  ba – by  – aint – no – thing – but – mam - mals
+1 – 0 – 10 – 1 – 0 – 10 – 1 – 0 – 0 – 1 – 0
+Either way, in the third clause, “nothing but mammals”, we have two adjacent syllables of the same emphasis value. Under our original system of rules, this isn’t allowed.  However, the song’s emphases still sound right, so there had to be another factor affecting emphasis (you see where this is going, right?).
+As it turns out, the sheet music for this part sheds light on the situation:
+
+The first two clauses, “You and me” and “baby, ain’t” have no note intervals (the  pitch doesn’t change from note to note). However, in the third clause, there is a positive note interval between “but mam-”, and a negative note interval between “mam-mals”:
+Obviously, my original approach fails if a lyrics clashes such that the textual emphases are not uniformly alternating.  However, the failure can be countermanded (fixed/rectified/adjusted/revised) by adding the consideration of note intervals and other musical accents into the algorithm.
+In my original examination of the situation, I completely failed to realize how a note's relation to the other notes around it could affect that pattern.  Syncopation, accent marks in sheet music like the stacatto symbol, and single-note variations in previously-established chorus melodies are all aspects that are commonly used to heighten the dramatic tension of lyrics.   
+Though the aforementioned list of musical accents are useful, they require me to collect additional data on imported songs, and to add additional complex logic.  Also, not all songs contain these elements.  Because of that, I've decided to push the implementation of those off until a later date.  
+Note intervals are the most common (and, thankfully, easiest to incorporate using existing data) affecter of music emphases.  Any time there is a change in pitch in a song, you've got a note interval.  Without implementing note intervals, I would only be able to parse songs that never changed pitch in succession.
+Data Acquisition
+Once a composition is fully parsed in from the Music XML format,  there are just a few more steps to take. The program grabs correct phonetic information for each word for each word from the embedded CLIPS environment, and stores it in the Word and Syllable Objects
+ 
+At the end of the data acquisition phase, you'll have three interconnecting lists of Words, Syllables, and Notes, representing the song lyrics:
+
+
+Binary Rhythmic Sequence (BRS) Construction and Meaning
+Music BRS
+Music BRS's are pretty simple:  either a beat is emphasized, or it isn't.  If a beat is emphasized, you represent it with a "1".  If it's not, it's a "0".  A simple, 4/4 time measure would have this music BRS:
+1 – 0 – 1 – 0
+In the above example, the first and third beats are emphasized, whereas the second and fourth are not.
+Lyric BRS
+Lyric BRS's are slightly different than music BRS's, because of the possibility of secondary emphases in words.  For example, the word "strawberry" has a primary emphasis on the first syllable, a secondary emphasis on the second, and no emphasis on the last.  Go ahead, try to say "Strawberry" without your tone of voice going down with each syllable (Asking it as a question doesn't count, cheater!).  It sounds wrong. 
+Because we have to deal with secondary emphases, we have to have more than just 0 and 1 for symbols in the BRS for lyrics. Here's the symbol breakdown:
+Symbol and Value:                0           &lt;                2           &lt;                1      
+Meaning:                    No Emphasis &lt; Secondary Emphasis &lt; Primary Emphasis
+Example:                   Straw-be-rry   1 – 2 – 0 
+The fact that the emphasis scale for the symbols goes 0, 2, 1 is a little counter-intuitive, but it works better for most cases to pretend that 2 doesn't exist. Secondary emphases are pretty rare in English, so most of the time, we'll only need to use 1's and 0's in our Lyric BRS's.
+Evaluating Correctness of Note Intervals
+To evaluate the fitness of note intervals, you need three things:
+(1) The meter of the piece and its implied binary rhythmic sequence (BRS) 
+(2) The list of Syllables
+(3) The list of Notes.
+In our example, "The Bad Touch", the meter is 4/4, so the music BRS is the basic "1 – 0 – 1 – 0 ", which (again) is delightfully repetitive.  We already parsed in the lyrics, so we also have a list of Notes and Syllables. We're ready to start!
+Step One:  Compute a Lyric BRS From The Syllable Emphases
+Basically, you lookup each word in the lyrics in the phonetic dictionary.  Single-syllable words are represented with the wildcard symbol 'x' because they can fall on both emphasized and unemphasized beats.  For multi-syllable words, each syllable must be represented with either a 0 or a 1 (or a 2, in the case of secondary emphases). If the note that the syllable is associated with is longer than a single beat, then the emphasis value will  be followed by however many x's are needed to have the correct number of beats.
+In our example, the lyric is "nothing but mammals".  That breaks down like this:
+Lyric
+no-
+thing
+but
+mam-
+mals
+Note length
+1
+1
+1
+1
+1
+Lyrics BRS
+1 –  
+0 –
+x –
+1 – 
+0 – 
+Music BRS
+1 –
+0 –
+1 –
+0 – 
+1 – 
+
+Step Two: Compare each syllable's lyric BRS to its music BRS
+This step is pretty self explanatory.  For each syllable, you look at the value that the Lyric BRS has, and compare it to the Music BRS value.  If it's the same symbol or if the Lyric BRS symbol is x, it's a match.  If the Lyric BRS is unemphasized, but the Music BRS is emphasized, then it still works, though it's not ideal.  If there's a out-and-out mismatch, like there is on " mam- mals " in this example, you've got to move on to check if there are mitigating factors that might compensate for the disjoint.  
+Step Three: In cases of BRS mismatch, check the intervals in the associated word or syllables
+Here's the chart from the previous step, but with the note intervals populated:
+Lyric
+no-
+thing
+but
+mam-
+mals
+Note interval
+0
+0
+0
++
+-
+Note length
+1
+1
+1
+1
+1
+Lyrics BRS
+1 –  
+0 –
+x –
+1 – 
+0 – 
+Music BRS
+1 –
+0 –
+1 –
+0 – 
+1 – 
+ 
+So, since we noticed the mismatch on "mam- mals ", we've got to go look into the details of its member syllables "mam-" and "mals".  
+Note intervals are the most important thing to notice here.  They are represent how the note is different in pitch than the one before it. The note interval on "mam-" has no relationship to  "mals", because it’s referring to the difference in pitch between it and the note associated with " but", the word that precedes it. 
+Lyric
+mam-
+mals
+Note interval
++
+-
+Note length
+1
+1
+Lyrics BRS
+1 – 
+0 – 
+Music BRS
+0 – 
+1 – 
+We can actually use that knowledge to narrow down the scope of our problem.  We only have to look at the note interval on "mals", since its note interval connects back to "mam-".
+When we look at the note interval on "mals", we find that it's negative.  This is perfect, since "mals" should be less emphasized than "mam-".
+
+
+
+
+
+
+
+
+
+
+ 
+Example: Van Halen, Running With the Devil
+Lyricrun-ningwiththede-vilNote interval00--+-Note length2221324(end)Lyrics BRS1 – x –0 – x –x – x –x –1 – x – x –x – x….Music BRS1 – 0 –1 – 0 –1 – 0 –1 –0 – 1 – 0 –1 – 0 –….
+Notes on "ning": It's okay for unemphasized syllables to be on emphasized beats, so long as the new emphasis pattern doesn't match that of an existing word, and so long as the emphasized syllables in the same word are also on emphasized beats.
+Notes on "de-": This syllable is emphasized, but the first beat that it falls on is not an emphasized beat.  There are a few possible reasons why this might be true:
+(1) The note interval of "de-" is positive, so the emphasis is positive. 
+	--More correctly, since note intervals refer to the change in pitch between a syllable's note and the preceding note, we'd want to look at "vil" to see if the word " de- vil " was emphasized correctly. When we do, we find that "vil" has a negative note interval, so it's less emphasized than "de-", so everything is hunky-dory!
+(2) The note that "de-"  is associated with continues through an emphasized beat, so it's emphasized.  
+(3) The slightly longer length of the note associated with "de-" makes it emphasized.
+Since I'm focusing on the effects of note intervals right now, we're going to appoint that as the main cause.Example: The Beatles, Sgt. Pepper's Lonely Hearts Club Band
+LyricWe'reSer-geantPep-per'sLone-lyHeartsClubBandNote interval0+000+0---Note length1111121222Lyrics BRSx –1 –0 –1 –0 –1 – x –0 –x – x –x – x –x – x –Music BRS0 –1 –0 –1 –0 –1 – 0 –1 –0 – 1 –0 – 1 –0 – 1 –
+Notes on "We're": If you notice, the music BRS value for this is 0, even though it's the first word in the lyric.  This is because "We're" is on the downbeat, which is the beat that directly precedes the first beat of a measure.  It's actually on the end of the previous measure.
+Notes on "ly": It's okay for unemphasized syllables to be on emphasized beats, so long as the new emphasis pattern doesn't match that of an existing word, and so long as the emphasized syllables in the same word are also on emphasized beats.
+Notes on " Hearts Club Band ": Though this is outside the scope of what I'm investigating here, it's interesting to see how the obvious-to-the-ear syncopation of this phrase is mirrored in the way the music BRS lines up with the lyrics.  I hypothesize that the syncopation is caused by the "backwards" matchup; instead of the music BRS of each word going "1 – 0 –", it goes, " 0 –1 –". Kind of cool.
+Example: The Beatles, While My Guitar Gently Weeps
+LyricWhilemygui-targent-lyweepsNote interval0--+--+Note length2214222Lyrics BRS1 – x –1 – x –0  – 1 – x – x – x –1 – x –1 – x….x – x –Music BRS1 – 0 –1 – 0 –1 – 0 –1 – 0 –1 –0 – 1 –0 – 1 – 0 – 1 – 
+Notes on " gui- tar ":  The first syllable of the word "guitar"  is emphasized, but the beat that that syllable is on is unemphasized.  We overcome this by checking the emphasized syllable, " tar ".  Since " tar " has a positive note interval, the word is still correctly emphasized. Hooray!  
+Notes on " gent- ly ": Again here, the word's emphasis pattern doesn't match the emphasis pattern in the music.  When we then check the intervals for both syllables, we find they both are negative. This isn't a problem, though.  Since a note interval refers to the relationship of a note to the note preceding it, we only have to look at the second syllable of the world, " ly ".  Since " ly " has a negative interval, it's less emphasized then " gent " in the song, which is exactly what we want.
+
+
+Example: The Beatles, Strawberry Fields Forever
+LyricStraw-be-rryFie-ldsFor-e-verNote interval0--+--+-Note length11111111Lyrics BRS1 – 2 –  0 –1 –0 – 0 – 1 – 0 – Music BRS1 – 0 –0 –1 –0 – 0 – 1 –0 – 
+Though most of "Strawberry Fields Forever" is in 4/4 time, the chorus, where this lyric is taken from, is a waltz, in ¾ time.  So, the Music BRS is "1 – 0 – 0 –, 1 –  0 – 0 – "
+Notes on " Straw- be- rry ":  The secondary emphasis on "be-" slightly complicates this word.  Though the primary emphasis on " Straw- " matches up with the emphasized beat in the music BRS, the secondary emphasis is on an un-emphasized beat.  While it's alright for unemphasized syllables to be on emphasized notes normally, in this situation, since the next syllable " rry " is even less emphasized than " be- ", we shouldn't have them on the same emphasis level if we want to avoid ambiguity.  This is where note intervals come in!  To compliment the fact both " be- " and " rry " are less emphasized than the syllables before them, they both have negative note intervals, so it  sounds right!
+Notes on " For- e- ver " :  If this wasn't in ¾ time, the Lyric BRS and Music BRS wouldn't match up, but it still would be correct, since the note intervals mirror the syllable emphases.
+
+
+
+
+
+
+
+
+
+
+
+
+Parsible Phonetic Dictionary 
+Parsable Dictionary
+I started off by looking at MIT’s .  Eventually, I was led to a paper that, while not really related to my topic, had a list of phonetic dictionaries in it: CMU dictionary, LC-STAR dictionary and UNISYN dictionary.  I started out by looking at the LC-STAR dictionary, but I quickly decided that it wasn’t going to be as useful to me, because the LC-Star project is relatively focused on Speech-to-Speech or Text-to-Speech tech. Also, the website had not been maintained since 2006.   I then tried the CMU dictionary, which, for a while, seemed like it was going to work.  It had a very simple way of encoding words:  first the word, then the identifier number in parents (if needed), then a space, then a one-to-two char code for each sound in the word, with the numbers 0, 1, 2 appended to indicate emphasis (if needed), separated by spaces:
+ABBREVIATE  AH0 B R IY1 V IY0 EY2 T
+The problem that arose with this format, was that there was no explicit definition of where to hyphenate the word when splitting it up.  This causes problems if I want to use the word in lyrics, where each note has is own syllable underneath it, and each syllable might have many different sounds. 
+The benefits of the CMU dictionary over some other dictionaries were that (1) it was actively maintained, (2) it included proper nouns, which are often found in lyrics, but not in dictionaries, and (3) it was ridiculously easy to read.
+The downsides were that (1) it included no part of speech data or hyphenation data, and (2) it used non-standard symbols for its phonetic alphabet.  
+With the downsides and benefits in mind, the CMU dictionary could not be used in isolation, especially if I someday want to attempt generation of original lyrics (which part of speech data would be vital for).  
+The UNISYN dictionary is used primarily to phonetically translate words into multiple accents.  It has its own formated dictionary, with a bunch of wildcards in it.  They also provide some semi-functioning perl scripts that allow you to specify a dialect you’d like to use (For example, I would say “cooking” differently than someone from the Deep South, and we both would say it differently than someone from London.  However, we’re all speaking English.  The UNISYN dictionary facilitates this translation).  
+It had all the information I needed, and then some.  However, it did not include proper nouns, like the CMU dictionary did.  The obvious conclusion, then, was to combine them.  I decided that anything that was in the CMU dictionary, but not in the UNISYN dictionary, would be counted as a proper noun.  And with that, I started to massage both data sets into mergable forms.
+However, I ran into a setback, mentioned in the very first article I found references to both dictionaries in:  the dictionaries were inconsistent.  They didn’t always put stresses in the same place, nor did they always have the same pronunciation.  Because of this, it was difficult to match words—especially words that were homographic heteronyms (same writing, different sounds).  For now, I have decided to use the UNISYN dictionary exclusively, and if I have time, I’ll try to parse out the proper nouns from the CMU dictionary. This removes added unnecessary complexity, but does not structurally prevent me from adding that complexity later, so its a good sacrifice.
+Final Phonetic Dictionary Choice
+I used the UNISYN dictionary, using General American SAMPA output, as the base for my phonetic dictionary.  
+First, I downloaded the dictionary and related files from the UNISYN website.
+Once I’d extracted them, I attempted to run the provided perl scripts to turn the UNISYN phonetic symbols into SAMPA phonetic symbols, using the procedure specified in Section 6.1 of their Documentation1_3.pdf, and towncode “gam”.
+There were a few errors in translation I fixed manually:  
+‘  d   ’ instead of  ‘   4   ’  
+‘  5  ’ instead of  ‘   l   ’
+‘  `r\  ’ instead of  ‘   r   ‘
+‘   3   ‘ instead of ‘   3`   ‘
+In the case of the last one, I actually didn’t fix it, and just decided to use a modified sampa.  Similarly, with the second to last, I left the ` in, and ignored them as they came along during parsing.
+Here is the format for the raw fields, after I was done with fixing the UNISYN output:
+&lt;ortho>:&lt;uniqueID>:&lt;partOfSpeech>:&lt;SAMPAspelling>:&lt;extendedOrtho>:&lt;freq>
+Example:
+transfer:2:VB/VBP: tr{ns"f3`r :{trans==fer}:7184
+
+&lt;ortho> is the regular spelling of the word
+&lt;uniqueID> is a number (and optional string) used to differentiate homographs.
+&lt;partOfSpeech> is used to identify the specific part of speech
+&lt;SAMPAspelling> is the breakdown of the word, phonetically. It uses the SAMPA alphabet, and separators to show where breaks in the word are, and how they’re emphasized. If a separator is ' $ ', the following phones (until the next separator) are not emphasized.  If it's ' % ', then they are the secondary emphasis.  If it's ' " ', then they are the primary emphasis.
+&lt;extendedOrtho> and &lt;freq> have no particular use to me, at this time.  They are an alternate breakdown of the word's roots, and the frequency at which it occurs in language, according to UNISYN.
+
+My next step, to get these into the format that I need for my program , was to split up the fields into sub-fields to make them into a .csv (but using tabs as the field delimeter). I decided to do that like this (I'm using | as the field delimeter here, because it looks better, even though I'm using tabs for parsing)
+
+&lt;ortho> | : | &lt;uniqID#> | &lt;uniqIDString> | : | &lt;partOfSpeech> | : | &lt;extendedOrtho> | : | &lt;freq> |  &lt;FullSAMPAstring> | : | syllableBreakdown(see below)... | '\n' |
+
+syllableBreakdown:
+&lt;charSeparator> | &lt;sampaSyllableSubstring> 
+
+
+The end of each word entry will be indicated with a newline.
+After I got the dictionary in this format, I opened it as a CSV in excel, inserted a column of commas between each field, a  column of ' ));' after the last field, and a column with with string “dict.add(Word(“ before the first field. 
+This was my hack-y way of making constructors for all the words in my dictionary.  All I had to do was highlight the table, then copy and paste it as plain text into my code's dictionary constructor.  
+Adjustment for the CLIPS format
+For the second iteration of Melody Matcher, we used a rule-based system based on CLIPS and C++, so some adjustments had to be made.  We decided that, instead of a Dictionary class which populated itself upon construction, we would store the dictionary words as CLIPS facts.  
+I created a template for a "word" fact as the primary housing for my dictionary entries.
+( deftemplate word
+		( slot orthoSpelling )
+		( slot uniqueID )
+		( slot partOfSpeech )
+		( slot FullSAMPAstring )
+		( multislot syllables ) 
+		( slot etymology )
+		( slot freq )
+)
+I did some text manipulation to get the dictionary file into this form, and then loaded it into CLIPS.
+Transfer of Phonetic dictionary into SQL Database
+The time eventually came for me to transfer the csv into a usable form: a database. I decided to use SQLite3, because it seemed like a good idea at the time. I’m sure I had good justification.  I should have written it down, dang it!
+To turn the csv into a SQLite database, I decided to use a program called the “SQLite Database Browser”, an open source, public domain, freeware visual tool to create, design, and edit SQLite3.x database files.  I specifically used version 2.0b1 of the program, which was built with version 3.6.18 of the SQLite engine.
+From that point on, it was just a matter of changing my ‘:’ delimiter in my .csv to a ‘|’ delimiter, and letting the program convert the csv into a sqlite database.
+
+
+Evaluation of the Suitability of Rule-Based Systems for Melody Matcher
+Jennifer Hughes
+
+Overview of Melody Matcher
+Melody Matcher aims to replicate the human ability to identify lyrics in a song that are easily misheard.  Lyrics can be misunderstood due to:
+Lyric/Music emphasis mismatch, due to:
+Note intervals
+Phrase emphases 
+Word emphases
+Word "cramming", due to 
+syllable lengths that exceed that of note length
+Mouth movement delta time intervals
+Word misidentification, due to
+Altered pronunciation of words
+Phone similarity
+Voicing (voiced vs. voiceless)
+Beginning/end mouth positions
+Type (Plosive, Fricative, affricate, nasal, lateral, approximant, semivowel)
+Improper cognitive parsing of phone sequences
+Phone sequences that can be parsed more than one way
+Non-deterministic interpretations of phone sequences.
+Phone sequences with multiple interpretations and/or tokenizations
+
+Suitability of Current Implementations
+Currently, Melody Matcher has two partial implementations.  One is rule-based, using the CLIPS system, and one uses conditional equations embedded in an Excel Spreadsheet.  In the following section, I explain the advantages and disadvantages of both. Ultimately I decided that, for the exploratory iteration of my project, a rule-based system is better than a purely equation-based one. 
+
+Benefits of a Rule-Based Approach
+Easy Modification Due to Modularization
+A rule-based approach using templates and facts allows for less-messy modification of all components.  If an end user decides that they want a song to be deliberately ambiguous-sounding at a certain point, they can disable certain rules for that section.  If I decide that the phone "jU" needs to be categorized as a syllabic consonant instead of a semivowel, all I have to do is go into the fact that uses phone template to store the data about "jU", and change it there.  
+Meaningful and educational results
+By using rules to determine fitness, you can determine exactly where and why a lyric went wrong.  The algorithm conveys and explains its "thought processs" and rationale to the user, then the user can learn from that. 
+Downsides of a Rule-Based Approach
+The only downside I really see to a rule-based approach is that there will be a lot of rules. Thought I won't be able to directly correlate a rule-based approach to lyrical suitability with the algorithms that determine instrumental suitability, that's not really my main goal (It's more of a "Wouldn't it be cool if…?" thing).
+Benefits of an Equation-Based Approach
+This is the approach that I started with, not so much because it was the best fit, but because it fit the medium I was using (Excel Spreadsheet).  There are, however, several reasons that an equation-based approach might be preferred.
+Parallels to instrumental composition
+The construction of instrumental music is intrinsically algorithmic and/or mathematical.  One of my side-goals with Melody Matcher was to discover a complementary algorithm to these for  for the composition musical texts. 
+By pursuing a math-based approach, I can parallel the way that instrumental compositions are structured, and maybe even eventually incorporate my work into algorithm-based music theory.  
+Uniform measurement of results
+An equation will give me a concrete number that represents the fitness of a lyric.  This allows for easier comparison, and perhaps an overall fitness score for the lyrical and instrumental structure of a composition.
+Downsides of an Equation-Based Approach
+There are several aspects of an equation-based approach that are less than desirable.
+Lack of atomicity
+With an equation-based approach, I either have to address all the factors that go into lyric fitness in one monster-mega-equation, or make a bunch of smaller equations, and combine their results after computation.  Both of these are exceedingly hard to modify.  If I come to the conclusion that the phone "jU" needs to be categorized as a syllabic consonant instead of a semivowel, I have to figure out where in the equation I computed its value, and make sure I modify any parts of the equation that depend on "jU" being a semivowel. Since I've still not yet nailed down all the intricacies of how the parts of a lyric interrelate and/or contribute to the fitness of a lyrics' structure, the lack of easy modification is kind of a dealbreaker.
+Ambiguous interpretation of results
+A single number can't accurately reflect all the nuances that go into why a lyric might not be structurally sound.  For example, if Melody Matcher gave a song lyric a score of 1.33 out of 1.1, that means that it failed one or more fitness criteria.  However, there's no way to know exactly what's wrong with it.  This lack of explanation and/or reasoning makes it difficult to use Melody Matcher as a teaching tool, which is one of my ultimate goals.
+Verdict on Rule-Based vs Equation-Based 
+Since Melody Matcher's fundamental concepts are still in constant revision, the easy modifiability provided by a rule-based approach makes it the optimal choice.  Eventually, once I've nailed down all the intricacies of how a lyric is built and structured, I might want to move to an equation-based approach, so that I could maybe incorporate my work into a complement to Harmonic Theory.  As things stand now, though,  I don't have confidence that I've fully understood and quantified the structure of a song lyric.   My equation-based approach is a spaghetti-like mess.  You know the movie "Cloudy With A Chance Of Meatballs"?  There's this spaghetti tornado. That's what my equations are like.  They're a twisted and tangled together, and they get unneeded objects stuck in them.  Okay, it's not a perfect metaphor. I'm just saying, it's not pretty.
+
+Using Search to Identify Phone Sequences in Lyrics with Multiple Interpretations
+
+Main use cases are from the site in the footnote.
+
+Oronyms: Sentences that can be interpreted by the ear as two different sequences of words, without any of the sounds or emphases changing.
+Example: 
+I'm taking a nice cold shower. I'm taking an ice cold shower.
+
+WORD
+a
+nice
+cold
+shower
+SAMPSYL
+V
+naIs
+kould
+SaU`r
+SYL_PARTonnucdonnucdonnucdonnucdVnaIskoulSaU`rd
+
+WORD
+an
+ice
+cold
+shower
+SAMPSYL
+Vn
+aIs
+kould
+SaU`r
+SYL_PARTonnucdonnucdonnucdonnucdVnaIskoulSaU`rd
+The phone sequence for both is:
+V n aI s k ou l d S aU 'r
+
+The ideal way to think about searching for patterns is by picturing the phoenetic dictionary in a tree form.  Each node has at least 45 child nodes: one for each phone.  A node might also have "word" nodes, if the node's path constructs a valid word:
+
+
+
+When there are ties for word nodes, you can determine the most likely interpretation by checking the frequency of each word.  For example, the sequence "n aI s" is much more likely to be "nice" than "gneiss".
+So, back to our original oronym: "A nice cold shower/An ice cold shower".  Using the dictionary tree method above, we can break down the phones according to the following diagram:
+
+First Option for Algorithm/Approach 
+MatchLists is an array contains n lists of Word Matches, where n is the number of phones in the origPhoneSequence.
+foreach(Phone p in origPhoneSequence) 
+{
+	set SubSequence to be empty;
+	set the list of Matches to be empty;
+	set the list of Candidates to be the whole dictionary
+	set Phone* curLast to &amp;p
+	do
+	{	
+		append curLast to SubSequence
+		remove words in Candidates that don't begin with SubSequence
+		if any word in Candidates is an exact match of SubSequence
+		{	
+			add word to Matches
+		}
+		increment curLast to point to the next phone in origPhoneSequence 
+	}
+	while ( curLast != NULL) (there are phones left in origPhoneSequence)
+	copy Matches list to a list of MatchLists
+}
+Word* findValidOronyms( SequenceToInterpret)
+foreach (Phone p in SequenceToInterpret) 
+{
+	clear LyricOption (a list of possible wordLyrics);
+	get p's associated Matches from MatchLists
+	foreach ( Word w in p's Matches)
+	{
+		extract phones from w into wordPhones
+		call findValidOronyms on (sequenceToInterpret – wordPhones at front)
+		if findValidOronyms returns NULL, move on to next word W
+		else ////SOMEHOW GET THE WORD SEQUENCE….
+	}
+}
+Second Approrach option
+
+Variables and Types of Data Structures:
+origPhonePhrase:  	The lyrics of the song, broken down into phonemes.  (Could be encompass all the lyrics, or just a lyric segment) 
+
+allPhoneSubPhrases:	A list of phoneSubPhrase structures.  There's one structure per phoneme in the origPhonePhrase.
+		
+phoneSubPhrases:	Per phoneme in the origPhonePhrase, create a phoneSubPhrase structure.  In this structure, for each phone following the phone that is the basis for that phoneSubPhrase, concatenate them to create a phoneSubSubPhrase.  Stop adding phones when the interpretation of the phoneSubSubPhrase is the empty set. 
+PhoneSubPhrase for "V" (basically a list of phones and their associated likelihoods)
+Phoneme
+V
+n
+aI
+Complete matching words 
+a (freq = 7536297)
+an (freq = 794169)
+an' (freq = 794169)
+{empty set}
+# of words that are prefix-ed with this
+#######
+#######
+#######
+Likelihood of hearing this as a prefix or as complete
+weighted ratio of (sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
+weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
+weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
+ (We'll eventually compute the likelihood of aural interpretation of each subsubphrase and store it in this data structure / use this data structure to see which aural interpretation is most likely). 
+
+
+
+For each phone P in origPhonePhrase:
+Construct a phoneSubPhrase structure.
+set phone S = P
+add phone S to the phoneSubPhrase structure
+set i = 0
+clear list-of-partial-matches
+while (there is a partial or full dictionary match for phoneSubPhrase )
+Add exact word matches and their frequencies to the phoneSubSubPhrase structure for  S
+Add partial/prefix word matches' dictionary entries to list-of-partial-matches
+compute heuristic to determine continuation or not
+i++
+continue
+compare heuristics of each phoneSubSubPhrase  in this phoneSubPhrase, weighting them accordingly.  Determine which is most likely.
+continue;
+For each word in the original lyrics:
+find the phoneSubPhrase  that corresponds to the first phone in the word
+Determine how likely the phone breakdown is to be heard correctly by comparing the heuristics.
+Report findings to user.
+
+
+
+
+		
+
+
+Heuristics for Aural Interpretation
+
+Note on measuring aural interpretation: 
+	Keep track of the likelihood that the listener will interpret a phone phrase:
+		(1) as a complete word 
+		(a.k.a. stop, completion, or complete) 
+		(2) as the beginning of a longer word.
+		(a.k.a. continue, continuation or prefix)
+
+Do this by keeping track of a few factors:
+the frequency of occurrence in the English Language of words that are full matches.
+the frequency of occurrence in the English Language of words that are partial/prefix matches.
+Possible addition later: account for the (hypothesized) human tendency to expect certain-length words.  (For my project, I was thinking about assuming that, all other factors equal, we're more biased towards hearing two-syllable words, as opposed to longer or shorter words.  It's likely more complicated than this, and most probably not universal, which is why I decided not to implement it this way.)
+
+
+
+
+
+
+Related Test Cases (Unfinished Section)
+
+There are cases in which it would be possible for a sequence of phones to have a higher prefix likelihood than a complete likelihood.  Example: 
+
+"All I wanna do, is have some fun. I got a feeling, I'm not the only one.
+All I wanna do, is have some fun, until the sun comes up over Santa Monica Boulevard"
+until the sun comes up or i'll settle for a couple of hours
+All I want to do is have some fun until the sun comes up on the sentimental look at the farm
+"sun comes up on  a sana on a couple of arrs"
+Actually says "Sanna Monaca Boulevard"
+
+Though I haven't computed heuristic for this case yet, the phrase. The problem here is accidental symmetry. The Sanna Monaca thing make the listener think that the second word ends sooner than it actually does.  
+
+Dude looks like a lady
+Do it like a lady
+
+Give me the Beach Boys and free my soul.
+Give me the beat, boys, and free my soul.
+
+
+
+
+Evaluation Plan:  At this time, evaluators should read through this document, and check out the Excel Spreadsheet with the examples in it.
+
+
+Timeline:
+(Modified)
+Again, the research and development of the algorithm has taken much more time than I thought it would. At this point, my goal is to get some sort of demonstration of the algorithm together by Week 10, along with full documentation of how it works.
+ SAMPA (Speech Assessment Methods Phonetic Alphabet) is a computer-readable phonetic “alphabet” that uses 1-2 ASCII characters to represent all the sounds in words. It’s based upon the symbols found in the more-standard-but-not-easily-computer-readable  IPA (International Phonetic Alphabet).
+ Though the current implementation of this program does not use the pronunciation data at this time, I’d like to eventually get it working so that the program can also evaluate rhyme scheme.  It was easier in the long term to find a dictionary with both, instead of having to add pronunciations later.
+ [1] P. Bellini, I. Bruno, and P. Nesi, Multilingual Lyric Modeling and Management, Visual Perception of Music Notation: On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003.
+ G. Lees, The Modern Rhyming Dictionary, Cherry Lane Music, 1987.
+
+** The UNISYN dictionary was created in the UK, and as such, sometimes has funny pronunciation mixes.  This mainly presents itself in the “I”/”i” and “U”/”u” gaps.  A person from the South would pronounce “here” as “hI`r”, but a person from the West Coast pronouces it “hir”.  UNISYN pronounces it as “hI`r”. The usage of the Southern accent for i vs I is consistent, but UNISYN has some West Coast accent.  It actually uses an accent called “General American”, which is spoken in the midwest. Who decided to make Nebraska and Illinois the linguistic flag-bearers of our tongue? Honestly.
+# This sound does not exist on its own in American English, but can be found as part of dipthongs like “now” (naU).
+~ All pronunciation guides say “boy” is pronounced “OI”, but I always thought I say it “Oi”. Regardless, UNISYN consistently says “OI” for that sound, so I’m sticking with it.
+* OI is not a prefix-free code.  Both O and I exist as separate entities. This may cause some special-case parsing that will need to be done.
++ Though this is correct, in the UNISYN dictionary, they use “ou”.  That’s also how I pronouce it, so I’ll be keeping UNISYN’s standard, though it’s non-SAMPA.
+ Though I use the waltz as an example here, I chose to test only songs with 4/4 time for simplicity's sake, since the binary rhythmic sequence per measure for that is  "1 – 0 – 1 – 0 ", which is delightfully repetitive.
+ The wikipedia page explains the concept of musical accents more than adequately, so I won't restate it here. http://en.wikipedia.org/wiki/Accent_%28music%29
+ Measured in the value of the shortest beat in the phrase.
+ Measured in the value of the shortest beat in the phrase.
+ Measured in the value of the shortest beat in the phrase.
+ Measured in the value of the shortest beat in the phrase.
+ Measured in the value of the shortest beat in the phrase.
+ or maybe it does.  I'm still not sure if having any emphasized beat in the Music BRS during a syllable counts as a "fit" for an emphasized syllable. That's why I'm going through these use cases.  I'm pretty much convinced, though, that it has more to do with note intervals.
+ Measured in the value of the shortest beat in the phrase.
+ T. Polyakova and A. Bonafonte, “Fusion of dictionaries in voice creation and synthesis task,” Proc. of the 12th International conference on Speech and Computer, SPECOM, 2007.
+ “LCStar.”, http://www.lc-star.com/schedule.htm
+
+ T. Polyakova and A. Bonafonte, “Fusion of dictionaries in voice creation and synthesis task,” Proc. of the 12th International conference on Speech and Computer, SPECOM, 2007.
+
+ The number of “SyllableBreakdown“s corresponds to the number of syllables in the word. 
+ “SQLite Database Browser.” [Online]. Available: http://sqlitebrowser.sourceforge.net/. [Accessed: 02-May-2012].
+
+
+ Most of my use cases came from here: http://www.wordinfo.info/words/index/info/view_unit/3347/  
+ according to UNISYN
+ according to UNISYN
+
+
+
+
+
+
+
+
+
+
+
+
+
+PAGE  
+
+
+PAGE  1
+
+
+
+
+BIBLIOGRAPHY:
+ H.R. Oliveira, F.A. Cardoso, and F.C. Pereira, “Tra-la-Lyrics: An approach to generate text based on rhythm,” Proceedings of the 4th. International Joint Workshop on Computational Creativity, London, UK, 2007.
+P. Bellini, I. Bruno, and P. Nesi, Multilingual Lyric Modeling and Management, Visual Perception of Music Notation: On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003.   
+“SAMPA computer readable phonetic alphabet.” &lt;http://www.phon.ucl.ac.uk/home/sampa/index.html>, Accessed 9-29-09
+
+ INCLUDE THE PARTS OF SPEECH TABLE!
+
+=IF($D2=$K$2,
+	$M$2,
+	IF($D2=$K$3,
+		$M$3,
+		IF($D2=$K$4,
+			$M$4,
+			IF($D2=$K$5,
+				$M$5,
+				IF($D2=$K$6,
+					$M$6,
+					IF($D2=$K$7,
+						$M$7,
+						IF($D2=$K$8,
+							$M$8,
+							0
+)	)	)	)	)	)	)  
++ IF($E2=$K$9,
+	$M$9,
+	$M$10) 
++ IF($F2=$K$12,
+	$M$12,
+	IF($F2=$K$13,
+		$M$13,
+		IF($F2=$K$14,
+			$M$14,
+			IF($F2=$K$16,
+				$M$16,
+				$M$15
+)	)	)	)
++ IF($G2=$K$12,
+	$M$12,
+	IF($G2=$K$13,
+		$M$13,
+		IF($G2=$K$14,
+			$M$14,
+			IF($G2=$K$16,
+				$M$16,
+				$M$15
+)	)	)	)
+
+
+int sum = 0;
+switch( this.MannerOfArticulation ){
+	case plosive:
+	case affricate:
+	case fricative:
+		sum += 1;
+		break;
+}
+if ( this.voice == voiceless) {
+	sum +=1;
+}
+switch( this.StartsAs ){
+	case block:
+		sum += 3;
+		break; 
+	case continuousFrication:
+		sum += 1;
+		break;
+	case end:
+		sum += 2;
+		break;
+	case redirect:
+		sum += 0.5;
+		break;
+} 
+switch( this.EndsAs ){
+	case block:
+		sum += 3;
+		break; 
+	case continuousFrication:
+		sum += 1;
+		break;
+	case end:
+		sum += 2;
+		break;
+	case redirect:
+		sum += 0.5;
+		break;
+}
+return sum;
+
+
+ EMBED Word.Picture.8  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ You and me______ba- by, ain't_______ noth-ing but  mam-mals
+
+               noth-ing but mam-mals
+       1 – 0 – 1 – 1 – 0
+
+
+
+
+</Text>
+        </Document>
+        <Document ID="5">
+            <Title>Snippet</Title>
+            <Text>Melody Matcher 
+Project Proposal
+
+Jennifer Hughes
+ TOC \o "1-4" 
+MELODY MATCHER	 PAGEREF _TOC197578258 \H 1
+ABSTRACT (SYSTEM PURPOSE AND TASKS TO BE PERFORMED):	 PAGEREF _TOC197578259 \H 6
+USAGE DOMAIN AND ENVIRONMENT:	 PAGEREF _TOC197578260 \H 6
+COMPARISON TO EXISTING SYSTEMS:	 PAGEREF _TOC197578261 \H 9
+SPECIFICATION:	 PAGEREF _TOC197578262 \H 9
+USER FEEDBACK:	 PAGEREF _TOC197578263 \H 10
+SYSTEM DESIGN:	 PAGEREF _TOC197578264 \H 12
+PROTOTYPE AND IMPLEMENTATION	 PAGEREF _TOC197578265 \H 12
+SYLLABLE STRUCTURE	 PAGEREF _TOC197578266 \H 12
+LENGTH AND WEIGHT OF INDIVIDUAL PHONES	 PAGEREF _TOC197578267 \H 12
+Vowels	 PAGEREF _Toc197578268 \h 12
+Consonants	 PAGEREF _Toc197578269 \h 13
+Calculating Consonant Phone Length	 PAGEREF _Toc197578270 \h 14
+FULL TABLE OF PHONE MAKEUP AND LENGTH	 PAGEREF _TOC197578271 \H 16
+THIS PAGE WAS INTENTIONALLY LEFT BLANK BECAUSE WORD DOESN’T LIKE ME BEING TABLE-HAPPY.	 PAGEREF _TOC197578272 \H 17
+STRUCTURE OF A SYLLABLE	 PAGEREF _TOC197578273 \H 18
+Examples	 PAGEREF _Toc197578274 \h 19
+SYSTEM DESIGN:	 PAGEREF _TOC197578275 \H 25
+PROTOTYPE AND IMPLEMENTATION	 PAGEREF _TOC197578276 \H 26
+DATA FORMAT	 PAGEREF _TOC197578277 \H 27
+FICKLE PHONES IN THE CODA	 PAGEREF _TOC197578278 \H 32
+CALCULATING WEIGHT/LENGTH OF INDEPENDENT SYLLABLES	 PAGEREF _TOC197578279 \H 33
+Psuedo Code Formula for Determining Semi-Stand-Alone Weight	 PAGEREF _Toc197578280 \h 33
+Actual Excel Formula:	 PAGEREF _Toc197578281 \h 33
+CALCULATING LENGTH OF SYLLABLES IN RELATION TO EACH OTHER	 PAGEREF _TOC197578282 \H 36
+Psuedo Code Formula for Determining Syllable “fit” with the music.	 PAGEREF _Toc197578283 \h 42
+PATTERNS FOR MUSICAL EMPHASES	 PAGEREF _TOC197578284 \H 43
+EFFECT OF NOTE INTERVALS ON MUSICAL EMPHASES	 PAGEREF _TOC197578285 \H ERROR! BOOKMARK NOT DEFINED.
+PARSIBLE PHONETIC DICTIONARY	 PAGEREF _TOC197578286 \H 56
+PARSABLE DICTIONARY	 PAGEREF _TOC197578287 \H 56
+FINAL PHONETIC DICTIONARY CHOICE	 PAGEREF _TOC197578288 \H 58
+TIMELINE:	 PAGEREF _TOC197578289 \H 75
+(Modified)	 PAGEREF _Toc197578290 \h 75
+
+
+
+So. I bet you're all wondering what's happening with my thesis. If so, you fit into one of these groups:  1) you're working on a thesis? What's it about?  2) oh, that melody matcher thing you've been mumbling about for the past few years? How's that work again?  3) yeah, I know you're working on your thesis. I keep hearing you talk about all the gory details. But what does it look like?
+
+4) But how do you know it really works?  I'll be addressing group #3 today.  As you already know, Melody matcher is an algorithm that measures inherent understand ability of a song when sung by a person with a General America accent.  This is sort of a fudge, because the general American accent is not actually the accent that singers use while singing, nor is it the accent spoken by most americans. It's the newscaster accent, and is generally agreed upon to have come from somewhere in the midwest.  It is heavy on understandability, and therefore fudges NO consonant or vowel sounds, whereas singers do this all the time. However, the alterations singers make to their phonemes while singing are not generally agrees upon, and there is no " singing accent".  There are a few generally agreed upon rules about context -based pronunciation changes in singing: "the": if the word 'the' is followed by a word that begins with a vowel sound, it is then sung as "thee", instead of 'thuh' "and": this one is strange, and I'm not sure about, but it often becomes "an' " "a": there a a few different ways this can be pronounced: "eh", "uh", or ____ Glottal stops: Coda-pushing: it is generally agreed upon by most all singers that, when singing a word, you sing the vowel.  This "vowel" can be more accurately described as the nucleus of a syllable  Anyway! Didn't meant to get bogged down in that. You're probably winding what my thesis end product actually *looks* like.  So, I like gardening. It's really obvious when you're doing something right with a plant, because it grows and florishes.  Warning: this is not a perfect metaphor.  So, for my thesis, I pretended that we live on a world where plants are nourished and grow by being fed music.  Each tree feeds upon a single.  The very first lyrics of the song cause the tree to begin to grow, the the tree stops growing when the song is over.  You want a tall, green tree with few branches at the end, not a browning bush with way too many branches and forks. Like any good gardener, a good lyricist prunes back branches that are unwanted.  The growth rate of the tree depends upon the tempo of the song fed into it.  The tree splits off and creates new branches whenever a phonetic sequence can be understood in more than one way. For example, i stink, an ice cold shower.  This means that the branch points must be on the phoneme level, and not on the word level.  The tree's color will remain green if all the words in the lyrics are a good fit for their notes. If there is any cramming or bleeding, then the tree branch for that sequence will be browned, depending on the severity of the cramming/bleeding.  How is this achieved?  0- we must substitute and account for pronunciation variations caused by singing the words instead of speaking them. This includes: The/a/glottal-stops/coda-pushing 1- before we break our words into individual sounds, we much break them into syllables, and check for cramming and bleeding.
+
+//TBC
+
+Abstract (System purpose and tasks to be performed):
+This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases. The program will ultimately rely upon user input for "fitness" criteria, but will initially match lyrics with melodies based upon some rules.
+
+Usage Domain and Environment:
+
+This program will be used as a compositional aid by anyone who wants to write songs and make them sound good, technically.  Its should allow the song writer to focus on more subjective criteria of what makes a song “good”, because it will make the structural rules of lyric composition immediately apparent.  The first version of this will probably be only for users that already understand the structural rules, unfortunately, because the composer must be able to understand that there IS a need to properly place lyrics in songs.  
+
+The structural rules of lyric placement are important, because without them, lyrics can become muddled and/or unintelligible. For example, in the song “Groovin’ (on a Sunday Afternoon”, by the Young Rascals, there’s a part in the bridge that everyone always hears as “Life would be ecstasy, you an’ me an’ Leslie”.  In fact, the line is “Life would be ecstasy, you and me endlessly”.  The confusion lies with the last three syllables of the phrase.  The pronunciation of each version, if spoken normally, is as follows:
+
+and       Les-   lie
+end-       less-       ly
+@nd   “lEs     li
+“End      l@s       li
+
+A “ preceding a syllable means that syllable is emphasized. 
+
+So, in the first phrase, we see that the emphasis pattern goes something like dum-DUM-dum, where the first syllable of “Leslie” is emphasized.  The second phrase’s emphasis pattern is “DUM-dum-dum”, so the first syllable of endlessly is emphasized.
+
+When words are put to music, however, the musical emphasis basically overrides the textual emphasis. Sometimes, if a previously un-emphasized syllable becomes emphasized, or a previously emphasized syllable loses its emphasis, the meaning of the phrase can change.
+
+For “Groovin’”, the lyrics match up to the music in the song as follows:
+
+
+Life   would be  ec-            sta-    sy,        You  an’  me   end-  less- ly 
+
+
+In all music, the emphasis always goes on the first part of a beat.  
+
+In this case, in the first measure is emphasized for the notes that correspond to the lyrics, “Life”, “be”, “ec-”(as in ec-sta-sy)  and “sy”(again, as in ec-sta-sy) (This is a vast oversimplification, but it works for now). So, the lyrics would be emphasized as such:
+
+Life would be ec-sta-sy
+
+This musical emphasis matches the spoken emphasis of the phrase, so it is intelligible as a lyric.  (Though ecstasy’s first syllable doesn’t start on the first part of beat three, it is still on the first part of beat three, and therefore still emphasized.  Alternatively, since the first part of beat two didn’t have a hard stop to it, the emphasis could have rolled over to the second part,  “ec”, which does have a hard stop. These are the sorts of things I need to figure out formal rules for.  I only know them by intuition right now.)
+
+In contrast, take the second measure:  the syllables “You”, “me”, and “less” are emphasized.  This leads to conflicting musical and spoken phrasing: 
+Musical Phrasing:	You and me  endlessly
+Spoken Phrasing: 	You and me  endlessly
+	 
+
+The singer is now singing the phrase, syllable by syllable, which they think of as syllable-note combinations:
+YOU and ME end LESS lee
+The singer, for his part, is doing what many singers are taught to do, to make it easier to sustain the singing of words that end with unsingable consonants: the unsingable consonant is displaced onto the front of the next word.  In this case, the consonant “d” is not singable, so he displaces it onto the next syllable, when he can:  “and ME” becomes “an   dME”, and “end LESS”  becomes “en  dLESS”.  So, the singer can effectively think of the sung phrase as:
+
+YOU an  dME en dLESS lee
+
+This doesn’t cause confusion to listeners, because they’re used to hearing it.  This does mean, however, that lyric placement does not provide an accurate barometer of where a word actually ends.   
+
+ In addition, the singer is singing fudging his vowels, like singers are taught to do,   so “and” and “end” sound almost indistinguishable.  So, really, what listeners are hearing is this:
+  YOU en dME en dLESS lee
+
+Now, the listener’s brain has to take this syllabic gobbldygook, and parse it into something useful.  They’ve currently got this mess to deal with (represented in SAMPA syllables):
+ju En dmi En dl@s li
+
+
+They parse the first part just fine, because the emphases match:
+you and me En dl@s li
+
+
+But no one says endLESSly.  People say ENDlessly.  So,  the listeners don’t recognize it. they have to work with what they have.  They already turned one “En d” into an “and”, so they do it again:
+you and me and l@s li
+
+Now, they’re just left with LESS lee.  And that fits Leslie, a proper noun that fits in context and in emphasis placement.  So, the final heard lyric is:
+
+you and me and Les- lie
+
+The misunderstanding can be traced by to improper emphasis placement.  The songwriter probably didn’t even think of that, and now he’s stuck:  a one-hit-wonder with a misunderstood song.  I bet that in interview after interview, someone asks him who Leslie is.  It’s probably very frustrating—especially since he could have just moved the word an eight note later, and it would have been understood perfectly.  That’s the sort of situation this program is going to help avoid.
+
+
+
+Comparison to Existing Systems:
+
+Tra-la-lyrics is the closest system that exists to the proposed system.  It takes lyrics in Portuguese, and matches them via emphases to the music.  This is different from our system, because our system will use English-language lyrics.
+
+There are many systems that take lyrics and match them with notes, but very few use any sort of rhythmic rule set to do so.  Karaoke systems match lyrics to music on a time-based system, which is inadequate for our purposes.  However, the Wedelmusic model of a composition can be easily extended to include support for musical emphases, because of the way it separates out music and lyrics. Also, since it can be easily converted into an XML format, the composition can be transferred between programs, given the correct parser.
+</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

@@ -1,0 +1,154 @@
+%&LaTeX
+% !TEX encoding = UTF-8 Unicode
+\documentclass{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+\definecolor{color01}{rgb}{1.00,1.00,1.00}
+\definecolor{color02}{rgb}{0.75,0.75,0.75}
+\begin{document}
+\begin{flushright}
+{\large ThesisDocumentsMelodyMatcher\label{GSCWHtext}}
+\end{flushright}
+
+\vspace{12pt}
+\baselineskip=14pt
+\parindent=18pt
+{\large Abstract:}
+
+\parindent=0pt
+\textit{Melody }Matcher is a semi-automated music composition support program. 
+It analyzes English lyrics along with a melody, and alerts the composer of the 
+locations in the song where the lyrics are not deterministically understandable. 
+Basically, it's grammar- and spell-check for songs. This is significant, because 
+very little research has been done specifically on the quantifiable measurement 
+of English-language lyric intelligibility, other than our project.
+
+\vspace{14pt}
+{\large Melody Matcher aims to replicate the human ability to identify lyrics in 
+a song that are easily misheard. We started on this project, thinking that there 
+would be carefully-specified research on how lyrics match melodies, mathematically. 
+As it turned out, there was very little objective literature on the subject. Because 
+of the lack of objective information of the subject, we had to develop our method 
+from scratch. As we progressed through our work, we went from thinking that understandability 
+depended only on emphasis-matching, to realizing that syllable length played a 
+huge part as well, to realizing that there are many other musical, harmonic, and 
+linguistic factors.}
+
+{\large Melody Matcher analyzes the intelligibility of song lyrics by investigating 
+several root causes:}
+
+\leftskip=36pt
+\parindent=-7pt
+{\large •  Lyric/Music emphasis mismatch, due to: ⁃}
+
+\leftskip=72pt
+\parindent=-25pt
+{\large Note intervals⁃}
+
+\parindent=-21pt
+{\large Phrase emphases⁃}
+
+\parindent=-25pt
+{\large Word emphases}
+
+\leftskip=36pt
+\parindent=-7pt
+{\large • Word ``cramming'', due to:⁃}
+
+\leftskip=72pt
+\parindent=-21pt
+{\large Syllable lengths that exceed that of note length⁃}
+
+\parindent=-25pt
+{\large Mouth movement delta time intervals}
+
+\leftskip=36pt
+\parindent=-7pt
+{\large • Word misidentification, due to:⁃}
+
+\leftskip=72pt
+\parindent=-25pt
+{\large Altered pronunciation of words⁃}
+
+\parindent=-21pt
+{\large Phone similarity⁃}
+
+\leftskip=108pt
+\parindent=-25pt
+{\large Voicing (voiced vs. voiceless)⁃}
+
+{\large Beginning/end mouth positions⁃}
+
+{\large Type (Plosive, Fricative, affricate, nasal, lateral, approximant, semivowel)⁃}
+
+\leftskip=72pt
+{\large Phone sequences with multiple syntactically-correct interpretations}
+
+\vspace{14pt}
+\leftskip=36pt
+\parindent=-7pt
+{\large . The fully-implemented Melody Matcher program will eventually take into 
+account all of these causes of unintelligibility. In this abstract, we will focus 
+on lyric/emphasis mismatch, which has already been implemented and is fully functional 
+in primary testing. The other sections have been implemented, but are not fully 
+tested and/or integrated into the main program.}
+
+\vspace{14pt}
+\leftskip=0pt
+\parindent=0pt
+{\large \textit{A. Target Audience and Goals}}
+
+{\large This program is to be used as a compositional aid by anyone who wants to 
+write songs and make them sound good, technically. It should allow the song writer 
+to focus on more subjective criteria of what makes a song ``good'', because it 
+will make the structural rules of lyric composition immediately apparent.}
+
+{\large Our hope for this project is that it will be useful to burgeoning songwriters, 
+who have the creative spark to make wonderfully poetic lyrics, but lack the ``ear'' 
+to match their lyrics successfully to music. It should be particularly helpful 
+to songwriters who place a high emphasis on understandability of lyrics (such as 
+parody song writers, or lyricists for musical theater).}
+
+{\large Additionally, Melody Matcher will be useful for songwriters for whom English 
+is a second language. While they may be a master lyricist in their native language, 
+writing lyrics in English can be a particular challenge, since so much of lyric-writing 
+is dependent upon knowing the cadence of the language you're writing lyrics in, 
+and since English has no easily-discernible rules for emphasis placement in words.}
+
+{\large II. PRACTICAL EXAMPLE }OF {\large UNDERLYING THEORY}
+
+{\large The structural rules of lyric placement are important, be- cause without 
+them, lyrics can become muddled and/or unin- telligible. For example, in the song 
+}{\large \textit{``Groovin' (on a Sunday Afternoon)'', }}{\large by the Young Rascals, 
+there's a part in the bridge that many people hear as }{\large \textit{``Life would 
+be ecstasy, you an' me an' Leslie''. }}{\large In fact, the line is }{\large \textit{``Life 
+would be ecstasy, you and me endlessly''. }}{\large The confusion lies with the 
+last three syllables of the phrase. The pronunciation of each version, if spoken 
+normally, is as follows:}
+
+\vspace{21pt}
+\baselineskip=18pt
+\parindent=31pt
+\begin{longtable}{|p{1.537in}|p{1.481in}|p{1.481in}|}
+\hline
+% ROW 1
+\begin{minipage}[t]{1.537in}\raggedright Alphabetic\end{minipage} & \begin{minipage}[t]{1.481in}\raggedright and 
+      Les-   lie\end{minipage} & \begin{minipage}[t]{1.481in}\raggedright end- 
+      less-       ly\end{minipage}\\
+\hline
+% ROW 2
+\begin{minipage}[t]{1.537in}\raggedright SAMPA\end{minipage} & \begin{minipage}[t]{1.481in}\raggedright @nd 
+  ``lEs     li\end{minipage} & \begin{minipage}[t]{1.481in}\raggedright ``\textbf{End} 
+     l@s       li\end{minipage} & 

@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+\deftab720
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f0\b\fs32 \cf0 Data Format\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b0\fs24 \cf0 I first started to create my own composition format, but in my literature review, I stumbled upon a remarkable comprehensive data structure in  the article \'93 Multilingual Lyric Modeling and Management\'94, found in the book, \'93Visual Perception of Music Notation: On-Line and Off-Line Recognition\'94.  I have attached some relevant figures from this book below this paragraph. The only figure that I plan to change significantly is Figure 12, due to my modification of the Syllable object.  I have drawn a new class diagram for that one in lieu of including the original in this document\
+The main object that contains all other objects is the MainScore (see Figure 5). It has a list of Parts (which represent different staffs), and a list of Brackets, which show which staves are to be played in parallel.  I will most likely not be implementing multi-Part music for this project, but I plan to build in support for it anyway.  Each part has a series of Measures (among other things, to be mentioned later).\
+\
+\page On the other side of the scale, the most granular object related to the transcription of music is a Figure.  Figure is an abstract class that is a parent to the Note and Rest classes, among others. Figure 6 from the book shows the relationship very well:\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+The main building block of a composition is a Measure.  A Measure has a HeaderList (where a Header includes the key signature and the time, i.e. tempo), and more importantly, a LayerList.  A Layer contains a sequence of Figures (See Figure 7).\
+My addition to this model is in the Part object.  A Part normally includes a HorizontalList (not important for this application), a MeasureList, and a Syllable List (See Figure 9, included here, and 12, which is in the book on page 182).\
+\
+\
+	\
+\
+\
+\
+\
+\
+\
+In addition to these three lists, I am adding a third list, WordList, which introduces a new object, Word.  A Word contains:\
+an orthographic spelling of the full word (ortho), \
+a part of Speech code as defined by the UNISYN dictionary (PoS), \
+an optional unique identifier, if needed (uniqID)\
+a list of pointers to Syllables called \'93WordSyllableList\'94.  \
+Each Syllable represents one traditional syllable of a word.  For example, in the word \'93winter\'94, there would be two Syllable objects in the WordSyllableList: one for \'93win\'94, and one for \'93ter\'94.  A Syllable object has the following fields (fields added by me are denoted with *):\
+text:  the orthographic text of the syllable \
+start: a pointer to the Figure where this Syllable starts being enunciated\
+end (conditionally optional): a pointer to the Figure where enunciation should end.  If it only spans one Figure, then this is not set. Otherwise, it is set to the point where the next Syllable\'92s start is positoned, or to the point where you\'92re supposed to stop enunciating it.\
+sep: the separator to indicate how this syllable connects to the next\
+ \'93n\'94 means the syllable is a full word, or the end of a word, and is not extended to multiple Figures.\
+\'93 \'93 means the same as \'93n\'94.\
+\'93/\'94 means the syllable is not the last in a word and is not extended.\
+\'93-\'93 means the syllable is not the last in a word and is extended.\
+\'93_\'94 means the syllable is the last in a word and is extended. \
+*sampa:  the SAMPA representation of this syllable.\
+*emph:  the emphasis value placed on this syllable \
+PRIMARY means primary emphasis\
+SECONDARY means secondary emphasis\
+TERTIARY means tertiary emphasis\
+NEUTRAL means there is no extraordinary emphasis on the syllable.\
+A rough diagram to show how these interact with the whole structure is below:\
+The class \'93Word\'94 is needed, because otherwise, I would have no way to eventually extend my parser to include things like rhyme-matching, synonym-swapping, etc.  I may still need to add fields to Word, as I think of them, but these are sufficient for now.}

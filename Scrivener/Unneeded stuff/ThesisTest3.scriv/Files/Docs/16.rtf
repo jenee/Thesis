@@ -1,0 +1,384 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\fswiss\fcharset0 ArialMT;\f2\fmodern\fcharset0 Courier;
+\f3\fmodern\fcharset0 Courier-Bold;\f4\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red191\green191\blue191;\red128\green0\blue255;\red255\green0\blue0;
+\red51\green153\blue102;\red255\green153\blue0;\red0\green255\blue255;\red0\green0\blue255;}
+\deftab720
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clminw2340 \clminh629 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clminw2340 \clminh629 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clminw2340 \clminh629 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clminw2340 \clminh629 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural\qc
+
+\f0\fs24 \cf0 #\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clminw2178 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clminw2340 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clminw2340 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clminw2340 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\b \cf0 Likelihood of hearing this as a prefix or as complete\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\b0 \cf0 weighted ratio of (sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)\cell 
+\pard\intbl\itap1\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)\cell \lastrow\row
+\pard\tx2340\pardeftab720\li2880\sl300\sb60\sa60\pardirnatural
+\cf0  (We'll eventually compute the likelihood of aural interpretation of each subsubphrase and store it in this data structure / use this data structure to see which aural interpretation is most likely). \
+\
+\pard\tx2340\pardeftab720\li2160\sl300\sb60\sa60\pardirnatural
+\cf0 \
+\pard\tx2340\pardeftab720\li2880\sl300\sb60\sa60\pardirnatural
+\cf0 \
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 \page For each phone\cf3  P\cf0  in \cf4 origPhonePhrase\cf0 :\
+\pard\pardeftab720\li1440\sl300\sb60\sa60\pardirnatural
+\cf0 Construct a \cf5 phoneSubPhrase\cf0  structure.\
+set phone \cf6 S\cf0  = P\
+add phone \cf6 S\cf0  to the \cf5 phoneSubPhrase\cf0  structure\
+set i = 0\
+clear \cf7 list-of-partial-matches\cf0 \
+while (there is a partial or full dictionary match for \cf5 phoneSubPhrase\cf0  )\cf5 \
+\pard\pardeftab720\li2160\sl300\sb60\sa60\pardirnatural
+\cf0 Add exact word matches and their frequencies to the \cf8 phoneSubSubPhrase\cf0  structure for  \cf6 S\cf0 \
+Add partial/prefix word matches' dictionary entries to \cf7 list-of-partial-matches\cf0 \
+compute heuristic to determine continuation or not\
+i++\
+continue\
+\pard\pardeftab720\li1440\sl300\sb60\sa60\pardirnatural
+\cf0 compare heuristics of each \cf8 phoneSubSubPhrase \cf0  in this \cf5 phoneSubPhrase\cf0 , weighting them accordingly.  Determine which is most likely.\
+continue;\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 For each word in the original lyrics:\
+\pard\pardeftab720\li1440\sl300\sb60\sa60\pardirnatural
+\cf0 find the \cf5 phoneSubPhrase \cf0  that corresponds to the first phone in the word\
+Determine how likely the phone breakdown is to be heard correctly by comparing the heuristics.\
+Report findings to user.\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 \
+\
+\
+\
+		\
+\
+\
+\pard\pardeftab720\sl300\sb240\pardirnatural
+
+\f1\b\fs26 \cf0 \page Heuristics for Aural Interpretation\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\f0\b0\fs24 \cf0 \
+\pard\tx2340\pardeftab720\li2160\sl300\sb60\sa60\pardirnatural
+\cf0 Note on measuring aural interpretation: \
+\pard\tx2340\pardeftab720\li720\sl300\sb60\sa60\pardirnatural
+\cf0 	Keep track of the likelihood that the listener will interpret a phone phrase:\
+\pard\pardeftab720\li720\sl300\sb60\sa60\pardirnatural
+\cf0 		(1) as a complete word \
+\pard\tx2340\pardeftab720\li720\sl300\sb60\sa60\pardirnatural
+\cf0 		(a.k.a. stop, completion, or
+\b  complete
+\b0 ) \
+\pard\pardeftab720\li720\sl300\sb60\sa60\pardirnatural
+\cf0 		(2) as the beginning of a longer word.
+\b \
+\pard\tx2340\pardeftab720\li720\sl300\sb60\sa60\pardirnatural
+
+\b0 \cf0 		(a.k.a. continue, continuation or 
+\b prefix
+\b0 )\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 \
+Do this by keeping track of a few factors:\
+\pard\pardeftab720\sl300\pardirnatural
+\cf0 the frequency of occurrence in the English Language of words that are 
+\b full
+\b0  matches.\
+the frequency of occurrence in the English Language of words that are 
+\b partial/prefix
+\b0  matches.\
+Possible addition later: account for the (hypothesized) human tendency to expect certain-length words.  (For my project, I was thinking about assuming that, all other factors equal, we're more biased towards hearing two-syllable words, as opposed to longer or shorter words.  It's likely more complicated than this, and most probably not universal, which is why I decided not to implement it this way.)\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl300\sb240\pardirnatural
+
+\f1\b\fs26 \cf0 \page Related Test Cases (Unfinished Section)\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\f0\b0\fs24 \cf0 \
+There are cases in which it would be possible for a sequence of phones to have a higher prefix likelihood than a complete likelihood.  Example: \
+\
+"All I wanna do, is have some fun. I got a feeling, I'm not the only one.\
+All I wanna do, is have some fun, until the sun comes up 
+\b over Santa Monica Boulevard"
+\b0 \
+until the sun comes up or i'll settle for a couple of hours\
+All I want to do is have some fun until the sun comes up on the sentimental look at the farm\
+"sun comes up on  a sana on a couple of arrs"\
+Actually says "San
+\b na Mon
+\b0 aca Boulevard"\
+\
+Though I haven't computed heuristic for this case yet, the phrase. The problem here is accidental symmetry. The San\ul na\ulnone  Mo\ul na\ulnone ca thing make the listener think that the second word ends sooner than it actually does.  \
+\
+Dude looks like a lady\
+Do it like a lady\
+\
+Give me the Beach Boys and free my soul.\
+Give me the beat, boys, and free my soul.\
+\
+\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\page \pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b\fs32 \cf0 Evaluation Plan:
+\f0\b0\fs24 \uc0\u8232 \u8232 At this time, evaluators should read through this document, and check out the Excel Spreadsheet with the examples in it.\
+\
+\
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f1\b\fs32 \cf0 Timeline:\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\fs26 \cf0 (Modified)\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f0\b0\fs24 \cf0 Again, the research and development of the algorithm has taken much more time than I thought it would. At this point, my goal is to get some sort of demonstration of the algorithm together by Week 10, along with full documentation of how it works.\
+\pard\pardeftab720\fi630\sl300\sb60\sa60\pardirnatural
+\cf0  SAMPA (Speech Assessment Methods Phonetic Alphabet) is a computer-readable phonetic \'93alphabet\'94 that uses 1-2 ASCII characters to represent all the sounds in words. It\'92s based upon the symbols found in the more-standard-but-not-easily-computer-readable  IPA (International Phonetic Alphabet).\
+ Though the current implementation of this program does not use the pronunciation data at this time, I\'92d like to eventually get it working so that the program can also evaluate rhyme scheme.  It was easier in the long term to find a dictionary with both, instead of having to add pronunciations later.\
+ [1] P. Bellini, I. Bruno, and P. Nesi, Multilingual Lyric Modeling and Management, Visual Perception of Music Notation: On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003.\
+ G. Lees, 
+\i The Modern Rhyming Dictionary
+\i0 , Cherry Lane Music, 1987.\
+\
+\pard\pardeftab720\sl300\sb60\sa60\pardirnatural
+
+\fs22 \cf0 \super **\nosupersub  The UNISYN dictionary was created in the UK, and as such, sometimes has funny pronunciation mixes.  This mainly presents itself in the \'93I\'94/\'94i\'94 and \'93U\'94/\'94u\'94 gaps.  A person from the South would pronounce \'93here\'94 as \'93hI`r\'94, but a person from the West Coast pronouces it \'93hir\'94.  UNISYN pronounces it as \'93hI`r\'94. The usage of the Southern accent for i vs I is consistent, but UNISYN has some West Coast accent.  It actually uses an accent called \'93General American\'94, which is spoken in the midwest. Who decided to make Nebraska and Illinois the linguistic flag-bearers of our tongue? Honestly.\
+\super #\nosupersub  This sound does not exist on its own in American English, but can be found as part of dipthongs like \'93now\'94 (naU).\
+\super ~\nosupersub  All pronunciation guides say \'93boy\'94 is pronounced \'93OI\'94, but I always thought I say it \'93Oi\'94. Regardless, UNISYN consistently says \'93OI\'94 for that sound, so I\'92m sticking with it.\
+\super *\nosupersub  OI is not a prefix-free code.  Both O and I exist as separate entities. This may cause some special-case parsing that will need to be done.\
+\super +\nosupersub  Though this is correct, in the UNISYN dictionary, they use \'93ou\'94.  That\'92s also how I pronouce it, so I\'92ll be keeping UNISYN\'92s standard, though it\'92s non-SAMPA.
+\fs24 \
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0  Though I use the waltz as an example here, I chose to test only songs with 4/4 time for simplicity's sake, since the binary rhythmic sequence per measure for that is  "1 \'96 0 \'96 1 \'96 0 ", which is delightfully repetitive.\
+ The wikipedia page explains the concept of musical accents more than adequately, so I won't restate it here. http://en.wikipedia.org/wiki/Accent_%28music%29\
+\pard\pardeftab720\fi630\sl300\sb60\sa60\pardirnatural
+\cf0  Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ Measured in the value of the shortest beat in the phrase.\
+ or maybe it does.  I'm still not sure if having 
+\b any
+\b0  emphasized beat in the Music BRS during a syllable counts as a "fit" for an emphasized syllable. That's why I'm going through these use cases.  I'm pretty much convinced, though, that it has more to do with note intervals.\
+ Measured in the value of the shortest beat in the phrase.\
+ T. Polyakova and A. Bonafonte, \'93Fusion of dictionaries in voice creation and synthesis task,\'94 Proc. of the 12th International conference on Speech and Computer, SPECOM, 2007.\
+ \'93LCStar.\'94, http://www.lc-star.com/schedule.htm\
+\
+ T. Polyakova and A. Bonafonte, \'93Fusion of dictionaries in voice creation and synthesis task,\'94 Proc. of the 12th International conference on Speech and Computer, SPECOM, 2007.\
+\
+ The number of \'93SyllableBreakdown\'93s corresponds to the number of syllables in the word. \
+ \'93SQLite Database Browser.\'94 [Online]. Available: http://sqlitebrowser.sourceforge.net/. [Accessed: 02-May-2012].\
+\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0  Most of my use cases came from here: 
+\b http://www.wordinfo.info/words/index/info/view_unit/3347/  \
+
+\b0  according to UNISYN\
+ according to UNISYN\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\pardirnatural
+\cf0 PAGE  \
+\pard\tqc\tx4320\tqr\tx8640\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\tqc\tx4320\tqr\tx8640\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 PAGE  1\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\
+\
+\
+BIBLIOGRAPHY:\
+ H.R. Oliveira, F.A. Cardoso, and F.C. Pereira, \'93Tra-la-Lyrics: An approach to generate text based on rhythm,\'94 
+\i Proceedings of the 4th. International Joint Workshop on Computational Creativity, London, UK
+\i0 , 2007.\
+P. Bellini, I. Bruno, and P. Nesi, 
+\i Multilingual Lyric Modeling and Management
+\i0 , Visual Perception of Music Notation: On-Line and Off-Line Recognition, edited by Dr. Susan E. George, press, 2003. \'a0 \
+\'93SAMPA computer readable phonetic alphabet.\'94 <http://www.phon.ucl.ac.uk/home/sampa/index.html>, Accessed 9-29-09\
+\
+ INCLUDE THE PARTS OF SPEECH TABLE!\
+\
+\pard\pardeftab720\sl300\pardirnatural
+
+\f2\fs23 \cf0 =IF($D2=$K$2,\
+	$M$2,\
+	IF($D2=$K$3,\
+		$M$3,\
+		IF($D2=$K$4,\
+			$M$4,\
+			IF($D2=$K$5,\
+				$M$5,\
+				IF($D2=$K$6,\
+					$M$6,\
+					IF($D2=$K$7,\
+						$M$7,\
+						IF($D2=$K$8,\
+							$M$8,\
+							0\
+)	)	)	)	)	)	)  \
++ IF($E2=$K$9,\
+	$M$9,\
+	$M$10) \
++ IF($F2=$K$12,\
+	$M$12,\
+	IF($F2=$K$13,\
+		$M$13,\
+		IF($F2=$K$14,\
+			$M$14,\
+			IF($F2=$K$16,\
+				$M$16,\
+				$M$15\
+)	)	)	)\
++ IF($G2=$K$12,\
+	$M$12,\
+	IF($G2=$K$13,\
+		$M$13,\
+		IF($G2=$K$14,\
+			$M$14,\
+			IF($G2=$K$16,\
+				$M$16,\
+				$M$15\
+)	)	)	)\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720\sl300\pardirnatural
+
+\f2\fs23 \cf0 int sum = 0;\
+switch( 
+\f3\b this
+\f2\b0 .MannerOfArticulation )\{\
+	case 
+\f4\i plosive
+\f2\i0 :\
+	case affricate:\
+	case fricative:\
+		sum += 1;\
+		break;\
+\}\
+if ( 
+\f3\b this
+\f2\b0 .voice == 
+\f4\i voiceless
+\f2\i0 ) \{\
+	sum +=1;\
+\}\
+switch( 
+\f3\b this
+\f2\b0 .StartsAs )\{\
+	case 
+\f4\i block
+\f2\i0 :\
+		sum += 3;\
+		break; \
+	case continuousFrication:\
+		sum += 1;\
+		break;\
+	case 
+\f4\i end
+\f2\i0 :\
+		sum += 2;\
+		break;\
+	case redirect:\
+		sum += 0.5;\
+		break;\
+\} \
+switch( 
+\f3\b this
+\f2\b0 .EndsAs )\{\
+	case 
+\f4\i block
+\f2\i0 :\
+		sum += 3;\
+		break; \
+	case continuousFrication:\
+		sum += 1;\
+		break;\
+	case 
+\f4\i end
+\f2\i0 :\
+		sum += 2;\
+		break;\
+	case redirect:\
+		sum += 0.5;\
+		break;\
+\}\
+return sum;\
+\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f0\fs24 \cf0 \
+ EMBED Word.Picture.8  \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\fi630\sl360\pardirnatural
+
+\b \cf0  You and me______ba- by, ain't_______ noth-ing but  mam-mals\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\b0 \cf0 \
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\b \cf0                noth-ing but \cf5 mam\cf0 -\cf4 mals\cf0 \
+\pard\pardeftab720\sb120\sa120\pardirnatural
+
+\f2\b0 \cf0     
+\fs22    
+\f3\b 1 \'96 0 \'96 1 \'96 \cf5 1\cf0  \'96 \cf4 0}

@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red51\green153\blue102;\red0\green0\blue255;
+\red191\green191\blue191;\red128\green0\blue255;\red255\green153\blue0;\red0\green255\blue255;}
+\deftab720
+\pard\pardeftab720\pardirnatural
+
+\f0\fs24 \cf0 Second Approrach option\
+\
+Variables and Types of Data Structures:\
+\pard\pardeftab720\li2880\pardirnatural
+\cf2 origPhonePhrase\cf0 :  	The lyrics of the song, broken down into phonemes.  (Could be encompass all the lyrics, or just a lyric segment) \
+\
+allPhoneSubPhrases:	A list of phoneSubPhrase structures.  There's one structure per phoneme in the \cf2 origPhonePhrase\cf0 .\
+		\
+\pard\pardeftab720\li2880\pardirnatural
+\cf3 phoneSubPhrases\cf0 :	Per phoneme in the \cf2 origPhonePhrase\cf0 , create a \cf3 phoneSubPhrase\cf0  structure.  In this structure, for each phone following the phone that is the basis for that \cf3 phoneSubPhrase\cf0 , concatenate them to create a \cf4 phoneSubSubPhrase\cf0 .  Stop adding phones when the interpretation of the \cf4 phoneSubSubPhrase\cf0  is the empty set. \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx2160
+\clmrg \clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx4320
+\clmrg \clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx6480
+\clmrg \clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+
+\b \cf3 PhoneSubPhrase\cf0  for "V" 
+\b0 (basically a list of phones and their associated likelihoods)\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\pardirnatural
+
+\b \cf0 Phoneme\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+
+\b0 \cf0 V\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 n\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 aI\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\pardirnatural
+
+\b \cf0 Complete matching words \cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+
+\b0 \cf0 a (freq = 7536297)\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 an (freq = 794169)\
+an' (freq = 794169)\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 \{empty set\}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\pardirnatural
+
+\b \cf0 # of words that are prefix-ed with this\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+
+\b0 \cf0 #######\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 #######\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 #######\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx2160
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx6480
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\pardirnatural
+
+\b \cf0 Likelihood of hearing this as a prefix or as complete\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural
+
+\b0 \cf0 weighted ratio of (sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural
+\cf0 weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)\cell 
+\pard\intbl\itap1\pardeftab720\pardirnatural
+\cf0 weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)\cell \lastrow\row
+\pard\pardeftab720\li2880\pardirnatural
+\cf0  (We'll eventually compute the likelihood of aural interpretation of each subsubphrase and store it in this data structure / use this data structure to see which aural interpretation is most likely). \
+\
+\pard\pardeftab720\li2160\pardirnatural
+\cf0 \
+\pard\pardeftab720\li2880\pardirnatural
+\cf0 \
+\pard\pardeftab720\pardirnatural
+\cf0 \page For each phone\cf6  P\cf0  in \cf2 origPhonePhrase\cf0 :\
+\pard\pardeftab720\li1440\pardirnatural
+\cf0 Construct a \cf3 phoneSubPhrase\cf0  structure.\
+set phone \cf7 S\cf0  = P\
+add phone \cf7 S\cf0  to the \cf3 phoneSubPhrase\cf0  structure\
+set i = 0\
+clear \cf8 list-of-partial-matches\
+\cf0 while (there is a partial or full dictionary match for \cf3 phoneSubPhrase\cf0  )\
+\pard\pardeftab720\li2160\pardirnatural
+\cf0 Add exact word matches and their frequencies to the \cf4 phoneSubSubPhrase\cf0  structure for  \cf7 S\
+\cf0 Add partial/prefix word matches' dictionary entries to \cf8 list-of-partial-matches\
+\cf0 compute heuristic to determine continuation or not\
+i++\
+continue\
+\pard\pardeftab720\li1440\pardirnatural
+\cf0 compare heuristics of each \cf4 phoneSubSubPhrase \cf0  in this \cf3 phoneSubPhrase\cf0 , weighting them accordingly.  Determine which is most likely.\
+continue;\
+\pard\pardeftab720\pardirnatural
+\cf0 For each word in the original lyrics:\
+\pard\pardeftab720\li1440\pardirnatural
+\cf0 find the \cf3 phoneSubPhrase \cf0  that corresponds to the first phone in the word\
+Determine how likely the phone breakdown is to be heard correctly by comparing the heuristics.\
+Report findings to user.}

@@ -1,0 +1,347 @@
+\documentclass[10pt,oneside]{memoir}
+\usepackage{layouts}[2001/04/29]
+\makeglossary
+\makeindex
+
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+\def\revision{}
+
+%%% need more space for ToC page numbers
+\setpnumwidth{2.55em}
+\setrmarg{3.55em}
+
+%%% need more space for ToC section numbers
+\cftsetindents{part}{0em}{3em}
+\cftsetindents{chapter}{0em}{3em}
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4.5em}{3.9em}
+\cftsetindents{subsubsection}{8.4em}{4.8em}
+\cftsetindents{paragraph}{10.7em}{5.7em}
+\cftsetindents{subparagraph}{12.7em}{6.7em}
+
+%%% need more space for LoF numbers
+\cftsetindents{figure}{0em}{3.0em}
+
+%%% and do the same for the LoT
+\cftsetindents{table}{0em}{3.0em}
+
+%%% set up the page layout
+\settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setulmarginsandblock{1.5in}{1.5in}{*}
+
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{booktabs}			% Better tables
+\usepackage{tabulary}			% Support longer table cells
+\usepackage[utf8]{inputenc}		% For UTF-8 support
+\usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
+\usepackage{xcolor}				% Allow for color (annotations)
+
+%\geometry{landscape}			% Activate for rotated page geometry
+
+%\usepackage[parfill]{parskip}	% Activate to begin paragraphs with an empty
+								% line rather than an indent
+
+
+\def\myauthor{Author}			% In case these were not included in metadata
+\def\mytitle{Title}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\bibliocommand{}
+
+\VerbatimFootnotes
+\def\myauthor{Jenee Hughes}
+\def\baseheaderlevel{1}
+\def\format{complete}
+\def\mytitle{ThesisTest2}
+
+
+%
+%	PDF Stuff
+%
+
+%\ifpdf							% Removed for XeLaTeX compatibility
+%  \pdfoutput=1					% Removed for XeLaTeX compatibility
+  \usepackage[
+  	plainpages=false,
+  	pdfpagelabels,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+  \usepackage{memhfixc}
+%\fi							% Removed for XeLaTeX compatibility
+
+
+%
+% Title Information
+%
+
+
+\ifx\latexauthor\undefined
+\else
+	\def\myauthor{\latexauthor}
+\fi
+
+\ifx\subtitle\undefined
+\else
+	\addtodef{\mytitle}{}{ \\ \subtitle}
+\fi
+
+\ifx\affiliation\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \affiliation}
+\fi
+
+\ifx\address\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \address}
+\fi
+
+\ifx\phone\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \phone}
+\fi
+
+\ifx\email\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \email}
+\fi
+
+\ifx\web\undefined
+	\else
+		\addtodef{\myauthor}{}{ \\ \web}
+\fi
+
+\title{\mytitle}
+\author{\myauthor}
+
+\begin{document}
+
+\chapterstyle{\mychapterstyle}
+\pagestyle{\mypagestyle}
+
+%
+%		Front Matter
+%
+
+\frontmatter
+
+
+% Title Page
+
+\maketitle
+\clearpage
+
+% Copyright Page
+\vspace*{\fill}
+
+\setlength{\parindent}{0pt}
+
+\ifx\mycopyright\undefined
+\else
+	\textcopyright{} \mycopyright
+\fi
+
+\revision
+
+\begin{center}
+\framebox{ \parbox[t]{1.5in}{\centering Formatted for \LaTeX  \\ 
+ by MultiMarkdown}}
+\end{center}
+
+\setlength{\parindent}{1em}
+\clearpage
+
+% Table of Contents
+\tableofcontents
+%\listoffigures			% activate to include a List of Figures
+%\listoftables			% activate to include a List of Tables
+
+
+%
+% Main Content
+%
+
+
+% Layout settings
+\setlength{\parindent}{1em}
+
+\mainmatter
+Melody Matcher 
+Project Proposal
+
+
+Jennifer Hughes
+
+
+\pagebreak TOC $\backslash$o ``1-4'' 
+MELODY MATCHER   PAGEREF \_TOC197578258 $\backslash$H 1
+ABSTRACT (SYSTEM PURPOSE AND TASKS TO BE PERFORMED):     PAGEREF \_TOC197578259 $\backslash$H 6
+USAGE DOMAIN AND ENVIRONMENT:    PAGEREF \_TOC197578260 $\backslash$H 6
+COMPARISON TO EXISTING SYSTEMS:  PAGEREF \_TOC197578261 $\backslash$H 9
+SPECIFICATION:   PAGEREF \_TOC197578262 $\backslash$H 9
+USER FEEDBACK:   PAGEREF \_TOC197578263 $\backslash$H 10
+SYSTEM DESIGN:   PAGEREF \_TOC197578264 $\backslash$H 12
+PROTOTYPE AND IMPLEMENTATION     PAGEREF \_TOC197578265 $\backslash$H 12
+SYLLABLE STRUCTURE   PAGEREF \_TOC197578266 $\backslash$H 12
+LENGTH AND WEIGHT OF INDIVIDUAL PHONES   PAGEREF \_TOC197578267 $\backslash$H 12
+Vowels   PAGEREF \_Toc197578268 $\backslash$h 12
+Consonants   PAGEREF \_Toc197578269 $\backslash$h 13
+Calculating Consonant Phone Length   PAGEREF \_Toc197578270 $\backslash$h 14
+FULL TABLE OF PHONE MAKEUP AND LENGTH    PAGEREF \_TOC197578271 $\backslash$H 16
+THIS PAGE WAS INTENTIONALLY LEFT BLANK BECAUSE WORD DOESN'T LIKE ME BEING TABLE-HAPPY.   PAGEREF \_TOC197578272 $\backslash$H 17
+STRUCTURE OF A SYLLABLE  PAGEREF \_TOC197578273 $\backslash$H 18
+Examples     PAGEREF \_Toc197578274 $\backslash$h 19
+SYSTEM DESIGN:   PAGEREF \_TOC197578275 $\backslash$H 25
+PROTOTYPE AND IMPLEMENTATION     PAGEREF \_TOC197578276 $\backslash$H 26
+DATA FORMAT  PAGEREF \_TOC197578277 $\backslash$H 27
+FICKLE PHONES IN THE CODA    PAGEREF \_TOC197578278 $\backslash$H 32
+CALCULATING WEIGHT/LENGTH OF INDEPENDENT SYLLABLES   PAGEREF \_TOC197578279 $\backslash$H 33
+Psuedo Code Formula for Determining Semi-Stand-Alone Weight  PAGEREF \_Toc197578280 $\backslash$h 33
+Actual Excel Formula:    PAGEREF \_Toc197578281 $\backslash$h 33
+CALCULATING LENGTH OF SYLLABLES IN RELATION TO EACH OTHER    PAGEREF \_TOC197578282 $\backslash$H 36
+Psuedo Code Formula for Determining Syllable ``fit'' with the music.   PAGEREF \_Toc197578283 $\backslash$h 42
+PATTERNS FOR MUSICAL EMPHASES    PAGEREF \_TOC197578284 $\backslash$H 43
+EFFECT OF NOTE INTERVALS ON MUSICAL EMPHASES     PAGEREF \_TOC197578285 $\backslash$H ERROR! BOOKMARK NOT DEFINED.
+PARSIBLE PHONETIC DICTIONARY     PAGEREF \_TOC197578286 $\backslash$H 56
+PARSABLE DICTIONARY  PAGEREF \_TOC197578287 $\backslash$H 56
+FINAL PHONETIC DICTIONARY CHOICE     PAGEREF \_TOC197578288 $\backslash$H 58
+TIMELINE:    PAGEREF \_TOC197578289 $\backslash$H 75
+(Modified)   PAGEREF \_Toc197578290 $\backslash$h 75
+
+
+\pagebreak So. I bet you're all wondering what's happening with my thesis. If so, you fit into one of these groups:  1) you're working on a thesis? What's it about?  2) oh, that melody matcher thing you've been mumbling about for the past few years? How's that work again?  3) yeah, I know you're working on your thesis. I keep hearing you talk about all the gory details. But what does it look like?
+
+
+4) But how do you know it really works?  I'll be addressing group \#3 today.  As you already know, Melody matcher is an algorithm that measures inherent understand ability of a song when sung by a person with a General America accent.  This is sort of a fudge, because the general American accent is not actually the accent that singers use while singing, nor is it the accent spoken by most americans. It's the newscaster accent, and is generally agreed upon to have come from somewhere in the midwest. ~It is heavy on understandability, and therefore fudges NO consonant or vowel sounds, whereas singers do this all the time. However, the alterations singers make to their phonemes while singing are not generally agrees upon, and there is no '' singing accent''.  There are a few generally agreed upon rules about context -based pronunciation changes in singing: ''the'': if the word `the' is followed by a word that begins with a vowel sound, it is then sung as ``thee'', instead of `thuh' ''and'': this one is strange, and I'm not sure about, but it often becomes ``an' `` ''a'': there a a few different ways this can be pronounced: ``eh'', ``uh'', or {\itshape {\itshape }} Glottal stops: Coda-pushing: it is generally agreed upon by most all singers that, when singing a word, you sing the vowel. ~This ``vowel'' can be more accurately described as the nucleus of a syllable  Anyway! Didn't meant to get bogged down in that. You're probably winding what my thesis end product actually {\itshape looks} like.  So, I like gardening. It's really obvious when you're doing something right with a plant, because it grows and florishes.  Warning: this is not a perfect metaphor.  So, for my thesis, I pretended that we live on a world where plants are nourished and grow by being fed music. ~Each tree feeds upon a single. ~The very first lyrics of the song cause the tree to begin to grow, the the tree stops growing when the song is over. ~You want a tall, green tree with few branches at the end, not a browning bush with way too many branches and forks. Like any good gardener, a good lyricist prunes back branches that are unwanted.  The growth rate of the tree depends upon the tempo of the song fed into it.  The tree splits off and creates new branches whenever a phonetic sequence can be understood in more than one way. For example, i stink, an ice cold shower. ~This means that the branch points must be on the phoneme level, and not on the word level.  The tree's color will remain green if all the words in the lyrics are a good fit for their notes. If there is any cramming or bleeding, then the tree branch for that sequence will be browned, depending on the severity of the cramming/bleeding.  How is this achieved?  0- we must substitute and account for pronunciation variations caused by singing the words instead of speaking them. This includes: The/a/glottal-stops/coda-pushing 1- before we break our words into individual sounds, we much break them into syllables, and check for cramming and bleeding.
+
+
+//TBC
+
+
+\pagebreak Abstract (System purpose and tasks to be performed):
+This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases.~The program will ultimately rely upon user input for ``fitness'' criteria, but will initially match lyrics with melodies based upon some rules.
+
+
+Usage Domain and Environment:
+
+
+This program will be used as a compositional aid by anyone who wants to write songs and make them sound good, technically.  Its should allow the song writer to focus on more subjective criteria of what makes a song ``good'', because it will make the structural rules of lyric composition immediately apparent.  The first version of this will probably be only for users that already understand the structural rules, unfortunately, because the composer must be able to understand that there IS a need to properly place lyrics in songs.  
+
+
+The structural rules of lyric placement are important, because without them, lyrics can become muddled and/or unintelligible. For example, in the song ``Groovin' (on a Sunday Afternoon'', by the Young Rascals, there's a part in the bridge that everyone always hears as ``Life would be ecstasy, you an' me an' Leslie''.  In fact, the line is ``Life would be ecstasy, you and me endlessly''.  The confusion lies with the last three syllables of the phrase.  The pronunciation of each version, if spoken normally, is as follows:
+
+
+and       Les-   lie
+end-       less-       ly
+@nd   ``lEs     li
+``End      l@s       li
+
+
+A '' preceding a syllable means that syllable is emphasized. 
+
+
+So, in the first phrase, we see that the emphasis pattern goes something like dum-DUM-dum, where the first syllable of ``Leslie'' is emphasized.  The second phrase's emphasis pattern is ``DUM-dum-dum'', so the first syllable of endlessly is emphasized.
+
+
+When words are put to music, however, the musical emphasis basically overrides the textual emphasis. Sometimes, if a previously un-emphasized syllable becomes emphasized, or a previously emphasized syllable loses its emphasis, the meaning of the phrase can change.
+
+
+For ``Groovin''', the lyrics match up to the music in the song as follows:
+
+
+Life   would be  ec-            sta-    sy,        You  an'  me   end-  less- ly 
+
+
+In all music, the emphasis always goes on the first part of a beat.  
+
+
+In this case, in the first measure is emphasized for the notes that correspond to the lyrics, ``Life'', ``be'', ``ec-``(as in ec-sta-sy)  and ``sy''(again, as in ec-sta-sy) (This is a vast oversimplification, but it works for now). So, the lyrics would be emphasized as such:
+
+
+Life would be ec-sta-sy
+
+
+This musical emphasis matches the spoken emphasis of the phrase, so it is intelligible as a lyric.  (Though ecstasy's first syllable doesn't start on the first part of beat three, it is still on the first part of beat three, and therefore still emphasized.  Alternatively, since the first part of beat two didn't have a hard stop to it, the emphasis could have rolled over to the second part,  ``ec'', which does have a hard stop. These are the sorts of things I need to figure out formal rules for.  I only know them by intuition right now.)
+
+
+In contrast, take the second measure:  the syllables ``You'', ``me'', and ``less'' are emphasized.  This leads to conflicting musical and spoken phrasing: 
+Musical Phrasing:   You and me  endlessly
+Spoken Phrasing:    You and me  endlessly
+
+
+The singer is now singing the phrase, syllable by syllable, which they think of as syllable-note combinations:
+YOU and ME end LESS lee
+The singer, for his part, is doing what many singers are taught to do, to make it easier to sustain the singing of words that end with unsingable consonants: the unsingable consonant is displaced onto the front of the next word.  In this case, the consonant ``d'' is not singable, so he displaces it onto the next syllable, when he can:  ``and ME'' becomes ``an   dME'', and ``end LESS''  becomes ``en  dLESS''.  So, the singer can effectively think of the sung phrase as:
+
+
+YOU an  dME en dLESS lee
+
+
+This doesn't cause confusion to listeners, because they're used to hearing it.  This does mean, however, that lyric placement does not provide an accurate barometer of where a word actually ends.   
+
+
+In addition, the singer is singing fudging his vowels, like singers are taught to do,   so ``and'' and ``end'' sound almost indistinguishable.  So, really, what listeners are hearing is this:
+  YOU en dME en dLESS lee
+
+
+Now, the listener's brain has to take this syllabic gobbldygook, and parse it into something useful.  They've currently got this mess to deal with (represented in SAMPA syllables):
+ju En dmi En dl@s li
+
+
+They parse the first part just fine, because the emphases match:
+you and me En dl@s li
+
+
+But no one says endLESSly.  People say ENDlessly.  So,  the listeners don't recognize it. they have to work with what they have.  They already turned one ``En d'' into an ``and'', so they do it again:
+you and me and l@s li
+
+
+Now, they're just left with LESS lee.  And that fits Leslie, a proper noun that fits in context and in emphasis placement.  So, the final heard lyric is:
+
+
+you and me and Les- lie
+
+
+The misunderstanding can be traced by to improper emphasis placement.  The songwriter probably didn't even think of that, and now he's stuck:  a one-hit-wonder with a misunderstood song.  I bet that in interview after interview, someone asks him who Leslie is.  It's probably very frustrating---especially since he could have just moved the word an eight note later, and it would have been understood perfectly.  That's the sort of situation this program is going to help avoid.
+
+
+Comparison to Existing Systems:
+
+
+Tra-la-lyrics is the closest system that exists to the proposed system.  It takes lyrics in Portuguese, and matches them via emphases to the music.  This is different from our system, because our system will use English-language lyrics.
+
+
+There are many systems that take lyrics and match them with notes, but very few use any sort of rhythmic rule set to do so.  Karaoke systems match lyrics to music on a time-based system, which is inadequate for our purposes.  However, the Wedelmusic model of a composition can be easily extended to include support for musical emphases, because of the way it separates out music and lyrics. Also, since it can be easily converted into an XML format, the composition can be transferred between programs, given the correct parser.
+
+
+%
+% Back Matter
+%
+
+\backmatter
+%\appendixpage
+
+%	Bibliography
+\bibliographystyle{\mybibliostyle}
+\bibliocommand
+
+%	Glossary
+\printglossary
+
+
+%	Index
+\printindex
+
+\end{document}

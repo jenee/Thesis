@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScrivenerProject Version="1.0" Creator="SCRMAC-2.2-15858">
+    <Binder>
+        <BinderItem ID="0" Type="DraftFolder" Created="2012-05-09 10:41:37 -0700" Modified="2012-05-09 10:41:37 -0700">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentIDs>3</SelectedSubdocumentIDs>
+            </CorkboardAndOutliner>
+            <Children>
+                <BinderItem ID="17" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:56:31 -0700">
+                    <Title>Melody Matcher </Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>23,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="112" Type="Folder" Created="2012-05-09 11:54:59 -0700" Modified="2012-05-09 11:55:02 -0700">
+                    <Title>Related Work</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="22" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Comparison to Existing Systems:</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="111" Type="Folder" Created="2012-05-09 11:54:21 -0700" Modified="2012-05-09 11:54:26 -0700">
+                    <Title>Future Work</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="25" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Steps to Completion of Project:  (1) Acquire acces...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="23" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Specification:</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="85" Type="Folder" Created="2012-05-09 11:13:50 -0700" Modified="2012-05-09 11:13:59 -0700">
+                    <Title>Syllable Structure</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="35" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Structure of a Syllable</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="28" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Syllable Structure</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="102" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:44:40 -0700">
+                            <Title>Syllable Length</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="43" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:44:44 -0700">
+                            <Title>NO FOOTNOTE_Syllable Length</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="42" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Calculating Length of Syllables in Relation to Eac...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="103" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:33:12 -0700">
+                            <Title>The Basic Structure of a Syllable</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="104" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:33:12 -0700">
+                            <Title>Determining Syllable Weight and Length</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="108" Type="Folder" Created="2012-05-09 11:46:16 -0700" Modified="2012-05-09 11:46:18 -0700">
+                    <Title>Data Format</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="39" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Data Format</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1286,244</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="37" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>System Design:</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="26" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>System Design:</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="109" Type="Folder" Created="2012-05-09 11:47:04 -0700" Modified="2012-05-09 11:47:06 -0700">
+                    <Title>Bleeding</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="99" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:33:12 -0700">
+                            <Title>Fickle Phones in the Coda</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>728,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="107" Type="Folder" Created="2012-05-09 11:42:15 -0700" Modified="2012-05-09 11:42:19 -0700">
+                    <Title>Phonemes</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="34" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:53:55 -0700">
+                            <Title>Full Table of Phone Makeup and Length</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>122,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="100" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:33:12 -0700">
+                            <Title>Calculating Weight/Length of Independent Syllables</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2166,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="29" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Length and Weight of Individual Phones</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="30" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Vowels</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="106" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:41:35 -0700">
+                            <Title>Vowel Types_excelCopy</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>972,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="105" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:42:39 -0700">
+                            <Title>SCRATCHVowel Types_with footnotes</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2187,1871</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="46" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:42:35 -0700">
+                            <Title>SCRATCHVowel Types_bland</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>468,1</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="31" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Consonants</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="32" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:48:42 -0700">
+                            <Title>Calculating Consonant Phone Length</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>850,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="33" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:49:04 -0700">
+                            <Title>Psuedocode: (where this is a phone)</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>577,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="36" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>CLIPS definition of a phone and its subparts</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="97" Type="Folder" Created="2012-05-09 11:28:27 -0700" Modified="2012-05-09 11:28:30 -0700">
+                    <Title>Cramming</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="98" Type="Text" Created="2012-05-09 11:30:39 -0700" Modified="2012-05-09 11:30:40 -0700">
+                            <Title>Consonant Types in the Coda and Onset</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="48" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Psuedo Code Formula for Determining Syllable “fit”...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,67</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="95" Type="Folder" Created="2012-05-09 11:26:42 -0700" Modified="2012-05-09 11:26:46 -0700">
+                    <Title>Note Intervals</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="50" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:26:40 -0700">
+                            <Title>Effect of Note Intervals on Musical Emphasis Patte...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2615,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="78" Type="Folder" Created="2012-05-09 11:09:53 -0700" Modified="2012-05-09 11:10:04 -0700">
+                    <Title>Data Acquistion</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="51" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Data Acquisition</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="94" Type="Folder" Created="2012-05-09 11:24:03 -0700" Modified="2012-05-09 11:24:05 -0700">
+                    <Title>BRS</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="49" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Patterns for Musical Emphases</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>714,395</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="52" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Binary Rhythmic Sequence (BRS) Construction and Me...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,23</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="53" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Evaluating Correctness of Note Intervals</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>533,525</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="81" Type="Folder" Created="2012-05-09 11:10:43 -0700" Modified="2012-05-09 11:10:55 -0700">
+                    <Title>Phonetic Dictionary</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="61" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Transfer of Phonetic dictionary into SQL Database</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="58" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Parsible Phonetic Dictionary </Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="59" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Final Phonetic Dictionary Choice</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="60" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Adjustment for the CLIPS format</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="84" Type="Folder" Created="2012-05-09 11:11:36 -0700" Modified="2012-05-09 11:11:49 -0700">
+                    <Title>High-Level Descriptions</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="63" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:13:34 -0700">
+                            <Title>Overview of Melody Matcher</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>786,5</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="21" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:55:47 -0700">
+                            <Title>Usage Domain and Environment:</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>562,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="20" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Abstract (System purpose and tasks to be performed...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="19" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>So. I bet you're all wondering what's happening wi...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>391,2978</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="87" Type="Folder" Created="2012-05-09 11:14:38 -0700" Modified="2012-05-09 11:14:42 -0700">
+                    <Title>Oronyms</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="74" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Heuristics for Aural Interpretation</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="68" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Using Search to Identify Phone Sequences in Lyrics...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="69" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>First Option for Algorithm/Approach </Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="88" Type="Text" Created="2012-05-09 11:15:59 -0700" Modified="2012-05-09 11:15:59 -0700">
+                            <Title>Second Approrach option</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="89" Type="Folder" Created="2012-05-09 11:20:25 -0700" Modified="2012-05-09 11:20:28 -0700">
+                    <Title>Test Cases</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="113" Type="Text" Created="2012-05-09 11:55:24 -0700" Modified="2012-05-09 11:55:47 -0700">
+                            <Title>Groovin'</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="75" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Related Test Cases (Unfinished Section)</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>615,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="90" Type="Text" Created="2012-05-09 11:21:30 -0700" Modified="2012-05-09 11:22:47 -0700">
+                            <Title>Example: Van Halen, Running With the Devil</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1364,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="91" Type="Text" Created="2012-05-09 11:22:45 -0700" Modified="2012-05-09 11:23:14 -0700">
+                            <Title>Example: The Beatles, Sgt. Pepper's Lonely Hearts Club Band
+</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1242,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="92" Type="Text" Created="2012-05-09 11:23:13 -0700" Modified="2012-05-09 11:23:31 -0700">
+                            <Title>Example: The Beatles, While My Guitar Gently Weeps</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1080,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="93" Type="Text" Created="2012-05-09 11:23:31 -0700" Modified="2012-05-09 11:23:31 -0700">
+                            <Title>Example: The Beatles, Strawberry Fields Forever</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,48</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="82" Type="Folder" Created="2012-05-09 11:11:16 -0700" Modified="2012-05-09 11:11:19 -0700">
+            <Title>Detrius</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+            <Children>
+                <BinderItem ID="27" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Prototype and Implementation</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="38" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Prototype and Implementation</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>325,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="76" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Evaluation Plan:  At this time, evaluators should ...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="86" Type="Folder" Created="2012-05-09 11:14:06 -0700" Modified="2012-05-09 11:14:17 -0700">
+                    <Title>Suitability of Rule-Based System</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="64" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Suitability of Current Implementations</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="62" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Evaluation of the Suitability of Rule-Based System...</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="65" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Benefits of a Rule-Based Approach</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="66" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Benefits of an Equation-Based Approach</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="67" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                            <Title>Verdict on Rule-Based vs Equation-Based </Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem ID="24" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>User Feedback:</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="18" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>TOC \o "1-4" </Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="1" Type="ResearchFolder" Created="2012-05-09 10:41:37 -0700" Modified="2012-05-09 10:41:37 -0700">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="4" Type="WebArchive" Created="2012-05-09 10:43:36 -0700" Modified="2012-05-09 10:43:44 -0700">
+                    <Title>ALL Documentation as of 2012-05-07</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <FileExtension>webarchive</FileExtension>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="2" Type="TrashFolder" Created="2012-05-09 10:41:37 -0700" Modified="2012-05-09 10:41:37 -0700">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem ID="5" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>Melody Matcher </Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2193,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="6" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>3 today.  As you already know, Melody matcher is a...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="7" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>DNE in GenAm</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="8" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>> | &lt;uniqIDString> | : | &lt;partOfSpeech> | : | &lt;ext...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="9" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>of words that are prefix-ed with this</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="10" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>Likelihood of hearing this as a prefix or as compl...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="11" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
+                    <Title>This sound does not exist on its own in American E...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="12" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:00:42 -0700">
+                    <Title>Melody Matcher </Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="13" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:00:42 -0700">
+                    <Title>TOC \o "1-4" </Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="14" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:00:42 -0700">
+                    <Title>delimited_ALL Documentation as of 2012-05-07-2</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="15" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:00:42 -0700">
+                    <Title>delimited_ALL Documentation as of 2012-05-07-3</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="16" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:00:42 -0700">
+                    <Title>delimited_ALL Documentation as of 2012-05-07-4</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="77" Type="Text" Created="2012-05-09 11:09:32 -0700" Modified="2012-05-09 11:09:32 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="79" Type="Text" Created="2012-05-09 11:10:27 -0700" Modified="2012-05-09 11:10:27 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="80" Type="Text" Created="2012-05-09 11:10:37 -0700" Modified="2012-05-09 11:10:37 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="83" Type="Folder" Created="2012-05-09 11:11:26 -0700" Modified="2012-05-09 11:11:29 -0700">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="70" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Second Approrach option</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="71" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>delimited_ALL Documentation as of 2012-05-07-54</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="72" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>delimited_ALL Documentation as of 2012-05-07-55</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="73" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>delimited_ALL Documentation as of 2012-05-07-56</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="54" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Example: Van Halen, Running With the Devil</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>180,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="55" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Example: The Beatles, Sgt. Pepper's Lonely Hearts ...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="56" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Example: The Beatles, While My Guitar Gently Weeps</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="57" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Example: The Beatles, Strawberry Fields Forever</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="96" Type="Text" Created="2012-05-09 11:28:26 -0700" Modified="2012-05-09 11:28:26 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="47" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:30:10 -0700">
+                    <Title>Consonant Types in the Coda and Onset</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>342,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="101" Type="Text" Created="2012-05-09 11:33:11 -0700" Modified="2012-05-09 11:45:07 -0700">
+                    <Title>SPARE_Calculating Length of Syllables in Relation to Eac...</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="41" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Calculating Weight/Length of Independent Syllables</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="40" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                    <Title>Fickle Phones in the Coda</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="45" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:43:57 -0700">
+                    <Title>UGLY_Determining Syllable Weight and Length</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>263,82</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="44" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:44:10 -0700">
+                    <Title>UGLY_The Basic Structure of a Syllable</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="110" Type="Text" Created="2012-05-09 11:54:18 -0700" Modified="2012-05-09 11:54:18 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="3" Type="Text" Created="2012-05-09 10:41:37 -0700" Modified="2012-05-09 10:41:37 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="86D3F2A7-C081-417D-9C1E-F659661B9759" Color="0.782988 0.815995 0.850718">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="5C131A55-FED7-415D-A243-36EC1E62F7B1" Color="0.922 0.91 0.98">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">vowel types</SearchSettings>
+        </Collection>
+    </Collections>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.9 0.92 0.95">Concept</Label>
+            <Label ID="1" Color="0.985 0.875 0.85">Chapter</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">First Draft</Status>
+            <Status ID="2">Revised Draft</Status>
+            <Status ID="3">Final Draft</Status>
+            <Status ID="4">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="959" Characters="5278" Date="2012-05-09 10:41:34 -0700"></PreviousSession>
+    </ProjectTargets>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScrivenerProject>

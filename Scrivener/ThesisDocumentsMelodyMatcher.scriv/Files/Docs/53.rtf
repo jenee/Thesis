@@ -1,0 +1,324 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red191\green191\blue191;\red0\green128\blue0;\red255\green153\blue0;
+\red128\green0\blue128;\red0\green0\blue255;\red255\green0\blue0;\red0\green255\blue255;}
+\deftab720
+\pard\pardeftab720\sl360\sb120\sa120\pardirnatural
+
+\f0\b\fs28 \cf0 Evaluating Correctness of Note Intervals\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b0\fs24 \cf0 To evaluate the fitness of note intervals, you need three things:\
+\pard\pardeftab720\fi1260\sl360\sb60\sa60\pardirnatural
+\cf0 (1) The meter of the piece and its implied 
+\b b
+\b0 inary 
+\b r
+\b0 hythmic 
+\b s
+\b0 equence (BRS) \
+(2) The list of Syllables\
+(3) The list of Notes.\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 In our example, "The Bad Touch", the meter is 4/4, so the music BRS is the basic "1 \'96 0 \'96 1 \'96 0 ", which (again) is delightfully repetitive.  We already parsed in the lyrics, so we also have a list of Notes and Syllables. We're ready to start!\
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f0\b\fs26 \cf0 Step One:  Compute a Lyric BRS From The Syllable Emphases\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b0\fs24 \cf0 Basically, you lookup each word in the lyrics in the phonetic dictionary.  Single-syllable words are represented with the wildcard symbol '
+\b x'
+\b0  because they can fall on both emphasized and unemphasized beats.  For multi-syllable words, each syllable must be represented with either a 0 or a 1 (or a 2, in the case of secondary emphases). If the note that the syllable is associated with is longer than a single beat, then the emphasis value will  be followed by however many x's are needed to have the correct number of beats.\
+In our example, the lyric is "nothing but mammals".  That breaks down like this:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+
+\i \cf0 Lyric\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 no-\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 thing\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 but\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 mam-\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 mals\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+
+\i0 \cf0 Note length\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Lyrics BRS\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 1 \'96  \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 0\cf7  \cf4 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 x\cf7  \cf5 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 1 \'96 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 0 \'96 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Music BRS\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 1 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 0 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 1 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 0 \'96 \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\fi60\sl360\sb60\sa60\pardirnatural\qc
+\cf0 1 \'96 \cell \lastrow\row
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 \
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f0\b\fs26 \cf0 Step Two: Compare each syllable's lyric BRS to its music BRS\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b0\fs24 \cf0 This step is pretty self explanatory.  For each syllable, you look at the value that the Lyric BRS has, and compare it to the Music BRS value.  If it's the same symbol or if the Lyric BRS symbol is 
+\b x
+\b0 , it's a match.  If the Lyric BRS is unemphasized, but the Music BRS is emphasized, then it still works, though it's not ideal.  If there's a out-and-out mismatch, like there is on "
+\i \cf6  mam-\cf0  mals
+\i0  " in this example, you've got to move on to check if there are mitigating factors that might compensate for the \cb8 disjoint.\cb1   \
+\pard\pardeftab720\sl360\sb240\pardirnatural
+
+\f0\b\fs26 \cf0 Step Three: In cases of BRS mismatch, check the intervals in the associated word or syllables\
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+
+\f1\b0\fs24 \cf0 Here's the chart from the previous step, but with the note intervals populated:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+
+\i \cf0 Lyric\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 no-\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 thing\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 but\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 mam-\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 mals\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+
+\i0 \cf0 Note interval\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 0\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 0\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 0\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 +\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 -\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Note length\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Lyrics BRS\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 1 \'96  \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 0\cf7  \cf4 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 x\cf7  \cf5 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 1 \'96 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 0 \'96 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx1440
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx7200
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Music BRS\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf3 1 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf4 0 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf5 1 \'96\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 0 \'96 \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\fi60\sl360\sb60\sa60\pardirnatural\qc
+\cf0 1 \'96 \cell \lastrow\row
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0  \
+So, since we noticed the mismatch on "
+\i \cf6 mam-\cf0  mals
+\i0  ", we've got to go look into the details of its member syllables "
+\i \cf6 mam-
+\i0 \cf0 " and "
+\i mals
+\i0 ".  \
+Note intervals are the most important thing to notice here.  They are represent how the note is different in pitch than the one before it. The note interval on "
+\i \cf6 mam-
+\i0 \cf0 " has no relationship to  "
+\i mals
+\i0 ", because it\'92s referring to the difference in pitch between it and the note associated with "
+\i \cf5  but
+\i0 \cf0 ", the word that precedes it. \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+
+\i \cf0 Lyric\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 mam-\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 mals\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+
+\i0 \cf0 Note interval\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+
+\b \cf6 +
+\b0 \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+
+\b \cf0 -
+\b0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Note length\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 1\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Lyrics BRS\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 1 \'96 \cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf0 0 \'96 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clminw1650 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clminw1110 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural
+\cf0 Music BRS\cell 
+\pard\intbl\itap1\pardeftab720\sl360\sb60\sa60\pardirnatural\qc
+\cf6 0 \'96 \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\fi60\sl360\sb60\sa60\pardirnatural\qc
+\cf0 1 \'96 \cell \lastrow\row
+\pard\pardeftab720\fi630\sl360\sb60\sa60\pardirnatural
+\cf0 We can actually use that knowledge to narrow down the scope of our problem.  We only have to look at the note interval on "
+\i mals
+\i0 ", since its note interval connects back to "
+\i \cf6 mam-
+\i0 \cf0 ".\
+When we look at the note interval on "
+\i mals
+\i0 ", we find that it's negative.  This is perfect, since "
+\i mals
+\i0 " should be less emphasized than "
+\i \cf6 mam-
+\i0 \cf0 ".}

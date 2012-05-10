@@ -1,0 +1,211 @@
+\documentclass[10pt,oneside]{memoir}
+\usepackage{layouts}[2001/04/29]
+\makeglossary
+\makeindex
+
+\def\mychapterstyle{default}
+\def\mypagestyle{headings}
+\def\revision{}
+
+%%% need more space for ToC page numbers
+\setpnumwidth{2.55em}
+\setrmarg{3.55em}
+
+%%% need more space for ToC section numbers
+\cftsetindents{part}{0em}{3em}
+\cftsetindents{chapter}{0em}{3em}
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4.5em}{3.9em}
+\cftsetindents{subsubsection}{8.4em}{4.8em}
+\cftsetindents{paragraph}{10.7em}{5.7em}
+\cftsetindents{subparagraph}{12.7em}{6.7em}
+
+%%% need more space for LoF numbers
+\cftsetindents{figure}{0em}{3.0em}
+
+%%% and do the same for the LoT
+\cftsetindents{table}{0em}{3.0em}
+
+%%% set up the page layout
+\settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
+\settrims{0pt}{0pt}
+
+\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setulmarginsandblock{1.5in}{1.5in}{*}
+
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{booktabs}			% Better tables
+\usepackage{tabulary}			% Support longer table cells
+\usepackage[utf8]{inputenc}		% For UTF-8 support
+\usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
+\usepackage{xcolor}				% Allow for color (annotations)
+
+%\geometry{landscape}			% Activate for rotated page geometry
+
+%\usepackage[parfill]{parskip}	% Activate to begin paragraphs with an empty
+								% line rather than an indent
+
+
+\def\myauthor{Author}			% In case these were not included in metadata
+\def\mytitle{Title}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\bibliocommand{}
+
+\VerbatimFootnotes
+\def\myauthor{Jenee Hughes}
+\def\baseheaderlevel{1}
+\def\format{complete}
+\def\mytitle{ThesisDocumentsMelodyMatcher}
+
+
+%
+%	PDF Stuff
+%
+
+%\ifpdf							% Removed for XeLaTeX compatibility
+%  \pdfoutput=1					% Removed for XeLaTeX compatibility
+  \usepackage[
+  	plainpages=false,
+  	pdfpagelabels,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+  \usepackage{memhfixc}
+%\fi							% Removed for XeLaTeX compatibility
+
+
+%
+% Title Information
+%
+
+
+\ifx\latexauthor\undefined
+\else
+	\def\myauthor{\latexauthor}
+\fi
+
+\ifx\subtitle\undefined
+\else
+	\addtodef{\mytitle}{}{ \\ \subtitle}
+\fi
+
+\ifx\affiliation\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \affiliation}
+\fi
+
+\ifx\address\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \address}
+\fi
+
+\ifx\phone\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \phone}
+\fi
+
+\ifx\email\undefined
+\else
+	\addtodef{\myauthor}{}{ \\ \email}
+\fi
+
+\ifx\web\undefined
+	\else
+		\addtodef{\myauthor}{}{ \\ \web}
+\fi
+
+\title{\mytitle}
+\author{\myauthor}
+
+\begin{document}
+
+\chapterstyle{\mychapterstyle}
+\pagestyle{\mypagestyle}
+
+%
+%		Front Matter
+%
+
+\frontmatter
+
+
+% Title Page
+
+\maketitle
+\clearpage
+
+% Copyright Page
+\vspace*{\fill}
+
+\setlength{\parindent}{0pt}
+
+\ifx\mycopyright\undefined
+\else
+	\textcopyright{} \mycopyright
+\fi
+
+\revision
+
+\begin{center}
+\framebox{ \parbox[t]{1.5in}{\centering Formatted for \LaTeX  \\ 
+ by MultiMarkdown}}
+\end{center}
+
+\setlength{\parindent}{1em}
+\clearpage
+
+% Table of Contents
+\tableofcontents
+%\listoffigures			% activate to include a List of Figures
+%\listoftables			% activate to include a List of Tables
+
+
+%
+% Main Content
+%
+
+
+% Layout settings
+\setlength{\parindent}{1em}
+
+\mainmatter
+The Basic Structure of a Syllable
+A syllable has a syllable nucleus, an optional onset and an optional coda. These parts are all formed of phonemes, which are discrete sound fragments. We'll go into those more later.
+The syllable nucleus is the anchor of the syllable, and as such, is typically the sound that a singer will ``hold'' while on a note.  It is normally a vowel, but can also be a sonorant, or if no vowel exists, a ``singable'' consonant, like m, n, l, or r.  All syllables must have nuclei.
+The onset is all the sounds that occur before the syllable nucleus.  Typically, these are consonants.  The existence of a syllable onset is common, but not guaranteed. In English, it can contain between zero and three consonants.
+The coda of a syllable is all the sounds that occur after the syllable nucleus.  Again, these are typically consonants. The having a syllable coda is more rare than having a syllable onset.  In English, it can contain between zero and four consonants (five with pluralization).
+Example:   cat
+Part        Ortho       SAMPA \\
+Onset:  c       k
+Nucleus:    a       \{
+Coda:       t        t
+
+
+%
+% Back Matter
+%
+
+\backmatter
+%\appendixpage
+
+%	Bibliography
+\bibliographystyle{\mybibliostyle}
+\bibliocommand
+
+%	Glossary
+\printglossary
+
+
+%	Index
+\printindex
+
+\end{document}
