@@ -14,7 +14,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>377,0</TextSelection>
+                        <TextSelection>744,7</TextSelection>
                     </TextSettings>
                 </BinderItem>
                 <BinderItem ID="17" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:56:31 -0700">
@@ -506,18 +506,29 @@
                                         <TextSelection>0,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
-                                <BinderItem ID="48" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                                <BinderItem ID="48" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-15 23:52:20 -0700">
                                     <Title>Psuedo Code Formula for Determining Syllable “fit”...</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>0,67</TextSelection>
+                                        <TextSelection>68,0</TextSelection>
                                     </TextSettings>
                                     <References>
                                         <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
                                     </References>
+                                </BinderItem>
+                                <BinderItem ID="123" Type="Text" Created="2012-05-15 23:51:50 -0700" Modified="2012-05-16 00:00:13 -0700">
+                                    <Title>Actual Excel Code Formula for Determining Syllable “fit” with the music.
+</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
                                 </BinderItem>
                             </Children>
                         </BinderItem>
@@ -1341,7 +1352,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2012-05-10 12:35:02 -0700"></PreviousSession>
+        <PreviousSession Words="0" Characters="0" Date="2012-05-15 23:19:54 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

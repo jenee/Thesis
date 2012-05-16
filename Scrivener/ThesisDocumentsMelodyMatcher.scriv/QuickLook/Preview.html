@@ -173,7 +173,7 @@ NOTE_LEN (required field) is the length of the note that t...</p>
 <p class="binderItem"><strong>Structure of a Syllable-EXAMPLES</strong><br/><br/>
 Examples<br/>
 For simplicity’s sake, the note length will not vary on all the following examples.<br/>
-Example 1: “o” <br/>
+ Example 1: “o” <br/>
 (Single Syllable, Single Phone)               .<br/>
 o::IN/NNP/NN/LS: "ou :{o}<br/>
 WORD<br/>
@@ -237,7 +237,7 @@ n<br/>
 <br/>
 <br/>
 Example 2: “no” <br/>
-(Single Syllable, No Coda, Single-Phone Nucleus and Onset)...</p>
+(Single Syllable, No Coda, Single-Phone Nucleus and Onset...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Syllable Structure</strong><br/>Syllable Structure<br/>
@@ -447,7 +447,7 @@ i<br/>
 see<br/>
 long (e)<br/>
 1<br/>
-I**<br/>
+I**<br/>
 city<br/>
 short (i)<br/>
 0<br/>
@@ -455,7 +455,7 @@ short (i)<br/>
 E<br/>
 <br/>
 bed<br/>
-short ...</p>
+short...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Consonants</strong><br/>Consonants<br/>
@@ -787,8 +787,10 @@ I know there’s a hierarchy of length between  them, but I haven’t yet figure
 </li>
 <li>
 <p class="binderItem"><strong>Psuedo Code Formula for Determining Syllable “fit”...</strong><br/>Psuedo Code Formula for Determining Syllable “fit” with the music.<br/>
-<br/>
-=IF(U18 > A18,<br/>
+</p>
+</li>
+<li>
+<p class="binderItem"><strong>Actual Excel Code Formula for Determining Syllable “fit” with the music.</strong><br/>=IF(U18 > A18,<br/>
   IF(D19=F18, <br/>
   IF( (U18 - 1 <= A18 + A19 ) ,<br/>
     1, <br/>
@@ -804,13 +806,24 @@ I know there’s a hierarchy of length between  them, but I haven’t yet figure
  ),<br/>
  1<br/>
 )<br/>
+<br/>
 =IF(U18 >= A18,  IF(D19=F18, IF( (U18 - 1 <= A18 + A19 ) , 1, 0),   IF(D19 = 0, IF(U18 <= A18 + A19, 1, 0),   0) ),   1)<br/>
 <br/>
 =IF(U18 > A18,  IF(D19=F18,    IF( (U18 - 1 < A18 + A19 ),  1, 0),     IF(D19 = 0,  IF(U18 < A18 + A19, 1, 0),   0),   1)<br/>
 <br/>
 =IF(U18 > A18, <br/>
  IF(N19 = 0, <br/>
-...</p>
+  IF(U18 < A18 + A19, <br/>
+   1,<br/>
+   0<br/>
+  ),<br/>
+  0<br/>
+ ), <br/>
+ 1<br/>
+)<br/>
+<br/>
+<br/>
+FROM SAMPAch...</p>
 </li>
 </ul>
 <hr/>

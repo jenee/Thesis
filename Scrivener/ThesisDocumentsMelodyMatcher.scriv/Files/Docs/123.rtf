@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red0\green62\blue204;\red0\green81\blue9;\red153\green0\blue204;
+\red146\green55\blue31;\red45\green163\blue58;\red255\green138\blue23;\red250\green42\blue213;}
+\deftab720
+\pard\pardeftab720\sl300\pardirnatural
+
+\f0\fs23 \cf0 =IF(U18 > A18,\
+	 IF(D19=F18, \
+		IF( (U18 - 1 <= A18 + A19 ) ,\
+			 1, \
+			0\
+		),\
+		IF(D19 = 0, \
+			IF(U18 <= A18 + A19,\
+				 1,\
+				0\
+			),\
+			0\
+		)\
+	),\
+	1\
+)\
+\
+=IF(U18 >= A18,  IF(D19=F18, IF( (U18 - 1 <= A18 + A19 ) , 1, 0),   IF(D19 = 0, IF(U18 <= A18 + A19, 1, 0),   0) ),   1)\
+\
+=IF(U18 > A18,  IF(D19=F18,    IF( (U18 - 1 < A18 + A19 ),  1, 0),     IF(D19 = 0,  IF(U18 < A18 + A19, 1, 0),   0),   1)\
+\
+=IF(U18 > A18, \
+	IF(N19 = 0, \
+		IF(U18 < A18 + A19, \
+			1,\
+			0\
+		),\
+		0\
+	), \
+	1\
+)\
+\
+\
+FROM SAMPAchartFULL (base algorithm) 481Final.xls\
+STEP 1 (full syllable weight calc):\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs20\fsmilli10080 \cf0 =IF(\cf2 O18\cf0 =0,\
+	0,\
+	\cf3 (\cf0 SUM\cf4 (\cf3 L18:M18\cf4 )\cf0 /\cf4 (\cf0 COUNT\cf5 (\cf3 L18:M18\cf5 )\cf0 *\cf4 $AF$2)\cf3 )\
+\cf0 )\
++IF(OR\cf3 (\cf5 P18\cf0 =0,\cf6 N18\cf0 =0\cf3 )\cf0 ,\
+	IF\cf3 (\cf2 O18\cf0 >\cf7 A18\cf0 ,\
+		\cf7 A18\cf0 ,\
+		\cf2 O18\
+	\cf3 )\cf0 ,\
+	\cf2 O18\
+\cf0 )\
++(SUM\cf3 (\cf8 Q18:T18\cf3 )\cf0 /\cf3 (\cf0 COUNT\cf4 (\cf8 Q18:T18\cf4 )\cf0 *\cf4 $AF$2\cf3 )\cf0 )\
+-IF(\cf2 N19\cf0 =0,\
+	IF\cf3 (\cf0 OFFSET\cf4 (\cf3 T18\cf0 ,0,-COUNTIF\cf5 (\cf4 P18:T18\cf0 ,0\cf5 )\cf4 )\cf0 =\cf5 P18\cf0 ,\
+		IF\cf4 (\cf2 O18\cf0 >1,\
+			\cf5 (\cf2 O18\cf0 -1\cf5 )\cf0 +\cf5 (\cf6 (\cf0 OFFSET\cf7 (\cf3 T18\cf0 ,0,-COUNTIF\cf8 (\cf4 P18:T18\cf0 ,0\cf8 )\cf7 )\cf6 )\cf0 /\cf6 (\cf7 (\cf0 COUNT\cf8 (Q18:T18)\cf0 -COUNTBLANK\cf8 (Q18:T18)\cf7 )\cf0 *\cf4 $AF$2\cf6 )\cf5 )\cf0 ,\
+			OFFSET\cf5 (\cf3 T18\cf0 ,0,-COUNTIF\cf6 (\cf4 P18:T18\cf0 ,0\cf6 )\cf5 )\cf0 / \cf5 (\cf6 (\cf0 COUNT\cf7 (\cf8 Q18:T18\cf7 )\cf0 -COUNTBLANK\cf7 (\cf8 Q18:T18\cf7 )\cf6 )\cf0 *\cf4 $AF$2\cf5 )\cf0  \
+		\cf4 )\cf0 ,\
+		OFFSET\cf4 (\cf3 T18\cf0 ,0,-COUNTIF\cf5 (\cf4 P18:T18\cf0 ,0\cf5 )\cf4 )\cf0 /\cf4 (\cf5 (\cf0 COUNT\cf6 (\cf8 Q18:T18\cf6 )\cf0 -COUNTBLANK\cf6 (\cf8 Q18:T18\cf6 )\cf5 )\cf0 *\cf4 $AF$2)\
+	\cf3 )\cf0 ,\
+	0\
+)
+\f0\fs23 \
+\pard\pardeftab720\sl300\pardirnatural
+\cf0 \
+\
+\
+STEP 2 (is valid):\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f1\fs20\fsmilli10080 \cf0 =IF(\cf2 U18\cf0  > \cf3 A18\cf0 , \
+	IF\cf3 (\cf4 D19\cf0 =\cf5 F18\cf0 ,  \
+		IF\cf4 (\cf0  \cf5 (\cf2 U18\cf0  - 1 <= \cf3 A18\cf0  + \cf6 A19\cf0  \cf5 )\cf0 ,   \
+			\cf3 A18\cf0 ,   \
+			0  \
+		\cf4 )\cf0 ,  \
+		IF\cf4 (D19\cf0  = 0,   \
+			IF\cf5 (\cf2 U18\cf0  <= \cf3 A18\cf0  + \cf6 A19\cf0 ,    \
+				\cf3 A18\cf0 ,   \
+				 0   \
+			\cf5 )\cf0 ,   \
+			IF\cf5 (\cf0  AND\cf6 (\cf0  \cf7 N18\cf0  = 0, \cf8 M18\cf0 <>0\cf6 )\cf0 ,    \
+				IF\cf6 (\cf2 U18\cf0  - \cf8 M18\cf0 /\cf2 $AF$2\cf0  <= \cf3 A18\cf0  + \cf6 A19\cf0 ,     \
+					\cf3 A18\cf0 ,     \
+					0    \
+				\cf6 )\cf0 ,    \
+				0   \
+			\cf5 )\cf0    \
+		\cf4 )\cf0  \
+	\cf3 )\cf0 , \
+	\cf3 A18\
+\cf0 )\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
