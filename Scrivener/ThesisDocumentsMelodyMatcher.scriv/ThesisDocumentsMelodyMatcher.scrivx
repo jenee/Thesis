@@ -506,7 +506,7 @@
                                         <TextSelection>0,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
-                                <BinderItem ID="48" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-16 01:33:00 -0700">
+                                <BinderItem ID="48" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-16 06:00:03 -0700">
                                     <Title>Psuedo Code Formula for Determining Syllable “fit”...</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -519,7 +519,7 @@
                                         <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
                                     </References>
                                 </BinderItem>
-                                <BinderItem ID="123" Type="Text" Created="2012-05-15 23:51:50 -0700" Modified="2012-05-16 00:30:06 -0700">
+                                <BinderItem ID="123" Type="Text" Created="2012-05-15 23:51:50 -0700" Modified="2012-05-16 05:23:44 -0700">
                                     <Title>Actual Excel Code Formula for Determining Syllable “fit” with the music.
 </Title>
                                     <MetaData>
@@ -770,7 +770,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>698,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="51" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -1362,7 +1362,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="413" Characters="2618" Date="2012-05-15 23:19:54 -0700"></PreviousSession>
+        <PreviousSession Words="541" Characters="4456" Date="2012-05-15 23:19:54 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

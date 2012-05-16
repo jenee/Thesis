@@ -1,7 +1,8 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1138
 {\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fmodern\fcharset0 Courier;
 \f3\fnil\fcharset0 Verdana;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red0\green62\blue204;\red0\green81\blue9;\red153\green0\blue204;
+\red146\green55\blue31;\red45\green163\blue58;\red255\green138\blue23;\red250\green42\blue213;}
 \deftab720
 \pard\pardeftab720\sl360\sb240\pardirnatural
 
@@ -34,10 +35,69 @@ S18 = 4th coda phone weight val\
 STEP 1: For each phones in the syllable:\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f3\fs20\fsmilli10080 \cf0 	Find in lookup table\
+\f3\fs20\fsmilli10080 \cf0 	Find weight of phone in lookup table\
 \
 STEP 2:\
 \
+\pard\pardeftab720\sl300\pardirnatural
+
+\f2\fs23 \cf0 (full syllable weight calc):\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f3\fs20\fsmilli10080 \cf0 =IF(\cf2 NUCLEUS_WEIGHT\cf0 =0,\
+	0,\
+	\cf3 (\cf0 SUM\cf4 (\cf3 ALL_ONSET_WEIGHTS\cf4 )\cf0 /\cf4 (\cf0 COUNT\cf5 (\cf3 ALL_ONSET_WEIGHTS\cf5 )\cf0 *\cf4 MAX_NOTE_WEIGHT)\cf3 )\
+\cf0 )\
++IF(OR\cf3 (\cf5 FIRST_CODA_WEIGHT\cf0 =0,\cf6 FIRST_ONSET_WEIGHT\cf0 =0\cf3 )\cf0 ,\
+	IF\cf3 (\cf2 NUCLEUS_WEIGHT\cf0 >\cf7 NOTE_WEIGHT\cf0 ,\
+		\cf7 NOTE_WEIGHT\cf0 ,\
+		\cf2 NUCLEUS_WEIGHT\
+	\cf3 )\cf0 ,\
+	\cf2 NUCLEUS_WEIGHT\
+\cf0 )\
++(SUM\cf3 (\cf8 SECOND_THROUGH_FOURTH_CODA_WEIGHTS\cf3 )\cf0 /\cf3 (\cf0 COUNT\cf4 (\cf8 SECOND_THROUGH_FOURTH_CODA_WEIGHTS\cf4 )\cf0 *\cf4 MAX_NOTE_WEIGHT\cf3 )\cf0 )\
+-IF(\cf2 NEXT_LEADING_ONSET_WEIGHT\cf0 =0,\
+	IF\cf3 (\cf0 OFFSET\cf4 (\cf3 THIS_TRAILING_CODA_WEIGHT\cf0 ,0,-COUNTIF\cf5 (\cf4 THIS_ALL_CODA_WEIGHT\cf0 ,0\cf5 )\cf4 )\cf0 =\cf5 THIS_FIRST_CODA_WEIGHT\cf0 ,\
+		IF\cf4 (\cf2 NUCLEUS_WEIGHT\cf0 >1,\
+			\cf5 (\cf2 NUCLEUS_WEIGHT\cf0 -1\cf5 )\cf0 +\cf5 (\cf6 (\cf0 OFFSET\cf7 (\cf3 THIS_TRAILING_CODA_WEIGHT\cf0 ,0,-COUNTIF\cf8 (\cf4 THIS_ALL_CODA_WEIGHT\cf0 ,0\cf8 )\cf7 )\cf6 )\cf0 /\cf6 (\cf7 (\cf0 COUNT\cf8 (SECOND_THROUGH_FOURTH_CODA_WEIGHTS)\cf0 -COUNTBLANK\cf8 (SECOND_THROUGH_FOURTH_CODA_WEIGHTS)\cf7 )\cf0 *\cf4 MAX_NOTE_WEIGHT\cf6 )\cf5 )\cf0 ,\
+			OFFSET\cf5 (\cf3 THIS_TRAILING_CODA_WEIGHT\cf0 ,0,-COUNTIF\cf6 (\cf4 THIS_ALL_CODA_WEIGHT\cf0 ,0\cf6 )\cf5 )\cf0 / \cf5 (\cf6 (\cf0 COUNT\cf7 (\cf8 SECOND_THROUGH_FOURTH_CODA_WEIGHTS\cf7 )\cf0 -COUNTBLANK\cf7 (\cf8 SECOND_THROUGH_FOURTH_CODA_WEIGHTS\cf7 )\cf6 )\cf0 *\cf4 MAX_NOTE_WEIGHT\cf5 )\cf0  \
+		\cf4 )\cf0 ,\
+		OFFSET\cf4 (\cf3 THIS_TRAILING_CODA_WEIGHT\cf0 ,0,-COUNTIF\cf5 (\cf4 THIS_ALL_CODA_WEIGHT\cf0 ,0\cf5 )\cf4 )\cf0 /\cf4 (\cf5 (\cf0 COUNT\cf6 (\cf8 SECOND_THROUGH_FOURTH_CODA_WEIGHTS\cf6 )\cf0 -COUNTBLANK\cf6 (\cf8 SECOND_THROUGH_FOURTH_CODA_WEIGHTS\cf6 )\cf5 )\cf0 *\cf4 MAX_NOTE_WEIGHT)\
+	\cf3 )\cf0 ,\
+	0\
+)
+\f2\fs23 \
+
+\f3\fs20\fsmilli10080 \
+\
+\pard\pardeftab720\sl300\pardirnatural
+
+\f2\fs23 \cf0 \
+STEP 2 (is valid):\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f3\fs20\fsmilli10080 \cf0 =IF(\cf2 THIS_UNADJUSTED_SYLLABLE_WEIGHT\cf0  > \cf3 THIS_NOTE_WEIGHT\cf0 , \
+	IF\cf3 (\cf4 NEXT_LEADING_ONSET_PHONE\cf0 =\cf5 THIS_TRAILING_CODA_PHONE\cf0 ,  \
+		IF\cf4 (\cf0  \cf5 (\cf2 THIS_UNADJUSTED_SYLLABLE_WEIGHT\cf0  - 1 <= \cf3 THIS_NOTE_WEIGHT\cf0  + \cf6 NEXT_NOTE_WEIGHT\cf0  \cf5 )\cf0 ,   \
+			\cf3 THIS_NOTE_WEIGHT\cf0 ,   \
+			0  \
+		\cf4 )\cf0 ,  \
+		IF\cf4 (NEXT_LEADING_ONSET_PHONE\cf0  = 0,   \
+			IF\cf5 (\cf2 THIS_UNADJUSTED_SYLLABLE_WEIGHT\cf0  <= \cf3 THIS_NOTE_WEIGHT\cf0  + \cf6 NEXT_NOTE_WEIGHT\cf0 ,    \
+				\cf3 THIS_NOTE_WEIGHT\cf0 ,   \
+				 0   \
+			\cf5 )\cf0 ,   \
+			IF\cf5 (\cf0  AND\cf6 (\cf0  \cf7 FIRST_ONSET_PHONE\cf0  = 0, \cf8 SECOND_ONSET_PHONE\cf0  != 0\cf6 )\cf0 ,    \
+				IF\cf6 (\cf2 THIS_UNADJUSTED_SYLLABLE_WEIGHT\cf0  - \cf8 SECOND_ONSET_PHONE\cf0 /\cf2 MAX_NOTE_WEIGHT\cf0  <= \cf3 THIS_NOTE_WEIGHT\cf0  + \cf6 NEXT_NOTE_WEIGHT\cf0 ,     \
+					\cf3 THIS_NOTE_WEIGHT\cf0 ,     \
+					0    \
+				\cf6 )\cf0 ,    \
+				0   \
+			\cf5 )\cf0    \
+		\cf4 )\cf0  \
+	\cf3 )\cf0 , \
+	\cf3 NOTE_WEIGHT\
+\cf0 )\
 \
 \
 \
