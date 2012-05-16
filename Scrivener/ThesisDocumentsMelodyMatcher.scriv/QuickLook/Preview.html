@@ -787,7 +787,21 @@ I know there’s a hierarchy of length between  them, but I haven’t yet figure
 </li>
 <li>
 <p class="binderItem"><strong>Psuedo Code Formula for Determining Syllable “fit”...</strong><br/>Psuedo Code Formula for Determining Syllable “fit” with the music.<br/>
-</p>
+<br/>
+FROM SAMPAchartFULL (base algorithm) 481Final.xls<br/>
+B18 = 3rd onset phone <br/>
+C18 = 2nd onset phone <br/>
+D18 = 1st onset phone (nearest to nucleus)<br/>
+E18 = NUCLEUS phone<br/>
+F18 = 1st coda phone (nearest to nucleus)<br/>
+G18 = 2nd coda phone<br/>
+H18 = 3rd coda phone<br/>
+I18 = 4th coda phone<br/>
+<br/>
+L18 = 3rd onset phone weight val<br/>
+M18 = 2nd onset phone weight val<br/>
+N18 = 1st onset phone weight val (nearest to nucleus)<br/>
+O18 = NUCLEUS phone weight val (I’m making the ...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Actual Excel Code Formula for Determining Syllable “fit” with the music.</strong><br/>=IF(U18 > A18,<br/>
@@ -1012,6 +1026,23 @@ Currently, my project prototype is a series of excel spreadsheets, partially gen
 </li>
 <hr/>
 <ul>
+<li>
+<p class="binderItem"><strong>SQLite queries WHAT YEAAAH!</strong><br/>prompt$ pwd<br/>
+/Users/admin/Documents/Thesis/SQLite/EXAMPLES_FROM_WEBSITE<br/>
+prompt$ ./simpleExample ../../SQLlite\ browser\ tests/phoneticDict "select * from phoneticDictTable where ortho = \"hello\""ortho = hello<br/>
+uniqID = <br/>
+PartOfSpeech = UH/NN<br/>
+SAMPA =  h@"lou <br/>
+extendedORTHO = {hello}<br/>
+freq = 69289<br/>
+<br/>
+prompt$ ./simpleExample ../../SQLlite\ browser\ tests/phoneticDict "select * from phoneticDictTable where ortho LIKE \"aardvark\""<br/>
+ortho = aardvark<br/>
+uniqID = <br/>
+PartOfSpeech = NN<br/>
+SAMPA =  "A`rd$vA`rk <br/>
+extende...</p>
+</li>
 <li>
 <p class="binderItem"><strong>Data Acquisition</strong><br/>Data Acquisition<br/>
 Once a composition is fully parsed in from the Music XML format,  there are just a few more steps to take. The program grabs correct phonetic information for each word for each word from the embedded CLIPS environment, and stores it in the Word and Syllable Objects<br/>
