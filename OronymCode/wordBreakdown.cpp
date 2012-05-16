@@ -153,7 +153,7 @@ void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    
    char* databaseName;
    
-   if(databaseFilename.empty() ) {
+   if( databaseFilename.empty() ) {
       databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict";
    } else {
       sprintf(databaseName, "%s", databaseFilename.c_str());
