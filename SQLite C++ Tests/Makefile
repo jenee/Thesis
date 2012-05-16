@@ -6,5 +6,5 @@ all: testProgram1
 testProgram1: testProgram1.c
 	$(CC) $(CFLAGS) -o $@ $^
    
-clean: dummyNonExistentFile
+clean: 
 	rm -f testProgram1 a.out
