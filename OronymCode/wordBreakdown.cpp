@@ -13,6 +13,7 @@ using namespace std;
 
 
 #define MAX_DATABASE_FILE_PATH_LEN 1024
+#define MAX_DATABASE_QUERY_LEN 1024
 
 typedef string phone ;
 
@@ -52,14 +53,15 @@ int main() {
    connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
 
    //TODO Do stuff!
-   fprintf(stderr, "gets here, 0\n");
+   //fprintf(stderr, "gets here, 0\n");
    string phrase = "A nice cold shower";
-   fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
+   //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
    vector<string> phraseWords = strTokOnWhitespace( phrase );
-   fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
+   //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
+   //TODO remove: loop is for debugging
    for( int i = 0; i < phraseWords.size(); i++) {
       string w = phraseWords[i];
-      cout << w << " ";
+      cout << w << "|";
    }
    cout <<endl;
    
@@ -209,10 +211,11 @@ vector<string> dictLookup( string sampaStr ) {
 /* given ortho, returns SAMPA */
 string queryDBforSAMPA( string orthoWord ) {
    //assert(0); // PUT SQL QUERY HERE
-   char* sqlQuery;
+   char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
 
-   sprintf(sqlQuery, "select * from phoneticDictTable where ortho = \\\"%s\\\"",orthoWord.c_str()); 
+   //sprintf(sqlQuery, "select * from phoneticDictTable where ortho = \\\"%s\\\"",orthoWord.c_str()); 
+   sprintf(sqlQuery, "select * from phoneticDictTable where ortho = \"%s\"",orthoWord.c_str()); 
    int rc = sqlite3_exec(db, sqlQuery, callback, 0, &zErr);
    if ( rc != SQLITE_OK ) {
       if ( zErr != NULL ) {
