@@ -4,10 +4,10 @@ CFLAGS   = -lsqlite3 -Wall -pedantic
 all: wordBreakdown
    
 wordBreakdown: wordBreakdown.cpp
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -g -o $@ $^
 
-forgdb: wordBreakdown.cpp
-	$(CC) $(CFLAGS) -g -o wordBreakdown $^
+noGDB: wordBreakdown.cpp
+	$(CC) $(CFLAGS)  -o wordBreakdown $^
 
 clean: 
 	rm -rf wordBreakdown a.out wordBreakdown.dSYM

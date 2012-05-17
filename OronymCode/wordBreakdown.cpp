@@ -1,4 +1,4 @@
-
+#include <algorithm> //for toLower's transform statement
 #include <stdlib.h>
 #include <string>
 #include <vector>
@@ -36,9 +36,10 @@ sqlite3 *db;
 vector< vector< string > > databaseResults;
 
 
-static int callback(void *NotUsed, int nCol, char **values, char **headers){
+static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
+   fprintf(stderr,"===Callback for %s===\n",(char *) queryterm);
    for(i=0; i< nCol; i++){
       fprintf(stderr, "%s = %s\n", headers[i], values[i] ? values[i] : "NULL");
       rowEntry.push_back( values[i] );
@@ -67,7 +68,7 @@ int main() {
    
    for( int i = 0; i < phraseWords.size(); i++) {
       string w = phraseWords[i];
-      cout << queryDBforSAMPA( w ) << " ";
+      cout <<"~~~~~~~~~~"<<w<<"~~~~~~~~~~"<< queryDBforSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"; 
    }
    cout <<endl;
 
@@ -83,45 +84,6 @@ int main() {
 
 
   cleanupDatabase();
-  /* char* query = "SELECT SAMPAspelling FROM finalDictTable WHERE ortho = 'zoologically'";//argv[2];
-   
-   rc = sqlite3_open(tablename, &db);
-   if( rc ){
-      fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-      sqlite3_close(db);
-      return(1);
-   }
-   
-   
-   rc = sqlite3_exec(db, query, callback, 0, &zErrMsg);
-   if( rc!=SQLITE_OK ){
-      fprintf(stderr, "SQL error: %s\n", zErrMsg);
-      sqlite3_free(zErrMsg);
-   }
-   
-   sqlite3_close(db);
-   return 0;
-*/
-   /*
-   cout << "HTTP/1.1 200 OK\n";
-   cout << "Cache-Control: private\n";
-   cout << "Content-Type: text/plain\n";
-   cout << "Server: bash/2.0\n";
-   cout << "Connection: Close\n";
-
-   string output = "";
-   vector<string> sampaPhrase = splitSampaIntoLetters("{bdZEkt");
-   for (int i=0; i < sampaPhrase.size(); i++) {
-      output.append(sampaPhrase.at(i) + " ");
-   }
-   output.append("\n");
-
-   cout << "Content-Length: " << output.size() << "\n";
-   cout << "\n";
-
-   cout << output;
-   return 0;
-    */
 }
 
 
@@ -207,16 +169,22 @@ vector<string> dictLookup( string sampaStr ) {
    return orthoMatches;
 }
 
+string toLowerCase( string data) {
+   std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+   return data;
+}
+
 
 /* given ortho, returns SAMPA */
 string queryDBforSAMPA( string orthoWord ) {
    //assert(0); // PUT SQL QUERY HERE
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
-
+   fprintf(stderr, "queryDBforSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   string lowercaseOrthoWord = toLowerCase( orthoWord );
    //sprintf(sqlQuery, "select * from phoneticDictTable where ortho = \\\"%s\\\"",orthoWord.c_str()); 
-   sprintf(sqlQuery, "select * from phoneticDictTable where ortho = \"%s\"",orthoWord.c_str()); 
-   int rc = sqlite3_exec(db, sqlQuery, callback, 0, &zErr);
+   sprintf(sqlQuery, "select * from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
+   int rc = sqlite3_exec(db, sqlQuery, callback, (void*)orthoWord.c_str(), &zErr);
    if ( rc != SQLITE_OK ) {
       if ( zErr != NULL ) {
          fprintf(stderr, "SQL error: %s\n", zErr);
