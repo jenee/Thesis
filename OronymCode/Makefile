@@ -5,6 +5,9 @@ all: wordBreakdown
    
 wordBreakdown: wordBreakdown.cpp
 	$(CC) $(CFLAGS) -o $@ $^
-   
+
+forgdb: wordBreakdown.cpp
+	$(CC) $(CFLAGS) -g -o wordBreakdown $^
+
 clean: 
-	rm -f wordBreakdown a.out
+	rm -rf wordBreakdown a.out wordBreakdown.dSYM

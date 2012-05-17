@@ -11,6 +11,9 @@
 
 using namespace std;
 
+
+#define MAX_DATABASE_FILE_PATH_LEN 1024
+
 typedef string phone ;
 
 
@@ -151,7 +154,7 @@ void DDDDDDDDDDDEBUG(string s) {
 void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    int rc;
    
-   char* databaseName;
+   char* databaseName = (char*) malloc( sizeof(char*) * MAX_DATABASE_FILE_PATH_LEN );
    
    if( databaseFilename.empty() ) {
       databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict";
@@ -165,7 +168,9 @@ void connectToPhoneticDictionaryDatabase(string databaseFilename) {
       sqlite3_close( db );
       exit ( -1 );
    } else {
-      DDDDDDDDDDDEBUG("DATABASE SUCCESSFULLY OPENED");
+      
+      cerr << "DATABASE SUCCESSFULLY OPENED" << endl;
+      //DDDDDDDDDDDEBUG("DATABASE SUCCESSFULLY OPENED");
    }
 }
 
