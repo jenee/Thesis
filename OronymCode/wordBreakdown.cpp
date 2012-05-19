@@ -29,6 +29,9 @@ string queryDBforSAMPA( string orthoWord );
 vector<phone> parseSAMPAintoPhonemes( string sampaString );
 vector<string> dictLookup( string sampaStr ); 
 vector<string> splitSampaIntoLetters( string phrase );
+void printDatabaseResultsRows();
+string toLowerCase( string data);
+static int callback(void *queryterm, int nCol, char **values, char **headers);
 
 
 //GLOBALS for database access
@@ -60,17 +63,19 @@ int main() {
    vector<string> phraseWords = strTokOnWhitespace( phrase );
    //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
    //TODO remove: loop is for debugging
+   cerr << "PHRASEWORDS DEBUG PRINT:";
    for( int i = 0; i < phraseWords.size(); i++) {
       string w = phraseWords[i];
-      cout << w << "|";
+      cerr << w << "|";
    }
-   cout <<endl;
+   cerr <<endl;
    
    for( int i = 0; i < phraseWords.size(); i++) {
       string w = phraseWords[i];
-      cout <<"~~~~~~~~~~"<<w<<"~~~~~~~~~~"<< queryDBforSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"; 
+      cerr <<"~~~~~~~~~~"<<w<<"~~~~~~~~~~";
+      cerr << queryDBforSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"<<endl; 
    }
-   cout <<endl;
+   cerr <<endl;
 
 
 
@@ -78,9 +83,9 @@ int main() {
    
    for( int i = 0; i < orthoPhrases.size(); i++) {
       string p = orthoPhrases[i];
-      cout <<"---"<< p << endl;
+      cerr <<"---"<< p << endl;
    }
-   cout <<endl;
+   cerr <<endl;
 
 
   cleanupDatabase();
@@ -112,7 +117,7 @@ vector<string> findAllPermutations(string orthoPhrase) {
 }
 	
 void DDDDDDDDDDDEBUG(string s) {
-	cout << s << endl;	
+	cerr << s << endl;	
 }
 
 void connectToPhoneticDictionaryDatabase(string databaseFilename) {
@@ -191,18 +196,19 @@ string queryDBforSAMPA( string orthoWord ) {
          sqlite3_free(zErr);
       }
    }
-   
-   //TODO Remove: this is debug output
-
-   for(int row = 0; row < databaseResults.size(); row++) {
-      cout << "ROW "<<row <<": ";
-      for(int col = 0; col < databaseResults[row].size(); col++) {
-         cout << databaseResults[row][col] <<" | ";
-      }
-      cout << endl;
-   }
+   int SAMPAcolIndex = 3;
 
    return "";
+}  
+   
+void printDatabaseResultsRows() {
+   for(int row = 0; row < databaseResults.size(); row++) {
+      cerr << "ROW "<<row <<": ";
+      for(int col = 0; col < databaseResults[row].size(); col++) {
+         cerr << databaseResults[row][col] <<" | ";
+      }
+      cerr << endl;
+   }
 }
 
 vector<phone> parseSAMPAintoPhonemes( string sampaString ) {
