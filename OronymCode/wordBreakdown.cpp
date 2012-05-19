@@ -98,6 +98,7 @@ vector<string> findAllPermutations(string orthoPhrase) {
 	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
 	vector<phone> sampaPhrase;
 
+   cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
       string orthoWord = orthoWords[i];
 		vector<phone> sampaWord = getSampa( orthoWord );
@@ -220,7 +221,8 @@ vector<phone> parseSAMPAintoPhonemes( string sampaString ) {
    returns orthographic phrases (I *think* each string is a full phrase...)*/
 vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 	vector<string> misheardOrthoPhrases;
-   
+  
+   cerr << "INTERPRET PHRASE" << endl;
 	if( sampaPhrase.size() == 0 ) {
 		misheardOrthoPhrases.push_back("");
 		return misheardOrthoPhrases;
