@@ -76,7 +76,7 @@ vector<string> findAllPermutations(string orthoPhrase) {
          //DEBUG
          cerr << j <<": ";
          for ( int k = 0; k < sampaSyllWords[j].size(); k++ ) {
-            cerr << sampaSyllWords[j][k] << "_";
+            cerr<< "_" << sampaSyllWords[j][k] << "_";
          }
          cerr << endl; 
          //END DEBUG
@@ -146,8 +146,8 @@ vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
    printDatabaseResultsRows(); //TODO  remove DEBUG
 
    for( int i = 0; i < databaseResults.size(); i++) {
-      SAMPAvals.push_back( databaseResults[i][0] );
-      cerr << SAMPAvals[i] << " " ;
+      SAMPAvals.push_back( delSpaces( databaseResults[i][0] ) );
+      cerr << "!~" << SAMPAvals[i] << "!~" ; //DEBUG output
    }
    cerr<< endl;
    databaseResults.clear();
@@ -247,29 +247,29 @@ vector<string> splitSampaIntoLetters(string phrase) {
       // We're not at the last character
       if (i+1 < phrase.length()) {
          // Get a two-character set.
-         sampaCharacter = phrase.substr(i, 2);
-	 if (sampaCharacter == "@`"
-          || sampaCharacter == "`r"
-          || sampaCharacter == "3`"
-          || sampaCharacter == "A`"
-          || sampaCharacter == "aI"
-          || sampaCharacter == "aU"
-          || sampaCharacter == "dZ"
-          || sampaCharacter == "E`"
-          || sampaCharacter == "I`"
-          || sampaCharacter == "jU"
-          || sampaCharacter == "ju"
-          || sampaCharacter == "l="
-          || sampaCharacter == "m="
-          || sampaCharacter == "n="
-          || sampaCharacter == "O`"
-          || sampaCharacter == "OI"
-          || sampaCharacter == "oU"
-          || sampaCharacter == "ou"
-          || sampaCharacter == "tS"
-          || sampaCharacter == "U`") {
-	    // We're good.  Skip the second character for purpose of the loop.
-	    i++;
+       sampaCharacter = phrase.substr(i, 2);
+       if (sampaCharacter == "@`"
+             || sampaCharacter == "`r"
+             || sampaCharacter == "3`"
+             || sampaCharacter == "A`"
+             || sampaCharacter == "aI"
+             || sampaCharacter == "aU"
+             || sampaCharacter == "dZ"
+             || sampaCharacter == "E`"
+             || sampaCharacter == "I`"
+             || sampaCharacter == "jU"
+             || sampaCharacter == "ju"
+             || sampaCharacter == "l="
+             || sampaCharacter == "m="
+             || sampaCharacter == "n="
+             || sampaCharacter == "O`"
+             || sampaCharacter == "OI"
+             || sampaCharacter == "oU"
+             || sampaCharacter == "ou"
+             || sampaCharacter == "tS"
+             || sampaCharacter == "U`") {
+          // We're good.  Skip the second character for purpose of the loop.
+          i++;
          } else {
             sampaCharacter = phrase.at(i);
          }
@@ -325,11 +325,17 @@ vector<string> strTokOnWhitespace(string phrase) {
    
    //while (phrase >> temp) {
    while ( getline(ss, temp, ' ') ) {
-      tokens.push_back(temp);
+      tokens.push_back( delSpaces(temp) );
    }
    return tokens;
 }
 
+//From http://stackoverflow.com/a/8868204
+string delSpaces(string &str) 
+{
+   str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+   return str;
+}
 
 string toLowerCase( string data) {
    std::transform(data.begin(), data.end(), data.begin(), ::tolower);

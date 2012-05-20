@@ -33,6 +33,7 @@ std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 void connectToPhoneticDictionaryDatabase(std::string databaseFilename);
 void printDatabaseResultsRows();
 std::vector<std::string> strTokOnWhitespace(std::string phrase);
+std::string delSpaces( std::string &str);
 std::string toLowerCase( std::string data);
 void DDDDDDDDDDDEBUG(std::string s);
 void cleanupDatabase();
