@@ -70,16 +70,12 @@ vector<string> findAllPermutations(string orthoPhrase) {
 	vector<phone> sampaPhrase; 
    cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
-      string orthoWord = orthoWords[i];
-               /*
-         //TODO FIX WITH NEW CODE I HANDWROTE
-         assert(0);
-    vector<phone> > sampaSyllWords = getSampa( orthoWord );
+      vector<phone> > sampaSyllWords = getSampa( orthoWord );
       for( int j = 0; j < sampaSyllWords.size(); j++ ) {
          vector<phone> sampaWord = sampaSyllWords[j];
-         sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
+         assert(0);
+         //sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
       }
-*/
 	}	
 
 	vector<string> misheard = interpretPhrase( sampaPhrase );
@@ -94,14 +90,14 @@ vector<string> findAllPermutations(string orthoPhrase) {
 
 }
 
-vector<phone> getSampa( string orthoWord ) {
+vector< vector<phone> > getSampa( string orthoWord ) {
    vector<string> sampaStrings = queryDBwithOrthoForSAMPA( orthoWord );
-   vector<phone> sampaSylls;
+   vector< vector <phone> > sampaSyllPhrases;
    for(int i = 0; i < sampaStrings.size(); i++) {
       vector<phone> sampaSylls = parseSAMPAintoPhonemes( sampaStrings[i] );
+      sampaSyllPhrases.push_back(sampaSylls);
     }
-    assert(1);
-   return sampaSylls;
+   return sampaSyllPhrases;
 }
 
 
