@@ -22,12 +22,11 @@ static int callback(void *queryterm, int nCol, char **values, char **headers);
 
 
 std::vector<std::string> findAllPermutations(std::string orthoPhrase);
-std::vector<phone> getSampa( std::string orthoWord );
+std::vector< std::vector<phone> > getSampa( std::string orthoWord );
 std::vector<std::string> queryDBwithOrthoForSAMPA( std::string orthoWord );
-std::string queryDBwithOrthoForRow( std::string orthoWord );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
 std::vector<std::string> dictLookup( std::string sampaStr );
-std::string queryDBforOrthoRow( std::string orthoWord );
+void queryDBwithOrthoForRow( std::string orthoWord );
 std::vector<phone> parseSAMPAintoPhonemes( std::string sampaStr );
 std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 

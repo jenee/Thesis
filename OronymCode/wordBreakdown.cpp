@@ -67,18 +67,33 @@ vector<string> findAllPermutations(string orthoPhrase) {
 	vector<string> permutedPhrases;	
 	
 	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
-	vector<phone> sampaPhrase; 
+	vector< vector<phone> > sampaPhrases; 
    cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
-      vector<phone> > sampaSyllWords = getSampa( orthoWord );
+      vector< vector<phone> > sampaSyllWords = getSampa( orthoWords[i] );
       for( int j = 0; j < sampaSyllWords.size(); j++ ) {
-         vector<phone> sampaWord = sampaSyllWords[j];
-         assert(0);
+         
+         //DEBUG
+         cerr << j <<": ";
+         for ( int k = 0; k < sampaSyllWords[j].size(); k++ ) {
+            cerr << sampaSyllWords[j][k] << "_";
+         }
+         cerr << endl; 
+         //END DEBUG
+                 
+         //TODO put actual code in here
+         
+                //6vector<phone> sampaWord = sampaSyllWords[j];
          //sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
       }
+      
 	}	
+         assert(0);
 
-	vector<string> misheard = interpretPhrase( sampaPhrase );
+   vector<string> misheard;
+   for (int i = 0; i < sampaPhrases.size(); i++){
+   	 //misheard.push_back( interpretPhrase( sampaPhrases[i] ) ) 
+	}
 	
 	for (int i = 0; i < misheard.size(); i++) {
       string s = misheard[i];
@@ -101,7 +116,7 @@ vector< vector<phone> > getSampa( string orthoWord ) {
 }
 
 
-/* given ortho, returns SAMPA */
+/* given ortho, returns SAMPAs */
 vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
@@ -123,13 +138,24 @@ vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
          sqlite3_free(zErr);
       }
    }
-   printDatabaseResultsRows(); //TODO  remove DEBUG
-   int SAMPAcolIndex = 3;
-    //todo, get SAMPA DONE
+   //int SAMPAcolIndex = 3;
     
-    assert(2);
-    vector<string> SAMPAvals;
-    return SAMPAvals;
+   vector<string> SAMPAvals;
+   
+   cerr << "Database results size = " << databaseResults.size() << endl;
+   printDatabaseResultsRows(); //TODO  remove DEBUG
+
+   for( int i = 0; i < databaseResults.size(); i++) {
+      SAMPAvals.push_back( databaseResults[i][0] );
+      cerr << SAMPAvals[i] << " " ;
+   }
+   cerr<< endl;
+   databaseResults.clear();
+
+   cerr << "After clear, database results size = " << databaseResults.size() << endl;
+   printDatabaseResultsRows(); //TODO  remove DEBUG
+
+   return SAMPAvals;
 }  
 
 /*This function does the phoneme-tree-traversal thing for oronyms
@@ -187,7 +213,7 @@ vector<string> dictLookup( string sampaStr ) {
 
 
 /* given ortho, returns entire row to databaseResults */
-string queryDBwithOrthoForRow( string orthoWord ) {
+void queryDBwithOrthoForRow( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
    
@@ -204,9 +230,6 @@ string queryDBwithOrthoForRow( string orthoWord ) {
          sqlite3_free(zErr);
       }
    }
-   int SAMPAcolIndex = 3;
-    //todo, get SAMPA DONE
-   return "";
 }  
  
 
