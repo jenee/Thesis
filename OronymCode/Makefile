@@ -3,10 +3,10 @@ CFLAGS   = -lsqlite3 -Wall -pedantic
 
 all: wordBreakdown
    
-wordBreakdown: wordBreakdown.cpp
+wordBreakdown: wordBreakdown.cpp wordBreakdown.h
 	$(CC) $(CFLAGS) -g -o $@ $^
 
-noGDB: wordBreakdown.cpp
+noGDB: wordBreakdown.cpp wordBreakdown.h
 	$(CC) $(CFLAGS)  -o wordBreakdown $^
 
 clean: 

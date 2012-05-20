@@ -1,37 +1,7 @@
-#include <algorithm> //for toLower's transform statement
-#include <stdlib.h>
-#include <string>
-#include <vector>
-#include <sstream>
-#include <iostream>
-#include <assert.h>
 
-#include <sqlite3.h>
-//#include "SQLite/sqlite-amalgamation-3071000/sqlite3.h"
+#include "wordBreakdown.h"
 
 using namespace std;
-
-
-#define MAX_DATABASE_FILE_PATH_LEN 1024
-#define MAX_DATABASE_QUERY_LEN 1024
-
-typedef string phone ;
-
-
-vector<string> findAllPermutations(string orthoPhrase);
-void DDDDDDDDDDDEBUG(string s);
-void cleanupDatabase();
-void connectToPhoneticDictionaryDatabase(string databaseFilename);
-vector<string> strTokOnWhitespace(string phrase);
-vector<string> interpretPhrase( vector<phone> sampaPhrase );
-vector<phone> getSampa( string orthoWord );
-string queryDBforSAMPA( string orthoWord );
-vector<phone> parseSAMPAintoPhonemes( string sampaString );
-vector<string> dictLookup( string sampaStr ); 
-vector<string> splitSampaIntoLetters( string phrase );
-void printDatabaseResultsRows();
-string toLowerCase( string data);
-static int callback(void *queryterm, int nCol, char **values, char **headers);
 
 
 //GLOBALS for database access
@@ -56,9 +26,9 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
 int main() {
    connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
 
-   //TODO Do stuff!
-   //fprintf(stderr, "gets here, 0\n");
    string phrase = "A nice cold shower";
+
+/* OLD DEBUG STUFF
    //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
    vector<string> phraseWords = strTokOnWhitespace( phrase );
    //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
@@ -73,11 +43,11 @@ int main() {
    for( int i = 0; i < phraseWords.size(); i++) {
       string w = phraseWords[i];
       cerr <<"~~~~~~~~~~"<<w<<"~~~~~~~~~~";
-      cerr << queryDBforSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"<<endl; 
+      cerr << queryDBwithOrthoForSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"<<endl; 
    }
    cerr <<endl;
-
-
+   printDatabaseResultsRows();
+*/
 
    vector<string> orthoPhrases = findAllPermutations( phrase );
    
@@ -86,6 +56,7 @@ int main() {
       cerr <<"---"<< p << endl;
    }
    cerr <<endl;
+   printDatabaseResultsRows();
 
 
   cleanupDatabase();
@@ -96,13 +67,19 @@ vector<string> findAllPermutations(string orthoPhrase) {
 	vector<string> permutedPhrases;	
 	
 	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
-	vector<phone> sampaPhrase;
-
+	vector<phone> sampaPhrase; 
    cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
       string orthoWord = orthoWords[i];
-		vector<phone> sampaWord = getSampa( orthoWord );
-		sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
+               /*
+         //TODO FIX WITH NEW CODE I HANDWROTE
+         assert(0);
+    vector<phone> > sampaSyllWords = getSampa( orthoWord );
+      for( int j = 0; j < sampaSyllWords.size(); j++ ) {
+         vector<phone> sampaWord = sampaSyllWords[j];
+         sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
+      }
+*/
 	}	
 
 	vector<string> misheard = interpretPhrase( sampaPhrase );
@@ -116,80 +93,33 @@ vector<string> findAllPermutations(string orthoPhrase) {
 	return misheard;
 
 }
-	
-void DDDDDDDDDDDEBUG(string s) {
-	cerr << s << endl;	
-}
-
-void connectToPhoneticDictionaryDatabase(string databaseFilename) {
-   int rc;
-   
-   char* databaseName = (char*) malloc( sizeof(char*) * MAX_DATABASE_FILE_PATH_LEN );
-   
-   if( databaseFilename.empty() ) {
-      databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict";
-   } else {
-      sprintf(databaseName, "%s", databaseFilename.c_str());
-   }
-
-   rc = sqlite3_open(databaseName, &db);
-   if( rc ) {
-      fprintf( stderr, "Can't open database %s: %s\n", databaseName, sqlite3_errmsg( db ) );
-      sqlite3_close( db );
-      exit ( -1 );
-   } else {
-      
-      cerr << "DATABASE SUCCESSFULLY OPENED" << endl;
-      //DDDDDDDDDDDEBUG("DATABASE SUCCESSFULLY OPENED");
-   }
-}
-
-void cleanupDatabase() {
-   sqlite3_close(db);
-}
-
-//http://www.daniweb.com/software-development/cpp/threads/27905
-vector<string> strTokOnWhitespace(string phrase) {
-   string temp;
-   stringstream ss(phrase);
-   vector<string> tokens;
-   
-   //while (phrase >> temp) {
-   while ( getline(ss, temp, ' ') ) {
-      tokens.push_back(temp);
-   }
-   return tokens;
-}
 
 vector<phone> getSampa( string orthoWord ) {
-   string sampaString = queryDBforSAMPA( orthoWord );
-   vector<phone> sampaWord = parseSAMPAintoPhonemes( sampaString );
-   return sampaWord;
-}
-
-vector<string> dictLookup( string sampaStr ) {
-   vector<string> orthoMatches;
-   vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaStr);
-   assert(0); // PUT SQL QUERY HERE
-   
-   return orthoMatches;
-}
-
-string toLowerCase( string data) {
-   std::transform(data.begin(), data.end(), data.begin(), ::tolower);
-   return data;
+   vector<string> sampaStrings = queryDBwithOrthoForSAMPA( orthoWord );
+   vector<phone> sampaSylls;
+   for(int i = 0; i < sampaStrings.size(); i++) {
+      vector<phone> sampaSylls = parseSAMPAintoPhonemes( sampaStrings[i] );
+    }
+    assert(1);
+   return sampaSylls;
 }
 
 
 /* given ortho, returns SAMPA */
-string queryDBforSAMPA( string orthoWord ) {
-   //assert(0); // PUT SQL QUERY HERE
+vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
-   fprintf(stderr, "queryDBforSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   
+   fprintf(stderr, "queryDBwithOrthoForSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   
    string lowercaseOrthoWord = toLowerCase( orthoWord );
-   //sprintf(sqlQuery, "select * from phoneticDictTable where ortho = \\\"%s\\\"",orthoWord.c_str()); 
-   sprintf(sqlQuery, "select * from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
+
+   sprintf(sqlQuery, "select SAMPA from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
+
+   /*The following line calls the callback function, passing its 4th arg as the 
+    first param of the callback function.  The sqlite3_exec function 
+    queries the database, then for every result that it gets, it calls the 
+    callback function.*/
    int rc = sqlite3_exec(db, sqlQuery, callback, (void*)orthoWord.c_str(), &zErr);
    if ( rc != SQLITE_OK ) {
       if ( zErr != NULL ) {
@@ -197,25 +127,14 @@ string queryDBforSAMPA( string orthoWord ) {
          sqlite3_free(zErr);
       }
    }
+   printDatabaseResultsRows(); //TODO  remove DEBUG
    int SAMPAcolIndex = 3;
-
-   return "";
+    //todo, get SAMPA DONE
+    
+    assert(2);
+    vector<string> SAMPAvals;
+    return SAMPAvals;
 }  
-   
-void printDatabaseResultsRows() {
-   for(int row = 0; row < databaseResults.size(); row++) {
-      cerr << "ROW "<<row <<": ";
-      for(int col = 0; col < databaseResults[row].size(); col++) {
-         cerr << databaseResults[row][col] <<" | ";
-      }
-      cerr << endl;
-   }
-}
-
-vector<phone> parseSAMPAintoPhonemes( string sampaString ) {
-   vector<phone> sampaSylls = splitSampaIntoLetters(sampaString);
-   return sampaSylls;
-}
 
 /*This function does the phoneme-tree-traversal thing for oronyms
    returns orthographic phrases (I *think* each string is a full phrase...)*/
@@ -261,6 +180,46 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 	return misheardOrthoPhrases;
 }
 
+
+vector<string> dictLookup( string sampaStr ) {
+   vector<string> orthoMatches;
+   vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaStr);
+   assert(0); // PUT SQL QUERY HERE
+   
+   return orthoMatches;
+}
+
+
+/* given ortho, returns entire row to databaseResults */
+string queryDBwithOrthoForRow( string orthoWord ) {
+   char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
+   char* zErr;
+   
+   fprintf(stderr, "queryDBwithOrthoForSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   
+   string lowercaseOrthoWord = toLowerCase( orthoWord );
+
+   sprintf(sqlQuery, "select * from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
+
+   int rc = sqlite3_exec(db, sqlQuery, callback, (void*)orthoWord.c_str(), &zErr);
+   if ( rc != SQLITE_OK ) {
+      if ( zErr != NULL ) {
+         fprintf(stderr, "SQL error: %s\n", zErr);
+         sqlite3_free(zErr);
+      }
+   }
+   int SAMPAcolIndex = 3;
+    //todo, get SAMPA DONE
+   return "";
+}  
+ 
+
+vector<phone> parseSAMPAintoPhonemes( string sampaString ) {
+   vector<phone> sampaSylls = splitSampaIntoLetters(sampaString);
+   return sampaSylls;
+}
+
+
 vector<string> splitSampaIntoLetters(string phrase) {
    vector<string> tokens;
    string sampaCharacter;
@@ -303,7 +262,69 @@ vector<string> splitSampaIntoLetters(string phrase) {
    return tokens;
 }
 
+	
+void connectToPhoneticDictionaryDatabase(string databaseFilename) {
+   int rc;
+   
+   char* databaseName = (char*) malloc( sizeof(char*) * MAX_DATABASE_FILE_PATH_LEN );
+   
+   if( databaseFilename.empty() ) {
+      databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict";
+   } else {
+      sprintf(databaseName, "%s", databaseFilename.c_str());
+   }
 
+   rc = sqlite3_open(databaseName, &db);
+   if( rc ) {
+      fprintf( stderr, "Can't open database %s: %s\n", databaseName, sqlite3_errmsg( db ) );
+      sqlite3_close( db );
+      exit ( -1 );
+   } else {
+      
+      cerr << "DATABASE SUCCESSFULLY OPENED" << endl;
+      //DDDDDDDDDDDEBUG("DATABASE SUCCESSFULLY OPENED");
+   }
+}
+
+
+void printDatabaseResultsRows() {
+   for(int row = 0; row < databaseResults.size(); row++) {
+      cerr << "ROW "<<row <<": ";
+      for(int col = 0; col < databaseResults[row].size(); col++) {
+         cerr << databaseResults[row][col] <<" | ";
+      }
+      cerr << endl;
+   }
+}
+
+
+//http://www.daniweb.com/software-development/cpp/threads/27905
+vector<string> strTokOnWhitespace(string phrase) {
+   string temp;
+   stringstream ss(phrase);
+   vector<string> tokens;
+   
+   //while (phrase >> temp) {
+   while ( getline(ss, temp, ' ') ) {
+      tokens.push_back(temp);
+   }
+   return tokens;
+}
+
+
+string toLowerCase( string data) {
+   std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+   return data;
+}
+
+void DDDDDDDDDDDEBUG(string s) {
+	cerr << s << endl;	
+}
+  
+
+void cleanupDatabase() {
+   sqlite3_close(db);
+}
 /*
 vector<string>  getPhrasePhonemes(string phrase) {
 	vector<string> phrasePhones;;
