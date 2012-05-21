@@ -14,7 +14,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>744,7</TextSelection>
+                        <TextSelection>377,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
                 <BinderItem ID="17" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:56:31 -0700">
@@ -67,17 +67,27 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>389,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="19" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                        <BinderItem ID="19" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-16 15:40:26 -0700">
                             <Title>So. I bet you're all wondering what's happening wi...</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>811,0</TextSelection>
+                                <TextSelection>1070,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="125" Type="Text" Created="2012-05-16 15:40:44 -0700" Modified="2012-05-16 15:41:05 -0700">
+                            <Title>FINAL abstract</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -420,7 +430,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1242,0</TextSelection>
+                                <TextSelection>1169,5</TextSelection>
                             </TextSettings>
                             <References>
                                 <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
@@ -513,7 +523,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>68,0</TextSelection>
+                                        <TextSelection>1870,34</TextSelection>
                                     </TextSettings>
                                     <References>
                                         <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
@@ -527,7 +537,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>1411,0</TextSelection>
+                                        <TextSelection>310,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                             </Children>
@@ -784,6 +794,16 @@
                             </TextSettings>
                         </BinderItem>
                     </Children>
+                </BinderItem>
+                <BinderItem ID="126" Type="Text" Created="2012-05-20 17:16:52 -0700" Modified="2012-05-20 17:18:33 -0700">
+                    <Title>Simplification ideas</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>178,0</TextSelection>
+                    </TextSettings>
                 </BinderItem>
             </Children>
         </BinderItem>
@@ -1335,7 +1355,7 @@
         </Collection>
         <Collection Type="RecentSearch" ID="5C131A55-FED7-415D-A243-36EC1E62F7B1" Color="0.922 0.91 0.98">
             <Title>Search Results</Title>
-            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">ice cold</SearchSettings>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">linguistic</SearchSettings>
         </Collection>
     </Collections>
     <LabelSettings>
@@ -1362,7 +1382,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="541" Characters="4456" Date="2012-05-15 23:19:54 -0700"></PreviousSession>
+        <PreviousSession Words="66" Characters="376" Date="2012-05-20 17:16:09 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
