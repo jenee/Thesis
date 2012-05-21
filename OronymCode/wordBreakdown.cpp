@@ -12,12 +12,12 @@ vector< vector< string > > databaseResults;
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
-   fprintf(stderr,"===Callback for %s===\n",(char *) queryterm);
+   //fprintf(stderr,"===Callback for %s===\n",(char *) queryterm);
    for(i=0; i< nCol; i++){
-      fprintf(stderr, "%s = %s\n", headers[i], values[i] ? values[i] : "NULL");
+      //fprintf(stderr,"%s = %s\n", headers[i], values[i] ? values[i] : "NULL");
       rowEntry.push_back( values[i] );
    }
-   printf("\n");
+   //printf("\n");
    databaseResults.push_back(rowEntry);
    return 0;
 }
@@ -72,7 +72,6 @@ vector<string> findAllPermutations(string orthoPhrase) {
    for (int i = 0; i < orthoWords.size(); i++) {
       vector< vector<phone> > sampaSyllWords = getSampa( orthoWords[i] );
       for( int j = 0; j < sampaSyllWords.size(); j++ ) {
-         
          /*
          //DEBUG
          cerr << j <<": ";
@@ -82,28 +81,22 @@ vector<string> findAllPermutations(string orthoPhrase) {
          cerr << endl; 
          //END DEBUG
          */  
-
          //if this is ths first orthoWord
          if( i == 0 ) {
             sampaPhrases.push_back( sampaSyllWords[j] );
          } else {
             int numFullPhrases = sampaPhrases.size();
+            cerr << "\tnumFullPhrases = "<< numFullPhrases << endl;//TODO debug
             if ( sampaSyllWords.size() > 1 ) {
+               cerr << "\tsampaSyllWords.size() = "<< sampaSyllWords.size() << endl;//TODO debug
                for(int m = 1; m < sampaSyllWords.size(); m++) {
-                  //if there's more than one phonetic interpretation,
-                  //we need to create duplicates of the entire sampaPhrase 
-                  // existing entries for each of them.
+                  //if there's more than one phonetic interpretation of the 
+                  // ortho word to be added, then we need to create duplicates 
+                  // of all existing sampaPhrase entries for each of them.
                   for( int n = 0; n < numFullPhrases; n++){
                      vector< phone > copyOfSampaPhraseN( sampaPhrases[n] ); 
                      sampaPhrases.push_back( copyOfSampaPhraseN );
                   }
-                  //DEBUG
-                  cerr << j <<"***sampa phrase after copy  ";
-                  for ( int k = 0; k < sampaPhrases[j].size(); k++ ) {
-                     cerr<< "_" << sampaPhrases[j][k] << "_";
-                  }
-                  cerr << endl; 
-                  //END DEBUG
                }
             }
             for( int m = 0; m < sampaPhrases.size(); m++){
@@ -113,6 +106,15 @@ vector<string> findAllPermutations(string orthoPhrase) {
                                        phraseToAppend.begin(), 
                                        phraseToAppend.end() );
             }
+                  //DEBUG
+                  for ( int e = 0; e < sampaPhrases.size(); e++ ) {
+                     cerr << e <<"***sampa phrase after append  ";
+                     for ( int f = 0; f < sampaPhrases[e].size(); f++ ) {
+                        cerr<< "_" << sampaPhrases[e][f] << "_";
+                     }
+                     cerr << endl; 
+                  }
+                  //END DEBUG
          }
          
          //DEBUG
@@ -161,7 +163,7 @@ vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
    
-   fprintf(stderr, "queryDBwithOrthoForSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   fprintf(stderr, "\nqueryDBwithOrthoForSAMPA, orthoWord = %s\n", orthoWord.c_str());
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
 
@@ -181,20 +183,20 @@ vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
    //int SAMPAcolIndex = 3;
     
    vector<string> SAMPAvals;
-   
+   /*
    cerr << "Database results size = " << databaseResults.size() << endl;
    printDatabaseResultsRows(); //TODO  remove DEBUG
-
+   */
    for( int i = 0; i < databaseResults.size(); i++) {
       SAMPAvals.push_back( delSpaces( databaseResults[i][0] ) );
-      cerr << "!~" << SAMPAvals[i] << "!~" ; //DEBUG output
+      cerr << "!~" << SAMPAvals[i] << "!~" ; //TODO DEBUG output
    }
-   cerr<< endl;
+   cerr<< endl; //TODO DEBUG
    databaseResults.clear();
-
+   /*
    cerr << "After clear, database results size = " << databaseResults.size() << endl;
    printDatabaseResultsRows(); //TODO  remove DEBUG
-
+   */
    return SAMPAvals;
 }  
 
