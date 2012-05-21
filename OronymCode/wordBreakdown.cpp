@@ -73,6 +73,7 @@ vector<string> findAllPermutations(string orthoPhrase) {
       vector< vector<phone> > sampaSyllWords = getSampa( orthoWords[i] );
       for( int j = 0; j < sampaSyllWords.size(); j++ ) {
          
+         /*
          //DEBUG
          cerr << j <<": ";
          for ( int k = 0; k < sampaSyllWords[j].size(); k++ ) {
@@ -80,9 +81,48 @@ vector<string> findAllPermutations(string orthoPhrase) {
          }
          cerr << endl; 
          //END DEBUG
-                 
-         //TODO put actual code in here
+         */  
+
+         //if this is ths first orthoWord
+         if( i == 0 ) {
+            sampaPhrases.push_back( sampaSyllWords[j] );
+         } else {
+            int numFullPhrases = sampaPhrases.size();
+            if ( sampaSyllWords.size() > 1 ) {
+               for(int m = 1; m < sampaSyllWords.size(); m++) {
+                  //if there's more than one phonetic interpretation,
+                  //we need to create duplicates of the entire sampaPhrase 
+                  // existing entries for each of them.
+                  for( int n = 0; n < numFullPhrases; n++){
+                     vector< phone > copyOfSampaPhraseN( sampaPhrases[n] ); 
+                     sampaPhrases.push_back( copyOfSampaPhraseN );
+                  }
+                  //DEBUG
+                  cerr << j <<"***sampa phrase after copy  ";
+                  for ( int k = 0; k < sampaPhrases[j].size(); k++ ) {
+                     cerr<< "_" << sampaPhrases[j][k] << "_";
+                  }
+                  cerr << endl; 
+                  //END DEBUG
+               }
+            }
+            for( int m = 0; m < sampaPhrases.size(); m++){
+               int phrsToAppendNdx = m / numFullPhrases;
+               vector<phone> phraseToAppend( sampaSyllWords[phrsToAppendNdx] );
+               sampaPhrases[m].insert( sampaPhrases[m].end(),
+                                       phraseToAppend.begin(), 
+                                       phraseToAppend.end() );
+            }
+         }
          
+         //DEBUG
+         cerr << j <<"++SAMPA+PHRASES++  ";
+         for ( int k = 0; k < sampaPhrases[j].size(); k++ ) {
+            cerr<< "-" << sampaPhrases[j][k] << "-";
+         }
+         cerr << endl; 
+         //END DEBUG
+
                 //6vector<phone> sampaWord = sampaSyllWords[j];
          //sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
       }
