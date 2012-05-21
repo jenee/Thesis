@@ -124,7 +124,6 @@ vector<string> findAllPermutations(string orthoPhrase) {
          }
          cerr << endl; 
          //END DEBUG
-
                 //6vector<phone> sampaWord = sampaSyllWords[j];
          //sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
       }
