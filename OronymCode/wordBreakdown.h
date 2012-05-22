@@ -31,6 +31,7 @@ std::vector<phone> parseSAMPAintoPhonemes( std::string sampaStr );
 std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 
 void connectToPhoneticDictionaryDatabase(std::string databaseFilename);
+std::string phoneVectToString( std::vector< phone > phoneVect );
 void printDatabaseResultsRows();
 std::vector<std::string> strTokOnWhitespace(std::string phrase);
 std::string delSpaces( std::string &str);

@@ -22,45 +22,6 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
 }
 
 
-int main() {
-   connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
-
-   string phrase = "A nice cold shower";
-
-/* OLD DEBUG STUFF
-   //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
-   vector<string> phraseWords = strTokOnWhitespace( phrase );
-   //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
-   //TODO remove: loop is for debugging
-   cerr << "PHRASEWORDS DEBUG PRINT:";
-   for( int i = 0; i < phraseWords.size(); i++) {
-      string w = phraseWords[i];
-      cerr << w << "|";
-   }
-   cerr <<endl;
-   
-   for( int i = 0; i < phraseWords.size(); i++) {
-      string w = phraseWords[i];
-      cerr <<"~~~~~~~~~~"<<w<<"~~~~~~~~~~";
-      cerr << queryDBwithOrthoForSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"<<endl; 
-   }
-   cerr <<endl;
-   printDatabaseResultsRows();
-*/
-
-   vector<string> orthoPhrases = findAllPermutations( phrase );
-   
-   for( int i = 0; i < orthoPhrases.size(); i++) {
-      string p = orthoPhrases[i];
-      cerr <<"---"<< p << endl;
-   }
-   cerr <<endl;
-   printDatabaseResultsRows();
-
-
-  cleanupDatabase();
-}
-
 
 vector<string> findAllPermutations(string orthoPhrase) {
 	vector<string> permutedPhrases;	
@@ -356,6 +317,13 @@ void printDatabaseResultsRows() {
    }
 }
 
+string phoneVectToString( std::vector< phone > phoneVect ) {
+   string toRet = "";
+   for( int i = 0; i < phoneVect.size(); i++ ) {
+      toRet.append( phoneVect.at(i) );
+   }
+   return toRet;
+}
 
 //http://www.daniweb.com/software-development/cpp/threads/27905
 vector<string> strTokOnWhitespace(string phrase) {
