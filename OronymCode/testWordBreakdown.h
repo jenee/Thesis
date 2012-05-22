@@ -7,6 +7,8 @@ void setupTests();
 void teardownTests();
 bool testFindAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase);
 bool testFindAllPhoneSeqsForOrthoPhrase();
+bool testQueryDBwithSampaForOrthoStrs( std::string sampaStr );
+bool testQueryDBwithSampaForOrthoStrs();
 bool testQueryDBwithOrthoForSampaStrs( std::string orthoWord);
 bool testQueryDBwithOrthoForSampaStrs();
 bool testStrTokOnWhitespace( std::string phrase );

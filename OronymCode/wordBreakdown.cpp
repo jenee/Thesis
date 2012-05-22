@@ -139,7 +139,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
       phone p = sampaPhrase[i];
 		sampaStr += p;
 		usedPhones.push_back(p);
-		vector<string> orthoMatches = queryDBwithSAMPAForOrthoStrs( sampaStr );
+		vector<string> orthoMatches = queryDBwithSampaForOrthoStrs( sampaStr );
 		if ( orthoMatches.size() == 0 ) {
 			misheardOrthoPhrases.push_back("DEADBEEF");
 			return misheardOrthoPhrases;
@@ -243,15 +243,16 @@ vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
 }
 
 /*looks up emphasis-free SAMPA str in phonetic dict, returns a bunch of ortho*/
-vector<string> queryDBwithSAMPAForOrthoStrs( string sampaStr ) {
+vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
    fprintf(stderr, "\nqueryDBwithSAMPAForOrthoStrs, sampaStr = %s\n", sampaStr.c_str());
    
+   string sampaStrNoEmph = stripSampaStrOfEmph( sampaStr );
 
-   sprintf(sqlQuery, "select ortho from phoneticDictTable where SAMPAnoEmph = \"%s\"",sampaStr.c_str()); 
+   sprintf(sqlQuery, "select ortho from phoneticDictTable where trim(SAMPAnoEmph) = trim(\"%s\")",sampaStrNoEmph.c_str()); 
    
-   vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStr );
+   vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStrNoEmph );
    
    
    return orthoMatches;

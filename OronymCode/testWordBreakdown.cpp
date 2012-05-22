@@ -41,6 +41,21 @@ bool testFindAllPhoneSeqsForOrthoPhrase() {
    return testFindAllPhoneSeqsForOrthoPhrase("A nice cold shower");
 }
 
+bool testQueryDBwithSampaForOrthoStrs( string sampaStr ) {
+   assert( testsSetup );
+   cout << "TESTING queryDBwithSampaForOrthoStrs; sampa = " << sampaStr << endl;
+   vector<string> result = queryDBwithSampaForOrthoStrs(sampaStr);
+   for(int i = 0; i < result.size(); i++) {
+      cout << sampaStr << " "<< i << ":" << result.at(i) <<endl;
+   }
+   cout << endl;
+   return true;
+}
+
+bool testQueryDBwithSampaForOrthoStrs( ) {
+   return testQueryDBwithSampaForOrthoStrs( "\"k{$r@t" );
+}
+
 bool testQueryDBwithOrthoForSampaStrs(string orthoWord) {
    assert( testsSetup );
    cout << "TESTING queryDBwithOrthoForSampaStrs; ortho = " << orthoWord << endl;
@@ -181,6 +196,7 @@ void usageMessage() {
    cout << "\n\t\tstrTokOnWhitespace";
    cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
    cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
+   cout << "\n\t\tqueryDBwithSampaForOrthoStrs";
    cout << "\n\t\thelp";
    cout << "\n\t\toldMain\n";
 }
@@ -210,6 +226,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testStrTokOnWhitespace();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs();
+      } else if( strcmp( argv[1], "queryDBwithSampaForOrthoStrs") == 0 ) {
+         allTestsPassed &= testQueryDBwithSampaForOrthoStrs();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -230,6 +248,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testStrTokOnWhitespace( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs( argv[2] );
+      } else if( strcmp( argv[1], "queryDBwithSampaForOrthoStrs") == 0 ) {
+         allTestsPassed &= testQueryDBwithSampaForOrthoStrs( argv[2] );
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

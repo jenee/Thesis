@@ -28,7 +28,7 @@ std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
 
 std::vector<std::string> queryDBforStrings( char* sqlQuery, std::string queryCallback4thArg );
 std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
-std::vector<std::string> queryDBwithSAMPAForOrthoStrs( std::string sampaStr );
+std::vector<std::string> queryDBwithSampaForOrthoStrs( std::string sampaStr );
 void queryDBwithOrthoForRow( std::string orthoWord );
 
 std::vector<phone> parseSAMPAintoPhonemes( std::string sampaStr );
