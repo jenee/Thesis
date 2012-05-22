@@ -26,7 +26,7 @@ std::vector< std::vector<phone> > findAllPhoneSeqsForOrthoPhrase( std::string or
 
 std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
-std::vector<std::string> dictLookup( std::string sampaStr );
+std::vector<std::string> queryDBwithSAMPAForOrthoStrs( std::string sampaStr );
 void queryDBwithOrthoForRow( std::string orthoWord );
 std::vector<phone> parseSAMPAintoPhonemes( std::string sampaStr );
 std::vector<std::string> splitSampaIntoLetters(std::string phrase);

@@ -180,7 +180,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
       phone p = sampaPhrase[i];
 		sampaStr += p;
 		usedPhones.push_back(p);
-		vector<string> orthoMatches = dictLookup( sampaStr );
+		vector<string> orthoMatches = queryDBwithSAMPAForOrthoStrs( sampaStr );
 		if ( orthoMatches.size() == 0 ) {
 			misheardOrthoPhrases.push_back("DEADBEEF");
 			return misheardOrthoPhrases;
@@ -206,7 +206,8 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 	return misheardOrthoPhrases;
 }
 
-vector<string> dictLookup( string sampaStr ) {
+/*looks up emphasis-free SAMPA str in phonetic dict, returns a bunch of ortho*/
+vector<string> queryDBwithSAMPAForOrthoStrs( string sampaStr ) {
    vector<string> orthoMatches;
    vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaStr);
    assert(0); // PUT SQL QUERY HERE
