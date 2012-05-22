@@ -24,20 +24,26 @@ std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::str
 std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWord );
 std::vector< std::vector<phone> > findAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase );
 
-std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
+
+std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
 std::vector<std::string> queryDBwithSAMPAForOrthoStrs( std::string sampaStr );
 void queryDBwithOrthoForRow( std::string orthoWord );
+
 std::vector<phone> parseSAMPAintoPhonemes( std::string sampaStr );
 std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 
-void connectToPhoneticDictionaryDatabase(std::string databaseFilename);
-std::string phoneVectToString( std::vector< phone > phoneVect );
-void printDatabaseResultsRows();
 std::vector<std::string> strTokOnWhitespace(std::string phrase);
-std::string delSpaces( std::string &str);
 std::string toLowerCase( std::string data);
+std::string delSpaces( std::string &str);
+std::string stripSampaStrOfEmph( std::string &str);
+
+std::string phoneVectToString( std::vector< phone > phoneVect );
+
+void printDatabaseResultsRows();
 void DDDDDDDDDDDEBUG(std::string s);
+
+void connectToPhoneticDictionaryDatabase(std::string databaseFilename);
 void cleanupDatabase();
 
 #endif

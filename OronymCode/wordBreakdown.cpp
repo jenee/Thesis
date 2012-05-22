@@ -120,6 +120,53 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
 
    return fullPhrasePhoneSeqs;
 }
+
+
+/*This function does the phoneme-tree-traversal thing for oronyms
+   returns orthographic phrases (I *think* each string is a full phrase...)*/
+vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
+	vector<string> misheardOrthoPhrases;
+   assert(0);
+   cerr << "INTERPRET PHRASE" << endl;
+	if( sampaPhrase.size() == 0 ) {
+		misheardOrthoPhrases.push_back("");
+		return misheardOrthoPhrases;
+	}
+	
+   string sampaStr = "";
+	vector <phone> usedPhones;
+   
+   for (int i = 0; i < sampaPhrase.size(); i++) {
+      phone p = sampaPhrase[i];
+		sampaStr += p;
+		usedPhones.push_back(p);
+		vector<string> orthoMatches = queryDBwithSAMPAForOrthoStrs( sampaStr );
+		if ( orthoMatches.size() == 0 ) {
+			misheardOrthoPhrases.push_back("DEADBEEF");
+			return misheardOrthoPhrases;
+		}
+
+      for (int i = 0; i < orthoMatches.size(); i++) {
+         string orthoWord = orthoMatches[i];
+			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + i );
+			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
+			if ( orthoLeaves.size() == 0 ) {
+				misheardOrthoPhrases.push_back( orthoWord.append( "DEADBEEF" ) );
+				return misheardOrthoPhrases;
+			} else {
+                        
+            for (int i = 0; i < orthoLeaves.size(); i++) {
+               string orthoLeaf = orthoLeaves[i];
+					misheardOrthoPhrases.push_back( orthoWord + orthoLeaf );
+				}
+            
+			}
+		}
+	}
+	return misheardOrthoPhrases;
+}
+
+
 /* given ortho, returns SAMPAs */
 vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
@@ -160,50 +207,6 @@ vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    printDatabaseResultsRows(); //TODO  remove DEBUG
    */
    return SAMPAvals;
-}  
-
-/*This function does the phoneme-tree-traversal thing for oronyms
-   returns orthographic phrases (I *think* each string is a full phrase...)*/
-vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
-	vector<string> misheardOrthoPhrases;
-  
-   cerr << "INTERPRET PHRASE" << endl;
-	if( sampaPhrase.size() == 0 ) {
-		misheardOrthoPhrases.push_back("");
-		return misheardOrthoPhrases;
-	}
-	
-   string sampaStr = "";
-	vector <phone> usedPhones;
-   
-   for (int i = 0; i < sampaPhrase.size(); i++) {
-      phone p = sampaPhrase[i];
-		sampaStr += p;
-		usedPhones.push_back(p);
-		vector<string> orthoMatches = queryDBwithSAMPAForOrthoStrs( sampaStr );
-		if ( orthoMatches.size() == 0 ) {
-			misheardOrthoPhrases.push_back("DEADBEEF");
-			return misheardOrthoPhrases;
-		}
-
-      for (int i = 0; i < orthoMatches.size(); i++) {
-         string orthoWord = orthoMatches[i];
-			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + i );
-			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
-			if ( orthoLeaves.size() == 0 ) {
-				misheardOrthoPhrases.push_back( orthoWord.append( "DEADBEEF" ) );
-				return misheardOrthoPhrases;
-			} else {
-                        
-            for (int i = 0; i < orthoLeaves.size(); i++) {
-               string orthoLeaf = orthoLeaves[i];
-					misheardOrthoPhrases.push_back( orthoWord + orthoLeaf );
-				}
-            
-			}
-		}
-	}
-	return misheardOrthoPhrases;
 }
 
 /*looks up emphasis-free SAMPA str in phonetic dict, returns a bunch of ortho*/
@@ -282,6 +285,61 @@ vector<string> splitSampaIntoLetters(string phrase) {
    return tokens;
 }
 
+
+
+//http://www.daniweb.com/software-development/cpp/threads/27905
+vector<string> strTokOnWhitespace(string phrase) {
+   string temp;
+   stringstream ss(phrase);
+   vector<string> tokens;
+   
+   //while (phrase >> temp) {
+   while ( getline(ss, temp, ' ') ) {
+      tokens.push_back( delSpaces(temp) );
+   }
+   return tokens;
+}
+
+string toLowerCase( string data) {
+   std::transform(data.begin(), data.end(), data.begin(), ::tolower);
+   return data;
+}
+
+//From http://stackoverflow.com/a/8868204
+string delSpaces(string &str) {
+   str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+   return str;
+}
+
+string stripSampaStrOfEmph(string &str) {
+   str.erase(std::remove(str.begin(), str.end(), '"'), str.end());
+   str.erase(std::remove(str.begin(), str.end(), '%'), str.end());
+   str.erase(std::remove(str.begin(), str.end(), '$'), str.end());
+   return str;
+}
+
+string phoneVectToString( std::vector< phone > phoneVect ) {
+   string toRet = "";
+   for( int i = 0; i < phoneVect.size(); i++ ) {
+      toRet.append( phoneVect.at(i) );
+   }
+   return toRet;
+}
+
+void printDatabaseResultsRows() {
+   for(int row = 0; row < databaseResults.size(); row++) {
+      cerr << "ROW "<<row <<": ";
+      for(int col = 0; col < databaseResults[row].size(); col++) {
+         cerr << databaseResults[row][col] <<" | ";
+      }
+      cerr << endl;
+   }
+}
+
+void DDDDDDDDDDDEBUG(string s) {
+	cerr << s << endl;	
+}
+  
 void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    int rc;
    
@@ -305,52 +363,6 @@ void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    }
 }
 
-string phoneVectToString( std::vector< phone > phoneVect ) {
-   string toRet = "";
-   for( int i = 0; i < phoneVect.size(); i++ ) {
-      toRet.append( phoneVect.at(i) );
-   }
-   return toRet;
-}
-
-void printDatabaseResultsRows() {
-   for(int row = 0; row < databaseResults.size(); row++) {
-      cerr << "ROW "<<row <<": ";
-      for(int col = 0; col < databaseResults[row].size(); col++) {
-         cerr << databaseResults[row][col] <<" | ";
-      }
-      cerr << endl;
-   }
-}
-
-//http://www.daniweb.com/software-development/cpp/threads/27905
-vector<string> strTokOnWhitespace(string phrase) {
-   string temp;
-   stringstream ss(phrase);
-   vector<string> tokens;
-   
-   //while (phrase >> temp) {
-   while ( getline(ss, temp, ' ') ) {
-      tokens.push_back( delSpaces(temp) );
-   }
-   return tokens;
-}
-
-//From http://stackoverflow.com/a/8868204
-string delSpaces(string &str) {
-   str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
-   return str;
-}
-
-string toLowerCase( string data) {
-   std::transform(data.begin(), data.end(), data.begin(), ::tolower);
-   return data;
-}
-
-void DDDDDDDDDDDEBUG(string s) {
-	cerr << s << endl;	
-}
-  
 void cleanupDatabase() {
    sqlite3_close(db);
 }
