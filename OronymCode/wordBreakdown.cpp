@@ -9,7 +9,7 @@ vector< vector< string > > databaseResults;
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
-   //fprintf(stderr,"===Callback for %s===\n",(char *) queryterm);
+   fprintf(stderr,"===Callback for query %s===\n",(char *) queryterm);
    for(i=0; i< nCol; i++){
       //fprintf(stderr,"%s = %s\n", headers[i], values[i] ? values[i] : "NULL");
       rowEntry.push_back( values[i] );
@@ -121,7 +121,6 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
    return fullPhrasePhoneSeqs;
 }
 
-
 /*This function does the phoneme-tree-traversal thing for oronyms
    returns orthographic phrases (I *think* each string is a full phrase...)*/
 vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
@@ -166,22 +165,55 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 	return misheardOrthoPhrases;
 }
 
+vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
+   char* zErr;
+   /*The following line calls the callback function, passing its 4th arg as the 
+    first param of the callback function.  The sqlite3_exec function 
+    queries the database, then for every result that it gets, it calls the 
+    callback function.*/
+   int rc = sqlite3_exec(db, sqlQuery, callback, (void*)queryCallback4thArg.c_str(), &zErr);
+   if ( rc != SQLITE_OK ) {
+      if ( zErr != NULL ) {
+         fprintf(stderr, "SQL error: %s\n", zErr);
+         sqlite3_free(zErr);
+      }
+   }
+   vector<string> retStrings;
+   /*
+   cerr << "Database results size = " << databaseResults.size() << endl;
+   printDatabaseResultsRows(); //TODO  remove DEBUG
+   */
+   for( int i = 0; i < databaseResults.size(); i++) {
+      retStrings.push_back( delSpaces( databaseResults[i][0] ) );
+      cerr << "#-" << retStrings[i] << "-#" ; //TODO DEBUG output
+   }
+   cerr<< endl; //TODO DEBUG
+   databaseResults.clear();
+   /*
+   cerr << "After clear, database results size = " << databaseResults.size() << endl;
+   printDatabaseResultsRows(); //TODO  remove DEBUG
+   */
+   return retStrings;
+
+}
 
 /* given ortho, returns SAMPAs */
 vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
-   char* zErr;
    
    fprintf(stderr, "\nqueryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
 
    sprintf(sqlQuery, "select SAMPA from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
-
-   /*The following line calls the callback function, passing its 4th arg as the 
-    first param of the callback function.  The sqlite3_exec function 
-    queries the database, then for every result that it gets, it calls the 
-    callback function.*/
+   
+   vector<string> SAMPAvals = queryDBforStrings( sqlQuery, lowercaseOrthoWord );
+   
+/*
+   //The following line calls the callback function, passing its 4th arg as the 
+    //first param of the callback function.  The sqlite3_exec function 
+    //queries the database, then for every result that it gets, it calls the 
+    //callback function.
    int rc = sqlite3_exec(db, sqlQuery, callback, (void*)orthoWord.c_str(), &zErr);
    if ( rc != SQLITE_OK ) {
       if ( zErr != NULL ) {
@@ -192,28 +224,35 @@ vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    //int SAMPAcolIndex = 3;
     
    vector<string> SAMPAvals;
-   /*
-   cerr << "Database results size = " << databaseResults.size() << endl;
-   printDatabaseResultsRows(); //TODO  remove DEBUG
-   */
+   ///
+   //cerr << "Database results size = " << databaseResults.size() << endl;
+   //printDatabaseResultsRows(); //TODO  remove DEBUG
+   //
    for( int i = 0; i < databaseResults.size(); i++) {
       SAMPAvals.push_back( delSpaces( databaseResults[i][0] ) );
       cerr << "!~" << SAMPAvals[i] << "!~" ; //TODO DEBUG output
    }
    cerr<< endl; //TODO DEBUG
    databaseResults.clear();
-   /*
-   cerr << "After clear, database results size = " << databaseResults.size() << endl;
-   printDatabaseResultsRows(); //TODO  remove DEBUG
+   //
+   //cerr << "After clear, database results size = " << databaseResults.size() << endl;
+   //printDatabaseResultsRows(); //TODO  remove DEBUG
+   //
    */
    return SAMPAvals;
 }
 
 /*looks up emphasis-free SAMPA str in phonetic dict, returns a bunch of ortho*/
 vector<string> queryDBwithSAMPAForOrthoStrs( string sampaStr ) {
-   vector<string> orthoMatches;
-   vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaStr);
-   assert(0); // PUT SQL QUERY HERE
+   char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
+   
+   fprintf(stderr, "\nqueryDBwithSAMPAForOrthoStrs, sampaStr = %s\n", sampaStr.c_str());
+   
+
+   sprintf(sqlQuery, "select ortho from phoneticDictTable where SAMPAnoEmph = \"%s\"",sampaStr.c_str()); 
+   
+   vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStr );
+   
    
    return orthoMatches;
 }
@@ -223,6 +262,8 @@ void queryDBwithOrthoForRow( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
    
+   assert(0);//THIS function messes with the way that the other database query
+             // functions count return vals! DON'T RUN IT. Here for debugging ONLY.
    fprintf(stderr, "queryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
