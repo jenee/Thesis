@@ -118,6 +118,21 @@ bool testStrTokOnWhitespace() {
    return testStrTokOnWhitespace("A nice cold shower");
 }
 
+bool testStripSampaStrOfEmph( std::string sampaStr ) {
+   cerr<<"TEST stripSampaStrOfEmph, sampaStr = "<< sampaStr<<endl;
+   string SAMPAnoEMph = stripSampaStrOfEmph( sampaStr );
+   cerr<<"~~~> " << SAMPAnoEMph << endl;
+   bool testPassed = true;
+   testPassed &= ( string::npos == SAMPAnoEMph.find("\"") );
+   testPassed &= ( string::npos == SAMPAnoEMph.find("%") );
+   testPassed &= ( string::npos == SAMPAnoEMph.find("$") );
+   return testPassed;
+}
+
+bool testStripSampaStrOfEmph() {
+   return testStripSampaStrOfEmph("strO%bE$ri");
+}
+
 int oldMain() {
 
    connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
@@ -162,6 +177,7 @@ int oldMain() {
 void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
+   cout << "\n\t\tstripSampaStrOfEmph";
    cout << "\n\t\tstrTokOnWhitespace";
    cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
    cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
@@ -188,6 +204,8 @@ int main(int argc, char* argv[]) {
          oldMain();
       } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
+      } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
+         allTestsPassed &= testStripSampaStrOfEmph();
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
@@ -206,6 +224,8 @@ int main(int argc, char* argv[]) {
          oldMain();
       } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase( argv[2] );
+      } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
+         allTestsPassed &= testStripSampaStrOfEmph( argv[2] );
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {

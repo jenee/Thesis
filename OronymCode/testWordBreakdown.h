@@ -11,6 +11,8 @@ bool testQueryDBwithOrthoForSampaStrs( std::string orthoWord);
 bool testQueryDBwithOrthoForSampaStrs();
 bool testStrTokOnWhitespace( std::string phrase );
 bool testStrTokOnWhitespace();
+bool testStripSampaStrOfEmph( std::string sampaStr ) ;
+bool testStripSampaStrOfEmph();
 int oldMain();
 void usageMessage();
 
