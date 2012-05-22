@@ -43,12 +43,43 @@ bool testQueryDBWithOrthoForSAMPA() {
    string b = "a";
    string c = "strawberry";
    string d = "project"; 
-   
-   //string aExpected[] = {
+   string e = "doodleboppermajig";
 
-   //vector<phone> aActual = 
-   assert(0);
-   return true;
+   vector<string> aExpected, bExpected, cExpected, dExpected, eExpected;
+   aExpected.push_back("\"e");
+   aExpected.push_back("@");
+   aExpected.push_back("\"A");
+   
+   bExpected.push_back("\"e");
+   bExpected.push_back("@");
+   bExpected.push_back("\"A");
+   
+   cExpected.push_back("\"strO%bE$ri");
+   
+   dExpected.push_back("\"prA$dZEkt");
+   dExpected.push_back("pr@\"dZEkt");
+
+   vector<string> aActual = queryDBwithOrthoForSAMPA(a); 
+   vector<string> bActual = queryDBwithOrthoForSAMPA(b); 
+   vector<string> cActual = queryDBwithOrthoForSAMPA(c); 
+   vector<string> dActual = queryDBwithOrthoForSAMPA(d); 
+   vector<string> eActual = queryDBwithOrthoForSAMPA(e); 
+   
+   numPassedTests += (aExpected== aActual);
+   numPassedTests += (bExpected== bActual);
+   numPassedTests += (cExpected== cActual);
+   numPassedTests += (dExpected== dActual);
+   numPassedTests += (eExpected== eActual);
+   
+   passedAllTests &= (aExpected== aActual);
+   passedAllTests &= (bExpected== bActual);
+   passedAllTests &= (cExpected== cActual);
+   passedAllTests &= (dExpected== dActual);
+   passedAllTests &= (eExpected== eActual);
+  
+   cout << "testing queryDBwithOrthoForSAMPA: "<<numPassedTests<<" tests passed"<<endl; 
+
+   return passedAllTests;
 
 }
 
