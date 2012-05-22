@@ -2,11 +2,9 @@
 
 using namespace std;
 
-
 //GLOBALS for database access
 sqlite3 *db;
 vector< vector< string > > databaseResults;
-
 
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
@@ -21,58 +19,72 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
    return 0;
 }
 
+vector< vector<phone> > getPhoneSeqsForSampaStrs( vector<string> sampaStrings ) {
+   vector< vector <phone> > sampaSyllPhrases;
+   for(int i = 0; i < sampaStrings.size(); i++) {
+      vector<phone> sampaSylls = parseSAMPAintoPhonemes( sampaStrings[i] );
+      sampaSyllPhrases.push_back(sampaSylls);
+    }
+   return sampaSyllPhrases;
+}
+
+vector< vector<phone> > getPhoneSeqsForOrthoWord( string orthoWord ) {
+   vector<string> sampaStrings = queryDBwithOrthoForSampaStrs( orthoWord );
+   return getPhoneSeqsForSampaStrs( sampaStrings );
+}
 
 /*given an phrase of ortho words, gives all the sampa permutations
  that it could possibly be*/
-vector<string> findAllPermutations(string orthoPhrase) {
+vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
 	vector<string> permutedPhrases;	
 	
 	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
-	vector< vector<phone> > sampaPhrases; 
+	vector< vector<phone> > fullPhrasePhoneSeqs; 
    cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
-      vector< vector<phone> > sampaSyllWords = getSampa( orthoWords[i] );
+      vector<string> sampaStrings = queryDBwithOrthoForSampaStrs( orthoWords[i] );
+      vector< vector<phone> > nextWordSAMPAPhoneSeqs = getPhoneSeqsForOrthoWord( orthoWords[i] );
          /*
          //DEBUG
          cerr << j <<": ";
-         for ( int k = 0; k < sampaSyllWords[j].size(); k++ ) {
-            cerr<< "_" << sampaSyllWords[j][k] << "_";
+         for ( int k = 0; k < nextWordSAMPAPhoneSeqs[j].size(); k++ ) {
+            cerr<< "_" << nextWordSAMPAPhoneSeqs[j][k] << "_";
          }
          cerr << endl; 
          //END DEBUG
          */  
          //if this is ths first orthoWord
          if( i == 0 ) {
-            for( int j = 0; j < sampaSyllWords.size(); j++ ) {
-               sampaPhrases.push_back( sampaSyllWords[j] );
+            for( int j = 0; j < nextWordSAMPAPhoneSeqs.size(); j++ ) {
+               fullPhrasePhoneSeqs.push_back( nextWordSAMPAPhoneSeqs[j] );
             }
          } else {
-            int numFullPhrases = sampaPhrases.size();
+            int numFullPhrases = fullPhrasePhoneSeqs.size();
             cerr << "\tnumFullPhrases = "<< numFullPhrases << endl;//TODO debug
-            if ( sampaSyllWords.size() > 1 ) {
-               cerr << "\tsampaSyllWords.size() = "<< sampaSyllWords.size() << endl;//TODO debug
-               for(int m = 1; m < sampaSyllWords.size(); m++) {
+            if ( nextWordSAMPAPhoneSeqs.size() > 1 ) {
+               cerr << "\tnextWordSAMPAPhoneSeqs.size() = "<< nextWordSAMPAPhoneSeqs.size() << endl;//TODO debug
+               for(int m = 1; m < nextWordSAMPAPhoneSeqs.size(); m++) {
                   //if there's more than one phonetic interpretation of the 
                   // ortho word to be added, then we need to create duplicates 
                   // of all existing sampaPhrase entries for each of them.
                   for( int n = 0; n < numFullPhrases; n++){
-                     vector< phone > copyOfSampaPhraseN( sampaPhrases[n] ); 
-                     sampaPhrases.push_back( copyOfSampaPhraseN );
+                     vector< phone > copyOfFullPhraseN( fullPhrasePhoneSeqs[n] ); 
+                     fullPhrasePhoneSeqs.push_back( copyOfFullPhraseN );
                   }
                }
             }
-            for( int m = 0; m < sampaPhrases.size(); m++){
+            for( int m = 0; m < fullPhrasePhoneSeqs.size(); m++){
                int phrsToAppendNdx = m / numFullPhrases;
-               vector<phone> phraseToAppend( sampaSyllWords[phrsToAppendNdx] );
-               sampaPhrases[m].insert( sampaPhrases[m].end(),
+               vector<phone> phraseToAppend( nextWordSAMPAPhoneSeqs[phrsToAppendNdx] );
+               fullPhrasePhoneSeqs[m].insert( fullPhrasePhoneSeqs[m].end(),
                                        phraseToAppend.begin(), 
                                        phraseToAppend.end() );
             }
                   //DEBUG
-                  for ( int e = 0; e < sampaPhrases.size(); e++ ) {
+                  for ( int e = 0; e < fullPhrasePhoneSeqs.size(); e++ ) {
                      cerr << e <<"***sampa phrase after append  ";
-                     for ( int f = 0; f < sampaPhrases[e].size(); f++ ) {
-                        cerr<< "_" << sampaPhrases[e][f] << "_";
+                     for ( int f = 0; f < fullPhrasePhoneSeqs[e].size(); f++ ) {
+                        cerr<< "_" << fullPhrasePhoneSeqs[e][f] << "_";
                      }
                      cerr << endl; 
                   }
@@ -81,8 +93,8 @@ vector<string> findAllPermutations(string orthoPhrase) {
          /*
          //DEBUG
          cerr << j <<"++SAMPA+PHRASES++  ";
-         for ( int k = 0; k < sampaPhrases[j].size(); k++ ) {
-            cerr<< "-" << sampaPhrases[j][k] << "-";
+         for ( int k = 0; k < fullPhrasePhoneSeqs[j].size(); k++ ) {
+            cerr<< "-" << fullPhrasePhoneSeqs[j][k] << "-";
          }
          cerr << endl; 
          //END DEBUG
@@ -93,8 +105,8 @@ vector<string> findAllPermutations(string orthoPhrase) {
 
 /*
    vector<string> misheard;
-   for (int i = 0; i < sampaPhrases.size(); i++){
-   	 //misheard.push_back( interpretPhrase( sampaPhrases[i] ) ) 
+   for (int i = 0; i < fullPhrasePhoneSeqs.size(); i++){
+   	 //misheard.push_back( interpretPhrase( fullPhrasePhoneSeqs[i] ) ) 
 	}
 	
 	for (int i = 0; i < misheard.size(); i++) {
@@ -106,26 +118,14 @@ vector<string> findAllPermutations(string orthoPhrase) {
 	return misheard;
 */
 
-   return sampaPhrases;
+   return fullPhrasePhoneSeqs;
 }
-
-vector< vector<phone> > getSampa( string orthoWord ) {
-   vector<string> sampaStrings = queryDBwithOrthoForSAMPA( orthoWord );
-   vector< vector <phone> > sampaSyllPhrases;
-   for(int i = 0; i < sampaStrings.size(); i++) {
-      vector<phone> sampaSylls = parseSAMPAintoPhonemes( sampaStrings[i] );
-      sampaSyllPhrases.push_back(sampaSylls);
-    }
-   return sampaSyllPhrases;
-}
-
-
 /* given ortho, returns SAMPAs */
-vector<string> queryDBwithOrthoForSAMPA( string orthoWord ) {
+vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
    
-   fprintf(stderr, "\nqueryDBwithOrthoForSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   fprintf(stderr, "\nqueryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
 
@@ -206,7 +206,6 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 	return misheardOrthoPhrases;
 }
 
-
 vector<string> dictLookup( string sampaStr ) {
    vector<string> orthoMatches;
    vector<phone> sampaSylls = parseSAMPAintoPhonemes(sampaStr);
@@ -215,13 +214,12 @@ vector<string> dictLookup( string sampaStr ) {
    return orthoMatches;
 }
 
-
 /* given ortho, returns entire row to databaseResults */
 void queryDBwithOrthoForRow( string orthoWord ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
    
-   fprintf(stderr, "queryDBwithOrthoForSAMPA, orthoWord = %s\n", orthoWord.c_str());
+   fprintf(stderr, "queryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
 
@@ -236,12 +234,10 @@ void queryDBwithOrthoForRow( string orthoWord ) {
    }
 }  
  
-
 vector<phone> parseSAMPAintoPhonemes( string sampaString ) {
    vector<phone> sampaSylls = splitSampaIntoLetters(sampaString);
    return sampaSylls;
 }
-
 
 vector<string> splitSampaIntoLetters(string phrase) {
    vector<string> tokens;
@@ -285,7 +281,6 @@ vector<string> splitSampaIntoLetters(string phrase) {
    return tokens;
 }
 
-	
 void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    int rc;
    
@@ -309,6 +304,13 @@ void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    }
 }
 
+string phoneVectToString( std::vector< phone > phoneVect ) {
+   string toRet = "";
+   for( int i = 0; i < phoneVect.size(); i++ ) {
+      toRet.append( phoneVect.at(i) );
+   }
+   return toRet;
+}
 
 void printDatabaseResultsRows() {
    for(int row = 0; row < databaseResults.size(); row++) {
@@ -318,14 +320,6 @@ void printDatabaseResultsRows() {
       }
       cerr << endl;
    }
-}
-
-string phoneVectToString( std::vector< phone > phoneVect ) {
-   string toRet = "";
-   for( int i = 0; i < phoneVect.size(); i++ ) {
-      toRet.append( phoneVect.at(i) );
-   }
-   return toRet;
 }
 
 //http://www.daniweb.com/software-development/cpp/threads/27905
@@ -342,8 +336,7 @@ vector<string> strTokOnWhitespace(string phrase) {
 }
 
 //From http://stackoverflow.com/a/8868204
-string delSpaces(string &str) 
-{
+string delSpaces(string &str) {
    str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
    return str;
 }
@@ -357,7 +350,6 @@ void DDDDDDDDDDDEBUG(string s) {
 	cerr << s << endl;	
 }
   
-
 void cleanupDatabase() {
    sqlite3_close(db);
 }

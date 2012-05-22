@@ -3,7 +3,7 @@ CFLAGS   = -lsqlite3 -Wall -pedantic
 
 all: test
    
-test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp 
+test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
 
 #wordBreakdown: wordBreakdown.cpp wordBreakdown.h

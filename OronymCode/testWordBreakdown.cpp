@@ -1,5 +1,4 @@
-#include "wordBreakdown.h"
-
+#include "testWordBreakdown.h"
 using namespace std;
 
 bool allTestsPassed = true;
@@ -23,10 +22,29 @@ void teardownTests() {
    testsSetup = false;
 }
 
-bool testQueryDBWithOrthoForSAMPA(string orthoWord) {
+bool testFindAllPhoneSeqsForOrthoPhrase(string orthoPhrase) {
    assert( testsSetup );
-   cout << "TESTING queryDBwithOrthoForSAMPA; ortho = " << orthoWord << endl;
-   vector<string> result = queryDBwithOrthoForSAMPA(orthoWord);
+   cout << "TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = " << orthoPhrase << endl;
+   vector< vector<phone> > phoneSeqs = findAllPhoneSeqsForOrthoPhrase( orthoPhrase );
+   
+   for( int i = 0; i < phoneSeqs.size(); i++) {
+      vector<phone> p = phoneSeqs[i];
+      cerr <<"---"<< phoneVectToString( p ) << endl;
+   }
+   cerr <<endl;
+   return true;
+}
+
+bool testFindAllPhoneSeqsForOrthoPhrase() {
+   //assert( testsSetup );
+   //cout << "TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = 'A nice cold shower' " << endl;
+   return testFindAllPhoneSeqsForOrthoPhrase("A nice cold shower");
+}
+
+bool testQueryDBwithOrthoForSampaStrs(string orthoWord) {
+   assert( testsSetup );
+   cout << "TESTING queryDBwithOrthoForSampaStrs; ortho = " << orthoWord << endl;
+   vector<string> result = queryDBwithOrthoForSampaStrs(orthoWord);
    for(int i = 0; i < result.size(); i++) {
       cout << orthoWord << " "<< i << ":" << result.at(i) <<endl;
    }
@@ -34,25 +52,7 @@ bool testQueryDBWithOrthoForSAMPA(string orthoWord) {
    return true;
 }
 
-bool testFindAllPermutations(string orthoPhrase) {
-   assert( testsSetup );
-   cout << "TESTING findAllPermutations; orthoPhrase = " << orthoPhrase << endl;
-   vector<string> sampaPhrases = findAllPermutations( orthoPhrase );
-   
-   for( int i = 0; i < sampaPhrases.size(); i++) {
-      string p = sampaPhrases[i];
-      cerr <<"---"<< p << endl;
-   }
-   cerr <<endl;
-   return true;
-}
-
-bool testFindAllPermutations() {
-   assert( testsSetup );
-   cout << "TESTING findAllPermutations; orthoPhrase = " << orthoPhrase << endl;
-   assert(0);
-}
-bool testQueryDBWithOrthoForSAMPA() {
+bool testQueryDBwithOrthoForSampaStrs() {
    int numPassedTests = 0;
    bool passedAllTests = true;
    assert( testsSetup );
@@ -77,11 +77,11 @@ bool testQueryDBWithOrthoForSAMPA() {
    dExpected.push_back("\"prA$dZEkt");
    dExpected.push_back("pr@\"dZEkt");
 
-   vector<string> aActual = queryDBwithOrthoForSAMPA(a); 
-   vector<string> bActual = queryDBwithOrthoForSAMPA(b); 
-   vector<string> cActual = queryDBwithOrthoForSAMPA(c); 
-   vector<string> dActual = queryDBwithOrthoForSAMPA(d); 
-   vector<string> eActual = queryDBwithOrthoForSAMPA(e); 
+   vector<string> aActual = queryDBwithOrthoForSampaStrs(a); 
+   vector<string> bActual = queryDBwithOrthoForSampaStrs(b); 
+   vector<string> cActual = queryDBwithOrthoForSampaStrs(c); 
+   vector<string> dActual = queryDBwithOrthoForSampaStrs(d); 
+   vector<string> eActual = queryDBwithOrthoForSampaStrs(e); 
    
    numPassedTests += (aExpected== aActual);
    numPassedTests += (bExpected== bActual);
@@ -95,10 +95,27 @@ bool testQueryDBWithOrthoForSAMPA() {
    passedAllTests &= (dExpected== dActual);
    passedAllTests &= (eExpected== eActual);
   
-   cout << "testing queryDBwithOrthoForSAMPA: "<<numPassedTests<<" tests passed"<<endl; 
+   cout << "testing queryDBwithOrthoForSampaStrs: "<<numPassedTests<<" tests passed"<<endl; 
 
    return passedAllTests;
 
+}
+
+bool testStrTokOnWhitespace( string phrase ) {
+   vector<string> phraseWords = strTokOnWhitespace( phrase );
+   //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
+   //TODO remove: loop is for debugging
+   cerr << "PHRASEWORDS DEBUG PRINT:";
+   for( int i = 0; i < phraseWords.size(); i++) {
+      string w = phraseWords[i];
+      cerr << w << "|";
+   }
+   cerr <<endl;
+   return true;
+}
+
+bool testStrTokOnWhitespace() {
+   return testStrTokOnWhitespace("A nice cold shower");
 }
 
 int oldMain() {
@@ -122,13 +139,14 @@ int oldMain() {
    for( int i = 0; i < phraseWords.size(); i++) {
       string w = phraseWords[i];
       cerr <<"~~~~~~~~~~"<<w<<"~~~~~~~~~~";
-      cerr << queryDBwithOrthoForSAMPA( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"<<endl; 
+      cerr << queryDBwithOrthoForSampaStrs( w ) <<"~~~~~~~~"<<w<<" end~~~~~~~~~~~~"<<endl; 
    }
    cerr <<endl;
    printDatabaseResultsRows();
 */
 
-   vector<string> sampaPhrases = findAllPermutations( phrase );
+/*
+   vector<string> sampaPhrases = findAllPhoneSeqsForOrthoPhrase( phrase );
    
    for( int i = 0; i < sampaPhrases.size(); i++) {
       string p = sampaPhrases[i];
@@ -137,15 +155,16 @@ int oldMain() {
    cerr <<endl;
    printDatabaseResultsRows();
 
-
+*/
   cleanupDatabase();
 }
 
 void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
-   cout << "\n\t\tfindAllPermutations";
-   cout << "\n\t\tqueryDBwithOrthoForSAMPA";
+   cout << "\n\t\tstrTokOnWhitespace";
+   cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
+   cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
    cout << "\n\t\thelp";
    cout << "\n\t\toldMain\n";
 }
@@ -158,7 +177,7 @@ int main(int argc, char* argv[]) {
       oldMain();
       /*
       //run all the default test cases
-      allTestsPassed &= testQueryDBWithOrthoForSAMPA();
+      allTestsPassed &= testQueryDBWithOrthoForSampaStrs();
       */
    } else if ( argc == 2 ) {
       //run the default test cases for the specified function
@@ -167,10 +186,12 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "oldMain") == 0 ) {
          teardownTests();
          oldMain();
-      } else if( strcmp( argv[1], "findAllPermutations") == 0 ) {
-         allTestsPassed &= testFindAllPermutations();
-      } else if( strcmp( argv[1], "queryDBwithOrthoForSAMPA") == 0 ) {
-         allTestsPassed &= testQueryDBWithOrthoForSAMPA();
+      } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
+         allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
+      } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
+         allTestsPassed &= testStrTokOnWhitespace();
+      } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
+         allTestsPassed &= testQueryDBwithOrthoForSampaStrs();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -183,10 +204,12 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "oldMain") == 0 ) {
          teardownTests();
          oldMain();
-      } else if( strcmp( argv[1], "findAllPermutations") == 0 ) {
-         allTestsPassed &= testFindAllPermutations( argv[2] );
-      } else if( strcmp( argv[1], "queryDBwithOrthoForSAMPA") == 0 ) {
-         allTestsPassed &= testQueryDBWithOrthoForSAMPA( argv[2] );
+      } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
+         allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase( argv[2] );
+      } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
+         allTestsPassed &= testStrTokOnWhitespace( argv[2] );
+      } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
+         allTestsPassed &= testQueryDBwithOrthoForSampaStrs( argv[2] );
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

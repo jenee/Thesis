@@ -20,10 +20,11 @@ typedef std::string phone;
 
 static int callback(void *queryterm, int nCol, char **values, char **headers);
 
+std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::string> sampaWords );
+std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWord );
+std::vector< std::vector<phone> > findAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase );
 
-std::vector<std::string> findAllPermutations(std::string orthoPhrase);
-std::vector< std::vector<phone> > getSampa( std::string orthoWord );
-std::vector<std::string> queryDBwithOrthoForSAMPA( std::string orthoWord );
+std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
 std::vector<std::string> dictLookup( std::string sampaStr );
 void queryDBwithOrthoForRow( std::string orthoWord );
