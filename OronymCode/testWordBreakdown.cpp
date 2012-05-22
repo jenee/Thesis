@@ -34,6 +34,24 @@ bool testQueryDBWithOrthoForSAMPA(string orthoWord) {
    return true;
 }
 
+bool testFindAllPermutations(string orthoPhrase) {
+   assert( testsSetup );
+   cout << "TESTING findAllPermutations; orthoPhrase = " << orthoPhrase << endl;
+   vector<string> sampaPhrases = findAllPermutations( orthoPhrase );
+   
+   for( int i = 0; i < sampaPhrases.size(); i++) {
+      string p = sampaPhrases[i];
+      cerr <<"---"<< p << endl;
+   }
+   cerr <<endl;
+   return true;
+}
+
+bool testFindAllPermutations() {
+   assert( testsSetup );
+   cout << "TESTING findAllPermutations; orthoPhrase = " << orthoPhrase << endl;
+   assert(0);
+}
 bool testQueryDBWithOrthoForSAMPA() {
    int numPassedTests = 0;
    bool passedAllTests = true;
@@ -110,10 +128,10 @@ int oldMain() {
    printDatabaseResultsRows();
 */
 
-   vector<string> orthoPhrases = findAllPermutations( phrase );
+   vector<string> sampaPhrases = findAllPermutations( phrase );
    
-   for( int i = 0; i < orthoPhrases.size(); i++) {
-      string p = orthoPhrases[i];
+   for( int i = 0; i < sampaPhrases.size(); i++) {
+      string p = sampaPhrases[i];
       cerr <<"---"<< p << endl;
    }
    cerr <<endl;
@@ -126,6 +144,7 @@ int oldMain() {
 void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
+   cout << "\n\t\tfindAllPermutations";
    cout << "\n\t\tqueryDBwithOrthoForSAMPA";
    cout << "\n\t\thelp";
    cout << "\n\t\toldMain\n";
@@ -148,6 +167,8 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "oldMain") == 0 ) {
          teardownTests();
          oldMain();
+      } else if( strcmp( argv[1], "findAllPermutations") == 0 ) {
+         allTestsPassed &= testFindAllPermutations();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSAMPA") == 0 ) {
          allTestsPassed &= testQueryDBWithOrthoForSAMPA();
       } else {
@@ -162,6 +183,8 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "oldMain") == 0 ) {
          teardownTests();
          oldMain();
+      } else if( strcmp( argv[1], "findAllPermutations") == 0 ) {
+         allTestsPassed &= testFindAllPermutations( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSAMPA") == 0 ) {
          allTestsPassed &= testQueryDBWithOrthoForSAMPA( argv[2] );
       } else {

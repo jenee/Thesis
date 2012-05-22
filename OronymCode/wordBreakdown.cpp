@@ -22,7 +22,8 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
 }
 
 
-
+/*given an phrase of ortho words, gives all the sampa permutations
+ that it could possibly be*/
 vector<string> findAllPermutations(string orthoPhrase) {
 	vector<string> permutedPhrases;	
 	
@@ -31,7 +32,6 @@ vector<string> findAllPermutations(string orthoPhrase) {
    cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
       vector< vector<phone> > sampaSyllWords = getSampa( orthoWords[i] );
-      for( int j = 0; j < sampaSyllWords.size(); j++ ) {
          /*
          //DEBUG
          cerr << j <<": ";
@@ -43,7 +43,9 @@ vector<string> findAllPermutations(string orthoPhrase) {
          */  
          //if this is ths first orthoWord
          if( i == 0 ) {
-            sampaPhrases.push_back( sampaSyllWords[j] );
+            for( int j = 0; j < sampaSyllWords.size(); j++ ) {
+               sampaPhrases.push_back( sampaSyllWords[j] );
+            }
          } else {
             int numFullPhrases = sampaPhrases.size();
             cerr << "\tnumFullPhrases = "<< numFullPhrases << endl;//TODO debug
@@ -76,7 +78,7 @@ vector<string> findAllPermutations(string orthoPhrase) {
                   }
                   //END DEBUG
          }
-         
+         /*
          //DEBUG
          cerr << j <<"++SAMPA+PHRASES++  ";
          for ( int k = 0; k < sampaPhrases[j].size(); k++ ) {
@@ -84,13 +86,12 @@ vector<string> findAllPermutations(string orthoPhrase) {
          }
          cerr << endl; 
          //END DEBUG
-                //6vector<phone> sampaWord = sampaSyllWords[j];
-         //sampaPhrase.insert( sampaPhrase.end(), sampaWord.begin(), sampaWord.end() );
-      }
+      */
       
 	}	
-         assert(0);
+        // assert(0);
 
+/*
    vector<string> misheard;
    for (int i = 0; i < sampaPhrases.size(); i++){
    	 //misheard.push_back( interpretPhrase( sampaPhrases[i] ) ) 
@@ -103,7 +104,9 @@ vector<string> findAllPermutations(string orthoPhrase) {
 
 
 	return misheard;
+*/
 
+   return sampaPhrases;
 }
 
 vector< vector<phone> > getSampa( string orthoWord ) {
