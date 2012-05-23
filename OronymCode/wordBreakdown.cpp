@@ -144,6 +144,7 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
       string strOfCurPhoneSeq = phoneVectToString( curPhoneSeq );
       cerr << "Phonetic interpretation "<<i<<" ("<< strOfCurPhoneSeq <<")"<<endl;
       vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
+      cerr << "exits interpretPhrase"<<endl;
       for( int j = 0; j < altOrthoPhrases.size(); j++) {
          cerr << i <<"~~>" << altOrthoPhrases.at(j) << endl;
          //TODO change so it only shows fully valid strings
@@ -162,13 +163,15 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
    cerr << "INTERPRET PHRASE for " << phoneVectToString(sampaPhrase) << endl;
 	if( sampaPhrase.size() == 0 ) {
 		misheardOrthoPhrases.push_back("");
+		cerr << "<<<<<<phraseSize == 0, so returning all of the phrases" <<endl;
 		return misheardOrthoPhrases;
 	}
 	
    string sampaStr = "";
 	vector <phone> usedPhones;
-   
+   cerr << "sampaPhrase.size() ="<<sampaPhrase.size()<<endl;
    for (int i = 0; i < sampaPhrase.size(); i++) {
+      cerr << "i = "<<i<<"; sampaPhrase[i]= phone p = "<<sampaPhrase[i]<<endl;
       phone p = sampaPhrase[i];
       if( strcmp( "\"", p.c_str() ) == 0) {
          assert(0);
@@ -183,6 +186,13 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 		sampaStr += p;
 		usedPhones.push_back(p);
 		vector<string> orthoMatches = queryDBwithSampaForOrthoStrs( sampaStr );
+		cerr << "orthoMatches.size() =="<<orthoMatches.size()<<endl;
+		//DEBUG
+		for(int o = 0; o < orthoMatches.size(); o++) {
+		   cerr<<"++"<<orthoMatches.at(o);
+		}
+		cerr<<endl;
+		//END DEBUG		
 		//if there are no exact matches
       if ( orthoMatches.size() == 0 ) {
 		   vector<string> prefixMatches = queryDBForOrthoStrsWithSampaPrefix( sampaStr );
@@ -199,8 +209,12 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 		}
 
       for (int j = 0; j < orthoMatches.size(); j++) {
+      cerr << "enter orthomatches loop"<<endl;
          string orthoWord = orthoMatches[j];
-			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + j );
+         cerr << "----"<<i<<"--orthoword--"<< orthoMatches[j] << endl;
+         vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + j );
+         cerr << "----"<<i<<"--sampaPhraseTail--"<< phoneVectToString(sampaPhraseTail) <<"|--"<< endl;
+
 			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
 			if ( orthoLeaves.size() == 0 ) {
 			   if( sampaPhraseTail.size() > 0 ) {
@@ -221,6 +235,8 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 			}
 		}
 	}
+	
+	cerr<<"EXITING interpretPhrase"<<endl;
 	return misheardOrthoPhrases;
 }
 
@@ -244,7 +260,7 @@ vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
    */
    for( int i = 0; i < databaseResults.size(); i++) {
       retStrings.push_back( delSpaces( databaseResults[i][0] ) );
-      cerr << "\t#-" << retStrings[i] << "-#\n" ; //TODO DEBUG output
+      //cerr << "\t#-" << retStrings[i] << "-#\n" ; //TODO DEBUG output
    }
    cerr<< endl; //TODO DEBUG
    databaseResults.clear();
@@ -326,7 +342,7 @@ vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
 vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
-   fprintf(stderr, "\nqueryDBwithSAMPAForOrthoStrs, sampaStr = %s\n", sampaStr.c_str());
+   //fprintf(stderr, "\nqueryDBwithSAMPAForOrthoStrs, sampaStr = %s\n", sampaStr.c_str());
    
    string sampaStrNoEmph = stripSampaStrOfEmph( sampaStr );
 
