@@ -375,26 +375,17 @@ vector<string> splitSampaIntoLetters(string phrase) {
       if (i+1 < phrase.length()) {
          // Get a two-character set.
        sampaCharacter = phrase.substr(i, 2);
-       if (sampaCharacter == "@`"
-             || sampaCharacter == "`r"
+       if ( sampaCharacter == "`r"
              || sampaCharacter == "3`"
-             || sampaCharacter == "A`"
              || sampaCharacter == "aI"
              || sampaCharacter == "aU"
              || sampaCharacter == "dZ"
-             || sampaCharacter == "E`"
-             || sampaCharacter == "I`"
              || sampaCharacter == "jU"
              || sampaCharacter == "ju"
-             || sampaCharacter == "l="
-             || sampaCharacter == "m="
-             || sampaCharacter == "n="
-             || sampaCharacter == "O`"
              || sampaCharacter == "OI"
              || sampaCharacter == "oU"
              || sampaCharacter == "ou"
-             || sampaCharacter == "tS"
-             || sampaCharacter == "U`") {
+             || sampaCharacter == "tS" ) {
           // We're good.  Skip the second character for purpose of the loop.
           i++;
          } else {
