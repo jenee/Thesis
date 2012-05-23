@@ -172,20 +172,30 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
       phone p = sampaPhrase[i];
       if( strcmp( "\"", p.c_str() ) == 0) {
          assert(0);
-         continue; //TODO fix someday, but ignore emphases for now.
+         continue; //TODO incorporate someday, but ignore emphases for now.
       } else if ( strcmp( "$", p.c_str() ) == 0) {
          assert(0);
-         continue; //TODO fix someday, but ignore emphases for now.
+         continue; //TODO incorporate someday, but ignore emphases for now.
       } else if ( strcmp( "%", p.c_str() ) == 0) {
          assert(0);
-         continue; //TODO fix someday, but ignore emphases for now
+         continue; //TODO incorporate someday, but ignore emphases for now
       }
 		sampaStr += p;
 		usedPhones.push_back(p);
 		vector<string> orthoMatches = queryDBwithSampaForOrthoStrs( sampaStr );
-		if ( orthoMatches.size() == 0 ) {
-			misheardOrthoPhrases.push_back("DEADBEEF");
-			return misheardOrthoPhrases;
+		//if there are no exact matches
+      if ( orthoMatches.size() == 0 ) {
+		   vector<string> prefixMatches = queryDBForOrthoStrsWithSampaPrefix( sampaStr );
+		   //if there are no partial matches, we have a dead end, so exit
+		   if( prefixMatches.size() == 0 ) {
+			   misheardOrthoPhrases.push_back("DEADBEEF");
+			   //TODO might have to delete rest of phone seq? we'll see.
+            continue;
+			} else {
+			   continue; //go to next loop iter and add next phone 
+			}
+			//return misheardOrthoPhrases;
+			cerr <<" OLD RETURN STATEMENT WAS HERE for if no exact matches"<< endl;
 		}
 
       for (int j = 0; j < orthoMatches.size(); j++) {
@@ -195,10 +205,12 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 			if ( orthoLeaves.size() == 0 ) {
 			   if( sampaPhraseTail.size() > 0 ) {
 				   cerr<< "--"<<orthoWord<<"---no leaves, has tail: "<< phoneVectToString(sampaPhraseTail) <<endl;
+				   //TODO RESTART TRACE AT NEXT LINE!perhaps want a continue?
 				   misheardOrthoPhrases.push_back( orthoWord.append( "DEADBEEF" ) );
 				}
 				//return misheardOrthoPhrases;
 				cerr <<" OLD RETURN STATEMENT WAS HERE for if no ortholeaves"<< endl;
+				continue;
 			} else {
                         
             for (int k = 0; k < orthoLeaves.size(); k++) {
@@ -232,7 +244,7 @@ vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
    */
    for( int i = 0; i < databaseResults.size(); i++) {
       retStrings.push_back( delSpaces( databaseResults[i][0] ) );
-      cerr << "#-" << retStrings[i] << "-#" ; //TODO DEBUG output
+      cerr << "\t#-" << retStrings[i] << "-#\n" ; //TODO DEBUG output
    }
    cerr<< endl; //TODO DEBUG
    databaseResults.clear();

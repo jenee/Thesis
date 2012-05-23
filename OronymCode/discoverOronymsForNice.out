@@ -1,0 +1,249 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING discoverOronymsForPhrase; orthoPhrase = nice
+FIND ALL PERMUTATIONS
+
+queryDBwithOrthoForSampaStrs, orthoWord = nice
+	#-"naIs-#
+	#-"nis-#
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = nice
+	#-"naIs-#
+	#-"nis-#
+
+Phonetic interpretation 0 ("naIs)
+INTERPRET PHRASE for naIs
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = naI
+	#-nigh-#
+	#-nye-#
+
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--nigh---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--nye---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = naIs
+	#-gneiss-#
+	#-nice-#
+
+INTERPRET PHRASE for naI
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = naI
+	#-nigh-#
+	#-nye-#
+
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--nigh---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--nye---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for naI
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = naI
+	#-nigh-#
+	#-nye-#
+
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--nigh---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--nye---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+0~~>nighDEADBEEF
+0~~>nyeDEADBEEF
+0~~>gneissnighDEADBEEF
+0~~>gneissnyeDEADBEEF
+0~~>nicenighDEADBEEF
+0~~>nicenyeDEADBEEF
+Phonetic interpretation 1 ("nis)
+INTERPRET PHRASE for nis
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = ni
+	#-knee-#
+	#-ne-#
+
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--knee---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--ne---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = nis
+	#-nice-#
+	#-niece-#
+
+INTERPRET PHRASE for ni
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = ni
+	#-knee-#
+	#-ne-#
+
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--knee---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--ne---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for ni
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = ni
+	#-knee-#
+	#-ne-#
+
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--knee---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+INTERPRET PHRASE for n
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = n
+
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+	#----------<<EVERY n word from dneiper to pneumonitis>>----------#
+--ne---no leaves, has tail: n
+ OLD RETURN STATEMENT WAS HERE for if no ortholeaves
+1~~>kneeDEADBEEF
+1~~>neDEADBEEF
+1~~>nicekneeDEADBEEF
+1~~>niceneDEADBEEF
+1~~>niecekneeDEADBEEF
+1~~>nieceneDEADBEEF
+!Discovered 12 oronyms:
+0: 'nighDEADBEEF'
+1: 'nyeDEADBEEF'
+2: 'gneissnighDEADBEEF'
+3: 'gneissnyeDEADBEEF'
+4: 'nicenighDEADBEEF'
+5: 'nicenyeDEADBEEF'
+6: 'kneeDEADBEEF'
+7: 'neDEADBEEF'
+8: 'nicekneeDEADBEEF'
+9: 'niceneDEADBEEF'
+10: 'niecekneeDEADBEEF'
+11: 'nieceneDEADBEEF'
+NO TESTS FAILED! :) 
