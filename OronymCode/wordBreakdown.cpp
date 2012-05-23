@@ -9,7 +9,7 @@ vector< vector< string > > databaseResults;
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
-   fprintf(stderr,"===Callback for query %s===\n",(char *) queryterm);
+   //fprintf(stderr,"===Callback for query %s===\n",(char *) queryterm);
    for(i=0; i< nCol; i++){
       //fprintf(stderr,"%s = %s\n", headers[i], values[i] ? values[i] : "NULL");
       rowEntry.push_back( values[i] );
@@ -157,8 +157,8 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
    returns orthographic phrases (I *think* each string is a full phrase...)*/
 vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 	vector<string> misheardOrthoPhrases;
-   assert(0);
-   cerr << "INTERPRET PHRASE" << endl;
+   //assert(0);
+   cerr << "INTERPRET PHRASE for " << phoneVectToString(sampaPhrase) << endl;
 	if( sampaPhrase.size() == 0 ) {
 		misheardOrthoPhrases.push_back("");
 		return misheardOrthoPhrases;
@@ -169,6 +169,13 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
    
    for (int i = 0; i < sampaPhrase.size(); i++) {
       phone p = sampaPhrase[i];
+      if( strcmp( "\"", p.c_str() ) == 0) {
+         continue; //TODO fix someday, but ignore emphases for now.
+      } else if ( strcmp( "$", p.c_str() ) == 0) {
+         continue; //TODO fix someday, but ignore emphases for now.
+      } else if ( strcmp( "%", p.c_str() ) == 0) {
+         continue; //TODO fix someday, but ignore emphases for now
+      }
 		sampaStr += p;
 		usedPhones.push_back(p);
 		vector<string> orthoMatches = queryDBwithSampaForOrthoStrs( sampaStr );
@@ -177,8 +184,8 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 			return misheardOrthoPhrases;
 		}
 
-      for (int i = 0; i < orthoMatches.size(); i++) {
-         string orthoWord = orthoMatches[i];
+      for (int j = 0; j < orthoMatches.size(); j++) {
+         string orthoWord = orthoMatches[j];
 			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + i );
 			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
 			if ( orthoLeaves.size() == 0 ) {
@@ -186,8 +193,8 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 				return misheardOrthoPhrases;
 			} else {
                         
-            for (int i = 0; i < orthoLeaves.size(); i++) {
-               string orthoLeaf = orthoLeaves[i];
+            for (int k = 0; k < orthoLeaves.size(); k++) {
+               string orthoLeaf = orthoLeaves[k];
 					misheardOrthoPhrases.push_back( orthoWord + orthoLeaf );
 				}
             

@@ -22,6 +22,21 @@ void teardownTests() {
    testsSetup = false;
 }
 
+bool testDiscoverOronymsForPhrase( string orthoPhrase ) {
+   assert( testsSetup );
+   cout << "TESTING discoverOronymsForPhrase; orthoPhrase = " << orthoPhrase << endl;
+   vector<string> oronymPhrases = discoverOronymsForPhrase( orthoPhrase );
+   cout << "!Discovered "<<oronymPhrases.size()<<" oronyms:"<<endl;
+   for( int i = 0; i < oronymPhrases.size(); i++) {
+      cout << i<<": '"<<oronymPhrases.at(i) << "'"<<endl;
+   }
+   return true;
+}
+
+bool testDiscoverOronymsForPhrase() {
+   return testDiscoverOronymsForPhrase("a nice cold shower");
+}
+
 bool testFindAllPhoneSeqsForOrthoPhrase(string orthoPhrase) {
    assert( testsSetup );
    cout << "TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = " << orthoPhrase << endl;
@@ -148,7 +163,7 @@ bool testStripSampaStrOfEmph() {
    return testStripSampaStrOfEmph("strO%bE$ri");
 }
 
-int oldMain() {
+void oldMain() {
 
    connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
 
@@ -189,9 +204,29 @@ int oldMain() {
   cleanupDatabase();
 }
 
+bool runAllDefaultTests() {
+   bool testsPassed = true;
+   cout << "XXXXXXXXXXXXXXXXX___START___XXXXXXXXXXXXXXXXXXXXXXX"<<endl<<endl;
+   testsPassed &= testDiscoverOronymsForPhrase();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testStripSampaStrOfEmph();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testStrTokOnWhitespace();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testQueryDBwithOrthoForSampaStrs();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testQueryDBwithSampaForOrthoStrs();
+   cout << "XXXXXXXXXXXXXXXXXXXXXX___DONE___XXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   return testsPassed;
+}
+
 void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
+   cout << "\n\t\tall";
+   cout << "\n\t\tdiscoverOronymsForPhrase";
    cout << "\n\t\tstripSampaStrOfEmph";
    cout << "\n\t\tstrTokOnWhitespace";
    cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
@@ -205,8 +240,7 @@ int main(int argc, char* argv[]) {
    
    setupTests();
    if ( argc <= 1) {
-      cleanupDatabase();
-      oldMain();
+      usageMessage();
       /*
       //run all the default test cases
       allTestsPassed &= testQueryDBWithOrthoForSampaStrs();
@@ -218,6 +252,10 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "oldMain") == 0 ) {
          teardownTests();
          oldMain();
+      } else if( strcmp( argv[1], "all") == 0 ) {
+          allTestsPassed &= runAllDefaultTests();
+      } else if( strcmp( argv[1], "discoverOronymsForPhrase") == 0 ) {
+         allTestsPassed &= testDiscoverOronymsForPhrase();
       } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
       } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
@@ -240,6 +278,8 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "oldMain") == 0 ) {
          teardownTests();
          oldMain();
+      } else if( strcmp( argv[1], "discoverOronymsForPhrase") == 0 ) {
+         allTestsPassed &= testDiscoverOronymsForPhrase( argv[2] );
       } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase( argv[2] );
       } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {

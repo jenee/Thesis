@@ -1,0 +1,269 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING discoverOronymsForPhrase; orthoPhrase = a nice
+FIND ALL PERMUTATIONS
+
+queryDBwithOrthoForSampaStrs, orthoWord = a
+#-"e-##-@-##-"A-#
+
+queryDBwithOrthoForSampaStrs, orthoWord = a
+#-"e-##-@-##-"A-#
+
+queryDBwithOrthoForSampaStrs, orthoWord = nice
+#-"naIs-##-"nis-#
+
+queryDBwithOrthoForSampaStrs, orthoWord = nice
+#-"naIs-##-"nis-#
+	numFullPhrases = 3
+	nextWordSAMPAPhoneSeqs.size() = 2
+0***sampa phrase after append  _"__e__"__n__aI__s_
+1***sampa phrase after append  _@__"__n__aI__s_
+2***sampa phrase after append  _"__A__"__n__aI__s_
+3***sampa phrase after append  _"__e__"__n__i__s_
+4***sampa phrase after append  _@__"__n__i__s_
+5***sampa phrase after append  _"__A__"__n__i__s_
+Phonetic interpretation 0 ("e"naIs)
+INTERPRET PHRASE for "e"naIs
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = "
+
+~~>DEADBEEF
+Phonetic interpretation 1 (@"naIs)
+INTERPRET PHRASE for @"naIs
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"
+#-a-##-o'-#
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"n
+#-an-##-'n'-#
+INTERPRET PHRASE for @"
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"
+#-a-##-o'-#
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @"
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"
+#-a-##-o'-#
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"naI
+
+~~>a
+~~>o'
+~~>aa
+~~>ao'
+~~>o'a
+~~>o'o'
+~~>ana
+~~>ano'
+~~>anaa
+~~>anao'
+~~>ano'a
+~~>ano'o'
+~~>'n'a
+~~>'n'o'
+~~>'n'aa
+~~>'n'ao'
+~~>'n'o'a
+~~>'n'o'o'
+~~>DEADBEEF
+Phonetic interpretation 2 ("A"naIs)
+INTERPRET PHRASE for "A"naIs
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = "
+
+~~>DEADBEEF
+Phonetic interpretation 3 ("e"nis)
+INTERPRET PHRASE for "e"nis
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = "
+
+~~>DEADBEEF
+Phonetic interpretation 4 (@"nis)
+INTERPRET PHRASE for @"nis
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"
+#-a-##-o'-#
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"n
+#-an-##-'n'-#
+INTERPRET PHRASE for @"
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"
+#-a-##-o'-#
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @"
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"
+#-a-##-o'-#
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+INTERPRET PHRASE for @
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @
+#-a-##-o'-#
+INTERPRET PHRASE for 
+INTERPRET PHRASE for 
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = @"ni
+
+~~>a
+~~>o'
+~~>aa
+~~>ao'
+~~>o'a
+~~>o'o'
+~~>ana
+~~>ano'
+~~>anaa
+~~>anao'
+~~>ano'a
+~~>ano'o'
+~~>'n'a
+~~>'n'o'
+~~>'n'aa
+~~>'n'ao'
+~~>'n'o'a
+~~>'n'o'o'
+~~>DEADBEEF
+Phonetic interpretation 5 ("A"nis)
+INTERPRET PHRASE for "A"nis
+
+queryDBwithSAMPAForOrthoStrs, sampaStr = "
+
+~~>DEADBEEF
+!Discovered 42 oronyms:
+0: 'DEADBEEF'
+1: 'a'
+2: 'o''
+3: 'aa'
+4: 'ao''
+5: 'o'a'
+6: 'o'o''
+7: 'ana'
+8: 'ano''
+9: 'anaa'
+10: 'anao''
+11: 'ano'a'
+12: 'ano'o''
+13: ''n'a'
+14: ''n'o''
+15: ''n'aa'
+16: ''n'ao''
+17: ''n'o'a'
+18: ''n'o'o''
+19: 'DEADBEEF'
+20: 'DEADBEEF'
+21: 'DEADBEEF'
+22: 'a'
+23: 'o''
+24: 'aa'
+25: 'ao''
+26: 'o'a'
+27: 'o'o''
+28: 'ana'
+29: 'ano''
+30: 'anaa'
+31: 'anao''
+32: 'ano'a'
+33: 'ano'o''
+34: ''n'a'
+35: ''n'o''
+36: ''n'aa'
+37: ''n'ao''
+38: ''n'o'a'
+39: ''n'o'o''
+40: 'DEADBEEF'
+41: 'DEADBEEF'
+NO TESTS FAILED! :) 

@@ -5,6 +5,8 @@
 
 void setupTests();
 void teardownTests();
+bool testDiscoverOronymsForPhrase(std::string orthoPhrase);
+bool testDiscoverOronymsForPhrase();
 bool testFindAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase);
 bool testFindAllPhoneSeqsForOrthoPhrase();
 bool testQueryDBwithSampaForOrthoStrs( std::string sampaStr );
@@ -15,7 +17,8 @@ bool testStrTokOnWhitespace( std::string phrase );
 bool testStrTokOnWhitespace();
 bool testStripSampaStrOfEmph( std::string sampaStr ) ;
 bool testStripSampaStrOfEmph();
-int oldMain();
+void oldMain();
+bool runAllDefaultTests();
 void usageMessage();
 
 #endif
