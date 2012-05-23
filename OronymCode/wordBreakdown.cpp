@@ -183,7 +183,8 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
          assert(0);
          continue; //TODO incorporate someday, but ignore emphases for now
       }
-		sampaStr += p;
+		sampaStr += p;      
+		cerr<< "Sampastr = "<<sampaStr<<endl;
 		usedPhones.push_back(p);
 		vector<string> orthoMatches = queryDBwithSampaForOrthoStrs( sampaStr );
 		cerr << "orthoMatches.size() =="<<orthoMatches.size()<<endl;
@@ -212,7 +213,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
       cerr << "enter orthomatches loop"<<endl;
          string orthoWord = orthoMatches[j];
          cerr << "----"<<i<<"--orthoword--"<< orthoMatches[j] << endl;
-         vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + j );
+         vector<phone> sampaPhraseTail( sampaPhrase.begin()+j+1, sampaPhrase.end() );
          cerr << "----"<<i<<"--sampaPhraseTail--"<< phoneVectToString(sampaPhraseTail) <<"|--"<< endl;
 
 			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
