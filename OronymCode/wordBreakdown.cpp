@@ -121,6 +121,17 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
    return fullPhrasePhoneSeqs;
 }
 
+/*
+vector< vector< string > > findAllValidOrthoPhrasesForPhoneSeqs ( vector< vector<phone> > fullPhoneSeqs ) {
+
+}
+
+std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phone> ) {
+
+
+}
+*/
+
 /*This function does the phoneme-tree-traversal thing for oronyms
    returns orthographic phrases (I *think* each string is a full phrase...)*/
 vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
@@ -326,8 +337,6 @@ vector<string> splitSampaIntoLetters(string phrase) {
    }
    return tokens;
 }
-
-
 
 //http://www.daniweb.com/software-development/cpp/threads/27905
 vector<string> strTokOnWhitespace(string phrase) {
