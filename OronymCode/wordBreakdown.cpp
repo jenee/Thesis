@@ -200,7 +200,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 
       for (int j = 0; j < orthoMatches.size(); j++) {
          string orthoWord = orthoMatches[j];
-			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + i );
+			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + j );
 			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
 			if ( orthoLeaves.size() == 0 ) {
 			   if( sampaPhraseTail.size() > 0 ) {
