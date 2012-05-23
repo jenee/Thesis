@@ -43,6 +43,7 @@ std::string toLowerCase( std::string data);
 std::string delSpaces( std::string &str);
 std::string stripSampaStrOfEmph( std::string &str);
 
+std::vector< phone > getNoEmphsPhoneVect(std::vector< phone > phoneVectOrig );
 std::string phoneVectToString( std::vector< phone > phoneVect );
 
 void printDatabaseResultsRows();

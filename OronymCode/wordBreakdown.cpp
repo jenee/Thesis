@@ -145,7 +145,7 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
       cerr << "Phonetic interpretation "<<i<<" ("<< strOfCurPhoneSeq <<")"<<endl;
       vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
       for( int j = 0; j < altOrthoPhrases.size(); j++) {
-         cerr << "~~>" << altOrthoPhrases.at(j) << endl;
+         cerr << i <<"~~>" << altOrthoPhrases.at(j) << endl;
          //TODO change so it only shows fully valid strings
          orthoMisheardAsPhrases.push_back( altOrthoPhrases.at(j) );
       }
@@ -155,7 +155,8 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
 }
 /*This function does the phoneme-tree-traversal thing for oronyms
    returns orthographic phrases (I *think* each string is a full phrase...)*/
-vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
+vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
+   vector<phone> sampaPhrase = getNoEmphsPhoneVect(sampaPhraseOrig);
 	vector<string> misheardOrthoPhrases;
    //assert(0);
    cerr << "INTERPRET PHRASE for " << phoneVectToString(sampaPhrase) << endl;
@@ -170,10 +171,13 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
    for (int i = 0; i < sampaPhrase.size(); i++) {
       phone p = sampaPhrase[i];
       if( strcmp( "\"", p.c_str() ) == 0) {
+         assert(0);
          continue; //TODO fix someday, but ignore emphases for now.
       } else if ( strcmp( "$", p.c_str() ) == 0) {
+         assert(0);
          continue; //TODO fix someday, but ignore emphases for now.
       } else if ( strcmp( "%", p.c_str() ) == 0) {
+         assert(0);
          continue; //TODO fix someday, but ignore emphases for now
       }
 		sampaStr += p;
@@ -189,8 +193,12 @@ vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
 			vector<phone> sampaPhraseTail( sampaPhrase.begin(), sampaPhrase.begin() + i );
 			vector<string> orthoLeaves = interpretPhrase ( sampaPhraseTail );
 			if ( orthoLeaves.size() == 0 ) {
-				misheardOrthoPhrases.push_back( orthoWord.append( "DEADBEEF" ) );
-				return misheardOrthoPhrases;
+			   if( sampaPhraseTail.size() > 0 ) {
+				   cerr<< "--"<<orthoWord<<"---no leaves, has tail: "<< phoneVectToString(sampaPhraseTail) <<endl;
+				   misheardOrthoPhrases.push_back( orthoWord.append( "DEADBEEF" ) );
+				}
+				//return misheardOrthoPhrases;
+				cerr <<" OLD RETURN STATEMENT WAS HERE for if no ortholeaves"<< endl;
 			} else {
                         
             for (int k = 0; k < orthoLeaves.size(); k++) {
@@ -395,6 +403,19 @@ string stripSampaStrOfEmph(string &str) {
    str.erase(std::remove(str.begin(), str.end(), '%'), str.end());
    str.erase(std::remove(str.begin(), str.end(), '$'), str.end());
    return str;
+}
+
+vector< phone > getNoEmphsPhoneVect(vector< phone > phoneVectOrig ) {
+   vector<phone> phoneVectNoEmphs;
+   for(int i = 0; i < phoneVectOrig.size(); i++) {
+      phone p = phoneVectOrig.at(i);
+      if( (p.compare("\"") != 0) 
+          && (p.compare("$") != 0)
+          && (p.compare("%") != 0) ) {
+         phoneVectNoEmphs.push_back( p );
+      }
+   }
+   return phoneVectNoEmphs;
 }
 
 string phoneVectToString( std::vector< phone > phoneVect ) {
