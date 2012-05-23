@@ -298,8 +298,9 @@ vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
    fprintf(stderr, "\nqueryDBForOrthoStrsWithSampaPrefix, sampaPrefix = %s\n", sampaPrefix.c_str());
    
    string sampaStrNoEmph = stripSampaStrOfEmph( sampaPrefix );
-
-   sampaStrNoEmph.append("%");
+   if(sampaStrNoEmph.size() > 0) {
+      sampaStrNoEmph.append("%");
+   }
    cerr << "final queryterm: |"<<sampaStrNoEmph <<"|" << endl;
    sprintf(sqlQuery, "select ortho from phoneticDictTable where trim(SAMPAnoEmph) like \"%s\"",sampaStrNoEmph.c_str()); 
    
