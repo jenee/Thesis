@@ -132,6 +132,27 @@ std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phon
 }
 */
 
+/*given an orthoPhrase, returns all possible orthoPhrases it could be misheard as*/
+vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
+   vector<string> orthoMisheardAsPhrases;
+   
+   vector<vector<phone> > allPhoneSeqsOfOrigPhrase = findAllPhoneSeqsForOrthoPhrase( origOrthoPhrase );
+   
+   int numUniquePhoneticInterpretations = allPhoneSeqsOfOrigPhrase.size();
+   for(int i = 0; i < numUniquePhoneticInterpretations; i++) {
+      vector<phone> curPhoneSeq( allPhoneSeqsOfOrigPhrase.at(i) );
+      string strOfCurPhoneSeq = phoneVectToString( curPhoneSeq );
+      cerr << "Phonetic interpretation "<<i<<" ("<< strOfCurPhoneSeq <<")"<<endl;
+      vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
+      for( int j = 0; j < altOrthoPhrases.size(); j++) {
+         cerr << "~~>" << altOrthoPhrases.at(j) << endl;
+         //TODO change so it only shows fully valid strings
+         orthoMisheardAsPhrases.push_back( altOrthoPhrases.at(j) );
+      }
+   }
+   //TODO deduplicate orthoMisheardAsPhrases   
+   return orthoMisheardAsPhrases;
+}
 /*This function does the phoneme-tree-traversal thing for oronyms
    returns orthographic phrases (I *think* each string is a full phrase...)*/
 vector<string> interpretPhrase( vector<phone> sampaPhrase ) {
