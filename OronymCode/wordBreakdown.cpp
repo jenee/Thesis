@@ -289,6 +289,26 @@ vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    return SAMPAvals;
 }
 
+
+/*looks up emphasis-free SAMPA str in phonetic dict, 
+   returns a bunch of ortho strings whos SAMPA is prefixed with sampaPrefix*/
+vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
+   char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
+   
+   fprintf(stderr, "\nqueryDBForOrthoStrsWithSampaPrefix, sampaPrefix = %s\n", sampaPrefix.c_str());
+   
+   string sampaStrNoEmph = stripSampaStrOfEmph( sampaPrefix );
+
+   sampaStrNoEmph.append("%");
+   cerr << "final queryterm: |"<<sampaStrNoEmph <<"|" << endl;
+   sprintf(sqlQuery, "select ortho from phoneticDictTable where trim(SAMPAnoEmph) like \"%s\"",sampaStrNoEmph.c_str()); 
+   
+   vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStrNoEmph );
+   
+   
+   return orthoMatches;
+}
+
 /*looks up emphasis-free SAMPA str in phonetic dict, returns a bunch of ortho*/
 vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
@@ -304,6 +324,7 @@ vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    
    return orthoMatches;
 }
+
 
 /* given ortho, returns entire row to databaseResults */
 void queryDBwithOrthoForRow( string orthoWord ) {

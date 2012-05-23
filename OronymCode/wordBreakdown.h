@@ -32,6 +32,7 @@ std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phon
 */
 std::vector<std::string> queryDBforStrings( char* sqlQuery, std::string queryCallback4thArg );
 std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
+std::vector<std::string> queryDBForOrthoStrsWithSampaPrefix( std::string  sampaPrefix );
 std::vector<std::string> queryDBwithSampaForOrthoStrs( std::string sampaStr );
 void queryDBwithOrthoForRow( std::string orthoWord );
 
