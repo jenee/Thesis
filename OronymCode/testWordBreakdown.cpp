@@ -147,6 +147,18 @@ bool testQueryDBwithOrthoForSampaStrs() {
 
 }
 
+bool testQueryDBwithOrthoForFreq( std::string orthoWord){
+   assert( testsSetup );
+   cout << "TESTING queryDBwithOrthoForFreq; ortho = " << orthoWord << endl;
+   int freq = queryDBwithOrthoForFreq(orthoWord);
+   cout<< "freq="<< freq << endl;
+   return true;
+}
+
+bool testQueryDBwithOrthoForFreq(){
+   return testQueryDBwithOrthoForFreq("a");
+}
+
 bool testStrTokOnWhitespace( string phrase ) {
    vector<string> phraseWords = strTokOnWhitespace( phrase );
    //fprintf(stderr, "gets here, phrase = %s\n", phrase.c_str());
@@ -234,6 +246,8 @@ bool runAllDefaultTests() {
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testQueryDBwithOrthoForSampaStrs();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testQueryDBwithOrthoForFreq();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testQueryDBwithSampaForOrthoStrs();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testQueryDBForOrthoStrsWithSampaPrefix();
@@ -252,6 +266,7 @@ void usageMessage() {
    cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
    cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
    cout << "\n\t\tqueryDBForOrthoStrsWithSampaPrefix";
+   cout << "\n\t\tqueryDBwithOrthoForFreq";
    cout << "\n\t\tqueryDBwithSampaForOrthoStrs";
    cout << "\n\t\thelp";
    cout << "\n\t\toldMain\n";
@@ -285,6 +300,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testStrTokOnWhitespace();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs();
+      } else if( strcmp( argv[1], "queryDBwithOrthoForFreq") == 0 ) {
+         allTestsPassed &= testQueryDBwithOrthoForFreq();
       } else if( strcmp( argv[1], "queryDBForOrthoStrsWithSampaPrefix") == 0 ) {
          allTestsPassed &= testQueryDBForOrthoStrsWithSampaPrefix();
       } else if( strcmp( argv[1], "queryDBwithSampaForOrthoStrs") == 0 ) {
@@ -311,6 +328,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testStrTokOnWhitespace( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs( argv[2] );
+      } else if( strcmp( argv[1], "queryDBwithOrthoForFreq") == 0 ) {
+         allTestsPassed &= testQueryDBwithOrthoForFreq( argv[2] );
       } else if( strcmp( argv[1], "queryDBForOrthoStrsWithSampaPrefix") == 0 ) {
          allTestsPassed &= testQueryDBForOrthoStrsWithSampaPrefix( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithSampaForOrthoStrs") == 0 ) {

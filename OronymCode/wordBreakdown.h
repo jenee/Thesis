@@ -26,11 +26,14 @@ std::vector< std::vector<phone> > findAllPhoneSeqsForOrthoPhrase( std::string or
 
 std::vector<std::string>  discoverOronymsForPhrase( std::string origOrthoPhrase );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
-/*
+std::vector<std::string> findOrthoStrsForPhoneSeq( std::vector<phone> phoneSeq );
+
+/* 
 std::vector< std::vector<std::string>  > findAllValidOrthoPhrasesForPhoneSeqs ( std::vector< std::vector<phone> > fullPhoneSeqs ) {
 std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phone> );
 */
 std::vector<std::string> queryDBforStrings( char* sqlQuery, std::string queryCallback4thArg );
+int queryDBwithOrthoForFreq( std::string orthoWord );
 std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
 std::vector<std::string> queryDBForOrthoStrsWithSampaPrefix( std::string  sampaPrefix );
 std::vector<std::string> queryDBwithSampaForOrthoStrs( std::string sampaStr );

@@ -15,6 +15,8 @@ bool testQueryDBForOrthoStrsWithSampaPrefix( std::string sampaPrefix );
 bool testQueryDBForOrthoStrsWithSampaPrefix();
 bool testQueryDBwithOrthoForSampaStrs( std::string orthoWord);
 bool testQueryDBwithOrthoForSampaStrs();
+bool testQueryDBwithOrthoForFreq( std::string orthoWord);
+bool testQueryDBwithOrthoForFreq();
 bool testStrTokOnWhitespace( std::string phrase );
 bool testStrTokOnWhitespace();
 bool testStripSampaStrOfEmph( std::string sampaStr );

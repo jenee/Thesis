@@ -142,9 +142,12 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
    for(int i = 0; i < numUniquePhoneticInterpretations; i++) {
       vector<phone> curPhoneSeq( allPhoneSeqsOfOrigPhrase.at(i) );
       string strOfCurPhoneSeq = phoneVectToString( curPhoneSeq );
+      
       cerr << "Phonetic interpretation "<<i<<" ("<< strOfCurPhoneSeq <<")"<<endl;
-      vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
-      cerr << "exits interpretPhrase"<<endl;
+      //vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
+      vector<string> altOrthoPhrases = findOrthoStrsForPhoneSeq( curPhoneSeq );
+      
+      cerr << "exits findOrthoStrsForPhoneSeq"<<endl;
       for( int j = 0; j < altOrthoPhrases.size(); j++) {
          cerr << i <<"~~>" << altOrthoPhrases.at(j) << endl;
          //TODO change so it only shows fully valid strings
@@ -154,6 +157,7 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
    //TODO deduplicate orthoMisheardAsPhrases   
    return orthoMisheardAsPhrases;
 }
+
 /*This function does the phoneme-tree-traversal thing for oronyms
    returns orthographic phrases (I *think* each string is a full phrase...)*/
 vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
@@ -241,6 +245,70 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 	return misheardOrthoPhrases;
 }
 
+vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
+	vector<phone> phoneSeqTail( phoneSeq );
+	vector<phone> usedPhonesForOrtho;
+	
+	vector<phone> curPhoneSeq;
+	
+	vector< string > fullOrthoStrs;
+	
+	for ( int i = 0; i < phoneSeq.size(); i++) {
+	   phone p = phoneSeq.at(i);
+	   curPhoneSeq.push_back(p);
+	   string curPhoneSeqStr = phoneVectToString( curPhoneSeq );
+	   
+	   /////STEP 1: EXACT MATCHES
+	   //Query for exact ortho matches of the curPhoneSeq
+	   vector<string> orthoInterps = queryDBwithSampaForOrthoStrs(curPhoneSeqStr);
+	   
+	   //If there is one or more exact ortho match for the phoneSeq
+	   if( orthoInterps.size() > 0 ) {
+	   
+	      //Since we're using the phones in curPhoneSeq for our ortho matches, 
+	      //we don't want to re-look-up those phonemes. the line below
+	      // removes all the phones we used in curPhoneSeq from the phoneSeq to
+	      // make newPhoneSeqTail;	      
+	      vector<phone> newPhoneSeqTail( phoneSeq.begin() + i , phoneSeq.end() ); 
+	      
+	      //findOrthoStrings for the tail phonemes
+	      vector<string> tailOrthoStrs = findOrthoStrsForPhoneSeq(newPhoneSeqTail);
+
+	      //for each orthoInterpretation of the curPhoneSeq, 
+	      for(  int j = 0; j < orthoInterps.size(); j++ ) {
+	         for ( int k = 0; k < tailOrthoStrs.size(); k++ ) {
+	            string headPlusTailOrtho = orthoInterps.at(j) + tailOrthoStrs.at(k);
+	            fullOrthoStrs.push_back( headPlusTailOrtho );
+	         }
+	      } 
+	   } else if ( i == phoneSeqTail.size() - 1 ) {
+         //then there are no phonemes left after this one.
+         //it would be stupid to check for partials if there's nothing to append
+         //so we DEADBEEF THAT SHIT
+         
+         fullOrthoStrs.push_back("DEADBEEF");
+         
+
+	   } else {
+	      //STEP 2: PARTIAL PREFIX MATCHES
+	      
+	      // query for ortho matches that have the current phoneSeq as a prefix
+	      vector<string> orthoPartials = queryDBForOrthoStrsWithSampaPrefix(curPhoneSeqStr);
+	      
+	      //if there are partial matches
+	      if( orthoPartials.size() > 0 ) {
+	         continue;
+	      } else {
+	         // there are no partial matches even. 
+	         // How should I denote thsi?
+	         fullOrthoStrs.push_back("DEADerBEEF");
+	         break;
+	      }
+	   }  
+	}
+   return fullOrthoStrs;
+}
+
 vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
    char* zErr;
    /*The following line calls the callback function, passing its 4th arg as the 
@@ -272,6 +340,57 @@ vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
    return retStrings;
 
 }
+
+
+/* given ortho, returns freq val */
+int queryDBwithOrthoForFreq( string orthoWord ) {
+   char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
+   
+   fprintf(stderr, "\nqueryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
+   
+   string lowercaseOrthoWord = toLowerCase( orthoWord );
+
+   sprintf(sqlQuery, "select freq from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
+   
+   vector<string> SAMPAvals = queryDBforStrings( sqlQuery, lowercaseOrthoWord );
+   int result = 0;
+
+   if( SAMPAvals.size() > 0 ) {
+      stringstream( SAMPAvals.at(0) ) >> result;
+   }
+/*
+   //The following line calls the callback function, passing its 4th arg as the 
+    //first param of the callback function.  The sqlite3_exec function 
+    //queries the database, then for every result that it gets, it calls the 
+    //callback function.
+   int rc = sqlite3_exec(db, sqlQuery, callback, (void*)orthoWord.c_str(), &zErr);
+   if ( rc != SQLITE_OK ) {
+      if ( zErr != NULL ) {
+         fprintf(stderr, "SQL error: %s\n", zErr);
+         sqlite3_free(zErr);
+      }
+   }
+   //int SAMPAcolIndex = 3;
+    
+   vector<string> SAMPAvals;
+   ///
+   //cerr << "Database results size = " << databaseResults.size() << endl;
+   //printDatabaseResultsRows(); //TODO  remove DEBUG
+   //
+   for( int i = 0; i < databaseResults.size(); i++) {
+      SAMPAvals.push_back( delSpaces( databaseResults[i][0] ) );
+      cerr << "!~" << SAMPAvals[i] << "!~" ; //TODO DEBUG output
+   }
+   cerr<< endl; //TODO DEBUG
+   databaseResults.clear();
+   //
+   //cerr << "After clear, database results size = " << databaseResults.size() << endl;
+   //printDatabaseResultsRows(); //TODO  remove DEBUG
+   //
+   */
+   return result;
+}
+
 
 /* given ortho, returns SAMPAs */
 vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {

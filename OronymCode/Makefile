@@ -1,10 +1,13 @@
 CC    = g++
-CFLAGS   = -lsqlite3 -Wall -pedantic
+CFLAGS   = -lsqlite3  -pedantic
 
 all: test
    
 test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
+
+warnings: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
+	$(CC) $(CFLAGS) -Wall -g -o testWordBreakdown $^
 
 #wordBreakdown: wordBreakdown.cpp wordBreakdown.h
 #	$(CC) $(CFLAGS) -g -o $@ $^
