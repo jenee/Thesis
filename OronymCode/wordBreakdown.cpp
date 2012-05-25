@@ -256,7 +256,11 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	vector<phone> curPhoneSeq;
 	
 	vector< string > fullOrthoStrs;
-	
+	if( phoneSeq.size() == 0 ) {
+	   cerr<<"+++ PHONE SEQ SIZE = 0, we're SUCCEEEDED! WOOOHOOO!"<<endl;
+	   fullOrthoStrs.push_back("___SUCCESS!___");
+	   return fullOrthoStrs;
+	}
 	for ( int i = 0; i < phoneSeq.size(); i++) {
 	   phone p = phoneSeq.at(i);
 	   curPhoneSeq.push_back(p);
@@ -277,8 +281,9 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	      //we don't want to re-look-up those phonemes. the line below
 	      // removes all the phones we used in curPhoneSeq from the phoneSeq to
 	      // make newPhoneSeqTail;	      
-	      vector<phone> newPhoneSeqTail( phoneSeq.begin() + i , phoneSeq.end() ); 
-	      
+	      vector<phone> newPhoneSeqTail( phoneSeq.begin() + i + 1 , phoneSeq.end() ); 
+	      cerr<<"+++++++++newPhoneSeqTail is "<< phoneVectToString( newPhoneSeqTail )<<endl;
+
 	      //findOrthoStrings for the tail phonemes
 	      vector<string> tailOrthoStrs = findOrthoStrsForPhoneSeq(newPhoneSeqTail);
 
@@ -478,7 +483,6 @@ vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    
    vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStrNoEmph );
    
-   fprintf(stderr, "~~~~~~~~~end of queryDBwithSAMPAForOrthoStrs");
    return orthoMatches;
 }
 
