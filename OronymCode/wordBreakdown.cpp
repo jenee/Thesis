@@ -249,7 +249,8 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 }
 
 vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
-	vector<phone> phoneSeqTail( phoneSeq );
+	cerr<<"+++findOrthoStrsForPhoneSeq, for "<< phoneVectToString( phoneSeq );
+	cerr<<",  size = "<<phoneSeq.size()<<endl;
 	vector<phone> usedPhonesForOrtho;
 	
 	vector<phone> curPhoneSeq;
@@ -261,9 +262,13 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	   curPhoneSeq.push_back(p);
 	   string curPhoneSeqStr = phoneVectToString( curPhoneSeq );
 	   
+	   cerr<<"+++"<<"+++p"<<i<<":"<<p<<"  full subseq = "<<curPhoneSeqStr<<"."<<endl;
+	   
 	   /////STEP 1: EXACT MATCHES
 	   //Query for exact ortho matches of the curPhoneSeq
 	   vector<string> orthoInterps = queryDBwithSampaForOrthoStrs(curPhoneSeqStr);
+	   
+	   cerr<<"+++"<<"+++orthoInterps.size() = "<<orthoInterps.size()<<endl;
 	   
 	   //If there is one or more exact ortho match for the phoneSeq
 	   if( orthoInterps.size() > 0 ) {
@@ -282,9 +287,10 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	         for ( int k = 0; k < tailOrthoStrs.size(); k++ ) {
 	            string headPlusTailOrtho = orthoInterps.at(j) + tailOrthoStrs.at(k);
 	            fullOrthoStrs.push_back( headPlusTailOrtho );
+	            cerr<<"+++"<<"+++"<<"+++"<<headPlusTailOrtho<<endl;
 	         }
 	      } 
-	   } else if ( i == phoneSeqTail.size() - 1 ) {
+	   } else if ( i == phoneSeq.size() - 1 ) {
          //then there are no phonemes left after this one.
          //it would be stupid to check for partials if there's nothing to append
          //so we DEADBEEF THAT SHIT
@@ -465,7 +471,7 @@ vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
 vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
-   //fprintf(stderr, "\nqueryDBwithSAMPAForOrthoStrs, sampaStr = %s\n", sampaStr.c_str());
+   fprintf(stderr, "~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = %s|\n", sampaStr.c_str());
    
    string sampaStrNoEmph = stripSampaStrOfEmph( sampaStr );
 
