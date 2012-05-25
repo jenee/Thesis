@@ -6,6 +6,9 @@ using namespace std;
 sqlite3 *db;
 vector< vector< string > > databaseResults;
 
+string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
+string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
+
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
@@ -118,19 +121,11 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
 	return misheard;
 */
 
+   
+
    return fullPhrasePhoneSeqs;
 }
 
-/*
-vector< vector< string > > findAllValidOrthoPhrasesForPhoneSeqs ( vector< vector<phone> > fullPhoneSeqs ) {
-
-}
-
-std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phone> ) {
-
-
-}
-*/
 
 /*given an orthoPhrase, returns all possible orthoPhrases it could be misheard as*/
 vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
@@ -152,12 +147,20 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
       
       cerr << "exits findOrthoStrsForPhoneSeq"<<endl;
       for( int j = 0; j < altOrthoPhrases.size(); j++) {
-         cerr << i <<"~~>" << altOrthoPhrases.at(j) << endl;
-         //TODO change so it only shows fully valid strings
-         orthoMisheardAsPhrases.push_back( altOrthoPhrases.at(j) );
+         string altOrthoPhrase = altOrthoPhrases.at(j);
+         cerr << i <<"~~>" << altOrthoPhrase << endl;
+         
+         //ensure it contains no deadEndDelims so we only add fully valid strings
+         if ( altOrthoPhrase.find( deadEndDelim1 ) == string::npos 
+              && altOrthoPhrase.find( deadEndDelim2 ) == string::npos ) {    
+            orthoMisheardAsPhrases.push_back( altOrthoPhrase );
+         }
       }
    }
-   //TODO deduplicate orthoMisheardAsPhrases   
+   //deduplicate orthoMisheardAsPhrases by putting in a set and back again
+   cerr << "DEDUPLICATION TIME!" <<endl;
+   set<string> tempSetForDeduplication( orthoMisheardAsPhrases.begin(), orthoMisheardAsPhrases.end() );
+   orthoMisheardAsPhrases.assign( tempSetForDeduplication.begin(), tempSetForDeduplication.end() );
    return orthoMisheardAsPhrases;
 }
 
@@ -166,7 +169,7 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
 vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
    vector<phone> sampaPhrase = getNoEmphsPhoneVect(sampaPhraseOrig);
 	vector<string> misheardOrthoPhrases;
-   //assert(0);
+   assert(0);
    cerr << "INTERPRET PHRASE for " << phoneVectToString(sampaPhrase) << endl;
 	if( sampaPhrase.size() == 0 ) {
 		misheardOrthoPhrases.push_back("");
@@ -206,7 +209,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 		   vector<string> prefixMatches = queryDBForOrthoStrsWithSampaPrefix( sampaStr );
 		   //if there are no partial matches, we have a dead end, so exit
 		   if( prefixMatches.size() == 0 ) {
-			   misheardOrthoPhrases.push_back("DEADBEEF");
+			   misheardOrthoPhrases.push_back( deadEndDelim1 );
 			   //TODO might have to delete rest of phone seq? we'll see.
             continue;
 			} else {
@@ -228,7 +231,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 			   if( sampaPhraseTail.size() > 0 ) {
 				   cerr<< "--"<<orthoWord<<"---no leaves, has tail: "<< phoneVectToString(sampaPhraseTail) <<endl;
 				   //TODO RESTART TRACE AT NEXT LINE!perhaps want a continue?
-				   misheardOrthoPhrases.push_back( orthoWord.append( "DEADBEEF" ) );
+				   misheardOrthoPhrases.push_back( orthoWord.append(  deadEndDelim1  ) );
 				}
 				//return misheardOrthoPhrases;
 				cerr <<" OLD RETURN STATEMENT WAS HERE for if no ortholeaves"<< endl;
@@ -290,7 +293,7 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	      //for each orthoInterpretation of the curPhoneSeq, 
 	      for(  int j = 0; j < orthoInterps.size(); j++ ) {
 	         for ( int k = 0; k < tailOrthoStrs.size(); k++ ) {
-	            string headPlusTailOrtho = orthoInterps.at(j) + tailOrthoStrs.at(k);
+	            string headPlusTailOrtho = orthoInterps.at(j) + " "+ tailOrthoStrs.at(k);
 	            fullOrthoStrs.push_back( headPlusTailOrtho );
 	            cerr<<"+++"<<"+++"<<"+++"<<headPlusTailOrtho<<endl;
 	         }
@@ -300,7 +303,7 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
          //it would be stupid to check for partials if there's nothing to append
          //so we DEADBEEF THAT SHIT
          
-         fullOrthoStrs.push_back("DEADBEEF");
+         fullOrthoStrs.push_back( deadEndDelim1 );
          
 
 	   } else {
@@ -315,7 +318,7 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	      } else {
 	         // there are no partial matches even. 
 	         // How should I denote thsi?
-	         fullOrthoStrs.push_back("DEADerBEEF");
+	         fullOrthoStrs.push_back( deadEndDelim2 );
 	         break;
 	      }
 	   }  
