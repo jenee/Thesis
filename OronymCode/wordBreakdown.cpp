@@ -170,6 +170,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
    vector<phone> sampaPhrase = getNoEmphsPhoneVect(sampaPhraseOrig);
 	vector<string> misheardOrthoPhrases;
    assert(0);
+   /*
    cerr << "INTERPRET PHRASE for " << phoneVectToString(sampaPhrase) << endl;
 	if( sampaPhrase.size() == 0 ) {
 		misheardOrthoPhrases.push_back("");
@@ -249,6 +250,7 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 	
 	cerr<<"EXITING interpretPhrase"<<endl;
 	return misheardOrthoPhrases;
+	*/
 }
 
 vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
