@@ -340,7 +340,7 @@ vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
       retStrings.push_back( delSpaces( databaseResults[i][0] ) );
       //cerr << "\t#-" << retStrings[i] << "-#\n" ; //TODO DEBUG output
    }
-   cerr<< endl; //TODO DEBUG
+   //cerr<< endl; //TODO DEBUG
    databaseResults.clear();
    /*
    cerr << "After clear, database results size = " << databaseResults.size() << endl;
@@ -412,7 +412,6 @@ vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
    sprintf(sqlQuery, "select SAMPA from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
    
    vector<string> SAMPAvals = queryDBforStrings( sqlQuery, lowercaseOrthoWord );
-   
 /*
    //The following line calls the callback function, passing its 4th arg as the 
     //first param of the callback function.  The sqlite3_exec function 
@@ -479,7 +478,7 @@ vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
    
    vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStrNoEmph );
    
-   
+   fprintf(stderr, "~~~~~~~~~end of queryDBwithSAMPAForOrthoStrs");
    return orthoMatches;
 }
 
