@@ -135,7 +135,6 @@ std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phon
 /*given an orthoPhrase, returns all possible orthoPhrases it could be misheard as*/
 vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
    vector<string> orthoMisheardAsPhrases;
-   
    vector<vector<phone> > allPhoneSeqsOfOrigPhrase = findAllPhoneSeqsForOrthoPhrase( origOrthoPhrase );
    
    int numUniquePhoneticInterpretations = allPhoneSeqsOfOrigPhrase.size();
