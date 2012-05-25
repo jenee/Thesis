@@ -140,10 +140,14 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
    
    int numUniquePhoneticInterpretations = allPhoneSeqsOfOrigPhrase.size();
    for(int i = 0; i < numUniquePhoneticInterpretations; i++) {
-      vector<phone> curPhoneSeq( allPhoneSeqsOfOrigPhrase.at(i) );
-      string strOfCurPhoneSeq = phoneVectToString( curPhoneSeq );
+      vector<phone> curPhoneSeqWithEmph( allPhoneSeqsOfOrigPhrase.at(i) );
+      string strOfCurPhoneSeq = phoneVectToString( curPhoneSeqWithEmph );
       
       cerr << "Phonetic interpretation "<<i<<" ("<< strOfCurPhoneSeq <<")"<<endl;
+      
+      //remove emphasis marking for easier lookups
+      vector<phone> curPhoneSeq = getNoEmphsPhoneVect( curPhoneSeqWithEmph );
+
       //vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
       vector<string> altOrthoPhrases = findOrthoStrsForPhoneSeq( curPhoneSeq );
       
