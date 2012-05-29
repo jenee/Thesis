@@ -19,6 +19,11 @@
 
 typedef std::string phone;
 
+typedef struct MetaWord {
+   std::string word;
+   int freq;
+} MetaWord;
+
 static int callback(void *queryterm, int nCol, char **values, char **headers);
 
 std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::string> sampaWords );
