@@ -37,13 +37,13 @@ vector< vector<phone> > getPhoneSeqsForOrthoWord( string orthoWord ) {
 }
 
 /*given an phrase of ortho words, gives all the sampa permutations
- that it could possibly be*/
+ that it could possibly be, where each inner vector is a phonetic permutation of
+ the full phrase */
 vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
-	vector<string> permutedPhrases;	
 	
 	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
 	vector< vector<phone> > fullPhrasePhoneSeqs; 
-   cerr << "FIND ALL PERMUTATIONS" << endl;
+   //cerr << "FIND ALL PERMUTATIONS" << endl;
    for (int i = 0; i < orthoWords.size(); i++) {
       vector<string> sampaStrings = queryDBwithOrthoForSampaStrs( orthoWords[i] );
       vector< vector<phone> > nextWordSAMPAPhoneSeqs = getPhoneSeqsForOrthoWord( orthoWords[i] );
@@ -72,9 +72,9 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
             }
          } else {
             int numFullPhrases = fullPhrasePhoneSeqs.size();
-            cerr << "\tnumFullPhrases = "<< numFullPhrases << endl;//TODO debug
+            //cerr << "\tnumFullPhrases = "<< numFullPhrases << endl;//TODO debug
             if ( nextWordSAMPAPhoneSeqs.size() > 1 ) {
-               cerr << "\tnextWordSAMPAPhoneSeqs.size() = "<< nextWordSAMPAPhoneSeqs.size() << endl;//TODO debug
+               //cerr << "\tnextWordSAMPAPhoneSeqs.size() = "<< nextWordSAMPAPhoneSeqs.size() << endl;//TODO debug
                for(int m = 1; m < nextWordSAMPAPhoneSeqs.size(); m++) {
                   //if there's more than one phonetic interpretation of the 
                   // ortho word to be added, then we need to create duplicates 
@@ -133,6 +133,71 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
    
 
    return fullPhrasePhoneSeqs;
+}
+
+
+/*given an phrase of ortho words, gives all the sampa permutations
+ that it could possibly be, where each inner vector represents all the
+ possible phonetic interpretations for each phoneme. For example:
+ Given: a nice
+ Returns:   vector[0]: { e, @, A }
+            vector[1]: { n }
+            vector[2]: { aI, i }
+            vector[3]: { s }
+             */
+ vector< set<phone> > findPhoneTreeForOrthoPhrase( string orthoPhrase ) {
+	vector< set<phone> > phoneTree;
+   //using set because it doesn't allow for duplicates
+	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
+	vector< vector<phone> > oldFullPhrasePhoneSeqs = findAllPhoneSeqsForOrthoPhrase( orthoPhrase );
+	vector< vector<phone> > fullPhrasePhoneSeqs;
+	
+   if( oldFullPhrasePhoneSeqs.size() > 0 )   {
+      for( int i = 0; i < oldFullPhrasePhoneSeqs.size(); i++) {
+         //strip all the phoneSeqs of emph values
+         fullPhrasePhoneSeqs.push_back( getNoEmphsPhoneVect( oldFullPhrasePhoneSeqs.at(i) ) );
+      }      
+
+      for(int i = 0; i < fullPhrasePhoneSeqs[0].size(); i++) {
+         
+         set<phone> dummySet;
+         
+         for( int j = 0; j < fullPhrasePhoneSeqs.size(); j++) {
+            //I assume that all phone seqs will be equal length. If not, assert.
+            if( fullPhrasePhoneSeqs[j].size() != fullPhrasePhoneSeqs[0].size() ){
+               cerr << "0-size="<< fullPhrasePhoneSeqs[0].size()<< endl;
+               cerr << j<<"-size="<< fullPhrasePhoneSeqs[j].size()<< endl;
+               cerr << j<<"="<< phoneVectToString( fullPhrasePhoneSeqs[j] )<< endl;
+
+               assert(0); 
+            }
+            //put the i-th phone from each fullPhrasePhoneSeq into the i-th phoneTree set.
+            int deleteme1 = dummySet.size();
+            phone toAdd = fullPhrasePhoneSeqs[j][i];
+            cerr << "dummySet.size()="<<deleteme1<<",  toAdd="<<toAdd<<endl;
+            dummySet.insert( toAdd );
+         }
+         phoneTree.push_back( dummySet );
+      }
+   }
+   
+   
+   
+
+   //DEBUG
+   for ( int j = 0; j < phoneTree.size(); j++) {
+      cerr << j <<"++PHONE+TREE++  ";
+      vector<phone> temp( phoneTree[j].begin(), phoneTree[j].end() );
+
+      for ( int k = 0; k < temp.size(); k++ ) {
+
+         cerr<< "-" << temp.at(k) << "-";
+      }
+      cerr << endl; 
+   }
+   //END DEBUG
+
+   return phoneTree;
 }
 
 
@@ -263,15 +328,15 @@ vector<string> interpretPhrase( vector<phone> sampaPhraseOrig ) {
 }
 
 vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
-	cerr<<"+++findOrthoStrsForPhoneSeq, for "<< phoneVectToString( phoneSeq );
-	cerr<<",  size = "<<phoneSeq.size()<<endl;
+	//cerr<<"+++findOrthoStrsForPhoneSeq, for "<< phoneVectToString( phoneSeq );
+	//cerr<<",  size = "<<phoneSeq.size()<<endl;
 	vector<phone> usedPhonesForOrtho;
 	
 	vector<phone> curPhoneSeq;
 	
 	vector< string > fullOrthoStrs;
 	if( phoneSeq.size() == 0 ) {
-	   cerr<<"+++ PHONE SEQ SIZE = 0, we're SUCCEEEDED! WOOOHOOO!"<<endl;
+	   //cerr<<"+++ PHONE SEQ SIZE = 0, we're SUCCEEEDED! WOOOHOOO!"<<endl;
 	   fullOrthoStrs.push_back("___SUCCESS!___");
 	   return fullOrthoStrs;
 	}
@@ -280,13 +345,13 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	   curPhoneSeq.push_back(p);
 	   string curPhoneSeqStr = phoneVectToString( curPhoneSeq );
 	   
-	   cerr<<"+++"<<"+++p"<<i<<":"<<p<<"  full subseq = "<<curPhoneSeqStr<<"."<<endl;
+	   //cerr<<"+++"<<"+++p"<<i<<":"<<p<<"  full subseq = "<<curPhoneSeqStr<<"."<<endl;
 	   
 	   /////STEP 1: EXACT MATCHES
 	   //Query for exact ortho matches of the curPhoneSeq
 	   vector<string> orthoInterps = queryDBwithSampaForOrthoStrs(curPhoneSeqStr);
 	   
-	   cerr<<"+++"<<"+++orthoInterps.size() = "<<orthoInterps.size()<<endl;
+	   //cerr<<"+++"<<"+++orthoInterps.size() = "<<orthoInterps.size()<<endl;
 	   
 	   //If there is one or more exact ortho match for the phoneSeq
 	   if( orthoInterps.size() > 0 ) {
@@ -296,7 +361,7 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	      // removes all the phones we used in curPhoneSeq from the phoneSeq to
 	      // make newPhoneSeqTail;	      
 	      vector<phone> newPhoneSeqTail( phoneSeq.begin() + i + 1 , phoneSeq.end() ); 
-	      cerr<<"+++++++++newPhoneSeqTail is "<< phoneVectToString( newPhoneSeqTail )<<endl;
+	      //cerr<<"+++++++++newPhoneSeqTail is "<< phoneVectToString( newPhoneSeqTail )<<endl;
 
 	      //findOrthoStrings for the tail phonemes
 	      vector<string> tailOrthoStrs = findOrthoStrsForPhoneSeq(newPhoneSeqTail);

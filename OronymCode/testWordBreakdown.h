@@ -9,6 +9,8 @@ bool testDiscoverOronymsForPhrase(std::string orthoPhrase);
 bool testDiscoverOronymsForPhrase();
 bool testFindAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase);
 bool testFindAllPhoneSeqsForOrthoPhrase();
+bool testFindPhoneTreeForOrthoPhrase( std::string orthoPhrase );
+bool testFindPhoneTreeForOrthoPhrase();
 bool testQueryDBwithSampaForOrthoStrs( std::string sampaStr );
 bool testQueryDBwithSampaForOrthoStrs();
 bool testQueryDBForOrthoStrsWithSampaPrefix( std::string sampaPrefix );

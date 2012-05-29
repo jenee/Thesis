@@ -29,7 +29,8 @@ static int callback(void *queryterm, int nCol, char **values, char **headers);
 std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::string> sampaWords );
 std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWord );
 std::vector< std::vector<phone> > findAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase );
-
+std::vector< std::set<phone> > findPhoneTreeForOrthoPhrase( std::string orthoPhrase );
+ 
 std::vector<std::string>  discoverOronymsForPhrase( std::string origOrthoPhrase );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
 std::vector<std::string> findOrthoStrsForPhoneSeq( std::vector<phone> phoneSeq );

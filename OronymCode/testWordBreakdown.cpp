@@ -50,10 +50,39 @@ bool testFindAllPhoneSeqsForOrthoPhrase(string orthoPhrase) {
    return true;
 }
 
+
+
 bool testFindAllPhoneSeqsForOrthoPhrase() {
    //assert( testsSetup );
    //cout << "TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = 'A nice cold shower' " << endl;
    return testFindAllPhoneSeqsForOrthoPhrase("A nice cold shower");
+}
+
+
+
+bool testFindPhoneTreeForOrthoPhrase( string orthoPhrase ) {
+   assert( testsSetup );
+   cout << "TESTING findPhoneTreeForOrthoPhrase; orthoPhrase = " << orthoPhrase << endl;
+   vector< set< phone > > phoneSeqs = findPhoneTreeForOrthoPhrase( orthoPhrase );
+   
+   for( int i = 0; i < phoneSeqs.size(); i++) {
+      vector<phone> temp( phoneSeqs[i].begin(), phoneSeqs[i].end() );
+      cerr <<"--- {";
+      for( int j = 0; j < temp.size(); j++) {
+         cerr << " " << temp.at(j);
+      }
+      cerr << " }"<< endl;
+   }
+   cerr <<endl;
+
+   return true;
+}
+
+
+bool testFindPhoneTreeForOrthoPhrase() {
+   //assert( testsSetup );
+   //cout << "TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = 'A nice cold shower' " << endl;
+   return testFindPhoneTreeForOrthoPhrase("A nice cold shower");
 }
 
 bool testQueryDBwithSampaForOrthoStrs( string sampaStr ) {
@@ -269,6 +298,8 @@ bool runAllDefaultTests() {
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testFindPhoneTreeForOrthoPhrase();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testStripSampaStrOfEmph();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testStrTokOnWhitespace();
@@ -298,6 +329,7 @@ void usageMessage() {
    cout << "\n\t\tgetSampaStrWithoutContiguousDuplicatePhones";
    cout << "\n\t\tstrTokOnWhitespace";
    cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
+   cout << "\n\t\tfindPhoneTreeForOrthoPhrase";
    cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
    cout << "\n\t\tqueryDBForOrthoStrsWithSampaPrefix";
    cout << "\n\t\tqueryDBwithOrthoForFreq";
@@ -326,6 +358,8 @@ int main(int argc, char* argv[]) {
           allTestsPassed &= runAllDefaultTests();
       } else if( strcmp( argv[1], "discoverOronymsForPhrase") == 0 ) {
          allTestsPassed &= testDiscoverOronymsForPhrase();
+      } else if( strcmp( argv[1], "findPhoneTreeForOrthoPhrase") == 0 ) {
+         allTestsPassed &= testFindPhoneTreeForOrthoPhrase();
       } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
       } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
@@ -358,6 +392,8 @@ int main(int argc, char* argv[]) {
          oldMain();
       } else if( strcmp( argv[1], "discoverOronymsForPhrase") == 0 ) {
          allTestsPassed &= testDiscoverOronymsForPhrase( argv[2] );
+      } else if( strcmp( argv[1], "findPhoneTreeForOrthoPhrase") == 0 ) {
+         allTestsPassed &= testFindPhoneTreeForOrthoPhrase( argv[2] );
       } else if( strcmp( argv[1], "findAllPhoneSeqsForOrthoPhrase") == 0 ) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase( argv[2] );
       } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
