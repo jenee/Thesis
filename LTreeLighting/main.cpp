@@ -221,6 +221,7 @@ void drawBranches(double tiltAngle, double xOffset, double yOffset) {
 }
 
 void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, double yOffset) {
+    //countleft==the number of levels of branches above this one.
     if( countLeft == 0) {
         return;
     }
