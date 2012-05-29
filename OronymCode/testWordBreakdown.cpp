@@ -191,6 +191,35 @@ bool testStripSampaStrOfEmph() {
    return testStripSampaStrOfEmph("strO%bE$ri");
 }
 
+bool testGetSampaStrWithoutGlottalStops( std::string sampaStr ) {
+   cerr<<"TEST getSampaStrWithoutGlottalStops, sampaStr = "<< sampaStr<<endl;
+   string SAMPAnoGlottals = getSampaStrWithoutGlottalStops( sampaStr );
+   cerr<<"~~~> " << SAMPAnoGlottals << endl;
+   bool testPassed = true;
+   return testPassed;
+}
+
+bool testGetSampaStrWithoutGlottalStops() {
+   bool testPassed = true;
+   testPassed &= testGetSampaStrWithoutGlottalStops("VnbVtn=");
+   testPassed &= testGetSampaStrWithoutGlottalStops("sVmWVt");
+   return testPassed;
+}
+
+bool testGetSampaStrWithoutContiguousDuplicatePhones( std::string sampaStr ) {
+   cerr<<"TEST getSampaStrWithoutContiguousDuplicatePhones, sampaStr = "<< sampaStr<<endl;
+   string SAMPAnoDupes = getSampaStrWithoutContiguousDuplicatePhones( sampaStr );
+   cerr<<"~~~> " << SAMPAnoDupes << endl;
+   bool testPassed = true;
+   return testPassed;
+}
+
+bool testGetSampaStrWithoutContiguousDuplicatePhones() {
+   bool testPassed = true;
+   testPassed &= testGetSampaStrWithoutContiguousDuplicatePhones("sVmmVD@`rz");
+   return testPassed;
+}
+
 void oldMain() {
 
    connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
@@ -251,7 +280,10 @@ bool runAllDefaultTests() {
    testsPassed &= testQueryDBwithSampaForOrthoStrs();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testQueryDBForOrthoStrsWithSampaPrefix();
-
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testGetSampaStrWithoutGlottalStops();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones();
    cout << "XXXXXXXXXXXXXXXXXXXXXX___DONE___XXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    return testsPassed;
 }
@@ -262,6 +294,8 @@ void usageMessage() {
    cout << "\n\t\tall";
    cout << "\n\t\tdiscoverOronymsForPhrase";
    cout << "\n\t\tstripSampaStrOfEmph";
+   cout << "\n\t\tgetSampaStrWithoutGlottalStops";
+   cout << "\n\t\tgetSampaStrWithoutContiguousDuplicatePhones";
    cout << "\n\t\tstrTokOnWhitespace";
    cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
    cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
@@ -296,6 +330,10 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
       } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
          allTestsPassed &= testStripSampaStrOfEmph();
+      } else if( strcmp( argv[1], "getSampaStrWithoutGlottalStops") == 0 ) {
+         allTestsPassed &= testGetSampaStrWithoutGlottalStops();
+      } else if( strcmp( argv[1], "getSampaStrWithoutContiguousDuplicatePhones") == 0 ) {
+         allTestsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones();
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
@@ -324,6 +362,10 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testFindAllPhoneSeqsForOrthoPhrase( argv[2] );
       } else if( strcmp( argv[1], "stripSampaStrOfEmph") == 0 ) {
          allTestsPassed &= testStripSampaStrOfEmph( argv[2] );
+      } else if( strcmp( argv[1], "getSampaStrWithoutGlottalStops") == 0 ) {
+         allTestsPassed &= testGetSampaStrWithoutGlottalStops( argv[2] );
+      } else if( strcmp( argv[1], "getSampaStrWithoutContiguousDuplicatePhones") == 0 ) {
+         allTestsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones( argv[2] );
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {

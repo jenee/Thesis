@@ -29,10 +29,7 @@ std::vector<std::string>  discoverOronymsForPhrase( std::string origOrthoPhrase 
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
 std::vector<std::string> findOrthoStrsForPhoneSeq( std::vector<phone> phoneSeq );
 
-/* 
-std::vector< std::vector<std::string>  > findAllValidOrthoPhrasesForPhoneSeqs ( std::vector< std::vector<phone> > fullPhoneSeqs ) {
-std::vector< std::string > findValidOrthoWordForSinglePhoneSeq( std::vector<phone> );
-*/
+
 std::vector<std::string> queryDBforStrings( char* sqlQuery, std::string queryCallback4thArg );
 int queryDBwithOrthoForFreq( std::string orthoWord );
 std::vector<std::string> queryDBwithOrthoForSampaStrs( std::string orthoWord );
@@ -46,9 +43,21 @@ std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 std::vector<std::string> strTokOnWhitespace(std::string phrase);
 std::string toLowerCase( std::string data);
 std::string delSpaces( std::string &str);
-std::string stripSampaStrOfEmph( std::string &str);
 
+std::string stripSampaStrOfEmph( std::string &str);
 std::vector< phone > getNoEmphsPhoneVect(std::vector< phone > phoneVectOrig );
+std::vector< std::string > getVoicingVariationsOfSampaStr ( std::string sampaStr );
+std::vector< std::vector< phone > > getVoicingVariationsOfPhoneVect ( std::vector< phone >  phoneVectOrig );
+std::string getSampaStrWithoutGlottalStops ( std::string sampaStr );
+std::vector< phone > getNoGlottalStopsPhoneVect( std::vector< phone > phoneVectOrig );
+std::string getSampaStrWithoutContiguousDuplicatePhones ( std::string sampaStr );
+std::vector< phone > getNoContigDupesPhoneVect( std::vector< phone > phoneVectOrig );
+
+bool isVowel( phone p );
+bool isVoiced( phone p );
+bool isVoiceless( phone p );
+phone getPhoneWithInverseVoicing( phone p );
+
 std::string phoneVectToString( std::vector< phone > phoneVect );
 
 void printDatabaseResultsRows();

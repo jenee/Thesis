@@ -56,6 +56,15 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
          cerr << endl; 
          //END DEBUG
          */  
+         if( nextWordSAMPAPhoneSeqs.empty() ) {
+            cout<< "The word '"<<orthoWords[i]<<"was not found in our phonetic dictionary";
+            cout<< "Enter a different word now, or watch this program crash and burn: ";
+            string temp;
+            cin >> temp;
+            
+            nextWordSAMPAPhoneSeqs = getPhoneSeqsForOrthoWord( temp );
+         }
+         
          //if this is ths first orthoWord
          if( i == 0 ) {
             for( int j = 0; j < nextWordSAMPAPhoneSeqs.size(); j++ ) {
@@ -595,6 +604,181 @@ vector< phone > getNoEmphsPhoneVect(vector< phone > phoneVectOrig ) {
    }
    return phoneVectNoEmphs;
 }
+
+vector< string > getVoicingVariationsOfSampaStr ( string sampaStr ) {
+   assert(0);
+}
+vector< vector< phone > > getVoicingVariationsOfPhoneVect ( vector< phone >  phoneVectOrig ) {
+   assert(0);
+}
+
+string getSampaStrWithoutGlottalStops ( string sampaStr ) {
+   string noGlottalsStr;
+   vector< phone > tempPhoneVect = parseSAMPAintoPhonemes( sampaStr );
+   tempPhoneVect = getNoGlottalStopsPhoneVect( tempPhoneVect );
+   noGlottalsStr = phoneVectToString( tempPhoneVect );
+   //assert(0);
+   return noGlottalsStr;
+} 
+
+vector< phone > getNoGlottalStopsPhoneVect(vector< phone > phoneVectOrig ) {
+   vector< phone > noGlottalsPhoneVect;
+   assert( phoneVectOrig.size() > 0);
+   //TODO: this is a gross simplification. Glottal stops: http://en.wikipedia.org/wiki/Glottal_stop
+   noGlottalsPhoneVect.push_back( phoneVectOrig.at(0) );
+   for(int i = 1; i < phoneVectOrig.size(); i++) {
+      phone cur = phoneVectOrig.at(i);
+      phone prev = noGlottalsPhoneVect.back();
+      if( ( cur.compare("t") == 0) && isVowel( prev ) ) {
+         continue; //don't add this t--it's a glottal stop
+      } else {         
+         noGlottalsPhoneVect.push_back( cur );
+      }
+   }
+   return noGlottalsPhoneVect;
+}
+
+
+string getSampaStrWithoutContiguousDuplicatePhones ( string sampaStr ) {
+   string noContigDupesStr;
+   vector< phone > tempPhoneVect = parseSAMPAintoPhonemes( sampaStr );
+   tempPhoneVect = getNoContigDupesPhoneVect( tempPhoneVect );
+   noContigDupesStr = phoneVectToString( tempPhoneVect );
+   //assert(0);
+   return noContigDupesStr;
+} 
+
+vector< phone > getNoContigDupesPhoneVect(vector< phone > phoneVectOrig ) {
+   vector< phone > noContigDupesPhoneVect;
+   assert( phoneVectOrig.size() > 0);
+   noContigDupesPhoneVect.push_back( phoneVectOrig.at(0) );
+   for(int i = 1; i < phoneVectOrig.size(); i++) {
+      phone cur = phoneVectOrig.at(i);
+      phone prev = noContigDupesPhoneVect.back();
+      if( (cur.compare(prev) != 0) ) {
+         noContigDupesPhoneVect.push_back( cur );
+      }
+   }
+   return noContigDupesPhoneVect;
+}
+
+
+bool isVowel( phone p ) {
+   bool isVowel = false;
+   if( p == "A" 
+      || p == "I" 
+      || p == "E"
+      || p == "3`"
+      || p == "`r"
+      || p == "{"
+      || p == "u"
+      || p == "@"
+      || p == "jU"
+      || p == "ju"
+      || p == "i"
+      || p == "V"
+      || p == "U"
+      || p == "e"
+      || p == "O"
+      || p == "aI"
+      || p == "OI"
+      || p == "oU"
+      || p == "ou"
+      || p == "aU"
+      || p == "=" ) {
+         isVowel = true;
+      }
+   return isVowel;
+}
+
+
+bool isVoiced( phone p ) {
+   bool isVoiced = false;
+   if( p == "b" 
+      || p == "d" 
+      || p == "dZ"
+      || p == "g"
+      || p == "v" 
+      || p == "D"
+      || p == "z"
+      || p == "Z" 
+      || p == "m"
+      || p == "n"
+      || p == "N" 
+      || p == "l"
+      || p == "r"
+      || p == "w"
+      || p == "y" ) {
+         isVoiced = true;
+      }
+      return isVoiced;
+}
+
+bool isVoiceless( phone p ) {
+   bool isVoiceless = false;
+   assert(0);
+   if( p == "p" 
+      || p == "t" 
+      || p == "tS"
+      || p == "k"
+      || p == "f" 
+      || p == "T"
+      || p == "s"
+      || p == "S" 
+      || p == "h"
+      || p == "W"
+      || p == "x" ) {
+         isVoiceless = true;
+      }
+   return isVoiceless;
+}
+
+/* if p is a voiced phone, return its voiceless compliment
+      p is a voiceless phone, return its voiced compliment
+      p is not either of these, return p */
+phone getPhoneWithInverseVoicing( phone p ) {
+   phone toReturn;
+   if( p == "p" ) {
+      toReturn = "b";
+   } else if ( p == "b" ) {
+      toReturn = "p";
+   } else if ( p == "t" ) {
+      toReturn = "d";
+   } else if ( p == "d" ) {
+      toReturn = "t";
+   } else if ( p == "tS" ) {
+      toReturn = "dZ";
+   } else if ( p == "dZ" ) {
+      toReturn = "tS";
+   } else if ( p == "k" ) {
+      toReturn = "g";
+   } else if ( p == "g" ) {
+      toReturn = "k";
+   } else if ( p == "f" ) {
+      toReturn = "v";
+   } else if ( p == "v" ) {
+      toReturn = "f";
+   } else if ( p == "T" ) {
+      toReturn = "D";
+   } else if ( p == "D" ) {
+      toReturn = "T";
+   } else if ( p == "s" ) {
+      toReturn = "z";
+   } else if ( p == "z" ) {
+      toReturn = "s";
+   } else if ( p == "S" ) {
+      toReturn = "Z";
+   } else if ( p == "Z" ) {
+      toReturn = "S";
+   } else if ( p == "w" ) {
+      toReturn = "W";
+   } else {
+      toReturn = p;
+   }
+   return toReturn;
+}
+
+
 
 string phoneVectToString( std::vector< phone > phoneVect ) {
    string toRet = "";
