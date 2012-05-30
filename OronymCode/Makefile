@@ -1,7 +1,10 @@
 CC    = g++
 CFLAGS   = -lsqlite3  -pedantic
 
-all: test
+all: test treeGUI
+  
+treeGUI:  wordBreakdown.cpp wordBreakdown.h ../LTreeLighting/main.cpp ../LTreeLighting/Metrics.*
+	$(CC) $(CFLAGS) -framework GLUT -framework OpenGL  -g -o $@ $^
    
 test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
@@ -16,4 +19,4 @@ noGDB: wordBreakdown.cpp wordBreakdown.h
 	$(CC) $(CFLAGS)  -o wordBreakdown $^
 
 clean: 
-	rm -rf wordBreakdown a.out *.dSYM testWordBreakdown
+	rm -rf wordBreakdown a.out *.dSYM testWordBreakdown treeGUI

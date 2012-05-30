@@ -1,0 +1,170 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING discoverOronymsForPhrase; orthoPhrase = forthright ooh
+
+queryDBwithOrthoForSampaStrs, orthoWord = forthright
+
+queryDBwithOrthoForSampaStrs, orthoWord = forthright
+
+queryDBwithOrthoForSampaStrs, orthoWord = ooh
+
+queryDBwithOrthoForSampaStrs, orthoWord = ooh
+0***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u_
+Phonetic interpretation 0 ("fO`rT$raIt"u)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = f|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = f
+final queryterm: |f%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = `r
+final queryterm: |`r%|
++++++++++faugh fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`r|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = T|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = T
+final queryterm: |T%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = Tr|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = Tr
+final queryterm: |Tr%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraI
+final queryterm: |TraI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraIt|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraIt
+final queryterm: |TraIt%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraItu|
++++++++++for xxx
++++++++++fore xxx
++++++++++four xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rT|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = r|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = r
+final queryterm: |r%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = t
+final queryterm: |t%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tu|
++++++++++to ___SUCCESS!___
++++++++++to ___SUCCESS!___
++++++++++too ___SUCCESS!___
++++++++++two ___SUCCESS!___
++++++++++rye to ___SUCCESS!___
++++++++++rye to ___SUCCESS!___
++++++++++rye too ___SUCCESS!___
++++++++++rye two ___SUCCESS!___
++++++++++wry to ___SUCCESS!___
++++++++++wry to ___SUCCESS!___
++++++++++wry too ___SUCCESS!___
++++++++++wry two ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raIt|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = u|
++++++++++ooh ___SUCCESS!___
++++++++++right ooh ___SUCCESS!___
++++++++++rite ooh ___SUCCESS!___
++++++++++wright ooh ___SUCCESS!___
++++++++++write ooh ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raItu|
++++++++++forth rye to ___SUCCESS!___
++++++++++forth rye to ___SUCCESS!___
++++++++++forth rye too ___SUCCESS!___
++++++++++forth rye two ___SUCCESS!___
++++++++++forth wry to ___SUCCESS!___
++++++++++forth wry to ___SUCCESS!___
++++++++++forth wry too ___SUCCESS!___
++++++++++forth wry two ___SUCCESS!___
++++++++++forth right ooh ___SUCCESS!___
++++++++++forth rite ooh ___SUCCESS!___
++++++++++forth wright ooh ___SUCCESS!___
++++++++++forth write ooh ___SUCCESS!___
++++++++++forth xxx
++++++++++fourth rye to ___SUCCESS!___
++++++++++fourth rye to ___SUCCESS!___
++++++++++fourth rye too ___SUCCESS!___
++++++++++fourth rye two ___SUCCESS!___
++++++++++fourth wry to ___SUCCESS!___
++++++++++fourth wry to ___SUCCESS!___
++++++++++fourth wry too ___SUCCESS!___
++++++++++fourth wry two ___SUCCESS!___
++++++++++fourth right ooh ___SUCCESS!___
++++++++++fourth rite ooh ___SUCCESS!___
++++++++++fourth wright ooh ___SUCCESS!___
++++++++++fourth write ooh ___SUCCESS!___
++++++++++fourth xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTr|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTr
+final queryterm: |fO`rTr%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTraI
+final queryterm: |fO`rTraI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraIt|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = u|
++++++++++ooh ___SUCCESS!___
++++++++++forthright ooh ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraItu|
+exits findOrthoStrsForPhoneSeq
+0~~>faugh fff
+0~~>for xxx
+0~~>fore xxx
+0~~>four xxx
+0~~>forth rye to ___SUCCESS!___
+0~~>forth rye to ___SUCCESS!___
+0~~>forth rye too ___SUCCESS!___
+0~~>forth rye two ___SUCCESS!___
+0~~>forth wry to ___SUCCESS!___
+0~~>forth wry to ___SUCCESS!___
+0~~>forth wry too ___SUCCESS!___
+0~~>forth wry two ___SUCCESS!___
+0~~>forth right ooh ___SUCCESS!___
+0~~>forth rite ooh ___SUCCESS!___
+0~~>forth wright ooh ___SUCCESS!___
+0~~>forth write ooh ___SUCCESS!___
+0~~>forth xxx
+0~~>fourth rye to ___SUCCESS!___
+0~~>fourth rye to ___SUCCESS!___
+0~~>fourth rye too ___SUCCESS!___
+0~~>fourth rye two ___SUCCESS!___
+0~~>fourth wry to ___SUCCESS!___
+0~~>fourth wry to ___SUCCESS!___
+0~~>fourth wry too ___SUCCESS!___
+0~~>fourth wry two ___SUCCESS!___
+0~~>fourth right ooh ___SUCCESS!___
+0~~>fourth rite ooh ___SUCCESS!___
+0~~>fourth wright ooh ___SUCCESS!___
+0~~>fourth write ooh ___SUCCESS!___
+0~~>fourth xxx
+0~~>forthright ooh ___SUCCESS!___
+0~~>xxx
+DEDUPLICATION TIME!
+!Discovered 21 oronyms:
+0: 'forth right ooh ___SUCCESS!___'
+1: 'forth rite ooh ___SUCCESS!___'
+2: 'forth rye to ___SUCCESS!___'
+3: 'forth rye too ___SUCCESS!___'
+4: 'forth rye two ___SUCCESS!___'
+5: 'forth wright ooh ___SUCCESS!___'
+6: 'forth write ooh ___SUCCESS!___'
+7: 'forth wry to ___SUCCESS!___'
+8: 'forth wry too ___SUCCESS!___'
+9: 'forth wry two ___SUCCESS!___'
+10: 'forthright ooh ___SUCCESS!___'
+11: 'fourth right ooh ___SUCCESS!___'
+12: 'fourth rite ooh ___SUCCESS!___'
+13: 'fourth rye to ___SUCCESS!___'
+14: 'fourth rye too ___SUCCESS!___'
+15: 'fourth rye two ___SUCCESS!___'
+16: 'fourth wright ooh ___SUCCESS!___'
+17: 'fourth write ooh ___SUCCESS!___'
+18: 'fourth wry to ___SUCCESS!___'
+19: 'fourth wry too ___SUCCESS!___'
+20: 'fourth wry two ___SUCCESS!___'
+NO TESTS FAILED! :) 

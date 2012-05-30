@@ -28,7 +28,9 @@ bool testDiscoverOronymsForPhrase( string orthoPhrase ) {
    vector<string> oronymPhrases = discoverOronymsForPhrase( orthoPhrase );
    cout << "!Discovered "<<oronymPhrases.size()<<" oronyms:"<<endl;
    for( int i = 0; i < oronymPhrases.size(); i++) {
-      cout << i<<": '"<<oronymPhrases.at(i) << "'"<<endl;
+      //cout << i<<": '";
+      cout <<oronymPhrases.at(i)<< endl;
+      //cout << "'"<<endl;
    }
    return true;
 }

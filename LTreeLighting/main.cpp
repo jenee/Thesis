@@ -27,6 +27,7 @@
 #include <vector>
 
 #include "Metrics.h"
+#include "../OronymCode/wordBreakdown.h"
 
 
 
@@ -181,6 +182,13 @@ void drawcube() {
 }
 
 
+
+
+
+
+
+
+
 void drawCylinder() {
     {
         double radiiTop = halfRadius;
@@ -217,8 +225,6 @@ void drawBranches(double tiltAngle, double xOffset, double yOffset) {
         glRotated(-tiltAngle, 0, 0, 1.0);
         
         drawCylinder();
-
-        
     }
     glPopMatrix();
 }
@@ -228,7 +234,6 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
     if( countLeft == 0) {
         return;
     }
-
     glPushMatrix();
     {
         //Draw right branch
@@ -242,7 +247,6 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
             drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
         //}
         //glPopMatrix();
-
     }
     glPopMatrix();
     glPushMatrix();
@@ -258,10 +262,43 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
             drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
         //}
         //glPopMatrix();
-
-        
     }
     glPopMatrix();
+}
+
+
+void drawBranchesAtFork( vector< string > fullPhrases ) {
+   set< string > firstWords;
+   //pull the first word of each phrase into the set
+   
+   //for each firstWord in the set
+      
+      //if firstWord indicates a dead end( xxx or fff)
+         
+         //draw a red cylinder
+      //else
+            
+         //draw a branch
+   
+         //find all phrases in fullPhrases that start with that firstWord
+         
+         //remove firstWord from those phrases
+         
+         //pass those phrases to drawBranchesAtFork
+      
+      //
+   //
+      
+}
+
+
+void buildAndDrawFullTree( string orthoPhrase ) {
+   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase );
+   drawBranchesAtFork ( fullPhrases );
+}
+
+void buildAndDrawFullTree() {
+   buildAndDrawFullTree("a nice cold hour");
 }
 
 void Timer(int value) {

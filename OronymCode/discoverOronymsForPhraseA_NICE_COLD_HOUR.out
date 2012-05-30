@@ -1,0 +1,3601 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING discoverOronymsForPhrase; orthoPhrase = a nice cold hour
+
+queryDBwithOrthoForSampaStrs, orthoWord = a
+
+queryDBwithOrthoForSampaStrs, orthoWord = a
+
+queryDBwithOrthoForSampaStrs, orthoWord = nice
+
+queryDBwithOrthoForSampaStrs, orthoWord = nice
+0***sampa phrase after append  _"__e__"__n__aI__s_
+1***sampa phrase after append  _@__"__n__aI__s_
+2***sampa phrase after append  _"__A__"__n__aI__s_
+3***sampa phrase after append  _"__e__"__n__i__s_
+4***sampa phrase after append  _@__"__n__i__s_
+5***sampa phrase after append  _"__A__"__n__i__s_
+
+queryDBwithOrthoForSampaStrs, orthoWord = cold
+
+queryDBwithOrthoForSampaStrs, orthoWord = cold
+0***sampa phrase after append  _"__e__"__n__aI__s__"__k__ou__l__d_
+1***sampa phrase after append  _@__"__n__aI__s__"__k__ou__l__d_
+2***sampa phrase after append  _"__A__"__n__aI__s__"__k__ou__l__d_
+3***sampa phrase after append  _"__e__"__n__i__s__"__k__ou__l__d_
+4***sampa phrase after append  _@__"__n__i__s__"__k__ou__l__d_
+5***sampa phrase after append  _"__A__"__n__i__s__"__k__ou__l__d_
+
+queryDBwithOrthoForSampaStrs, orthoWord = hour
+
+queryDBwithOrthoForSampaStrs, orthoWord = hour
+0***sampa phrase after append  _"__e__"__n__aI__s__"__k__ou__l__d__"__aU__`r_
+1***sampa phrase after append  _@__"__n__aI__s__"__k__ou__l__d__"__aU__`r_
+2***sampa phrase after append  _"__A__"__n__aI__s__"__k__ou__l__d__"__aU__`r_
+3***sampa phrase after append  _"__e__"__n__i__s__"__k__ou__l__d__"__aU__`r_
+4***sampa phrase after append  _@__"__n__i__s__"__k__ou__l__d__"__aU__`r_
+5***sampa phrase after append  _"__A__"__n__i__s__"__k__ou__l__d__"__aU__`r_
+Phonetic interpretation 0 ("e"naIs"kould"aU`r)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = e|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = n|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++nigh skol dhow xxx
++++++++++nigh skol dow xxx
++++++++++nigh skol dour ___SUCCESS!___
++++++++++nigh skol dower ___SUCCESS!___
++++++++++nigh scold ow xxx
++++++++++nigh scold hour ___SUCCESS!___
++++++++++nigh scold our ___SUCCESS!___
++++++++++nigh fff
++++++++++nye skol dhow xxx
++++++++++nye skol dow xxx
++++++++++nye skol dour ___SUCCESS!___
++++++++++nye skol dower ___SUCCESS!___
++++++++++nye scold ow xxx
++++++++++nye scold hour ___SUCCESS!___
++++++++++nye scold our ___SUCCESS!___
++++++++++nye fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naIs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++gneiss coe fff
++++++++++gneiss coal dhow xxx
++++++++++gneiss coal dow xxx
++++++++++gneiss coal dour ___SUCCESS!___
++++++++++gneiss coal dower ___SUCCESS!___
++++++++++gneiss cole dhow xxx
++++++++++gneiss cole dow xxx
++++++++++gneiss cole dour ___SUCCESS!___
++++++++++gneiss cole dower ___SUCCESS!___
++++++++++gneiss kohl dhow xxx
++++++++++gneiss kohl dow xxx
++++++++++gneiss kohl dour ___SUCCESS!___
++++++++++gneiss kohl dower ___SUCCESS!___
++++++++++gneiss cold ow xxx
++++++++++gneiss cold hour ___SUCCESS!___
++++++++++gneiss cold our ___SUCCESS!___
++++++++++gneiss fff
++++++++++nice coe fff
++++++++++nice coal dhow xxx
++++++++++nice coal dow xxx
++++++++++nice coal dour ___SUCCESS!___
++++++++++nice coal dower ___SUCCESS!___
++++++++++nice cole dhow xxx
++++++++++nice cole dow xxx
++++++++++nice cole dour ___SUCCESS!___
++++++++++nice cole dower ___SUCCESS!___
++++++++++nice kohl dhow xxx
++++++++++nice kohl dow xxx
++++++++++nice kohl dour ___SUCCESS!___
++++++++++nice kohl dower ___SUCCESS!___
++++++++++nice cold ow xxx
++++++++++nice cold hour ___SUCCESS!___
++++++++++nice cold our ___SUCCESS!___
++++++++++nice fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naIsk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = naIsk
+final queryterm: |naIsk%|
++++++++++a nigh skol dhow xxx
++++++++++a nigh skol dow xxx
++++++++++a nigh skol dour ___SUCCESS!___
++++++++++a nigh skol dower ___SUCCESS!___
++++++++++a nigh scold ow xxx
++++++++++a nigh scold hour ___SUCCESS!___
++++++++++a nigh scold our ___SUCCESS!___
++++++++++a nigh fff
++++++++++a nye skol dhow xxx
++++++++++a nye skol dow xxx
++++++++++a nye skol dour ___SUCCESS!___
++++++++++a nye skol dower ___SUCCESS!___
++++++++++a nye scold ow xxx
++++++++++a nye scold hour ___SUCCESS!___
++++++++++a nye scold our ___SUCCESS!___
++++++++++a nye fff
++++++++++a gneiss coe fff
++++++++++a gneiss coal dhow xxx
++++++++++a gneiss coal dow xxx
++++++++++a gneiss coal dour ___SUCCESS!___
++++++++++a gneiss coal dower ___SUCCESS!___
++++++++++a gneiss cole dhow xxx
++++++++++a gneiss cole dow xxx
++++++++++a gneiss cole dour ___SUCCESS!___
++++++++++a gneiss cole dower ___SUCCESS!___
++++++++++a gneiss kohl dhow xxx
++++++++++a gneiss kohl dow xxx
++++++++++a gneiss kohl dour ___SUCCESS!___
++++++++++a gneiss kohl dower ___SUCCESS!___
++++++++++a gneiss cold ow xxx
++++++++++a gneiss cold hour ___SUCCESS!___
++++++++++a gneiss cold our ___SUCCESS!___
++++++++++a gneiss fff
++++++++++a nice coe fff
++++++++++a nice coal dhow xxx
++++++++++a nice coal dow xxx
++++++++++a nice coal dour ___SUCCESS!___
++++++++++a nice coal dower ___SUCCESS!___
++++++++++a nice cole dhow xxx
++++++++++a nice cole dow xxx
++++++++++a nice cole dour ___SUCCESS!___
++++++++++a nice cole dower ___SUCCESS!___
++++++++++a nice kohl dhow xxx
++++++++++a nice kohl dow xxx
++++++++++a nice kohl dour ___SUCCESS!___
++++++++++a nice kohl dower ___SUCCESS!___
++++++++++a nice cold ow xxx
++++++++++a nice cold hour ___SUCCESS!___
++++++++++a nice cold our ___SUCCESS!___
++++++++++a nice fff
++++++++++a fff
++++++++++eh nigh skol dhow xxx
++++++++++eh nigh skol dow xxx
++++++++++eh nigh skol dour ___SUCCESS!___
++++++++++eh nigh skol dower ___SUCCESS!___
++++++++++eh nigh scold ow xxx
++++++++++eh nigh scold hour ___SUCCESS!___
++++++++++eh nigh scold our ___SUCCESS!___
++++++++++eh nigh fff
++++++++++eh nye skol dhow xxx
++++++++++eh nye skol dow xxx
++++++++++eh nye skol dour ___SUCCESS!___
++++++++++eh nye skol dower ___SUCCESS!___
++++++++++eh nye scold ow xxx
++++++++++eh nye scold hour ___SUCCESS!___
++++++++++eh nye scold our ___SUCCESS!___
++++++++++eh nye fff
++++++++++eh gneiss coe fff
++++++++++eh gneiss coal dhow xxx
++++++++++eh gneiss coal dow xxx
++++++++++eh gneiss coal dour ___SUCCESS!___
++++++++++eh gneiss coal dower ___SUCCESS!___
++++++++++eh gneiss cole dhow xxx
++++++++++eh gneiss cole dow xxx
++++++++++eh gneiss cole dour ___SUCCESS!___
++++++++++eh gneiss cole dower ___SUCCESS!___
++++++++++eh gneiss kohl dhow xxx
++++++++++eh gneiss kohl dow xxx
++++++++++eh gneiss kohl dour ___SUCCESS!___
++++++++++eh gneiss kohl dower ___SUCCESS!___
++++++++++eh gneiss cold ow xxx
++++++++++eh gneiss cold hour ___SUCCESS!___
++++++++++eh gneiss cold our ___SUCCESS!___
++++++++++eh gneiss fff
++++++++++eh nice coe fff
++++++++++eh nice coal dhow xxx
++++++++++eh nice coal dow xxx
++++++++++eh nice coal dour ___SUCCESS!___
++++++++++eh nice coal dower ___SUCCESS!___
++++++++++eh nice cole dhow xxx
++++++++++eh nice cole dow xxx
++++++++++eh nice cole dour ___SUCCESS!___
++++++++++eh nice cole dower ___SUCCESS!___
++++++++++eh nice kohl dhow xxx
++++++++++eh nice kohl dow xxx
++++++++++eh nice kohl dour ___SUCCESS!___
++++++++++eh nice kohl dower ___SUCCESS!___
++++++++++eh nice cold ow xxx
++++++++++eh nice cold hour ___SUCCESS!___
++++++++++eh nice cold our ___SUCCESS!___
++++++++++eh nice fff
++++++++++eh fff
++++++++++et nigh skol dhow xxx
++++++++++et nigh skol dow xxx
++++++++++et nigh skol dour ___SUCCESS!___
++++++++++et nigh skol dower ___SUCCESS!___
++++++++++et nigh scold ow xxx
++++++++++et nigh scold hour ___SUCCESS!___
++++++++++et nigh scold our ___SUCCESS!___
++++++++++et nigh fff
++++++++++et nye skol dhow xxx
++++++++++et nye skol dow xxx
++++++++++et nye skol dour ___SUCCESS!___
++++++++++et nye skol dower ___SUCCESS!___
++++++++++et nye scold ow xxx
++++++++++et nye scold hour ___SUCCESS!___
++++++++++et nye scold our ___SUCCESS!___
++++++++++et nye fff
++++++++++et gneiss coe fff
++++++++++et gneiss coal dhow xxx
++++++++++et gneiss coal dow xxx
++++++++++et gneiss coal dour ___SUCCESS!___
++++++++++et gneiss coal dower ___SUCCESS!___
++++++++++et gneiss cole dhow xxx
++++++++++et gneiss cole dow xxx
++++++++++et gneiss cole dour ___SUCCESS!___
++++++++++et gneiss cole dower ___SUCCESS!___
++++++++++et gneiss kohl dhow xxx
++++++++++et gneiss kohl dow xxx
++++++++++et gneiss kohl dour ___SUCCESS!___
++++++++++et gneiss kohl dower ___SUCCESS!___
++++++++++et gneiss cold ow xxx
++++++++++et gneiss cold hour ___SUCCESS!___
++++++++++et gneiss cold our ___SUCCESS!___
++++++++++et gneiss fff
++++++++++et nice coe fff
++++++++++et nice coal dhow xxx
++++++++++et nice coal dow xxx
++++++++++et nice coal dour ___SUCCESS!___
++++++++++et nice coal dower ___SUCCESS!___
++++++++++et nice cole dhow xxx
++++++++++et nice cole dow xxx
++++++++++et nice cole dour ___SUCCESS!___
++++++++++et nice cole dower ___SUCCESS!___
++++++++++et nice kohl dhow xxx
++++++++++et nice kohl dow xxx
++++++++++et nice kohl dour ___SUCCESS!___
++++++++++et nice kohl dower ___SUCCESS!___
++++++++++et nice cold ow xxx
++++++++++et nice cold hour ___SUCCESS!___
++++++++++et nice cold our ___SUCCESS!___
++++++++++et nice fff
++++++++++et fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = en|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = en
+final queryterm: |en%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = enaI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = enaI
+final queryterm: |enaI%|
+exits findOrthoStrsForPhoneSeq
+0~~>a nigh skol dhow xxx
+0~~>a nigh skol dow xxx
+0~~>a nigh skol dour ___SUCCESS!___
+0~~>a nigh skol dower ___SUCCESS!___
+0~~>a nigh scold ow xxx
+0~~>a nigh scold hour ___SUCCESS!___
+0~~>a nigh scold our ___SUCCESS!___
+0~~>a nigh fff
+0~~>a nye skol dhow xxx
+0~~>a nye skol dow xxx
+0~~>a nye skol dour ___SUCCESS!___
+0~~>a nye skol dower ___SUCCESS!___
+0~~>a nye scold ow xxx
+0~~>a nye scold hour ___SUCCESS!___
+0~~>a nye scold our ___SUCCESS!___
+0~~>a nye fff
+0~~>a gneiss coe fff
+0~~>a gneiss coal dhow xxx
+0~~>a gneiss coal dow xxx
+0~~>a gneiss coal dour ___SUCCESS!___
+0~~>a gneiss coal dower ___SUCCESS!___
+0~~>a gneiss cole dhow xxx
+0~~>a gneiss cole dow xxx
+0~~>a gneiss cole dour ___SUCCESS!___
+0~~>a gneiss cole dower ___SUCCESS!___
+0~~>a gneiss kohl dhow xxx
+0~~>a gneiss kohl dow xxx
+0~~>a gneiss kohl dour ___SUCCESS!___
+0~~>a gneiss kohl dower ___SUCCESS!___
+0~~>a gneiss cold ow xxx
+0~~>a gneiss cold hour ___SUCCESS!___
+0~~>a gneiss cold our ___SUCCESS!___
+0~~>a gneiss fff
+0~~>a nice coe fff
+0~~>a nice coal dhow xxx
+0~~>a nice coal dow xxx
+0~~>a nice coal dour ___SUCCESS!___
+0~~>a nice coal dower ___SUCCESS!___
+0~~>a nice cole dhow xxx
+0~~>a nice cole dow xxx
+0~~>a nice cole dour ___SUCCESS!___
+0~~>a nice cole dower ___SUCCESS!___
+0~~>a nice kohl dhow xxx
+0~~>a nice kohl dow xxx
+0~~>a nice kohl dour ___SUCCESS!___
+0~~>a nice kohl dower ___SUCCESS!___
+0~~>a nice cold ow xxx
+0~~>a nice cold hour ___SUCCESS!___
+0~~>a nice cold our ___SUCCESS!___
+0~~>a nice fff
+0~~>a fff
+0~~>eh nigh skol dhow xxx
+0~~>eh nigh skol dow xxx
+0~~>eh nigh skol dour ___SUCCESS!___
+0~~>eh nigh skol dower ___SUCCESS!___
+0~~>eh nigh scold ow xxx
+0~~>eh nigh scold hour ___SUCCESS!___
+0~~>eh nigh scold our ___SUCCESS!___
+0~~>eh nigh fff
+0~~>eh nye skol dhow xxx
+0~~>eh nye skol dow xxx
+0~~>eh nye skol dour ___SUCCESS!___
+0~~>eh nye skol dower ___SUCCESS!___
+0~~>eh nye scold ow xxx
+0~~>eh nye scold hour ___SUCCESS!___
+0~~>eh nye scold our ___SUCCESS!___
+0~~>eh nye fff
+0~~>eh gneiss coe fff
+0~~>eh gneiss coal dhow xxx
+0~~>eh gneiss coal dow xxx
+0~~>eh gneiss coal dour ___SUCCESS!___
+0~~>eh gneiss coal dower ___SUCCESS!___
+0~~>eh gneiss cole dhow xxx
+0~~>eh gneiss cole dow xxx
+0~~>eh gneiss cole dour ___SUCCESS!___
+0~~>eh gneiss cole dower ___SUCCESS!___
+0~~>eh gneiss kohl dhow xxx
+0~~>eh gneiss kohl dow xxx
+0~~>eh gneiss kohl dour ___SUCCESS!___
+0~~>eh gneiss kohl dower ___SUCCESS!___
+0~~>eh gneiss cold ow xxx
+0~~>eh gneiss cold hour ___SUCCESS!___
+0~~>eh gneiss cold our ___SUCCESS!___
+0~~>eh gneiss fff
+0~~>eh nice coe fff
+0~~>eh nice coal dhow xxx
+0~~>eh nice coal dow xxx
+0~~>eh nice coal dour ___SUCCESS!___
+0~~>eh nice coal dower ___SUCCESS!___
+0~~>eh nice cole dhow xxx
+0~~>eh nice cole dow xxx
+0~~>eh nice cole dour ___SUCCESS!___
+0~~>eh nice cole dower ___SUCCESS!___
+0~~>eh nice kohl dhow xxx
+0~~>eh nice kohl dow xxx
+0~~>eh nice kohl dour ___SUCCESS!___
+0~~>eh nice kohl dower ___SUCCESS!___
+0~~>eh nice cold ow xxx
+0~~>eh nice cold hour ___SUCCESS!___
+0~~>eh nice cold our ___SUCCESS!___
+0~~>eh nice fff
+0~~>eh fff
+0~~>et nigh skol dhow xxx
+0~~>et nigh skol dow xxx
+0~~>et nigh skol dour ___SUCCESS!___
+0~~>et nigh skol dower ___SUCCESS!___
+0~~>et nigh scold ow xxx
+0~~>et nigh scold hour ___SUCCESS!___
+0~~>et nigh scold our ___SUCCESS!___
+0~~>et nigh fff
+0~~>et nye skol dhow xxx
+0~~>et nye skol dow xxx
+0~~>et nye skol dour ___SUCCESS!___
+0~~>et nye skol dower ___SUCCESS!___
+0~~>et nye scold ow xxx
+0~~>et nye scold hour ___SUCCESS!___
+0~~>et nye scold our ___SUCCESS!___
+0~~>et nye fff
+0~~>et gneiss coe fff
+0~~>et gneiss coal dhow xxx
+0~~>et gneiss coal dow xxx
+0~~>et gneiss coal dour ___SUCCESS!___
+0~~>et gneiss coal dower ___SUCCESS!___
+0~~>et gneiss cole dhow xxx
+0~~>et gneiss cole dow xxx
+0~~>et gneiss cole dour ___SUCCESS!___
+0~~>et gneiss cole dower ___SUCCESS!___
+0~~>et gneiss kohl dhow xxx
+0~~>et gneiss kohl dow xxx
+0~~>et gneiss kohl dour ___SUCCESS!___
+0~~>et gneiss kohl dower ___SUCCESS!___
+0~~>et gneiss cold ow xxx
+0~~>et gneiss cold hour ___SUCCESS!___
+0~~>et gneiss cold our ___SUCCESS!___
+0~~>et gneiss fff
+0~~>et nice coe fff
+0~~>et nice coal dhow xxx
+0~~>et nice coal dow xxx
+0~~>et nice coal dour ___SUCCESS!___
+0~~>et nice coal dower ___SUCCESS!___
+0~~>et nice cole dhow xxx
+0~~>et nice cole dow xxx
+0~~>et nice cole dour ___SUCCESS!___
+0~~>et nice cole dower ___SUCCESS!___
+0~~>et nice kohl dhow xxx
+0~~>et nice kohl dow xxx
+0~~>et nice kohl dour ___SUCCESS!___
+0~~>et nice kohl dower ___SUCCESS!___
+0~~>et nice cold ow xxx
+0~~>et nice cold hour ___SUCCESS!___
+0~~>et nice cold our ___SUCCESS!___
+0~~>et nice fff
+0~~>et fff
+0~~>fff
+Phonetic interpretation 1 (@"naIs"kould"aU`r)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = n|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++nigh skol dhow xxx
++++++++++nigh skol dow xxx
++++++++++nigh skol dour ___SUCCESS!___
++++++++++nigh skol dower ___SUCCESS!___
++++++++++nigh scold ow xxx
++++++++++nigh scold hour ___SUCCESS!___
++++++++++nigh scold our ___SUCCESS!___
++++++++++nigh fff
++++++++++nye skol dhow xxx
++++++++++nye skol dow xxx
++++++++++nye skol dour ___SUCCESS!___
++++++++++nye skol dower ___SUCCESS!___
++++++++++nye scold ow xxx
++++++++++nye scold hour ___SUCCESS!___
++++++++++nye scold our ___SUCCESS!___
++++++++++nye fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naIs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++gneiss coe fff
++++++++++gneiss coal dhow xxx
++++++++++gneiss coal dow xxx
++++++++++gneiss coal dour ___SUCCESS!___
++++++++++gneiss coal dower ___SUCCESS!___
++++++++++gneiss cole dhow xxx
++++++++++gneiss cole dow xxx
++++++++++gneiss cole dour ___SUCCESS!___
++++++++++gneiss cole dower ___SUCCESS!___
++++++++++gneiss kohl dhow xxx
++++++++++gneiss kohl dow xxx
++++++++++gneiss kohl dour ___SUCCESS!___
++++++++++gneiss kohl dower ___SUCCESS!___
++++++++++gneiss cold ow xxx
++++++++++gneiss cold hour ___SUCCESS!___
++++++++++gneiss cold our ___SUCCESS!___
++++++++++gneiss fff
++++++++++nice coe fff
++++++++++nice coal dhow xxx
++++++++++nice coal dow xxx
++++++++++nice coal dour ___SUCCESS!___
++++++++++nice coal dower ___SUCCESS!___
++++++++++nice cole dhow xxx
++++++++++nice cole dow xxx
++++++++++nice cole dour ___SUCCESS!___
++++++++++nice cole dower ___SUCCESS!___
++++++++++nice kohl dhow xxx
++++++++++nice kohl dow xxx
++++++++++nice kohl dour ___SUCCESS!___
++++++++++nice kohl dower ___SUCCESS!___
++++++++++nice cold ow xxx
++++++++++nice cold hour ___SUCCESS!___
++++++++++nice cold our ___SUCCESS!___
++++++++++nice fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naIsk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = naIsk
+final queryterm: |naIsk%|
++++++++++a nigh skol dhow xxx
++++++++++a nigh skol dow xxx
++++++++++a nigh skol dour ___SUCCESS!___
++++++++++a nigh skol dower ___SUCCESS!___
++++++++++a nigh scold ow xxx
++++++++++a nigh scold hour ___SUCCESS!___
++++++++++a nigh scold our ___SUCCESS!___
++++++++++a nigh fff
++++++++++a nye skol dhow xxx
++++++++++a nye skol dow xxx
++++++++++a nye skol dour ___SUCCESS!___
++++++++++a nye skol dower ___SUCCESS!___
++++++++++a nye scold ow xxx
++++++++++a nye scold hour ___SUCCESS!___
++++++++++a nye scold our ___SUCCESS!___
++++++++++a nye fff
++++++++++a gneiss coe fff
++++++++++a gneiss coal dhow xxx
++++++++++a gneiss coal dow xxx
++++++++++a gneiss coal dour ___SUCCESS!___
++++++++++a gneiss coal dower ___SUCCESS!___
++++++++++a gneiss cole dhow xxx
++++++++++a gneiss cole dow xxx
++++++++++a gneiss cole dour ___SUCCESS!___
++++++++++a gneiss cole dower ___SUCCESS!___
++++++++++a gneiss kohl dhow xxx
++++++++++a gneiss kohl dow xxx
++++++++++a gneiss kohl dour ___SUCCESS!___
++++++++++a gneiss kohl dower ___SUCCESS!___
++++++++++a gneiss cold ow xxx
++++++++++a gneiss cold hour ___SUCCESS!___
++++++++++a gneiss cold our ___SUCCESS!___
++++++++++a gneiss fff
++++++++++a nice coe fff
++++++++++a nice coal dhow xxx
++++++++++a nice coal dow xxx
++++++++++a nice coal dour ___SUCCESS!___
++++++++++a nice coal dower ___SUCCESS!___
++++++++++a nice cole dhow xxx
++++++++++a nice cole dow xxx
++++++++++a nice cole dour ___SUCCESS!___
++++++++++a nice cole dower ___SUCCESS!___
++++++++++a nice kohl dhow xxx
++++++++++a nice kohl dow xxx
++++++++++a nice kohl dour ___SUCCESS!___
++++++++++a nice kohl dower ___SUCCESS!___
++++++++++a nice cold ow xxx
++++++++++a nice cold hour ___SUCCESS!___
++++++++++a nice cold our ___SUCCESS!___
++++++++++a nice fff
++++++++++a fff
++++++++++o' nigh skol dhow xxx
++++++++++o' nigh skol dow xxx
++++++++++o' nigh skol dour ___SUCCESS!___
++++++++++o' nigh skol dower ___SUCCESS!___
++++++++++o' nigh scold ow xxx
++++++++++o' nigh scold hour ___SUCCESS!___
++++++++++o' nigh scold our ___SUCCESS!___
++++++++++o' nigh fff
++++++++++o' nye skol dhow xxx
++++++++++o' nye skol dow xxx
++++++++++o' nye skol dour ___SUCCESS!___
++++++++++o' nye skol dower ___SUCCESS!___
++++++++++o' nye scold ow xxx
++++++++++o' nye scold hour ___SUCCESS!___
++++++++++o' nye scold our ___SUCCESS!___
++++++++++o' nye fff
++++++++++o' gneiss coe fff
++++++++++o' gneiss coal dhow xxx
++++++++++o' gneiss coal dow xxx
++++++++++o' gneiss coal dour ___SUCCESS!___
++++++++++o' gneiss coal dower ___SUCCESS!___
++++++++++o' gneiss cole dhow xxx
++++++++++o' gneiss cole dow xxx
++++++++++o' gneiss cole dour ___SUCCESS!___
++++++++++o' gneiss cole dower ___SUCCESS!___
++++++++++o' gneiss kohl dhow xxx
++++++++++o' gneiss kohl dow xxx
++++++++++o' gneiss kohl dour ___SUCCESS!___
++++++++++o' gneiss kohl dower ___SUCCESS!___
++++++++++o' gneiss cold ow xxx
++++++++++o' gneiss cold hour ___SUCCESS!___
++++++++++o' gneiss cold our ___SUCCESS!___
++++++++++o' gneiss fff
++++++++++o' nice coe fff
++++++++++o' nice coal dhow xxx
++++++++++o' nice coal dow xxx
++++++++++o' nice coal dour ___SUCCESS!___
++++++++++o' nice coal dower ___SUCCESS!___
++++++++++o' nice cole dhow xxx
++++++++++o' nice cole dow xxx
++++++++++o' nice cole dour ___SUCCESS!___
++++++++++o' nice cole dower ___SUCCESS!___
++++++++++o' nice kohl dhow xxx
++++++++++o' nice kohl dow xxx
++++++++++o' nice kohl dour ___SUCCESS!___
++++++++++o' nice kohl dower ___SUCCESS!___
++++++++++o' nice cold ow xxx
++++++++++o' nice cold hour ___SUCCESS!___
++++++++++o' nice cold our ___SUCCESS!___
++++++++++o' nice fff
++++++++++o' fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @n|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++aye skol dhow xxx
++++++++++aye skol dow xxx
++++++++++aye skol dour ___SUCCESS!___
++++++++++aye skol dower ___SUCCESS!___
++++++++++aye scold ow xxx
++++++++++aye scold hour ___SUCCESS!___
++++++++++aye scold our ___SUCCESS!___
++++++++++aye fff
++++++++++ay skol dhow xxx
++++++++++ay skol dow xxx
++++++++++ay skol dour ___SUCCESS!___
++++++++++ay skol dower ___SUCCESS!___
++++++++++ay scold ow xxx
++++++++++ay scold hour ___SUCCESS!___
++++++++++ay scold our ___SUCCESS!___
++++++++++ay fff
++++++++++eye skol dhow xxx
++++++++++eye skol dow xxx
++++++++++eye skol dour ___SUCCESS!___
++++++++++eye skol dower ___SUCCESS!___
++++++++++eye scold ow xxx
++++++++++eye scold hour ___SUCCESS!___
++++++++++eye scold our ___SUCCESS!___
++++++++++eye fff
++++++++++i skol dhow xxx
++++++++++i skol dow xxx
++++++++++i skol dour ___SUCCESS!___
++++++++++i skol dower ___SUCCESS!___
++++++++++i scold ow xxx
++++++++++i scold hour ___SUCCESS!___
++++++++++i scold our ___SUCCESS!___
++++++++++i fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++ice coe fff
++++++++++ice coal dhow xxx
++++++++++ice coal dow xxx
++++++++++ice coal dour ___SUCCESS!___
++++++++++ice coal dower ___SUCCESS!___
++++++++++ice cole dhow xxx
++++++++++ice cole dow xxx
++++++++++ice cole dour ___SUCCESS!___
++++++++++ice cole dower ___SUCCESS!___
++++++++++ice kohl dhow xxx
++++++++++ice kohl dow xxx
++++++++++ice kohl dour ___SUCCESS!___
++++++++++ice kohl dower ___SUCCESS!___
++++++++++ice cold ow xxx
++++++++++ice cold hour ___SUCCESS!___
++++++++++ice cold our ___SUCCESS!___
++++++++++ice fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIsk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIsk
+final queryterm: |aIsk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIskou
+final queryterm: |aIskou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskoul|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIskoul
+final queryterm: |aIskoul%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++ice-cold ow xxx
++++++++++ice-cold hour ___SUCCESS!___
++++++++++ice-cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIskouldaU
+final queryterm: |aIskouldaU%|
++++++++++an aye skol dhow xxx
++++++++++an aye skol dow xxx
++++++++++an aye skol dour ___SUCCESS!___
++++++++++an aye skol dower ___SUCCESS!___
++++++++++an aye scold ow xxx
++++++++++an aye scold hour ___SUCCESS!___
++++++++++an aye scold our ___SUCCESS!___
++++++++++an aye fff
++++++++++an ay skol dhow xxx
++++++++++an ay skol dow xxx
++++++++++an ay skol dour ___SUCCESS!___
++++++++++an ay skol dower ___SUCCESS!___
++++++++++an ay scold ow xxx
++++++++++an ay scold hour ___SUCCESS!___
++++++++++an ay scold our ___SUCCESS!___
++++++++++an ay fff
++++++++++an eye skol dhow xxx
++++++++++an eye skol dow xxx
++++++++++an eye skol dour ___SUCCESS!___
++++++++++an eye skol dower ___SUCCESS!___
++++++++++an eye scold ow xxx
++++++++++an eye scold hour ___SUCCESS!___
++++++++++an eye scold our ___SUCCESS!___
++++++++++an eye fff
++++++++++an i skol dhow xxx
++++++++++an i skol dow xxx
++++++++++an i skol dour ___SUCCESS!___
++++++++++an i skol dower ___SUCCESS!___
++++++++++an i scold ow xxx
++++++++++an i scold hour ___SUCCESS!___
++++++++++an i scold our ___SUCCESS!___
++++++++++an i fff
++++++++++an ice coe fff
++++++++++an ice coal dhow xxx
++++++++++an ice coal dow xxx
++++++++++an ice coal dour ___SUCCESS!___
++++++++++an ice coal dower ___SUCCESS!___
++++++++++an ice cole dhow xxx
++++++++++an ice cole dow xxx
++++++++++an ice cole dour ___SUCCESS!___
++++++++++an ice cole dower ___SUCCESS!___
++++++++++an ice kohl dhow xxx
++++++++++an ice kohl dow xxx
++++++++++an ice kohl dour ___SUCCESS!___
++++++++++an ice kohl dower ___SUCCESS!___
++++++++++an ice cold ow xxx
++++++++++an ice cold hour ___SUCCESS!___
++++++++++an ice cold our ___SUCCESS!___
++++++++++an ice fff
++++++++++an ice-cold ow xxx
++++++++++an ice-cold hour ___SUCCESS!___
++++++++++an ice-cold our ___SUCCESS!___
++++++++++an fff
++++++++++'n' aye skol dhow xxx
++++++++++'n' aye skol dow xxx
++++++++++'n' aye skol dour ___SUCCESS!___
++++++++++'n' aye skol dower ___SUCCESS!___
++++++++++'n' aye scold ow xxx
++++++++++'n' aye scold hour ___SUCCESS!___
++++++++++'n' aye scold our ___SUCCESS!___
++++++++++'n' aye fff
++++++++++'n' ay skol dhow xxx
++++++++++'n' ay skol dow xxx
++++++++++'n' ay skol dour ___SUCCESS!___
++++++++++'n' ay skol dower ___SUCCESS!___
++++++++++'n' ay scold ow xxx
++++++++++'n' ay scold hour ___SUCCESS!___
++++++++++'n' ay scold our ___SUCCESS!___
++++++++++'n' ay fff
++++++++++'n' eye skol dhow xxx
++++++++++'n' eye skol dow xxx
++++++++++'n' eye skol dour ___SUCCESS!___
++++++++++'n' eye skol dower ___SUCCESS!___
++++++++++'n' eye scold ow xxx
++++++++++'n' eye scold hour ___SUCCESS!___
++++++++++'n' eye scold our ___SUCCESS!___
++++++++++'n' eye fff
++++++++++'n' i skol dhow xxx
++++++++++'n' i skol dow xxx
++++++++++'n' i skol dour ___SUCCESS!___
++++++++++'n' i skol dower ___SUCCESS!___
++++++++++'n' i scold ow xxx
++++++++++'n' i scold hour ___SUCCESS!___
++++++++++'n' i scold our ___SUCCESS!___
++++++++++'n' i fff
++++++++++'n' ice coe fff
++++++++++'n' ice coal dhow xxx
++++++++++'n' ice coal dow xxx
++++++++++'n' ice coal dour ___SUCCESS!___
++++++++++'n' ice coal dower ___SUCCESS!___
++++++++++'n' ice cole dhow xxx
++++++++++'n' ice cole dow xxx
++++++++++'n' ice cole dour ___SUCCESS!___
++++++++++'n' ice cole dower ___SUCCESS!___
++++++++++'n' ice kohl dhow xxx
++++++++++'n' ice kohl dow xxx
++++++++++'n' ice kohl dour ___SUCCESS!___
++++++++++'n' ice kohl dower ___SUCCESS!___
++++++++++'n' ice cold ow xxx
++++++++++'n' ice cold hour ___SUCCESS!___
++++++++++'n' ice cold our ___SUCCESS!___
++++++++++'n' ice fff
++++++++++'n' ice-cold ow xxx
++++++++++'n' ice-cold hour ___SUCCESS!___
++++++++++'n' ice-cold our ___SUCCESS!___
++++++++++'n' fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @naI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = @naI
+final queryterm: |@naI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @naIs|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = @naIs
+final queryterm: |@naIs%|
+exits findOrthoStrsForPhoneSeq
+1~~>a nigh skol dhow xxx
+1~~>a nigh skol dow xxx
+1~~>a nigh skol dour ___SUCCESS!___
+1~~>a nigh skol dower ___SUCCESS!___
+1~~>a nigh scold ow xxx
+1~~>a nigh scold hour ___SUCCESS!___
+1~~>a nigh scold our ___SUCCESS!___
+1~~>a nigh fff
+1~~>a nye skol dhow xxx
+1~~>a nye skol dow xxx
+1~~>a nye skol dour ___SUCCESS!___
+1~~>a nye skol dower ___SUCCESS!___
+1~~>a nye scold ow xxx
+1~~>a nye scold hour ___SUCCESS!___
+1~~>a nye scold our ___SUCCESS!___
+1~~>a nye fff
+1~~>a gneiss coe fff
+1~~>a gneiss coal dhow xxx
+1~~>a gneiss coal dow xxx
+1~~>a gneiss coal dour ___SUCCESS!___
+1~~>a gneiss coal dower ___SUCCESS!___
+1~~>a gneiss cole dhow xxx
+1~~>a gneiss cole dow xxx
+1~~>a gneiss cole dour ___SUCCESS!___
+1~~>a gneiss cole dower ___SUCCESS!___
+1~~>a gneiss kohl dhow xxx
+1~~>a gneiss kohl dow xxx
+1~~>a gneiss kohl dour ___SUCCESS!___
+1~~>a gneiss kohl dower ___SUCCESS!___
+1~~>a gneiss cold ow xxx
+1~~>a gneiss cold hour ___SUCCESS!___
+1~~>a gneiss cold our ___SUCCESS!___
+1~~>a gneiss fff
+1~~>a nice coe fff
+1~~>a nice coal dhow xxx
+1~~>a nice coal dow xxx
+1~~>a nice coal dour ___SUCCESS!___
+1~~>a nice coal dower ___SUCCESS!___
+1~~>a nice cole dhow xxx
+1~~>a nice cole dow xxx
+1~~>a nice cole dour ___SUCCESS!___
+1~~>a nice cole dower ___SUCCESS!___
+1~~>a nice kohl dhow xxx
+1~~>a nice kohl dow xxx
+1~~>a nice kohl dour ___SUCCESS!___
+1~~>a nice kohl dower ___SUCCESS!___
+1~~>a nice cold ow xxx
+1~~>a nice cold hour ___SUCCESS!___
+1~~>a nice cold our ___SUCCESS!___
+1~~>a nice fff
+1~~>a fff
+1~~>o' nigh skol dhow xxx
+1~~>o' nigh skol dow xxx
+1~~>o' nigh skol dour ___SUCCESS!___
+1~~>o' nigh skol dower ___SUCCESS!___
+1~~>o' nigh scold ow xxx
+1~~>o' nigh scold hour ___SUCCESS!___
+1~~>o' nigh scold our ___SUCCESS!___
+1~~>o' nigh fff
+1~~>o' nye skol dhow xxx
+1~~>o' nye skol dow xxx
+1~~>o' nye skol dour ___SUCCESS!___
+1~~>o' nye skol dower ___SUCCESS!___
+1~~>o' nye scold ow xxx
+1~~>o' nye scold hour ___SUCCESS!___
+1~~>o' nye scold our ___SUCCESS!___
+1~~>o' nye fff
+1~~>o' gneiss coe fff
+1~~>o' gneiss coal dhow xxx
+1~~>o' gneiss coal dow xxx
+1~~>o' gneiss coal dour ___SUCCESS!___
+1~~>o' gneiss coal dower ___SUCCESS!___
+1~~>o' gneiss cole dhow xxx
+1~~>o' gneiss cole dow xxx
+1~~>o' gneiss cole dour ___SUCCESS!___
+1~~>o' gneiss cole dower ___SUCCESS!___
+1~~>o' gneiss kohl dhow xxx
+1~~>o' gneiss kohl dow xxx
+1~~>o' gneiss kohl dour ___SUCCESS!___
+1~~>o' gneiss kohl dower ___SUCCESS!___
+1~~>o' gneiss cold ow xxx
+1~~>o' gneiss cold hour ___SUCCESS!___
+1~~>o' gneiss cold our ___SUCCESS!___
+1~~>o' gneiss fff
+1~~>o' nice coe fff
+1~~>o' nice coal dhow xxx
+1~~>o' nice coal dow xxx
+1~~>o' nice coal dour ___SUCCESS!___
+1~~>o' nice coal dower ___SUCCESS!___
+1~~>o' nice cole dhow xxx
+1~~>o' nice cole dow xxx
+1~~>o' nice cole dour ___SUCCESS!___
+1~~>o' nice cole dower ___SUCCESS!___
+1~~>o' nice kohl dhow xxx
+1~~>o' nice kohl dow xxx
+1~~>o' nice kohl dour ___SUCCESS!___
+1~~>o' nice kohl dower ___SUCCESS!___
+1~~>o' nice cold ow xxx
+1~~>o' nice cold hour ___SUCCESS!___
+1~~>o' nice cold our ___SUCCESS!___
+1~~>o' nice fff
+1~~>o' fff
+1~~>an aye skol dhow xxx
+1~~>an aye skol dow xxx
+1~~>an aye skol dour ___SUCCESS!___
+1~~>an aye skol dower ___SUCCESS!___
+1~~>an aye scold ow xxx
+1~~>an aye scold hour ___SUCCESS!___
+1~~>an aye scold our ___SUCCESS!___
+1~~>an aye fff
+1~~>an ay skol dhow xxx
+1~~>an ay skol dow xxx
+1~~>an ay skol dour ___SUCCESS!___
+1~~>an ay skol dower ___SUCCESS!___
+1~~>an ay scold ow xxx
+1~~>an ay scold hour ___SUCCESS!___
+1~~>an ay scold our ___SUCCESS!___
+1~~>an ay fff
+1~~>an eye skol dhow xxx
+1~~>an eye skol dow xxx
+1~~>an eye skol dour ___SUCCESS!___
+1~~>an eye skol dower ___SUCCESS!___
+1~~>an eye scold ow xxx
+1~~>an eye scold hour ___SUCCESS!___
+1~~>an eye scold our ___SUCCESS!___
+1~~>an eye fff
+1~~>an i skol dhow xxx
+1~~>an i skol dow xxx
+1~~>an i skol dour ___SUCCESS!___
+1~~>an i skol dower ___SUCCESS!___
+1~~>an i scold ow xxx
+1~~>an i scold hour ___SUCCESS!___
+1~~>an i scold our ___SUCCESS!___
+1~~>an i fff
+1~~>an ice coe fff
+1~~>an ice coal dhow xxx
+1~~>an ice coal dow xxx
+1~~>an ice coal dour ___SUCCESS!___
+1~~>an ice coal dower ___SUCCESS!___
+1~~>an ice cole dhow xxx
+1~~>an ice cole dow xxx
+1~~>an ice cole dour ___SUCCESS!___
+1~~>an ice cole dower ___SUCCESS!___
+1~~>an ice kohl dhow xxx
+1~~>an ice kohl dow xxx
+1~~>an ice kohl dour ___SUCCESS!___
+1~~>an ice kohl dower ___SUCCESS!___
+1~~>an ice cold ow xxx
+1~~>an ice cold hour ___SUCCESS!___
+1~~>an ice cold our ___SUCCESS!___
+1~~>an ice fff
+1~~>an ice-cold ow xxx
+1~~>an ice-cold hour ___SUCCESS!___
+1~~>an ice-cold our ___SUCCESS!___
+1~~>an fff
+1~~>'n' aye skol dhow xxx
+1~~>'n' aye skol dow xxx
+1~~>'n' aye skol dour ___SUCCESS!___
+1~~>'n' aye skol dower ___SUCCESS!___
+1~~>'n' aye scold ow xxx
+1~~>'n' aye scold hour ___SUCCESS!___
+1~~>'n' aye scold our ___SUCCESS!___
+1~~>'n' aye fff
+1~~>'n' ay skol dhow xxx
+1~~>'n' ay skol dow xxx
+1~~>'n' ay skol dour ___SUCCESS!___
+1~~>'n' ay skol dower ___SUCCESS!___
+1~~>'n' ay scold ow xxx
+1~~>'n' ay scold hour ___SUCCESS!___
+1~~>'n' ay scold our ___SUCCESS!___
+1~~>'n' ay fff
+1~~>'n' eye skol dhow xxx
+1~~>'n' eye skol dow xxx
+1~~>'n' eye skol dour ___SUCCESS!___
+1~~>'n' eye skol dower ___SUCCESS!___
+1~~>'n' eye scold ow xxx
+1~~>'n' eye scold hour ___SUCCESS!___
+1~~>'n' eye scold our ___SUCCESS!___
+1~~>'n' eye fff
+1~~>'n' i skol dhow xxx
+1~~>'n' i skol dow xxx
+1~~>'n' i skol dour ___SUCCESS!___
+1~~>'n' i skol dower ___SUCCESS!___
+1~~>'n' i scold ow xxx
+1~~>'n' i scold hour ___SUCCESS!___
+1~~>'n' i scold our ___SUCCESS!___
+1~~>'n' i fff
+1~~>'n' ice coe fff
+1~~>'n' ice coal dhow xxx
+1~~>'n' ice coal dow xxx
+1~~>'n' ice coal dour ___SUCCESS!___
+1~~>'n' ice coal dower ___SUCCESS!___
+1~~>'n' ice cole dhow xxx
+1~~>'n' ice cole dow xxx
+1~~>'n' ice cole dour ___SUCCESS!___
+1~~>'n' ice cole dower ___SUCCESS!___
+1~~>'n' ice kohl dhow xxx
+1~~>'n' ice kohl dow xxx
+1~~>'n' ice kohl dour ___SUCCESS!___
+1~~>'n' ice kohl dower ___SUCCESS!___
+1~~>'n' ice cold ow xxx
+1~~>'n' ice cold hour ___SUCCESS!___
+1~~>'n' ice cold our ___SUCCESS!___
+1~~>'n' ice fff
+1~~>'n' ice-cold ow xxx
+1~~>'n' ice-cold hour ___SUCCESS!___
+1~~>'n' ice-cold our ___SUCCESS!___
+1~~>'n' fff
+1~~>fff
+Phonetic interpretation 2 ("A"naIs"kould"aU`r)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = A|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = n|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++nigh skol dhow xxx
++++++++++nigh skol dow xxx
++++++++++nigh skol dour ___SUCCESS!___
++++++++++nigh skol dower ___SUCCESS!___
++++++++++nigh scold ow xxx
++++++++++nigh scold hour ___SUCCESS!___
++++++++++nigh scold our ___SUCCESS!___
++++++++++nigh fff
++++++++++nye skol dhow xxx
++++++++++nye skol dow xxx
++++++++++nye skol dour ___SUCCESS!___
++++++++++nye skol dower ___SUCCESS!___
++++++++++nye scold ow xxx
++++++++++nye scold hour ___SUCCESS!___
++++++++++nye scold our ___SUCCESS!___
++++++++++nye fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naIs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++gneiss coe fff
++++++++++gneiss coal dhow xxx
++++++++++gneiss coal dow xxx
++++++++++gneiss coal dour ___SUCCESS!___
++++++++++gneiss coal dower ___SUCCESS!___
++++++++++gneiss cole dhow xxx
++++++++++gneiss cole dow xxx
++++++++++gneiss cole dour ___SUCCESS!___
++++++++++gneiss cole dower ___SUCCESS!___
++++++++++gneiss kohl dhow xxx
++++++++++gneiss kohl dow xxx
++++++++++gneiss kohl dour ___SUCCESS!___
++++++++++gneiss kohl dower ___SUCCESS!___
++++++++++gneiss cold ow xxx
++++++++++gneiss cold hour ___SUCCESS!___
++++++++++gneiss cold our ___SUCCESS!___
++++++++++gneiss fff
++++++++++nice coe fff
++++++++++nice coal dhow xxx
++++++++++nice coal dow xxx
++++++++++nice coal dour ___SUCCESS!___
++++++++++nice coal dower ___SUCCESS!___
++++++++++nice cole dhow xxx
++++++++++nice cole dow xxx
++++++++++nice cole dour ___SUCCESS!___
++++++++++nice cole dower ___SUCCESS!___
++++++++++nice kohl dhow xxx
++++++++++nice kohl dow xxx
++++++++++nice kohl dour ___SUCCESS!___
++++++++++nice kohl dower ___SUCCESS!___
++++++++++nice cold ow xxx
++++++++++nice cold hour ___SUCCESS!___
++++++++++nice cold our ___SUCCESS!___
++++++++++nice fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = naIsk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = naIsk
+final queryterm: |naIsk%|
++++++++++a nigh skol dhow xxx
++++++++++a nigh skol dow xxx
++++++++++a nigh skol dour ___SUCCESS!___
++++++++++a nigh skol dower ___SUCCESS!___
++++++++++a nigh scold ow xxx
++++++++++a nigh scold hour ___SUCCESS!___
++++++++++a nigh scold our ___SUCCESS!___
++++++++++a nigh fff
++++++++++a nye skol dhow xxx
++++++++++a nye skol dow xxx
++++++++++a nye skol dour ___SUCCESS!___
++++++++++a nye skol dower ___SUCCESS!___
++++++++++a nye scold ow xxx
++++++++++a nye scold hour ___SUCCESS!___
++++++++++a nye scold our ___SUCCESS!___
++++++++++a nye fff
++++++++++a gneiss coe fff
++++++++++a gneiss coal dhow xxx
++++++++++a gneiss coal dow xxx
++++++++++a gneiss coal dour ___SUCCESS!___
++++++++++a gneiss coal dower ___SUCCESS!___
++++++++++a gneiss cole dhow xxx
++++++++++a gneiss cole dow xxx
++++++++++a gneiss cole dour ___SUCCESS!___
++++++++++a gneiss cole dower ___SUCCESS!___
++++++++++a gneiss kohl dhow xxx
++++++++++a gneiss kohl dow xxx
++++++++++a gneiss kohl dour ___SUCCESS!___
++++++++++a gneiss kohl dower ___SUCCESS!___
++++++++++a gneiss cold ow xxx
++++++++++a gneiss cold hour ___SUCCESS!___
++++++++++a gneiss cold our ___SUCCESS!___
++++++++++a gneiss fff
++++++++++a nice coe fff
++++++++++a nice coal dhow xxx
++++++++++a nice coal dow xxx
++++++++++a nice coal dour ___SUCCESS!___
++++++++++a nice coal dower ___SUCCESS!___
++++++++++a nice cole dhow xxx
++++++++++a nice cole dow xxx
++++++++++a nice cole dour ___SUCCESS!___
++++++++++a nice cole dower ___SUCCESS!___
++++++++++a nice kohl dhow xxx
++++++++++a nice kohl dow xxx
++++++++++a nice kohl dour ___SUCCESS!___
++++++++++a nice kohl dower ___SUCCESS!___
++++++++++a nice cold ow xxx
++++++++++a nice cold hour ___SUCCESS!___
++++++++++a nice cold our ___SUCCESS!___
++++++++++a nice fff
++++++++++a fff
++++++++++ah nigh skol dhow xxx
++++++++++ah nigh skol dow xxx
++++++++++ah nigh skol dour ___SUCCESS!___
++++++++++ah nigh skol dower ___SUCCESS!___
++++++++++ah nigh scold ow xxx
++++++++++ah nigh scold hour ___SUCCESS!___
++++++++++ah nigh scold our ___SUCCESS!___
++++++++++ah nigh fff
++++++++++ah nye skol dhow xxx
++++++++++ah nye skol dow xxx
++++++++++ah nye skol dour ___SUCCESS!___
++++++++++ah nye skol dower ___SUCCESS!___
++++++++++ah nye scold ow xxx
++++++++++ah nye scold hour ___SUCCESS!___
++++++++++ah nye scold our ___SUCCESS!___
++++++++++ah nye fff
++++++++++ah gneiss coe fff
++++++++++ah gneiss coal dhow xxx
++++++++++ah gneiss coal dow xxx
++++++++++ah gneiss coal dour ___SUCCESS!___
++++++++++ah gneiss coal dower ___SUCCESS!___
++++++++++ah gneiss cole dhow xxx
++++++++++ah gneiss cole dow xxx
++++++++++ah gneiss cole dour ___SUCCESS!___
++++++++++ah gneiss cole dower ___SUCCESS!___
++++++++++ah gneiss kohl dhow xxx
++++++++++ah gneiss kohl dow xxx
++++++++++ah gneiss kohl dour ___SUCCESS!___
++++++++++ah gneiss kohl dower ___SUCCESS!___
++++++++++ah gneiss cold ow xxx
++++++++++ah gneiss cold hour ___SUCCESS!___
++++++++++ah gneiss cold our ___SUCCESS!___
++++++++++ah gneiss fff
++++++++++ah nice coe fff
++++++++++ah nice coal dhow xxx
++++++++++ah nice coal dow xxx
++++++++++ah nice coal dour ___SUCCESS!___
++++++++++ah nice coal dower ___SUCCESS!___
++++++++++ah nice cole dhow xxx
++++++++++ah nice cole dow xxx
++++++++++ah nice cole dour ___SUCCESS!___
++++++++++ah nice cole dower ___SUCCESS!___
++++++++++ah nice kohl dhow xxx
++++++++++ah nice kohl dow xxx
++++++++++ah nice kohl dour ___SUCCESS!___
++++++++++ah nice kohl dower ___SUCCESS!___
++++++++++ah nice cold ow xxx
++++++++++ah nice cold hour ___SUCCESS!___
++++++++++ah nice cold our ___SUCCESS!___
++++++++++ah nice fff
++++++++++ah fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = An|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++aye skol dhow xxx
++++++++++aye skol dow xxx
++++++++++aye skol dour ___SUCCESS!___
++++++++++aye skol dower ___SUCCESS!___
++++++++++aye scold ow xxx
++++++++++aye scold hour ___SUCCESS!___
++++++++++aye scold our ___SUCCESS!___
++++++++++aye fff
++++++++++ay skol dhow xxx
++++++++++ay skol dow xxx
++++++++++ay skol dour ___SUCCESS!___
++++++++++ay skol dower ___SUCCESS!___
++++++++++ay scold ow xxx
++++++++++ay scold hour ___SUCCESS!___
++++++++++ay scold our ___SUCCESS!___
++++++++++ay fff
++++++++++eye skol dhow xxx
++++++++++eye skol dow xxx
++++++++++eye skol dour ___SUCCESS!___
++++++++++eye skol dower ___SUCCESS!___
++++++++++eye scold ow xxx
++++++++++eye scold hour ___SUCCESS!___
++++++++++eye scold our ___SUCCESS!___
++++++++++eye fff
++++++++++i skol dhow xxx
++++++++++i skol dow xxx
++++++++++i skol dour ___SUCCESS!___
++++++++++i skol dower ___SUCCESS!___
++++++++++i scold ow xxx
++++++++++i scold hour ___SUCCESS!___
++++++++++i scold our ___SUCCESS!___
++++++++++i fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++ice coe fff
++++++++++ice coal dhow xxx
++++++++++ice coal dow xxx
++++++++++ice coal dour ___SUCCESS!___
++++++++++ice coal dower ___SUCCESS!___
++++++++++ice cole dhow xxx
++++++++++ice cole dow xxx
++++++++++ice cole dour ___SUCCESS!___
++++++++++ice cole dower ___SUCCESS!___
++++++++++ice kohl dhow xxx
++++++++++ice kohl dow xxx
++++++++++ice kohl dour ___SUCCESS!___
++++++++++ice kohl dower ___SUCCESS!___
++++++++++ice cold ow xxx
++++++++++ice cold hour ___SUCCESS!___
++++++++++ice cold our ___SUCCESS!___
++++++++++ice fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIsk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIsk
+final queryterm: |aIsk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIskou
+final queryterm: |aIskou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskoul|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIskoul
+final queryterm: |aIskoul%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++ice-cold ow xxx
++++++++++ice-cold hour ___SUCCESS!___
++++++++++ice-cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aIskouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = aIskouldaU
+final queryterm: |aIskouldaU%|
++++++++++on aye skol dhow xxx
++++++++++on aye skol dow xxx
++++++++++on aye skol dour ___SUCCESS!___
++++++++++on aye skol dower ___SUCCESS!___
++++++++++on aye scold ow xxx
++++++++++on aye scold hour ___SUCCESS!___
++++++++++on aye scold our ___SUCCESS!___
++++++++++on aye fff
++++++++++on ay skol dhow xxx
++++++++++on ay skol dow xxx
++++++++++on ay skol dour ___SUCCESS!___
++++++++++on ay skol dower ___SUCCESS!___
++++++++++on ay scold ow xxx
++++++++++on ay scold hour ___SUCCESS!___
++++++++++on ay scold our ___SUCCESS!___
++++++++++on ay fff
++++++++++on eye skol dhow xxx
++++++++++on eye skol dow xxx
++++++++++on eye skol dour ___SUCCESS!___
++++++++++on eye skol dower ___SUCCESS!___
++++++++++on eye scold ow xxx
++++++++++on eye scold hour ___SUCCESS!___
++++++++++on eye scold our ___SUCCESS!___
++++++++++on eye fff
++++++++++on i skol dhow xxx
++++++++++on i skol dow xxx
++++++++++on i skol dour ___SUCCESS!___
++++++++++on i skol dower ___SUCCESS!___
++++++++++on i scold ow xxx
++++++++++on i scold hour ___SUCCESS!___
++++++++++on i scold our ___SUCCESS!___
++++++++++on i fff
++++++++++on ice coe fff
++++++++++on ice coal dhow xxx
++++++++++on ice coal dow xxx
++++++++++on ice coal dour ___SUCCESS!___
++++++++++on ice coal dower ___SUCCESS!___
++++++++++on ice cole dhow xxx
++++++++++on ice cole dow xxx
++++++++++on ice cole dour ___SUCCESS!___
++++++++++on ice cole dower ___SUCCESS!___
++++++++++on ice kohl dhow xxx
++++++++++on ice kohl dow xxx
++++++++++on ice kohl dour ___SUCCESS!___
++++++++++on ice kohl dower ___SUCCESS!___
++++++++++on ice cold ow xxx
++++++++++on ice cold hour ___SUCCESS!___
++++++++++on ice cold our ___SUCCESS!___
++++++++++on ice fff
++++++++++on ice-cold ow xxx
++++++++++on ice-cold hour ___SUCCESS!___
++++++++++on ice-cold our ___SUCCESS!___
++++++++++on fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = AnaI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = AnaI
+final queryterm: |AnaI%|
+exits findOrthoStrsForPhoneSeq
+2~~>a nigh skol dhow xxx
+2~~>a nigh skol dow xxx
+2~~>a nigh skol dour ___SUCCESS!___
+2~~>a nigh skol dower ___SUCCESS!___
+2~~>a nigh scold ow xxx
+2~~>a nigh scold hour ___SUCCESS!___
+2~~>a nigh scold our ___SUCCESS!___
+2~~>a nigh fff
+2~~>a nye skol dhow xxx
+2~~>a nye skol dow xxx
+2~~>a nye skol dour ___SUCCESS!___
+2~~>a nye skol dower ___SUCCESS!___
+2~~>a nye scold ow xxx
+2~~>a nye scold hour ___SUCCESS!___
+2~~>a nye scold our ___SUCCESS!___
+2~~>a nye fff
+2~~>a gneiss coe fff
+2~~>a gneiss coal dhow xxx
+2~~>a gneiss coal dow xxx
+2~~>a gneiss coal dour ___SUCCESS!___
+2~~>a gneiss coal dower ___SUCCESS!___
+2~~>a gneiss cole dhow xxx
+2~~>a gneiss cole dow xxx
+2~~>a gneiss cole dour ___SUCCESS!___
+2~~>a gneiss cole dower ___SUCCESS!___
+2~~>a gneiss kohl dhow xxx
+2~~>a gneiss kohl dow xxx
+2~~>a gneiss kohl dour ___SUCCESS!___
+2~~>a gneiss kohl dower ___SUCCESS!___
+2~~>a gneiss cold ow xxx
+2~~>a gneiss cold hour ___SUCCESS!___
+2~~>a gneiss cold our ___SUCCESS!___
+2~~>a gneiss fff
+2~~>a nice coe fff
+2~~>a nice coal dhow xxx
+2~~>a nice coal dow xxx
+2~~>a nice coal dour ___SUCCESS!___
+2~~>a nice coal dower ___SUCCESS!___
+2~~>a nice cole dhow xxx
+2~~>a nice cole dow xxx
+2~~>a nice cole dour ___SUCCESS!___
+2~~>a nice cole dower ___SUCCESS!___
+2~~>a nice kohl dhow xxx
+2~~>a nice kohl dow xxx
+2~~>a nice kohl dour ___SUCCESS!___
+2~~>a nice kohl dower ___SUCCESS!___
+2~~>a nice cold ow xxx
+2~~>a nice cold hour ___SUCCESS!___
+2~~>a nice cold our ___SUCCESS!___
+2~~>a nice fff
+2~~>a fff
+2~~>ah nigh skol dhow xxx
+2~~>ah nigh skol dow xxx
+2~~>ah nigh skol dour ___SUCCESS!___
+2~~>ah nigh skol dower ___SUCCESS!___
+2~~>ah nigh scold ow xxx
+2~~>ah nigh scold hour ___SUCCESS!___
+2~~>ah nigh scold our ___SUCCESS!___
+2~~>ah nigh fff
+2~~>ah nye skol dhow xxx
+2~~>ah nye skol dow xxx
+2~~>ah nye skol dour ___SUCCESS!___
+2~~>ah nye skol dower ___SUCCESS!___
+2~~>ah nye scold ow xxx
+2~~>ah nye scold hour ___SUCCESS!___
+2~~>ah nye scold our ___SUCCESS!___
+2~~>ah nye fff
+2~~>ah gneiss coe fff
+2~~>ah gneiss coal dhow xxx
+2~~>ah gneiss coal dow xxx
+2~~>ah gneiss coal dour ___SUCCESS!___
+2~~>ah gneiss coal dower ___SUCCESS!___
+2~~>ah gneiss cole dhow xxx
+2~~>ah gneiss cole dow xxx
+2~~>ah gneiss cole dour ___SUCCESS!___
+2~~>ah gneiss cole dower ___SUCCESS!___
+2~~>ah gneiss kohl dhow xxx
+2~~>ah gneiss kohl dow xxx
+2~~>ah gneiss kohl dour ___SUCCESS!___
+2~~>ah gneiss kohl dower ___SUCCESS!___
+2~~>ah gneiss cold ow xxx
+2~~>ah gneiss cold hour ___SUCCESS!___
+2~~>ah gneiss cold our ___SUCCESS!___
+2~~>ah gneiss fff
+2~~>ah nice coe fff
+2~~>ah nice coal dhow xxx
+2~~>ah nice coal dow xxx
+2~~>ah nice coal dour ___SUCCESS!___
+2~~>ah nice coal dower ___SUCCESS!___
+2~~>ah nice cole dhow xxx
+2~~>ah nice cole dow xxx
+2~~>ah nice cole dour ___SUCCESS!___
+2~~>ah nice cole dower ___SUCCESS!___
+2~~>ah nice kohl dhow xxx
+2~~>ah nice kohl dow xxx
+2~~>ah nice kohl dour ___SUCCESS!___
+2~~>ah nice kohl dower ___SUCCESS!___
+2~~>ah nice cold ow xxx
+2~~>ah nice cold hour ___SUCCESS!___
+2~~>ah nice cold our ___SUCCESS!___
+2~~>ah nice fff
+2~~>ah fff
+2~~>on aye skol dhow xxx
+2~~>on aye skol dow xxx
+2~~>on aye skol dour ___SUCCESS!___
+2~~>on aye skol dower ___SUCCESS!___
+2~~>on aye scold ow xxx
+2~~>on aye scold hour ___SUCCESS!___
+2~~>on aye scold our ___SUCCESS!___
+2~~>on aye fff
+2~~>on ay skol dhow xxx
+2~~>on ay skol dow xxx
+2~~>on ay skol dour ___SUCCESS!___
+2~~>on ay skol dower ___SUCCESS!___
+2~~>on ay scold ow xxx
+2~~>on ay scold hour ___SUCCESS!___
+2~~>on ay scold our ___SUCCESS!___
+2~~>on ay fff
+2~~>on eye skol dhow xxx
+2~~>on eye skol dow xxx
+2~~>on eye skol dour ___SUCCESS!___
+2~~>on eye skol dower ___SUCCESS!___
+2~~>on eye scold ow xxx
+2~~>on eye scold hour ___SUCCESS!___
+2~~>on eye scold our ___SUCCESS!___
+2~~>on eye fff
+2~~>on i skol dhow xxx
+2~~>on i skol dow xxx
+2~~>on i skol dour ___SUCCESS!___
+2~~>on i skol dower ___SUCCESS!___
+2~~>on i scold ow xxx
+2~~>on i scold hour ___SUCCESS!___
+2~~>on i scold our ___SUCCESS!___
+2~~>on i fff
+2~~>on ice coe fff
+2~~>on ice coal dhow xxx
+2~~>on ice coal dow xxx
+2~~>on ice coal dour ___SUCCESS!___
+2~~>on ice coal dower ___SUCCESS!___
+2~~>on ice cole dhow xxx
+2~~>on ice cole dow xxx
+2~~>on ice cole dour ___SUCCESS!___
+2~~>on ice cole dower ___SUCCESS!___
+2~~>on ice kohl dhow xxx
+2~~>on ice kohl dow xxx
+2~~>on ice kohl dour ___SUCCESS!___
+2~~>on ice kohl dower ___SUCCESS!___
+2~~>on ice cold ow xxx
+2~~>on ice cold hour ___SUCCESS!___
+2~~>on ice cold our ___SUCCESS!___
+2~~>on ice fff
+2~~>on ice-cold ow xxx
+2~~>on ice-cold hour ___SUCCESS!___
+2~~>on ice-cold our ___SUCCESS!___
+2~~>on fff
+2~~>fff
+Phonetic interpretation 3 ("e"nis"kould"aU`r)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = e|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = n|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ni|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++knee skol dhow xxx
++++++++++knee skol dow xxx
++++++++++knee skol dour ___SUCCESS!___
++++++++++knee skol dower ___SUCCESS!___
++++++++++knee scold ow xxx
++++++++++knee scold hour ___SUCCESS!___
++++++++++knee scold our ___SUCCESS!___
++++++++++knee fff
++++++++++ne skol dhow xxx
++++++++++ne skol dow xxx
++++++++++ne skol dour ___SUCCESS!___
++++++++++ne skol dower ___SUCCESS!___
++++++++++ne scold ow xxx
++++++++++ne scold hour ___SUCCESS!___
++++++++++ne scold our ___SUCCESS!___
++++++++++ne fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = nis|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++nice coe fff
++++++++++nice coal dhow xxx
++++++++++nice coal dow xxx
++++++++++nice coal dour ___SUCCESS!___
++++++++++nice coal dower ___SUCCESS!___
++++++++++nice cole dhow xxx
++++++++++nice cole dow xxx
++++++++++nice cole dour ___SUCCESS!___
++++++++++nice cole dower ___SUCCESS!___
++++++++++nice kohl dhow xxx
++++++++++nice kohl dow xxx
++++++++++nice kohl dour ___SUCCESS!___
++++++++++nice kohl dower ___SUCCESS!___
++++++++++nice cold ow xxx
++++++++++nice cold hour ___SUCCESS!___
++++++++++nice cold our ___SUCCESS!___
++++++++++nice fff
++++++++++niece coe fff
++++++++++niece coal dhow xxx
++++++++++niece coal dow xxx
++++++++++niece coal dour ___SUCCESS!___
++++++++++niece coal dower ___SUCCESS!___
++++++++++niece cole dhow xxx
++++++++++niece cole dow xxx
++++++++++niece cole dour ___SUCCESS!___
++++++++++niece cole dower ___SUCCESS!___
++++++++++niece kohl dhow xxx
++++++++++niece kohl dow xxx
++++++++++niece kohl dour ___SUCCESS!___
++++++++++niece kohl dower ___SUCCESS!___
++++++++++niece cold ow xxx
++++++++++niece cold hour ___SUCCESS!___
++++++++++niece cold our ___SUCCESS!___
++++++++++niece fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = nisk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = nisk
+final queryterm: |nisk%|
++++++++++a knee skol dhow xxx
++++++++++a knee skol dow xxx
++++++++++a knee skol dour ___SUCCESS!___
++++++++++a knee skol dower ___SUCCESS!___
++++++++++a knee scold ow xxx
++++++++++a knee scold hour ___SUCCESS!___
++++++++++a knee scold our ___SUCCESS!___
++++++++++a knee fff
++++++++++a ne skol dhow xxx
++++++++++a ne skol dow xxx
++++++++++a ne skol dour ___SUCCESS!___
++++++++++a ne skol dower ___SUCCESS!___
++++++++++a ne scold ow xxx
++++++++++a ne scold hour ___SUCCESS!___
++++++++++a ne scold our ___SUCCESS!___
++++++++++a ne fff
++++++++++a nice coe fff
++++++++++a nice coal dhow xxx
++++++++++a nice coal dow xxx
++++++++++a nice coal dour ___SUCCESS!___
++++++++++a nice coal dower ___SUCCESS!___
++++++++++a nice cole dhow xxx
++++++++++a nice cole dow xxx
++++++++++a nice cole dour ___SUCCESS!___
++++++++++a nice cole dower ___SUCCESS!___
++++++++++a nice kohl dhow xxx
++++++++++a nice kohl dow xxx
++++++++++a nice kohl dour ___SUCCESS!___
++++++++++a nice kohl dower ___SUCCESS!___
++++++++++a nice cold ow xxx
++++++++++a nice cold hour ___SUCCESS!___
++++++++++a nice cold our ___SUCCESS!___
++++++++++a nice fff
++++++++++a niece coe fff
++++++++++a niece coal dhow xxx
++++++++++a niece coal dow xxx
++++++++++a niece coal dour ___SUCCESS!___
++++++++++a niece coal dower ___SUCCESS!___
++++++++++a niece cole dhow xxx
++++++++++a niece cole dow xxx
++++++++++a niece cole dour ___SUCCESS!___
++++++++++a niece cole dower ___SUCCESS!___
++++++++++a niece kohl dhow xxx
++++++++++a niece kohl dow xxx
++++++++++a niece kohl dour ___SUCCESS!___
++++++++++a niece kohl dower ___SUCCESS!___
++++++++++a niece cold ow xxx
++++++++++a niece cold hour ___SUCCESS!___
++++++++++a niece cold our ___SUCCESS!___
++++++++++a niece fff
++++++++++a fff
++++++++++eh knee skol dhow xxx
++++++++++eh knee skol dow xxx
++++++++++eh knee skol dour ___SUCCESS!___
++++++++++eh knee skol dower ___SUCCESS!___
++++++++++eh knee scold ow xxx
++++++++++eh knee scold hour ___SUCCESS!___
++++++++++eh knee scold our ___SUCCESS!___
++++++++++eh knee fff
++++++++++eh ne skol dhow xxx
++++++++++eh ne skol dow xxx
++++++++++eh ne skol dour ___SUCCESS!___
++++++++++eh ne skol dower ___SUCCESS!___
++++++++++eh ne scold ow xxx
++++++++++eh ne scold hour ___SUCCESS!___
++++++++++eh ne scold our ___SUCCESS!___
++++++++++eh ne fff
++++++++++eh nice coe fff
++++++++++eh nice coal dhow xxx
++++++++++eh nice coal dow xxx
++++++++++eh nice coal dour ___SUCCESS!___
++++++++++eh nice coal dower ___SUCCESS!___
++++++++++eh nice cole dhow xxx
++++++++++eh nice cole dow xxx
++++++++++eh nice cole dour ___SUCCESS!___
++++++++++eh nice cole dower ___SUCCESS!___
++++++++++eh nice kohl dhow xxx
++++++++++eh nice kohl dow xxx
++++++++++eh nice kohl dour ___SUCCESS!___
++++++++++eh nice kohl dower ___SUCCESS!___
++++++++++eh nice cold ow xxx
++++++++++eh nice cold hour ___SUCCESS!___
++++++++++eh nice cold our ___SUCCESS!___
++++++++++eh nice fff
++++++++++eh niece coe fff
++++++++++eh niece coal dhow xxx
++++++++++eh niece coal dow xxx
++++++++++eh niece coal dour ___SUCCESS!___
++++++++++eh niece coal dower ___SUCCESS!___
++++++++++eh niece cole dhow xxx
++++++++++eh niece cole dow xxx
++++++++++eh niece cole dour ___SUCCESS!___
++++++++++eh niece cole dower ___SUCCESS!___
++++++++++eh niece kohl dhow xxx
++++++++++eh niece kohl dow xxx
++++++++++eh niece kohl dour ___SUCCESS!___
++++++++++eh niece kohl dower ___SUCCESS!___
++++++++++eh niece cold ow xxx
++++++++++eh niece cold hour ___SUCCESS!___
++++++++++eh niece cold our ___SUCCESS!___
++++++++++eh niece fff
++++++++++eh fff
++++++++++et knee skol dhow xxx
++++++++++et knee skol dow xxx
++++++++++et knee skol dour ___SUCCESS!___
++++++++++et knee skol dower ___SUCCESS!___
++++++++++et knee scold ow xxx
++++++++++et knee scold hour ___SUCCESS!___
++++++++++et knee scold our ___SUCCESS!___
++++++++++et knee fff
++++++++++et ne skol dhow xxx
++++++++++et ne skol dow xxx
++++++++++et ne skol dour ___SUCCESS!___
++++++++++et ne skol dower ___SUCCESS!___
++++++++++et ne scold ow xxx
++++++++++et ne scold hour ___SUCCESS!___
++++++++++et ne scold our ___SUCCESS!___
++++++++++et ne fff
++++++++++et nice coe fff
++++++++++et nice coal dhow xxx
++++++++++et nice coal dow xxx
++++++++++et nice coal dour ___SUCCESS!___
++++++++++et nice coal dower ___SUCCESS!___
++++++++++et nice cole dhow xxx
++++++++++et nice cole dow xxx
++++++++++et nice cole dour ___SUCCESS!___
++++++++++et nice cole dower ___SUCCESS!___
++++++++++et nice kohl dhow xxx
++++++++++et nice kohl dow xxx
++++++++++et nice kohl dour ___SUCCESS!___
++++++++++et nice kohl dower ___SUCCESS!___
++++++++++et nice cold ow xxx
++++++++++et nice cold hour ___SUCCESS!___
++++++++++et nice cold our ___SUCCESS!___
++++++++++et nice fff
++++++++++et niece coe fff
++++++++++et niece coal dhow xxx
++++++++++et niece coal dow xxx
++++++++++et niece coal dour ___SUCCESS!___
++++++++++et niece coal dower ___SUCCESS!___
++++++++++et niece cole dhow xxx
++++++++++et niece cole dow xxx
++++++++++et niece cole dour ___SUCCESS!___
++++++++++et niece cole dower ___SUCCESS!___
++++++++++et niece kohl dhow xxx
++++++++++et niece kohl dow xxx
++++++++++et niece kohl dour ___SUCCESS!___
++++++++++et niece kohl dower ___SUCCESS!___
++++++++++et niece cold ow xxx
++++++++++et niece cold hour ___SUCCESS!___
++++++++++et niece cold our ___SUCCESS!___
++++++++++et niece fff
++++++++++et fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = en|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = en
+final queryterm: |en%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = eni|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = eni
+final queryterm: |eni%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = enis|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = enis
+final queryterm: |enis%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = enisk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = enisk
+final queryterm: |enisk%|
+exits findOrthoStrsForPhoneSeq
+3~~>a knee skol dhow xxx
+3~~>a knee skol dow xxx
+3~~>a knee skol dour ___SUCCESS!___
+3~~>a knee skol dower ___SUCCESS!___
+3~~>a knee scold ow xxx
+3~~>a knee scold hour ___SUCCESS!___
+3~~>a knee scold our ___SUCCESS!___
+3~~>a knee fff
+3~~>a ne skol dhow xxx
+3~~>a ne skol dow xxx
+3~~>a ne skol dour ___SUCCESS!___
+3~~>a ne skol dower ___SUCCESS!___
+3~~>a ne scold ow xxx
+3~~>a ne scold hour ___SUCCESS!___
+3~~>a ne scold our ___SUCCESS!___
+3~~>a ne fff
+3~~>a nice coe fff
+3~~>a nice coal dhow xxx
+3~~>a nice coal dow xxx
+3~~>a nice coal dour ___SUCCESS!___
+3~~>a nice coal dower ___SUCCESS!___
+3~~>a nice cole dhow xxx
+3~~>a nice cole dow xxx
+3~~>a nice cole dour ___SUCCESS!___
+3~~>a nice cole dower ___SUCCESS!___
+3~~>a nice kohl dhow xxx
+3~~>a nice kohl dow xxx
+3~~>a nice kohl dour ___SUCCESS!___
+3~~>a nice kohl dower ___SUCCESS!___
+3~~>a nice cold ow xxx
+3~~>a nice cold hour ___SUCCESS!___
+3~~>a nice cold our ___SUCCESS!___
+3~~>a nice fff
+3~~>a niece coe fff
+3~~>a niece coal dhow xxx
+3~~>a niece coal dow xxx
+3~~>a niece coal dour ___SUCCESS!___
+3~~>a niece coal dower ___SUCCESS!___
+3~~>a niece cole dhow xxx
+3~~>a niece cole dow xxx
+3~~>a niece cole dour ___SUCCESS!___
+3~~>a niece cole dower ___SUCCESS!___
+3~~>a niece kohl dhow xxx
+3~~>a niece kohl dow xxx
+3~~>a niece kohl dour ___SUCCESS!___
+3~~>a niece kohl dower ___SUCCESS!___
+3~~>a niece cold ow xxx
+3~~>a niece cold hour ___SUCCESS!___
+3~~>a niece cold our ___SUCCESS!___
+3~~>a niece fff
+3~~>a fff
+3~~>eh knee skol dhow xxx
+3~~>eh knee skol dow xxx
+3~~>eh knee skol dour ___SUCCESS!___
+3~~>eh knee skol dower ___SUCCESS!___
+3~~>eh knee scold ow xxx
+3~~>eh knee scold hour ___SUCCESS!___
+3~~>eh knee scold our ___SUCCESS!___
+3~~>eh knee fff
+3~~>eh ne skol dhow xxx
+3~~>eh ne skol dow xxx
+3~~>eh ne skol dour ___SUCCESS!___
+3~~>eh ne skol dower ___SUCCESS!___
+3~~>eh ne scold ow xxx
+3~~>eh ne scold hour ___SUCCESS!___
+3~~>eh ne scold our ___SUCCESS!___
+3~~>eh ne fff
+3~~>eh nice coe fff
+3~~>eh nice coal dhow xxx
+3~~>eh nice coal dow xxx
+3~~>eh nice coal dour ___SUCCESS!___
+3~~>eh nice coal dower ___SUCCESS!___
+3~~>eh nice cole dhow xxx
+3~~>eh nice cole dow xxx
+3~~>eh nice cole dour ___SUCCESS!___
+3~~>eh nice cole dower ___SUCCESS!___
+3~~>eh nice kohl dhow xxx
+3~~>eh nice kohl dow xxx
+3~~>eh nice kohl dour ___SUCCESS!___
+3~~>eh nice kohl dower ___SUCCESS!___
+3~~>eh nice cold ow xxx
+3~~>eh nice cold hour ___SUCCESS!___
+3~~>eh nice cold our ___SUCCESS!___
+3~~>eh nice fff
+3~~>eh niece coe fff
+3~~>eh niece coal dhow xxx
+3~~>eh niece coal dow xxx
+3~~>eh niece coal dour ___SUCCESS!___
+3~~>eh niece coal dower ___SUCCESS!___
+3~~>eh niece cole dhow xxx
+3~~>eh niece cole dow xxx
+3~~>eh niece cole dour ___SUCCESS!___
+3~~>eh niece cole dower ___SUCCESS!___
+3~~>eh niece kohl dhow xxx
+3~~>eh niece kohl dow xxx
+3~~>eh niece kohl dour ___SUCCESS!___
+3~~>eh niece kohl dower ___SUCCESS!___
+3~~>eh niece cold ow xxx
+3~~>eh niece cold hour ___SUCCESS!___
+3~~>eh niece cold our ___SUCCESS!___
+3~~>eh niece fff
+3~~>eh fff
+3~~>et knee skol dhow xxx
+3~~>et knee skol dow xxx
+3~~>et knee skol dour ___SUCCESS!___
+3~~>et knee skol dower ___SUCCESS!___
+3~~>et knee scold ow xxx
+3~~>et knee scold hour ___SUCCESS!___
+3~~>et knee scold our ___SUCCESS!___
+3~~>et knee fff
+3~~>et ne skol dhow xxx
+3~~>et ne skol dow xxx
+3~~>et ne skol dour ___SUCCESS!___
+3~~>et ne skol dower ___SUCCESS!___
+3~~>et ne scold ow xxx
+3~~>et ne scold hour ___SUCCESS!___
+3~~>et ne scold our ___SUCCESS!___
+3~~>et ne fff
+3~~>et nice coe fff
+3~~>et nice coal dhow xxx
+3~~>et nice coal dow xxx
+3~~>et nice coal dour ___SUCCESS!___
+3~~>et nice coal dower ___SUCCESS!___
+3~~>et nice cole dhow xxx
+3~~>et nice cole dow xxx
+3~~>et nice cole dour ___SUCCESS!___
+3~~>et nice cole dower ___SUCCESS!___
+3~~>et nice kohl dhow xxx
+3~~>et nice kohl dow xxx
+3~~>et nice kohl dour ___SUCCESS!___
+3~~>et nice kohl dower ___SUCCESS!___
+3~~>et nice cold ow xxx
+3~~>et nice cold hour ___SUCCESS!___
+3~~>et nice cold our ___SUCCESS!___
+3~~>et nice fff
+3~~>et niece coe fff
+3~~>et niece coal dhow xxx
+3~~>et niece coal dow xxx
+3~~>et niece coal dour ___SUCCESS!___
+3~~>et niece coal dower ___SUCCESS!___
+3~~>et niece cole dhow xxx
+3~~>et niece cole dow xxx
+3~~>et niece cole dour ___SUCCESS!___
+3~~>et niece cole dower ___SUCCESS!___
+3~~>et niece kohl dhow xxx
+3~~>et niece kohl dow xxx
+3~~>et niece kohl dour ___SUCCESS!___
+3~~>et niece kohl dower ___SUCCESS!___
+3~~>et niece cold ow xxx
+3~~>et niece cold hour ___SUCCESS!___
+3~~>et niece cold our ___SUCCESS!___
+3~~>et niece fff
+3~~>et fff
+3~~>fff
+Phonetic interpretation 4 (@"nis"kould"aU`r)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = n|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ni|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++knee skol dhow xxx
++++++++++knee skol dow xxx
++++++++++knee skol dour ___SUCCESS!___
++++++++++knee skol dower ___SUCCESS!___
++++++++++knee scold ow xxx
++++++++++knee scold hour ___SUCCESS!___
++++++++++knee scold our ___SUCCESS!___
++++++++++knee fff
++++++++++ne skol dhow xxx
++++++++++ne skol dow xxx
++++++++++ne skol dour ___SUCCESS!___
++++++++++ne skol dower ___SUCCESS!___
++++++++++ne scold ow xxx
++++++++++ne scold hour ___SUCCESS!___
++++++++++ne scold our ___SUCCESS!___
++++++++++ne fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = nis|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++nice coe fff
++++++++++nice coal dhow xxx
++++++++++nice coal dow xxx
++++++++++nice coal dour ___SUCCESS!___
++++++++++nice coal dower ___SUCCESS!___
++++++++++nice cole dhow xxx
++++++++++nice cole dow xxx
++++++++++nice cole dour ___SUCCESS!___
++++++++++nice cole dower ___SUCCESS!___
++++++++++nice kohl dhow xxx
++++++++++nice kohl dow xxx
++++++++++nice kohl dour ___SUCCESS!___
++++++++++nice kohl dower ___SUCCESS!___
++++++++++nice cold ow xxx
++++++++++nice cold hour ___SUCCESS!___
++++++++++nice cold our ___SUCCESS!___
++++++++++nice fff
++++++++++niece coe fff
++++++++++niece coal dhow xxx
++++++++++niece coal dow xxx
++++++++++niece coal dour ___SUCCESS!___
++++++++++niece coal dower ___SUCCESS!___
++++++++++niece cole dhow xxx
++++++++++niece cole dow xxx
++++++++++niece cole dour ___SUCCESS!___
++++++++++niece cole dower ___SUCCESS!___
++++++++++niece kohl dhow xxx
++++++++++niece kohl dow xxx
++++++++++niece kohl dour ___SUCCESS!___
++++++++++niece kohl dower ___SUCCESS!___
++++++++++niece cold ow xxx
++++++++++niece cold hour ___SUCCESS!___
++++++++++niece cold our ___SUCCESS!___
++++++++++niece fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = nisk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = nisk
+final queryterm: |nisk%|
++++++++++a knee skol dhow xxx
++++++++++a knee skol dow xxx
++++++++++a knee skol dour ___SUCCESS!___
++++++++++a knee skol dower ___SUCCESS!___
++++++++++a knee scold ow xxx
++++++++++a knee scold hour ___SUCCESS!___
++++++++++a knee scold our ___SUCCESS!___
++++++++++a knee fff
++++++++++a ne skol dhow xxx
++++++++++a ne skol dow xxx
++++++++++a ne skol dour ___SUCCESS!___
++++++++++a ne skol dower ___SUCCESS!___
++++++++++a ne scold ow xxx
++++++++++a ne scold hour ___SUCCESS!___
++++++++++a ne scold our ___SUCCESS!___
++++++++++a ne fff
++++++++++a nice coe fff
++++++++++a nice coal dhow xxx
++++++++++a nice coal dow xxx
++++++++++a nice coal dour ___SUCCESS!___
++++++++++a nice coal dower ___SUCCESS!___
++++++++++a nice cole dhow xxx
++++++++++a nice cole dow xxx
++++++++++a nice cole dour ___SUCCESS!___
++++++++++a nice cole dower ___SUCCESS!___
++++++++++a nice kohl dhow xxx
++++++++++a nice kohl dow xxx
++++++++++a nice kohl dour ___SUCCESS!___
++++++++++a nice kohl dower ___SUCCESS!___
++++++++++a nice cold ow xxx
++++++++++a nice cold hour ___SUCCESS!___
++++++++++a nice cold our ___SUCCESS!___
++++++++++a nice fff
++++++++++a niece coe fff
++++++++++a niece coal dhow xxx
++++++++++a niece coal dow xxx
++++++++++a niece coal dour ___SUCCESS!___
++++++++++a niece coal dower ___SUCCESS!___
++++++++++a niece cole dhow xxx
++++++++++a niece cole dow xxx
++++++++++a niece cole dour ___SUCCESS!___
++++++++++a niece cole dower ___SUCCESS!___
++++++++++a niece kohl dhow xxx
++++++++++a niece kohl dow xxx
++++++++++a niece kohl dour ___SUCCESS!___
++++++++++a niece kohl dower ___SUCCESS!___
++++++++++a niece cold ow xxx
++++++++++a niece cold hour ___SUCCESS!___
++++++++++a niece cold our ___SUCCESS!___
++++++++++a niece fff
++++++++++a fff
++++++++++o' knee skol dhow xxx
++++++++++o' knee skol dow xxx
++++++++++o' knee skol dour ___SUCCESS!___
++++++++++o' knee skol dower ___SUCCESS!___
++++++++++o' knee scold ow xxx
++++++++++o' knee scold hour ___SUCCESS!___
++++++++++o' knee scold our ___SUCCESS!___
++++++++++o' knee fff
++++++++++o' ne skol dhow xxx
++++++++++o' ne skol dow xxx
++++++++++o' ne skol dour ___SUCCESS!___
++++++++++o' ne skol dower ___SUCCESS!___
++++++++++o' ne scold ow xxx
++++++++++o' ne scold hour ___SUCCESS!___
++++++++++o' ne scold our ___SUCCESS!___
++++++++++o' ne fff
++++++++++o' nice coe fff
++++++++++o' nice coal dhow xxx
++++++++++o' nice coal dow xxx
++++++++++o' nice coal dour ___SUCCESS!___
++++++++++o' nice coal dower ___SUCCESS!___
++++++++++o' nice cole dhow xxx
++++++++++o' nice cole dow xxx
++++++++++o' nice cole dour ___SUCCESS!___
++++++++++o' nice cole dower ___SUCCESS!___
++++++++++o' nice kohl dhow xxx
++++++++++o' nice kohl dow xxx
++++++++++o' nice kohl dour ___SUCCESS!___
++++++++++o' nice kohl dower ___SUCCESS!___
++++++++++o' nice cold ow xxx
++++++++++o' nice cold hour ___SUCCESS!___
++++++++++o' nice cold our ___SUCCESS!___
++++++++++o' nice fff
++++++++++o' niece coe fff
++++++++++o' niece coal dhow xxx
++++++++++o' niece coal dow xxx
++++++++++o' niece coal dour ___SUCCESS!___
++++++++++o' niece coal dower ___SUCCESS!___
++++++++++o' niece cole dhow xxx
++++++++++o' niece cole dow xxx
++++++++++o' niece cole dour ___SUCCESS!___
++++++++++o' niece cole dower ___SUCCESS!___
++++++++++o' niece kohl dhow xxx
++++++++++o' niece kohl dow xxx
++++++++++o' niece kohl dour ___SUCCESS!___
++++++++++o' niece kohl dower ___SUCCESS!___
++++++++++o' niece cold ow xxx
++++++++++o' niece cold hour ___SUCCESS!___
++++++++++o' niece cold our ___SUCCESS!___
++++++++++o' niece fff
++++++++++o' fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @n|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = i|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++e skol dhow xxx
++++++++++e skol dow xxx
++++++++++e skol dour ___SUCCESS!___
++++++++++e skol dower ___SUCCESS!___
++++++++++e scold ow xxx
++++++++++e scold hour ___SUCCESS!___
++++++++++e scold our ___SUCCESS!___
++++++++++e fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = is|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = is
+final queryterm: |is%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = isk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = isk
+final queryterm: |isk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = iskou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = iskou
+final queryterm: |iskou%|
++++++++++an e skol dhow xxx
++++++++++an e skol dow xxx
++++++++++an e skol dour ___SUCCESS!___
++++++++++an e skol dower ___SUCCESS!___
++++++++++an e scold ow xxx
++++++++++an e scold hour ___SUCCESS!___
++++++++++an e scold our ___SUCCESS!___
++++++++++an e fff
++++++++++an fff
++++++++++'n' e skol dhow xxx
++++++++++'n' e skol dow xxx
++++++++++'n' e skol dour ___SUCCESS!___
++++++++++'n' e skol dower ___SUCCESS!___
++++++++++'n' e scold ow xxx
++++++++++'n' e scold hour ___SUCCESS!___
++++++++++'n' e scold our ___SUCCESS!___
++++++++++'n' e fff
++++++++++'n' fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @ni|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = @ni
+final queryterm: |@ni%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @nis|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = @nis
+final queryterm: |@nis%|
+exits findOrthoStrsForPhoneSeq
+4~~>a knee skol dhow xxx
+4~~>a knee skol dow xxx
+4~~>a knee skol dour ___SUCCESS!___
+4~~>a knee skol dower ___SUCCESS!___
+4~~>a knee scold ow xxx
+4~~>a knee scold hour ___SUCCESS!___
+4~~>a knee scold our ___SUCCESS!___
+4~~>a knee fff
+4~~>a ne skol dhow xxx
+4~~>a ne skol dow xxx
+4~~>a ne skol dour ___SUCCESS!___
+4~~>a ne skol dower ___SUCCESS!___
+4~~>a ne scold ow xxx
+4~~>a ne scold hour ___SUCCESS!___
+4~~>a ne scold our ___SUCCESS!___
+4~~>a ne fff
+4~~>a nice coe fff
+4~~>a nice coal dhow xxx
+4~~>a nice coal dow xxx
+4~~>a nice coal dour ___SUCCESS!___
+4~~>a nice coal dower ___SUCCESS!___
+4~~>a nice cole dhow xxx
+4~~>a nice cole dow xxx
+4~~>a nice cole dour ___SUCCESS!___
+4~~>a nice cole dower ___SUCCESS!___
+4~~>a nice kohl dhow xxx
+4~~>a nice kohl dow xxx
+4~~>a nice kohl dour ___SUCCESS!___
+4~~>a nice kohl dower ___SUCCESS!___
+4~~>a nice cold ow xxx
+4~~>a nice cold hour ___SUCCESS!___
+4~~>a nice cold our ___SUCCESS!___
+4~~>a nice fff
+4~~>a niece coe fff
+4~~>a niece coal dhow xxx
+4~~>a niece coal dow xxx
+4~~>a niece coal dour ___SUCCESS!___
+4~~>a niece coal dower ___SUCCESS!___
+4~~>a niece cole dhow xxx
+4~~>a niece cole dow xxx
+4~~>a niece cole dour ___SUCCESS!___
+4~~>a niece cole dower ___SUCCESS!___
+4~~>a niece kohl dhow xxx
+4~~>a niece kohl dow xxx
+4~~>a niece kohl dour ___SUCCESS!___
+4~~>a niece kohl dower ___SUCCESS!___
+4~~>a niece cold ow xxx
+4~~>a niece cold hour ___SUCCESS!___
+4~~>a niece cold our ___SUCCESS!___
+4~~>a niece fff
+4~~>a fff
+4~~>o' knee skol dhow xxx
+4~~>o' knee skol dow xxx
+4~~>o' knee skol dour ___SUCCESS!___
+4~~>o' knee skol dower ___SUCCESS!___
+4~~>o' knee scold ow xxx
+4~~>o' knee scold hour ___SUCCESS!___
+4~~>o' knee scold our ___SUCCESS!___
+4~~>o' knee fff
+4~~>o' ne skol dhow xxx
+4~~>o' ne skol dow xxx
+4~~>o' ne skol dour ___SUCCESS!___
+4~~>o' ne skol dower ___SUCCESS!___
+4~~>o' ne scold ow xxx
+4~~>o' ne scold hour ___SUCCESS!___
+4~~>o' ne scold our ___SUCCESS!___
+4~~>o' ne fff
+4~~>o' nice coe fff
+4~~>o' nice coal dhow xxx
+4~~>o' nice coal dow xxx
+4~~>o' nice coal dour ___SUCCESS!___
+4~~>o' nice coal dower ___SUCCESS!___
+4~~>o' nice cole dhow xxx
+4~~>o' nice cole dow xxx
+4~~>o' nice cole dour ___SUCCESS!___
+4~~>o' nice cole dower ___SUCCESS!___
+4~~>o' nice kohl dhow xxx
+4~~>o' nice kohl dow xxx
+4~~>o' nice kohl dour ___SUCCESS!___
+4~~>o' nice kohl dower ___SUCCESS!___
+4~~>o' nice cold ow xxx
+4~~>o' nice cold hour ___SUCCESS!___
+4~~>o' nice cold our ___SUCCESS!___
+4~~>o' nice fff
+4~~>o' niece coe fff
+4~~>o' niece coal dhow xxx
+4~~>o' niece coal dow xxx
+4~~>o' niece coal dour ___SUCCESS!___
+4~~>o' niece coal dower ___SUCCESS!___
+4~~>o' niece cole dhow xxx
+4~~>o' niece cole dow xxx
+4~~>o' niece cole dour ___SUCCESS!___
+4~~>o' niece cole dower ___SUCCESS!___
+4~~>o' niece kohl dhow xxx
+4~~>o' niece kohl dow xxx
+4~~>o' niece kohl dour ___SUCCESS!___
+4~~>o' niece kohl dower ___SUCCESS!___
+4~~>o' niece cold ow xxx
+4~~>o' niece cold hour ___SUCCESS!___
+4~~>o' niece cold our ___SUCCESS!___
+4~~>o' niece fff
+4~~>o' fff
+4~~>an e skol dhow xxx
+4~~>an e skol dow xxx
+4~~>an e skol dour ___SUCCESS!___
+4~~>an e skol dower ___SUCCESS!___
+4~~>an e scold ow xxx
+4~~>an e scold hour ___SUCCESS!___
+4~~>an e scold our ___SUCCESS!___
+4~~>an e fff
+4~~>an fff
+4~~>'n' e skol dhow xxx
+4~~>'n' e skol dow xxx
+4~~>'n' e skol dour ___SUCCESS!___
+4~~>'n' e skol dower ___SUCCESS!___
+4~~>'n' e scold ow xxx
+4~~>'n' e scold hour ___SUCCESS!___
+4~~>'n' e scold our ___SUCCESS!___
+4~~>'n' e fff
+4~~>'n' fff
+4~~>fff
+Phonetic interpretation 5 ("A"nis"kould"aU`r)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = A|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = n|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = n
+final queryterm: |n%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ni|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++knee skol dhow xxx
++++++++++knee skol dow xxx
++++++++++knee skol dour ___SUCCESS!___
++++++++++knee skol dower ___SUCCESS!___
++++++++++knee scold ow xxx
++++++++++knee scold hour ___SUCCESS!___
++++++++++knee scold our ___SUCCESS!___
++++++++++knee fff
++++++++++ne skol dhow xxx
++++++++++ne skol dow xxx
++++++++++ne skol dour ___SUCCESS!___
++++++++++ne skol dower ___SUCCESS!___
++++++++++ne scold ow xxx
++++++++++ne scold hour ___SUCCESS!___
++++++++++ne scold our ___SUCCESS!___
++++++++++ne fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = nis|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = k|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = k
+final queryterm: |k%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kou|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ld|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ld
+final queryterm: |ld%|
++++++++++coe fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = koul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++coal dhow xxx
++++++++++coal dow xxx
++++++++++coal dour ___SUCCESS!___
++++++++++coal dower ___SUCCESS!___
++++++++++cole dhow xxx
++++++++++cole dow xxx
++++++++++cole dour ___SUCCESS!___
++++++++++cole dower ___SUCCESS!___
++++++++++kohl dhow xxx
++++++++++kohl dow xxx
++++++++++kohl dour ___SUCCESS!___
++++++++++kohl dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++cold ow xxx
++++++++++cold hour ___SUCCESS!___
++++++++++cold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = kouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = kouldaU
+final queryterm: |kouldaU%|
++++++++++nice coe fff
++++++++++nice coal dhow xxx
++++++++++nice coal dow xxx
++++++++++nice coal dour ___SUCCESS!___
++++++++++nice coal dower ___SUCCESS!___
++++++++++nice cole dhow xxx
++++++++++nice cole dow xxx
++++++++++nice cole dour ___SUCCESS!___
++++++++++nice cole dower ___SUCCESS!___
++++++++++nice kohl dhow xxx
++++++++++nice kohl dow xxx
++++++++++nice kohl dour ___SUCCESS!___
++++++++++nice kohl dower ___SUCCESS!___
++++++++++nice cold ow xxx
++++++++++nice cold hour ___SUCCESS!___
++++++++++nice cold our ___SUCCESS!___
++++++++++nice fff
++++++++++niece coe fff
++++++++++niece coal dhow xxx
++++++++++niece coal dow xxx
++++++++++niece coal dour ___SUCCESS!___
++++++++++niece coal dower ___SUCCESS!___
++++++++++niece cole dhow xxx
++++++++++niece cole dow xxx
++++++++++niece cole dour ___SUCCESS!___
++++++++++niece cole dower ___SUCCESS!___
++++++++++niece kohl dhow xxx
++++++++++niece kohl dow xxx
++++++++++niece kohl dour ___SUCCESS!___
++++++++++niece kohl dower ___SUCCESS!___
++++++++++niece cold ow xxx
++++++++++niece cold hour ___SUCCESS!___
++++++++++niece cold our ___SUCCESS!___
++++++++++niece fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = nisk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = nisk
+final queryterm: |nisk%|
++++++++++a knee skol dhow xxx
++++++++++a knee skol dow xxx
++++++++++a knee skol dour ___SUCCESS!___
++++++++++a knee skol dower ___SUCCESS!___
++++++++++a knee scold ow xxx
++++++++++a knee scold hour ___SUCCESS!___
++++++++++a knee scold our ___SUCCESS!___
++++++++++a knee fff
++++++++++a ne skol dhow xxx
++++++++++a ne skol dow xxx
++++++++++a ne skol dour ___SUCCESS!___
++++++++++a ne skol dower ___SUCCESS!___
++++++++++a ne scold ow xxx
++++++++++a ne scold hour ___SUCCESS!___
++++++++++a ne scold our ___SUCCESS!___
++++++++++a ne fff
++++++++++a nice coe fff
++++++++++a nice coal dhow xxx
++++++++++a nice coal dow xxx
++++++++++a nice coal dour ___SUCCESS!___
++++++++++a nice coal dower ___SUCCESS!___
++++++++++a nice cole dhow xxx
++++++++++a nice cole dow xxx
++++++++++a nice cole dour ___SUCCESS!___
++++++++++a nice cole dower ___SUCCESS!___
++++++++++a nice kohl dhow xxx
++++++++++a nice kohl dow xxx
++++++++++a nice kohl dour ___SUCCESS!___
++++++++++a nice kohl dower ___SUCCESS!___
++++++++++a nice cold ow xxx
++++++++++a nice cold hour ___SUCCESS!___
++++++++++a nice cold our ___SUCCESS!___
++++++++++a nice fff
++++++++++a niece coe fff
++++++++++a niece coal dhow xxx
++++++++++a niece coal dow xxx
++++++++++a niece coal dour ___SUCCESS!___
++++++++++a niece coal dower ___SUCCESS!___
++++++++++a niece cole dhow xxx
++++++++++a niece cole dow xxx
++++++++++a niece cole dour ___SUCCESS!___
++++++++++a niece cole dower ___SUCCESS!___
++++++++++a niece kohl dhow xxx
++++++++++a niece kohl dow xxx
++++++++++a niece kohl dour ___SUCCESS!___
++++++++++a niece kohl dower ___SUCCESS!___
++++++++++a niece cold ow xxx
++++++++++a niece cold hour ___SUCCESS!___
++++++++++a niece cold our ___SUCCESS!___
++++++++++a niece fff
++++++++++a fff
++++++++++ah knee skol dhow xxx
++++++++++ah knee skol dow xxx
++++++++++ah knee skol dour ___SUCCESS!___
++++++++++ah knee skol dower ___SUCCESS!___
++++++++++ah knee scold ow xxx
++++++++++ah knee scold hour ___SUCCESS!___
++++++++++ah knee scold our ___SUCCESS!___
++++++++++ah knee fff
++++++++++ah ne skol dhow xxx
++++++++++ah ne skol dow xxx
++++++++++ah ne skol dour ___SUCCESS!___
++++++++++ah ne skol dower ___SUCCESS!___
++++++++++ah ne scold ow xxx
++++++++++ah ne scold hour ___SUCCESS!___
++++++++++ah ne scold our ___SUCCESS!___
++++++++++ah ne fff
++++++++++ah nice coe fff
++++++++++ah nice coal dhow xxx
++++++++++ah nice coal dow xxx
++++++++++ah nice coal dour ___SUCCESS!___
++++++++++ah nice coal dower ___SUCCESS!___
++++++++++ah nice cole dhow xxx
++++++++++ah nice cole dow xxx
++++++++++ah nice cole dour ___SUCCESS!___
++++++++++ah nice cole dower ___SUCCESS!___
++++++++++ah nice kohl dhow xxx
++++++++++ah nice kohl dow xxx
++++++++++ah nice kohl dour ___SUCCESS!___
++++++++++ah nice kohl dower ___SUCCESS!___
++++++++++ah nice cold ow xxx
++++++++++ah nice cold hour ___SUCCESS!___
++++++++++ah nice cold our ___SUCCESS!___
++++++++++ah nice fff
++++++++++ah niece coe fff
++++++++++ah niece coal dhow xxx
++++++++++ah niece coal dow xxx
++++++++++ah niece coal dour ___SUCCESS!___
++++++++++ah niece coal dower ___SUCCESS!___
++++++++++ah niece cole dhow xxx
++++++++++ah niece cole dow xxx
++++++++++ah niece cole dour ___SUCCESS!___
++++++++++ah niece cole dower ___SUCCESS!___
++++++++++ah niece kohl dhow xxx
++++++++++ah niece kohl dow xxx
++++++++++ah niece kohl dour ___SUCCESS!___
++++++++++ah niece kohl dower ___SUCCESS!___
++++++++++ah niece cold ow xxx
++++++++++ah niece cold hour ___SUCCESS!___
++++++++++ah niece cold our ___SUCCESS!___
++++++++++ah niece fff
++++++++++ah fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = An|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = i|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = s|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = s
+final queryterm: |s%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = sk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = sk
+final queryterm: |sk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skou
+final queryterm: |skou%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skoul|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = d
+final queryterm: |d%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++dhow xxx
++++++++++dow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = daU`r|
++++++++++dour ___SUCCESS!___
++++++++++dower ___SUCCESS!___
++++++++++skol dhow xxx
++++++++++skol dow xxx
++++++++++skol dour ___SUCCESS!___
++++++++++skol dower ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skould|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
++++++++++ow xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = aU`r|
++++++++++hour ___SUCCESS!___
++++++++++our ___SUCCESS!___
++++++++++scold ow xxx
++++++++++scold hour ___SUCCESS!___
++++++++++scold our ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = skouldaU|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = skouldaU
+final queryterm: |skouldaU%|
++++++++++e skol dhow xxx
++++++++++e skol dow xxx
++++++++++e skol dour ___SUCCESS!___
++++++++++e skol dower ___SUCCESS!___
++++++++++e scold ow xxx
++++++++++e scold hour ___SUCCESS!___
++++++++++e scold our ___SUCCESS!___
++++++++++e fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = is|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = is
+final queryterm: |is%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = isk|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = isk
+final queryterm: |isk%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = iskou|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = iskou
+final queryterm: |iskou%|
++++++++++on e skol dhow xxx
++++++++++on e skol dow xxx
++++++++++on e skol dour ___SUCCESS!___
++++++++++on e skol dower ___SUCCESS!___
++++++++++on e scold ow xxx
++++++++++on e scold hour ___SUCCESS!___
++++++++++on e scold our ___SUCCESS!___
++++++++++on e fff
++++++++++on fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = Ani|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = Ani
+final queryterm: |Ani%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = Anis|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = Anis
+final queryterm: |Anis%|
+exits findOrthoStrsForPhoneSeq
+5~~>a knee skol dhow xxx
+5~~>a knee skol dow xxx
+5~~>a knee skol dour ___SUCCESS!___
+5~~>a knee skol dower ___SUCCESS!___
+5~~>a knee scold ow xxx
+5~~>a knee scold hour ___SUCCESS!___
+5~~>a knee scold our ___SUCCESS!___
+5~~>a knee fff
+5~~>a ne skol dhow xxx
+5~~>a ne skol dow xxx
+5~~>a ne skol dour ___SUCCESS!___
+5~~>a ne skol dower ___SUCCESS!___
+5~~>a ne scold ow xxx
+5~~>a ne scold hour ___SUCCESS!___
+5~~>a ne scold our ___SUCCESS!___
+5~~>a ne fff
+5~~>a nice coe fff
+5~~>a nice coal dhow xxx
+5~~>a nice coal dow xxx
+5~~>a nice coal dour ___SUCCESS!___
+5~~>a nice coal dower ___SUCCESS!___
+5~~>a nice cole dhow xxx
+5~~>a nice cole dow xxx
+5~~>a nice cole dour ___SUCCESS!___
+5~~>a nice cole dower ___SUCCESS!___
+5~~>a nice kohl dhow xxx
+5~~>a nice kohl dow xxx
+5~~>a nice kohl dour ___SUCCESS!___
+5~~>a nice kohl dower ___SUCCESS!___
+5~~>a nice cold ow xxx
+5~~>a nice cold hour ___SUCCESS!___
+5~~>a nice cold our ___SUCCESS!___
+5~~>a nice fff
+5~~>a niece coe fff
+5~~>a niece coal dhow xxx
+5~~>a niece coal dow xxx
+5~~>a niece coal dour ___SUCCESS!___
+5~~>a niece coal dower ___SUCCESS!___
+5~~>a niece cole dhow xxx
+5~~>a niece cole dow xxx
+5~~>a niece cole dour ___SUCCESS!___
+5~~>a niece cole dower ___SUCCESS!___
+5~~>a niece kohl dhow xxx
+5~~>a niece kohl dow xxx
+5~~>a niece kohl dour ___SUCCESS!___
+5~~>a niece kohl dower ___SUCCESS!___
+5~~>a niece cold ow xxx
+5~~>a niece cold hour ___SUCCESS!___
+5~~>a niece cold our ___SUCCESS!___
+5~~>a niece fff
+5~~>a fff
+5~~>ah knee skol dhow xxx
+5~~>ah knee skol dow xxx
+5~~>ah knee skol dour ___SUCCESS!___
+5~~>ah knee skol dower ___SUCCESS!___
+5~~>ah knee scold ow xxx
+5~~>ah knee scold hour ___SUCCESS!___
+5~~>ah knee scold our ___SUCCESS!___
+5~~>ah knee fff
+5~~>ah ne skol dhow xxx
+5~~>ah ne skol dow xxx
+5~~>ah ne skol dour ___SUCCESS!___
+5~~>ah ne skol dower ___SUCCESS!___
+5~~>ah ne scold ow xxx
+5~~>ah ne scold hour ___SUCCESS!___
+5~~>ah ne scold our ___SUCCESS!___
+5~~>ah ne fff
+5~~>ah nice coe fff
+5~~>ah nice coal dhow xxx
+5~~>ah nice coal dow xxx
+5~~>ah nice coal dour ___SUCCESS!___
+5~~>ah nice coal dower ___SUCCESS!___
+5~~>ah nice cole dhow xxx
+5~~>ah nice cole dow xxx
+5~~>ah nice cole dour ___SUCCESS!___
+5~~>ah nice cole dower ___SUCCESS!___
+5~~>ah nice kohl dhow xxx
+5~~>ah nice kohl dow xxx
+5~~>ah nice kohl dour ___SUCCESS!___
+5~~>ah nice kohl dower ___SUCCESS!___
+5~~>ah nice cold ow xxx
+5~~>ah nice cold hour ___SUCCESS!___
+5~~>ah nice cold our ___SUCCESS!___
+5~~>ah nice fff
+5~~>ah niece coe fff
+5~~>ah niece coal dhow xxx
+5~~>ah niece coal dow xxx
+5~~>ah niece coal dour ___SUCCESS!___
+5~~>ah niece coal dower ___SUCCESS!___
+5~~>ah niece cole dhow xxx
+5~~>ah niece cole dow xxx
+5~~>ah niece cole dour ___SUCCESS!___
+5~~>ah niece cole dower ___SUCCESS!___
+5~~>ah niece kohl dhow xxx
+5~~>ah niece kohl dow xxx
+5~~>ah niece kohl dour ___SUCCESS!___
+5~~>ah niece kohl dower ___SUCCESS!___
+5~~>ah niece cold ow xxx
+5~~>ah niece cold hour ___SUCCESS!___
+5~~>ah niece cold our ___SUCCESS!___
+5~~>ah niece fff
+5~~>ah fff
+5~~>on e skol dhow xxx
+5~~>on e skol dow xxx
+5~~>on e skol dour ___SUCCESS!___
+5~~>on e skol dower ___SUCCESS!___
+5~~>on e scold ow xxx
+5~~>on e scold hour ___SUCCESS!___
+5~~>on e scold our ___SUCCESS!___
+5~~>on e fff
+5~~>on fff
+5~~>fff
+DEDUPLICATION TIME!
+!Discovered 290 oronyms:
+0: ''n' ay scold hour ___SUCCESS!___'
+1: ''n' ay scold our ___SUCCESS!___'
+2: ''n' ay skol dour ___SUCCESS!___'
+3: ''n' ay skol dower ___SUCCESS!___'
+4: ''n' aye scold hour ___SUCCESS!___'
+5: ''n' aye scold our ___SUCCESS!___'
+6: ''n' aye skol dour ___SUCCESS!___'
+7: ''n' aye skol dower ___SUCCESS!___'
+8: ''n' e scold hour ___SUCCESS!___'
+9: ''n' e scold our ___SUCCESS!___'
+10: ''n' e skol dour ___SUCCESS!___'
+11: ''n' e skol dower ___SUCCESS!___'
+12: ''n' eye scold hour ___SUCCESS!___'
+13: ''n' eye scold our ___SUCCESS!___'
+14: ''n' eye skol dour ___SUCCESS!___'
+15: ''n' eye skol dower ___SUCCESS!___'
+16: ''n' i scold hour ___SUCCESS!___'
+17: ''n' i scold our ___SUCCESS!___'
+18: ''n' i skol dour ___SUCCESS!___'
+19: ''n' i skol dower ___SUCCESS!___'
+20: ''n' ice coal dour ___SUCCESS!___'
+21: ''n' ice coal dower ___SUCCESS!___'
+22: ''n' ice cold hour ___SUCCESS!___'
+23: ''n' ice cold our ___SUCCESS!___'
+24: ''n' ice cole dour ___SUCCESS!___'
+25: ''n' ice cole dower ___SUCCESS!___'
+26: ''n' ice kohl dour ___SUCCESS!___'
+27: ''n' ice kohl dower ___SUCCESS!___'
+28: ''n' ice-cold hour ___SUCCESS!___'
+29: ''n' ice-cold our ___SUCCESS!___'
+30: 'a gneiss coal dour ___SUCCESS!___'
+31: 'a gneiss coal dower ___SUCCESS!___'
+32: 'a gneiss cold hour ___SUCCESS!___'
+33: 'a gneiss cold our ___SUCCESS!___'
+34: 'a gneiss cole dour ___SUCCESS!___'
+35: 'a gneiss cole dower ___SUCCESS!___'
+36: 'a gneiss kohl dour ___SUCCESS!___'
+37: 'a gneiss kohl dower ___SUCCESS!___'
+38: 'a knee scold hour ___SUCCESS!___'
+39: 'a knee scold our ___SUCCESS!___'
+40: 'a knee skol dour ___SUCCESS!___'
+41: 'a knee skol dower ___SUCCESS!___'
+42: 'a ne scold hour ___SUCCESS!___'
+43: 'a ne scold our ___SUCCESS!___'
+44: 'a ne skol dour ___SUCCESS!___'
+45: 'a ne skol dower ___SUCCESS!___'
+46: 'a nice coal dour ___SUCCESS!___'
+47: 'a nice coal dower ___SUCCESS!___'
+48: 'a nice cold hour ___SUCCESS!___'
+49: 'a nice cold our ___SUCCESS!___'
+50: 'a nice cole dour ___SUCCESS!___'
+51: 'a nice cole dower ___SUCCESS!___'
+52: 'a nice kohl dour ___SUCCESS!___'
+53: 'a nice kohl dower ___SUCCESS!___'
+54: 'a niece coal dour ___SUCCESS!___'
+55: 'a niece coal dower ___SUCCESS!___'
+56: 'a niece cold hour ___SUCCESS!___'
+57: 'a niece cold our ___SUCCESS!___'
+58: 'a niece cole dour ___SUCCESS!___'
+59: 'a niece cole dower ___SUCCESS!___'
+60: 'a niece kohl dour ___SUCCESS!___'
+61: 'a niece kohl dower ___SUCCESS!___'
+62: 'a nigh scold hour ___SUCCESS!___'
+63: 'a nigh scold our ___SUCCESS!___'
+64: 'a nigh skol dour ___SUCCESS!___'
+65: 'a nigh skol dower ___SUCCESS!___'
+66: 'a nye scold hour ___SUCCESS!___'
+67: 'a nye scold our ___SUCCESS!___'
+68: 'a nye skol dour ___SUCCESS!___'
+69: 'a nye skol dower ___SUCCESS!___'
+70: 'ah gneiss coal dour ___SUCCESS!___'
+71: 'ah gneiss coal dower ___SUCCESS!___'
+72: 'ah gneiss cold hour ___SUCCESS!___'
+73: 'ah gneiss cold our ___SUCCESS!___'
+74: 'ah gneiss cole dour ___SUCCESS!___'
+75: 'ah gneiss cole dower ___SUCCESS!___'
+76: 'ah gneiss kohl dour ___SUCCESS!___'
+77: 'ah gneiss kohl dower ___SUCCESS!___'
+78: 'ah knee scold hour ___SUCCESS!___'
+79: 'ah knee scold our ___SUCCESS!___'
+80: 'ah knee skol dour ___SUCCESS!___'
+81: 'ah knee skol dower ___SUCCESS!___'
+82: 'ah ne scold hour ___SUCCESS!___'
+83: 'ah ne scold our ___SUCCESS!___'
+84: 'ah ne skol dour ___SUCCESS!___'
+85: 'ah ne skol dower ___SUCCESS!___'
+86: 'ah nice coal dour ___SUCCESS!___'
+87: 'ah nice coal dower ___SUCCESS!___'
+88: 'ah nice cold hour ___SUCCESS!___'
+89: 'ah nice cold our ___SUCCESS!___'
+90: 'ah nice cole dour ___SUCCESS!___'
+91: 'ah nice cole dower ___SUCCESS!___'
+92: 'ah nice kohl dour ___SUCCESS!___'
+93: 'ah nice kohl dower ___SUCCESS!___'
+94: 'ah niece coal dour ___SUCCESS!___'
+95: 'ah niece coal dower ___SUCCESS!___'
+96: 'ah niece cold hour ___SUCCESS!___'
+97: 'ah niece cold our ___SUCCESS!___'
+98: 'ah niece cole dour ___SUCCESS!___'
+99: 'ah niece cole dower ___SUCCESS!___'
+100: 'ah niece kohl dour ___SUCCESS!___'
+101: 'ah niece kohl dower ___SUCCESS!___'
+102: 'ah nigh scold hour ___SUCCESS!___'
+103: 'ah nigh scold our ___SUCCESS!___'
+104: 'ah nigh skol dour ___SUCCESS!___'
+105: 'ah nigh skol dower ___SUCCESS!___'
+106: 'ah nye scold hour ___SUCCESS!___'
+107: 'ah nye scold our ___SUCCESS!___'
+108: 'ah nye skol dour ___SUCCESS!___'
+109: 'ah nye skol dower ___SUCCESS!___'
+110: 'an ay scold hour ___SUCCESS!___'
+111: 'an ay scold our ___SUCCESS!___'
+112: 'an ay skol dour ___SUCCESS!___'
+113: 'an ay skol dower ___SUCCESS!___'
+114: 'an aye scold hour ___SUCCESS!___'
+115: 'an aye scold our ___SUCCESS!___'
+116: 'an aye skol dour ___SUCCESS!___'
+117: 'an aye skol dower ___SUCCESS!___'
+118: 'an e scold hour ___SUCCESS!___'
+119: 'an e scold our ___SUCCESS!___'
+120: 'an e skol dour ___SUCCESS!___'
+121: 'an e skol dower ___SUCCESS!___'
+122: 'an eye scold hour ___SUCCESS!___'
+123: 'an eye scold our ___SUCCESS!___'
+124: 'an eye skol dour ___SUCCESS!___'
+125: 'an eye skol dower ___SUCCESS!___'
+126: 'an i scold hour ___SUCCESS!___'
+127: 'an i scold our ___SUCCESS!___'
+128: 'an i skol dour ___SUCCESS!___'
+129: 'an i skol dower ___SUCCESS!___'
+130: 'an ice coal dour ___SUCCESS!___'
+131: 'an ice coal dower ___SUCCESS!___'
+132: 'an ice cold hour ___SUCCESS!___'
+133: 'an ice cold our ___SUCCESS!___'
+134: 'an ice cole dour ___SUCCESS!___'
+135: 'an ice cole dower ___SUCCESS!___'
+136: 'an ice kohl dour ___SUCCESS!___'
+137: 'an ice kohl dower ___SUCCESS!___'
+138: 'an ice-cold hour ___SUCCESS!___'
+139: 'an ice-cold our ___SUCCESS!___'
+140: 'eh gneiss coal dour ___SUCCESS!___'
+141: 'eh gneiss coal dower ___SUCCESS!___'
+142: 'eh gneiss cold hour ___SUCCESS!___'
+143: 'eh gneiss cold our ___SUCCESS!___'
+144: 'eh gneiss cole dour ___SUCCESS!___'
+145: 'eh gneiss cole dower ___SUCCESS!___'
+146: 'eh gneiss kohl dour ___SUCCESS!___'
+147: 'eh gneiss kohl dower ___SUCCESS!___'
+148: 'eh knee scold hour ___SUCCESS!___'
+149: 'eh knee scold our ___SUCCESS!___'
+150: 'eh knee skol dour ___SUCCESS!___'
+151: 'eh knee skol dower ___SUCCESS!___'
+152: 'eh ne scold hour ___SUCCESS!___'
+153: 'eh ne scold our ___SUCCESS!___'
+154: 'eh ne skol dour ___SUCCESS!___'
+155: 'eh ne skol dower ___SUCCESS!___'
+156: 'eh nice coal dour ___SUCCESS!___'
+157: 'eh nice coal dower ___SUCCESS!___'
+158: 'eh nice cold hour ___SUCCESS!___'
+159: 'eh nice cold our ___SUCCESS!___'
+160: 'eh nice cole dour ___SUCCESS!___'
+161: 'eh nice cole dower ___SUCCESS!___'
+162: 'eh nice kohl dour ___SUCCESS!___'
+163: 'eh nice kohl dower ___SUCCESS!___'
+164: 'eh niece coal dour ___SUCCESS!___'
+165: 'eh niece coal dower ___SUCCESS!___'
+166: 'eh niece cold hour ___SUCCESS!___'
+167: 'eh niece cold our ___SUCCESS!___'
+168: 'eh niece cole dour ___SUCCESS!___'
+169: 'eh niece cole dower ___SUCCESS!___'
+170: 'eh niece kohl dour ___SUCCESS!___'
+171: 'eh niece kohl dower ___SUCCESS!___'
+172: 'eh nigh scold hour ___SUCCESS!___'
+173: 'eh nigh scold our ___SUCCESS!___'
+174: 'eh nigh skol dour ___SUCCESS!___'
+175: 'eh nigh skol dower ___SUCCESS!___'
+176: 'eh nye scold hour ___SUCCESS!___'
+177: 'eh nye scold our ___SUCCESS!___'
+178: 'eh nye skol dour ___SUCCESS!___'
+179: 'eh nye skol dower ___SUCCESS!___'
+180: 'et gneiss coal dour ___SUCCESS!___'
+181: 'et gneiss coal dower ___SUCCESS!___'
+182: 'et gneiss cold hour ___SUCCESS!___'
+183: 'et gneiss cold our ___SUCCESS!___'
+184: 'et gneiss cole dour ___SUCCESS!___'
+185: 'et gneiss cole dower ___SUCCESS!___'
+186: 'et gneiss kohl dour ___SUCCESS!___'
+187: 'et gneiss kohl dower ___SUCCESS!___'
+188: 'et knee scold hour ___SUCCESS!___'
+189: 'et knee scold our ___SUCCESS!___'
+190: 'et knee skol dour ___SUCCESS!___'
+191: 'et knee skol dower ___SUCCESS!___'
+192: 'et ne scold hour ___SUCCESS!___'
+193: 'et ne scold our ___SUCCESS!___'
+194: 'et ne skol dour ___SUCCESS!___'
+195: 'et ne skol dower ___SUCCESS!___'
+196: 'et nice coal dour ___SUCCESS!___'
+197: 'et nice coal dower ___SUCCESS!___'
+198: 'et nice cold hour ___SUCCESS!___'
+199: 'et nice cold our ___SUCCESS!___'
+200: 'et nice cole dour ___SUCCESS!___'
+201: 'et nice cole dower ___SUCCESS!___'
+202: 'et nice kohl dour ___SUCCESS!___'
+203: 'et nice kohl dower ___SUCCESS!___'
+204: 'et niece coal dour ___SUCCESS!___'
+205: 'et niece coal dower ___SUCCESS!___'
+206: 'et niece cold hour ___SUCCESS!___'
+207: 'et niece cold our ___SUCCESS!___'
+208: 'et niece cole dour ___SUCCESS!___'
+209: 'et niece cole dower ___SUCCESS!___'
+210: 'et niece kohl dour ___SUCCESS!___'
+211: 'et niece kohl dower ___SUCCESS!___'
+212: 'et nigh scold hour ___SUCCESS!___'
+213: 'et nigh scold our ___SUCCESS!___'
+214: 'et nigh skol dour ___SUCCESS!___'
+215: 'et nigh skol dower ___SUCCESS!___'
+216: 'et nye scold hour ___SUCCESS!___'
+217: 'et nye scold our ___SUCCESS!___'
+218: 'et nye skol dour ___SUCCESS!___'
+219: 'et nye skol dower ___SUCCESS!___'
+220: 'o' gneiss coal dour ___SUCCESS!___'
+221: 'o' gneiss coal dower ___SUCCESS!___'
+222: 'o' gneiss cold hour ___SUCCESS!___'
+223: 'o' gneiss cold our ___SUCCESS!___'
+224: 'o' gneiss cole dour ___SUCCESS!___'
+225: 'o' gneiss cole dower ___SUCCESS!___'
+226: 'o' gneiss kohl dour ___SUCCESS!___'
+227: 'o' gneiss kohl dower ___SUCCESS!___'
+228: 'o' knee scold hour ___SUCCESS!___'
+229: 'o' knee scold our ___SUCCESS!___'
+230: 'o' knee skol dour ___SUCCESS!___'
+231: 'o' knee skol dower ___SUCCESS!___'
+232: 'o' ne scold hour ___SUCCESS!___'
+233: 'o' ne scold our ___SUCCESS!___'
+234: 'o' ne skol dour ___SUCCESS!___'
+235: 'o' ne skol dower ___SUCCESS!___'
+236: 'o' nice coal dour ___SUCCESS!___'
+237: 'o' nice coal dower ___SUCCESS!___'
+238: 'o' nice cold hour ___SUCCESS!___'
+239: 'o' nice cold our ___SUCCESS!___'
+240: 'o' nice cole dour ___SUCCESS!___'
+241: 'o' nice cole dower ___SUCCESS!___'
+242: 'o' nice kohl dour ___SUCCESS!___'
+243: 'o' nice kohl dower ___SUCCESS!___'
+244: 'o' niece coal dour ___SUCCESS!___'
+245: 'o' niece coal dower ___SUCCESS!___'
+246: 'o' niece cold hour ___SUCCESS!___'
+247: 'o' niece cold our ___SUCCESS!___'
+248: 'o' niece cole dour ___SUCCESS!___'
+249: 'o' niece cole dower ___SUCCESS!___'
+250: 'o' niece kohl dour ___SUCCESS!___'
+251: 'o' niece kohl dower ___SUCCESS!___'
+252: 'o' nigh scold hour ___SUCCESS!___'
+253: 'o' nigh scold our ___SUCCESS!___'
+254: 'o' nigh skol dour ___SUCCESS!___'
+255: 'o' nigh skol dower ___SUCCESS!___'
+256: 'o' nye scold hour ___SUCCESS!___'
+257: 'o' nye scold our ___SUCCESS!___'
+258: 'o' nye skol dour ___SUCCESS!___'
+259: 'o' nye skol dower ___SUCCESS!___'
+260: 'on ay scold hour ___SUCCESS!___'
+261: 'on ay scold our ___SUCCESS!___'
+262: 'on ay skol dour ___SUCCESS!___'
+263: 'on ay skol dower ___SUCCESS!___'
+264: 'on aye scold hour ___SUCCESS!___'
+265: 'on aye scold our ___SUCCESS!___'
+266: 'on aye skol dour ___SUCCESS!___'
+267: 'on aye skol dower ___SUCCESS!___'
+268: 'on e scold hour ___SUCCESS!___'
+269: 'on e scold our ___SUCCESS!___'
+270: 'on e skol dour ___SUCCESS!___'
+271: 'on e skol dower ___SUCCESS!___'
+272: 'on eye scold hour ___SUCCESS!___'
+273: 'on eye scold our ___SUCCESS!___'
+274: 'on eye skol dour ___SUCCESS!___'
+275: 'on eye skol dower ___SUCCESS!___'
+276: 'on i scold hour ___SUCCESS!___'
+277: 'on i scold our ___SUCCESS!___'
+278: 'on i skol dour ___SUCCESS!___'
+279: 'on i skol dower ___SUCCESS!___'
+280: 'on ice coal dour ___SUCCESS!___'
+281: 'on ice coal dower ___SUCCESS!___'
+282: 'on ice cold hour ___SUCCESS!___'
+283: 'on ice cold our ___SUCCESS!___'
+284: 'on ice cole dour ___SUCCESS!___'
+285: 'on ice cole dower ___SUCCESS!___'
+286: 'on ice kohl dour ___SUCCESS!___'
+287: 'on ice kohl dower ___SUCCESS!___'
+288: 'on ice-cold hour ___SUCCESS!___'
+289: 'on ice-cold our ___SUCCESS!___'
+NO TESTS FAILED! :) 
