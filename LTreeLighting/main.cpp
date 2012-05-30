@@ -1,97 +1,10 @@
-//A very simple opengl/GLUT program
-/**
- * OS specific from COS 426 code to allow reading binary images from stdin
- **/
-#ifdef __unix__
-#include <GL/glut.h>
-#endif
-
-#ifdef __APPLE__
-#include <GLUT/glut.h>
-#endif
-
-#ifdef _WIN32
-#include <io.h>
-#include <fcntl.h>
-#include <glut.h>
-#endif
-
-//Example program of simple lighting with two different materials on a 3D cube
-//by ZJ Wood for CSC471
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
-#include <assert.h>
-#include <string>
-
-#include <vector>
-#include <set>
-#include <sstream>
-
-#include "Metrics.h"
-#include "../OronymCode/wordBreakdown.h"
-
+#include "main.h"
 
 
 using namespace std;
 
 
-void growTreeByVal(int val);
-int calcGrowth();
-void changeRefreshRateBy( int val );
-void changeTempoBy( int val );
-void pauseMine();
 
-vector<int> phonemeBranchesPerLevel; //so, for "a nice", it'd be {3,1,2,1}
-
-int lyricWordIndex = 0;
-vector<clarityVal> wordClarities;
-
-int GW;
-int GH;
-
-int light;
-//Globals for lighting - use a white light and apply materials
-//light position
-GLfloat light_pos[4] = {0.0, 0.0, 1.5, 1.0};
-//light color (ambiant, diffuse and specular)
-GLfloat light_amb[4] = {0.6, 0.6, 0.6, 1.0};
-GLfloat light_diff[4] = {0.6, 0.6, 0.6, 1.0};
-GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
-
-//Globals for animation
-int refreshMills = 1000;    // refresh interval in milliseconds
-int deltaRefreshMills = 500;  // the amount by which to change the refresh rate per change
-int treeHeight = 0;
-int deltaTreeGrow = 1;
-
-
-
-double halfRadius = .25;
-double cylinderHeight = 2.0;
-
-
-int mat = 0;
-//set up some materials
-typedef struct materialStruct {
-   GLfloat ambient[4];
-   GLfloat diffuse[4];
-   GLfloat specular[4];
-   GLfloat shininess[1];
-} materialStruct;
-
-materialStruct RedFlat = {
-{0.3, 0.0, 0.0, 1.0},
-{0.9, 0.0, 0.0, 1.0},
-{0.0, 0.0, 0.0, 1.0},
-{0.0}
-};
-materialStruct GreenShiny = {
-{0.0, 0.3, 0.0, 1.0},
-{0.0, 0.9, 0.0, 1.0},
-{0.2, 1.0, 0.2, 1.0},
-{8.0}
-};
 
 //sets up a specific material
 void materials(materialStruct materials) {
@@ -212,7 +125,7 @@ void drawCylinder() {
 
 void drawBranch(double tiltAngle, double xOffset, double yOffset, 
                double startRadius, double endRadius ) {
-   assert(0)
+   assert(0);
 }
 
 void drawBranches(double tiltAngle, double xOffset, double yOffset) {
@@ -271,88 +184,6 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
         //glPopMatrix();
     }
     glPopMatrix();
-}
-
-string FirstWord(const string& line)
-{
-    return line.substr(0, line.find(' ')+1 );
-}
-
-void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
-   if( fullPhrases.size() == 0 ) {
-      return;
-   }
-   
-   //use a set to ensure no duplicates
-   set< string > firstWords;
-   
-   //put the first word of each phrase into the set
-   for(int i = 0; i < fullPhrases.size(); i++){
-      if( fullPhrases.at(i).size() > 0 ) {
-         firstWords.insert( FirstWord( fullPhrases.at(i) ) );
-      }
-   } 
-   
-   double angleDelta = 90.0 / firstWords.size();
-   double farLeftTiltAngle = -45.0;
-   double tempXOffset = .1;      
-   double tempYOffset = .1;     
-   
-   double farRightXOffset = ( tempXOffset * firstWords.size() ) / 2.0;
-   double farLeftXOffset = farRightXOffset * -1.0;
-   
-   int i = 0;
-   //for each firstWord in the set
-   for ( curFirstWordIter = firstWords.begin(); curFirstWordIter != firstWords.end(); curFirstWordIter++) {
-      string curFirstWord = *curFirstWordIter;
-      
-      //draw a branch
-      //TODO: this will have to be scaled, translated
-      double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
-      double curXOffset = farLeftXOffset + ( tempXOffset * i );
-      double curYOffset = tempYOffset;     
-      double tempEndRadius = lastRadius;
-
-      drawBranch( tiltAngle, curXOffset, curXOffset, lastRadius, tempEndRadius );
-      
-      glPushMatrix();
-      {
-         //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
-         if( curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
-            //draw a red cube/sphere at the end of the branch
-            drawCube();
-            //TODO: this will have to be scaled, translated and parameterized;
-         } else {
-            //find all phrases in fullPhrases that start with that firstWord
-            set<string> tailPhrases;
-            for (int j = 0; j < fullPhrases.size(); j++) {
-               if( curFirstWord == FirstWord( fullPhrases.at(j) ) ) {
-                  //remove firstWord from those phrases
-                  string tempTail = fullPhrases.at(j).substr( line.find(' ')+1 );
-                  tailPhrases.insert( tempTail );
-               }
-            }
-            //pass those phrases to drawBranchesAtFork
-            drawBranchesAtFork( tailPhrases );
-         }
-      }
-      glPopMatrix();
-      i++;
-   }
-   
-      
-}
-
-
-
-
-void buildAndDrawFullTree( string orthoPhrase ) {
-   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase );
-   drawBranchesAtFork ( fullPhrases );
-}
-
-void buildAndDrawFullTree() {
-   buildAndDrawFullTree("a nice cold hour");
 }
 
 void Timer(int value) {

@@ -649,6 +649,25 @@ string delSpaces(string &str) {
    return str;
 }
 
+void getMaxAndMinFreqForAllOrthoPhrases( vector< string > fullPhrases, int* max, int* min ) {
+   int freqMax = DICTIONARY_MIN_FREQ - 1;
+   int freqMin = DICTIONARY_MAX_FREQ + 1; 
+   for(int i = 0; i < fullPhrases.size(); i++) {
+      vector< string > phraseWords =  strTokOnWhitespace ( fullPhrases[i] );
+      for( int j = 0; j < phraseWords.size(); j++) {
+         int freqTemp =  queryDBwithOrthoForFreq( phraseWords.at(j) );
+         if( freqTemp > freqMax ) {
+            freqMax = freqTemp;
+         } else if ( freqTemp < freqMin ) {
+            freqMin = freqTemp;
+         }
+      }
+   }
+   *min = freqMin;
+   *max = freqMax;
+}
+
+
 string stripSampaStrOfEmph(string &str) {
    str.erase(std::remove(str.begin(), str.end(), '"'), str.end());
    str.erase(std::remove(str.begin(), str.end(), '%'), str.end());

@@ -17,12 +17,14 @@
 #define MAX_DATABASE_FILE_PATH_LEN 1024
 #define MAX_DATABASE_QUERY_LEN 1024
 
+#define DICTIONARY_MAX_FREQ 16006650 // the frequency of "the" 
+#define DICTIONARY_MIN_FREQ 0 
+
 typedef std::string phone;
 
 
-string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
-string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
-
+std::string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
+std::string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
 
 typedef struct MetaWord {
    std::string word;
@@ -54,6 +56,8 @@ std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 std::vector<std::string> strTokOnWhitespace(std::string phrase);
 std::string toLowerCase( std::string data);
 std::string delSpaces( std::string &str);
+
+void getMaxAndMinFreqForAllOrthoPhrases( std::vector< std::string > fullPhrases, int* max, int* max );
 
 std::string stripSampaStrOfEmph( std::string &str);
 std::vector< phone > getNoEmphsPhoneVect(std::vector< phone > phoneVectOrig );
