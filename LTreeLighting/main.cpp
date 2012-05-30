@@ -24,6 +24,7 @@
 #include <assert.h>
 #include <string>
 
+#include <vector>
 
 #include "Metrics.h"
 
@@ -37,6 +38,8 @@ int calcGrowth();
 void changeRefreshRateBy( int val );
 void changeTempoBy( int val );
 void pauseMine();
+
+vector<int> phonemeBranchesPerLevel; //so, for "a nice", it'd be {3,1,2,1}
 
 int lyricWordIndex = 0;
 vector<clarityVal> wordClarities;

@@ -27,6 +27,16 @@
                         <TextSelection>23,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
+                <BinderItem ID="133" Type="Text" Created="2012-05-28 22:11:07 -0700" Modified="2012-05-28 22:11:32 -0700">
+                    <Title>wikipedia: english phonology </Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>46,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
                 <BinderItem ID="84" Type="Folder" Created="2012-05-09 11:11:36 -0700" Modified="2012-05-09 11:11:49 -0700">
                     <Title>High-Level Descriptions</Title>
                     <MetaData>
@@ -396,7 +406,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>521,90</TextSelection>
+                                <TextSelection>1188,1</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="75" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -406,7 +416,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>615,0</TextSelection>
+                                <TextSelection>823,18</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="90" Type="Text" Created="2012-05-09 11:21:30 -0700" Modified="2012-05-09 11:22:47 -0700">
@@ -416,7 +426,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1364,0</TextSelection>
+                                <TextSelection>1048,0</TextSelection>
                             </TextSettings>
                             <References>
                                 <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
@@ -461,6 +471,68 @@
                             <References>
                                 <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
                             </References>
+                        </BinderItem>
+                        <BinderItem ID="129" Type="Folder" Created="2012-05-23 14:49:17 -0700" Modified="2012-05-23 14:49:22 -0700">
+                            <Title>Sampa of oronyms</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="127" Type="Text" Created="2012-05-23 14:33:51 -0700" Modified="2012-05-23 14:53:27 -0700">
+                                    <Title>SAMPA of Oronyms</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>640,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="128" Type="Text" Created="2012-05-23 14:48:48 -0700" Modified="2012-05-23 14:49:42 -0700">
+                                    <Title>delegate vs delicate</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>736,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="130" Type="Text" Created="2012-05-23 14:49:40 -0700" Modified="2012-05-23 14:53:27 -0700">
+                                    <Title>biggest hurdle vs biggest turtle</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="131" Type="Text" Created="2012-05-23 14:52:41 -0700" Modified="2012-05-23 14:53:27 -0700">
+                                    <Title>oronym examples</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>730,12</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="134" Type="Text" Created="2012-05-29 17:19:59 -0700" Modified="2012-05-29 17:20:08 -0700">
+                                    <Title>blessed</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
                         </BinderItem>
                     </Children>
                 </BinderItem>
@@ -523,7 +595,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>1870,34</TextSelection>
+                                        <TextSelection>833,1804</TextSelection>
                                     </TextSettings>
                                     <References>
                                         <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
@@ -651,6 +723,16 @@
                                     </MetaData>
                                     <TextSettings>
                                         <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="132" Type="Text" Created="2012-05-24 21:44:31 -0700" Modified="2012-05-24 22:12:49 -0700">
+                                    <Title>Algorithm</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>735,127</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                             </Children>
@@ -802,7 +884,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>178,0</TextSelection>
+                        <TextSelection>180,12</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
@@ -1382,7 +1464,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="66" Characters="376" Date="2012-05-20 17:16:09 -0700"></PreviousSession>
+        <PreviousSession Words="45" Characters="455" Date="2012-05-24 00:10:57 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

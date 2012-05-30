@@ -50,6 +50,9 @@ Thesis <br/>
 Jennifer Hughes</p>
 </li>
 <li>
+<p class="binderItem"><strong>wikipedia: english phonology </strong><br/>http://en.wikipedia.org/wiki/English_phonology</p>
+</li>
+<li>
 <p class="binderItem"><strong>High-Level Descriptions</strong></p>
 </li>
 <hr/>
@@ -753,6 +756,100 @@ Music BRS<br/>
 Though most of "Strawberry Fields Forever" is in 4/4 time, the chorus, where this lyric is taken from, is a waltz, in ¾ time.  So, the Music BRS is "1 – 0 – 0 –, 1 –  0 – 0 – "<br/>
 Notes on " Straw- be- rry ":  The secondary emphasis on "be-" slightly complic...</p>
 </li>
+<li>
+<p class="binderItem"><strong>Sampa of oronyms</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>SAMPA of Oronyms</strong><br/><br/>
+ 1) the good can decay many ways vs the good candy came anyways<br/>
+ ⁃ the good can decay many ways<br/>
+ ⁃ ---"k{ndI"ke"mE$ni"wez<br/>
+ ⁃ ---k@ndI"ke"mE$ni"wez<br/>
+ ⁃ The good candy came anyways<br/>
+ ⁃ ---"k{n$di"kem"E$ni%wez<br/>
+ 2) This guy vs the sky<br/>
+ ⁃ This guy<br/>
+ ⁃ ---"DIs"gaI<br/>
+ ⁃ The sky<br/>
+ ⁃ ---D@"skaI<br/>
+ ⁃ ---D@"skaI<br/>
+ ⁃ ---"D@"skaI<br/>
+ 3) real eyes vs realize<br/>
+ ⁃ Real eyes<br/>
+ ⁃ ---"ri@l"aIz<br/>
+ ⁃ ---re"Al"aIz<br/>
+ ⁃ Realize<br/>
+ ⁃ ---“ri@$laIz<br/>
+ 4) grey pants vs grape ants<br/>
+ ⁃ Grey pants<br/>
+ ⁃ ---"gre"p{nts<br/>
+ ⁃ Grape ants<br/>
+ ⁃ ---“grep"{nts<br/>
+ ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>delegate vs delicate</strong><br/><br/>
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "delegate"<br/>
+DATABASE SUCCESSFULLY OPENED<br/>
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = delegate<br/>
+FIND ALL PERMUTATIONS<br/>
+<br/>
+queryDBwithOrthoForSampaStrs, orthoWord = delegate<br/>
+<br/>
+<br/>
+queryDBwithOrthoForSampaStrs, orthoWord = delegate<br/>
+<br/>
+---"dE$l@$g@t<br/>
+---"dE$l@$get<br/>
+<br/>
+NO TESTS FAILED! :) <br/>
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "delicate"<br/>
+DATABASE SUCCESSFUL...</p>
+</li>
+<li>
+<p class="binderItem"><strong>biggest hurdle vs biggest turtle</strong><br/> Example of glottal stop smooshing/bleeding and voiced/unvoiced substitution<br/>
+<br/>
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "biggest hurdle"<br/>
+DATABASE SUCCESSFULLY OPENED<br/>
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = biggest hurdle<br/>
+FIND ALL PERMUTATIONS<br/>
+<br/>
+queryDBwithOrthoForSampaStrs, orthoWord = biggest<br/>
+<br/>
+<br/>
+queryDBwithOrthoForSampaStrs, orthoWord = biggest<br/>
+<br/>
+<br/>
+queryDBwithOrthoForSampaStrs, orthoWord = hurdle<br/>
+<br/>
+<br/>
+queryDBwithOrthoForSampaStrs, ortho...</p>
+</li>
+<li>
+<p class="binderItem"><strong>oronym examples</strong><br/>Examples of oronyms<br/>
+The stuffy nose can lead to problems.<br/>
+The stuff he knows can lead to problems.<br/>
+<br/>
+Where is the spice center?<br/>
+Where is the spy center?<br/>
+<br/>
+Are you aware of the words you have just uttered?<br/>
+Are you aware of the word you have just stuttered?<br/>
+<br/>
+That's the biggest hurdle I've ever seen?<br/>
+That's the biggest turtle I've ever seen?<br/>
+<br/>
+I'm taking a nice cold shower.<br/>
+I'm taking an ice cold shower.<br/>
+<br/>
+Reading in the library is sometimes allowed.<br/>
+Reading in the library is sometimes aloud.<br/>
+<br/>
+You'd be...</p>
+</li>
+</ul>
 </ul>
 <hr/>
 <li>
@@ -960,6 +1057,25 @@ origPhonePhrase:   The lyrics of the song, broken down into phonemes.  (Could be
 allPhoneSubPhrases: A list of phoneSubPhrase structures.  There's one structure per phoneme in the origPhonePhrase.<br/>
   <br/>
 phoneSubPhrases: Per phoneme in the origPhonePhrase, create a phoneSubPhrase structure.  In this structure, for each phone following the phone that is the basis for that phoneSubPhra...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Algorithm</strong><br/>Step 1: Get Ortho Phrase<br/>
+ Input: string<br/>
+ (EVENTUAL output: vector<string><br/>
+ Step 2: Split Ortho Phrase into Words<br/>
+  Input:<br/>
+<br/>
+GetMishearings( string orthoPhrase) {<br/>
+ Vector<string> orthoWords = split(orthoPhrase);<br/>
+ <br/>
+ For each ( string orthoWord : orthoWords ) {<br/>
+  GetAllPossible SAMPA interpretations(orthoWord<br/>
+ }<br/>
+ //TODO: finish the psuedocode first half <br/>
+<br/>
+ ///SKIP TO THE PART WHERE WE HAVE: a bunch of SAMPA phrases, stored in vector < vector <phone> > allPhoneSeqs<br/>
+ <br/>
+ //For each unique phonetic inter...</p>
 </li>
 </ul>
 </ul>

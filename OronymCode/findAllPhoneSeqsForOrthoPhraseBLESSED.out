@@ -1,0 +1,10 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+---"blEs$@d
+---"blEst
+
+NO TESTS FAILED! :) 

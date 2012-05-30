@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Cochin;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\fi360\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 Step 1: Get Ortho Phrase\
+	Input: string\
+	(EVENTUAL output: vector<string>\
+	Step 2: Split Ortho Phrase into Words\
+		Input:\
+\
+GetMishearings( string orthoPhrase) \{\
+	Vector<string> orthoWords = split(orthoPhrase);\
+	\
+	For each ( string orthoWord : orthoWords ) \{\
+		GetAllPossible SAMPA interpretations(orthoWord\
+	\}\
+	//TODO: finish the psuedocode first half \
+\
+	///SKIP TO THE PART WHERE WE HAVE: a bunch of SAMPA phrases, stored in vector < vector <phone> > allPhoneSeqs\
+	\
+	//For each unique phonetic interpretation of the ortho Phrase we were given\
+	for each( vector<phone> phoneSeq : allPhoneSeqs ) \{\
+		Vector<string> orthoInterps; \
+		Vector<phone> phoneSeqTail(phoneSeq);\
+		Vector<phone> usedPhones;\
+		Phone p;\
+		For each phone in \
+	\}\
+\}\
+\
+Vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq) \{\
+	vector<phone> unusedPhones( phoneSeq);\
+	\
+	For( int I = 0\
+\
+\}}

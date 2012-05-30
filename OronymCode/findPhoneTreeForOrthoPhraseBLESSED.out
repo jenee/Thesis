@@ -1,0 +1,11 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING findPhoneTreeForOrthoPhrase; orthoPhrase = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+dummySet.size()=0,  toAdd=b
+0-size=6
+1-size=5
+1=blEst
+Assertion failed: (0), function findPhoneTreeForOrthoPhrase, file wordBreakdown.cpp, line 172.

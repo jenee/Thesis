@@ -834,8 +834,70 @@ prompt$</Text>
         <Document ID="84">
             <Title>High-Level Descriptions</Title>
         </Document>
+        <Document ID="130">
+            <Title>biggest hurdle vs biggest turtle</Title>
+            <Text> Example of glottal stop smooshing/bleeding and voiced/unvoiced substitution
+
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "biggest hurdle"
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = biggest hurdle
+FIND ALL PERMUTATIONS
+
+queryDBwithOrthoForSampaStrs, orthoWord = biggest
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = biggest
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = hurdle
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = hurdle
+
+	numFullPhrases = 1
+0***sampa phrase after append  _"__b__I__g__$__I__s__t__"__h__3`__r__$__d__l__=_
+---"bIg$Ist"h3`r$dl=
+
+NO TESTS FAILED! :) 
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "biggest turtle"
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = biggest turtle
+FIND ALL PERMUTATIONS
+
+queryDBwithOrthoForSampaStrs, orthoWord = biggest
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = biggest
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = turtle
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = turtle
+
+	numFullPhrases = 1
+0***sampa phrase after append  _"__b__I__g__$__I__s__t__"__t__3`__r__$__d__l__=_
+---"bIg$Ist"t3`r$dl=
+
+NO TESTS FAILED! :) 
+</Text>
+        </Document>
         <Document ID="85">
             <Title>Syllable Structure</Title>
+        </Document>
+        <Document ID="126">
+            <Title>Simplification ideas</Title>
+            <Text>So, I know I want to implement emphasis-based things. But right now, that’s not my focus.  
+
+What can I do?
+
+MOCKUPS of tree with different metrics than the one I’m implementing.
+
+USER STUDY:
+—See if tree for common mondegreens are healthy/unhealthy, see if other people agree, watching the tree grow.
+
+
+MAYBE I shouldn’t have the tree grow. Maybe I should do it non-realtime.</Text>
         </Document>
         <Document ID="86">
             <Title>Suitability of Rule-Based System</Title>
@@ -886,6 +948,85 @@ Notes on "de-": This syllable is emphasized, but the first beat that it falls on
 (2) The note that "de-"  is associated with continues through an emphasized beat, so it's emphasized.  
 (3) The slightly longer length of the note associated with "de-" makes it emphasized.
 Since I'm focusing on the effects of note intervals right now, we're going to appoint that as the main cause.</Text>
+        </Document>
+        <Document ID="131">
+            <Title>oronym examples</Title>
+            <Text>Examples of oronyms
+The stuffy nose can lead to problems.
+The stuff he knows can lead to problems.
+
+Where is the spice center?
+Where is the spy center?
+
+Are you aware of the words you have just uttered?
+Are you aware of the word you have just stuttered?
+
+That's the biggest hurdle I've ever seen?
+That's the biggest turtle I've ever seen?
+
+I'm taking a nice cold shower.
+I'm taking an ice cold shower.
+
+Reading in the library is sometimes allowed.
+Reading in the library is sometimes aloud.
+
+You'd be surprised to see a mint spy in your bank.
+You'd be surprised to see a mince pie in your bank.
+
+http://wordinfo.info/unit/3347/s:a%20collection%20of%20misheard%20words%20and%20sentences
+
+	▪	"cleaning's tough" (cleaning stuff)
+	▪	"some mothers" (some others)
+	▪	"I scream" (ice cream)
+
+The stuffy nose can lead to problems.
+The stuff he knows can lead to problems.
+
+http://en.wikipedia.org/wiki/Oronym
+http://www.fun-with-words.com/nym_oronyms.html
+http://users.tinyonline.co.uk/gswithenbank/oronyms.htm
+</Text>
+        </Document>
+        <Document ID="127">
+            <Title>SAMPA of Oronyms</Title>
+            <Text>
+	1)	the good can decay many ways vs the good candy came anyways
+	⁃	the good can decay many ways
+	⁃	---"k{ndI"ke"mE$ni"wez
+	⁃	---k@ndI"ke"mE$ni"wez
+	⁃	The good candy came anyways
+	⁃	---"k{n$di"kem"E$ni%wez
+	2)	This guy vs the sky
+	⁃	This guy
+	⁃	---"DIs"gaI
+	⁃	The sky
+	⁃	---D@"skaI
+	⁃	---D@"skaI
+	⁃	---"D@"skaI
+	3)	real eyes vs realize
+	⁃	Real eyes
+	⁃	---"ri@l"aIz
+	⁃	---re"Al"aIz
+	⁃	Realize
+	⁃	---“ri@$laIz
+	4)	grey pants vs grape ants
+	⁃	Grey pants
+	⁃	---"gre"p{nts
+	⁃	Grape ants
+	⁃	---“grep"{nts
+	5)	A nice cold shower vs an ice cold shower
+	1)	An ice cold shower
+	⁃	---"{n"aIs"kould"SaU`r
+	⁃	---@n"aIs"kould"SaU`r
+	2)	A nice cold shower
+	⁃	---"e"naIs"kould"SaU`r
+	⁃	---@"naIs"kould"SaU`r
+	⁃	---"A"naIs"kould"SaU`r
+	⁃	---"e"nis"kould"SaU`r
+	⁃	---@"nis"kould"SaU`r
+	⁃	---"A"nis"kould"SaU`r
+
+</Text>
         </Document>
         <Document ID="87">
             <Title>Oronyms</Title>
@@ -1052,6 +1193,37 @@ Music BRS
 
 Notes on " gui- tar ":  The first syllable of the word "guitar"  is emphasized, but the beat that that syllable is on is unemphasized.  We overcome this by checking the emphasized syllable, " tar ".  Since " tar " has a positive note interval, the word is still correctly emphasized. Hooray!  
 Notes on " gent- ly ": Again here, the word's emphasis pattern doesn't match the emphasis pattern in the music.  When we then check the intervals for both syllables, we find they both are negative. This isn't a problem, though.  Since a note interval refers to the relationship of a note to the note preceding it, we only have to look at the second syllable of the world, " ly ".  Since " ly " has a negative interval, it's less emphasized then " gent " in the song, which is exactly what we want.</Text>
+        </Document>
+        <Document ID="128">
+            <Title>delegate vs delicate</Title>
+            <Text>
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "delegate"
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = delegate
+FIND ALL PERMUTATIONS
+
+queryDBwithOrthoForSampaStrs, orthoWord = delegate
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = delegate
+
+---"dE$l@$g@t
+---"dE$l@$get
+
+NO TESTS FAILED! :) 
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findAllPhoneSeqsForOrthoPhrase "delicate"
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = delicate
+FIND ALL PERMUTATIONS
+
+queryDBwithOrthoForSampaStrs, orthoWord = delicate
+
+
+queryDBwithOrthoForSampaStrs, orthoWord = delicate
+
+---"dE$l@$k@t
+
+NO TESTS FAILED! :) </Text>
         </Document>
         <Document ID="10">
             <Title>Likelihood of hearing this as a prefix or as compl...</Title>
@@ -1379,6 +1551,9 @@ Notes on " For- e- ver " :  If this wasn't in ¾ time, the Lyric BRS and Music B
 Project Proposal
 
 Jennifer Hughes</Text>
+        </Document>
+        <Document ID="129">
+            <Title>Sampa of oronyms</Title>
         </Document>
         <Document ID="95">
             <Title>Note Intervals</Title>
@@ -4785,6 +4960,11 @@ There are several other rules, which I’ve put in the algorithm/formula, but ha
 
 As per my original schedule for completion, I do not yet have a program prototype.  I felt it was more important to get the data format nailed down, because it’s the majority of the problem.  Also important at this point was finding a usable dictionary, separated by syllables and pronunciation.</Text>
         </Document>
+        <Document ID="43">
+            <Title>NO FOOTNOTE_Syllable Length</Title>
+            <Text>Syllable Length
+I had not thought of the issue of note-length/weight vs. syllable-length/weight when matching lyrics to music, but came to my attention during the literature review. The general idea is that it takes longer to say some sounds than it does others, and that some sounds flow better into one sound as opposed to another.  I’ve decided that this is important enough for the success of the project that I need to include it, and figure out the rules involved.</Text>
+        </Document>
         <Document ID="39">
             <Title>Data Format</Title>
             <Text>Data Format
@@ -4841,11 +5021,6 @@ TERTIARY means tertiary emphasis
 NEUTRAL means there is no extraordinary emphasis on the syllable.
 A rough diagram to show how these interact with the whole structure is below:
 The class “Word” is needed, because otherwise, I would have no way to eventually extend my parser to include things like rhyme-matching, synonym-swapping, etc.  I may still need to add fields to Word, as I think of them, but these are sufficient for now.</Text>
-        </Document>
-        <Document ID="43">
-            <Title>NO FOOTNOTE_Syllable Length</Title>
-            <Text>Syllable Length
-I had not thought of the issue of note-length/weight vs. syllable-length/weight when matching lyrics to music, but came to my attention during the literature review. The general idea is that it takes longer to say some sounds than it does others, and that some sounds flow better into one sound as opposed to another.  I’ve decided that this is important enough for the success of the project that I need to include it, and figure out the rules involved.</Text>
         </Document>
         <Document ID="104">
             <Title>Determining Syllable Weight and Length</Title>
@@ -10171,6 +10346,9 @@ Take a breath in between.
 
 </Text>
         </Document>
+        <Document ID="110">
+            <Title>Untitled</Title>
+        </Document>
         <Document ID="106">
             <Title>Vowel Types_excelCopy</Title>
             <Text>Vowel Types
@@ -10303,9 +10481,6 @@ At the end of the data acquisition phase, you'll have three interconnecting list
         <Document ID="9">
             <Title>of words that are prefix-ed with this</Title>
             <Text>of words that are prefix-ed with this</Text>
-        </Document>
-        <Document ID="110">
-            <Title>Untitled</Title>
         </Document>
         <Document ID="48">
             <Title>Psuedo Code Formula for Determining Syllable “fit”...</Title>
