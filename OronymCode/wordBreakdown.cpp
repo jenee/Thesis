@@ -147,6 +147,8 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
              */
  vector< set<phone> > findPhoneTreeForOrthoPhrase( string orthoPhrase ) {
 	vector< set<phone> > phoneTree;
+	cerr <<"findPhoneTreeForOrthoPhrase is broken! ("<<orthoPhrase<<")"<<endl;
+	assert(0);
    //using set because it doesn't allow for duplicates
 	vector<string> orthoWords = strTokOnWhitespace( orthoPhrase );
 	vector< vector<phone> > oldFullPhrasePhoneSeqs = findAllPhoneSeqsForOrthoPhrase( orthoPhrase );

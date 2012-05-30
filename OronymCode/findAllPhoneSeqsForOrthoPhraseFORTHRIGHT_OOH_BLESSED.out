@@ -1,0 +1,21 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = forthright ooh blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = forthright
+
+queryDBwithOrthoForSampaStrs, orthoWord = forthright
+
+queryDBwithOrthoForSampaStrs, orthoWord = ooh
+
+queryDBwithOrthoForSampaStrs, orthoWord = ooh
+0***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u_
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+0***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u__"__b__l__E__s__$__@__d_
+1***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u__"__b__l__E__s__t_
+---"fO`rT$raIt"u"blEs$@d
+---"fO`rT$raIt"u"blEst
+
+NO TESTS FAILED! :) 

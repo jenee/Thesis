@@ -1,0 +1,1060 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING discoverOronymsForPhrase; orthoPhrase = forthright ooh blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = forthright
+
+queryDBwithOrthoForSampaStrs, orthoWord = forthright
+
+queryDBwithOrthoForSampaStrs, orthoWord = ooh
+
+queryDBwithOrthoForSampaStrs, orthoWord = ooh
+0***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u_
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+0***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u__"__b__l__E__s__$__@__d_
+1***sampa phrase after append  _"__f__O__`r__T__$__r__aI__t__"__u__"__b__l__E__s__t_
+Phonetic interpretation 0 ("fO`rT$raIt"u"blEs$@d)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = f|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = f
+final queryterm: |f%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = `r
+final queryterm: |`r%|
++++++++++faugh fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`r|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = T|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = T
+final queryterm: |T%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = Tr|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = Tr
+final queryterm: |Tr%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraI
+final queryterm: |TraI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraIt|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraIt
+final queryterm: |TraIt%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraItu|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraItu
+final queryterm: |TraItu%|
++++++++++for fff
++++++++++fore fff
++++++++++four fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rT|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = r|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = r
+final queryterm: |r%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = t
+final queryterm: |t%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tu|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = b|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = b
+final queryterm: |b%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = bl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = bl
+final queryterm: |bl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blE
+final queryterm: |blE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
++++++++++a xxx
++++++++++o' xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @d|
++++++++++bless a xxx
++++++++++bless o' xxx
++++++++++bless xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs@|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blEs@
+final queryterm: |blEs@%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs@d|
++++++++++blessed ___SUCCESS!___
++++++++++to bless a xxx
++++++++++to bless o' xxx
++++++++++to bless xxx
++++++++++to blessed ___SUCCESS!___
++++++++++to bless a xxx
++++++++++to bless o' xxx
++++++++++to bless xxx
++++++++++to blessed ___SUCCESS!___
++++++++++too bless a xxx
++++++++++too bless o' xxx
++++++++++too bless xxx
++++++++++too blessed ___SUCCESS!___
++++++++++two bless a xxx
++++++++++two bless o' xxx
++++++++++two bless xxx
++++++++++two blessed ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tub|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = lE
+final queryterm: |lE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
++++++++++a xxx
++++++++++o' xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @d|
++++++++++less a xxx
++++++++++less o' xxx
++++++++++less xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lEs@|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = lEs@
+final queryterm: |lEs@%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lEs@d|
++++++++++tube less a xxx
++++++++++tube less o' xxx
++++++++++tube less xxx
++++++++++tube xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tubl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = tubl
+final queryterm: |tubl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tublE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = tublE
+final queryterm: |tublE%|
++++++++++rye to bless a xxx
++++++++++rye to bless o' xxx
++++++++++rye to bless xxx
++++++++++rye to blessed ___SUCCESS!___
++++++++++rye to bless a xxx
++++++++++rye to bless o' xxx
++++++++++rye to bless xxx
++++++++++rye to blessed ___SUCCESS!___
++++++++++rye too bless a xxx
++++++++++rye too bless o' xxx
++++++++++rye too bless xxx
++++++++++rye too blessed ___SUCCESS!___
++++++++++rye two bless a xxx
++++++++++rye two bless o' xxx
++++++++++rye two bless xxx
++++++++++rye two blessed ___SUCCESS!___
++++++++++rye tube less a xxx
++++++++++rye tube less o' xxx
++++++++++rye tube less xxx
++++++++++rye tube xxx
++++++++++rye fff
++++++++++wry to bless a xxx
++++++++++wry to bless o' xxx
++++++++++wry to bless xxx
++++++++++wry to blessed ___SUCCESS!___
++++++++++wry to bless a xxx
++++++++++wry to bless o' xxx
++++++++++wry to bless xxx
++++++++++wry to blessed ___SUCCESS!___
++++++++++wry too bless a xxx
++++++++++wry too bless o' xxx
++++++++++wry too bless xxx
++++++++++wry too blessed ___SUCCESS!___
++++++++++wry two bless a xxx
++++++++++wry two bless o' xxx
++++++++++wry two bless xxx
++++++++++wry two blessed ___SUCCESS!___
++++++++++wry tube less a xxx
++++++++++wry tube less o' xxx
++++++++++wry tube less xxx
++++++++++wry tube xxx
++++++++++wry fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raIt|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = u|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = b|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = b
+final queryterm: |b%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = bl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = bl
+final queryterm: |bl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blE
+final queryterm: |blE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
++++++++++a xxx
++++++++++o' xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @d|
++++++++++bless a xxx
++++++++++bless o' xxx
++++++++++bless xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs@|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blEs@
+final queryterm: |blEs@%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs@d|
++++++++++blessed ___SUCCESS!___
++++++++++ooh bless a xxx
++++++++++ooh bless o' xxx
++++++++++ooh bless xxx
++++++++++ooh blessed ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ub|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ub
+final queryterm: |ub%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ubl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ubl
+final queryterm: |ubl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ublE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ublE
+final queryterm: |ublE%|
++++++++++right ooh bless a xxx
++++++++++right ooh bless o' xxx
++++++++++right ooh bless xxx
++++++++++right ooh blessed ___SUCCESS!___
++++++++++right fff
++++++++++rite ooh bless a xxx
++++++++++rite ooh bless o' xxx
++++++++++rite ooh bless xxx
++++++++++rite ooh blessed ___SUCCESS!___
++++++++++rite fff
++++++++++wright ooh bless a xxx
++++++++++wright ooh bless o' xxx
++++++++++wright ooh bless xxx
++++++++++wright ooh blessed ___SUCCESS!___
++++++++++wright fff
++++++++++write ooh bless a xxx
++++++++++write ooh bless o' xxx
++++++++++write ooh bless xxx
++++++++++write ooh blessed ___SUCCESS!___
++++++++++write fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raItu|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = raItu
+final queryterm: |raItu%|
++++++++++forth rye to bless a xxx
++++++++++forth rye to bless o' xxx
++++++++++forth rye to bless xxx
++++++++++forth rye to blessed ___SUCCESS!___
++++++++++forth rye to bless a xxx
++++++++++forth rye to bless o' xxx
++++++++++forth rye to bless xxx
++++++++++forth rye to blessed ___SUCCESS!___
++++++++++forth rye too bless a xxx
++++++++++forth rye too bless o' xxx
++++++++++forth rye too bless xxx
++++++++++forth rye too blessed ___SUCCESS!___
++++++++++forth rye two bless a xxx
++++++++++forth rye two bless o' xxx
++++++++++forth rye two bless xxx
++++++++++forth rye two blessed ___SUCCESS!___
++++++++++forth rye tube less a xxx
++++++++++forth rye tube less o' xxx
++++++++++forth rye tube less xxx
++++++++++forth rye tube xxx
++++++++++forth rye fff
++++++++++forth wry to bless a xxx
++++++++++forth wry to bless o' xxx
++++++++++forth wry to bless xxx
++++++++++forth wry to blessed ___SUCCESS!___
++++++++++forth wry to bless a xxx
++++++++++forth wry to bless o' xxx
++++++++++forth wry to bless xxx
++++++++++forth wry to blessed ___SUCCESS!___
++++++++++forth wry too bless a xxx
++++++++++forth wry too bless o' xxx
++++++++++forth wry too bless xxx
++++++++++forth wry too blessed ___SUCCESS!___
++++++++++forth wry two bless a xxx
++++++++++forth wry two bless o' xxx
++++++++++forth wry two bless xxx
++++++++++forth wry two blessed ___SUCCESS!___
++++++++++forth wry tube less a xxx
++++++++++forth wry tube less o' xxx
++++++++++forth wry tube less xxx
++++++++++forth wry tube xxx
++++++++++forth wry fff
++++++++++forth right ooh bless a xxx
++++++++++forth right ooh bless o' xxx
++++++++++forth right ooh bless xxx
++++++++++forth right ooh blessed ___SUCCESS!___
++++++++++forth right fff
++++++++++forth rite ooh bless a xxx
++++++++++forth rite ooh bless o' xxx
++++++++++forth rite ooh bless xxx
++++++++++forth rite ooh blessed ___SUCCESS!___
++++++++++forth rite fff
++++++++++forth wright ooh bless a xxx
++++++++++forth wright ooh bless o' xxx
++++++++++forth wright ooh bless xxx
++++++++++forth wright ooh blessed ___SUCCESS!___
++++++++++forth wright fff
++++++++++forth write ooh bless a xxx
++++++++++forth write ooh bless o' xxx
++++++++++forth write ooh bless xxx
++++++++++forth write ooh blessed ___SUCCESS!___
++++++++++forth write fff
++++++++++forth fff
++++++++++fourth rye to bless a xxx
++++++++++fourth rye to bless o' xxx
++++++++++fourth rye to bless xxx
++++++++++fourth rye to blessed ___SUCCESS!___
++++++++++fourth rye to bless a xxx
++++++++++fourth rye to bless o' xxx
++++++++++fourth rye to bless xxx
++++++++++fourth rye to blessed ___SUCCESS!___
++++++++++fourth rye too bless a xxx
++++++++++fourth rye too bless o' xxx
++++++++++fourth rye too bless xxx
++++++++++fourth rye too blessed ___SUCCESS!___
++++++++++fourth rye two bless a xxx
++++++++++fourth rye two bless o' xxx
++++++++++fourth rye two bless xxx
++++++++++fourth rye two blessed ___SUCCESS!___
++++++++++fourth rye tube less a xxx
++++++++++fourth rye tube less o' xxx
++++++++++fourth rye tube less xxx
++++++++++fourth rye tube xxx
++++++++++fourth rye fff
++++++++++fourth wry to bless a xxx
++++++++++fourth wry to bless o' xxx
++++++++++fourth wry to bless xxx
++++++++++fourth wry to blessed ___SUCCESS!___
++++++++++fourth wry to bless a xxx
++++++++++fourth wry to bless o' xxx
++++++++++fourth wry to bless xxx
++++++++++fourth wry to blessed ___SUCCESS!___
++++++++++fourth wry too bless a xxx
++++++++++fourth wry too bless o' xxx
++++++++++fourth wry too bless xxx
++++++++++fourth wry too blessed ___SUCCESS!___
++++++++++fourth wry two bless a xxx
++++++++++fourth wry two bless o' xxx
++++++++++fourth wry two bless xxx
++++++++++fourth wry two blessed ___SUCCESS!___
++++++++++fourth wry tube less a xxx
++++++++++fourth wry tube less o' xxx
++++++++++fourth wry tube less xxx
++++++++++fourth wry tube xxx
++++++++++fourth wry fff
++++++++++fourth right ooh bless a xxx
++++++++++fourth right ooh bless o' xxx
++++++++++fourth right ooh bless xxx
++++++++++fourth right ooh blessed ___SUCCESS!___
++++++++++fourth right fff
++++++++++fourth rite ooh bless a xxx
++++++++++fourth rite ooh bless o' xxx
++++++++++fourth rite ooh bless xxx
++++++++++fourth rite ooh blessed ___SUCCESS!___
++++++++++fourth rite fff
++++++++++fourth wright ooh bless a xxx
++++++++++fourth wright ooh bless o' xxx
++++++++++fourth wright ooh bless xxx
++++++++++fourth wright ooh blessed ___SUCCESS!___
++++++++++fourth wright fff
++++++++++fourth write ooh bless a xxx
++++++++++fourth write ooh bless o' xxx
++++++++++fourth write ooh bless xxx
++++++++++fourth write ooh blessed ___SUCCESS!___
++++++++++fourth write fff
++++++++++fourth fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTr|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTr
+final queryterm: |fO`rTr%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTraI
+final queryterm: |fO`rTraI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraIt|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = u|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = b|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = b
+final queryterm: |b%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = bl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = bl
+final queryterm: |bl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blE
+final queryterm: |blE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = d|
++++++++++a xxx
++++++++++o' xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = @d|
++++++++++bless a xxx
++++++++++bless o' xxx
++++++++++bless xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs@|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blEs@
+final queryterm: |blEs@%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs@d|
++++++++++blessed ___SUCCESS!___
++++++++++ooh bless a xxx
++++++++++ooh bless o' xxx
++++++++++ooh bless xxx
++++++++++ooh blessed ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ub|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ub
+final queryterm: |ub%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ubl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ubl
+final queryterm: |ubl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ublE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ublE
+final queryterm: |ublE%|
++++++++++forthright ooh bless a xxx
++++++++++forthright ooh bless o' xxx
++++++++++forthright ooh bless xxx
++++++++++forthright ooh blessed ___SUCCESS!___
++++++++++forthright fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraItu|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTraItu
+final queryterm: |fO`rTraItu%|
+exits findOrthoStrsForPhoneSeq
+0~~>faugh fff
+0~~>for fff
+0~~>fore fff
+0~~>four fff
+0~~>forth rye to bless a xxx
+0~~>forth rye to bless o' xxx
+0~~>forth rye to bless xxx
+0~~>forth rye to blessed ___SUCCESS!___
+0~~>forth rye to bless a xxx
+0~~>forth rye to bless o' xxx
+0~~>forth rye to bless xxx
+0~~>forth rye to blessed ___SUCCESS!___
+0~~>forth rye too bless a xxx
+0~~>forth rye too bless o' xxx
+0~~>forth rye too bless xxx
+0~~>forth rye too blessed ___SUCCESS!___
+0~~>forth rye two bless a xxx
+0~~>forth rye two bless o' xxx
+0~~>forth rye two bless xxx
+0~~>forth rye two blessed ___SUCCESS!___
+0~~>forth rye tube less a xxx
+0~~>forth rye tube less o' xxx
+0~~>forth rye tube less xxx
+0~~>forth rye tube xxx
+0~~>forth rye fff
+0~~>forth wry to bless a xxx
+0~~>forth wry to bless o' xxx
+0~~>forth wry to bless xxx
+0~~>forth wry to blessed ___SUCCESS!___
+0~~>forth wry to bless a xxx
+0~~>forth wry to bless o' xxx
+0~~>forth wry to bless xxx
+0~~>forth wry to blessed ___SUCCESS!___
+0~~>forth wry too bless a xxx
+0~~>forth wry too bless o' xxx
+0~~>forth wry too bless xxx
+0~~>forth wry too blessed ___SUCCESS!___
+0~~>forth wry two bless a xxx
+0~~>forth wry two bless o' xxx
+0~~>forth wry two bless xxx
+0~~>forth wry two blessed ___SUCCESS!___
+0~~>forth wry tube less a xxx
+0~~>forth wry tube less o' xxx
+0~~>forth wry tube less xxx
+0~~>forth wry tube xxx
+0~~>forth wry fff
+0~~>forth right ooh bless a xxx
+0~~>forth right ooh bless o' xxx
+0~~>forth right ooh bless xxx
+0~~>forth right ooh blessed ___SUCCESS!___
+0~~>forth right fff
+0~~>forth rite ooh bless a xxx
+0~~>forth rite ooh bless o' xxx
+0~~>forth rite ooh bless xxx
+0~~>forth rite ooh blessed ___SUCCESS!___
+0~~>forth rite fff
+0~~>forth wright ooh bless a xxx
+0~~>forth wright ooh bless o' xxx
+0~~>forth wright ooh bless xxx
+0~~>forth wright ooh blessed ___SUCCESS!___
+0~~>forth wright fff
+0~~>forth write ooh bless a xxx
+0~~>forth write ooh bless o' xxx
+0~~>forth write ooh bless xxx
+0~~>forth write ooh blessed ___SUCCESS!___
+0~~>forth write fff
+0~~>forth fff
+0~~>fourth rye to bless a xxx
+0~~>fourth rye to bless o' xxx
+0~~>fourth rye to bless xxx
+0~~>fourth rye to blessed ___SUCCESS!___
+0~~>fourth rye to bless a xxx
+0~~>fourth rye to bless o' xxx
+0~~>fourth rye to bless xxx
+0~~>fourth rye to blessed ___SUCCESS!___
+0~~>fourth rye too bless a xxx
+0~~>fourth rye too bless o' xxx
+0~~>fourth rye too bless xxx
+0~~>fourth rye too blessed ___SUCCESS!___
+0~~>fourth rye two bless a xxx
+0~~>fourth rye two bless o' xxx
+0~~>fourth rye two bless xxx
+0~~>fourth rye two blessed ___SUCCESS!___
+0~~>fourth rye tube less a xxx
+0~~>fourth rye tube less o' xxx
+0~~>fourth rye tube less xxx
+0~~>fourth rye tube xxx
+0~~>fourth rye fff
+0~~>fourth wry to bless a xxx
+0~~>fourth wry to bless o' xxx
+0~~>fourth wry to bless xxx
+0~~>fourth wry to blessed ___SUCCESS!___
+0~~>fourth wry to bless a xxx
+0~~>fourth wry to bless o' xxx
+0~~>fourth wry to bless xxx
+0~~>fourth wry to blessed ___SUCCESS!___
+0~~>fourth wry too bless a xxx
+0~~>fourth wry too bless o' xxx
+0~~>fourth wry too bless xxx
+0~~>fourth wry too blessed ___SUCCESS!___
+0~~>fourth wry two bless a xxx
+0~~>fourth wry two bless o' xxx
+0~~>fourth wry two bless xxx
+0~~>fourth wry two blessed ___SUCCESS!___
+0~~>fourth wry tube less a xxx
+0~~>fourth wry tube less o' xxx
+0~~>fourth wry tube less xxx
+0~~>fourth wry tube xxx
+0~~>fourth wry fff
+0~~>fourth right ooh bless a xxx
+0~~>fourth right ooh bless o' xxx
+0~~>fourth right ooh bless xxx
+0~~>fourth right ooh blessed ___SUCCESS!___
+0~~>fourth right fff
+0~~>fourth rite ooh bless a xxx
+0~~>fourth rite ooh bless o' xxx
+0~~>fourth rite ooh bless xxx
+0~~>fourth rite ooh blessed ___SUCCESS!___
+0~~>fourth rite fff
+0~~>fourth wright ooh bless a xxx
+0~~>fourth wright ooh bless o' xxx
+0~~>fourth wright ooh bless xxx
+0~~>fourth wright ooh blessed ___SUCCESS!___
+0~~>fourth wright fff
+0~~>fourth write ooh bless a xxx
+0~~>fourth write ooh bless o' xxx
+0~~>fourth write ooh bless xxx
+0~~>fourth write ooh blessed ___SUCCESS!___
+0~~>fourth write fff
+0~~>fourth fff
+0~~>forthright ooh bless a xxx
+0~~>forthright ooh bless o' xxx
+0~~>forthright ooh bless xxx
+0~~>forthright ooh blessed ___SUCCESS!___
+0~~>forthright fff
+0~~>fff
+Phonetic interpretation 1 ("fO`rT$raIt"u"blEst)
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = f|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = f
+final queryterm: |f%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = `r|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = `r
+final queryterm: |`r%|
++++++++++faugh fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`r|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = T|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = T
+final queryterm: |T%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = Tr|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = Tr
+final queryterm: |Tr%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraI
+final queryterm: |TraI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraIt|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraIt
+final queryterm: |TraIt%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = TraItu|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = TraItu
+final queryterm: |TraItu%|
++++++++++for fff
++++++++++fore fff
++++++++++four fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rT|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = r|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = r
+final queryterm: |r%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raI|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = t
+final queryterm: |t%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tu|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = b|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = b
+final queryterm: |b%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = bl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = bl
+final queryterm: |bl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blE
+final queryterm: |blE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
++++++++++bless xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEst|
++++++++++blessed ___SUCCESS!___
++++++++++blest ___SUCCESS!___
++++++++++to bless xxx
++++++++++to blessed ___SUCCESS!___
++++++++++to blest ___SUCCESS!___
++++++++++to bless xxx
++++++++++to blessed ___SUCCESS!___
++++++++++to blest ___SUCCESS!___
++++++++++too bless xxx
++++++++++too blessed ___SUCCESS!___
++++++++++too blest ___SUCCESS!___
++++++++++two bless xxx
++++++++++two blessed ___SUCCESS!___
++++++++++two blest ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tub|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = l|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = l
+final queryterm: |l%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = lE
+final queryterm: |lE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
++++++++++less xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = lEst|
++++++++++lest ___SUCCESS!___
++++++++++tube less xxx
++++++++++tube lest ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tubl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = tubl
+final queryterm: |tubl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = tublE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = tublE
+final queryterm: |tublE%|
++++++++++rye to bless xxx
++++++++++rye to blessed ___SUCCESS!___
++++++++++rye to blest ___SUCCESS!___
++++++++++rye to bless xxx
++++++++++rye to blessed ___SUCCESS!___
++++++++++rye to blest ___SUCCESS!___
++++++++++rye too bless xxx
++++++++++rye too blessed ___SUCCESS!___
++++++++++rye too blest ___SUCCESS!___
++++++++++rye two bless xxx
++++++++++rye two blessed ___SUCCESS!___
++++++++++rye two blest ___SUCCESS!___
++++++++++rye tube less xxx
++++++++++rye tube lest ___SUCCESS!___
++++++++++rye fff
++++++++++wry to bless xxx
++++++++++wry to blessed ___SUCCESS!___
++++++++++wry to blest ___SUCCESS!___
++++++++++wry to bless xxx
++++++++++wry to blessed ___SUCCESS!___
++++++++++wry to blest ___SUCCESS!___
++++++++++wry too bless xxx
++++++++++wry too blessed ___SUCCESS!___
++++++++++wry too blest ___SUCCESS!___
++++++++++wry two bless xxx
++++++++++wry two blessed ___SUCCESS!___
++++++++++wry two blest ___SUCCESS!___
++++++++++wry tube less xxx
++++++++++wry tube lest ___SUCCESS!___
++++++++++wry fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raIt|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = u|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = b|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = b
+final queryterm: |b%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = bl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = bl
+final queryterm: |bl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blE
+final queryterm: |blE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
++++++++++bless xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEst|
++++++++++blessed ___SUCCESS!___
++++++++++blest ___SUCCESS!___
++++++++++ooh bless xxx
++++++++++ooh blessed ___SUCCESS!___
++++++++++ooh blest ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ub|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ub
+final queryterm: |ub%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ubl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ubl
+final queryterm: |ubl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ublE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ublE
+final queryterm: |ublE%|
++++++++++right ooh bless xxx
++++++++++right ooh blessed ___SUCCESS!___
++++++++++right ooh blest ___SUCCESS!___
++++++++++right fff
++++++++++rite ooh bless xxx
++++++++++rite ooh blessed ___SUCCESS!___
++++++++++rite ooh blest ___SUCCESS!___
++++++++++rite fff
++++++++++wright ooh bless xxx
++++++++++wright ooh blessed ___SUCCESS!___
++++++++++wright ooh blest ___SUCCESS!___
++++++++++wright fff
++++++++++write ooh bless xxx
++++++++++write ooh blessed ___SUCCESS!___
++++++++++write ooh blest ___SUCCESS!___
++++++++++write fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = raItu|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = raItu
+final queryterm: |raItu%|
++++++++++forth rye to bless xxx
++++++++++forth rye to blessed ___SUCCESS!___
++++++++++forth rye to blest ___SUCCESS!___
++++++++++forth rye to bless xxx
++++++++++forth rye to blessed ___SUCCESS!___
++++++++++forth rye to blest ___SUCCESS!___
++++++++++forth rye too bless xxx
++++++++++forth rye too blessed ___SUCCESS!___
++++++++++forth rye too blest ___SUCCESS!___
++++++++++forth rye two bless xxx
++++++++++forth rye two blessed ___SUCCESS!___
++++++++++forth rye two blest ___SUCCESS!___
++++++++++forth rye tube less xxx
++++++++++forth rye tube lest ___SUCCESS!___
++++++++++forth rye fff
++++++++++forth wry to bless xxx
++++++++++forth wry to blessed ___SUCCESS!___
++++++++++forth wry to blest ___SUCCESS!___
++++++++++forth wry to bless xxx
++++++++++forth wry to blessed ___SUCCESS!___
++++++++++forth wry to blest ___SUCCESS!___
++++++++++forth wry too bless xxx
++++++++++forth wry too blessed ___SUCCESS!___
++++++++++forth wry too blest ___SUCCESS!___
++++++++++forth wry two bless xxx
++++++++++forth wry two blessed ___SUCCESS!___
++++++++++forth wry two blest ___SUCCESS!___
++++++++++forth wry tube less xxx
++++++++++forth wry tube lest ___SUCCESS!___
++++++++++forth wry fff
++++++++++forth right ooh bless xxx
++++++++++forth right ooh blessed ___SUCCESS!___
++++++++++forth right ooh blest ___SUCCESS!___
++++++++++forth right fff
++++++++++forth rite ooh bless xxx
++++++++++forth rite ooh blessed ___SUCCESS!___
++++++++++forth rite ooh blest ___SUCCESS!___
++++++++++forth rite fff
++++++++++forth wright ooh bless xxx
++++++++++forth wright ooh blessed ___SUCCESS!___
++++++++++forth wright ooh blest ___SUCCESS!___
++++++++++forth wright fff
++++++++++forth write ooh bless xxx
++++++++++forth write ooh blessed ___SUCCESS!___
++++++++++forth write ooh blest ___SUCCESS!___
++++++++++forth write fff
++++++++++forth fff
++++++++++fourth rye to bless xxx
++++++++++fourth rye to blessed ___SUCCESS!___
++++++++++fourth rye to blest ___SUCCESS!___
++++++++++fourth rye to bless xxx
++++++++++fourth rye to blessed ___SUCCESS!___
++++++++++fourth rye to blest ___SUCCESS!___
++++++++++fourth rye too bless xxx
++++++++++fourth rye too blessed ___SUCCESS!___
++++++++++fourth rye too blest ___SUCCESS!___
++++++++++fourth rye two bless xxx
++++++++++fourth rye two blessed ___SUCCESS!___
++++++++++fourth rye two blest ___SUCCESS!___
++++++++++fourth rye tube less xxx
++++++++++fourth rye tube lest ___SUCCESS!___
++++++++++fourth rye fff
++++++++++fourth wry to bless xxx
++++++++++fourth wry to blessed ___SUCCESS!___
++++++++++fourth wry to blest ___SUCCESS!___
++++++++++fourth wry to bless xxx
++++++++++fourth wry to blessed ___SUCCESS!___
++++++++++fourth wry to blest ___SUCCESS!___
++++++++++fourth wry too bless xxx
++++++++++fourth wry too blessed ___SUCCESS!___
++++++++++fourth wry too blest ___SUCCESS!___
++++++++++fourth wry two bless xxx
++++++++++fourth wry two blessed ___SUCCESS!___
++++++++++fourth wry two blest ___SUCCESS!___
++++++++++fourth wry tube less xxx
++++++++++fourth wry tube lest ___SUCCESS!___
++++++++++fourth wry fff
++++++++++fourth right ooh bless xxx
++++++++++fourth right ooh blessed ___SUCCESS!___
++++++++++fourth right ooh blest ___SUCCESS!___
++++++++++fourth right fff
++++++++++fourth rite ooh bless xxx
++++++++++fourth rite ooh blessed ___SUCCESS!___
++++++++++fourth rite ooh blest ___SUCCESS!___
++++++++++fourth rite fff
++++++++++fourth wright ooh bless xxx
++++++++++fourth wright ooh blessed ___SUCCESS!___
++++++++++fourth wright ooh blest ___SUCCESS!___
++++++++++fourth wright fff
++++++++++fourth write ooh bless xxx
++++++++++fourth write ooh blessed ___SUCCESS!___
++++++++++fourth write ooh blest ___SUCCESS!___
++++++++++fourth write fff
++++++++++fourth fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTr|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTr
+final queryterm: |fO`rTr%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraI|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTraI
+final queryterm: |fO`rTraI%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraIt|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = u|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = b|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = b
+final queryterm: |b%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = bl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = bl
+final queryterm: |bl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = blE
+final queryterm: |blE%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEs|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = t|
++++++++++bless xxx
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = blEst|
++++++++++blessed ___SUCCESS!___
++++++++++blest ___SUCCESS!___
++++++++++ooh bless xxx
++++++++++ooh blessed ___SUCCESS!___
++++++++++ooh blest ___SUCCESS!___
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ub|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ub
+final queryterm: |ub%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ubl|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ubl
+final queryterm: |ubl%|
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = ublE|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = ublE
+final queryterm: |ublE%|
++++++++++forthright ooh bless xxx
++++++++++forthright ooh blessed ___SUCCESS!___
++++++++++forthright ooh blest ___SUCCESS!___
++++++++++forthright fff
+~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = fO`rTraItu|
+
+queryDBForOrthoStrsWithSampaPrefix, sampaPrefix = fO`rTraItu
+final queryterm: |fO`rTraItu%|
+exits findOrthoStrsForPhoneSeq
+1~~>faugh fff
+1~~>for fff
+1~~>fore fff
+1~~>four fff
+1~~>forth rye to bless xxx
+1~~>forth rye to blessed ___SUCCESS!___
+1~~>forth rye to blest ___SUCCESS!___
+1~~>forth rye to bless xxx
+1~~>forth rye to blessed ___SUCCESS!___
+1~~>forth rye to blest ___SUCCESS!___
+1~~>forth rye too bless xxx
+1~~>forth rye too blessed ___SUCCESS!___
+1~~>forth rye too blest ___SUCCESS!___
+1~~>forth rye two bless xxx
+1~~>forth rye two blessed ___SUCCESS!___
+1~~>forth rye two blest ___SUCCESS!___
+1~~>forth rye tube less xxx
+1~~>forth rye tube lest ___SUCCESS!___
+1~~>forth rye fff
+1~~>forth wry to bless xxx
+1~~>forth wry to blessed ___SUCCESS!___
+1~~>forth wry to blest ___SUCCESS!___
+1~~>forth wry to bless xxx
+1~~>forth wry to blessed ___SUCCESS!___
+1~~>forth wry to blest ___SUCCESS!___
+1~~>forth wry too bless xxx
+1~~>forth wry too blessed ___SUCCESS!___
+1~~>forth wry too blest ___SUCCESS!___
+1~~>forth wry two bless xxx
+1~~>forth wry two blessed ___SUCCESS!___
+1~~>forth wry two blest ___SUCCESS!___
+1~~>forth wry tube less xxx
+1~~>forth wry tube lest ___SUCCESS!___
+1~~>forth wry fff
+1~~>forth right ooh bless xxx
+1~~>forth right ooh blessed ___SUCCESS!___
+1~~>forth right ooh blest ___SUCCESS!___
+1~~>forth right fff
+1~~>forth rite ooh bless xxx
+1~~>forth rite ooh blessed ___SUCCESS!___
+1~~>forth rite ooh blest ___SUCCESS!___
+1~~>forth rite fff
+1~~>forth wright ooh bless xxx
+1~~>forth wright ooh blessed ___SUCCESS!___
+1~~>forth wright ooh blest ___SUCCESS!___
+1~~>forth wright fff
+1~~>forth write ooh bless xxx
+1~~>forth write ooh blessed ___SUCCESS!___
+1~~>forth write ooh blest ___SUCCESS!___
+1~~>forth write fff
+1~~>forth fff
+1~~>fourth rye to bless xxx
+1~~>fourth rye to blessed ___SUCCESS!___
+1~~>fourth rye to blest ___SUCCESS!___
+1~~>fourth rye to bless xxx
+1~~>fourth rye to blessed ___SUCCESS!___
+1~~>fourth rye to blest ___SUCCESS!___
+1~~>fourth rye too bless xxx
+1~~>fourth rye too blessed ___SUCCESS!___
+1~~>fourth rye too blest ___SUCCESS!___
+1~~>fourth rye two bless xxx
+1~~>fourth rye two blessed ___SUCCESS!___
+1~~>fourth rye two blest ___SUCCESS!___
+1~~>fourth rye tube less xxx
+1~~>fourth rye tube lest ___SUCCESS!___
+1~~>fourth rye fff
+1~~>fourth wry to bless xxx
+1~~>fourth wry to blessed ___SUCCESS!___
+1~~>fourth wry to blest ___SUCCESS!___
+1~~>fourth wry to bless xxx
+1~~>fourth wry to blessed ___SUCCESS!___
+1~~>fourth wry to blest ___SUCCESS!___
+1~~>fourth wry too bless xxx
+1~~>fourth wry too blessed ___SUCCESS!___
+1~~>fourth wry too blest ___SUCCESS!___
+1~~>fourth wry two bless xxx
+1~~>fourth wry two blessed ___SUCCESS!___
+1~~>fourth wry two blest ___SUCCESS!___
+1~~>fourth wry tube less xxx
+1~~>fourth wry tube lest ___SUCCESS!___
+1~~>fourth wry fff
+1~~>fourth right ooh bless xxx
+1~~>fourth right ooh blessed ___SUCCESS!___
+1~~>fourth right ooh blest ___SUCCESS!___
+1~~>fourth right fff
+1~~>fourth rite ooh bless xxx
+1~~>fourth rite ooh blessed ___SUCCESS!___
+1~~>fourth rite ooh blest ___SUCCESS!___
+1~~>fourth rite fff
+1~~>fourth wright ooh bless xxx
+1~~>fourth wright ooh blessed ___SUCCESS!___
+1~~>fourth wright ooh blest ___SUCCESS!___
+1~~>fourth wright fff
+1~~>fourth write ooh bless xxx
+1~~>fourth write ooh blessed ___SUCCESS!___
+1~~>fourth write ooh blest ___SUCCESS!___
+1~~>fourth write fff
+1~~>fourth fff
+1~~>forthright ooh bless xxx
+1~~>forthright ooh blessed ___SUCCESS!___
+1~~>forthright ooh blest ___SUCCESS!___
+1~~>forthright fff
+1~~>fff
+DEDUPLICATION TIME!
+!Discovered 46 oronyms:
+0: 'forth right ooh blessed ___SUCCESS!___'
+1: 'forth right ooh blest ___SUCCESS!___'
+2: 'forth rite ooh blessed ___SUCCESS!___'
+3: 'forth rite ooh blest ___SUCCESS!___'
+4: 'forth rye to blessed ___SUCCESS!___'
+5: 'forth rye to blest ___SUCCESS!___'
+6: 'forth rye too blessed ___SUCCESS!___'
+7: 'forth rye too blest ___SUCCESS!___'
+8: 'forth rye tube lest ___SUCCESS!___'
+9: 'forth rye two blessed ___SUCCESS!___'
+10: 'forth rye two blest ___SUCCESS!___'
+11: 'forth wright ooh blessed ___SUCCESS!___'
+12: 'forth wright ooh blest ___SUCCESS!___'
+13: 'forth write ooh blessed ___SUCCESS!___'
+14: 'forth write ooh blest ___SUCCESS!___'
+15: 'forth wry to blessed ___SUCCESS!___'
+16: 'forth wry to blest ___SUCCESS!___'
+17: 'forth wry too blessed ___SUCCESS!___'
+18: 'forth wry too blest ___SUCCESS!___'
+19: 'forth wry tube lest ___SUCCESS!___'
+20: 'forth wry two blessed ___SUCCESS!___'
+21: 'forth wry two blest ___SUCCESS!___'
+22: 'forthright ooh blessed ___SUCCESS!___'
+23: 'forthright ooh blest ___SUCCESS!___'
+24: 'fourth right ooh blessed ___SUCCESS!___'
+25: 'fourth right ooh blest ___SUCCESS!___'
+26: 'fourth rite ooh blessed ___SUCCESS!___'
+27: 'fourth rite ooh blest ___SUCCESS!___'
+28: 'fourth rye to blessed ___SUCCESS!___'
+29: 'fourth rye to blest ___SUCCESS!___'
+30: 'fourth rye too blessed ___SUCCESS!___'
+31: 'fourth rye too blest ___SUCCESS!___'
+32: 'fourth rye tube lest ___SUCCESS!___'
+33: 'fourth rye two blessed ___SUCCESS!___'
+34: 'fourth rye two blest ___SUCCESS!___'
+35: 'fourth wright ooh blessed ___SUCCESS!___'
+36: 'fourth wright ooh blest ___SUCCESS!___'
+37: 'fourth write ooh blessed ___SUCCESS!___'
+38: 'fourth write ooh blest ___SUCCESS!___'
+39: 'fourth wry to blessed ___SUCCESS!___'
+40: 'fourth wry to blest ___SUCCESS!___'
+41: 'fourth wry too blessed ___SUCCESS!___'
+42: 'fourth wry too blest ___SUCCESS!___'
+43: 'fourth wry tube lest ___SUCCESS!___'
+44: 'fourth wry two blessed ___SUCCESS!___'
+45: 'fourth wry two blest ___SUCCESS!___'
+NO TESTS FAILED! :) 
