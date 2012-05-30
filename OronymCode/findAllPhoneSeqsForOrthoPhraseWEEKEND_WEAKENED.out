@@ -1,0 +1,14 @@
+DATABASE SUCCESSFULLY OPENED
+TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = weakened weekend
+
+queryDBwithOrthoForSampaStrs, orthoWord = weakened
+
+queryDBwithOrthoForSampaStrs, orthoWord = weakened
+
+queryDBwithOrthoForSampaStrs, orthoWord = weekend
+
+queryDBwithOrthoForSampaStrs, orthoWord = weekend
+0***sampa phrase after append  _"__w__i__k__$__@__n__d__"__w__i__k__$__E__n__d_
+---"wik$@nd"wik$End
+
+NO TESTS FAILED! :) 

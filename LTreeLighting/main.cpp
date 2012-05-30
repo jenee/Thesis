@@ -25,6 +25,8 @@
 #include <string>
 
 #include <vector>
+#include <set>
+#include <sstream>
 
 #include "Metrics.h"
 #include "../OronymCode/wordBreakdown.h"
@@ -208,6 +210,11 @@ void drawCylinder() {
     } 
 }
 
+void drawBranch(double tiltAngle, double xOffset, double yOffset, 
+               double startRadius, double endRadius ) {
+   assert(0)
+}
+
 void drawBranches(double tiltAngle, double xOffset, double yOffset) {
     glPushMatrix();
     {
@@ -266,30 +273,77 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
     glPopMatrix();
 }
 
+string FirstWord(const string& line)
+{
+    return line.substr(0, line.find(' ')+1 );
+}
 
-void drawBranchesAtFork( vector< string > fullPhrases ) {
+void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
+   if( fullPhrases.size() == 0 ) {
+      return;
+   }
+   
+   //use a set to ensure no duplicates
    set< string > firstWords;
-   //pull the first word of each phrase into the set
    
+   //put the first word of each phrase into the set
+   for(int i = 0; i < fullPhrases.size(); i++){
+      if( fullPhrases.at(i).size() > 0 ) {
+         firstWords.insert( FirstWord( fullPhrases.at(i) ) );
+      }
+   } 
+   
+   double angleDelta = 90.0 / firstWords.size();
+   double farLeftTiltAngle = -45.0;
+   double tempXOffset = .1;      
+   double tempYOffset = .1;     
+   
+   double farRightXOffset = ( tempXOffset * firstWords.size() ) / 2.0;
+   double farLeftXOffset = farRightXOffset * -1.0;
+   
+   int i = 0;
    //for each firstWord in the set
+   for ( curFirstWordIter = firstWords.begin(); curFirstWordIter != firstWords.end(); curFirstWordIter++) {
+      string curFirstWord = *curFirstWordIter;
       
-      //if firstWord indicates a dead end( xxx or fff)
-         
-         //draw a red cylinder
-      //else
-            
-         //draw a branch
+      //draw a branch
+      //TODO: this will have to be scaled, translated
+      double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
+      double curXOffset = farLeftXOffset + ( tempXOffset * i );
+      double curYOffset = tempYOffset;     
+      double tempEndRadius = lastRadius;
+
+      drawBranch( tiltAngle, curXOffset, curXOffset, lastRadius, tempEndRadius );
+      
+      glPushMatrix();
+      {
+         //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
+         if( curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
+            //draw a red cube/sphere at the end of the branch
+            drawCube();
+            //TODO: this will have to be scaled, translated and parameterized;
+         } else {
+            //find all phrases in fullPhrases that start with that firstWord
+            set<string> tailPhrases;
+            for (int j = 0; j < fullPhrases.size(); j++) {
+               if( curFirstWord == FirstWord( fullPhrases.at(j) ) ) {
+                  //remove firstWord from those phrases
+                  string tempTail = fullPhrases.at(j).substr( line.find(' ')+1 );
+                  tailPhrases.insert( tempTail );
+               }
+            }
+            //pass those phrases to drawBranchesAtFork
+            drawBranchesAtFork( tailPhrases );
+         }
+      }
+      glPopMatrix();
+      i++;
+   }
    
-         //find all phrases in fullPhrases that start with that firstWord
-         
-         //remove firstWord from those phrases
-         
-         //pass those phrases to drawBranchesAtFork
-      
-      //
-   //
       
 }
+
+
 
 
 void buildAndDrawFullTree( string orthoPhrase ) {

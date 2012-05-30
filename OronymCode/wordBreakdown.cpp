@@ -6,9 +6,6 @@ using namespace std;
 sqlite3 *db;
 vector< vector< string > > databaseResults;
 
-string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
-string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
-
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
