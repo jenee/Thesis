@@ -72,7 +72,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       double curXOffset = farLeftXOffset + ( defaultXOffset * i );
       double curYOffset = defaultYOffset;     
 
-      drawBranch( tiltAngle, curXOffset, curXOffset, lastRadius, firstWordRadius );
+      drawBranch( tiltAngle, curXOffset, curXOffset, firstWordRadius, lastRadius);
       
       glPushMatrix();
       {
