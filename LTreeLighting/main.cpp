@@ -81,8 +81,14 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
          //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
          if( curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
-            drawcube();
+            materials(RedFlat);
+
+            drawSphere(firstWordRadius * 1.1);
+            materials(GreenShiny);
+
             //TODO: this will have to be scaled, translated and parameterized;
+         } else if (curFirstWord == successDelim ) {
+            drawSphere(firstWordRadius * 1.1);
          } else {
             //find all phrases in fullPhrases that start with that firstWord
             set<string> tailPhrases;
@@ -226,6 +232,13 @@ void drawCylinder(double topRadius, double baseRadius, double cylinderHeight ) {
 void drawCylinder() {
     drawCylinder( DEFAULT_RADIUS*.80 , DEFAULT_RADIUS, DEFAULT_BRANCH_LEN );
 }
+
+//draw a sphere
+void drawSphere(double rad ) {
+   //void gluSphere	(	GLUquadric* quad , GLdouble radius , GLint slices , GLint stacks );
+   gluSphere(mySphere, rad, 12, 12);
+}
+
 
 //dorky way to draw a cube one face at a time
 void drawcube() {

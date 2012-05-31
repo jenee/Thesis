@@ -75,6 +75,9 @@ int deltaTreeGrow = 1;
 
 
 
+//a sphere for drawing a spherical world
+GLUquadricObj* mySphere;
+
 
 
 int mat = 0;
@@ -115,6 +118,7 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
 
 void drawCylinder(double topRadius, double baseRadius, double cylinderHeight);
 void drawCylinder();void Timer(int value);
+void drawSphere(double radius );
 void drawcube();
 
 void materials(materialStruct materials);

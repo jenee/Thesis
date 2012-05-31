@@ -348,7 +348,7 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 	vector< string > fullOrthoStrs;
 	if( phoneSeq.size() == 0 ) {
 	   //cerr<<"+++ PHONE SEQ SIZE = 0, we're SUCCEEEDED! WOOOHOOO!"<<endl;
-	   fullOrthoStrs.push_back("___SUCCESS!___");
+	   fullOrthoStrs.push_back(successDelim);
 	   return fullOrthoStrs;
 	}
 	for ( int i = 0; i < phoneSeq.size(); i++) {

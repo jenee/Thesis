@@ -26,6 +26,7 @@ typedef std::string phone;
 #define DICTIONARY_MIN_FREQ 0 
 #define deadEndDelim1 "xxx" //formerly "DEADBEEF"
 #define deadEndDelim2 "fff" //formerly "DEADerBEEF"
+#define successDelim "___SUCCESS!___"
 
 typedef struct MetaWord {
    std::string word;
