@@ -454,7 +454,7 @@ int queryDBwithOrthoForFreq( string orthoWord ) {
    confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
-   fprintf(stderr, "\nqueryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
+   //fprintf(stderr, "\queryDBwithOrthoForFreq, orthoWord = %s\n", orthoWord.c_str());
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
 
@@ -670,11 +670,16 @@ string delSpaces(string &str) {
 }
 
 void getMaxAndMinFreqForAllOrthoPhrases( vector< string > fullPhrases, int* max, int* min ) {
+   cerr << "getMaxAndMinFreqForAllOrthoPhrases, fullPhrases.size()="<<fullPhrases.size() << endl;
+
    int freqMax = DICTIONARY_MIN_FREQ - 1;
    int freqMin = DICTIONARY_MAX_FREQ + 1; 
    for(int i = 0; i < fullPhrases.size(); i++) {
+      cerr << "i = "<<i << endl;
       vector< string > phraseWords =  strTokOnWhitespace ( fullPhrases[i] );
       for( int j = 0; j < phraseWords.size(); j++) {
+         cerr << "---j = "<<j<<", word = "<< phraseWords.at(j) << endl;
+
          int freqTemp =  queryDBwithOrthoForFreq( phraseWords.at(j) );
          if( freqTemp > freqMax ) {
             freqMax = freqTemp;

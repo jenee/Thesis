@@ -111,7 +111,7 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("a nice cold hour");
+   buildAndDrawFullTree("a nice");// cold hour");
 }
 
 
