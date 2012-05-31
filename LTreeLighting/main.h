@@ -30,6 +30,8 @@
 #include <set>
 #include <sstream>
 
+#include <limits.h>
+
 #include "Metrics.h"
 #include "../OronymCode/wordBreakdown.h"
 
@@ -66,7 +68,7 @@ GLfloat light_diff[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_spec[4] = {0.8, 0.8, 0.8, 1.0};
 
 //Globals for animation
-int refreshMills = 1000;    // refresh interval in milliseconds
+int refreshMills = INT_MAX; //1000;    // refresh interval in milliseconds
 int deltaRefreshMills = 500;  // the amount by which to change the refresh rate per change
 int treeHeight = 0;
 int deltaTreeGrow = 1;
