@@ -6,95 +6,6 @@ using namespace std;
 
 
 
-//sets up a specific material
-void materials(materialStruct materials) {
-   glMaterialfv(GL_FRONT, GL_AMBIENT, materials.ambient);
-   glMaterialfv(GL_FRONT, GL_DIFFUSE, materials.diffuse);
-   glMaterialfv(GL_FRONT, GL_SPECULAR, materials.specular);
-   glMaterialfv(GL_FRONT, GL_SHININESS, materials.shininess);
-}
-
-//initialization calls for opengl for static light
-//note that we still need to enable lighting in order for it to work
-//see keyboard 'l' event
-void init_lighting() {
-   //turn on light0
-   glEnable(GL_LIGHT0);
-   //set up the diffuse, ambient and specular components for the light
-   glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diff);
-   glLightfv(GL_LIGHT0, GL_AMBIENT, light_amb);
-   glLightfv(GL_LIGHT0, GL_SPECULAR, light_spec);
-   //specify our lighting model as 1 normal per face
-   glShadeModel(GL_FLAT);
-}
-
-void pos_light() {
-   //set the light's position
-   glMatrixMode(GL_MODELVIEW);
-   glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
-}
-
-//dorky way to draw a cube one face at a time
-void drawcube() {
-   
-   //color of the cube for when lighting is disabled
-   glColor3f(1.0, 0.0, 0.0);
-   
-   //left face: for lighting you must specify a normal for each face!
-   glNormal3f(-1.0, 0.0, 0.0);
-   glBegin(GL_POLYGON);
-   glVertex3f(-0.5, 0.5, 0.5); //v5
-   glVertex3f(-0.5, 0.5, -0.5); //v4
-   glVertex3f(-0.5, -0.5, -0.5); //v1
-   glVertex3f(-0.5, -0.5, 0.5); //v8
-   glEnd();
-   
-   //right face:  for lighting you must specify a normal for each face!
-   glNormal3f(1.0, 0.0, 0.0);
-   glBegin(GL_POLYGON);
-   glVertex3f(0.5, -0.5, -0.5); //v2
-   glVertex3f(0.5, 0.5, -0.5); //v3
-   glVertex3f(0.5, 0.5, 0.5); //v6
-   glVertex3f(0.5, -0.5, 0.5); 
-   glEnd();
-   
-   //bottom face:  for lighting you must specify a normal for each face!
-   glNormal3f(0, -1.0, 0.0);
-   glBegin(GL_POLYGON);
-   glVertex3f(-0.5, -0.5, 0.5); //v8
-   glVertex3f(0.5, -0.5, 0.5); //v7
-   glVertex3f(0.5, -0.5, -0.5); //v2
-   glVertex3f(-0.5, -0.5, -0.5); //v1
-   glEnd();
-   
-   //top face:  for lighting you must specify a normal for each face!
-   glNormal3f(0, 1.0, 0.0);
-   glBegin(GL_POLYGON);
-   glVertex3f(0.5, 0.5, -0.5); //v3
-   glVertex3f(-0.5, 0.5, -0.5); //v4
-   glVertex3f(-0.5, 0.5, 0.5); //v5
-   glVertex3f(0.5, 0.5, 0.5); //v6
-   glEnd();
-   
-   //front face:  for lighting you must specify a normal for each face!
-   glNormal3f(0, 0, 1.0);
-   glBegin(GL_POLYGON);
-   glVertex3f(-0.5, 0.5, 0.5); //v5
-   glVertex3f(0.5, 0.5, 0.5); //v6
-   glVertex3f(0.5, -0.5, 0.5); //v7
-   glVertex3f(-0.5, -0.5, 0.5); //v8
-   glEnd();
-   
-   //back face:  for lighting you must specify a normal for each face!
-   glNormal3f(0, 0, -1.0);
-   glBegin(GL_POLYGON);
-   glVertex3f(-0.5, -0.5, -0.5); //v1
-   glVertex3f(0.5, -0.5, -0.5); //v2
-   glVertex3f(0.5, 0.5, -0.5); //v3
-   glVertex3f(-0.5, 0.5, -0.5); //v4
-   glEnd();
-   
-}
 
 
 
@@ -206,12 +117,99 @@ void buildAndDrawFullTree() {
    buildAndDrawFullTree("a nice cold hour");
 }
 
+//sets up a specific material
+void materials(materialStruct materials) {
+   glMaterialfv(GL_FRONT, GL_AMBIENT, materials.ambient);
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, materials.diffuse);
+   glMaterialfv(GL_FRONT, GL_SPECULAR, materials.specular);
+   glMaterialfv(GL_FRONT, GL_SHININESS, materials.shininess);
+}
+
+//initialization calls for opengl for static light
+//note that we still need to enable lighting in order for it to work
+//see keyboard 'l' event
+void init_lighting() {
+   //turn on light0
+   glEnable(GL_LIGHT0);
+   //set up the diffuse, ambient and specular components for the light
+   glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diff);
+   glLightfv(GL_LIGHT0, GL_AMBIENT, light_amb);
+   glLightfv(GL_LIGHT0, GL_SPECULAR, light_spec);
+   //specify our lighting model as 1 normal per face
+   glShadeModel(GL_FLAT);
+}
+
+void pos_light() {
+   //set the light's position
+   glMatrixMode(GL_MODELVIEW);
+   glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
+}
+
+//dorky way to draw a cube one face at a time
+void drawcube() {
+   
+   //color of the cube for when lighting is disabled
+   glColor3f(1.0, 0.0, 0.0);
+   
+   //left face: for lighting you must specify a normal for each face!
+   glNormal3f(-1.0, 0.0, 0.0);
+   glBegin(GL_POLYGON);
+   glVertex3f(-0.5, 0.5, 0.5); //v5
+   glVertex3f(-0.5, 0.5, -0.5); //v4
+   glVertex3f(-0.5, -0.5, -0.5); //v1
+   glVertex3f(-0.5, -0.5, 0.5); //v8
+   glEnd();
+   
+   //right face:  for lighting you must specify a normal for each face!
+   glNormal3f(1.0, 0.0, 0.0);
+   glBegin(GL_POLYGON);
+   glVertex3f(0.5, -0.5, -0.5); //v2
+   glVertex3f(0.5, 0.5, -0.5); //v3
+   glVertex3f(0.5, 0.5, 0.5); //v6
+   glVertex3f(0.5, -0.5, 0.5); 
+   glEnd();
+   
+   //bottom face:  for lighting you must specify a normal for each face!
+   glNormal3f(0, -1.0, 0.0);
+   glBegin(GL_POLYGON);
+   glVertex3f(-0.5, -0.5, 0.5); //v8
+   glVertex3f(0.5, -0.5, 0.5); //v7
+   glVertex3f(0.5, -0.5, -0.5); //v2
+   glVertex3f(-0.5, -0.5, -0.5); //v1
+   glEnd();
+   
+   //top face:  for lighting you must specify a normal for each face!
+   glNormal3f(0, 1.0, 0.0);
+   glBegin(GL_POLYGON);
+   glVertex3f(0.5, 0.5, -0.5); //v3
+   glVertex3f(-0.5, 0.5, -0.5); //v4
+   glVertex3f(-0.5, 0.5, 0.5); //v5
+   glVertex3f(0.5, 0.5, 0.5); //v6
+   glEnd();
+   
+   //front face:  for lighting you must specify a normal for each face!
+   glNormal3f(0, 0, 1.0);
+   glBegin(GL_POLYGON);
+   glVertex3f(-0.5, 0.5, 0.5); //v5
+   glVertex3f(0.5, 0.5, 0.5); //v6
+   glVertex3f(0.5, -0.5, 0.5); //v7
+   glVertex3f(-0.5, -0.5, 0.5); //v8
+   glEnd();
+   
+   //back face:  for lighting you must specify a normal for each face!
+   glNormal3f(0, 0, -1.0);
+   glBegin(GL_POLYGON);
+   glVertex3f(-0.5, -0.5, -0.5); //v1
+   glVertex3f(0.5, -0.5, -0.5); //v2
+   glVertex3f(0.5, 0.5, -0.5); //v3
+   glVertex3f(-0.5, 0.5, -0.5); //v4
+   glEnd();
+   
+}
 
 
 
-
-
-void drawCylinder() {
+void drawCylinder(double baseRadius, double topRadius, double height ) {
     {
         double radiiTop = halfRadius;
         double radiiBase = halfRadius*.80;
@@ -228,6 +226,10 @@ void drawCylinder() {
         }
         glPopMatrix();
     } 
+}
+
+void drawCylinder() {
+    drawCylinder( halfRadius*.80 , halfRadius, cylinderHeight);
 }
 
 void drawBranch(double tiltAngle, double xOffset, double yOffset, 
@@ -335,7 +337,8 @@ void display() {
     double halfRadius = .25;
     double cylinderHeight = 2.0;
     
-    drawBranchesRecursive(treeHeight, 45, halfRadius, cylinderHeight*.75);
+    buildAndDrawFullTree();
+    //drawBranchesRecursive(treeHeight, 45, halfRadius, cylinderHeight*.75);
 
     /*
     for (int i = 1; i < 50; i++) {

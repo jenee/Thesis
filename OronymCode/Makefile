@@ -3,7 +3,7 @@ CFLAGS   = -lsqlite3  -pedantic
 
 all: treeGUI
   
-treeGUI:  wordBreakdown.* wordTreeDraw.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
+treeGUI:  wordBreakdown.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
 	$(CC) $(CFLAGS) -framework GLUT -framework OpenGL  -g -o $@ $^
    
 test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 

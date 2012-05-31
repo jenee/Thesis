@@ -106,16 +106,13 @@ void drawBranchesAtFork( std::vector< std::string > fullPhrases, double lastRadi
 void buildAndDrawFullTree( std::string orthoPhrase );
 void buildAndDrawFullTree();
 
+
 //main funcs
-void growTreeByVal(int val);
-int calcGrowth();
-void changeRefreshRateBy( int val );
-void changeTempoBy( int val );
-void pauseMine();
 void materials(materialStruct materials);
 void init_lighting();
 void pos_light();
 void drawcube();
+void drawCylinder(double baseRadius, double topRadius, double height );
 void drawCylinder();
 void drawBranch(double tiltAngle, double xOffset, double yOffset, double startRadius, double endRadius );
 void drawBranches(double tiltAngle, double xOffset, double yOffset);
