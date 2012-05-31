@@ -2,10 +2,6 @@
 
 using namespace std;
 
-//GLOBALS for database access
-sqlite3 *db;
-vector< vector< string > > databaseResults;
-
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
@@ -17,6 +13,14 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
    //printf("\n");
    databaseResults.push_back(rowEntry);
    return 0;
+}
+
+bool confirmDatabaseInitialization() {
+   bool allValsInitialized = true;
+   if(db == null ) {
+      connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
+   }
+   allValsInitialized &= (db != null);
 }
 
 vector< vector<phone> > getPhoneSeqsForSampaStrs( vector<string> sampaStrings ) {
@@ -403,12 +407,15 @@ vector<string> findOrthoStrsForPhoneSeq( vector<phone> phoneSeq ) {
 
 vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
    char* zErr;
+   confirmDatabaseInitialization();
+   
    /*The following line calls the callback function, passing its 4th arg as the 
     first param of the callback function.  The sqlite3_exec function 
     queries the database, then for every result that it gets, it calls the 
     callback function.*/
    int rc = sqlite3_exec(db, sqlQuery, callback, (void*)queryCallback4thArg.c_str(), &zErr);
    if ( rc != SQLITE_OK ) {
+      cerr << "error in queryDBforStrings for sqlite3_exec, rc = " << rc<<endl;
       if ( zErr != NULL ) {
          fprintf(stderr, "SQL error: %s\n", zErr);
          sqlite3_free(zErr);
@@ -436,6 +443,7 @@ vector<string> queryDBforStrings( char* sqlQuery, string queryCallback4thArg ) {
 
 /* given ortho, returns freq val */
 int queryDBwithOrthoForFreq( string orthoWord ) {
+   confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
    fprintf(stderr, "\nqueryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
@@ -486,6 +494,7 @@ int queryDBwithOrthoForFreq( string orthoWord ) {
 
 /* given ortho, returns SAMPAs */
 vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
+   confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
    fprintf(stderr, "\nqueryDBwithOrthoForSampaStrs, orthoWord = %s\n", orthoWord.c_str());
@@ -532,6 +541,7 @@ vector<string> queryDBwithOrthoForSampaStrs( string orthoWord ) {
 /*looks up emphasis-free SAMPA str in phonetic dict, 
    returns a bunch of ortho strings whos SAMPA is prefixed with sampaPrefix*/
 vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
+   confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
    fprintf(stderr, "\nqueryDBForOrthoStrsWithSampaPrefix, sampaPrefix = %s\n", sampaPrefix.c_str());
@@ -551,6 +561,7 @@ vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
 
 /*looks up emphasis-free SAMPA str in phonetic dict, returns a bunch of ortho*/
 vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
+   confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
    fprintf(stderr, "~~~~~~~~~queryDBwithSAMPAForOrthoStrs, sampaStr = %s|\n", sampaStr.c_str());
@@ -567,6 +578,7 @@ vector<string> queryDBwithSampaForOrthoStrs( string sampaStr ) {
 
 /* given ortho, returns entire row to databaseResults */
 void queryDBwithOrthoForRow( string orthoWord ) {
+   confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    char* zErr;
    
@@ -909,6 +921,7 @@ void connectToPhoneticDictionaryDatabase(string databaseFilename) {
 }
 
 void cleanupDatabase() {
+   confirmDatabaseInitialization();
    sqlite3_close(db);
 }
 /*

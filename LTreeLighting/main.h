@@ -35,6 +35,7 @@
 
 
 #define DEFAULT_RADIUS .25
+#define DEFAULT_BRANCH_LEN 2.0
 
 int maxWordFreq = DICTIONARY_MIN_FREQ - 1;
 int minWordFreq = DICTIONARY_MAX_FREQ + 1; 
@@ -72,8 +73,6 @@ int deltaTreeGrow = 1;
 
 
 
-double halfRadius = .25;
-double cylinderHeight = 2.0;
 
 
 int mat = 0;
@@ -108,16 +107,17 @@ void buildAndDrawFullTree();
 
 
 //main funcs
-void materials(materialStruct materials);
-void init_lighting();
-void pos_light();
-void drawcube();
-void drawCylinder(double baseRadius, double topRadius, double height );
-void drawCylinder();
 void drawBranch(double tiltAngle, double xOffset, double yOffset, double startRadius, double endRadius );
 void drawBranches(double tiltAngle, double xOffset, double yOffset);
 void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, double yOffset);
-void Timer(int value);
+
+void drawCylinder(double topRadius, double baseRadius, double cylinderHeight);
+void drawCylinder();void Timer(int value);
+void drawcube();
+
+void materials(materialStruct materials);
+void init_lighting();
+void pos_light();
 void pauseMine();
 void display();
 void reshape(int w, int h);

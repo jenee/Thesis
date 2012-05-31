@@ -117,32 +117,105 @@ void buildAndDrawFullTree() {
    buildAndDrawFullTree("a nice cold hour");
 }
 
-//sets up a specific material
-void materials(materialStruct materials) {
-   glMaterialfv(GL_FRONT, GL_AMBIENT, materials.ambient);
-   glMaterialfv(GL_FRONT, GL_DIFFUSE, materials.diffuse);
-   glMaterialfv(GL_FRONT, GL_SPECULAR, materials.specular);
-   glMaterialfv(GL_FRONT, GL_SHININESS, materials.shininess);
+
+
+
+void drawBranch(double tiltAngle, double xOffset, double yOffset, 
+               double baseRadius, double topRadius ) {
+   double height = DEFAULT_BRANCH_LEN;
+   glPushMatrix();
+   {
+      //Draw right branch
+      glTranslated(xOffset, yOffset, 0.0);
+
+   glRotated(-tiltAngle, 0, 0, 1.0);
+   drawCylinder(baseRadius, topRadius, height );
+
+   }
+   glPopMatrix();
 }
 
-//initialization calls for opengl for static light
-//note that we still need to enable lighting in order for it to work
-//see keyboard 'l' event
-void init_lighting() {
-   //turn on light0
-   glEnable(GL_LIGHT0);
-   //set up the diffuse, ambient and specular components for the light
-   glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diff);
-   glLightfv(GL_LIGHT0, GL_AMBIENT, light_amb);
-   glLightfv(GL_LIGHT0, GL_SPECULAR, light_spec);
-   //specify our lighting model as 1 normal per face
-   glShadeModel(GL_FLAT);
+void drawBranches(double tiltAngle, double xOffset, double yOffset) {
+    glPushMatrix();
+    {
+        //Draw right branch
+        glTranslated(xOffset, yOffset, 0.0);
+        glRotated(tiltAngle, 0, 0, 1.0);
+        drawCylinder();
+    }
+    glPopMatrix();
+    glPushMatrix();
+    {
+        //draw left branch
+        glTranslated(-xOffset, yOffset, 0.0);
+        
+        glRotated(-tiltAngle, 0, 0, 1.0);
+        
+        drawCylinder();
+    }
+    glPopMatrix();
 }
 
-void pos_light() {
-   //set the light's position
-   glMatrixMode(GL_MODELVIEW);
-   glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
+void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, double yOffset) {
+    //countleft==the number of levels of branches above this one.
+    if( countLeft == 0) {
+        return;
+    }
+    glPushMatrix();
+    {
+        //Draw right branch
+        glTranslated(xOffset, yOffset, 0.0);
+
+        glRotated(-tiltAngle, 0, 0, 1.0);
+        drawCylinder();
+        
+        //glPushMatrix();
+        //{
+            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
+        //}
+        //glPopMatrix();
+    }
+    glPopMatrix();
+    glPushMatrix();
+    {
+        //draw left branch
+        glTranslated(-xOffset, yOffset, 0.0);
+        
+        glRotated(tiltAngle, 0, 0, 1.0);
+        
+        drawCylinder();
+        //glPushMatrix();
+        //{
+            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
+        //}
+        //glPopMatrix();
+    }
+    glPopMatrix();
+}
+
+
+
+void drawCylinder(double topRadius, double baseRadius, double cylinderHeight ) {
+    {
+        double radiiTop = topRadius;
+        double radiiBase = baseRadius;
+        double height = cylinderHeight;
+        int sliceNum = 30;
+        int stackNum = 30;
+        glPushMatrix();
+        {
+            glTranslated(0.0, -( height/2.0 ), 0);
+            glRotated(-90, 1.0, 0, 0);
+            GLUquadricObj *myCylinder = gluNewQuadric();
+            gluQuadricDrawStyle(myCylinder, GLU_FILL);
+            gluCylinder(myCylinder, radiiBase, radiiTop, height, sliceNum, stackNum);
+        }
+        glPopMatrix();
+    } 
+}
+
+void drawCylinder() {
+    drawCylinder( DEFAULT_RADIUS*.80 , DEFAULT_RADIUS, DEFAULT_BRANCH_LEN );
 }
 
 //dorky way to draw a cube one face at a time
@@ -209,91 +282,34 @@ void drawcube() {
 
 
 
-void drawCylinder(double baseRadius, double topRadius, double height ) {
-    {
-        double radiiTop = halfRadius;
-        double radiiBase = halfRadius*.80;
-        double height = cylinderHeight;
-        int sliceNum = 30;
-        int stackNum = 30;
-        glPushMatrix();
-        {
-            glTranslated(0.0, -( height/2.0 ), 0);
-            glRotated(-90, 1.0, 0, 0);
-            GLUquadricObj *myCylinder = gluNewQuadric();
-            gluQuadricDrawStyle(myCylinder, GLU_FILL);
-            gluCylinder(myCylinder, radiiBase, radiiTop, height, sliceNum, stackNum);
-        }
-        glPopMatrix();
-    } 
+//sets up a specific material
+void materials(materialStruct materials) {
+   glMaterialfv(GL_FRONT, GL_AMBIENT, materials.ambient);
+   glMaterialfv(GL_FRONT, GL_DIFFUSE, materials.diffuse);
+   glMaterialfv(GL_FRONT, GL_SPECULAR, materials.specular);
+   glMaterialfv(GL_FRONT, GL_SHININESS, materials.shininess);
 }
 
-void drawCylinder() {
-    drawCylinder( halfRadius*.80 , halfRadius, cylinderHeight);
+//initialization calls for opengl for static light
+//note that we still need to enable lighting in order for it to work
+//see keyboard 'l' event
+void init_lighting() {
+   //turn on light0
+   glEnable(GL_LIGHT0);
+   //set up the diffuse, ambient and specular components for the light
+   glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diff);
+   glLightfv(GL_LIGHT0, GL_AMBIENT, light_amb);
+   glLightfv(GL_LIGHT0, GL_SPECULAR, light_spec);
+   //specify our lighting model as 1 normal per face
+   glShadeModel(GL_FLAT);
 }
 
-void drawBranch(double tiltAngle, double xOffset, double yOffset, 
-               double startRadius, double endRadius ) {
-   assert(0);
+void pos_light() {
+   //set the light's position
+   glMatrixMode(GL_MODELVIEW);
+   glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
 }
 
-void drawBranches(double tiltAngle, double xOffset, double yOffset) {
-    glPushMatrix();
-    {
-        //Draw right branch
-        glTranslated(xOffset, yOffset, 0.0);
-        glRotated(tiltAngle, 0, 0, 1.0);
-        drawCylinder();
-    }
-    glPopMatrix();
-    glPushMatrix();
-    {
-        //draw left branch
-        glTranslated(-xOffset, yOffset, 0.0);
-        
-        glRotated(-tiltAngle, 0, 0, 1.0);
-        
-        drawCylinder();
-    }
-    glPopMatrix();
-}
-
-void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, double yOffset) {
-    //countleft==the number of levels of branches above this one.
-    if( countLeft == 0) {
-        return;
-    }
-    glPushMatrix();
-    {
-        //Draw right branch
-        glTranslated(xOffset, yOffset, 0.0);
-
-        glRotated(-tiltAngle, 0, 0, 1.0);
-        drawCylinder();
-        
-        //glPushMatrix();
-        //{
-            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
-        //}
-        //glPopMatrix();
-    }
-    glPopMatrix();
-    glPushMatrix();
-    {
-        //draw left branch
-        glTranslated(-xOffset, yOffset, 0.0);
-        
-        glRotated(tiltAngle, 0, 0, 1.0);
-        
-        drawCylinder();
-        //glPushMatrix();
-        //{
-            drawBranchesRecursive(countLeft-1, tiltAngle * .75, xOffset, yOffset);
-        //}
-        //glPopMatrix();
-    }
-    glPopMatrix();
-}
 
 void Timer(int value) {
    

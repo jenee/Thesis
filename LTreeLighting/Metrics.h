@@ -10,7 +10,7 @@
 #define LTreeLighting_Metrics_h
 
 #include <iostream>
-#include <vector.h>
+#include <vector>
 
 typedef std::string lyricWord;
 typedef int clarityVal; //the larger the val, the more unclear
