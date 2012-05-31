@@ -23,8 +23,11 @@
 typedef std::string phone;
 
 
-std::string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
-std::string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
+#define deadEndDelim1 "xxx" //formerly "DEADBEEF"
+#define deadEndDelim2 "fff" //formerly "DEADerBEEF"
+
+//std::string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
+//std::string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
 
 typedef struct MetaWord {
    std::string word;

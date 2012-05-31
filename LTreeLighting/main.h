@@ -26,13 +26,28 @@
 #include <math.h>
 #include <assert.h>
 #include <string>
-
 #include <vector>
 #include <set>
 #include <sstream>
 
 #include "Metrics.h"
-#include "../OronymCode/wordTreeDraw.h"
+#include "../OronymCode/wordBreakdown.h"
+
+
+#define DEFAULT_RADIUS .25
+
+int maxWordFreq = DICTIONARY_MIN_FREQ - 1;
+int minWordFreq = DICTIONARY_MAX_FREQ + 1; 
+
+const double minRadius = 0.05;
+const double maxRadius = 1.0;
+
+
+const double farLeftTiltAngle = -45.0;
+
+const double defaultXOffset = .1;      
+const double defaultYOffset = .1;        
+
 
 int lyricWordIndex = 0;
 std::vector<clarityVal> wordClarities;
@@ -84,7 +99,14 @@ materialStruct GreenShiny = {
 };
 
 
+//wordTreeDraw funcs
+double scaleFreqToRadius( int freqVal );
+std::string FirstWord(const std::string& line);
+void drawBranchesAtFork( std::vector< std::string > fullPhrases, double lastRadius );
+void buildAndDrawFullTree( std::string orthoPhrase );
+void buildAndDrawFullTree();
 
+//main funcs
 void growTreeByVal(int val);
 int calcGrowth();
 void changeRefreshRateBy( int val );
