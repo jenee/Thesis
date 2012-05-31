@@ -7,9 +7,6 @@ using namespace std;
 
 
 
-
-
-
 /*http://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value
  *                     (b-a)(freqVal - min)
  *     scaledRadius = ----------------------  + a

@@ -2,6 +2,14 @@
 
 using namespace std;
 
+
+//GLOBALS for database access
+sqlite3 *db;
+vector< vector< string > > databaseResults;
+
+
+
+
 static int callback(void *queryterm, int nCol, char **values, char **headers){
    int i;
    vector<string> rowEntry;
@@ -17,10 +25,10 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
 
 bool confirmDatabaseInitialization() {
    bool allValsInitialized = true;
-   if(db == null ) {
+   if(db == NULL ) {
       connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
    }
-   allValsInitialized &= (db != null);
+   allValsInitialized &= (db != NULL);
 }
 
 vector< vector<phone> > getPhoneSeqsForSampaStrs( vector<string> sampaStrings ) {

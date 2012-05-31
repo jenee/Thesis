@@ -17,17 +17,15 @@
 #define MAX_DATABASE_FILE_PATH_LEN 1024
 #define MAX_DATABASE_QUERY_LEN 1024
 
+
+
+
+//GLOBALS for phraseParsing
+typedef std::string phone;
 #define DICTIONARY_MAX_FREQ 16006650 // the frequency of "the" 
 #define DICTIONARY_MIN_FREQ 0 
-
-typedef std::string phone;
-
-
 #define deadEndDelim1 "xxx" //formerly "DEADBEEF"
 #define deadEndDelim2 "fff" //formerly "DEADerBEEF"
-
-//std::string deadEndDelim1 = "xxx"; //formerly "DEADBEEF"
-//std::string deadEndDelim2 = "fff"; //formerly "DEADerBEEF"
 
 typedef struct MetaWord {
    std::string word;
@@ -35,6 +33,8 @@ typedef struct MetaWord {
 } MetaWord;
 
 static int callback(void *queryterm, int nCol, char **values, char **headers);
+
+bool confirmInitVals();
 
 std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::string> sampaWords );
 std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWord );
