@@ -46,7 +46,9 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
    //put the first word of each phrase into the set
    for(int i = 0; i < fullPhrases.size(); i++){
       if( fullPhrases.at(i).size() > 0 ) {
-         firstWords.insert( FirstWord( fullPhrases.at(i) ) );
+         string firstWordToken = FirstWord( fullPhrases.at(i) );
+         string firstWordTrimmed = delSpaces( firstWordToken );
+         firstWords.insert( firstWordTrimmed );
       }
    } 
    
@@ -549,7 +551,7 @@ int main(int argc, char** argv) {
    //initialize globals
    GW = 400;
    GH = 400;
-   light = 0;
+   light = 1;
     
    treeHeight = 0;
    
@@ -559,8 +561,13 @@ int main(int argc, char** argv) {
 
    //enable GL features we want
    glEnable(GL_DEPTH_TEST);
+   glEnable(GL_LIGHTING);
+   materials(GreenShiny);
+   
    //only do this once
    init_lighting();
+   
+   
    glutTimerFunc(0, Timer, deltaTreeGrow );
    glutMainLoop();
    
