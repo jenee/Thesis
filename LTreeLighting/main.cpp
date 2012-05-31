@@ -121,6 +121,8 @@ void buildAndDrawFullTree() {
 
 void drawBranch(double tiltAngle, double xOffset, double yOffset, 
                double baseRadius, double topRadius ) {
+   cerr << "Draw branch; tiltAngle = "<<tiltAngle<<" offset = ("<<xOffset<<", "<<yOffset;   
+   cerr << ")\n\t baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
    double height = DEFAULT_BRANCH_LEN;
    glPushMatrix();
    {
@@ -568,7 +570,7 @@ int main(int argc, char** argv) {
    init_lighting();
    
    
-   glutTimerFunc(0, Timer, deltaTreeGrow );
+   //glutTimerFunc(0, Timer, deltaTreeGrow );
    glutMainLoop();
    
 }
