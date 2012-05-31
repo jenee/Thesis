@@ -31,7 +31,8 @@ double scaleFreqToRadius( int freqVal ) {
 
 string FirstWord(const string& line)
 {
-    return line.substr(0, line.find(' ')+1 );
+   string firstWordToken = line.substr(0, line.find(' ')+1 );
+    return delSpaces( firstWordToken );
 }
 
 void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
@@ -46,9 +47,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
    //put the first word of each phrase into the set
    for(int i = 0; i < fullPhrases.size(); i++){
       if( fullPhrases.at(i).size() > 0 ) {
-         string firstWordToken = FirstWord( fullPhrases.at(i) );
-         string firstWordTrimmed = delSpaces( firstWordToken );
-         firstWords.insert( firstWordTrimmed );
+         string firstWord = FirstWord( fullPhrases.at(i) );
+         firstWords.insert( firstWord );
       }
    } 
    
