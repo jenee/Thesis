@@ -79,16 +79,20 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       {
 
          //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
-         if( curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
+         if( curFirstWord == "") {
+            continue;
+         } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
 
             drawSphere(firstWordRadius * 1.1);
             materials(GreenShiny);
+            continue;
 
             //TODO: this will have to be scaled, translated and parameterized;
          } else if (curFirstWord == successDelim ) {
             drawSphere(firstWordRadius * 1.1);
+            continue;
          } else {
             //find all phrases in fullPhrases that start with that firstWord
             set<string> tailPhrases;
@@ -97,12 +101,12 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
                   //remove firstWord from those phrases
                   string tempFull = fullPhrases.at(j);
                   string tempTail = tempFull.substr( tempFull.find(' ')+1 );
-                  tailPhrases.insert( tempTail );
+                  tailPhrases.insert( delSpaces( tempTail ) );
                }
             }
             //convert set to vector
             vector<string> tailsVect( tailPhrases.begin(), tailPhrases.end() );
-            cerr << "for "<< curFirstWord <<", we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
+            cerr << "for '"<< curFirstWord <<"', we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
             for(int tp = 0;tp < tailsVect.size(); tp++ ) {
                cerr << "~~~"<<tp<<": "<< tailsVect.at(tp) <<endl;
             }
