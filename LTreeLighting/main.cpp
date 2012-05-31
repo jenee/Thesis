@@ -64,7 +64,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       string curFirstWord = *curFirstWordIter;
       int firstWordFreq = queryDBwithOrthoForFreq ( curFirstWord );
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
-
+      cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
       //draw a branch
       //TODO: this will have to be scaled, translated
