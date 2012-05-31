@@ -10,6 +10,8 @@ treeGUI:  wordBreakdown.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
 test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	echo "----------------------COMPILE testWordBreakdown----------------------"
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
+	echo "......................RUN testWordBreakdown......................"
+	./testWordBreakdown all
 
 warnings: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	echo "------------COMPILE testWordBreakdown with ALL warnings----------------"

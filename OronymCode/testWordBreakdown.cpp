@@ -300,7 +300,7 @@ bool runAllDefaultTests() {
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testFindAllPhoneSeqsForOrthoPhrase();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= testFindPhoneTreeForOrthoPhrase();
+   //testsPassed &= testFindPhoneTreeForOrthoPhrase();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testStripSampaStrOfEmph();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;

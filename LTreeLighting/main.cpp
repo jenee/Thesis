@@ -96,6 +96,10 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
             }
             //convert set to vector
             vector<string> tailsVect( tailPhrases.begin(), tailPhrases.end() );
+            cerr << "for "<< curFirstWord <<", we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
+            for(int tp = 0;tp < tailsVect.size(); tp++ ) {
+               cerr << "~~~"<<tp<<": "<< tailsVect.at(tp) <<endl;
+            }
             //pass those phrases to drawBranchesAtFork
             drawBranchesAtFork( tailsVect, firstWordRadius );
          }
@@ -115,7 +119,9 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("a nice");// cold hour");
+   buildAndDrawFullTree("a nice");
+   //buildAndDrawFullTree("a nice cold");
+   //buildAndDrawFullTree("a nice cold hour");
 }
 
 
