@@ -22,7 +22,7 @@ double scaleFreqToRadius( int freqVal ) {
    double min = 1.0 * minWordFreq;
    
    double scaledRadius = ( ( b - a )*( freqVal - min ) );
-   scaledRadius /= ( max = min );
+   scaledRadius /= ( max - min );
    scaledRadius += a;
    
    return scaledRadius;
