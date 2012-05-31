@@ -48,8 +48,8 @@ const double maxRadius = 1.0;
 
 const double farLeftTiltAngle = -45.0;
 
-const double defaultXOffset = 1.0;      
-const double defaultYOffset = 1.0;        
+const double defaultXOffset = DEFAULT_BRANCH_LEN / 2.0;      
+const double defaultYOffset = DEFAULT_BRANCH_LEN * 1.1;        
 
 
 int lyricWordIndex = 0;

@@ -52,7 +52,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       }
    } 
    
-   double angleDelta = 90.0 / firstWords.size();
+   double angleDelta = ( fabs(farLeftTiltAngle) * 2 ) / firstWords.size();
    
    double farRightXOffset = ( defaultXOffset * firstWords.size() ) / 2.0;
    double farLeftXOffset = farRightXOffset * -1.0;
@@ -71,11 +71,13 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
       double curXOffset = farLeftXOffset + ( defaultXOffset * i );
       double curYOffset = defaultYOffset;     
+      
+      drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius);
 
-      drawBranch( tiltAngle, curXOffset, curXOffset, firstWordRadius, lastRadius);
       
       glPushMatrix();
       {
+
          //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
          if( curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
