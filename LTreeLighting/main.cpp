@@ -58,7 +58,14 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
          string firstWord = FirstWord( fullPhrases.at(i) );
          firstWords.insert( firstWord );
       }
-   } 
+   }
+   //DEBUG
+   vector<string> firstWordsSetVect( firstWords.begin(), firstWords.end() );
+   cerr << "all first words: "<<endl;
+   for(int fw = 0; fw < firstWordsSetVect.size(); fw++ ) {
+      cerr << "==="<<fw<<": '"<< firstWordsSetVect.at(fw) <<"'"<<endl;
+   }
+   //END DEBUG
    
    double angleDelta = ( fabs(farLeftTiltAngle) * 2 ) / firstWords.size();
    
