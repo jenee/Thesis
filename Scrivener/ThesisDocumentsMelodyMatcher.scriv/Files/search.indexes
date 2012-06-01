@@ -1314,6 +1314,41 @@ Again, the research and development of the algorithm has taken much more time th
 
 ** The UNISYN dictionary was created in the UK, and as such, sometimes has funny pronunciation mixes.  This mainly presents itself in the “I”/”i” and “U”/”u” gaps.  A person from the South would pronounce “here” as “hI`r”, but a person from the West Coast pronouces it “hir”.  UNISYN pronounces it as “hI`r”. The usage of the Southern accent for i vs I is consistent, but UNISYN has some West Coast accent.  It actually uses an accent called “General American”, which is spoken in the midwest. Who decided to make Nebraska and Illinois the linguistic flag-bearers of our tongue? Honestly.</Text>
         </Document>
+        <Document ID="132">
+            <Title>Algorithm</Title>
+            <Text>Step 1: Get Ortho Phrase
+	Input: string
+	(EVENTUAL output: vector&lt;string>
+	Step 2: Split Ortho Phrase into Words
+		Input:
+
+GetMishearings( string orthoPhrase) {
+	Vector&lt;string> orthoWords = split(orthoPhrase);
+	
+	For each ( string orthoWord : orthoWords ) {
+		GetAllPossible SAMPA interpretations(orthoWord
+	}
+	//TODO: finish the psuedocode first half 
+
+	///SKIP TO THE PART WHERE WE HAVE: a bunch of SAMPA phrases, stored in vector &lt; vector &lt;phone> > allPhoneSeqs
+	
+	//For each unique phonetic interpretation of the ortho Phrase we were given
+	for each( vector&lt;phone> phoneSeq : allPhoneSeqs ) {
+		Vector&lt;string> orthoInterps; 
+		Vector&lt;phone> phoneSeqTail(phoneSeq);
+		Vector&lt;phone> usedPhones;
+		Phone p;
+		For each phone in 
+	}
+}
+
+Vector&lt;string> findOrthoStrsForPhoneSeq( vector&lt;phone> phoneSeq) {
+	vector&lt;phone> unusedPhones( phoneSeq);
+	
+	For( int I = 0
+
+}</Text>
+        </Document>
         <Document ID="89">
             <Title>Examples/ Test Cases</Title>
         </Document>
@@ -1554,6 +1589,10 @@ Jennifer Hughes</Text>
         </Document>
         <Document ID="129">
             <Title>Sampa of oronyms</Title>
+        </Document>
+        <Document ID="133">
+            <Title>wikipedia: english phonology </Title>
+            <Text>http://en.wikipedia.org/wiki/English_phonology</Text>
         </Document>
         <Document ID="95">
             <Title>Note Intervals</Title>
@@ -3361,6 +3400,24 @@ an' (freq = 794169)
         <Document ID="14">
             <Title>delimited_ALL Documentation as of 2012-05-07-2</Title>
             <Text>#</Text>
+        </Document>
+        <Document ID="134">
+            <Title>blessed</Title>
+            <Text>
+admin@mako:~/Documents/Thesis/OronymCode $ ./testWordBreakdown findPhoneTreeForOrthoPhrase "blessed"
+DATABASE SUCCESSFULLY OPENED
+TESTING findPhoneTreeForOrthoPhrase; orthoPhrase = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+
+queryDBwithOrthoForSampaStrs, orthoWord = blessed
+dummySet.size()=0,  toAdd=b
+0-size=6
+1-size=5
+1=blEst
+Assertion failed: (0), function findPhoneTreeForOrthoPhrase, file wordBreakdown.cpp, line 172.
+Abort trap: 6
+</Text>
         </Document>
         <Document ID="97">
             <Title>Cramming</Title>

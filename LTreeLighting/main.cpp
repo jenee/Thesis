@@ -74,11 +74,18 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    
    //calculate spread of branches for firstWord
    double farRightXOffset =  ( defaultXOffset * firstWords.size() ) / 2.0 ; 
-   double farRightTiltAngle = cos( defaultYOffset / farRightXOffset ) ; 
+   double farRightTiltAngle = acos( defaultYOffset / farRightXOffset ) ; 
    double angleDelta = ( farRightTiltAngle * 2 ) / firstWords.size();
    double farLeftTiltAngle = farRightTiltAngle - ( angleDelta * firstWords.size() );
    double farLeftXOffset = farRightXOffset * -1.0;
-
+   //DEBUG
+   {
+   cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
+   cerr<<"((((( farRightTiltAngle="<<farRightTiltAngle<<endl;
+   cerr<<"((((( angleDelta="<<angleDelta<<endl;
+   cerr<<"((((( farLeftTiltAngle="<<farLeftTiltAngle<<endl;
+   cerr<<"((((( farLeftXOffset="<<farLeftXOffset<<endl;
+   } //END DEBUG
    
    set<string>::iterator curFirstWordIter;
    int i = 0;
