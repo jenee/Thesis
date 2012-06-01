@@ -670,7 +670,7 @@ string delSpaces(string &str) {
 }
 
 string trimWhitespace( string &str) {
-   cerr << "trimWhitespace='"<<str<<"'"<<endl;
+   //cerr << "trimWhitespace='"<<str<<"'"<<endl;
    string retStr = "";
    string whitespaces (" \t\f\v\n\r");
    size_t startpos = str.find_first_not_of(whitespaces);
@@ -679,8 +679,8 @@ string trimWhitespace( string &str) {
    if( string::npos != startpos) {
       retStr = str.substr( startpos );
    }
-   cerr << "trimWhitespace='"<<str<<"'"<<endl;
-   cerr << "======ltrim===='"<<retStr<<"'"<<endl;
+   //cerr << "trimWhitespace='"<<str<<"'"<<endl;
+   //cerr << "======ltrim===='"<<retStr<<"'"<<endl;
 
    size_t endpos = retStr.find_last_not_of(whitespaces);
 
@@ -690,7 +690,7 @@ string trimWhitespace( string &str) {
       retStr.clear();
    }
    
-   cerr << "======rtrim===='"<<retStr<<"'"<<endl;
+   //cerr << "======rtrim===='"<<retStr<<"'"<<endl;
    
    return retStr; 
 }
