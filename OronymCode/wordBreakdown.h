@@ -59,6 +59,7 @@ std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 
 std::vector<std::string> strTokOnWhitespace(std::string phrase );
 std::string toLowerCase( std::string data );
+
 std::string delSpaces( std::string &str );
 std::string trimWhitespace( std::string &str );
 

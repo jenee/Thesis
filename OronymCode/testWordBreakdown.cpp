@@ -259,8 +259,8 @@ bool testTrimWhitespace( string str ) {
    cout << "trim string = '"<<trimmedStr<<"'"<<endl;
    if( trimmedStr.size() == 0 ) {
       return true;
-   } else if( trimmedStr.at(0) != " " 
-            && trimmedStr.at( trimmedStr.size() - 1) != " " ) {
+   } else if( trimmedStr.at(0) != ' ' 
+            && trimmedStr.at( trimmedStr.size() - 1 ) != ' ' ) {
       return true;
    } else {
       return false;
@@ -337,6 +337,8 @@ bool runAllDefaultTests() {
    testsPassed &= testGetSampaStrWithoutGlottalStops();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testTrimWhitespace();
    cout << "XXXXXXXXXXXXXXXXXXXXXX___DONE___XXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    return testsPassed;
 }
@@ -345,6 +347,7 @@ void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
    cout << "\n\t\tall";
+   cout << "\n\t\ttrimWhitespace";
    cout << "\n\t\tdiscoverOronymsForPhrase";
    cout << "\n\t\tstripSampaStrOfEmph";
    cout << "\n\t\tgetSampaStrWithoutGlottalStops";
@@ -392,6 +395,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones();
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace();
+      } else if( strcmp( argv[1], "trimWhitespace") == 0 ) {
+         allTestsPassed &= testTrimWhitespace();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs();
       } else if( strcmp( argv[1], "queryDBwithOrthoForFreq") == 0 ) {
@@ -426,6 +431,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones( argv[2] );
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace( argv[2] );
+      } else if( strcmp( argv[1], "trimWhitespace") == 0 ) {
+         allTestsPassed &= testTrimWhitespace( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForFreq") == 0 ) {

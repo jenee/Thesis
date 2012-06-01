@@ -27,7 +27,7 @@ bool testGetSampaStrWithoutGlottalStops( std::string sampaStr );
 bool testGetSampaStrWithoutGlottalStops();
 bool testGetSampaStrWithoutContiguousDuplicatePhones( std::string sampaStr );
 bool testGetSampaStrWithoutContiguousDuplicatePhones();
-bool testTrimWhitespace( string str );
+bool testTrimWhitespace( std::string str );
 bool testTrimWhitespace ();
 void oldMain();
 bool runAllDefaultTests();

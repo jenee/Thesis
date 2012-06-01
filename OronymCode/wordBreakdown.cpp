@@ -670,13 +670,28 @@ string delSpaces(string &str) {
 }
 
 string trimWhitespace( string &str) {
+   cerr << "trimWhitespace='"<<str<<"'"<<endl;
    string retStr = "";
    string whitespaces (" \t\f\v\n\r");
-   size_t endpos = str.find_last_not_of(whitespaces);
    size_t startpos = str.find_first_not_of(whitespaces);
-   if( string::npos == startpos || string::npos == endpos ) {
-      retStr = str.substr( startpos, endpos );
+   
+   
+   if( string::npos != startpos) {
+      retStr = str.substr( startpos );
    }
+   cerr << "trimWhitespace='"<<str<<"'"<<endl;
+   cerr << "======ltrim===='"<<retStr<<"'"<<endl;
+
+   size_t endpos = retStr.find_last_not_of(whitespaces);
+
+   if ( endpos != string::npos ) {
+      retStr.erase( endpos + 1 );
+   } else {
+      retStr.clear();
+   }
+   
+   cerr << "======rtrim===='"<<retStr<<"'"<<endl;
+   
    return retStr; 
 }
 
