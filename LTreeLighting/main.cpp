@@ -73,15 +73,32 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    } //END DEBUG
    
    //calculate spread of branches for firstWord
-   double farRightXOffset =  ( defaultXOffset * firstWords.size() ) / 2.0 ; 
-   double farRightTiltAngle = acos( defaultYOffset / farRightXOffset ) ; 
-   double angleDelta = ( farRightTiltAngle * 2 ) / firstWords.size();
-   double farLeftTiltAngle = farRightTiltAngle - ( angleDelta * firstWords.size() );
-   double farLeftXOffset = farRightXOffset * -1.0;
+   
+   double farRightXOffset, farLeftXOffset;
+   double farRightTiltAngle, farLeftTiltAngle;
+   double angleDelta;
+   
+   if( firstWords.size() > 1 ) {
+      farRightXOffset =  ( defaultXOffset * firstWords.size() ) / 2.0 ; 
+      farRightTiltAngle = acos( defaultYOffset / farRightXOffset ) ; 
+      angleDelta = ( farRightTiltAngle * 2 ) / firstWords.size();
+      farLeftTiltAngle = farRightTiltAngle - ( angleDelta * firstWords.size() );
+      farLeftXOffset = farRightXOffset * -1.0;
+   } else {
+      farRightXOffset = 0;
+      farRightTiltAngle = 0;
+      angleDelta = 0;
+      farLeftTiltAngle = 0;
+      farLeftXOffset = 0;
+   }
    //DEBUG
    {
    cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
+   cerr<<"(((((((( ^= ( defaultXOffset ("<<defaultYOffset<<") *";
+   cerr<<"firstWords.size() ("<<firstWords.size()<<") ) / 2.0 "<<endl;
    cerr<<"((((( farRightTiltAngle="<<farRightTiltAngle<<endl;
+   cerr<<"(((((((( ^= defaultYOffset ("<<defaultYOffset<<") /";
+   cerr<<"farRightXOffset ("<<farRightXOffset<<")"<<endl;
    cerr<<"((((( angleDelta="<<angleDelta<<endl;
    cerr<<"((((( farLeftTiltAngle="<<farLeftTiltAngle<<endl;
    cerr<<"((((( farLeftXOffset="<<farLeftXOffset<<endl;
