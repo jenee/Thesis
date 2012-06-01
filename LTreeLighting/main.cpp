@@ -29,10 +29,9 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 
-string FirstWord(const string& line)
-{
+string FirstWord(const string& line) {
    string firstWordToken = line.substr(0, line.find(' ')+1 );
-    return delSpaces( firstWordToken );
+   return delSpaces( firstWordToken );
 }
 
 void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
@@ -41,6 +40,15 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       return;
    }
    
+   //DEBUG
+   cerr << "#full Phrases:"<<endl;
+   for(int i = 0; i < fullPhrases.size(); i++ ) {
+      cerr << "###" << fullPhrases.at(i) <<endl;
+   }
+   cerr << "#" <<endl;
+   
+   //END DEBUG
+     
    //use a set to ensure no duplicates
    set< string > firstWords;
    
@@ -72,12 +80,10 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       double curXOffset = farLeftXOffset + ( defaultXOffset * i );
       double curYOffset = defaultYOffset;     
       
-      drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius);
-
-      
       glPushMatrix();
       {
-
+         drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius);
+         
          //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
          if( curFirstWord == "") {
             continue;
@@ -129,8 +135,8 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("a nice");
-   //buildAndDrawFullTree("a nice cold");
+   //buildAndDrawFullTree("a nice");
+   buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }
 
