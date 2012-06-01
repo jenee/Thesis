@@ -251,6 +251,26 @@ bool testGetSampaStrWithoutContiguousDuplicatePhones() {
    return testPassed;
 }
 
+bool testTrimWhitespace( string str ) {
+
+   string trimmedStr = trimWhitespace( str );
+   
+   cout << "orig string = '"<<str<<"'"<<endl;
+   cout << "trim string = '"<<trimmedStr<<"'"<<endl;
+   if( trimmedStr.size() == 0 ) {
+      return true;
+   } else if( trimmedStr.at(0) != " " 
+            && trimmedStr.at( trimmedStr.size() - 1) != " " ) {
+      return true;
+   } else {
+      return false;
+   }
+}
+
+bool testTrimWhitespace () {
+   return testTrimWhitespace( "   I have spaces on both sides!    ");
+}
+
 void oldMain() {
 
    connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");

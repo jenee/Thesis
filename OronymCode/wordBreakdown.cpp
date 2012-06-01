@@ -669,6 +669,17 @@ string delSpaces(string &str) {
    return str;
 }
 
+string trimWhitespace( string &str) {
+   string retStr = "";
+   string whitespaces (" \t\f\v\n\r");
+   size_t endpos = str.find_last_not_of(whitespaces);
+   size_t startpos = str.find_first_not_of(whitespaces);
+   if( string::npos == startpos || string::npos == endpos ) {
+      retStr = str.substr( startpos, endpos );
+   }
+   return retStr; 
+}
+
 void getMaxAndMinFreqForAllOrthoPhrases( vector< string > fullPhrases, int* max, int* min ) {
    cerr << "getMaxAndMinFreqForAllOrthoPhrases, fullPhrases.size()="<<fullPhrases.size() << endl;
 

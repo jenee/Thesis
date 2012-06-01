@@ -111,10 +111,12 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
             set<string> tailPhrases;
             for (int j = 0; j < fullPhrases.size(); j++) {
                if( curFirstWord == FirstWord( fullPhrases.at(j) ) ) {
+                  cerr<<"curFirstWord='"<<curFirstWord<<"';"; 
                   //remove firstWord from those phrases
                   string tempFull = fullPhrases.at(j);
-                  string tempTail = tempFull.substr( tempFull.find(' ')+1 );
-                  tailPhrases.insert( delSpaces( tempTail ) );
+                  string tempTail = tempFull.substr( tempFull.find(' ') +1 );
+                  cerr<< "tail = '"<<tempTail<<"'"<<endl;
+                  tailPhrases.insert( trimWhitespace( tempTail ) );
                }
             }
             //convert set to vector
