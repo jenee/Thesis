@@ -89,6 +89,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       
       glPushMatrix();
       {
+         glTranslated(curXOffset, curYOffset, 0.0);
+
          drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius );
          
          //if firstWord is empty
@@ -169,11 +171,9 @@ void drawBranch(double tiltAngle, double xOffset, double yOffset,
    cerr << ")\n\tcylinderHeight="<<cylinderHeight<<" baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
    glPushMatrix();
    {
-      //Draw right branch
       glTranslated(xOffset, yOffset, 0.0);
-
-   glRotated(-tiltAngle, 0, 0, 1.0);
-   drawCylinder(baseRadius, topRadius, cylinderHeight );
+      glRotated(-tiltAngle, 0, 0, 1.0);
+      drawCylinder(baseRadius, topRadius, cylinderHeight );
 
    }
    glPopMatrix();
@@ -236,8 +236,6 @@ void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, doub
     }
     glPopMatrix();
 }
-
-
 
 void drawCylinder(double topRadius, double baseRadius, double cylinderHeight ) {
     {
