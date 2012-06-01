@@ -46,8 +46,6 @@ const double minRadius = 0.05;
 const double maxRadius = 1.0;
 
 
-const double farLeftTiltAngle = -45.0;
-
 const double defaultXOffset = DEFAULT_BRANCH_LEN / 2.0;      
 const double defaultYOffset = DEFAULT_BRANCH_LEN * 1.1;        
 
@@ -81,6 +79,7 @@ GLUquadricObj* mySphere;
 
 
 int mat = 0;
+
 //set up some materials
 typedef struct materialStruct {
    GLfloat ambient[4];
@@ -89,24 +88,92 @@ typedef struct materialStruct {
    GLfloat shininess[1];
 } materialStruct;
 
+std::vector<materialStruct> allMaterials;
+
 materialStruct RedFlat = {
 {0.3, 0.0, 0.0, 1.0},
 {0.9, 0.0, 0.0, 1.0},
 {0.0, 0.0, 0.0, 1.0},
 {0.0}
 };
+
+materialStruct PurpleFlat = {
+{0.3, 0.0, 0.3, 1.0},
+{0.9, 0.0, 0.9, 1.0},
+{0.0, 0.0, 0.0, 1.0},
+{0.0}
+};
+
+materialStruct OrangeFlat = {
+{1.0, 0.55, 0.0, 1.0},
+{0.9, 0.0, 0.0, 1.0},
+{0.0, 0.0, 0.0, 1.0},
+{0.0}
+};
+
+materialStruct OrangeShiny = {
+{.5, .1, 0.0, 1.0},
+{1.0, 0.3, 0.0, 1.0},
+{1.0, .8, 0.6, 1.0},
+{5.0}
+};
+
+
+materialStruct YellowShiny = {
+{.4, .2, 0.0, 1.0},
+{.9, 0.9, 0.0, 1.0},
+{1.0, .8, 0.6, 1.0},
+{5.0}
+};
+
 materialStruct GreenShiny = {
 {0.0, 0.3, 0.0, 1.0},
 {0.0, 0.9, 0.0, 1.0},
-{0.2, 1.0, 0.2, 1.0},
-{8.0}
+{0.8, 1.0, 0.9, 1.0},
+{5.0}
 };
 
+materialStruct BlueShiny = {
+{0.0, 0.0, 0.3, 1.0},
+{0.0, 0.0, 0.9, 1.0},
+{0.8, 1.0, 0.9, 1.0},
+{5.0}
+};
+
+
+materialStruct WhiteShiny = {
+{0.9, 0.9, 0.9, 1.0},
+{.9, 0.9, 1.0, 1.0},
+{0.8, 0.8, 0.9, 1.0},
+{5.0}
+};
+
+materialStruct GrayFlat = {
+{0.1, 0.1, 0.1, 1.0},
+{0.2, 0.2, 0.2, 1.0},
+{0.2, 0.2, 0.2, 1.0},
+{0.0}
+};
+
+
+void buildMatVect() {
+   allMaterials.push_back(GreenShiny);
+   allMaterials.push_back(GrayFlat);
+   allMaterials.push_back(WhiteShiny);
+   allMaterials.push_back(BlueShiny);
+   allMaterials.push_back(YellowShiny);
+   allMaterials.push_back(OrangeShiny);
+   allMaterials.push_back(OrangeFlat);
+   allMaterials.push_back(PurpleFlat);
+   allMaterials.push_back(RedFlat);
+}
 
 //wordTreeDraw funcs
 double scaleFreqToRadius( int freqVal );
 std::string FirstWord(const std::string& line);
 void drawBranchesAtFork( std::vector< std::string > fullPhrases, double lastRadius );
+void drawBranchesAtFork( std::vector< std::string > fullPhrases, double lastRadius, double xOffCur, double yOffCur );
+
 void buildAndDrawFullTree( std::string orthoPhrase );
 void buildAndDrawFullTree();
 

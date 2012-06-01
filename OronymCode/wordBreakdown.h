@@ -57,6 +57,8 @@ void queryDBwithOrthoForRow( std::string orthoWord );
 std::vector<phone> parseSAMPAintoPhonemes( std::string sampaStr );
 std::vector<std::string> splitSampaIntoLetters(std::string phrase);
 
+std::string FirstWord(const std::string& line);
+std::vector<std::string> getAllPhrasesWithPrefix( std::string prefix, std::vector<std::string> fullPhrases);
 std::vector<std::string> strTokOnWhitespace(std::string phrase );
 std::string toLowerCase( std::string data );
 

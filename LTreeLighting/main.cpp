@@ -29,25 +29,28 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 
-string FirstWord(const string& line) {
-   string firstWordToken = line.substr(0, line.find(' ') );
-   return trimWhitespace( firstWordToken );
-}
 
 void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
+
+   drawBranchesAtFork(fullPhrases, lastRadius, defaultXOffset, defaultYOffset );
+}
+
+
+void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double xOffCur, double yOffCur ) {
 
    if( fullPhrases.size() == 0 ) {
       return;
    }
    
    //DEBUG
+   {
    cerr << "#full Phrases:"<<endl;
    for(int i = 0; i < fullPhrases.size(); i++ ) {
       cerr << "###" << fullPhrases.at(i) <<endl;
    }
    cerr << "#" <<endl;
    
-   //END DEBUG
+   }//END DEBUG
      
    //use a set to ensure no duplicates
    set< string > firstWords;
@@ -59,33 +62,40 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
          firstWords.insert( firstWord );
       }
    }
+   
    //DEBUG
+   {
    vector<string> firstWordsSetVect( firstWords.begin(), firstWords.end() );
    cerr << "all first words: "<<endl;
    for(int fw = 0; fw < firstWordsSetVect.size(); fw++ ) {
       cerr << "==="<<fw<<": '"<< firstWordsSetVect.at(fw) <<"'"<<endl;
    }
-   //END DEBUG
+   } //END DEBUG
    
-   double angleDelta = ( fabs(farLeftTiltAngle) * 2 ) / firstWords.size();
-   
-   double farRightXOffset = ( defaultXOffset * firstWords.size() ) / 2.0;
+   //calculate spread of branches for firstWord
+   double farRightXOffset =  ( defaultXOffset * firstWords.size() ) / 2.0 ; 
+   double farRightTiltAngle = cos( defaultYOffset / farRightXOffset ) ; 
+   double angleDelta = ( farRightTiltAngle * 2 ) / firstWords.size();
+   double farLeftTiltAngle = farRightTiltAngle - ( angleDelta * firstWords.size() );
    double farLeftXOffset = farRightXOffset * -1.0;
+
    
    set<string>::iterator curFirstWordIter;
    int i = 0;
    //for each firstWord in the set
    for ( curFirstWordIter = firstWords.begin(); curFirstWordIter != firstWords.end(); curFirstWordIter++) {
       string curFirstWord = *curFirstWordIter;
+      
+      //calculate the branch radius using the scaled frequency of curFirstWord
       int firstWordFreq = queryDBwithOrthoForFreq ( curFirstWord );
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
       cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
       //draw a branch
-      //TODO: this will have to be scaled, translated
+
       double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
-      double curXOffset = farLeftXOffset + ( defaultXOffset * i );
       double curYOffset = defaultYOffset;     
+      double curXOffset = tan( tiltAngle ) * curYOffset;
       
       glPushMatrix();
       {
@@ -114,28 +124,23 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
             continue;
          } else {
             //find all phrases in fullPhrases that start with that firstWord
-            set<string> tailPhrases;
-            for (int j = 0; j < fullPhrases.size(); j++) {
-               if( curFirstWord == FirstWord( fullPhrases.at(j) ) ) {
-                  cerr<<"curFirstWord='"<<curFirstWord<<"';"; 
-                  //remove firstWord from those phrases
-                  string tempFull = fullPhrases.at(j);
-                  string tempTail = tempFull.substr( tempFull.find(' ') +1 );
-                  cerr<< "tail = '"<<tempTail<<"'"<<endl;
-                  tailPhrases.insert( trimWhitespace( tempTail ) );
-               }
-            }
-            //convert set to vector
-            vector<string> tailsVect( tailPhrases.begin(), tailPhrases.end() );
-            cerr << "for '"<< curFirstWord <<"', we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
-            for(int tp = 0;tp < tailsVect.size(); tp++ ) {
-               cerr << "~~~"<<tp<<": "<< tailsVect.at(tp) <<endl;
-            }
+            
+            vector<string> tailsVect = getAllPhrasesWithPrefix( curFirstWord, fullPhrases);
+            
+            //DEBUG WITH COLORSSS for each branch level
+            materials(allMaterials.at( ++mat % allMaterials.size () ) );
+            
+            
             //pass those phrases to drawBranchesAtFork
             drawBranchesAtFork( tailsVect, firstWordRadius );
+            
+            //DEBUG WITH COLORSSS!
+            materials(allMaterials.at( --mat % allMaterials.size () ) );
+            
          }
       }
       glPopMatrix();
+
       i++;
    }
    
@@ -171,7 +176,7 @@ void drawBranch(double tiltAngle, double xOffset, double yOffset,
    cerr << ")\n\tcylinderHeight="<<cylinderHeight<<" baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
    glPushMatrix();
    {
-      glTranslated(xOffset, yOffset, 0.0);
+      //glTranslated(xOffset, yOffset, 0.0);
       glRotated(-tiltAngle, 0, 0, 1.0);
       drawCylinder(baseRadius, topRadius, cylinderHeight );
 
@@ -452,10 +457,7 @@ void keyboard(unsigned char key, int x, int y )
          //simple way to toggle the materials
       case 'm': case 'M':
          mat++;
-         if (mat%2 == 0)
-            materials(RedFlat);
-         else if (mat%2 == 1)
-            materials(GreenShiny);
+         materials(allMaterials.at( mat % allMaterials.size () ) );
          break;
       case 'n': case 'N':
          //int growth = calcGrowth();
@@ -572,6 +574,7 @@ void doLSystemsString(int numIterations) { //, string seedStr, string pat1, stri
 }
 
 void initStuff() {
+   buildMatVect();
    vector<lyricWord> lyrics;
    //dummy stub method with dummy return val
    wordClarities =  measureClarity( lyrics );
@@ -607,6 +610,7 @@ int main(int argc, char** argv) {
    GH = 400;
    light = 1;
     
+   initStuff();
    treeHeight = 0;
    
    doLSystemsString(2);

@@ -645,6 +645,33 @@ vector<string> splitSampaIntoLetters(string phrase) {
    return tokens;
 }
 
+string FirstWord(const string& line) {
+   string firstWordToken = line.substr(0, line.find(' ') );
+   return trimWhitespace( firstWordToken );
+}
+
+
+vector< string> getAllPhrasesWithPrefix(string prefix, vector<string> fullPhrases) {
+   set<string> tailPhrases;
+   for (int j = 0; j < fullPhrases.size(); j++) {
+      if( prefix == FirstWord( fullPhrases.at(j) ) ) {
+         cerr<<"curFirstWord='"<<prefix<<"';"; 
+         //remove firstWord from those phrases
+         string tempFull = fullPhrases.at(j);
+         string tempTail = tempFull.substr( tempFull.find(' ') +1 );
+         cerr<< "tail = '"<<tempTail<<"'"<<endl;
+         tailPhrases.insert( trimWhitespace( tempTail ) );
+      }
+   }
+   //convert set to vector
+   vector<string> tailsVect( tailPhrases.begin(), tailPhrases.end() );
+   cerr << "for '"<< prefix <<"', we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
+   for(int tp = 0;tp < tailsVect.size(); tp++ ) {
+      cerr << "~~~"<<tp<<": "<< tailsVect.at(tp) <<endl;
+   }
+   return tailsVect;
+}
+
 //http://www.daniweb.com/software-development/cpp/threads/27905
 vector<string> strTokOnWhitespace(string phrase) {
    string temp;
