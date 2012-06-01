@@ -30,8 +30,8 @@ double scaleFreqToRadius( int freqVal ) {
 
 
 string FirstWord(const string& line) {
-   string firstWordToken = line.substr(0, line.find(' ')+1 );
-   return delSpaces( firstWordToken );
+   string firstWordToken = line.substr(0, line.find(' ') );
+   return trimWhitespace( firstWordToken );
 }
 
 void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
@@ -89,21 +89,25 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
       
       glPushMatrix();
       {
-         drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius);
+         drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius );
          
-         //if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
+         //if firstWord is empty
          if( curFirstWord == "") {
-            continue;
+            assert(0);
+            
+         //else if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
-
+            cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere(firstWordRadius * 1.1);
             materials(GreenShiny);
             continue;
 
             //TODO: this will have to be scaled, translated and parameterized;
          } else if (curFirstWord == successDelim ) {
+            cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
+
             drawSphere(firstWordRadius * 1.1);
             continue;
          } else {
@@ -144,8 +148,8 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 }
 
 void buildAndDrawFullTree() {
-   //buildAndDrawFullTree("a nice");
-   buildAndDrawFullTree("a nice cold");
+   buildAndDrawFullTree("a nice");
+   //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }
 
@@ -154,16 +158,22 @@ void buildAndDrawFullTree() {
 
 void drawBranch(double tiltAngle, double xOffset, double yOffset, 
                double baseRadius, double topRadius ) {
+   double cylinderHeight = DEFAULT_BRANCH_LEN;
+   drawBranch(tiltAngle, xOffset, yOffset, cylinderHeight, baseRadius, topRadius);
+}
+   
+void drawBranch(double tiltAngle, double xOffset, double yOffset, 
+               double cylinderHeight, double baseRadius, double topRadius ) {
+               
    cerr << "Draw branch; tiltAngle = "<<tiltAngle<<" offset = ("<<xOffset<<", "<<yOffset;   
-   cerr << ")\n\t baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
-   double height = DEFAULT_BRANCH_LEN;
+   cerr << ")\n\tcylinderHeight="<<cylinderHeight<<" baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
    glPushMatrix();
    {
       //Draw right branch
       glTranslated(xOffset, yOffset, 0.0);
 
    glRotated(-tiltAngle, 0, 0, 1.0);
-   drawCylinder(baseRadius, topRadius, height );
+   drawCylinder(baseRadius, topRadius, cylinderHeight );
 
    }
    glPopMatrix();
@@ -253,9 +263,13 @@ void drawCylinder() {
 }
 
 //draw a sphere
-void drawSphere(double rad ) {
+void drawSphere( double rad ) {
    //void gluSphere	(	GLUquadric* quad , GLdouble radius , GLint slices , GLint stacks );
-   gluSphere(mySphere, rad, 12, 12);
+   glPushMatrix();
+   {
+      gluSphere(mySphere, rad, 12, 12);
+   }
+   glPopMatrix();
 }
 
 
@@ -598,13 +612,17 @@ int main(int argc, char** argv) {
    treeHeight = 0;
    
    doLSystemsString(2);
-    printf("\n\n");
-    doLSystemsString(10);
+   printf("\n\n");
+   doLSystemsString(10);
 
    //enable GL features we want
    glEnable(GL_DEPTH_TEST);
    glEnable(GL_LIGHTING);
    materials(GreenShiny);
+   
+  //create a sphere
+  mySphere = gluNewQuadric();
+  gluQuadricDrawStyle(mySphere, GLU_FILL);
    
    //only do this once
    init_lighting();

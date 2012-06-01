@@ -112,6 +112,7 @@ void buildAndDrawFullTree();
 
 
 //main funcs
+void drawBranch(double tiltAngle, double xOffset, double yOffset, double cylinderHeight, double startRadius, double endRadius );
 void drawBranch(double tiltAngle, double xOffset, double yOffset, double startRadius, double endRadius );
 void drawBranches(double tiltAngle, double xOffset, double yOffset);
 void drawBranchesRecursive(int countLeft, double tiltAngle, double xOffset, double yOffset);
