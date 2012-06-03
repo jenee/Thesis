@@ -35,8 +35,8 @@ double scaleFreqToRadius( int freqVal ) {
 
 void buildAndDrawFullTree() {
    //buildAndDrawFullTree("a");
-   buildAndDrawFullTree("email");
-   //buildAndDrawFullTree("empty our email");
+   //buildAndDrawFullTree("email");
+   buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
    //buildAndDrawFullTree("a nice");
@@ -183,7 +183,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
-            cerr << "___"<<curFirstWord<<endl;
+            cerr << "___"<<i<<curFirstWord<<endl;
             //cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
@@ -192,7 +192,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             continue;
 
          } else if (curFirstWord == successDelim ) {
-            cerr << "___END"<<endl;
+            cerr << "___"<<i<<"END"<<endl;
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             materials(GreenShiny);
             drawSphere( lastRadius );
