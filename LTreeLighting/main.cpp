@@ -170,6 +170,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       
       glPushMatrix();
       {
+         
          glTranslated(curXOffset, curYOffset, 0.0);
 
          
@@ -181,6 +182,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
+            cerr << "___"<<curFirstWord<<endl;
             //cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
@@ -189,6 +191,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             continue;
 
          } else if (curFirstWord == successDelim ) {
+            cerr << "___END"<<endl;
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             materials(GreenShiny);
             drawSphere( lastRadius );
@@ -197,7 +200,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             glPopMatrix();
             continue;
          } else {
-            
+            cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
+            cerr <<";\txOffset="<<curXOffset<<";"<<endl;
             drawBranch( tiltAngle, curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
@@ -238,8 +242,8 @@ void drawBranch(double tiltAngle, double xOffset, double yOffset,
 void drawBranch(double tiltAngle, double xOffset, double yOffset, 
                double cylinderHeight, double baseRadius, double topRadius ) {
                
-   cerr << "Draw branch; tiltAngle = "<<tiltAngle<<" offset = ("<<xOffset<<", "<<yOffset;   
-   cerr << ")\n\tcylinderHeight="<<cylinderHeight<<" baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
+   //cerr << "Draw branch; tiltAngle = "<<tiltAngle<<" offset = ("<<xOffset<<", "<<yOffset;   
+   //cerr << ")\n\tcylinderHeight="<<cylinderHeight<<" baseRadius = "<<baseRadius <<"; topRadius = "<< topRadius << endl;
    glPushMatrix();
    {
       //glTranslated(xOffset, yOffset, 0.0);

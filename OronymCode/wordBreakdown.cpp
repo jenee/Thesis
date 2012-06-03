@@ -659,20 +659,22 @@ vector< string> getAllPhrasesWithPrefix(string prefix, vector<string> fullPhrase
    set<string> tailPhrases;
    for (int j = 0; j < fullPhrases.size(); j++) {
       if( prefix == FirstWord( fullPhrases.at(j) ) ) {
-         cerr<<"curFirstWord='"<<prefix<<"';"; 
+         //cerr<<"curFirstWord='"<<prefix<<"';"; 
          //remove firstWord from those phrases
          string tempFull = fullPhrases.at(j);
          string tempTail = tempFull.substr( tempFull.find(' ') +1 );
-         cerr<< "tail = '"<<tempTail<<"'"<<endl;
+         //cerr<< "tail = '"<<tempTail<<"'"<<endl;
          tailPhrases.insert( trimWhitespace( tempTail ) );
       }
    }
    //convert set to vector
    vector<string> tailsVect( tailPhrases.begin(), tailPhrases.end() );
+   /*DEBUG
    cerr << "for '"<< prefix <<"', we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
    for(int tp = 0;tp < tailsVect.size(); tp++ ) {
       cerr << "~~~"<<tp<<": "<< tailsVect.at(tp) <<endl;
    }
+   *///END DEBUG
    return tailsVect;
 }
 
