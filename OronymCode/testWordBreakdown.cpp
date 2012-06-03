@@ -44,9 +44,11 @@ bool testFindAllPhoneSeqsForOrthoPhrase(string orthoPhrase) {
    cout << "TESTING findAllPhoneSeqsForOrthoPhrase; orthoPhrase = " << orthoPhrase << endl;
    vector< vector<phone> > phoneSeqs = findAllPhoneSeqsForOrthoPhrase( orthoPhrase );
    
+   cout << "!Discovered "<<phoneSeqs.size()<<" phoneseqs:"<<endl;
+
    for( int i = 0; i < phoneSeqs.size(); i++) {
       vector<phone> p = phoneSeqs[i];
-      cerr <<"---"<< phoneVectToString( p ) << endl;
+      cout <<"---"<< phoneVectToString( p ) << endl;
    }
    cerr <<endl;
    return true;
@@ -252,6 +254,7 @@ bool testGetSampaStrWithoutContiguousDuplicatePhones() {
 }
 
 bool testTrimWhitespace( string str ) {
+   cerr<<"TEST trimWhitespace, str = "<< str <<endl;
 
    string trimmedStr = trimWhitespace( str );
    
@@ -269,6 +272,339 @@ bool testTrimWhitespace( string str ) {
 
 bool testTrimWhitespace () {
    return testTrimWhitespace( "   I have spaces on both sides!    ");
+}
+
+bool testGetTotalFreqForPhrase( std::string orthoPhrase ) {
+   cout <<"TEST getTotalFreqForPhrase, orthoPhrase ="<<orthoPhrase;
+   int returned = getTotalFreqForPhrase( orthoPhrase );
+   cout <<"; freq="<<returned<<endl;
+   if( orthoPhrase == "empty email" ) {
+      int expected = 918 + 15141;
+      return ( expected == returned );
+   } else {
+      return true;
+   }
+}
+bool testGetTotalFreqForPhrase() {
+   return testGetTotalFreqForPhrase("empty email");
+}
+
+bool test_getCSVofAllPhraseAndFreqs( vector<string> orthoPhrases ) {
+   cerr <<"TEST getCSVofAllPhraseAndFreqs, orthoPhrases.size() ="<< orthoPhrases.size()<<endl;
+
+   vector<string> csvStrings = getCSVofAllPhraseAndFreqs ( orthoPhrases );
+   for(int i = 0; i < csvStrings.size(); i++){
+      cout << i<< ", " <<csvStrings.at( i ) <<endl;
+   }
+   return true;
+}
+
+bool test_getCSVofAllPhraseAndFreqs() {
+   vector<string> orthoPhrases;
+   /*
+   {
+   orthoPhrases.push_back( "empty hour e mail" );
+   orthoPhrases.push_back( "empty hour e male" );
+   orthoPhrases.push_back( "empty hour e-mail" );
+   orthoPhrases.push_back( "empty hour email" );
+   orthoPhrases.push_back( "empty our e mail" );
+   orthoPhrases.push_back( "empty our e male" );
+   orthoPhrases.push_back( "empty our e-mail" );
+   orthoPhrases.push_back( "empty our email" );
+   } */
+   {
+   orthoPhrases.push_back( "n' ay scold hour" );
+   orthoPhrases.push_back( "n' ay scold our" );
+   orthoPhrases.push_back( "n' ay skol dour" );
+   orthoPhrases.push_back( "n' ay skol dower" );
+   orthoPhrases.push_back( "n' aye scold hour" );
+   orthoPhrases.push_back( "n' aye scold our" );
+   orthoPhrases.push_back( "n' aye skol dour" );
+   orthoPhrases.push_back( "n' aye skol dower" );
+   orthoPhrases.push_back( "n' e scold hour" );
+   orthoPhrases.push_back( "n' e scold our" );
+   orthoPhrases.push_back( "n' e skol dour" );
+   orthoPhrases.push_back( "n' e skol dower" );
+   orthoPhrases.push_back( "n' eye scold hour" );
+   orthoPhrases.push_back( "n' eye scold our" );
+   orthoPhrases.push_back( "n' eye skol dour" );
+   orthoPhrases.push_back( "n' eye skol dower" );
+   orthoPhrases.push_back( "n' i scold hour" );
+   orthoPhrases.push_back( "n' i scold our" );
+   orthoPhrases.push_back( "n' i skol dour" );
+   orthoPhrases.push_back( "n' i skol dower" );
+   orthoPhrases.push_back( "n' ice coal dour" );
+   orthoPhrases.push_back( "n' ice coal dower" );
+   orthoPhrases.push_back( "n' ice cold hour" );
+   orthoPhrases.push_back( "n' ice cold our" );
+   orthoPhrases.push_back( "n' ice cole dour" );
+   orthoPhrases.push_back( "n' ice cole dower" );
+   orthoPhrases.push_back( "n' ice kohl dour" );
+   orthoPhrases.push_back( "n' ice kohl dower" );
+   orthoPhrases.push_back( "n' ice-cold hour" );
+   orthoPhrases.push_back( "n' ice-cold our" );
+   orthoPhrases.push_back( "a gneiss coal dour" );
+   orthoPhrases.push_back( "a gneiss coal dower" );
+   orthoPhrases.push_back( "a gneiss cold hour" );
+   orthoPhrases.push_back( "a gneiss cold our" );
+   orthoPhrases.push_back( "a gneiss cole dour" );
+   orthoPhrases.push_back( "a gneiss cole dower" );
+   orthoPhrases.push_back( "a gneiss kohl dour" );
+   orthoPhrases.push_back( "a gneiss kohl dower" );
+   orthoPhrases.push_back( "a knee scold hour" );
+   orthoPhrases.push_back( "a knee scold our" );
+   orthoPhrases.push_back( "a knee skol dour" );
+   orthoPhrases.push_back( "a knee skol dower" );
+   orthoPhrases.push_back( "a ne scold hour" );
+   orthoPhrases.push_back( "a ne scold our" );
+   orthoPhrases.push_back( "a ne skol dour" );
+   orthoPhrases.push_back( "a ne skol dower" );
+   orthoPhrases.push_back( "a nice coal dour" );
+   orthoPhrases.push_back( "a nice coal dower" );
+   orthoPhrases.push_back( "a nice cold hour" );
+   orthoPhrases.push_back( "a nice cold our" );
+   orthoPhrases.push_back( "a nice cole dour" );
+   orthoPhrases.push_back( "a nice cole dower" );
+   orthoPhrases.push_back( "a nice kohl dour" );
+   orthoPhrases.push_back( "a nice kohl dower" );
+   orthoPhrases.push_back( "a niece coal dour" );
+   orthoPhrases.push_back( "a niece coal dower" );
+   orthoPhrases.push_back( "a niece cold hour" );
+   orthoPhrases.push_back( "a niece cold our" );
+   orthoPhrases.push_back( "a niece cole dour" );
+   orthoPhrases.push_back( "a niece cole dower" );
+   orthoPhrases.push_back( "a niece kohl dour" );
+   orthoPhrases.push_back( "a niece kohl dower" );
+   orthoPhrases.push_back( "a nigh scold hour" );
+   orthoPhrases.push_back( "a nigh scold our" );
+   orthoPhrases.push_back( "a nigh skol dour" );
+   orthoPhrases.push_back( "a nigh skol dower" );
+   orthoPhrases.push_back( "a nye scold hour" );
+   orthoPhrases.push_back( "a nye scold our" );
+   orthoPhrases.push_back( "a nye skol dour" );
+   orthoPhrases.push_back( "a nye skol dower" );
+   orthoPhrases.push_back( "ah gneiss coal dour" );
+   orthoPhrases.push_back( "ah gneiss coal dower" );
+   orthoPhrases.push_back( "ah gneiss cold hour" );
+   orthoPhrases.push_back( "ah gneiss cold our" );
+   orthoPhrases.push_back( "ah gneiss cole dour" );
+   orthoPhrases.push_back( "ah gneiss cole dower" );
+   orthoPhrases.push_back( "ah gneiss kohl dour" );
+   orthoPhrases.push_back( "ah gneiss kohl dower" );
+   orthoPhrases.push_back( "ah knee scold hour" );
+   orthoPhrases.push_back( "ah knee scold our" );
+   orthoPhrases.push_back( "ah knee skol dour" );
+   orthoPhrases.push_back( "ah knee skol dower" );
+   orthoPhrases.push_back( "ah ne scold hour" );
+   orthoPhrases.push_back( "ah ne scold our" );
+   orthoPhrases.push_back( "ah ne skol dour" );
+   orthoPhrases.push_back( "ah ne skol dower" );
+   orthoPhrases.push_back( "ah nice coal dour" );
+   orthoPhrases.push_back( "ah nice coal dower" );
+   orthoPhrases.push_back( "ah nice cold hour" );
+   orthoPhrases.push_back( "ah nice cold our" );
+   orthoPhrases.push_back( "ah nice cole dour" );
+   orthoPhrases.push_back( "ah nice cole dower" );
+   orthoPhrases.push_back( "ah nice kohl dour" );
+   orthoPhrases.push_back( "ah nice kohl dower" );
+   orthoPhrases.push_back( "ah niece coal dour" );
+   orthoPhrases.push_back( "ah niece coal dower" );
+   orthoPhrases.push_back( "ah niece cold hour" );
+   orthoPhrases.push_back( "ah niece cold our" );
+   orthoPhrases.push_back( "ah niece cole dour" );
+   orthoPhrases.push_back( "ah niece cole dower" );
+   orthoPhrases.push_back( "ah niece kohl dour" );
+   orthoPhrases.push_back( "ah niece kohl dower" );
+   orthoPhrases.push_back( "ah nigh scold hour" );
+   orthoPhrases.push_back( "ah nigh scold our" );
+   orthoPhrases.push_back( "ah nigh skol dour" );
+   orthoPhrases.push_back( "ah nigh skol dower" );
+   orthoPhrases.push_back( "ah nye scold hour" );
+   orthoPhrases.push_back( "ah nye scold our" );
+   orthoPhrases.push_back( "ah nye skol dour" );
+   orthoPhrases.push_back( "ah nye skol dower" );
+   orthoPhrases.push_back( "an ay scold hour" );
+   orthoPhrases.push_back( "an ay scold our" );
+   orthoPhrases.push_back( "an ay skol dour" );
+   orthoPhrases.push_back( "an ay skol dower" );
+   orthoPhrases.push_back( "an aye scold hour" );
+   orthoPhrases.push_back( "an aye scold our" );
+   orthoPhrases.push_back( "an aye skol dour" );
+   orthoPhrases.push_back( "an aye skol dower" );
+   orthoPhrases.push_back( "an e scold hour" );
+   orthoPhrases.push_back( "an e scold our" );
+   orthoPhrases.push_back( "an e skol dour" );
+   orthoPhrases.push_back( "an e skol dower" );
+   orthoPhrases.push_back( "an eye scold hour" );
+   orthoPhrases.push_back( "an eye scold our" );
+   orthoPhrases.push_back( "an eye skol dour" );
+   orthoPhrases.push_back( "an eye skol dower" );
+   orthoPhrases.push_back( "an i scold hour" );
+   orthoPhrases.push_back( "an i scold our" );
+   orthoPhrases.push_back( "an i skol dour" );
+   orthoPhrases.push_back( "an i skol dower" );
+   orthoPhrases.push_back( "an ice coal dour" );
+   orthoPhrases.push_back( "an ice coal dower" );
+   orthoPhrases.push_back( "an ice cold hour" );
+   orthoPhrases.push_back( "an ice cold our" );
+   orthoPhrases.push_back( "an ice cole dour" );
+   orthoPhrases.push_back( "an ice cole dower" );
+   orthoPhrases.push_back( "an ice kohl dour" );
+   orthoPhrases.push_back( "an ice kohl dower" );
+   orthoPhrases.push_back( "an ice-cold hour" );
+   orthoPhrases.push_back( "an ice-cold our" );
+   orthoPhrases.push_back( "eh gneiss coal dour" );
+   orthoPhrases.push_back( "eh gneiss coal dower" );
+   orthoPhrases.push_back( "eh gneiss cold hour" );
+   orthoPhrases.push_back( "eh gneiss cold our" );
+   orthoPhrases.push_back( "eh gneiss cole dour" );
+   orthoPhrases.push_back( "eh gneiss cole dower" );
+   orthoPhrases.push_back( "eh gneiss kohl dour" );
+   orthoPhrases.push_back( "eh gneiss kohl dower" );
+   orthoPhrases.push_back( "eh knee scold hour" );
+   orthoPhrases.push_back( "eh knee scold our" );
+   orthoPhrases.push_back( "eh knee skol dour" );
+   orthoPhrases.push_back( "eh knee skol dower" );
+   orthoPhrases.push_back( "eh ne scold hour" );
+   orthoPhrases.push_back( "eh ne scold our" );
+   orthoPhrases.push_back( "eh ne skol dour" );
+   orthoPhrases.push_back( "eh ne skol dower" );
+   orthoPhrases.push_back( "eh nice coal dour" );
+   orthoPhrases.push_back( "eh nice coal dower" );
+   orthoPhrases.push_back( "eh nice cold hour" );
+   orthoPhrases.push_back( "eh nice cold our" );
+   orthoPhrases.push_back( "eh nice cole dour" );
+   orthoPhrases.push_back( "eh nice cole dower" );
+   orthoPhrases.push_back( "eh nice kohl dour" );
+   orthoPhrases.push_back( "eh nice kohl dower" );
+   orthoPhrases.push_back( "eh niece coal dour" );
+   orthoPhrases.push_back( "eh niece coal dower" );
+   orthoPhrases.push_back( "eh niece cold hour" );
+   orthoPhrases.push_back( "eh niece cold our" );
+   orthoPhrases.push_back( "eh niece cole dour" );
+   orthoPhrases.push_back( "eh niece cole dower" );
+   orthoPhrases.push_back( "eh niece kohl dour" );
+   orthoPhrases.push_back( "eh niece kohl dower" );
+   orthoPhrases.push_back( "eh nigh scold hour" );
+   orthoPhrases.push_back( "eh nigh scold our" );
+   orthoPhrases.push_back( "eh nigh skol dour" );
+   orthoPhrases.push_back( "eh nigh skol dower" );
+   orthoPhrases.push_back( "eh nye scold hour" );
+   orthoPhrases.push_back( "eh nye scold our" );
+   orthoPhrases.push_back( "eh nye skol dour" );
+   orthoPhrases.push_back( "eh nye skol dower" );
+   orthoPhrases.push_back( "et gneiss coal dour" );
+   orthoPhrases.push_back( "et gneiss coal dower" );
+   orthoPhrases.push_back( "et gneiss cold hour" );
+   orthoPhrases.push_back( "et gneiss cold our" );
+   orthoPhrases.push_back( "et gneiss cole dour" );
+   orthoPhrases.push_back( "et gneiss cole dower" );
+   orthoPhrases.push_back( "et gneiss kohl dour" );
+   orthoPhrases.push_back( "et gneiss kohl dower" );
+   orthoPhrases.push_back( "et knee scold hour" );
+   orthoPhrases.push_back( "et knee scold our" );
+   orthoPhrases.push_back( "et knee skol dour" );
+   orthoPhrases.push_back( "et knee skol dower" );
+   orthoPhrases.push_back( "et ne scold hour" );
+   orthoPhrases.push_back( "et ne scold our" );
+   orthoPhrases.push_back( "et ne skol dour" );
+   orthoPhrases.push_back( "et ne skol dower" );
+   orthoPhrases.push_back( "et nice coal dour" );
+   orthoPhrases.push_back( "et nice coal dower" );
+   orthoPhrases.push_back( "et nice cold hour" );
+   orthoPhrases.push_back( "et nice cold our" );
+   orthoPhrases.push_back( "et nice cole dour" );
+   orthoPhrases.push_back( "et nice cole dower" );
+   orthoPhrases.push_back( "et nice kohl dour" );
+   orthoPhrases.push_back( "et nice kohl dower" );
+   orthoPhrases.push_back( "et niece coal dour" );
+   orthoPhrases.push_back( "et niece coal dower" );
+   orthoPhrases.push_back( "et niece cold hour" );
+   orthoPhrases.push_back( "et niece cold our" );
+   orthoPhrases.push_back( "et niece cole dour" );
+   orthoPhrases.push_back( "et niece cole dower" );
+   orthoPhrases.push_back( "et niece kohl dour" );
+   orthoPhrases.push_back( "et niece kohl dower" );
+   orthoPhrases.push_back( "et nigh scold hour" );
+   orthoPhrases.push_back( "et nigh scold our" );
+   orthoPhrases.push_back( "et nigh skol dour" );
+   orthoPhrases.push_back( "et nigh skol dower" );
+   orthoPhrases.push_back( "et nye scold hour" );
+   orthoPhrases.push_back( "et nye scold our" );
+   orthoPhrases.push_back( "et nye skol dour" );
+   orthoPhrases.push_back( "et nye skol dower" );
+   orthoPhrases.push_back( "o' gneiss coal dour" );
+   orthoPhrases.push_back( "o' gneiss coal dower" );
+   orthoPhrases.push_back( "o' gneiss cold hour" );
+   orthoPhrases.push_back( "o' gneiss cold our" );
+   orthoPhrases.push_back( "o' gneiss cole dour" );
+   orthoPhrases.push_back( "o' gneiss cole dower" );
+   orthoPhrases.push_back( "o' gneiss kohl dour" );
+   orthoPhrases.push_back( "o' gneiss kohl dower" );
+   orthoPhrases.push_back( "o' knee scold hour" );
+   orthoPhrases.push_back( "o' knee scold our" );
+   orthoPhrases.push_back( "o' knee skol dour" );
+   orthoPhrases.push_back( "o' knee skol dower" );
+   orthoPhrases.push_back( "o' ne scold hour" );
+   orthoPhrases.push_back( "o' ne scold our" );
+   orthoPhrases.push_back( "o' ne skol dour" );
+   orthoPhrases.push_back( "o' ne skol dower" );
+   orthoPhrases.push_back( "o' nice coal dour" );
+   orthoPhrases.push_back( "o' nice coal dower" );
+   orthoPhrases.push_back( "o' nice cold hour" );
+   orthoPhrases.push_back( "o' nice cold our" );
+   orthoPhrases.push_back( "o' nice cole dour" );
+   orthoPhrases.push_back( "o' nice cole dower" );
+   orthoPhrases.push_back( "o' nice kohl dour" );
+   orthoPhrases.push_back( "o' nice kohl dower" );
+   orthoPhrases.push_back( "o' niece coal dour" );
+   orthoPhrases.push_back( "o' niece coal dower" );
+   orthoPhrases.push_back( "o' niece cold hour" );
+   orthoPhrases.push_back( "o' niece cold our" );
+   orthoPhrases.push_back( "o' niece cole dour" );
+   orthoPhrases.push_back( "o' niece cole dower" );
+   orthoPhrases.push_back( "o' niece kohl dour" );
+   orthoPhrases.push_back( "o' niece kohl dower" );
+   orthoPhrases.push_back( "o' nigh scold hour" );
+   orthoPhrases.push_back( "o' nigh scold our" );
+   orthoPhrases.push_back( "o' nigh skol dour" );
+   orthoPhrases.push_back( "o' nigh skol dower" );
+   orthoPhrases.push_back( "o' nye scold hour" );
+   orthoPhrases.push_back( "o' nye scold our" );
+   orthoPhrases.push_back( "o' nye skol dour" );
+   orthoPhrases.push_back( "o' nye skol dower" );
+   orthoPhrases.push_back( "on ay scold hour" );
+   orthoPhrases.push_back( "on ay scold our" );
+   orthoPhrases.push_back( "on ay skol dour" );
+   orthoPhrases.push_back( "on ay skol dower" );
+   orthoPhrases.push_back( "on aye scold hour" );
+   orthoPhrases.push_back( "on aye scold our" );
+   orthoPhrases.push_back( "on aye skol dour" );
+   orthoPhrases.push_back( "on aye skol dower" );
+   orthoPhrases.push_back( "on e scold hour" );
+   orthoPhrases.push_back( "on e scold our" );
+   orthoPhrases.push_back( "on e skol dour" );
+   orthoPhrases.push_back( "on e skol dower" );
+   orthoPhrases.push_back( "on eye scold hour" );
+   orthoPhrases.push_back( "on eye scold our" );
+   orthoPhrases.push_back( "on eye skol dour" );
+   orthoPhrases.push_back( "on eye skol dower" );
+   orthoPhrases.push_back( "on i scold hour" );
+   orthoPhrases.push_back( "on i scold our" );
+   orthoPhrases.push_back( "on i skol dour" );
+   orthoPhrases.push_back( "on i skol dower" );
+   orthoPhrases.push_back( "on ice coal dour" );
+   orthoPhrases.push_back( "on ice coal dower" );
+   orthoPhrases.push_back( "on ice cold hour" );
+   orthoPhrases.push_back( "on ice cold our" );
+   orthoPhrases.push_back( "on ice cole dour" );
+   orthoPhrases.push_back( "on ice cole dower" );
+   orthoPhrases.push_back( "on ice kohl dour" );
+   orthoPhrases.push_back( "on ice kohl dower" );
+   orthoPhrases.push_back( "on ice-cold hour" );
+   orthoPhrases.push_back( "on ice-cold our" );
+   }
+   return  test_getCSVofAllPhraseAndFreqs ( orthoPhrases );
 }
 
 void oldMain() {
@@ -339,7 +675,19 @@ bool runAllDefaultTests() {
    testsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testTrimWhitespace();
-   cout << "XXXXXXXXXXXXXXXXXXXXXX___DONE___XXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= testGetTotalFreqForPhrase();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_getCSVofAllPhraseAndFreqs();
+/*
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+*/   cout << "XXXXXXXXXXXXXXXXXXXXXX___DONE___XXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    return testsPassed;
 }
 
@@ -347,7 +695,6 @@ void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
    cout << "\n\t\tall";
-   cout << "\n\t\ttrimWhitespace";
    cout << "\n\t\tdiscoverOronymsForPhrase";
    cout << "\n\t\tstripSampaStrOfEmph";
    cout << "\n\t\tgetSampaStrWithoutGlottalStops";
@@ -359,6 +706,9 @@ void usageMessage() {
    cout << "\n\t\tqueryDBForOrthoStrsWithSampaPrefix";
    cout << "\n\t\tqueryDBwithOrthoForFreq";
    cout << "\n\t\tqueryDBwithSampaForOrthoStrs";
+   cout << "\n\t\ttrimWhitespace";
+   cout << "\n\t\tgetTotalFreqForPhrase";
+   cout << "\n\t\tgetCSVofAllPhraseAndFreqs";
    cout << "\n\t\thelp";
    cout << "\n\t\toldMain\n";
 }
@@ -395,8 +745,6 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones();
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace();
-      } else if( strcmp( argv[1], "trimWhitespace") == 0 ) {
-         allTestsPassed &= testTrimWhitespace();
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs();
       } else if( strcmp( argv[1], "queryDBwithOrthoForFreq") == 0 ) {
@@ -405,6 +753,12 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testQueryDBForOrthoStrsWithSampaPrefix();
       } else if( strcmp( argv[1], "queryDBwithSampaForOrthoStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithSampaForOrthoStrs();
+      } else if( strcmp( argv[1], "trimWhitespace") == 0 ) {
+         allTestsPassed &= testTrimWhitespace();
+      } else if( strcmp( argv[1], "getTotalFreqForPhrase") == 0 ) {
+         allTestsPassed &= testGetTotalFreqForPhrase();
+      } else if( strcmp( argv[1], "getCSVofAllPhraseAndFreqs") == 0 ) {
+         allTestsPassed &= test_getCSVofAllPhraseAndFreqs();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -431,8 +785,6 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testGetSampaStrWithoutContiguousDuplicatePhones( argv[2] );
       } else if( strcmp( argv[1], "strTokOnWhitespace") == 0 ) {
          allTestsPassed &= testStrTokOnWhitespace( argv[2] );
-      } else if( strcmp( argv[1], "trimWhitespace") == 0 ) {
-         allTestsPassed &= testTrimWhitespace( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForSampaStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithOrthoForSampaStrs( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithOrthoForFreq") == 0 ) {
@@ -441,6 +793,15 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testQueryDBForOrthoStrsWithSampaPrefix( argv[2] );
       } else if( strcmp( argv[1], "queryDBwithSampaForOrthoStrs") == 0 ) {
          allTestsPassed &= testQueryDBwithSampaForOrthoStrs( argv[2] );
+      } else if( strcmp( argv[1], "trimWhitespace") == 0 ) {
+         allTestsPassed &= testTrimWhitespace( argv[2] );
+      } else if( strcmp( argv[1], "getTotalFreqForPhrase") == 0 ) {
+         allTestsPassed &= testGetTotalFreqForPhrase( argv[2] );
+      } else if( strcmp( argv[1], "getCSVofAllPhraseAndFreqs") == 0 ) {
+         cerr << "Error: cannot pass test_getCSVofAllPhraseAndFreqs arguement from command line"<<endl;
+         usageMessage();
+         //assert(0);
+         //allTestsPassed &= test_getCSVofAllPhraseAndFreqs( argv[2] );
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

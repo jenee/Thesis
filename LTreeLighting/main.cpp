@@ -34,9 +34,10 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
+   buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
    //buildAndDrawFullTree("a");
    //buildAndDrawFullTree("email");
-   buildAndDrawFullTree("empty our email");
+   //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
    //buildAndDrawFullTree("a nice");

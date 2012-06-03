@@ -556,13 +556,13 @@ vector<string> queryDBForOrthoStrsWithSampaPrefix( string sampaPrefix ) {
    confirmDatabaseInitialization();
    char* sqlQuery = (char*) malloc( sizeof(char*) * MAX_DATABASE_QUERY_LEN );
    
-   fprintf(stderr, "\nqueryDBForOrthoStrsWithSampaPrefix, sampaPrefix = %s\n", sampaPrefix.c_str());
+   //fprintf(stderr, "\nqueryDBForOrthoStrsWithSampaPrefix, sampaPrefix = %s\n", sampaPrefix.c_str());
    
    string sampaStrNoEmph = stripSampaStrOfEmph( sampaPrefix );
    if(sampaStrNoEmph.size() > 0) {
       sampaStrNoEmph.append("%");
    }
-   cerr << "final queryterm: |"<<sampaStrNoEmph <<"|" << endl;
+   //cerr << "final queryterm: |"<<sampaStrNoEmph <<"|" << endl;
    sprintf(sqlQuery, "select ortho from phoneticDictTable where trim(SAMPAnoEmph) like \"%s\"",sampaStrNoEmph.c_str()); 
    
    vector<string> orthoMatches = queryDBforStrings( sqlQuery, sampaStrNoEmph );
@@ -751,6 +751,40 @@ void getMaxAndMinFreqForAllOrthoPhrases( vector< string > fullPhrases, int* max,
    *max = freqMax;
 }
 
+
+int getTotalFreqForPhrase( string orthoPhrase ) {
+   
+   int freqSum = 0;
+   
+   vector<string> phraseWords = strTokOnWhitespace( orthoPhrase );
+   
+   for(  int i = 0; i < phraseWords.size(); i++ ) {
+      freqSum += queryDBwithOrthoForFreq( phraseWords.at(i) );
+   }
+   
+   //assert(0);
+
+   return freqSum;
+}
+
+vector<string> getCSVofAllPhraseAndFreqs( vector<string> orthoPhrases ) {
+
+   vector<string> csvStrings;
+   string delim = " , ";
+   for (int i = 0; i < orthoPhrases.size(); i++) {
+      cerr<<"."<<i;
+      string csvLine = orthoPhrases.at( i );
+      int totalFreq = getTotalFreqForPhrase( csvLine );
+      csvLine.append( delim );
+      stringstream os;
+      os << totalFreq;
+      string freq_str = os.str(); //retrieve as a string
+      csvLine.append( freq_str );
+      csvStrings.push_back( csvLine );
+   }
+   cerr<<endl;
+   return csvStrings;
+}
 
 string stripSampaStrOfEmph(string &str) {
    str.erase(std::remove(str.begin(), str.end(), '"'), str.end());
