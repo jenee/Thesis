@@ -132,7 +132,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       //draw a branch
 
       double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
-      double curYOffset = yOffCur;//deltaYOffset;     
+      double curYOffset = deltaYOffset;  //yOffCur;//deltaYOffset;     
       double curXOffset = tan( tiltAngle ) * curYOffset;
       
       glPushMatrix();
