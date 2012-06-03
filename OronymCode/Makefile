@@ -7,7 +7,9 @@ treeGUI:  wordBreakdown.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
 	echo "--------------------------COMPILE treeGUI----------------------------"
 	$(CC) $(CFLAGS) -framework GLUT -framework OpenGL  -g -o $@ $^
    
-test: cleanTest wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
+test: cleanTest testWordBreakdown 
+
+testWordBreakdown: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	echo "----------------------COMPILE testWordBreakdown----------------------"
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
 

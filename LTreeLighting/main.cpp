@@ -34,8 +34,9 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
+   buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
-   buildAndDrawFullTree("a nice");
+   //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }

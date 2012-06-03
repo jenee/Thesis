@@ -250,8 +250,7 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase, bool includeDea
 
 /*given an orthoPhrase, returns all possible orthoPhrases it could be misheard as*/
 vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
-   vector<string> orthoMisheardAsPhrases = discoverOronymsForPhrase( origOrthoPhrase, false );
-   
+   return discoverOronymsForPhrase( origOrthoPhrase, false );
 }
 
 /*This function does the phoneme-tree-traversal thing for oronyms
