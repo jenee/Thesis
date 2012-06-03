@@ -151,7 +151,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
             cerr<<"deadEND! drawSphere!"<<endl;
-            drawSphere( 1.0 );
+            drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
             
             glPopMatrix();
@@ -161,7 +161,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          } else if (curFirstWord == successDelim ) {
             cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             materials(GreenShiny);
-            drawSphere( 1.0 );
+            drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
 
             glPopMatrix();
