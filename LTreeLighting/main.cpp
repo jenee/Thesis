@@ -201,7 +201,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             continue;
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
-            cerr <<";\txOffset="<<curXOffset<<";"<<endl;
+            cerr <<";\txOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle<<endl;
             drawBranch( tiltAngle, curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
