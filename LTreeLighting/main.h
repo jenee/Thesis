@@ -171,26 +171,26 @@ materialStruct GrayFlat = {
 
 
 void buildMatVect() {
-   allMaterials.push_back(YellowShiny);
-   allMaterials.push_back(RedFlat);
-   allMaterials.push_back(WhiteShiny);
-   allMaterials.push_back(GreenShiny);
    allMaterials.push_back(OrangeShiny);     
+   allMaterials.push_back(YellowShiny);
+   allMaterials.push_back(WhiteShiny);
    allMaterials.push_back(MagentaShiny);
-   allMaterials.push_back(OrangeFlat);
    allMaterials.push_back(BlueShiny);
+   //allMaterials.push_back(GreenShiny);
+   allMaterials.push_back(OrangeFlat);
+   allMaterials.push_back(RedFlat);
    allMaterials.push_back(PurpleFlat);
    allMaterials.push_back(DarkBlueShiny);
 }
 
-//wordTreeDraw funcs
+double radiansToDegrees( double rads );
 double scaleFreqToRadius( int freqVal );
-std::string FirstWord(const std::string& line);
+
+//wordTreeDraw funcs
+void buildAndDrawFullTree();
+void buildAndDrawFullTree( std::string orthoPhrase );
 void drawBranchesAtFork( std::vector< std::string > fullPhrases, double lastRadius );
 void drawBranchesAtFork( std::vector< std::string > fullPhrases, double lastRadius, double xOffCur, double yOffCur );
-
-void buildAndDrawFullTree( std::string orthoPhrase );
-void buildAndDrawFullTree();
 
 
 //main funcs

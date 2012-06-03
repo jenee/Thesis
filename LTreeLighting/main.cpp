@@ -33,6 +33,33 @@ double scaleFreqToRadius( int freqVal ) {
    return scaledRadius;
 }
 
+void buildAndDrawFullTree() {
+   //buildAndDrawFullTree("empty hour");
+   buildAndDrawFullTree("a nice");
+   //buildAndDrawFullTree("a nice cold");
+   //buildAndDrawFullTree("a nice cold hour");
+}
+
+
+void buildAndDrawFullTree( string orthoPhrase ) {
+   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase );
+   getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
+
+   //draw the tree's seed
+
+   glPushMatrix();
+   {
+      glTranslated(0.0, ( DEFAULT_BRANCH_LEN / 2.0 ), 0.0);
+      materials(OrangeShiny);
+      drawSphere(0.25);
+      
+   }
+   glPopMatrix();
+   
+   materials(allMaterials.at( mat % allMaterials.size () ) );
+
+   drawBranchesAtFork ( fullPhrases, DEFAULT_RADIUS );
+}
 
 
 void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
@@ -175,14 +202,14 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             vector<string> tailsVect = getAllPhrasesWithPrefix( curFirstWord, fullPhrases);
             
             //DEBUG WITH COLORSSS for each branch level
-            //materials(allMaterials.at( ++mat % allMaterials.size () ) );
+            materials(allMaterials.at( ++mat % allMaterials.size () ) );
             
             cerr<<"%%%%%%%%%%"<<i<<"%%%%%%%%% curYOffset = "<<curYOffset<< "  %%%%%%%%%%%%%%%%%"<<endl;
             //pass those phrases to drawBranchesAtFork
             drawBranchesAtFork( tailsVect, firstWordRadius, curXOffset, curYOffset );
             
             //DEBUG WITH COLORSSS!
-            //materials(allMaterials.at( --mat % allMaterials.size () ) );
+            materials(allMaterials.at( --mat % allMaterials.size () ) );
             
          }
       }
@@ -195,33 +222,6 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       
 }
 
-
-void buildAndDrawFullTree( string orthoPhrase ) {
-   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase );
-   getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
-
-   //draw the tree's seed
-
-   glPushMatrix();
-   {
-      glTranslated(0.0, ( DEFAULT_BRANCH_LEN / 2.0 ), 0.0);
-      materials(OrangeShiny);
-      drawSphere(0.25);
-      
-   }
-   glPopMatrix();
-   
-   materials(allMaterials.at( mat % allMaterials.size () ) );
-
-   drawBranchesAtFork ( fullPhrases, DEFAULT_RADIUS );
-}
-
-void buildAndDrawFullTree() {
-   buildAndDrawFullTree("empty hour");
-   //buildAndDrawFullTree("a nice");
-   //buildAndDrawFullTree("a nice cold");
-   //buildAndDrawFullTree("a nice cold hour");
-}
 
 
 
