@@ -159,6 +159,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
       cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
+      double newAdditiveRadius = firstWordRadius + lastRadius;
       //draw a branch
 
       double tiltAngle = curFarLeftTiltAngle + ( angleDelta * i ); 
@@ -196,7 +197,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             continue;
          } else {
             
-            drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius );
+            drawBranch( tiltAngle, curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
             
@@ -207,7 +208,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             
             cerr<<"%%%%%%%%%%"<<i<<"%%%%%%%%% curYOffset = "<<curYOffset<< "  %%%%%%%%%%%%%%%%%"<<endl;
             //pass those phrases to drawBranchesAtFork
-            drawBranchesAtFork( tailsVect, firstWordRadius, curXOffset, curYOffset );
+            drawBranchesAtFork( tailsVect, newAdditiveRadius, curXOffset, curYOffset );
             
             //DEBUG WITH COLORSSS!
             materials(allMaterials.at( --mat % allMaterials.size () ) );
