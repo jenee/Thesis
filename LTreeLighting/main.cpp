@@ -81,17 +81,17 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    
    double farRightXOffset, farLeftXOffset;
    //double farRightTiltAngle, farLeftTiltAngle;
-   double farRightTiltAngle, farLeftTiltAngle;
    double angleDelta;
    
    double spacersNeeded = firstWords.size() - 1 ;
    
    if( firstWords.size() > 1 ) {
       farRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
-      farRightTiltAngle = atan( deltaYOffset / farRightXOffset ) ; 
+      //farRightTiltAngle = atan( deltaYOffset / farRightXOffset ) ; 
+      farRightTiltAngle = 45;
       farLeftXOffset = farRightXOffset - ( deltaXOffset * spacersNeeded );
       
-      farRightTiltAngle = radiansToDegrees( farRightTiltAngle );
+      //farRightTiltAngle = radiansToDegrees( farRightTiltAngle );
       
       farLeftTiltAngle = -1 * farRightTiltAngle;//farRightTiltAngle - ( angleDelta * firstWords.size() );
       angleDelta = ( fabs( farLeftTiltAngle * 2 ) ) / spacersNeeded;

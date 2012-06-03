@@ -45,10 +45,10 @@ int minWordFreq = DICTIONARY_MAX_FREQ + 1;
 const double minRadius = 0.05;
 const double maxRadius = 1.0;
 
-//const double farRightTiltAngle = 45.0;
-//const double farLeftTiltAngle = -1 * farRightTiltAngle;
+double farRightTiltAngle = 45.0;
+double farLeftTiltAngle = -1 * farRightTiltAngle;
 
-const double deltaXOffset = ( DEFAULT_BRANCH_LEN / 2.0 );      
+const double deltaXOffset = ( DEFAULT_BRANCH_LEN / 4.0 );      
 const double deltaYOffset = DEFAULT_BRANCH_LEN * 1.1;        
 
 
@@ -160,7 +160,6 @@ materialStruct GrayFlat = {
 
 void buildMatVect() {
    allMaterials.push_back(GreenShiny);
-   allMaterials.push_back(GrayFlat);
    allMaterials.push_back(WhiteShiny);
    allMaterials.push_back(BlueShiny);
    allMaterials.push_back(YellowShiny);
