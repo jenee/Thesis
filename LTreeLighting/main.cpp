@@ -34,7 +34,8 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("blessed hour");
+   buildAndDrawFullTree("empty our email");
+   //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
    //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
@@ -75,7 +76,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       return;
    }
    
-   //DEBUG
+   /*DEBUG
    {
    cerr << "#full Phrases:"<<endl;
    for(int i = 0; i < fullPhrases.size(); i++ ) {
@@ -83,7 +84,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    }
    cerr << "#" <<endl;
    
-   }//END DEBUG
+   }*///END DEBUG
      
    //use a set to ensure no duplicates
    set< string > firstWords;
@@ -96,14 +97,14 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       }
    }
    
-   //DEBUG
+   /*DEBUG
    {
    vector<string> firstWordsSetVect( firstWords.begin(), firstWords.end() );
    cerr << "all first words: "<<endl;
    for(int fw = 0; fw < firstWordsSetVect.size(); fw++ ) {
       cerr << "==="<<fw<<": '"<< firstWordsSetVect.at(fw) <<"'"<<endl;
    }
-   } //END DEBUG
+   } *///END DEBUG
    
    //calculate spread of branches for firstWord
    
@@ -135,7 +136,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    }
    
    
-   //DEBUG
+   /*DEBUG
    {
    cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
    cerr<<"(((((((( ^= ( deltaXOffset ("<<deltaXOffset<<") *";
@@ -146,7 +147,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    cerr<<"((((( angleDelta="<<angleDelta<<endl;
    cerr<<"((((( farLeftTiltAngle="<<farLeftTiltAngle<<endl;
    cerr<<"((((( farLeftXOffset="<<farLeftXOffset<<endl;
-   } //END DEBUG
+   } *///END DEBUG
    
    set<string>::iterator curFirstWordIter;
    int i = 0;
@@ -157,7 +158,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       //calculate the branch radius using the scaled frequency of curFirstWord
       int firstWordFreq = queryDBwithOrthoForFreq ( curFirstWord );
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
-      cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
+      //cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
       double newAdditiveRadius = firstWordRadius + lastRadius;
       //draw a branch
@@ -179,16 +180,15 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
-            cerr<<"deadEND! drawSphere!"<<endl;
+            //cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
             
             glPopMatrix();
             continue;
 
-            //TODO: this will have to be scaled, translated and parameterized;
          } else if (curFirstWord == successDelim ) {
-            cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
+            //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             materials(GreenShiny);
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
@@ -206,7 +206,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //DEBUG WITH COLORSSS for each branch level
             materials(allMaterials.at( ++mat % allMaterials.size () ) );
             
-            cerr<<"%%%%%%%%%%"<<i<<"%%%%%%%%% curYOffset = "<<curYOffset<< "  %%%%%%%%%%%%%%%%%"<<endl;
+            //cerr<<"%%%%%%%%%%"<<i<<"%%%%%%%%% curYOffset = "<<curYOffset<< "  %%%%%%%%%%%%%%%%%"<<endl;
             //pass those phrases to drawBranchesAtFork
             drawBranchesAtFork( tailsVect, newAdditiveRadius, curXOffset, curYOffset );
             
