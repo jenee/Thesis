@@ -34,8 +34,8 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("a");
-   //buildAndDrawFullTree("email");
+   //buildAndDrawFullTree("a");
+   buildAndDrawFullTree("email");
    //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
@@ -202,7 +202,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             continue;
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
-            cerr <<";\txOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle<<endl;
+            cerr <<";\tcurXOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle<<endl;
             drawBranch( tiltAngle, curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
