@@ -80,7 +80,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    
    if( firstWords.size() > 1 ) {
       farRightXOffset =  ( defaultXOffset * firstWords.size() ) / 2.0 ; 
-      farRightTiltAngle = acos( defaultYOffset / farRightXOffset ) ; 
+      farRightTiltAngle = atan( defaultYOffset / farRightXOffset ) ; 
       angleDelta = ( farRightTiltAngle * 2 ) / firstWords.size();
       farLeftTiltAngle = farRightTiltAngle - ( angleDelta * firstWords.size() );
       farLeftXOffset = farRightXOffset * -1.0;
@@ -94,7 +94,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    //DEBUG
    {
    cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
-   cerr<<"(((((((( ^= ( defaultXOffset ("<<defaultYOffset<<") *";
+   cerr<<"(((((((( ^= ( defaultXOffset ("<<defaultXOffset<<") *";
    cerr<<"firstWords.size() ("<<firstWords.size()<<") ) / 2.0 "<<endl;
    cerr<<"((((( farRightTiltAngle="<<farRightTiltAngle<<endl;
    cerr<<"(((((((( ^= defaultYOffset ("<<defaultYOffset<<") /";
@@ -118,7 +118,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       //draw a branch
 
       double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
-      double curYOffset = defaultYOffset;     
+      double curYOffset = yOffCur;//defaultYOffset;     
       double curXOffset = tan( tiltAngle ) * curYOffset;
       
       glPushMatrix();
@@ -156,7 +156,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             
             
             //pass those phrases to drawBranchesAtFork
-            drawBranchesAtFork( tailsVect, firstWordRadius );
+            drawBranchesAtFork( tailsVect, firstWordRadius, curXOffset, curYOffset );
             
             //DEBUG WITH COLORSSS!
             materials(allMaterials.at( --mat % allMaterials.size () ) );
