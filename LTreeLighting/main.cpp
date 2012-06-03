@@ -37,7 +37,7 @@ double scaleFreqToRadius( int freqVal ) {
 
 void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius ) {
 
-   drawBranchesAtFork(fullPhrases, lastRadius, defaultXOffset, defaultYOffset );
+   drawBranchesAtFork(fullPhrases, lastRadius, deltaXOffset, deltaYOffset );
 }
 
 
@@ -87,9 +87,9 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    double spacersNeeded = firstWords.size() - 1 ;
    
    if( firstWords.size() > 1 ) {
-      farRightXOffset =  ( defaultXOffset * spacersNeeded ) / 2.0 ; 
-      farRightTiltAngle = atan( defaultYOffset / farRightXOffset ) ; 
-      farLeftXOffset = farRightXOffset - ( defaultXOffset * spacersNeeded );
+      farRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
+      farRightTiltAngle = atan( deltaYOffset / farRightXOffset ) ; 
+      farLeftXOffset = farRightXOffset - ( deltaXOffset * spacersNeeded );
       
       farRightTiltAngle = radiansToDegrees( farRightTiltAngle );
       
@@ -108,10 +108,10 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    //DEBUG
    {
    cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
-   cerr<<"(((((((( ^= ( defaultXOffset ("<<defaultXOffset<<") *";
+   cerr<<"(((((((( ^= ( deltaXOffset ("<<deltaXOffset<<") *";
    cerr<<"spacersNeeded ("<<spacersNeeded<<") ) / 2.0 "<<endl;
    cerr<<"((((( farRightTiltAngle="<<farRightTiltAngle<<endl;
-   cerr<<"(((((((( ^= atan( defaultYOffset ("<<defaultYOffset<<") /";
+   cerr<<"(((((((( ^= atan( deltaYOffset ("<<deltaYOffset<<") /";
    cerr<<"farRightXOffset ("<<farRightXOffset<<") )"<<endl;
    cerr<<"((((( angleDelta="<<angleDelta<<endl;
    cerr<<"((((( farLeftTiltAngle="<<farLeftTiltAngle<<endl;
@@ -132,7 +132,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       //draw a branch
 
       double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
-      double curYOffset = yOffCur;//defaultYOffset;     
+      double curYOffset = yOffCur;//deltaYOffset;     
       double curXOffset = tan( tiltAngle ) * curYOffset;
       
       glPushMatrix();
@@ -193,7 +193,8 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("a nice");
+   buildAndDrawFullTree("empty hour");
+   //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }
