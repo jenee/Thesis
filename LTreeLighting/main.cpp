@@ -34,7 +34,8 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("email");
+   buildAndDrawFullTree("a");
+   //buildAndDrawFullTree("email");
    //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
@@ -205,7 +206,6 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             drawBranch( tiltAngle, curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
-            
             vector<string> tailsVect = getAllPhrasesWithPrefix( curFirstWord, fullPhrases);
             
             //DEBUG WITH COLORSSS for each branch level
