@@ -80,7 +80,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    //calculate spread of branches for firstWord
    
    double farRightXOffset, farLeftXOffset;
-   //double farRightTiltAngle, farLeftTiltAngle;
+   double curFarRightTiltAngle, curFarLeftTiltAngle;
    double angleDelta;
    
    double spacersNeeded = firstWords.size() - 1 ;
@@ -88,19 +88,21 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    if( firstWords.size() > 1 ) {
       farRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
       //farRightTiltAngle = atan( deltaYOffset / farRightXOffset ) ; 
-      farRightTiltAngle = 45;
+      curFarRightTiltAngle = farRightTiltAngle;
       farLeftXOffset = farRightXOffset - ( deltaXOffset * spacersNeeded );
       
       //farRightTiltAngle = radiansToDegrees( farRightTiltAngle );
       
-      farLeftTiltAngle = -1 * farRightTiltAngle;//farRightTiltAngle - ( angleDelta * firstWords.size() );
+      curFarLeftTiltAngle = -1.0 * curFarRightTiltAngle;
+      //farLeftTiltAngle = -1.0 * farRightTiltAngle;//farRightTiltAngle - ( angleDelta * firstWords.size() );
       angleDelta = ( fabs( farLeftTiltAngle * 2 ) ) / spacersNeeded;
 
    } else {
       farRightXOffset = 0;
-      farRightTiltAngle = 0;
+      curFarRightTiltAngle = 0;
       angleDelta = 0;
-      farLeftTiltAngle = 0;
+      curFarLeftTiltAngle = 0;
+      //farLeftTiltAngle = 0;
       farLeftXOffset = 0;
    }
    
@@ -131,7 +133,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       
       //draw a branch
 
-      double tiltAngle = farLeftTiltAngle + ( angleDelta * i ); 
+      double tiltAngle = curFarLeftTiltAngle + ( angleDelta * i ); 
       double curYOffset = deltaYOffset;  //yOffCur;//deltaYOffset;     
       double curXOffset = tan( tiltAngle ) * curYOffset;
       
