@@ -5,6 +5,11 @@ using namespace std;
 
 
 
+double radiansToDegrees(double rads) {
+   double PI = 3.1415926;
+   double degrees = ( rads * 180 ) / PI;
+   return degrees;
+}
 
 
 /*http://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value
@@ -75,15 +80,22 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    //calculate spread of branches for firstWord
    
    double farRightXOffset, farLeftXOffset;
+   //double farRightTiltAngle, farLeftTiltAngle;
    double farRightTiltAngle, farLeftTiltAngle;
    double angleDelta;
    
+   double spacersNeeded = firstWords.size() - 1 ;
+   
    if( firstWords.size() > 1 ) {
-      farRightXOffset =  ( defaultXOffset * firstWords.size() ) / 2.0 ; 
+      farRightXOffset =  ( defaultXOffset * spacersNeeded ) / 2.0 ; 
       farRightTiltAngle = atan( defaultYOffset / farRightXOffset ) ; 
-      angleDelta = ( farRightTiltAngle * 2 ) / firstWords.size();
-      farLeftTiltAngle = farRightTiltAngle - ( angleDelta * firstWords.size() );
-      farLeftXOffset = farRightXOffset * -1.0;
+      farLeftXOffset = farRightXOffset - ( defaultXOffset * spacersNeeded );
+      
+      farRightTiltAngle = radiansToDegrees( farRightTiltAngle );
+      
+      farLeftTiltAngle = -1 * farRightTiltAngle;//farRightTiltAngle - ( angleDelta * firstWords.size() );
+      angleDelta = ( fabs( farLeftTiltAngle * 2 ) ) / spacersNeeded;
+
    } else {
       farRightXOffset = 0;
       farRightTiltAngle = 0;
@@ -91,14 +103,16 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       farLeftTiltAngle = 0;
       farLeftXOffset = 0;
    }
+   
+   
    //DEBUG
    {
    cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
    cerr<<"(((((((( ^= ( defaultXOffset ("<<defaultXOffset<<") *";
-   cerr<<"firstWords.size() ("<<firstWords.size()<<") ) / 2.0 "<<endl;
+   cerr<<"spacersNeeded ("<<spacersNeeded<<") ) / 2.0 "<<endl;
    cerr<<"((((( farRightTiltAngle="<<farRightTiltAngle<<endl;
-   cerr<<"(((((((( ^= defaultYOffset ("<<defaultYOffset<<") /";
-   cerr<<"farRightXOffset ("<<farRightXOffset<<")"<<endl;
+   cerr<<"(((((((( ^= atan( defaultYOffset ("<<defaultYOffset<<") /";
+   cerr<<"farRightXOffset ("<<farRightXOffset<<") )"<<endl;
    cerr<<"((((( angleDelta="<<angleDelta<<endl;
    cerr<<"((((( farLeftTiltAngle="<<farLeftTiltAngle<<endl;
    cerr<<"((((( farLeftXOffset="<<farLeftXOffset<<endl;

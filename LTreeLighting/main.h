@@ -45,8 +45,10 @@ int minWordFreq = DICTIONARY_MAX_FREQ + 1;
 const double minRadius = 0.05;
 const double maxRadius = 1.0;
 
+//const double farRightTiltAngle = 45.0;
+//const double farLeftTiltAngle = -1 * farRightTiltAngle;
 
-const double defaultXOffset = DEFAULT_BRANCH_LEN / 2.0;      
+const double defaultXOffset = ( DEFAULT_BRANCH_LEN / 2.0 );      
 const double defaultYOffset = DEFAULT_BRANCH_LEN * 1.1;        
 
 
