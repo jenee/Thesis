@@ -170,7 +170,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //DEBUG WITH COLORSSS for each branch level
             materials(allMaterials.at( ++mat % allMaterials.size () ) );
             
-            
+            cerr<<"%%%%%%%%%%"<<i<<"%%%%%%%%% curYOffset = "<<curYOffset<< "  %%%%%%%%%%%%%%%%%"<<endl;
             //pass those phrases to drawBranchesAtFork
             drawBranchesAtFork( tailsVect, firstWordRadius, curXOffset, curYOffset );
             
@@ -180,6 +180,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          }
       }
       glPopMatrix();
+      glPopMatrix();
+
 
       i++;
    }
