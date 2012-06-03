@@ -211,9 +211,7 @@ vector< vector<phone> > findAllPhoneSeqsForOrthoPhrase( string orthoPhrase ) {
    return phoneTree;
 }
 
-
-/*given an orthoPhrase, returns all possible orthoPhrases it could be misheard as*/
-vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
+vector<string> discoverOronymsForPhrase( string origOrthoPhrase, bool includeDeadends ) {
    vector<string> orthoMisheardAsPhrases;
    vector<vector<phone> > allPhoneSeqsOfOrigPhrase = findAllPhoneSeqsForOrthoPhrase( origOrthoPhrase );
    
@@ -230,14 +228,14 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
       //vector<string> altOrthoPhrases = interpretPhrase( curPhoneSeq );
       vector<string> altOrthoPhrases = findOrthoStrsForPhoneSeq( curPhoneSeq );
       
-      cerr << "exits findOrthoStrsForPhoneSeq"<<endl;
+      //cerr << "exits findOrthoStrsForPhoneSeq"<<endl;
       for( int j = 0; j < altOrthoPhrases.size(); j++) {
          string altOrthoPhrase = altOrthoPhrases.at(j);
          cerr << i <<"~~>" << altOrthoPhrase << endl;
          
          //ensure it contains no deadEndDelims so we only add fully valid strings
-         if ( altOrthoPhrase.find( deadEndDelim1 ) == string::npos 
-              && altOrthoPhrase.find( deadEndDelim2 ) == string::npos ) {    
+         if ( includeDeadends == true || ( altOrthoPhrase.find( deadEndDelim1 ) == string::npos 
+              && altOrthoPhrase.find( deadEndDelim2 ) == string::npos ) ) {    
             orthoMisheardAsPhrases.push_back( altOrthoPhrase );
          }
       }
@@ -247,6 +245,13 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
    set<string> tempSetForDeduplication( orthoMisheardAsPhrases.begin(), orthoMisheardAsPhrases.end() );
    orthoMisheardAsPhrases.assign( tempSetForDeduplication.begin(), tempSetForDeduplication.end() );
    return orthoMisheardAsPhrases;
+}
+
+
+/*given an orthoPhrase, returns all possible orthoPhrases it could be misheard as*/
+vector<string> discoverOronymsForPhrase( string origOrthoPhrase ) {
+   vector<string> orthoMisheardAsPhrases = discoverOronymsForPhrase( origOrthoPhrase, false );
+   
 }
 
 /*This function does the phoneme-tree-traversal thing for oronyms

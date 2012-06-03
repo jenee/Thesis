@@ -42,6 +42,7 @@ std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWor
 std::vector< std::vector<phone> > findAllPhoneSeqsForOrthoPhrase( std::string orthoPhrase );
 std::vector< std::set<phone> > findPhoneTreeForOrthoPhrase( std::string orthoPhrase );
  
+std::vector<std::string>  discoverOronymsForPhrase( std::string origOrthoPhrase, bool includeDeadends );
 std::vector<std::string>  discoverOronymsForPhrase( std::string origOrthoPhrase );
 std::vector<std::string> interpretPhrase( std::vector<phone> sampaPhrase );
 std::vector<std::string> findOrthoStrsForPhoneSeq( std::vector<phone> phoneSeq );

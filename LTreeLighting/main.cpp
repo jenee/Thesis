@@ -42,7 +42,7 @@ void buildAndDrawFullTree() {
 
 
 void buildAndDrawFullTree( string orthoPhrase ) {
-   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase );
+   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase , true );
    getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
 
    //draw the tree's seed
