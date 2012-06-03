@@ -141,7 +141,6 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       {
          glTranslated(curXOffset, curYOffset, 0.0);
 
-         drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius );
          
          //if firstWord is empty
          if( curFirstWord == "") {
@@ -152,8 +151,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //draw a red cube/sphere at the end of the branch
             materials(RedFlat);
             cerr<<"deadEND! drawSphere!"<<endl;
-            drawSphere(firstWordRadius * 1.1);
-            materials(GreenShiny);
+            drawSphere( 1.0 );
+            materials(allMaterials.at( mat % allMaterials.size () ) );
             
             glPopMatrix();
             continue;
@@ -161,25 +160,29 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //TODO: this will have to be scaled, translated and parameterized;
          } else if (curFirstWord == successDelim ) {
             cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
+            materials(GreenShiny);
+            drawSphere( 1.0 );
+            materials(allMaterials.at( mat % allMaterials.size () ) );
 
-            drawSphere(firstWordRadius * 1.1);
-            
             glPopMatrix();
             continue;
          } else {
+            
+            drawBranch( tiltAngle, curXOffset, curYOffset, firstWordRadius, lastRadius );
+         
             //find all phrases in fullPhrases that start with that firstWord
             
             vector<string> tailsVect = getAllPhrasesWithPrefix( curFirstWord, fullPhrases);
             
             //DEBUG WITH COLORSSS for each branch level
-            materials(allMaterials.at( ++mat % allMaterials.size () ) );
+            //materials(allMaterials.at( ++mat % allMaterials.size () ) );
             
             cerr<<"%%%%%%%%%%"<<i<<"%%%%%%%%% curYOffset = "<<curYOffset<< "  %%%%%%%%%%%%%%%%%"<<endl;
             //pass those phrases to drawBranchesAtFork
             drawBranchesAtFork( tailsVect, firstWordRadius, curXOffset, curYOffset );
             
             //DEBUG WITH COLORSSS!
-            materials(allMaterials.at( --mat % allMaterials.size () ) );
+            //materials(allMaterials.at( --mat % allMaterials.size () ) );
             
          }
       }
@@ -196,12 +199,26 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
 void buildAndDrawFullTree( string orthoPhrase ) {
    vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase );
    getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
+
+   //draw the tree's seed
+
+   glPushMatrix();
+   {
+      glTranslated(0.0, ( DEFAULT_BRANCH_LEN / 2.0 ), 0.0);
+      materials(OrangeShiny);
+      drawSphere(0.25);
+      
+   }
+   glPopMatrix();
+   
+   materials(allMaterials.at( mat % allMaterials.size () ) );
+
    drawBranchesAtFork ( fullPhrases, DEFAULT_RADIUS );
 }
 
 void buildAndDrawFullTree() {
-   //buildAndDrawFullTree("empty hour");
-   buildAndDrawFullTree("a nice");
+   buildAndDrawFullTree("empty hour");
+   //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }
@@ -452,8 +469,6 @@ void display() {
    //draw the cube
    //drawcube();
    
-   drawCylinder();
-    
     double halfRadius = .25;
     double cylinderHeight = 2.0;
     
@@ -621,6 +636,10 @@ void doLSystemsString(int numIterations) { //, string seedStr, string pat1, stri
 
 void initStuff() {
    buildMatVect();
+   //create a sphere
+   mySphere = gluNewQuadric();
+   gluQuadricDrawStyle(mySphere, GLU_FILL);
+   
    vector<lyricWord> lyrics;
    //dummy stub method with dummy return val
    wordClarities =  measureClarity( lyrics );
@@ -666,11 +685,7 @@ int main(int argc, char** argv) {
    //enable GL features we want
    glEnable(GL_DEPTH_TEST);
    glEnable(GL_LIGHTING);
-   materials(GreenShiny);
    
-  //create a sphere
-  mySphere = gluNewQuadric();
-  gluQuadricDrawStyle(mySphere, GLU_FILL);
    
    //only do this once
    init_lighting();

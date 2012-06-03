@@ -1,17 +1,17 @@
 CC    = g++
 CFLAGS   = -lsqlite3  -pedantic
 
-all: clean treeGUI
+all: treeGUI
   
-treeGUI:  wordBreakdown.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
+treeGUI: cleanTreeGUI wordBreakdown.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
 	echo "--------------------------COMPILE treeGUI----------------------------"
 	$(CC) $(CFLAGS) -framework GLUT -framework OpenGL  -g -o $@ $^
    
-test: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
+test: cleanTest wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	echo "----------------------COMPILE testWordBreakdown----------------------"
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
 
-runTest: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
+runTest: test wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
 	echo "......................RUN testWordBreakdown......................"
 	./testWordBreakdown all
 
@@ -25,6 +25,14 @@ warnings: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakd
 noGDB: wordBreakdown.cpp wordBreakdown.h
 	echo "-------------------------------------noGDB----------------------------"
 	$(CC) $(CFLAGS)  -o wordBreakdown $^
+
+cleanTest: 
+	echo "-----------------------------------CLEAN----------------------------"
+	rm -rf  *.dSYM testWordBreakdown
+
+cleanTreeGUI: 
+	echo "-----------------------------------CLEAN----------------------------"
+	rm -rf treeGUI
 
 clean: 
 	echo "-----------------------------------CLEAN----------------------------"

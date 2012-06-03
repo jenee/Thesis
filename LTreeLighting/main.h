@@ -48,7 +48,7 @@ const double maxRadius = 1.0;
 const double farRightTiltAngle = 45.0;
 const double farLeftTiltAngle = -1.0 * farRightTiltAngle;
 
-const double deltaXOffset = ( DEFAULT_BRANCH_LEN / 4.0 );      
+const double deltaXOffset = ( DEFAULT_BRANCH_LEN / 1.0 );      
 const double deltaYOffset = DEFAULT_BRANCH_LEN * 1.1;        
 
 
@@ -135,14 +135,26 @@ materialStruct GreenShiny = {
 {5.0}
 };
 
-materialStruct BlueShiny = {
+materialStruct DarkBlueShiny = {
 {0.0, 0.0, 0.3, 1.0},
 {0.0, 0.0, 0.9, 1.0},
 {0.8, 1.0, 0.9, 1.0},
 {5.0}
 };
 
+materialStruct BlueShiny = {
+{0.1, 0.1, 0.3, 1.0},
+{0.0, 0.0, 0.9, 1.0},
+{0.8, 1.0, 0.9, 1.0},
+{5.0}
+};
 
+materialStruct MagentaShiny = {
+{0.3, 0.0, 0.3, 1.0},
+{0.9, 0.0, 0.9, 1.0},
+{0.8, 1.0, 0.9, 1.0},
+{5.0}
+};
 materialStruct WhiteShiny = {
 {0.9, 0.9, 0.9, 1.0},
 {.9, 0.9, 1.0, 1.0},
@@ -159,14 +171,16 @@ materialStruct GrayFlat = {
 
 
 void buildMatVect() {
-   allMaterials.push_back(GreenShiny);
-   allMaterials.push_back(WhiteShiny);
-   allMaterials.push_back(BlueShiny);
    allMaterials.push_back(YellowShiny);
-   allMaterials.push_back(OrangeShiny);
-   allMaterials.push_back(OrangeFlat);
-   allMaterials.push_back(PurpleFlat);
    allMaterials.push_back(RedFlat);
+   allMaterials.push_back(WhiteShiny);
+   allMaterials.push_back(GreenShiny);
+   allMaterials.push_back(OrangeShiny);     
+   allMaterials.push_back(MagentaShiny);
+   allMaterials.push_back(OrangeFlat);
+   allMaterials.push_back(BlueShiny);
+   allMaterials.push_back(PurpleFlat);
+   allMaterials.push_back(DarkBlueShiny);
 }
 
 //wordTreeDraw funcs
