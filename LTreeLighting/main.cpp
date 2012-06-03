@@ -154,6 +154,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere(firstWordRadius * 1.1);
             materials(GreenShiny);
+            
+            glPopMatrix();
             continue;
 
             //TODO: this will have to be scaled, translated and parameterized;
@@ -161,6 +163,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
 
             drawSphere(firstWordRadius * 1.1);
+            
+            glPopMatrix();
             continue;
          } else {
             //find all phrases in fullPhrases that start with that firstWord
@@ -180,7 +184,6 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          }
       }
       glPopMatrix();
-      glPopMatrix();
 
 
       i++;
@@ -197,8 +200,8 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("empty hour");
-   //buildAndDrawFullTree("a nice");
+   //buildAndDrawFullTree("empty hour");
+   buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }
