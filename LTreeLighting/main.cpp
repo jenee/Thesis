@@ -43,9 +43,10 @@ void buildAndDrawFullTree() {
    //buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
    //buildAndDrawFullTree("a");
    //buildAndDrawFullTree("email");
+   buildAndDrawFullTree("our mail is late");
    //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
-   buildAndDrawFullTree("empty hour");
+   //buildAndDrawFullTree("empty hour");
    //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
@@ -202,19 +203,30 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          //else if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
-            materials(RedShiny);
+            
             cerr << "___"<<i<<curFirstWord<<";\t\t LastRadius = "<<lastRadius<<endl;
             //cerr<<"deadEND! drawSphere!"<<endl;
-            drawSphere( lastRadius * SPHERE_MULTIPLIER );
-            materials(allMaterials.at( mat % allMaterials.size () ) );
-            
+            glPushMatrix();
+            {
+               //materials(RedShiny);
+               glRotated( radiansToDegrees(-1.0*tiltAngle), 0, 0, 1.0);
+               glScaled( 1.0, curDeltaYOffset*2.0, 1.0);
+               drawSphere( lastRadius * SPHERE_MULTIPLIER );
+               //materials(allMaterials.at( mat % allMaterials.size () ) );
+
+            }
+            glPopMatrix();
 
          } else if (curFirstWord == successDelim ) {
             cerr << "___"<<i<<"END;\t\t LastRadius = "<<lastRadius<<endl;
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
-            materials(GreenShiny);
-            drawSphere( lastRadius * SPHERE_MULTIPLIER );
-            materials(allMaterials.at( mat % allMaterials.size () ) );
+            glPushMatrix();
+            {
+               materials(GreenShiny);
+               drawSphere( lastRadius * SPHERE_MULTIPLIER );
+               materials(allMaterials.at( mat % allMaterials.size () ) );
+            }
+            glPopMatrix();
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord;
             cerr <<";\tcurRadius="<<newAdditiveRadius;

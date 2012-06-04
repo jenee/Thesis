@@ -151,7 +151,7 @@ materialStruct DarkBlueShiny = {
 };
 
 materialStruct BlueShiny = {
-{0.1, 0.1, 0.3, 1.0},
+{0.2, 0.2, 0.6, 1.0},
 {0.0, 0.0, 0.9, 1.0},
 {0.8, 1.0, 0.9, 1.0},
 {5.0}
