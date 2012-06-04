@@ -43,10 +43,10 @@ void buildAndDrawFullTree() {
    //buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
    //buildAndDrawFullTree("a");
    //buildAndDrawFullTree("email");
-   //buildAndDrawFullTree("empty our email");
+   buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
-   buildAndDrawFullTree("a nice");
+   //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
 }
@@ -170,7 +170,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
       //cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
-      double newAdditiveRadius = firstWordRadius + lastRadius;
+      double newAdditiveRadius = firstWordRadius;// + lastRadius;
       //draw a branch
 
       double tiltAngle = curFarLeftTiltAngle + ( angleDelta * i ); 
