@@ -767,7 +767,29 @@ int getTotalFreqForPhrase( string orthoPhrase ) {
    return freqSum;
 }
 
-vector<string> getCSVofAllPhraseAndFreqs( vector<string> orthoPhrases ) {
+string getCSVofWordFreqsForPhrase (string orthoPhrase ) {
+   string csvLine = orthoPhrase;
+   string delim = " , ";
+
+   csvLine.append( delim );
+   
+   vector<string> phraseWords = strTokOnWhitespace( orthoPhrase );
+   
+   for(  int i = 0; i < phraseWords.size(); i++ ) {
+      csvLine.append( phraseWords.at(i) );
+      csvLine.append( delim );
+      stringstream os;
+      os << queryDBwithOrthoForFreq( phraseWords.at(i) );
+      string freq_str = os.str(); //retrieve as a string
+      csvLine.append( freq_str );
+      csvLine.append( delim );
+
+   }
+   return csvLine;
+   
+}
+
+vector<string> getCSVofAllPhraseFreqs( vector<string> orthoPhrases ) {
 
    vector<string> csvStrings;
    string delim = " , ";
@@ -783,6 +805,14 @@ vector<string> getCSVofAllPhraseAndFreqs( vector<string> orthoPhrases ) {
       csvStrings.push_back( csvLine );
    }
    cerr<<endl;
+   return csvStrings;
+}
+
+vector< string > getCSVofEachPhrasesWordsFreqs( vector< string > orthoPhrases ) {
+   vector<string> csvStrings;   
+   for (int i = 0; i < orthoPhrases.size(); i++) {
+      csvStrings.push_back( getCSVofWordFreqsForPhrase ( orthoPhrases.at(i) ) );
+   }
    return csvStrings;
 }
 

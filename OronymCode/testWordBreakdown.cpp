@@ -285,21 +285,58 @@ bool testGetTotalFreqForPhrase( std::string orthoPhrase ) {
       return true;
    }
 }
+
 bool testGetTotalFreqForPhrase() {
    return testGetTotalFreqForPhrase("empty email");
 }
 
-bool test_getCSVofAllPhraseAndFreqs( vector<string> orthoPhrases ) {
-   cerr <<"TEST getCSVofAllPhraseAndFreqs, orthoPhrases.size() ="<< orthoPhrases.size()<<endl;
 
-   vector<string> csvStrings = getCSVofAllPhraseAndFreqs ( orthoPhrases );
+bool test_getCSVofWordFreqsForPhrase( std::string orthoPhrase ) {
+   cerr <<"TEST getCSVofWordFreqsForPhrase, orthoPhrase ="<<orthoPhrase;
+   string csvLine = getCSVofWordFreqsForPhrase( orthoPhrase );
+   cout <<csvLine<<endl;
+   
+   return true;
+}
+
+bool test_getCSVofWordFreqsForPhrase() {
+   return testGetTotalFreqForPhrase("empty email");
+}
+
+bool test_getCSVofAllPhraseFreqs( vector<string> orthoPhrases ) {
+   cerr <<"TEST getCSVofAllPhraseFreqs, orthoPhrases.size() ="<< orthoPhrases.size()<<endl;
+
+   vector<string> csvStrings = getCSVofAllPhraseFreqs ( orthoPhrases );
    for(int i = 0; i < csvStrings.size(); i++){
       cout << i<< ", " <<csvStrings.at( i ) <<endl;
    }
    return true;
 }
 
-bool test_getCSVofAllPhraseAndFreqs() {
+bool test_getCSVofAllPhraseFreqs() {
+   vector<string> orthoPhrases = buildVectorOfStrings();
+   return  test_getCSVofAllPhraseFreqs ( orthoPhrases );
+}
+
+
+
+
+bool test_getCSVofEachPhrasesWordsFreqs( vector<string> orthoPhrases ) {
+   cerr <<"TEST getCSVofEachPhrasesWordsFreqs, orthoPhrases.size() ="<< orthoPhrases.size()<<endl;
+
+   vector<string> csvStrings = getCSVofEachPhrasesWordsFreqs ( orthoPhrases );
+   for(int i = 0; i < csvStrings.size(); i++){
+      cout << i<< ", " <<csvStrings.at( i ) <<endl;
+   }
+   return true;
+}
+
+bool test_getCSVofEachPhrasesWordsFreqs() {
+   vector<string> orthoPhrases = buildVectorOfStrings();
+   return  test_getCSVofEachPhrasesWordsFreqs ( orthoPhrases );
+}
+
+vector<string> buildVectorOfStrings() {
    vector<string> orthoPhrases;
    /*
    {
@@ -312,6 +349,96 @@ bool test_getCSVofAllPhraseAndFreqs() {
    orthoPhrases.push_back( "empty our e-mail" );
    orthoPhrases.push_back( "empty our email" );
    } */
+   {
+      orthoPhrases.push_back( "a nice cold hour" );
+      orthoPhrases.push_back( "a nights cold hour" );
+      orthoPhrases.push_back( "an ice cold hour" );
+      orthoPhrases.push_back( "a nice cold dour" );
+      orthoPhrases.push_back( "a nice coal dower" );
+      orthoPhrases.push_back( "a nice cold thou are" );
+      orthoPhrases.push_back( "a nice coal dour" );
+      orthoPhrases.push_back( "a nice old hour" );
+      orthoPhrases.push_back( "a nice hold hour" );
+      orthoPhrases.push_back( "a nice gold hour" );
+      orthoPhrases.push_back( "a nice scored hour" );
+      orthoPhrases.push_back( "a nice scold hour" );
+      orthoPhrases.push_back( "ah nay skull dower" );
+      orthoPhrases.push_back( "a nye scoldower" );
+      orthoPhrases.push_back( "a nice bold hour" );
+      orthoPhrases.push_back( "a nice gold dollar" );
+      orthoPhrases.push_back( "a nice odd hour" );
+      orthoPhrases.push_back( "a nice spoke hour" );
+      orthoPhrases.push_back( "a nice cold our" );
+      orthoPhrases.push_back( "a nice godfather" );
+      orthoPhrases.push_back( "an ice cold our" );
+      orthoPhrases.push_back( "an ice gold hour" );
+      orthoPhrases.push_back( "an ice scold hour" );
+      orthoPhrases.push_back( "an eye scold hour" );
+      orthoPhrases.push_back( "an ice old hour" );
+      orthoPhrases.push_back( "an eye scol dagr" );
+      orthoPhrases.push_back( "an eyes cold hour" );
+      orthoPhrases.push_back( "in ice cold hour" );
+      orthoPhrases.push_back( "an ounce gold hour" );
+      orthoPhrases.push_back( "and i scold our" );
+      orthoPhrases.push_back( "on ice coal dour" );
+      orthoPhrases.push_back( "an i scold hour" );
+      orthoPhrases.push_back( "an iced cold hour" );
+      orthoPhrases.push_back( "in ice cold davar" );
+      orthoPhrases.push_back( "in icecube daver" );
+      orthoPhrases.push_back( "an ice cold bowl" );
+      orthoPhrases.push_back( "i saw tower" );
+      orthoPhrases.push_back( "an ice cold dour" );
+      orthoPhrases.push_back( "an ice coal dower" );
+      orthoPhrases.push_back( "an ice cold dower" );
+      orthoPhrases.push_back( "and ice cold dollar" );
+      orthoPhrases.push_back( "an ice coal dour" );
+      orthoPhrases.push_back( "an ice cold bower" );
+      orthoPhrases.push_back( "a nice cool hour" );
+      orthoPhrases.push_back( "can i score the hour  " );
+      orthoPhrases.push_back( "in ice co daver" );
+      orthoPhrases.push_back( "an icecold hour" );
+      orthoPhrases.push_back( "an ice cold dollar" );
+      orthoPhrases.push_back( "an ice core bower" );
+      orthoPhrases.push_back( "a nice cool bowl" );
+      orthoPhrases.push_back( "an ice cove daver" );
+      orthoPhrases.push_back( "a niceco daver" );
+      orthoPhrases.push_back( "an ice called dower" );
+      orthoPhrases.push_back( "in ice code our" );
+      orthoPhrases.push_back( "in a ice cold hour" );
+      orthoPhrases.push_back( "an ice could hour" );
+      orthoPhrases.push_back( "in unschooled hour" );
+      orthoPhrases.push_back( "in the eyeschool tower" );
+      orthoPhrases.push_back( "in the ice cold hour " );
+      orthoPhrases.push_back( "in ice called our" );
+      orthoPhrases.push_back( "in the ice cold hour" );
+      orthoPhrases.push_back( "in ice coal dour" );
+      orthoPhrases.push_back( "in ice cold our" );
+      orthoPhrases.push_back( "a nice cool dollar" );
+      orthoPhrases.push_back( "an ice cold hour " );
+      orthoPhrases.push_back( "an ice cold hour" );
+      orthoPhrases.push_back( "" );
+      orthoPhrases.push_back( "an ice cold thou are" );
+      orthoPhrases.push_back( "a light cold hour" );
+      orthoPhrases.push_back( "an nice cold hour" );
+      orthoPhrases.push_back( "in nice cold hour" );
+      orthoPhrases.push_back( "on ice col dour" );
+      orthoPhrases.push_back( "on the ice cold hour" );
+      orthoPhrases.push_back( "on ice called our" );
+      orthoPhrases.push_back( "on ice cold hour" );
+      orthoPhrases.push_back( "on ice cold dower" );
+      orthoPhrases.push_back( "on ice cold bauer" );
+      orthoPhrases.push_back( "on the ice cold dour" );
+      orthoPhrases.push_back( "all ice cold hour" );
+      orthoPhrases.push_back( "on ice cold thou art" );
+      orthoPhrases.push_back( "on ice old hour" );
+      orthoPhrases.push_back( "on eis kol dour" );
+      orthoPhrases.push_back( "a nice pollard" );
+      orthoPhrases.push_back( "on a nice cold hour" );
+      orthoPhrases.push_back( "on ice cold air" );
+      orthoPhrases.push_back( "all eyes cold hour" );
+      orthoPhrases.push_back( "on iced cold hour" );
+   }
+   /*
    {
    orthoPhrases.push_back( "n' ay scold hour" );
    orthoPhrases.push_back( "n' ay scold our" );
@@ -604,7 +731,8 @@ bool test_getCSVofAllPhraseAndFreqs() {
    orthoPhrases.push_back( "on ice-cold hour" );
    orthoPhrases.push_back( "on ice-cold our" );
    }
-   return  test_getCSVofAllPhraseAndFreqs ( orthoPhrases );
+   */
+   return orthoPhrases;
 }
 
 void oldMain() {
@@ -678,10 +806,10 @@ bool runAllDefaultTests() {
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= testGetTotalFreqForPhrase();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= test_getCSVofAllPhraseAndFreqs();
-/*
+   testsPassed &= test_getCSVofAllPhraseFreqs();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= 
+   testsPassed &= test_getCSVofEachPhrasesWordsFreqs();
+/*
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
@@ -694,23 +822,24 @@ bool runAllDefaultTests() {
 void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
-   cout << "\n\t\tall";
-   cout << "\n\t\tdiscoverOronymsForPhrase";
-   cout << "\n\t\tstripSampaStrOfEmph";
-   cout << "\n\t\tgetSampaStrWithoutGlottalStops";
-   cout << "\n\t\tgetSampaStrWithoutContiguousDuplicatePhones";
-   cout << "\n\t\tstrTokOnWhitespace";
-   cout << "\n\t\tfindAllPhoneSeqsForOrthoPhrase";
-   cout << "\n\t\tfindPhoneTreeForOrthoPhrase";
-   cout << "\n\t\tqueryDBwithOrthoForSampaStrs";
-   cout << "\n\t\tqueryDBForOrthoStrsWithSampaPrefix";
-   cout << "\n\t\tqueryDBwithOrthoForFreq";
-   cout << "\n\t\tqueryDBwithSampaForOrthoStrs";
-   cout << "\n\t\ttrimWhitespace";
-   cout << "\n\t\tgetTotalFreqForPhrase";
-   cout << "\n\t\tgetCSVofAllPhraseAndFreqs";
-   cout << "\n\t\thelp";
-   cout << "\n\t\toldMain\n";
+   cout << "\n\t\t all";
+   cout << "\n\t\t discoverOronymsForPhrase";
+   cout << "\n\t\t stripSampaStrOfEmph";
+   cout << "\n\t\t getSampaStrWithoutGlottalStops";
+   cout << "\n\t\t getSampaStrWithoutContiguousDuplicatePhones";
+   cout << "\n\t\t strTokOnWhitespace";
+   cout << "\n\t\t findAllPhoneSeqsForOrthoPhrase";
+   cout << "\n\t\t findPhoneTreeForOrthoPhrase";
+   cout << "\n\t\t queryDBwithOrthoForSampaStrs";
+   cout << "\n\t\t queryDBForOrthoStrsWithSampaPrefix";
+   cout << "\n\t\t queryDBwithOrthoForFreq";
+   cout << "\n\t\t queryDBwithSampaForOrthoStrs";
+   cout << "\n\t\t trimWhitespace";
+   cout << "\n\t\t getTotalFreqForPhrase";
+   cout << "\n\t\t getCSVofAllPhraseFreqs";
+   cout << "\n\t\t getCSVofEachPhrasesWordsFreqs";
+   cout << "\n\t\t help";
+   cout << "\n\t\t oldMain\n";
 }
 
 int main(int argc, char* argv[]) {
@@ -757,8 +886,10 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testTrimWhitespace();
       } else if( strcmp( argv[1], "getTotalFreqForPhrase") == 0 ) {
          allTestsPassed &= testGetTotalFreqForPhrase();
-      } else if( strcmp( argv[1], "getCSVofAllPhraseAndFreqs") == 0 ) {
-         allTestsPassed &= test_getCSVofAllPhraseAndFreqs();
+      } else if( strcmp( argv[1], "getCSVofEachPhrasesWordsFreqs") == 0 ) {
+         allTestsPassed &= test_getCSVofEachPhrasesWordsFreqs();
+      } else if( strcmp( argv[1], "getCSVofAllPhraseFreqs") == 0 ) {
+         allTestsPassed &= test_getCSVofAllPhraseFreqs();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -797,11 +928,12 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testTrimWhitespace( argv[2] );
       } else if( strcmp( argv[1], "getTotalFreqForPhrase") == 0 ) {
          allTestsPassed &= testGetTotalFreqForPhrase( argv[2] );
-      } else if( strcmp( argv[1], "getCSVofAllPhraseAndFreqs") == 0 ) {
-         cerr << "Error: cannot pass test_getCSVofAllPhraseAndFreqs arguement from command line"<<endl;
+      } else if( strcmp( argv[1], "getCSVofAllPhraseFreqs") == 0 ) {
+         cerr << "Error: cannot pass test_getCSVofAllPhraseFreqs argument from command line"<<endl;
          usageMessage();
-         //assert(0);
-         //allTestsPassed &= test_getCSVofAllPhraseAndFreqs( argv[2] );
+      } else if( strcmp( argv[1], "getCSVofEachPhrasesWordsFreqs") == 0 ) {
+         cerr << "Error: cannot pass test_getCSVofEachPhrasesWordsFreqs argument from command line"<<endl;
+         usageMessage();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

@@ -31,8 +31,12 @@ bool testTrimWhitespace( std::string str );
 bool testTrimWhitespace ();
 bool testGetTotalFreqForPhrase( std::string orthoPhrase );
 bool testGetTotalFreqForPhrase();
-bool test_getCSVofAllPhraseAndFreqs( std::vector<std::string> orthoPhrases );
-bool test_getCSVofAllPhraseAndFreqs();
+bool test_getCSVofAllPhraseFreqs( std::vector<std::string> orthoPhrases );
+bool test_getCSVofAllPhraseFreqs();
+bool test_getCSVofEachPhrasesWordsFreqs( std::vector<std::string> orthoPhrases );
+bool test_getCSVofEachPhrasesWordsFreqs();
+
+std::vector<std::string> buildVectorOfStrings();
 void oldMain();
 bool runAllDefaultTests();
 void usageMessage();

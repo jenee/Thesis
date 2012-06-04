@@ -68,7 +68,9 @@ std::string trimWhitespace( std::string &str );
 
 void getMaxAndMinFreqForAllOrthoPhrases( std::vector< std::string > fullPhrases, int* max, int* max );
 int getTotalFreqForPhrase( std::string orthoPhrase );
-std::vector< std::string > getCSVofAllPhraseAndFreqs( std::vector< std::string > orthoPhrases );
+std::string getCSVofWordFreqsForPhrase ( std::string orthoPhrase );
+std::vector< std::string > getCSVofAllPhraseFreqs( std::vector< std::string > orthoPhrases );
+std::vector< std::string > getCSVofEachPhrasesWordsFreqs( std::vector< std::string > orthoPhrases );
 
 std::string stripSampaStrOfEmph( std::string &str);
 std::vector< phone > getNoEmphsPhoneVect(std::vector< phone > phoneVectOrig );
