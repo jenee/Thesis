@@ -119,44 +119,44 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    
    //calculate spread of branches for firstWord
    
-   double farRightXOffset, farLeftXOffset;
+   double curFarRightXOffset, curFarLeftXOffset;
    double curFarRightTiltAngle, curFarLeftTiltAngle;
    double angleDelta;
    
    double spacersNeeded = firstWords.size() - 1 ;
    
    if( firstWords.size() > 1 ) {
-      farRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
+      curFarRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
       
       double halfBranch = deltaYOffset / 2.0;
-      curFarRightTiltAngle = atan( farRightXOffset / halfBranch ) ; 
+      curFarRightTiltAngle = atan( curFarRightXOffset / halfBranch ) ; 
       //curFarRightTiltAngle = degreesToRadians( farRightTiltAngle );
       
-      farLeftXOffset = farRightXOffset - ( deltaXOffset * spacersNeeded );
+      curFarLeftXOffset = curFarRightXOffset - ( deltaXOffset * spacersNeeded );
             
       curFarLeftTiltAngle = -1.0 * curFarRightTiltAngle;
       
       angleDelta = ( fabs( curFarLeftTiltAngle * 2 ) ) / spacersNeeded;
 
    } else {
-      farRightXOffset = 0;
+      curFarRightXOffset = 0;
       curFarRightTiltAngle = 0;
       angleDelta = 0;
       curFarLeftTiltAngle = 0;
-      farLeftXOffset = 0;
+      curFarLeftXOffset = 0;
    }
    
    /*DEBUG
    {
-   cerr<<"((((( farRightXOffset="<<farRightXOffset<<endl;
+   cerr<<"((((( curFarRightXOffset="<<curFarRightXOffset<<endl;
    cerr<<"(((((((( ^= ( deltaXOffset ("<<deltaXOffset<<") *";
    cerr<<"spacersNeeded ("<<spacersNeeded<<") ) / 2.0 "<<endl;
    cerr<<"((((( farRightTiltAngle="<<farRightTiltAngle<<endl;
    cerr<<"(((((((( ^= atan( deltaYOffset ("<<deltaYOffset<<") /";
-   cerr<<"farRightXOffset ("<<farRightXOffset<<") )"<<endl;
+   cerr<<"curFarRightXOffset ("<<curFarRightXOffset<<") )"<<endl;
    cerr<<"((((( angleDelta="<<angleDelta<<endl;
    cerr<<"((((( farLeftTiltAngle="<<farLeftTiltAngle<<endl;
-   cerr<<"((((( farLeftXOffset="<<farLeftXOffset<<endl;
+   cerr<<"((((( curFarLeftXOffset="<<curFarLeftXOffset<<endl;
    } *///END DEBUG
    
    set<string>::iterator curFirstWordIter;
@@ -173,10 +173,14 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       double newAdditiveRadius = firstWordRadius;// + lastRadius;
       //draw a branch
 
+      double curYOffset = deltaYOffset;  //yOffCur;//deltaYOffset;  
+      double curXOffset = curFarLeftXOffset + ( i * deltaXOffset );
+      double tiltAngle = atan ( curXOffset / curYOffset );
+
+      /*   
       double tiltAngle = curFarLeftTiltAngle + ( angleDelta * i ); 
-      double curYOffset = deltaYOffset;  //yOffCur;//deltaYOffset;     
       double curXOffset = tan( tiltAngle ) * curYOffset;
-      
+      */
       glPushMatrix();
       {
          
@@ -206,7 +210,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
             cerr <<";\tcurXOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle;
-            cerr<<";\tangleDelta="<<angleDelta<<";\tfarRightXOffset="<<farRightXOffset<<endl;
+            cerr<<";\tangleDelta="<<angleDelta<<";\tcurFarRightXOffset="<<curFarRightXOffset<<endl;
             
             drawBranch( radiansToDegrees( tiltAngle ), curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
