@@ -110,14 +110,14 @@
                                 <TextSelection>740,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="137" Type="Text" Created="2012-06-03 21:15:51 -0700" Modified="2012-06-03 22:15:44 -0700">
+                        <BinderItem ID="137" Type="Text" Created="2012-06-03 21:15:51 -0700" Modified="2012-06-04 01:49:19 -0700">
                             <Title>In this project, we developed visual representation</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>1978,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -502,7 +502,7 @@
                                 <TextSelection>0,0</TextSelection>
                             </TextSettings>
                             <Children>
-                                <BinderItem ID="127" Type="Text" Created="2012-05-23 14:33:51 -0700" Modified="2012-05-23 14:53:27 -0700">
+                                <BinderItem ID="127" Type="Text" Created="2012-05-23 14:33:51 -0700" Modified="2012-06-04 03:53:33 -0700">
                                     <Title>SAMPA of Oronyms</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -1494,7 +1494,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="42321" Characters="224260" Date="2012-06-03 03:20:38 -0700"></PreviousSession>
+        <PreviousSession Words="17" Characters="156" Date="2012-06-03 03:20:38 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

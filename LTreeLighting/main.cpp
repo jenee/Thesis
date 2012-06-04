@@ -42,14 +42,16 @@ double scaleFreqToRadius( int freqVal ) {
 void buildAndDrawFullTree() {
    //buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
    //buildAndDrawFullTree("a");
+   buildAndDrawFullTree("gray pants");
    //buildAndDrawFullTree("email");
-   buildAndDrawFullTree("our mail is late");
+   //buildAndDrawFullTree("our mail is late");
    //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
    //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
+
 }
 
 
@@ -194,6 +196,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       {
          
          glTranslated(curXOffset, curYOffset, 0.0);
+         glRotated( radiansToDegrees(-1.0*tiltAngle) , 0, 0, 1.0);
 
          
          //if firstWord is empty
@@ -208,12 +211,11 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //cerr<<"deadEND! drawSphere!"<<endl;
             glPushMatrix();
             {
-               //materials(RedShiny);
-               glRotated( radiansToDegrees(-1.0*tiltAngle), 0, 0, 1.0);
-               glScaled( 1.0, curDeltaYOffset*2.0, 1.0);
+               materials(RedShiny);
+               //glRotated( radiansToDegrees(-1.0*tiltAngle), 0, 0, 1.0);
+               glScaled( 1.0,  SPHERE_MULTIPLIER, 1.0);
                drawSphere( lastRadius * SPHERE_MULTIPLIER );
-               //materials(allMaterials.at( mat % allMaterials.size () ) );
-
+               materials(allMaterials.at( mat % allMaterials.size () ) );
             }
             glPopMatrix();
 
@@ -280,7 +282,7 @@ void drawBranch(double tiltAngle, double xOffset, double yOffset,
    glPushMatrix();
    {
       //glTranslated(xOffset, yOffset, 0.0);
-      glRotated(-tiltAngle, 0, 0, 1.0);
+      //glRotated(-tiltAngle, 0, 0, 1.0);
       drawCylinder(baseRadius, topRadius, cylinderHeight );
 
    }
