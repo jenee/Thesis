@@ -62,7 +62,7 @@ int GH;
 int light;
 //Globals for lighting - use a white light and apply materials
 //light position
-GLfloat light_pos[4] = {0.0, 0.0, 1.5, 1.0};
+GLfloat light_pos[4] = {0.0, 3.0, 5.0, 1.0};
 //light color (ambiant, diffuse and specular)
 GLfloat light_amb[4] = {0.6, 0.6, 0.6, 1.0};
 GLfloat light_diff[4] = {0.6, 0.6, 0.6, 1.0};
@@ -178,16 +178,67 @@ materialStruct GrayFlat = {
 };
 
 
+//GreenSeq4RGB = 36 64 0
+materialStruct GreenSeq4 = {
+{ ( 9.0 / 255.0 )  , ( 16.0 / 255.0 ) , 0.0 , 1.0},
+{ ( 36.0 / 255.0 ) , ( 64.0 / 255.0 ) , 0.0 , 1.0},
+{ ( 18.0 / 255.0 ) , ( 32.0 / 255.0 ) , 0.0 , 1.0},
+{  1.0   }
+};
+
+//GreenSeq3RGB = 71 127 0
+materialStruct GreenSeq3 = {
+{ ( 17.75 / 255.0 ) , ( 31.75 / 255.0 ) , 0.0 , 1.0},
+{ ( 71.0 / 255.0 ) , ( 127.0 / 255.0 ) , 0.0 , 1.0},
+{ ( 35.5 / 255.0 ) , ( 63.5 / 255.0 ) , 0.0 , 1.0},
+{1.0}
+};
+
+//GreenSeq2RGB = 107 191 0
+materialStruct GreenSeq2 = {
+{ ( 26.75 / 255.0 ) , ( 47.75 / 255.0 ) , 0.0 , 1.0},
+{ ( 107.0 / 255.0 ) , ( 191.0 / 255.0 ) , 0.0 , 1.0},
+{ ( 52.5 / 255.0 ) , ( 95.5 / 255.0 ) , 0.0 , 1.0},
+{1.0}
+};
+
+
+//GreenSeq1RGB = 142 255 0
+materialStruct GreenSeq1 = {
+{ ( 35.5 / 255.0 ) , ( 63.75 / 255.0 ) , 0.0 , 1.0},
+{ ( 142.0 / 255.0 ) , ( 255.0 / 255.0 ) , 0.0 , 1.0},
+{ ( 71.0 / 255.0 ) , ( 127.5 / 255.0 ) , 0.0 , 1.0},
+{ 1.0 }
+};
+
+
+//GreenSeq0RGB = 211 225 38
+materialStruct GreenSeq0 = {
+{ ( 52.75 / 255.0 ) , ( 63.75 / 255.0 ) , ( 9.5 / 255.0 ) , 1.0},
+{ ( 211.0 / 255.0 ) , ( 255.0 / 255.0 ) , ( 38.0 / 255.0 ) , 1.0},
+{ ( 105.5 / 255.0 ) , ( 127.5 / 255.0 ) , ( 19.0 / 255.0 ) , 1.0},
+{1.0}
+};
+
+
+
+
+
 void buildMatVect() {
+   allMaterials.push_back(GreenSeq4);     
+   allMaterials.push_back(GreenSeq3);     
+   allMaterials.push_back(GreenSeq2);     
+   allMaterials.push_back(GreenSeq1);     
+   allMaterials.push_back(GreenSeq0);     
    allMaterials.push_back(OrangeShiny);     
    allMaterials.push_back(YellowShiny);
-   allMaterials.push_back(WhiteShiny);
    allMaterials.push_back(MagentaShiny);
+   allMaterials.push_back(PurpleFlat);
    allMaterials.push_back(BlueShiny);
    //allMaterials.push_back(GreenShiny);
    allMaterials.push_back(OrangeFlat);
-   allMaterials.push_back(RedFlat);
-   allMaterials.push_back(PurpleFlat);
+   allMaterials.push_back(RedFlat);   
+   allMaterials.push_back(WhiteShiny);
    allMaterials.push_back(DarkBlueShiny);
 }
 

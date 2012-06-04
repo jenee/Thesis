@@ -46,15 +46,34 @@ void buildAndDrawFullTree() {
 
 
 void buildAndDrawFullTree( string orthoPhrase ) {
-   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase , true );
-   getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
+   //vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase , true );
+   //getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
 
+   //DEBUG
+   {
+    glPushMatrix();
+   {  
+      glTranslated( -10.0 , 0.0, 0.0 );
+      for( int i = 0; i < 5; i++ ) {
+         glTranslated( 6.0, 0.0, 0.0);
+         materials( allMaterials.at( mat++ ) );
+         drawSphere(2.0);
+      }
+      mat = 0;
+   }
+   glPopMatrix();
+   
+   
+   }
+   //END DEBUG
+
+/*
    //draw the tree's seed
 
    glPushMatrix();
    {
       glTranslated(0.0, ( DEFAULT_BRANCH_LEN / 2.0 ), 0.0);
-      materials(WhiteShiny);
+      materials(MagentaShiny);
       drawSphere(0.25);
       
    }
@@ -63,6 +82,7 @@ void buildAndDrawFullTree( string orthoPhrase ) {
    materials(allMaterials.at( mat % allMaterials.size () ) );
 
    drawBranchesAtFork ( fullPhrases, DEFAULT_RADIUS );
+   */
 }
 
 
@@ -171,7 +191,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
       //cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
-      double newAdditiveRadius = firstWordRadius;// + lastRadius;
+      //double newAdditiveRadius = firstWordRadius;
+      double newAdditiveRadius = firstWordRadius + lastRadius;
       //draw a branch
 
       double curYOffset = curDeltaYOffset;  //yOffCur;//deltaYOffset;  
@@ -705,7 +726,7 @@ int main(int argc, char** argv) {
 
    //set up glut window
    glutInit(&argc, argv);
-   glutInitWindowSize(1600, 1000);
+   glutInitWindowSize(800, 600);
    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
    glutCreateWindow(orthoPhraseRoot.c_str());
    glClearColor(1.0, 1.0, 1.0, 1.0); // set bg to white
