@@ -3,7 +3,7 @@
 
 using namespace std;
 
-
+string orthoPhraseRoot;
 
 double radiansToDegrees(double rads) {
    double PI = 3.1415926;
@@ -40,17 +40,7 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
-   //buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
-   //buildAndDrawFullTree("a");
-   //buildAndDrawFullTree("gray pants");
-   //buildAndDrawFullTree("email");
-   //buildAndDrawFullTree("our mail is late");
-   //buildAndDrawFullTree("empty our email");
-   //buildAndDrawFullTree("blessed hour");
-   buildAndDrawFullTree("empty hour");
-   //buildAndDrawFullTree("a nice");
-   //buildAndDrawFullTree("a nice cold");
-   //buildAndDrawFullTree("a nice cold hour");
+   buildAndDrawFullTree( orthoPhraseRoot );
 
 }
 
@@ -64,7 +54,7 @@ void buildAndDrawFullTree( string orthoPhrase ) {
    glPushMatrix();
    {
       glTranslated(0.0, ( DEFAULT_BRANCH_LEN / 2.0 ), 0.0);
-      materials(OrangeShiny);
+      materials(WhiteShiny);
       drawSphere(0.25);
       
    }
@@ -700,11 +690,24 @@ void find_and_replace(std::string& source, std::string const& find, std::string 
 */
 
 int main(int argc, char** argv) {
+   //orthoPhraseRoot = "visual representation of the phonetic ambiguity of the written word";
+   //orthoPhraseRoot = "a";
+   //orthoPhraseRoot = "gray pants";
+   //orthoPhraseRoot = "email";
+   //orthoPhraseRoot = "our mail is late";
+   //orthoPhraseRoot = "empty our email";
+   //orthoPhraseRoot = "blessed hour";
+   //orthoPhraseRoot = "empty hour";
+   //orthoPhraseRoot = "a nice";
+   //orthoPhraseRoot = "a nice cold";
+   orthoPhraseRoot = "a nice cold hour";
+
+
    //set up glut window
    glutInit(&argc, argv);
-   glutInitWindowSize(1200, 800);
+   glutInitWindowSize(1600, 1000);
    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-   glutCreateWindow("Basic Ltree");
+   glutCreateWindow(orthoPhraseRoot.c_str());
    glClearColor(0.0, 0.0, 0.0, 1.0);
    
    //set up glut callbacks
@@ -713,8 +716,8 @@ int main(int argc, char** argv) {
    glutKeyboardFunc(keyboard);
    
    //initialize globals
-   GW = 400;
-   GH = 400;
+   GW = 600;
+   GH = 600;
    light = 1;
     
    initStuff();
