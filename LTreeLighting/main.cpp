@@ -193,7 +193,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             materials(RedFlat);
             cerr << "___"<<i<<curFirstWord<<endl;
             //cerr<<"deadEND! drawSphere!"<<endl;
-            drawSphere( lastRadius );
+            drawSphere( lastRadius * SPHERE_MULTIPLIER );
             materials(allMaterials.at( mat % allMaterials.size () ) );
             
 
@@ -201,7 +201,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             cerr << "___"<<i<<"END"<<endl;
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             materials(GreenShiny);
-            drawSphere( lastRadius );
+            drawSphere( lastRadius * SPHERE_MULTIPLIER );
             materials(allMaterials.at( mat % allMaterials.size () ) );
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;

@@ -38,6 +38,7 @@
 
 #define DEFAULT_RADIUS .25
 #define DEFAULT_BRANCH_LEN 2.0
+#define SPHERE_MULTIPLIER 1.5
 
 int maxWordFreq = DICTIONARY_MIN_FREQ - 1;
 int minWordFreq = DICTIONARY_MAX_FREQ + 1; 
