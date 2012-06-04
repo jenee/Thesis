@@ -130,7 +130,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       
       double halfBranch = deltaYOffset / 2.0;
       curFarRightTiltAngle = atan( halfBranch / farRightXOffset ) ; 
-      curFarRightTiltAngle = degreesToRadians( curFarRightTiltAngle );
+      //curFarRightTiltAngle = degreesToRadians( farRightTiltAngle );
       
       farLeftXOffset = farRightXOffset - ( deltaXOffset * spacersNeeded );
             
