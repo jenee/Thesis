@@ -42,7 +42,7 @@
 int maxWordFreq = DICTIONARY_MIN_FREQ - 1;
 int minWordFreq = DICTIONARY_MAX_FREQ + 1; 
 
-const double minRadius = 0.05;
+const double minRadius = 0.1;
 const double maxRadius = 1.0;
 
 const double farRightTiltAngle = 45.0;
