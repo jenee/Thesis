@@ -34,9 +34,9 @@ double scaleFreqToRadius( int freqVal ) {
 }
 
 void buildAndDrawFullTree() {
-   buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
+   //buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
    //buildAndDrawFullTree("a");
-   //buildAndDrawFullTree("email");
+   buildAndDrawFullTree("email");
    //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
    //buildAndDrawFullTree("empty hour");
@@ -189,7 +189,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
             
-            glPopMatrix();
+            //glPopMatrix();
             continue;
 
          } else if (curFirstWord == successDelim ) {
@@ -199,7 +199,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
 
-            glPopMatrix();
+            //glPopMatrix();
             continue;
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
@@ -220,9 +220,10 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             materials(allMaterials.at( --mat % allMaterials.size () ) );
             
          }
+         glPopMatrix();
       }
       glPopMatrix();
-
+      
 
       i++;
    }
