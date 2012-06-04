@@ -135,7 +135,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       
       curFarLeftTiltAngle = -1.0 * curFarRightTiltAngle;
       //farLeftTiltAngle = -1.0 * farRightTiltAngle;//farRightTiltAngle - ( angleDelta * firstWords.size() );
-      angleDelta = ( fabs( farLeftTiltAngle * 2 ) ) / spacersNeeded;
+      angleDelta = ( fabs( curFarLeftTiltAngle * 2 ) ) / spacersNeeded;
 
    } else {
       farRightXOffset = 0;
@@ -144,7 +144,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       curFarLeftTiltAngle = 0;
       farLeftXOffset = 0;
    }
-   
+   cerr<<"\tbeforeForLoop:angleDelta="<<angleDelta<<";"<<endl;
    
    /*DEBUG
    {
