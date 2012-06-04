@@ -89,6 +89,17 @@ This project aims to facilitate semi-automated composition of melody and accompa
 <li>
 <p class="binderItem"><strong>FINAL abstract</strong><br/>Melody Matcher </p>
 </li>
+<li>
+<p class="binderItem"><strong>visual representation of the ambiguity of the written</strong><br/>visual representation of the phonetic ambiguity of the written word.  When writing with the expectation that ones words will be uttered by one party to an entirely different audience, you must take into account several layers of ambiguity:<br/>
+<br/>
+(1) the multiple ways that your words can be pronounced<br/>
+(2) the multiple ways that those pronunciations can be heard<br/>
+<br/>
+For example: Say you are a speechwriter.  Your speech contains the phrase “ In this blessed hour, let us rest what worries we have from the d...</p>
+</li>
+<li>
+<p class="binderItem"><strong>In this project, we developed visual representation</strong><br/>In this project, we developed visual representation of the phonetic ambiguity of written prose. Given any valid English phrase, our system will first generate all possible correct phonetic sequences for a General American Accent. Then, it parses through these phonetic transcriptions depth-first, looking for valid orthographic words for each subsequent phonetic subsequence, generating full and partial phrases from these words.  While it is doing so, a tree branch is generated on screen for each p...</p>
+</li>
 </ul>
 <hr/>
 <li>
@@ -866,6 +877,16 @@ Assertion failed: (0), function findPhoneTreeForOrthoPhrase, file wordBreakdown.
 Abort trap: 6</p>
 </li>
 </ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>In this blessed hour let us rest what worries we have from the day</strong><br/>!Discovered 2592 oronyms:<br/>
+in this bless a dour let us rest what were e's we halve from the day ___SUCCESS!___<br/>
+in this bless a dour let us rest what were e's we halve from the des ___SUCCESS!___<br/>
+in this bless a dour let us rest what were e's we halve from the dey ___SUCCESS!___<br/>
+in this bless a dour let us rest what were e's we have from the day ___SUCCESS!___<br/>
+in this bless a dour let us rest what were e's we have from the des ___SUCCESS!___<br/>
+in this bless a dour let us rest what were e's we have f...</p>
+</li>
 </ul>
 <hr/>
 <li>
