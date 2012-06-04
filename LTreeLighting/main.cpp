@@ -43,9 +43,9 @@ void buildAndDrawFullTree() {
    //buildAndDrawFullTree("visual representation of the phonetic ambiguity of the written word");
    //buildAndDrawFullTree("a");
    //buildAndDrawFullTree("email");
-   buildAndDrawFullTree("empty our email");
+   //buildAndDrawFullTree("empty our email");
    //buildAndDrawFullTree("blessed hour");
-   //buildAndDrawFullTree("empty hour");
+   buildAndDrawFullTree("empty hour");
    //buildAndDrawFullTree("a nice");
    //buildAndDrawFullTree("a nice cold");
    //buildAndDrawFullTree("a nice cold hour");
@@ -98,7 +98,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    //use a set to ensure no duplicates
    set< string > firstWords;
    
-   cerr<<"deltaXOffset="<<deltaXOffset<<";"<<endl;
+   //cerr<<"deltaXOffset="<<deltaXOffset<<";"<<endl;
    
    //put the first word of each phrase into the set
    for(int i = 0; i < fullPhrases.size(); i++){
@@ -122,22 +122,30 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    double curFarRightXOffset, curFarLeftXOffset;
    double curFarRightTiltAngle, curFarLeftTiltAngle;
    double angleDelta;
+   double curDeltaXOffset, curDeltaYOffset;
+   curDeltaXOffset = deltaXOffset;
+   curDeltaYOffset = deltaYOffset;
+
    
+   double totalTreeWidth = fullPhrases.size() - 1;
    double spacersNeeded = firstWords.size() - 1 ;
    
    if( firstWords.size() > 1 ) {
-      curFarRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
+      curDeltaXOffset = ( deltaXOffset * totalTreeWidth ) / spacersNeeded;
+
+      curFarRightXOffset =  ( deltaXOffset * totalTreeWidth ) / 2.0 ; 
       
       double halfBranch = deltaYOffset / 2.0;
       curFarRightTiltAngle = atan( curFarRightXOffset / halfBranch ) ; 
       //curFarRightTiltAngle = degreesToRadians( farRightTiltAngle );
       
-      curFarLeftXOffset = curFarRightXOffset - ( deltaXOffset * spacersNeeded );
+      curFarLeftXOffset = curFarRightXOffset - ( deltaXOffset * totalTreeWidth );
             
       curFarLeftTiltAngle = -1.0 * curFarRightTiltAngle;
       
       angleDelta = ( fabs( curFarLeftTiltAngle * 2 ) ) / spacersNeeded;
-
+      
+      
    } else {
       curFarRightXOffset = 0;
       curFarRightTiltAngle = 0;
@@ -173,8 +181,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       double newAdditiveRadius = firstWordRadius;// + lastRadius;
       //draw a branch
 
-      double curYOffset = deltaYOffset;  //yOffCur;//deltaYOffset;  
-      double curXOffset = curFarLeftXOffset + ( i * deltaXOffset );
+      double curYOffset = curDeltaYOffset;  //yOffCur;//deltaYOffset;  
+      double curXOffset = curFarLeftXOffset + ( i * curDeltaXOffset );
       double tiltAngle = atan ( curXOffset / curYOffset );
 
       /*   
@@ -195,22 +203,25 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
             materials(RedShiny);
-            cerr << "___"<<i<<curFirstWord<<endl;
+            cerr << "___"<<i<<curFirstWord<<";\t\t LastRadius = "<<lastRadius<<endl;
             //cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere( lastRadius * SPHERE_MULTIPLIER );
             materials(allMaterials.at( mat % allMaterials.size () ) );
             
 
          } else if (curFirstWord == successDelim ) {
-            cerr << "___"<<i<<"END"<<endl;
+            cerr << "___"<<i<<"END;\t\t LastRadius = "<<lastRadius<<endl;
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             materials(GreenShiny);
             drawSphere( lastRadius * SPHERE_MULTIPLIER );
             materials(allMaterials.at( mat % allMaterials.size () ) );
          } else {
-            cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
+            cerr << "___firstWord"<<i<<": "<<curFirstWord;
+            cerr <<";\tcurRadius="<<newAdditiveRadius;
+            //cerr <<";\tfreq="<<firstWordFreq;
             cerr <<";\tcurXOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle;
-            cerr<<";\tangleDelta="<<angleDelta<<";\tcurFarRightXOffset="<<curFarRightXOffset<<endl;
+            //cerr<<";\tangleDelta="<<angleDelta<<";\tcurFarRightXOffset="<<curFarRightXOffset<<endl;
+            cerr<<";"<<endl;
             
             drawBranch( radiansToDegrees( tiltAngle ), curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
