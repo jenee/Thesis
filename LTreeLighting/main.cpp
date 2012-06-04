@@ -11,6 +11,12 @@ double radiansToDegrees(double rads) {
    return degrees;
 }
 
+double degreesToRadians(double degs) {
+   double PI = 3.1415926;
+   double radians = ( degs / 180 ) * PI;
+   return radians;
+}
+
 
 /*http://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value
  *                     (b-a)(freqVal - min)
@@ -92,6 +98,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    //use a set to ensure no duplicates
    set< string > firstWords;
    
+   cerr<<"deltaXOffset="<<deltaXOffset<<";"<<endl;
+   
    //put the first word of each phrase into the set
    for(int i = 0; i < fullPhrases.size(); i++){
       if( fullPhrases.at(i).size() > 0 ) {
@@ -120,7 +128,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    if( firstWords.size() > 1 ) {
       farRightXOffset =  ( deltaXOffset * spacersNeeded ) / 2.0 ; 
       //farRightTiltAngle = atan( deltaYOffset / farRightXOffset ) ; 
-      curFarRightTiltAngle = farRightTiltAngle;
+      curFarRightTiltAngle = degreesToRadians( farRightTiltAngle );
       farLeftXOffset = farRightXOffset - ( deltaXOffset * spacersNeeded );
       
       //farRightTiltAngle = radiansToDegrees( farRightTiltAngle );
@@ -134,7 +142,6 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       curFarRightTiltAngle = 0;
       angleDelta = 0;
       curFarLeftTiltAngle = 0;
-      //farLeftTiltAngle = 0;
       farLeftXOffset = 0;
    }
    
@@ -189,8 +196,6 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
             
-            //glPopMatrix();
-            continue;
 
          } else if (curFirstWord == successDelim ) {
             cerr << "___"<<i<<"END"<<endl;
@@ -198,13 +203,12 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             materials(GreenShiny);
             drawSphere( lastRadius );
             materials(allMaterials.at( mat % allMaterials.size () ) );
-
-            //glPopMatrix();
-            continue;
          } else {
             cerr << "___firstWord"<<i<<": "<<curFirstWord<<";\tfreq="<<firstWordFreq;
-            cerr <<";\tcurXOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle<<endl;
-            drawBranch( tiltAngle, curXOffset, curYOffset, newAdditiveRadius, lastRadius );
+            cerr <<";\tcurXOffset="<<curXOffset<<";\ttiltAngle="<<tiltAngle;
+            cerr<<";\tangleDelta="<<angleDelta<<";\tfarRightXOffset="<<farRightXOffset<<endl;
+            
+            drawBranch( radiansToDegrees( tiltAngle ), curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
             vector<string> tailsVect = getAllPhrasesWithPrefix( curFirstWord, fullPhrases);
@@ -220,7 +224,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             materials(allMaterials.at( --mat % allMaterials.size () ) );
             
          }
-         glPopMatrix();
+         //glPopMatrix();
       }
       glPopMatrix();
       
