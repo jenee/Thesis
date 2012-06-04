@@ -190,7 +190,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
          //else if firstWord indicates a dead end ( xxx or fff, defined in wordBreakdown.h )
          } else if(curFirstWord == deadEndDelim1  || curFirstWord == deadEndDelim2 ) {
             //draw a red cube/sphere at the end of the branch
-            materials(RedFlat);
+            materials(RedShiny);
             cerr << "___"<<i<<curFirstWord<<endl;
             //cerr<<"deadEND! drawSphere!"<<endl;
             drawSphere( lastRadius * SPHERE_MULTIPLIER );
@@ -323,8 +323,8 @@ void drawCylinder(double topRadius, double baseRadius, double cylinderHeight ) {
         double radiiTop = topRadius;
         double radiiBase = baseRadius;
         double height = cylinderHeight;
-        int sliceNum = 30;
-        int stackNum = 30;
+        int sliceNum = 60;
+        int stackNum = 60;
         glPushMatrix();
         {
             glTranslated(0.0, -( height/2.0 ), 0);
@@ -346,7 +346,7 @@ void drawSphere( double rad ) {
    //void gluSphere	(	GLUquadric* quad , GLdouble radius , GLint slices , GLint stacks );
    glPushMatrix();
    {
-      gluSphere(mySphere, rad, 12, 12);
+      gluSphere(mySphere, rad, 40, 40);
    }
    glPopMatrix();
 }

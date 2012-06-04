@@ -100,6 +100,13 @@ materialStruct RedFlat = {
 {0.0}
 };
 
+materialStruct RedShiny = {
+{0.6, 0.05, 0.05, 1.0},
+{0.9, 0.05, 0.05, 1.0},
+{0.8, 0.6, 0.6, 1.0},
+{5.0}
+};
+
 materialStruct PurpleFlat = {
 {0.3, 0.0, 0.3, 1.0},
 {0.9, 0.0, 0.9, 1.0},
