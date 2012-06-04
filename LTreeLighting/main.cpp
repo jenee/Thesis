@@ -694,13 +694,13 @@ int main(int argc, char** argv) {
    //orthoPhraseRoot = "a";
    //orthoPhraseRoot = "gray pants";
    //orthoPhraseRoot = "email";
-   //orthoPhraseRoot = "our mail is late";
+   orthoPhraseRoot = "our mail is late";
    //orthoPhraseRoot = "empty our email";
    //orthoPhraseRoot = "blessed hour";
    //orthoPhraseRoot = "empty hour";
    //orthoPhraseRoot = "a nice";
    //orthoPhraseRoot = "a nice cold";
-   orthoPhraseRoot = "a nice cold hour";
+   //orthoPhraseRoot = "a nice cold hour";
 
 
    //set up glut window
@@ -708,7 +708,7 @@ int main(int argc, char** argv) {
    glutInitWindowSize(1600, 1000);
    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
    glutCreateWindow(orthoPhraseRoot.c_str());
-   glClearColor(0.0, 0.0, 0.0, 1.0);
+   glClearColor(1.0, 1.0, 1.0, 1.0); // set bg to white
    
    //set up glut callbacks
    glutDisplayFunc(display);
