@@ -9,13 +9,48 @@
 	Step 2: Split Ortho Phrase into Words\
 		Input:\
 \
-GetMishearings( string orthoPhrase) \{\
+FindAllPhoneSeqsForOrthoPhrase( string orthoPhrase) \{\
+	Vector< vector < phoneme > > allFullPhrasePhoneSeqs\
+	Vector<string> orthoWords = split(orthoPhrase);\
+	\
+	Int origNumFullPhrases;\
+	For (  int I = 0 to orthoWords.size() ) \{\
+		string orthoWord = orthoWords[i] ;\
+		Vector<vector <phone > > nextWordSampaPhoneSeqs (orthoWord)\
+		\
+		If ( this is the first orthoWord we\'92ve looked up this loop ) \{\
+			For( vector<phone> phoneSubSeq: nextWordSampaPhoneSeqs ) \{\
+				AllFullPhrasePhoneSeqs[i].append(phoneSubSeq);\
+			\}\
+		\} Else \{\
+			OrigNumFullPhrases = allFullPhrasePhoneSeqs.size();\
+			If there\'92s more than one vector <phone> in nextWordSampaPhoneSeqs\
+				Then we need to create duplicates of all existing allFullPhrasePhoneSeqs\
+		\}\
+		For( int m = 0 to allPhrasePhoneSeqs.size() ) \{\
+			Int phraseToAppendIndex = m / OrigNumFullPhrases;\
+ 			vector<phone> phoneSeqToAppend = nextWordSampaPhoneSeqs[phraseToAppendIndex];\
+			Append phoneSeqToAppend to the end of allFullPhrasePhoneSeqs[m].\
+		\}\
+	\}\
+\
+Return allFullPhrasePhoneSeqs;\
+\}\
+	//TODO: finish the psuedocode first half \
+	\
+	\
+GetOronyms( string orthoPhrase) \{\
+	vectorS\
 	Vector<string> orthoWords = split(orthoPhrase);\
 	\
 	For each ( string orthoWord : orthoWords ) \{\
-		GetAllPossible SAMPA interpretations(orthoWord\
+		Vector<vector <phone > > GetAllPossiblePhoneSequences(orthoWord)\
+		\
+		If ( orthoWord \
 	\}\
 	//TODO: finish the psuedocode first half \
+	\
+	\
 \
 	///SKIP TO THE PART WHERE WE HAVE: a bunch of SAMPA phrases, stored in vector < vector <phone> > allPhoneSeqs\
 	\

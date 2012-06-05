@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<meta name="wpd_version" content="0.2">
+<meta name="wpd_baseurl" content="http://www.poemhunter.com/poem/a-hollow-rhyme-holorime/">
+<meta name="wpd_url" content="http://dm.de.mookie1.com/2/B3DM/2010DM/11662174324@x23?USNetwork/Track_DataLogix_DataM">
+<meta name="wpd_date" content="2012-05-04T20:20Z">
+</head>
+<body>
+<script>
+
+function cookie_check(ifd,ife){ var s=ife.indexOf(ifd); if(s==-1)return ""; s+=ifd.length; var e=ife.indexOf(";",s); if(e==-1)e=ife.length; return ife.substring(s,e);
+}
+var camp="USNetwork/Track_DataLogix_DataM";
+
+camp=camp.toUpperCase();
+
+var is_http=false;
+if(document.location.protocol == "http:") {
+	is_http=true;
+}
+
+if(is_http) {
+	if((cookie_check("optouts=",document.cookie)).length == 0) {
+		if((cookie_check("3pdi=",document.cookie)).length == 0) {
+
+		// Check DataLogix Daily
+			var url='http://mig.nexac.com/2/B3DM/DLX/11641160854@x96';
+			var frame=document.createElement('iframe');
+			frame.style.width='0px';
+			frame.style.height='0px';
+			frame.frameBorder='0';
+			frame.style.position='absolute';
+			frame.style.top='0';
+			frame.style.left='0';
+			frame.scrolling='no';
+			frame.src=url;
+			document.getElementsByTagName("head")[0].appendChild(frame);
+			frame=null;
+	
+		// Cookie Synch with Partners
+			var url2='//b3.mookie1.com/2/B3DM/DLX/11641160854@x71';
+			var frame2=document.createElement('iframe');
+			frame2.style.width='0px';
+			frame2.style.height='0px';
+			frame2.frameBorder='0';
+			frame2.style.position='absolute';
+			frame2.style.top='0';
+			frame2.style.left='0';
+			frame2.scrolling='no';
+			frame2.src=url2;
+			document.getElementsByTagName("head")[0].appendChild(frame2);
+			frame2=null;
+	
+		// Set cookie with marker to do it all again in 1 day
+			var oas_d=new Date();
+			var oas_m=oas_d.getTime();
+			oas_d.setTime(oas_m+86400000);
+			document.cookie="3pdi=set;expires="+oas_d.toGMTString()+";path=/;domain=.mookie1.com";
+		}
+		var xaxis_referral = encodeURI(document.referrer);
+		var xaxis_url = encodeURI(document.location.toString());
+
+		//var xaxis_ping = new Image(1,1);
+		//xaxis_ping.src='//b3.mookie1.com/1/B3DM/IB/11641160854@x90?XE&xaxis_location='+xaxis_url+'&xaxis_referral='+xaxis_referral+'&XE';
+
+	 } else {
+
+		var xaxis_cookies=document.cookie;
+		var xaxis_cookies_pairs=xaxis_cookies.split(';');
+		var xaxis_nv='';
+
+		//get list of cookies to get rid of
+		for (var i = 0; i < xaxis_cookies_pairs.length; i++) {
+			xaxis_nv=xaxis_cookies_pairs[i].split('=');
+			document.cookie=xaxis_nv[0]+'=remove;expires=Thursday, January 01, 1970 00:00:00 AM;path=/;domain=.mookie1.com';
+		}
+
+		var opt_out=new Image(1,1);	
+		opt_out.src='http://optout.mookie1.com/optout/mig/?action=optout';
+	}
+}
+</script>
+
+</body>
+</html>

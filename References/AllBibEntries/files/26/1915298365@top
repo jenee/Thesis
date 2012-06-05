@@ -1,0 +1,5 @@
+function OAS_RICH(position) {
+if (position == 'Top') {
+document.write ('<A HREF="http://oas.oxfordjournals.org/5c/eltj.oxfordjournals.org/content/57/2/113.short/L31/1159438465/Top/OxfordJournals/H_IJL_OJ_ANY_23MAY12_LB/23May12_LEXICO_25th.gif/67554867566b2f4d4c33734141524c35?x" target="_top"><IMG SRC="http://imagec16.247realmedia.com/0/OxfordJournals/H_IJL_OJ_ANY_23MAY12_LB/23May12_LEXICO_25th.gif"  ALT="LEXICO Celebrates its 25th Anniversary "  BORDER="0"></A>');
+}
+}

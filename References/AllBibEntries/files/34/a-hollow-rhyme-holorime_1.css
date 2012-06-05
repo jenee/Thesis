@@ -1,0 +1,72 @@
+
+/* ::::: null ::::: */
+
+body { margin: 0pt; font-size: 1em; line-height: 1.4; }
+body, button, input, select, textarea { font-family: sans-serif; color: rgb(34, 34, 34); }
+a { color: rgb(0, 0, 238); }
+a:visited { color: rgb(85, 26, 139); }
+a:hover { color: rgb(0, 102, 238); }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0pt none; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+ul, ol { margin: 1em 0pt; padding: 0pt 0pt 0pt 40px; }
+dd { margin: 0pt 0pt 0pt 40px; }
+img { border: 0pt none; vertical-align: middle; }
+button, input, select, textarea { font-size: 100%; margin: 0pt; vertical-align: baseline; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; }
+input[type="checkbox"], input[type="radio"] { padding: 0pt; }
+input[type="search"] { -moz-box-sizing: content-box; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0pt none; padding: 0pt; }
+html, body { background: none repeat scroll 0% 0% rgb(255, 255, 255); margin: 0pt; padding: 0pt; height: 100%; }
+body { color: rgb(51, 51, 51); font: 0.75em/1.2 Arial,sans-serif; }
+a, a:visited { color: rgb(0, 93, 147); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { color: rgb(249, 102, 0); font-size: 2.25em; font-weight: bold; line-height: 1.45; margin: 0pt 0pt 9px -2px; }
+h1 em { color: rgb(51, 51, 51); font-size: 0.55em; font-style: normal; }
+h2 { color: rgb(0, 0, 0); font-size: 1.25em; font-weight: bold; }
+h3 { color: rgb(0, 0, 0); font-size: 1.25em; font-weight: bold; margin: 0pt; padding: 0pt; }
+input[type="button"], input[type="submit"], button { font-size: 1.167em; font-weight: bold; line-height: normal; padding: 0.214em 0.5em; }
+#header { margin: 0pt 0pt 21px; }
+#header:before, #header:after { content: ""; display: table; }
+#header:after { clear: both; }
+#header-top { height: 18px; line-height: 1.5; padding: 6px 0pt; }
+#header-top .login { color: rgb(102, 102, 102); height: 18px; float: left; margin: 0pt 0pt 0pt -1px; position: relative; }
+#header-top .login label { float: left; margin: 0pt 9px 0pt 0pt; }
+#header-top .login input[type="text"], #header-top .login input[type="password"] { background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); border-radius: 2px 2px 2px 2px; color: rgb(51, 51, 51); float: left; font-size: 0.917em; height: 14px; margin: 0pt 14px 0pt 0pt; padding: 0.1em 0.4em; width: 90px; }
+.oldie #header-top .login input[type="text"], .oldie #header-top .login input[type="password"] { position: relative; }
+#header-top .login .button { float: left; }
+#header-top .login .button input { font-size: 0.78em; }
+.ie6 #header-top .login .button input, .ie7 #header-top .login .button input { height: 15px; }
+#header-top .login .actions { float: left; list-style: none outside none; margin: 0pt 0pt 0pt 10px; padding: 0pt; }
+#header-top .login .actions li { float: left; }
+#header-top .login .actions li:before { content: "|"; padding: 0pt 3px; }
+#header-top .login .actions li:first-child:before { content: ""; padding: 0pt; }
+.ie6 #header-top .login .actions li, .ie7 #header-top .login .actions li { border-left: 1px solid; display: block; height: 14px; line-height: 14px; margin: 2px 0pt 0pt; padding: 0pt 4px; }
+.ie6 #header-top .login .actions li:first-child, .ie7 #header-top .login .actions li:first-child { border: 0pt none; padding-left: 0pt; }
+#header-top .login .actions a { color: rgb(102, 102, 102); text-decoration: underline; }
+#header-top .login .actions a:hover { text-decoration: underline; }
+#header-top .here { color: rgb(49, 132, 147); float: right; position: absolute; left: 640px; margin: 0pt -1px 0pt 0pt; text-align: right; top: 7px; width: 350px; }
+#user-bar { background: url('poemhunter-login.png') repeat scroll 0pt 0pt transparent; color: rgb(0, 0, 0); height: 21px; line-height: 21px; margin: 0pt; overflow: hidden; padding: 0pt 10px; width: 960px; }
+#user-bar a { color: rgb(10, 117, 182); }
+.no-js #navigation a:hover, #navigation li.current a { background-position: 0pt 0pt; }
+.no-js .rating-meter { visibility: visible; }
+#container { margin: 0pt 10px; width: 980px; }
+#container.auto-width { width: auto; }
+.fl { float: left ! important; }
+.fr { float: right ! important; }
+.oldie #header-top .login input[type="text"], .oldie #header-top .login input[type="password"] { position: relative; }
+.button { background: url('buttons-sprite.png') repeat-x scroll 0pt -60px rgb(123, 190, 202); border: 1px solid rgb(50, 135, 152); border-radius: 2px 2px 2px 2px; display: inline-block; line-height: normal; padding: 1px 1px 0pt; vertical-align: middle; }
+.oldie .button, .oldie .button input, .oldie .button span { position: relative; }
+.ie6 .button, .ie7 .button { display: inline; }
+.button:hover { text-decoration: none; }
+.button.active, .button:active { box-shadow: 0pt 1px 3px rgba(0, 0, 0, 0.4) inset; }
+.button input, .button span { background: url('buttons-sprite_002.png') repeat-x scroll 0pt 0pt rgb(50, 136, 152); border: 0pt none; color: rgb(255, 255, 255); cursor: pointer; font-size: 1.167em; font-weight: bold; line-height: normal; padding: 0.214em 0.5em; }
+.button span { display: inline-block; }
+.ie6 .button input, .ie7 .button input { float: left; padding: 0.1em 0.5em; }
+.button:hover input, .button:hover span { background: none repeat scroll 0% 0% transparent ! important; text-decoration: none; }
+.button.active input, .button:active input, .button.active span, .button:active span { opacity: 0.75; }
+.black { color: rgb(0, 0, 0) ! important; }
+.button.black { background-position: 0pt -300px; background-color: rgb(171, 171, 171); border-color: rgb(111, 111, 111); }
+.button.black input, .button.black span { background-position: 0pt -240px; background-color: rgb(112, 112, 112); }

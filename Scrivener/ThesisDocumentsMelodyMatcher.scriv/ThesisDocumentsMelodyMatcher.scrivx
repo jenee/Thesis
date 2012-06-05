@@ -87,7 +87,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1070,0</TextSelection>
+                                <TextSelection>2572,103</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="125" Type="Text" Created="2012-05-16 15:40:44 -0700" Modified="2012-05-16 15:41:05 -0700">
@@ -107,17 +107,27 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>740,0</TextSelection>
+                                <TextSelection>402,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="137" Type="Text" Created="2012-06-03 21:15:51 -0700" Modified="2012-06-04 12:01:31 -0700">
+                        <BinderItem ID="137" Type="Text" Created="2012-06-03 21:15:51 -0700" Modified="2012-06-04 19:27:03 -0700">
                             <Title>In this project, we developed visual representation</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1834,0</TextSelection>
+                                <TextSelection>636,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="138" Type="Text" Created="2012-06-04 23:49:47 -0700" Modified="2012-06-04 23:53:39 -0700">
+                            <Title>What my thesis does and does not do</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>312,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -139,7 +149,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>1826,512</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="59" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -404,7 +414,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>112,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -562,6 +572,16 @@
                             </MetaData>
                             <TextSettings>
                                 <TextSelection>12,4</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="139" Type="Text" Created="2012-06-05 00:58:59 -0700" Modified="2012-06-05 00:59:50 -0700">
+                            <Title>Thesis committee SAMPA</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>384,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -755,14 +775,24 @@
                                         <TextSelection>0,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
-                                <BinderItem ID="132" Type="Text" Created="2012-05-24 21:44:31 -0700" Modified="2012-05-24 22:12:49 -0700">
+                                <BinderItem ID="132" Type="Text" Created="2012-05-24 21:44:31 -0700" Modified="2012-06-05 04:25:20 -0700">
                                     <Title>Algorithm</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>735,127</TextSelection>
+                                        <TextSelection>862,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="140" Type="Text" Created="2012-06-05 01:23:34 -0700" Modified="2012-06-05 01:30:43 -0700">
+                                    <Title>\algorithmic</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>156,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                             </Children>
@@ -1494,7 +1524,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="41" Characters="302" Date="2012-06-03 03:20:38 -0700"></PreviousSession>
+        <PreviousSession Words="166" Characters="1658" Date="2012-06-04 19:22:04 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

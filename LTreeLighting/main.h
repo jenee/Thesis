@@ -36,21 +36,21 @@
 #include "../OronymCode/wordBreakdown.h"
 
 
-#define DEFAULT_RADIUS .25
-#define DEFAULT_BRANCH_LEN 2.0
+#define DEFAULT_RADIUS .5
+#define DEFAULT_BRANCH_LEN 4.0
 #define SPHERE_MULTIPLIER 1.5
 
 int maxWordFreq = DICTIONARY_MIN_FREQ - 1;
 int minWordFreq = DICTIONARY_MAX_FREQ + 1; 
 
-const double minRadius = 0.1;
-const double maxRadius = 1.0;
+const double minRadius = DEFAULT_RADIUS / 2.0 ;
+const double maxRadius =  DEFAULT_RADIUS * 2.0;
 
 const double farRightTiltAngle = 45.0;
 const double farLeftTiltAngle = -1.0 * farRightTiltAngle;
 
-const double deltaXOffset = ( DEFAULT_BRANCH_LEN / 2.0 );      
-const double deltaYOffset = DEFAULT_BRANCH_LEN * 1.1;        
+const double deltaXOffset = maxRadius;//1.0;//( DEFAULT_BRANCH_LEN / 4.0 );      
+const double deltaYOffset = DEFAULT_BRANCH_LEN;// * 1.1;        
 
 
 int lyricWordIndex = 0;
@@ -121,11 +121,21 @@ materialStruct OrangeFlat = {
 {0.0}
 };
 
-materialStruct OrangeShiny = {
+materialStruct DarkOrangeShiny = {
 {.5, .1, 0.0, 1.0},
 {1.0, 0.3, 0.0, 1.0},
 {1.0, .8, 0.6, 1.0},
 {5.0}
+};
+
+materialStruct OrangeShiny = {
+{1.0, 0.31, 0.0, 1.0},
+{1.0, 0.733, 0.0, 1.0},
+{ 1.0, 0.5 , 0.5 ,1.0}, 
+//{0.8, 0.6, 0.0, 1.0},
+//{1.0, 0.733, 0.0, 1.0},
+//{0.4, 0.1, 0.0, 1.0},
+{10.0}
 };
 
 
@@ -177,6 +187,30 @@ materialStruct GrayFlat = {
 {0.0}
 };
 
+double mustardBase[3] = { 1.0, 206.0 / 255.0 , 14.0 / 255.0 };
+double mustardDiffuse[3] = { mustardBase[0], mustardBase[1] , mustardBase[2] };
+double mustardAmbient[3] = { mustardBase[0] / 2.0 ,  mustardBase[1] / 2.0  ,  mustardBase[2] / 2.0 };
+double mustardSpecular[3] = { mustardBase[0] / 2.0 ,  mustardBase[1] / 2.0  ,  mustardBase[2] / 2.0 };
+
+materialStruct MustardShiny = {
+{ mustardAmbient[0] ,  mustardAmbient[1] ,  mustardAmbient[2],  1.0},
+{ mustardDiffuse[0] ,  mustardDiffuse[1] ,  mustardDiffuse[2],  1.0},
+{ mustardSpecular[0] ,  mustardSpecular[1] ,  mustardSpecular[2],  1.0},
+{10.0}
+};
+
+
+double tealBase[3] = { 22.0 / 255.0, 204.0 / 255.0 , 200.0 / 255.0 };
+double tealDiffuse[3] = { tealBase[0], tealBase[1] , tealBase[2] };
+double tealAmbient[3] = { tealBase[0] / 2.0 ,  tealBase[1] / 2.0  ,  tealBase[2] / 2.0 };
+double tealSpecular[3] = { tealBase[0] / 2.0 ,  tealBase[1] / 2.0  ,  tealBase[2] / 2.0 };
+
+materialStruct TealShiny = {
+{ tealAmbient[0] ,  tealAmbient[1] ,  tealAmbient[2],  1.0},
+{ tealDiffuse[0] ,  tealDiffuse[1] ,  tealDiffuse[2],  1.0},
+{ tealSpecular[0] ,  tealSpecular[1] ,  tealSpecular[2],  1.0},
+{10.0}
+};
 
 //GreenSeq4RGB = 36 64 0
 materialStruct GreenSeq4 = {
@@ -235,14 +269,13 @@ materialStruct GreenSeq0 = {
 
 
 void buildMatVect() {
-   allMaterials.push_back(GreenSeq4);     
-   allMaterials.push_back(GreenSeq3);     
-   allMaterials.push_back(GreenSeq2);     
-   allMaterials.push_back(GreenSeq1);     
-   allMaterials.push_back(GreenSeq0);     
-   allMaterials.push_back(OrangeShiny);     
    allMaterials.push_back(YellowShiny);
+
+   allMaterials.push_back(TealShiny);      
    allMaterials.push_back(MagentaShiny);
+   allMaterials.push_back(OrangeShiny);     
+   allMaterials.push_back(MustardShiny);
+
    allMaterials.push_back(PurpleFlat);
    allMaterials.push_back(BlueShiny);
    //allMaterials.push_back(GreenShiny);
@@ -250,6 +283,11 @@ void buildMatVect() {
    allMaterials.push_back(RedFlat);   
    allMaterials.push_back(WhiteShiny);
    allMaterials.push_back(DarkBlueShiny);
+   allMaterials.push_back(GreenSeq4);     
+   allMaterials.push_back(GreenSeq3);     
+   allMaterials.push_back(GreenSeq2);     
+   allMaterials.push_back(GreenSeq1);     
+   allMaterials.push_back(GreenSeq0); 
 }
 
 double radiansToDegrees( double rads );

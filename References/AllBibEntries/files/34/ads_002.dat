@@ -1,0 +1,29 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=BzKqWIBjNT-zLN4POnQSO0bWBD9Dk-cYDoPuLrErAjbcBoI0GEAEYASCtxfcBOABQw4OA6AVgyc75hsij4BqgAcDNlNUDsgESd3d3LnBvZW1odW50ZXIuY29tyAEB2gE3aHR0cDovL3d3dy5wb2VtaHVudGVyLmNvbS9wb2VtL2EtaG9sbG93LXJoeW1lLWhvbG9yaW1lL4ACAcgCoJHjLKgDAegDtQT1AwAAAGT1AwAAABCIBgE&amp;num=1&amp;cid=5GhY509u0hNW8UahCBO6eLai&amp;sig=AOD64_3xl4jbyK9VUsI1XhiXHB9l9rxd7Q&amp;client=ca-pub-7367856165470296&amp;adurl=http://www.quotationcafe.com/index.jhtml%3F%26spu%3Dtrue%26partner%3D9Txdm003"; 
+google_ad.visible_url = "www.QuotationCafe.com"; 
+google_ad.line1 = "Inspirational Poems"; 
+google_ad.line2 = "Search Inspirational Quotes Free"; 
+google_ad.line3 = "Right From Your Browser in Seconds!"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.poemhunter.com/poem/a-hollow-rhyme-holorime/%26hl%3Den%26client%3Dca-pub-7367856165470296%26adU%3Dwww.QuotationCafe.com%26adT%3DInspirational%2BPoems%26gl%3DUS\x26usg\x3dAFQjCNFRuyQlsbyrQc0TVJjcNcctVcsppw";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

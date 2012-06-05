@@ -1,0 +1,9 @@
+
+/* ::::: null ::::: */
+
+#ad { background-color: white; width: 100%; text-align: center; font: small verdana,arial,sans-serif; }
+#adlink { background-color: white; width: 100%; text-align: center; font: small verdana,arial,sans-serif; }
+#adlink { width: 100%; text-align: center; }
+#adlink a { color: rgb(51, 102, 153); text-decoration: none; }
+#adlink a:hover { text-decoration: underline; }
+#ad a img { border: medium none; }

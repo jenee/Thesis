@@ -1,0 +1,5 @@
+function OAS_RICH(position) {
+if (position == 'Right1') {
+document.write ('<A HREF="http://oas.oxfordjournals.org/5c/eltj.oxfordjournals.org/content/57/2/113.short/2028634163/Right1/default/empty.gif/67554867566b2f4d4c33734141524c35?x" target="_top"><IMG SRC="http://imagec16.247realmedia.com/0/default/empty.gif"  WIDTH=1 HEIGHT=1 ALT="" BORDER=0 BORDER="0"></A>');
+}
+}

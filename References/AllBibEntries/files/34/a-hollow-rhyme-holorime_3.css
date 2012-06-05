@@ -1,0 +1,11 @@
+
+/* ::::: null ::::: */
+
+#abg { color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: 12px; font-weight: bold; padding: 0px 1px; text-decoration: underline; white-space: nowrap; }
+#abg:hover { text-decoration: underline; }
+.sep { height: 2px; width: 100%; }
+.bb { overflow: hidden; padding: 0px 0px 3px; width: 200px; }
+.t { padding: 4px 0px 2px; }
+.al { font-family: arial,sans-serif; font-size: 16px; overflow: hidden; width: 200px; line-height: 1; }
+.al .alt, .al a { color: rgb(102, 153, 0); font-weight: normal; text-decoration: underline; white-space: nowrap; }
+.al a:hover { color: rgb(0, 102, 153); text-decoration: underline; }

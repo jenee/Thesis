@@ -274,7 +274,7 @@ bool testTrimWhitespace () {
    return testTrimWhitespace( "   I have spaces on both sides!    ");
 }
 
-bool testGetTotalFreqForPhrase( std::string orthoPhrase ) {
+bool testGetTotalFreqForPhrase( string orthoPhrase ) {
    cout <<"TEST getTotalFreqForPhrase, orthoPhrase ="<<orthoPhrase;
    int returned = getTotalFreqForPhrase( orthoPhrase );
    cout <<"; freq="<<returned<<endl;
@@ -291,17 +291,17 @@ bool testGetTotalFreqForPhrase() {
 }
 
 
-bool test_getCSVofWordFreqsForPhrase( std::string orthoPhrase ) {
-   cerr <<"TEST getCSVofWordFreqsForPhrase, orthoPhrase ="<<orthoPhrase;
-   string csvLine = getCSVofWordFreqsForPhrase( orthoPhrase );
-   cout <<csvLine<<endl;
-   
+bool test_getCSVofWordFreqsForPhrase() {
+   return test_getCSVofWordFreqsForPhrase("empty email");
+}
+
+bool test_getCSVofWordFreqsForPhrase(string orthoPhrase ) {
+   cout <<"TEST getCSVofWordFreqsForPhrase, orthoPhrase ="<<orthoPhrase<<endl;
+   string returned = getCSVofWordFreqsForPhrase( orthoPhrase );
+   cout <<""<<returned<<endl;
    return true;
 }
 
-bool test_getCSVofWordFreqsForPhrase() {
-   return testGetTotalFreqForPhrase("empty email");
-}
 
 bool test_getCSVofAllPhraseFreqs( vector<string> orthoPhrases ) {
    cerr <<"TEST getCSVofAllPhraseFreqs, orthoPhrases.size() ="<< orthoPhrases.size()<<endl;
@@ -809,12 +809,21 @@ bool runAllDefaultTests() {
    testsPassed &= test_getCSVofAllPhraseFreqs();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= test_getCSVofEachPhrasesWordsFreqs();
-/*
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_getCSVofWordFreqsForPhrase();
+ /*
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
 */   cout << "XXXXXXXXXXXXXXXXXXXXXX___DONE___XXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    return testsPassed;
 }
@@ -836,6 +845,7 @@ void usageMessage() {
    cout << "\n\t\t queryDBwithSampaForOrthoStrs";
    cout << "\n\t\t trimWhitespace";
    cout << "\n\t\t getTotalFreqForPhrase";
+   cout << "\n\t\t getCSVofWordFreqsForPhrase";
    cout << "\n\t\t getCSVofAllPhraseFreqs";
    cout << "\n\t\t getCSVofEachPhrasesWordsFreqs";
    cout << "\n\t\t help";
@@ -886,6 +896,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testTrimWhitespace();
       } else if( strcmp( argv[1], "getTotalFreqForPhrase") == 0 ) {
          allTestsPassed &= testGetTotalFreqForPhrase();
+      } else if( strcmp( argv[1], "getCSVofWordFreqsForPhrase") == 0 ) {
+         allTestsPassed &= test_getCSVofWordFreqsForPhrase();
       } else if( strcmp( argv[1], "getCSVofEachPhrasesWordsFreqs") == 0 ) {
          allTestsPassed &= test_getCSVofEachPhrasesWordsFreqs();
       } else if( strcmp( argv[1], "getCSVofAllPhraseFreqs") == 0 ) {
@@ -928,6 +940,8 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= testTrimWhitespace( argv[2] );
       } else if( strcmp( argv[1], "getTotalFreqForPhrase") == 0 ) {
          allTestsPassed &= testGetTotalFreqForPhrase( argv[2] );
+      } else if( strcmp( argv[1], "getCSVofWordFreqsForPhrase") == 0 ) {
+         allTestsPassed &= test_getCSVofWordFreqsForPhrase( argv[2] );
       } else if( strcmp( argv[1], "getCSVofAllPhraseFreqs") == 0 ) {
          cerr << "Error: cannot pass test_getCSVofAllPhraseFreqs argument from command line"<<endl;
          usageMessage();

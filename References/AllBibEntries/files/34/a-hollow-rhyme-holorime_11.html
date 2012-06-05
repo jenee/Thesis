@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<meta name="wpd_version" content="0.2">
+<meta name="wpd_baseurl" content="http://www.poemhunter.com/poem/a-hollow-rhyme-holorime/">
+<meta name="wpd_url" content="http://dm.de.mookie1.com/2/TRACK_MM/ZAPSegments/11970315245@x96?AA=1&AB=5&AD=5&AF=5&AG=1&AH=5&AJ=1&AL=5&AP=5&AS=5&AT=5">
+<meta name="wpd_date" content="2012-05-04T20:20Z">
+<script>
+
+function cookie_check(ifd,ife){ var s=ife.indexOf(ifd); if(s==-1)return ""; s+=ifd.length; var e=ife.indexOf(";",s); if(e==-1)e=ife.length; return ife.substring(s,e); }
+
+var mm_segment_list = 'AA=1&AB=5&AD=5&AF=5&AG=1&AH=5&AJ=1&AL=5&AP=5&AS=5&AT=5';
+
+var mm_segment_list_pairs=mm_segment_list.split('&');
+var ZAP_url='//t.mookie1.com/t/v1/event?migClientId=3506&migAction=other&migSource=mig&migRemarks=';
+
+var ZT_string='';
+
+var mm_segment='';
+var ib_id='';
+
+//build string in ZAPTrader and MIG format
+for (var i = 0; i < mm_segment_list_pairs.length; i++) {
+	mm_segment=mm_segment_list_pairs[i].split('=');
+	ZT_string+=mm_segment[0]+'-'+mm_segment[1]+":T"+',';
+}
+
+if(ZT_string.indexOf('AR-5') != -1 && ZT_string.indexOf('AO-5') != -1) {
+	var schick_social_moms = new Image(1,1);
+	schick_social_moms.src='//matcher.bidder7.mookie1.com/zap?aid=10000775&sid=1403';
+}
+
+if(ZT_string.indexOf('AM-5') != -1 && ZT_string.indexOf('AK-5') != -1) {
+	var schick_everyday_beauty_consumers = new Image(1,1);
+	schick_everyday_beauty_consumers.src='//matcher.bidder7.mookie1.com/zap?aid=10000775&sid=1404';
+}
+
+if(ZT_string.indexOf('AT-5') != -1 && ZT_string.indexOf('AQ-5') != -1) {
+	var schick_dedicated_athletes = new Image(1,1);
+	schick_dedicated_athletes.src='//matcher.bidder7.mookie1.com/zap?aid=10000775&sid=1405';
+}
+
+var ZT_string_carat = ZT_string.replace(/:/g,'-');
+ZT_string_carat = ZT_string_carat.replace(/,/g,':');
+
+// Set cookie with segment info
+var B3d=new Date();
+var B3m=B3d.getTime();
+B3d.setTime(B3m+365*24*60*60*1000);
+document.cookie="mmString="+ZT_string_carat+",;expires="+B3d.toGMTString()+";path=/;domain=.mookie1.com;";
+
+var B3_id=cookie_check("OAX=",document.cookie);
+var ZAP_id=cookie_check("id=",document.cookie);
+
+// Send Request to ZAP
+var MIGWidget=new Image(1,1); 
+var MIGWidURL='//b3.mookie1.com/1/B3DM/MM/1@x90?MM_Segments=true&ZAP_id='+ZAP_id+'&ZTString='+ZT_string;
+MIGWidget.src=MIGWidURL;
+
+// Send Request to ZAP Trader 2.0
+
+var ZAPTrader_url='//ib.adnxs.com/mapuid?member=364&user='+ZAP_id+','+B3_id+'&seg_code=';
+
+var ZT_pixel_4=new Image();
+ZT_pixel_4.src=ZAPTrader_url+ZT_string;
+</script></head>
+<body></body>
+</html>

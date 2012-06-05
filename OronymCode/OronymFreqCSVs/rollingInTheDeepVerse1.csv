@@ -1,0 +1,21 @@
+Usage: ./testWordBreakdown [test type option] [input]
+Available options: 
+		 all
+		 discoverOronymsForPhrase
+		 stripSampaStrOfEmph
+		 getSampaStrWithoutGlottalStops
+		 getSampaStrWithoutContiguousDuplicatePhones
+		 strTokOnWhitespace
+		 findAllPhoneSeqsForOrthoPhrase
+		 findPhoneTreeForOrthoPhrase
+		 queryDBwithOrthoForSampaStrs
+		 queryDBForOrthoStrsWithSampaPrefix
+		 queryDBwithOrthoForFreq
+		 queryDBwithSampaForOrthoStrs
+		 trimWhitespace
+		 getTotalFreqForPhrase
+		 getCSVofAllPhraseFreqs
+		 getCSVofEachPhrasesWordsFreqs
+		 help
+		 oldMain
+NO TESTS FAILED! :) 

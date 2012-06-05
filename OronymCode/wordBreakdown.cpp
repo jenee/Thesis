@@ -234,8 +234,11 @@ vector<string> discoverOronymsForPhrase( string origOrthoPhrase, bool includeDea
          cerr << i <<"~~>" << altOrthoPhrase << endl;
          
          //ensure it contains no deadEndDelims so we only add fully valid strings
-         if ( includeDeadends == true || ( altOrthoPhrase.find( deadEndDelim1 ) == string::npos 
-              && altOrthoPhrase.find( deadEndDelim2 ) == string::npos ) ) {    
+         if ( ( includeDeadends == true && altOrthoPhrase != deadEndDelim1 
+                 && altOrthoPhrase != deadEndDelim2 )
+            || ( altOrthoPhrase.find( deadEndDelim1 ) == string::npos 
+                 && altOrthoPhrase.find( deadEndDelim2 ) == string::npos ) ) {  
+              
             orthoMisheardAsPhrases.push_back( altOrthoPhrase );
          }
       }

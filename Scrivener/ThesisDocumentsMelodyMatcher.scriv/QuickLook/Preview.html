@@ -100,6 +100,15 @@ For example: Say you are a speechwriter.  Your speech contains the phrase “ In
 <li>
 <p class="binderItem"><strong>In this project, we developed visual representation</strong><br/>In this project, we developed visual representation of the phonetic ambiguity of written prose.  Given a textual phrase, we determine all possible ways that that phrase is likely to be misheard. Each of these mishearings is called an oronym or mondegreen.    We then created a Mondegreen visual tree graphic, with each branch fork representing a possible divergence of aural interpretation.  Each branch segment represents an orthographic word, and the branch radius is scaled to the words’ frequency...</p>
 </li>
+<li>
+<p class="binderItem"><strong>What my thesis does and does not do</strong><br/>Thesis does:<br/>
+<br/>
+Thesis does not:<br/>
+—Handle with heteronyms (Do you know what a buck does to does?) <br/>
+—Handle homographs explicitly (bear (verb) – to support or carry bear (noun) – the animal)  (though it could do so with one more word-by-word ortho-to-sampa-to-ortho<br/>
+—Handle similar sound substitution voice/voiceless<br/>
+—</p>
+</li>
 </ul>
 <hr/>
 <li>
@@ -190,7 +199,7 @@ NOTE_LEN (required field) is the length of the note that t...</p>
 <p class="binderItem"><strong>Structure of a Syllable-EXAMPLES</strong><br/><br/>
 Examples<br/>
 For simplicity’s sake, the note length will not vary on all the following examples.<br/>
-Example 1: “o” <br/>
+ Example 1: “o” <br/>
 (Single Syllable, Single Phone)               .<br/>
 o::IN/NNP/NN/LS: "ou :{o}<br/>
 WORD<br/>
@@ -254,7 +263,7 @@ n<br/>
 <br/>
 <br/>
 Example 2: “no” <br/>
-(Single Syllable, No Coda, Single-Phone Nucleus and Onset)...</p>
+(Single Syllable, No Coda, Single-Phone Nucleus and Onset...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Syllable Structure</strong><br/>Syllable Structure<br/>
@@ -464,7 +473,7 @@ i<br/>
 see<br/>
 long (e)<br/>
 1<br/>
-I**<br/>
+I**<br/>
 city<br/>
 short (i)<br/>
 0<br/>
@@ -472,7 +481,7 @@ short (i)<br/>
 E<br/>
 <br/>
 bed<br/>
-short ...</p>
+short...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Consonants</strong><br/>Consonants<br/>
@@ -887,6 +896,24 @@ in this bless a dour let us rest what were e's we have from the day ___SUCCESS!_
 in this bless a dour let us rest what were e's we have from the des ___SUCCESS!___<br/>
 in this bless a dour let us rest what were e's we have f...</p>
 </li>
+<li>
+<p class="binderItem"><strong>Thesis committee SAMPA</strong><br/>!Discovered 2 oronyms:<br/>
+zoe wood ___SUCCESS!___<br/>
+zoe would ___SUCCESS!___<br/>
+<br/>
+!Discovered 6 oronyms:<br/>
+frans coeur fess ___SUCCESS!___<br/>
+frans cur fess ___SUCCESS!___<br/>
+frans kerr fess ___SUCCESS!___<br/>
+franz coeur fess ___SUCCESS!___<br/>
+franz cur fess ___SUCCESS!___<br/>
+franz kerr fess ___SUCCESS!___<br/>
+<br/>
+!Discovered 2 oronyms:<br/>
+john clements ___SUCCESS!___<br/>
+jon clements ___SUCCESS!___<br/>
+NO TESTS FAILED! :) </p>
+</li>
 </ul>
 <hr/>
 <li>
@@ -1056,19 +1083,7 @@ V<br/>
 naIs<br/>
 kould<br/>
 SaU`r<br/>
-SYL_PARTonnucdonnucdonnucdonnucdVnaIskoulSaU`rd<br/>
-<br/>
-WORD<br/>
-an<br/>
-ice<br/>
-cold<br/>
-shower<br/>
-SAMPSYL<br/>
-Vn<br/>
-aIs<br/>
-kould<br/>
-SaU`r<br/>
-SYL_...</p>
+SYL_PARTonnucdonnucdonnucdonnucdVnaIskoulSaU`rd...</p>
 </li>
 <li>
 <p class="binderItem"><strong>First Option for Algorithm/Approach </strong><br/>First Option for Algorithm/Approach <br/>
@@ -1102,17 +1117,28 @@ phoneSubPhrases: Per phoneme in the origPhonePhrase, create a phoneSubPhrase str
  Step 2: Split Ortho Phrase into Words<br/>
   Input:<br/>
 <br/>
-GetMishearings( string orthoPhrase) {<br/>
+FindAllPhoneSeqsForOrthoPhrase( string orthoPhrase) {<br/>
+ Vector< vector < phoneme > > allFullPhrasePhoneSeqs<br/>
  Vector<string> orthoWords = split(orthoPhrase);<br/>
  <br/>
- For each ( string orthoWord : orthoWords ) {<br/>
-  GetAllPossible SAMPA interpretations(orthoWord<br/>
- }<br/>
- //TODO: finish the psuedocode first half <br/>
+ Int origNumFullPhrases;<br/>
+ For (  int I = 0 to orthoWords.size() ) {<br/>
+  string orthoWord = orthoWords[i] ;<br/>
+  Vector<vector <phone > > nextWordSampaPhoneSeqs (orthoWord)<br/>
+  <br/>
+  If ( this is the first orthoWord we’ve looked u...</p>
+</li>
+<li>
+<p class="binderItem"><strong>\algorithmic</strong><br/>\include{algorithmic}<br/>
 <br/>
- ///SKIP TO THE PART WHERE WE HAVE: a bunch of SAMPA phrases, stored in vector < vector <phone> > allPhoneSeqs<br/>
+<br/>
+\Include{psuedocode}<br/>
+<br/>
+\Begin{verbatim}<br/>
+FindAllPhoneSeqsForOrthoPhrase ( string orthoPhrase ) {<br/>
+ orthoWords = tokenize(orthoPhrase)<br/>
  <br/>
- //For each unique phonetic inter...</p>
+}</p>
 </li>
 </ul>
 </ul>

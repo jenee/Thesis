@@ -46,10 +46,10 @@ void buildAndDrawFullTree() {
 
 
 void buildAndDrawFullTree( string orthoPhrase ) {
-   //vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase , true );
-   //getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
+   vector< string > fullPhrases = discoverOronymsForPhrase( orthoPhrase , true );
+   getMaxAndMinFreqForAllOrthoPhrases( fullPhrases, &maxWordFreq, &minWordFreq);
 
-   //DEBUG
+   /*DEBUG
    {
     glPushMatrix();
    {  
@@ -65,24 +65,24 @@ void buildAndDrawFullTree( string orthoPhrase ) {
    
    
    }
-   //END DEBUG
+   *///END DEBUG
 
-/*
+
    //draw the tree's seed
 
    glPushMatrix();
    {
-      glTranslated(0.0, ( DEFAULT_BRANCH_LEN / 2.0 ), 0.0);
-      materials(MagentaShiny);
-      drawSphere(0.25);
-      
+      glTranslated(0.0, -1.0* DEFAULT_BRANCH_LEN , 0.0);
+      materials(GreenShiny);
+      drawSphere(DEFAULT_RADIUS);
+    
+   
+      materials(allMaterials.at( mat % allMaterials.size () ) );
+
+      drawBranchesAtFork ( fullPhrases, DEFAULT_RADIUS );
+     
    }
    glPopMatrix();
-   
-   materials(allMaterials.at( mat % allMaterials.size () ) );
-
-   drawBranchesAtFork ( fullPhrases, DEFAULT_RADIUS );
-   */
 }
 
 
@@ -191,8 +191,8 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
       double firstWordRadius = scaleFreqToRadius( firstWordFreq );
       //cerr <<"firstWord="<<curFirstWord<<"; freq="<<firstWordFreq<<"; radius ="<<firstWordRadius<<endl;
       
-      //double newAdditiveRadius = firstWordRadius;
-      double newAdditiveRadius = firstWordRadius + lastRadius;
+      double newAdditiveRadius = firstWordRadius;
+      //double newAdditiveRadius = firstWordRadius + lastRadius;
       //draw a branch
 
       double curYOffset = curDeltaYOffset;  //yOffCur;//deltaYOffset;  
@@ -224,7 +224,9 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             {
                materials(RedShiny);
                //glRotated( radiansToDegrees(-1.0*tiltAngle), 0, 0, 1.0);
-               glScaled( 1.0,  SPHERE_MULTIPLIER, 1.0);
+               glTranslated(0.0, -curYOffset / 2.0 , 0.0);
+
+               //glScaled( 1.0,  SPHERE_MULTIPLIER, 1.0);
                drawSphere( lastRadius * SPHERE_MULTIPLIER );
                materials(allMaterials.at( mat % allMaterials.size () ) );
             }
@@ -235,6 +237,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             glPushMatrix();
             {
+               glTranslated(0.0, -curYOffset / 2.0 , 0.0);
                materials(GreenShiny);
                drawSphere( lastRadius * SPHERE_MULTIPLIER );
                materials(allMaterials.at( mat % allMaterials.size () ) );
@@ -712,10 +715,18 @@ void find_and_replace(std::string& source, std::string const& find, std::string 
 
 int main(int argc, char** argv) {
    //orthoPhraseRoot = "visual representation of the phonetic ambiguity of the written word";
+   //orthoPhraseRoot = "tilt angle bonus round award";
+   //orthoPhraseRoot = "tilt angle bonus round quit";
+   //orthoPhraseRoot = "tilt angle break round quit";
+   
+   orthoPhraseRoot = "iced ink";
+
+   //orthoPhraseRoot = "empty till is sad";
+   //orthoPhraseRoot = "empty till is sadface";
    //orthoPhraseRoot = "a";
    //orthoPhraseRoot = "gray pants";
    //orthoPhraseRoot = "email";
-   orthoPhraseRoot = "our mail is late";
+   //orthoPhraseRoot = "our mail is late";
    //orthoPhraseRoot = "empty our email";
    //orthoPhraseRoot = "blessed hour";
    //orthoPhraseRoot = "empty hour";
@@ -744,9 +755,9 @@ int main(int argc, char** argv) {
    initStuff();
    treeHeight = 0;
    
-   doLSystemsString(2);
-   printf("\n\n");
-   doLSystemsString(10);
+   //doLSystemsString(2);
+   //printf("\n\n");
+   //doLSystemsString(10);
 
    //enable GL features we want
    glEnable(GL_DEPTH_TEST);

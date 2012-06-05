@@ -1,0 +1,1027 @@
+
+/* ::::: http://www.springerlink.com/dynamic-file.axd?id=be38f38c-6e9c-41c8-8f24-616ce62a7f94&m=True ::::: */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0pt; padding: 0pt; border: 0pt none; outline: 0pt none; font-size: 100%; vertical-align: baseline; background: none repeat scroll 0% 0% transparent; }
+body { line-height: 1; }
+ol, ul { margin: 0pt; padding: 0pt; }
+ul { list-style: none outside none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: none; }
+:focus { outline: 0pt none; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0pt; }
+html { font-size: 100%; }
+body { background-color: rgb(208, 208, 208); color: rgb(51, 51, 51); font-family: Myriad,Trebuchet MS,Sans-Serif; font-size: 0.9em; line-height: 1.2em; margin: 0pt auto; width: 68em; }
+body.print { background-color: rgb(255, 255, 255); margin-left: 0pt; width: auto; }
+a { color: rgb(119, 119, 119); }
+a:focus, a:hover { text-decoration: underline; }
+a:link, a:focus, a:active, a:visited { color: inherit; text-decoration: none; }
+a:focus { outline: 1px dotted rgb(255, 181, 95); }
+a.email { background: url('contact.gif') no-repeat scroll left center transparent; padding-left: 20px; }
+caption a { font-weight: bold; }
+.clearer { clear: both ! important; float: none ! important; height: 0pt ! important; margin: 0pt ! important; width: auto ! important; }
+caption { text-align: left; }
+caption div { display: none; }
+em { font-weight: bold; }
+div.feedback { background-color: rgb(255, 255, 221); border: 1px solid rgb(221, 221, 170); margin: 0.4em; padding: 0pt 0.8em 0.6em; }
+div.feedback.error h2, div.feedback.error h3 { color: rgb(170, 102, 102) ! important; }
+div.feedback.message h3 { color: rgb(102, 170, 102) ! important; }
+div.feedback.message h3 span { font-weight: normal; color: Black; }
+div.feedback.error p { color: rgb(136, 68, 68) ! important; }
+h1 { font-size: 1.5em; font-weight: normal; line-height: 1.2em; }
+h2 { color: rgb(255, 141, 67); font-family: Minion,Garamond,Serif; font-size: 1.2em; font-style: italic; padding: 0.4em 0pt; }
+fieldset div.feedback { margin: 0pt ! important; }
+sup { font-size: 0.7em; vertical-align: super; }
+th { white-space: nowrap; }
+th[scope="row"], th.scope-row { padding: 0.2em 1em; font-weight: normal; text-align: right; border-style: solid; border-color: rgb(236, 236, 236); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 0pt 1px 1px 0pt; }
+th[scope="col"], th.scope-col { padding: 0.2em 1em; text-align: left; white-space: nowrap; }
+td, th { padding: 0.2em 1em; }
+.hide { display: none ! important; }
+.invisible { opacity: 0; }
+.hideOffScreen, legend.hideOffScreen span { left: -9999px ! important; top: -10000px ! important; position: absolute; text-indent: -9999px; display: none; }
+table.paginationControl { clear: both; }
+.foot-note { clear: both; padding: 1em; }
+.foot-note a { color: rgb(255, 141, 67); text-decoration: underline; }
+.foot-note a:focus, .foot-note a:hover { text-decoration: none; }
+span.etAlia { font-style: italic; }
+#IndividualLogIn label, #InstitutionLogIn label { display: inline ! important; }
+#imgJSselbox { position: absolute; margin: 0pt; padding: 0pt; visibility: hidden; width: 0pt; height: 0pt; border: 1px solid rgb(0, 0, 102); color: rgb(255, 255, 255); background-image: url('selection_area.gif'); z-index: 20; }
+.ui-tabs .ui-tabs-hide { display: none; }
+#skipLinkList { position: absolute; left: -9999px; }
+#skipLinkList li { list-style: none outside none; }
+#skipLinkList a { position: absolute; top: 0pt; left: -9999em; z-index: 3 ! important; font-size: 0pt; color: rgb(105, 105, 105) ! important; display: block; margin: 0pt; text-indent: -30000px; outline: medium none; text-align: left; opacity: 1; }
+#skipLinkList a:focus { color: rgb(105, 105, 105); background-color: rgb(255, 255, 255); border: thin solid rgb(221, 78, 10); border-radius: 20px 20px 20px 20px; left: 1em; width: 15%; padding: 10px 0pt; font-size: medium; height: auto; text-indent: 1em; }
+[role] [tabindex="0"]:focus { outline: 1px dotted rgb(255, 152, 31); }
+#FAQPage { padding: 0.4em; }
+#FAQPage p { margin: 1em 0pt; }
+#FAQPage kbd { text-transform: uppercase; }
+#FAQPage.answers p { margin: 1em 1.5em; }
+#FAQPage.answers div p { margin: 0.5em; padding: 0.25em; }
+#FAQPage h3 { font-size: 100%; padding: 0pt 0pt 0pt 1em; background-position: left center; background-repeat: no-repeat; background-image: url('right-arrow.version.gif'); }
+#FAQPage h3.expanded { background-image: url('down-arrow.version.gif'); }
+#FAQPage.answers h3 { margin: 1em 1.5em; background-image: none; color: rgb(119, 119, 119); padding: 0pt; }
+#FAQPage.answers div h3 { margin: 1em 0pt; }
+#FAQPage.answers div ul { margin-left: 2em; list-style-type: disc; }
+#FAQPage.answers ol.alpha { list-style: lower-alpha outside none; margin: 0.5em 3em; }
+#FAQPage.answers ol.alpha ul { list-style-type: disc; margin-left: 2.5em; }
+#FAQPage.answers ol.alpha h5 { font-weight: 500; }
+.JSEnabled #FAQPage div { display: none; }
+#FAQPage div { margin-left: 1.5em; }
+#FAQPage div a { display: block; }
+#FAQPage p a { display: inline; text-decoration: underline; }
+#FAQPage p a:focus, #FAQPage p a:hover { text-decoration: none; }
+#FAQPage.answers dt { font-weight: 500; width: 100%; }
+#FAQPage.answers dd { float: none; margin: 0.25em 0pt; width: 100%; }
+#FAQPage .example { color: rgb(255, 141, 67); font-weight: bold; text-align: center; }
+#FAQPage em.title { font-style: italic; font-weight: normal; }
+.FAQ { margin: 0pt 0pt 0pt 0.5em; }
+.FAQ .question { display: block; font-weight: bold; margin: 0.5em 0pt; }
+.address-line-textbox { margin-left: 15.6em; }
+.dropDownMenu, .dropDownMenu li { position: relative; }
+.dropDownMenu ul, .dropDownMenu ul ul { left: -9999em; position: absolute; }
+.dropDownMenu ul, .dropDownMenu > a:focus + ul ul, .dropDownMenu > a:focus + ul ul[aria-expanded="false"], .dropDownMenu:hover ul ul, .dropDownMenu.show ul ul, .dropDownMenu div { left: -9999em; position: absolute; }
+.dropDownMenu:hover ul, .dropDownMenu.show ul { left: auto; }
+.dropDownMenu li[aria-haspopup] > [aria-expanded="true"], .dropDownMenu li[aria-haspopup] > a:focus + ul, .dropDownMenu li:hover ul { left: 100%; top: 0pt; }
+.dropDownMenu li:hover ul { left: 100%; top: 0pt; }
+.dropDownMenu .show { left: 0pt; }
+.dropDownMenu .show .show { left: 100%; }
+#ContentPrimary #FeedbackForm label { width: 18em; }
+#ContentPrimary #FeedbackForm .no-label { margin-left: 18.5em; }
+#ContentPrimary .feedback .button-panel { margin: 1em 0pt 1em 36em; }
+#ContentPrimary .feedback-details textarea { width: 45em; margin-left: 1em; }
+.searchword { background-color: rgb(255, 255, 128); }
+div.collateral h2 .searchword, .recordCount .searchword, .itemTag .searchword, .resources .searchword { background-color: transparent; }
+#SearchTips { padding: 1em 0.5em; }
+#SearchTips h3 { padding: 0.5em 0pt; margin: 1em 0pt 1em 1em; }
+#SearchTips h4 { margin-left: 2em; }
+#SearchTips p { margin: 1em 0.5em 1em 1.5em; }
+#SearchTips ul { margin-left: 2.5em; list-style: disc outside none; }
+#SearchTips ul li { margin-bottom: 0.25em; }
+#SearchTips h4.example { margin-left: 3.5em; }
+#SearchTips em { font-style: italic; font-weight: 400; }
+#SearchTips h4.example, #SearchTips .example em { font-weight: 700; }
+#SearchTips ul.example { margin-left: 4em; margin-top: 0.5em; }
+#jsMath_Warning { display: none; }
+#jsMath_button { display: none; }
+.latex .typeset .error { display: none; }
+a .latex { text-decoration: none; }
+.latex .cs { display: none; }
+.ui-dialog { position: absolute; }
+.watermark { display: inline-block; position: relative; }
+.watermark label { color: rgb(215, 64, 0); font-size: 0.75em; font-weight: bold; left: 0pt; margin: 0.1em 0.4em; position: absolute; text-transform: uppercase; top: 0pt; white-space: nowrap; }
+.watermark label:lang(ar), .watermark label:lang(ja), .watermark label:lang(ko), .watermark label:lang(zh) { font-size: 0.8em; font-weight: normal; }
+input.button.popupButton { padding-right: 15px; }
+input.button.popupButton.closed { background: url('popup-button-closed.gif') no-repeat scroll right center transparent; }
+input.button.popupButton.open { background: url('popup-button-open.gif') no-repeat scroll right center transparent; }
+#ContentPrimary .exportFields { display: inline-block; margin: 0pt; vertical-align: top; width: 32%; }
+#ContentPrimary div.exportFields {  }
+#ContentPrimary .exportFields legend { text-transform: capitalize; font-weight: bold; }
+#ContentPrimary .exportFields fieldset { margin: 0pt 0pt 1em; }
+#ContentPrimary .wizard .wizardDialog .underline { text-decoration: underline; }
+.sitemap li { position: relative; padding: 0pt 2em; }
+.sitemap .collapsed { display: none; }
+.sitemap .expander { left: 0.5em; top: 0.2em; }
+div.sitemap { float: left; width: 47%; padding: 0.5em; }
+div.sitemap-subjects { float: right; }
+.ui-icon { background-position: center center; background-repeat: no-repeat; display: inline-block; height: 11px; margin-right: 0.4em; width: 11px; }
+.ui-icon-triangle-1-s { background: url('down-arrow.version.gif') repeat scroll left center transparent; }
+.ui-icon-triangle-1-e { background: url('right-arrow.version.gif') repeat scroll left center transparent; }
+body.print #ContentHeader { float: none; margin: 0pt; width: auto; }
+#ContentHeader { float: right; margin-right: 0.3em; margin-top: 0.4em; width: 49em; }
+#ContentHeaderPrintSprite { float: right; padding: 0.6em; }
+#ContentHeading { font-size: 0.9em; }
+#ContentHeading div.heading.linkOutView div span.key { display: block; font-size: 0.9em; margin-right: 0.5em; margin-bottom: 0.5em; }
+#ContentHeading div.heading.linkOutView div ul.values li { float: left; }
+#ContentHeading div.heading.linkOutView div ul.values li a { background-color: rgb(255, 255, 238); border: 1px solid rgb(221, 221, 170); display: block; margin-right: 0.5em; min-height: 1.5em; padding: 0.3em 0.5em; }
+#ContentHeading div.heading.linkOutView div ul.values li a:hover { background-color: rgb(255, 255, 255); }
+#ContentHeading div.heading.linkOutView div ul.values li a img { margin-right: 0.5em; vertical-align: middle; }
+#ContentHeading ul.heading { text-transform: uppercase; }
+#ContentHeading ul.heading li { background-color: rgb(255, 255, 255); float: left; margin: 0pt 0.2em 0.2em 0pt; }
+#ContentHeading ul.heading li h1, #ContentHeading ul.heading li p { font-size: 0.9em; font-weight: bold; line-height: 1.4em; padding: 0.4em 0.8em; }
+#ContentHeading ul.heading li h1 { background-color: rgb(255, 141, 67); color: rgb(255, 255, 255); }
+#ContentHeading ul.heading li p { color: rgb(255, 141, 67); }
+#ContentHeading ul.heading li p.disabled { color: rgb(170, 170, 170); }
+#ContentHeading span.search { font-weight: bold; }
+#ContentHeading span.search span.error { color: rgb(204, 51, 51); font-weight: bold; }
+#ContentHeading span.search span.operator { font-weight: normal; }
+#ContentHeading span.search span.boolean { font-style: italic; font-weight: normal; }
+#ContentHeading div.persona ul { display: inline-block; margin-left: 0.5em; vertical-align: top; }
+#ContentToolbar { background-color: rgb(255, 255, 255); height: 1.3em; margin-bottom: 0.2em; padding: 0.2em 0.4em; }
+#ContentToolbar a { color: rgb(153, 153, 153); font-size: 0.85em; text-transform: uppercase; }
+#ContentToolbar div.secondary { float: right; margin-right: 1.4em; }
+#ContentToolbar div.secondary span.saveToolbarSprite, #ContentToolbar div.secondary span.emailToolbarSprite { margin-right: 0.2em; }
+#ContentToolbar div.secondary a { text-transform: none; }
+#ContentToolbar input.sprite { background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); color: rgb(119, 119, 119); font-size: 0.75em; text-transform: uppercase; vertical-align: middle; }
+#ContentToolbar input.sprite:focus, #ContentToolbar input.sprite:hover { color: rgb(247, 96, 19); }
+#ContentToolbar ul { background: url('dotbg-cccccc.gif') repeat-y scroll right top transparent; float: left; padding: 0pt 0.2em; }
+#ContentToolbar ul li { float: left; margin: 0pt 0.2em; }
+.sprite { background-image: url('sprite-sheet.gif'); background-repeat: no-repeat; padding: 0pt 0pt 0pt 20px; display: inline-block; height: 18px; }
+.sprite.spriteDisabled { opacity: 0.2; }
+.toolbarSprite { background-image: url('sprites.gif'); }
+.permissionSprite { display: none; }
+.accessIndicatorsEnabled .permissionSprite { display: inline-block; }
+.sprite.delicious-sprite { background-position: 0pt 0pt; }
+.sprite.citeulike-sprite { background-position: 0pt -98px; padding-right: 20px; }
+.sprite.citeulike-sprite span { padding-left: 1em; }
+.sprite.connotea-sprite { background-position: 0pt -200px; }
+.sprite.share-this-sprite { background-position: 0pt -401px; }
+.sprite.rss-sprite { background-position: 0pt -302px; }
+.sprite.email-sprite { background-position: -2px -502px; }
+.sprite.delete-sprite { background-position: 0pt -600px; }
+.sprite.edit-sprite { background-position: 0pt -700px; }
+.sprite.save-sprite { background-position: 0pt -801px; }
+.sprite.uncheck-sprite { background-position: 0pt 100px; }
+.sprite.check-sprite { background-position: 0pt -900px; }
+.export-sprite { background-position: -75px 0pt; }
+.print-sprite { background-position: -175px 0pt; }
+.pdf-resource-sprite { background-position: 0pt -1000px; }
+.epub { list-style-type: none; }
+.text .epub-resource-sprite { background-image: url('epub_icon.gif'); margin-top: 45px; }
+.epub-resource-sprite { background-image: url('epub_icon.gif'); margin-top: 0pt; }
+.epub span { margin-left: 30px; }
+.html-resource-sprite { background-position: 0pt -1100px; }
+.ftx-resource-sprite, .ftx-resource { background-position: 0pt -1200px; }
+.rightslink-resource-sprite { background-position: 0pt -1300px; padding-bottom: 3px; padding-left: 25px; }
+span.contactSprite { background-image: url('contact.gif'); background-repeat: no-repeat; padding: 5px 7px; }
+.sprite.video-sprite { background-position: 0pt -1400px; }
+.sprite.archive-sprite { background-position: 0pt -1500px; }
+.sprite.info-sprite { background-position: 0pt -2000px; }
+.sprite.doc-sprite { background-position: 0pt -2400px; }
+.sprite.image-sprite { background-position: 0pt -2100px; }
+.sprite.gif-image-sprite { background-position: 0pt -2300px; }
+.sprite.excel-sprite { background-position: 0pt -1600px; }
+.sprite.text-sprite { background-position: 0pt -1700px; }
+.sprite.html-sprite { background-position: 0pt -2200px; }
+.sprite.pdf-sprite { background-position: 0pt -1000px; }
+.sprite.ppt-sprite { background-position: 0pt -1800px; }
+.shoppingCartSprite { background-position: 0pt -2500px; }
+.permission-full-sprite { background-position: 0pt -2600px; }
+.permission-partial-sprite { background-position: 0pt -2700px; }
+.permission-none-sprite { background-position: 0pt -2800px; }
+.permission-unknown-sprite { background-position: 0pt -2900px; }
+.deep-dyve-sprite { background-position: 0pt -3000px; height: 25px; text-indent: -9999px; width: 96px; }
+.springer-sprite { background-position: 0pt -3098px; }
+body.print #HeaderTop { display: none; }
+#Header { background: url('bgmastheadgradient.version.jpg') repeat scroll left top rgb(255, 255, 255); padding: 0pt; position: relative; z-index: 2; }
+#Header input { border: 1px solid rgb(219, 87, 0); }
+#Header input.button { background-color: rgb(247, 96, 19); border-width: 1px; border-style: solid; border-color: rgb(254, 207, 180) rgb(238, 115, 25) rgb(202, 90, 6) rgb(253, 125, 32); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; color: rgb(255, 255, 255); }
+#Header input.button.goButton { font-weight: bold; text-transform: uppercase; }
+#Header select { color: rgb(215, 64, 0); }
+#HeaderTop { background: url('bghatcheswhiteonorange.version.gif') repeat scroll left top transparent; font-size: 0.9em; font-weight: bold; padding: 0.2em; text-align: right; }
+#HeaderTop a { color: rgb(255, 255, 255); margin: 0pt 0.5em; }
+#HeaderTop select { font-size: 0.9em; width: 10em; }
+#HeaderLogo { background: url('logospringer.version.gif') no-repeat scroll left top transparent; display: block; height: 51px; margin: 2px; position: relative; width: 189px; }
+#HeaderLogo span { display: none; }
+#MasterHeaderRecognition { background-color: rgb(255, 255, 255); color: rgb(227, 85, 37); float: right; margin-right: 2em; text-align: center; position: relative; height: 3.8em; width: 15em; overflow: hidden; }
+#MasterHeaderRecognition a { color: rgb(119, 119, 119); display: block; background-position: center center; background-repeat: no-repeat; height: 3.8em; width: 15em; position: absolute; left: 0pt; }
+#MasterHeaderRecognition a.noBrand { line-height: 3.8em; }
+#MasterHeaderRecognition a:focus, #MasterHeaderRecognition a:hover { color: rgb(247, 96, 19); }
+#MasterHeaderRecognition div.notRecognized { padding: 0.6em; }
+#MasterHeaderRecognition div.notRecognized a { display: inline; font-size: 0.75em; font-weight: bold; position: relative; }
+#MasterHeaderRecognition div.notRecognized p:lang(es) { font-size: 0.75em; }
+#MasterHeaderRecognition em { font-style: normal; font-weight: bold; }
+#MasterHeaderRecognition span { display: none; }
+#MasterHeaderRecognition .noBrand span { display: block; vertical-align: middle; height: 3.8em; }
+#MasterHeaderRecognition .institutional-login em { color: rgb(227, 85, 37); display: block; font-size: 1.2em; font-weight: normal; }
+#MasterHeaderRecognition .institutional-login :focus em, #MasterHeaderRecognition .institutional-login :hover em { text-decoration: underline; }
+body.print #HeaderSearch { display: none; }
+#AdvancedSearchWithin { margin-top: 0.4em; }
+#HeaderSearch { background-color: rgb(227, 85, 37); height: 3.8em; padding-left: 0.5em; position: relative; text-transform: uppercase; z-index: 2; }
+#HeaderSearch.showAdvanced { padding-left: 0pt; }
+#HeaderSearch legend.hideOffScreen, .showAdvanced #HeaderSearchBasic, #HeaderSearchAdvanced { display: none; }
+#HeaderSearchBasic { width: 77%; }
+.scriptDisabled #HeaderSearchBasicCitation { display: none; }
+#HeaderSearch legend, #HeaderSearchBasic span.legend { color: rgb(255, 255, 255); display: inline-block; font-size: 1.3em; font-weight: bold; vertical-align: text-bottom; width: 21%; }
+#HeaderSearch .legend:lang(ar) { width: 5%; }
+#HeaderSearch .legend:lang(de) { width: 11%; }
+#HeaderSearch .legend:lang(es) { width: 17%; }
+#HeaderSearch .legend:lang(fr) { width: 29%; }
+#HeaderSearch .legend:lang(ja) { width: 23%; }
+#HeaderSearch .legend:lang(ru) { width: 27%; }
+#HeaderSearch .legend:lang(zh) { width: 8%; }
+#HeaderSearchAdvanced legend { display: block; padding: 0.5em; }
+#HeaderSearchAdvanced fieldset legend { font-size: 1em; padding: 0pt; }
+#HeaderSearchBasic input.textbox.volume, #HeaderSearchBasic input.textbox.issue, #HeaderSearchBasic input.textbox.page { width: 6.05em; }
+#HeaderSearchBasic input.searchFor { font-size: 0.9em; margin: 0.5em 0pt 0.3em; width: 77.4%; }
+#HeaderSearchBasic input.searchFor:lang(ar) { width: 93.4%; }
+#HeaderSearchBasic input.searchFor:lang(de) { width: 87.4%; }
+#HeaderSearchBasic input.searchFor:lang(es) { width: 81.4%; }
+#HeaderSearchBasic input.searchFor:lang(fr) { width: 69.4%; }
+#HeaderSearchBasic input.searchFor:lang(ja) { width: 75.4%; }
+#HeaderSearchBasic input.searchFor:lang(ru) { width: 71.4%; }
+#HeaderSearchBasic input.searchFor:lang(zh) { width: 90.4%; }
+#HeaderSearchBasicCitation input { font-size: 0.75em; }
+#HeaderSearchBasic input.textbox.authorOrEditor { width: 14em; }
+#HeaderSearchBasic input.textbox.publication { width: 16.2em; }
+body:last-child #HeaderSearchBasic input.textbox.publication { width: 17em; }
+#HeaderSearch input.button { font-size: 0.65em; height: 2em; width: 11em; padding-bottom: 0.25em; }
+#HeaderSearch input.button.goButton { bottom: 0.6em; font-size: 0.8em; height: 3.6em; right: 11em; width: 3.5em; }
+#HeaderSearch.showAdvanced input.goButton { right: 1.2em; }
+#HeaderSearch input.goButton, #HeaderSearch input.advancedSearchButton, #HeaderSearch input.searchTipsButton { position: absolute; }
+#HeaderSearch input.advancedSearchButton, #HeaderSearch input.searchTipsButton { right: 1.5em; }
+#HeaderSearch input.advancedSearchButton { top: 0.7em; }
+#HeaderSearch input.searchTipsButton { top: 3.2em; }
+#HeaderSearch input.disabled { background-color: rgb(224, 223, 227); }
+.showAdvanced #HeaderSearchAdvanced { background-color: rgb(227, 85, 37); display: block; padding: 0.1em; position: absolute; width: 50.8em; }
+#HeaderSearchAdvanced legend.sublegend { font-weight: bold; margin-top: 0.5em; }
+#HeaderSearchAdvanced fieldset { padding: 0.4em 0.6em; color: rgb(255, 255, 255); }
+#HeaderSearchAdvanced select { font-size: 0.85em; margin: 0pt 0pt 0.8em; }
+#AdvancedSearchFor { float: left; width: 60%; }
+#HeaderSearchAdvanced input.textBox.searchFor { display: block; width: 31em; }
+#HeaderSearchAdvanced input.textBox.doi { margin-bottom: 0.5em; width: 21em; }
+#HeaderSearchAdvanced input.textBox.author, #HeaderSearchAdvanced input.textBox.editor { width: 10.3em; }
+#HeaderSearchAdvanced input.textBox.citation { width: 6.75em; }
+#HeaderSearchAdvanced input.textBox.citation.publication { margin-right: 0.5em; width: 31em; }
+#HeaderSearchAdvanced .PublicationVolume, #HeaderSearchAdvanced .PublicationIssue, #HeaderSearchAdvanced .PublicationPage { width: 10%; }
+#LimitContentTypes { display: block; width: 50%; }
+#HeaderSearchAdvanced fieldset.limiters { float: left; width: 56%; }
+#HeaderSearchAdvanced #PublicationDateRange { padding: 0pt; }
+#HeaderSearchAdvanced #PublicationDateRange span.dates, #HeaderSearchAdvanced fieldset.orderOfResults label { display: block; }
+#HeaderSearchAdvanced #PublicationDateRange span.dates { margin: 0.25em 0pt 0pt 1.5em; }
+#HeaderSearch input.date-picker-control { width: 10em; }
+body.print #MasterHeaderMenu { display: none; }
+#MasterHeaderMenu { background-color: rgb(168, 168, 168); border-style: solid; border-color: rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 2px 0pt; height: 1.2em; position: relative; }
+#MasterHeaderMenu li { border-style: dotted; border-color: rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 0pt 1px 0pt 0pt; float: left; }
+#MasterHeaderMenu li a { color: rgb(255, 255, 255); display: block; font-size: 0.8em; padding: 0pt 1em; text-transform: uppercase; }
+#MasterHeaderMenu li ul { background-color: rgb(255, 255, 255); border: 0.2em solid rgb(168, 168, 168); display: block; margin: 0pt; height: auto; }
+#MasterHeaderMenu li.list-divider { border-top: 1px dotted rgb(168, 168, 168); }
+#MasterHeaderMenu li li { float: none; }
+#MasterHeaderMenu li li a:focus, #MasterHeaderMenu li li a:hover { background-color: rgb(238, 238, 238); }
+#MasterHeaderMenu li li a { padding: 0.3em 1.4em 0.3em 1em; text-transform: none; color: rgb(88, 88, 88); white-space: nowrap; }
+#MasterHeaderMenu .tools-menu li { position: relative; }
+#MasterHeaderMenu .tools-menu li a { padding-left: 2em; position: relative; }
+#MasterHeaderMenu .tools-menu li a.check-sprite { background-position: 3px -898px; }
+#MasterHeaderMenu .tools-menu li a.uncheck-sprite { background-position: 3px 100px; }
+#MasterHeaderMenu .tools-menu span { height: 20px; position: absolute; left: 0.3em; top: 0.2em; }
+#MasterHeaderMenu .dropDownMenu li[aria-haspopup] { position: relative; }
+#MasterHeaderMenu .dropDownMenu li.hasPopup li a { background-image: none; }
+#MasterHeaderMenu .dropDownMenu li.hasPopup a { background-image: url('grey-arrow.gif'); background-position: 95% center; background-repeat: no-repeat; }
+#HeaderLogin { bottom: -2px; position: absolute; right: 2em; width: 15em; }
+#HeaderLogin a { display: block; }
+#LoginForm a, #LoginForm p, #HeaderLogin a, #HeaderLogin p { color: rgb(255, 255, 255); font-size: 0.8em; }
+#HeaderLogin p a { display: inline; font-size: 1em; }
+#LoginHeader { background-color: rgb(247, 96, 19); border: 2px solid rgb(255, 255, 255); padding: 0pt 0.5em; text-transform: uppercase; font-weight: bold; height: 1.5em; }
+#LoginHeader span, #LoginHeader .logout, #LoginHeader .log-in { position: absolute; right: 0.5em; }
+#LoginForm { background-color: rgb(247, 96, 19); border-style: solid; border-color: rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 0pt 2px 2px; padding: 0.5em; width: 13.8em; }
+#LoginForm input { margin: 0.2em auto; width: 99%; }
+#LoginForm .rememberMe, #LoginForm .button { color: rgb(255, 255, 255); font-size: 0.8em; width: auto; }
+#LoginForm .button { color: rgb(255, 255, 255); float: right; background-color: rgb(247, 96, 19); border-color: rgb(254, 207, 180) rgb(238, 115, 25) rgb(202, 90, 6) rgb(253, 125, 32); border-style: solid; border-width: 1px; }
+#LoginForm .rememberMe input { margin: 0.2em; width: auto; }
+#HeaderLogin fieldset legend { display: none; }
+#LoginForm label { padding: 0.1em 0pt; }
+#LoginForm .watermark { display: inline; }
+#LoginForm .watermark label { margin-top: 0pt; }
+#HeaderLogin fieldset .closepopup { background-color: rgb(255, 255, 255); position: absolute; top: 2px; right: 2px; z-index: 2; }
+#HeaderLogin fieldset .closepopup:hover, #HeaderLogin fieldset .closepopup:focus { background-color: rgb(0, 255, 0); color: rgb(0, 0, 0); }
+#LoginForm #LoginHelpLinks { background-color: rgb(255, 255, 255); border: 1px solid rgb(215, 64, 0); color: rgb(51, 51, 51); font-size: 0.9em; margin-top: 0.5em; padding: 0.5em; }
+#LoginForm #LoginHelpLinks a { color: rgb(51, 51, 51); display: block; }
+.ui-dialog-titlebar { display: none; }
+.loginPanelLink { right: 0.5em; position: absolute; }
+#HeaderShoppingCart { float: right; margin-right: 17.5em; }
+#HeaderShoppingCart a { display: inline-block; color: rgb(255, 255, 255); font-size: 0.8em; font-weight: bold; text-transform: uppercase; line-height: 18px; padding: 0pt 0pt 0pt 20px; }
+#ContentFooter { background-color: rgb(200, 200, 200); float: right; margin: 0.3em 0.3em 0.3em 0pt; width: 49em; }
+#ContentFooter p { font-size: 0.8em; margin: 0.2em 0.25em; text-align: center; }
+#ContentFooter p a { color: rgb(250, 250, 250); border-right: 1px solid rgb(250, 250, 250); }
+#ContentFooter p.topRow a { padding: 0pt 0.5em; }
+#ContentFooter p.bottomRow a { padding: 0pt 0.7em; }
+#ContentFooter p a.left { padding-left: 0pt; }
+#ContentFooter p a.right { padding-right: 0pt; border: 0pt none; }
+#ContentFooter p a:focus, #ContentFooter p a:hover { color: rgb(247, 96, 19); }
+#Footer { background-color: rgb(159, 159, 159); clear: both; font-size: 0.7em; padding: 0.5em; }
+#Footer li { color: rgb(223, 223, 223); font-variant: small-caps; line-height: 1.2em; }
+#Footer li.localeAndRank { padding-top: 0.5em; }
+#Footer li.recognizedAs { margin-bottom: 0.5em; }
+#Footer li.recognizedAs ul { display: inline; }
+#Footer li.recognizedAs ul li { display: inline; margin-right: 0.5em; }
+#Footer li.userHostAddress { float: left; padding-right: 1em; }
+#ContentPrimary fieldset table tr td.currency { color: rgb(0, 136, 0); font-weight: bold; }
+#ContentPrimary fieldset table tr td.currency.negative { color: rgb(204, 0, 0); padding-right: 0.6em; }
+#ContentPrimary fieldset table.orderSummary tbody tr td.quantity, #ContentPrimary fieldset table.orderSummary tbody tr td.unitPrice, #ContentPrimary fieldset table.orderSummary tfoot tr td.currency { text-align: right; white-space: nowrap; }
+#ContentPrimary fieldset table.orderSummary tfoot tr td { padding: 0.1em 1em; }
+#ContentPrimary fieldset table.orderSummary tfoot tr td.label { font-weight: bold; text-align: right; }
+#ContentPrimary fieldset table.orderSummary thead tr th.unitPrice { text-align: right; }
+#ContentPrimary ul.manifest li.cartItem p.priceAndQuantity span span.value { margin-right: 0pt; }
+#ContentPrimary ul.manifest li.cartItem p.priceAndQuantity input.quantity { background-color: rgb(255, 255, 221); border: 1px solid rgb(221, 221, 170); text-align: right; width: 1.5em; }
+#ContentPrimary ul.manifest li.order ul.summary { background-color: rgb(255, 255, 238); border: 1px solid rgb(221, 221, 170); margin: 0.5em 0pt; padding: 0.5em; }
+#ContentPrimary fieldset.details #OrderSummary { margin: 0pt; }
+#ContentPrimary fieldset.details #OrderSummary div.footer, #ContentPrimary fieldset.details #OrderSummary div.header { background-color: rgb(250, 250, 244); border: 1px solid rgb(221, 221, 170); font-size: 0.9em; margin: 0pt; padding: 0.2em 0.5em; }
+#ContentPrimary fieldset.details #OrderSummary div.footer { border-top: medium none; }
+#ContentPrimary fieldset.details #OrderSummary div.footer div { margin: 0pt; }
+#ContentPrimary fieldset.details #OrderSummary div.footer div.priceSummary { float: right; }
+#ContentPrimary fieldset.details #OrderSummary div.footer div.paymentSummary { float: left; }
+#ContentPrimary fieldset.details #OrderSummary div.footer div.paymentSummary div { height: 2em; }
+#ContentPrimary fieldset.details #OrderSummary div.footer div.paymentSummary div span.value { font-weight: bold; }
+#ContentPrimary fieldset.details #OrderSummary div.footer div div { clear: both; width: 24em; }
+#ContentPrimary fieldset.details #OrderSummary div.header { border-bottom: medium none; }
+#ContentPrimary fieldset.details #OrderSummary ul.manifest { background-color: rgb(255, 255, 248); border: 1px solid rgb(221, 221, 170); padding: 0.2em 0.5em; }
+#ContentToolbar div.secondary ul.printOnDemand li.dropDownMenu { margin: 0pt; color: rgb(255, 141, 67); }
+#ContentToolbar div.secondary ul.printOnDemand li.dropDownMenu:hover { background-color: rgb(244, 111, 33); }
+#ContentToolbar div.secondary ul.printOnDemand li:hover { color: rgb(255, 255, 255) ! important; }
+#ContentToolbar div.secondary ul.printOnDemand li a { color: inherit ! important; font-size: 0.8em; font-weight: bold; padding: 0.5em; text-transform: uppercase; }
+#ContentToolbar div.secondary ul.printOnDemand li a:hover { text-decoration: none; }
+#ContentToolbar div.secondary ul.printOnDemand li ul { background: url('mycopy-wm.jpg') no-repeat scroll center center rgb(244, 111, 33); color: rgb(255, 255, 255); font-size: 0.9em; padding: 1em 0.4em; }
+#ContentToolbar div.secondary ul.printOnDemand li ul li p span { display: block; font-weight: bold; margin: 0.5em 0pt 1.2em; }
+#ContentToolbar div.secondary ul.printOnDemand li ul li a { background-color: rgb(255, 141, 68); border: 1px solid rgb(255, 255, 255); font-size: 0.9em; font-weight: bold; padding: 0.25em 0.5em; text-transform: none; }
+#ContentToolbar div.secondary ul.printOnDemand li ul li a:hover { background-color: rgb(255, 255, 255); border-color: rgb(247, 96, 19); color: rgb(247, 96, 19) ! important; }
+body.accessIndicatorsEnabled #Content ul.manifest li.primitive { padding-left: 25px; }
+#Content ul.manifest li.primitive .ajax-loader { display: none; }
+body.accessIndicatorsEnabled #Content ul.manifest li.primitive .ajax-loader { display: inline-block; }
+body.accessIndicatorsEnabled #Content ul.suppressAccessIndicators li.primitive { padding-left: 0pt; }
+body.accessIndicatorsEnabled #Content .manifest .primitive { position: relative; }
+body.accessIndicatorsEnabled #Content ul.manifest li.primitive .ajax-loader, body.accessIndicatorsEnabled #Content ul.manifest li.primitive .permissionSprite { position: absolute; left: 5px; height: 15px; }
+body.accessIndicatorsEnabled #Content ul.manifest li.contribution .ajax-loader, body.accessIndicatorsEnabled #Content ul.manifest li.contribution .permissionSprite, body.accessIndicatorsEnabled #Content ul.manifest li.part .permissionSprite, body.accessIndicatorsEnabled #Content ul.manifest li.Backmatter .permissionSprite, body.accessIndicatorsEnabled #Content ul.manifest li.Frontmatter .permissionSprite {  }
+#Content a:focus, #Content a:hover { color: rgb(247, 96, 19) ! important; }
+#Content div.pagination { clear: both; font-weight: bold; z-index: 2; }
+#Content div.pagination div.sortSelection { display: inline; }
+#Content div.pagination div.sortSelection ul { display: inline; }
+#Content div.pagination ul li { display: inline; z-index: 2; }
+#Content div.pagination .label, #Content div.sortSelection .label { padding-left: 0pt ! important; }
+#Content div.pagination .label, #Content div.pagination ul li a, #Content div.pagination ul li span, #Content div.sortSelection .label { padding: 0.2em 0.35em; }
+#Content div.pagination ul li a { background-color: inherit; color: rgb(119, 119, 119); opacity: 1; }
+#Content div.pagination ul li span, #Content div.pagination ul li .selected { background-color: inherit; color: rgb(255, 141, 67); font-size: inherit; }
+#Content div.pagination ul li .disabled { color: rgb(204, 204, 204); font-size: inherit; opacity: 1; }
+#Content div.pagination ul.transport, #Content div.pagination.editorial ul.views { float: right; z-index: 3; }
+#Content div.scroll-pane { height: 20em; overflow: auto; }
+.scriptEnabled #Content div.scroll-pane { overflow-y: hidden; }
+#Content dl { padding: 0.5em; }
+#Content dl.details dd ul li.contributor span.affiliations { font-size: 0.7em; padding: 0pt 0.5em; vertical-align: super; }
+#Content p.articleCategory { text-transform: uppercase; }
+#Content ul.ariarole-tree li.collapsed ul { display: none; }
+#Content ul.manifest { z-index: 1; }
+#Content ul.manifest li span.contentStatus { line-height: 20px; margin-right: 0.5em; padding: 0pt 35px; }
+#Content ul.manifest li span.contentStatus.accepted { background: url('online-first.gif') no-repeat scroll center center transparent; }
+#Content ul.manifest li span.contentStatus.grantOpen { background: url('open-access.gif') no-repeat scroll center center transparent; }
+#Content ul.manifest li span.contentStatus span { display: none; }
+#Content ul.sections { height: 2.6em; }
+#Content ul.sections li { float: left; font-weight: bold; padding: 0.5em; text-align: center; }
+#Content ul.sections li.last { float: right; margin-right: 0pt; }
+#Content ul.sections li a:focus, #Content ul.sections li a:hover { border-color: rgb(247, 96, 19); color: rgb(247, 96, 19); }
+#Content .exportCitation p { font-weight: 700; }
+#Content .exportCitation select { width: 15em; }
+.abstractText img { vertical-align: top; }
+#ContentHeading div.heading div.filters { font-size: 1.2em; padding: 0.25em 0pt; }
+#ContentHeading div.heading div.viewSelection p.label { display: inline-block; }
+#ContentHeading div.heading div.viewSelection ul { display: inline; }
+#ContentHeading div.heading div.viewSelection ul li { display: inline-block; z-index: 2; }
+#ContentHeading div.heading div.viewSelection ul li a, #ContentHeading div.heading div.viewSelection ul li span { display: inline-block; padding: 0.2em 0.35em; }
+#ContentHeading div.heading div.viewSelection ul li span { color: rgb(255, 141, 67); }
+#ContentHeading div.heading div.viewSelection ul li span.disabled { color: rgb(204, 204, 204); font-size: inherit; opacity: 1; }
+#ContentHeading div.heading div.viewSelection.alphabetical ul { font-size: 1.4em; font-weight: normal; }
+#ContentHeading div.heading.enumeration { color: rgb(153, 153, 153); }
+#ContentHeading div.heading.enumeration img { margin-left: 1em; vertical-align: middle; }
+#ContentHeading div.heading.enumeration div.primary { text-transform: uppercase; }
+#ContentHeading div.heading.enumeration div.secondary { font-size: 0.9em; }
+#ContentHeading div.heading.enumeration div.secondary span.contentStatus { line-height: 20px; margin: 0pt 0.5em; padding: 0pt 35px; }
+#ContentHeading div.heading.enumeration div.secondary span.contentStatus.accepted { background: url('online-first.gif') no-repeat scroll center center transparent; }
+#ContentHeading div.heading.enumeration div.secondary span.contentStatus.grantOpen { background: url('open-access.gif') no-repeat scroll center center transparent; }
+#ContentHeading div.heading.enumeration div.secondary span.contentStatus span { display: none; }
+#ContentHeading div.heading.enumeration a { color: rgb(153, 153, 153); }
+#ContentHeading div.heading.primitive div.coverImage { background: none no-repeat scroll center center rgb(204, 204, 204); float: left; height: 145px; width: 100px; }
+#ContentHeading div.heading.primitive div.partner { border-left: 1px dotted rgb(221, 221, 221); float: right; margin-left: 2em; text-align: center; width: 14em; }
+#ContentHeading div.heading.primitive div.text { margin: 0pt 0pt 0pt 110px; }
+#ContentHeading div.heading.primitive h1 { color: rgb(255, 141, 67); font-family: Minion,Garamond,Serif; margin-bottom: 0.4em; }
+#ContentHeading div.heading.primitive h1 span.subtitle { display: block; font-size: 0.9em; }
+#ContentHeading div.heading.primitive p { color: rgb(119, 119, 119); font-size: 0.9em; }
+#ContentHeading div.heading.primitive p.authors, #ContentHeading div.heading.primitive p.coverage { margin-bottom: 0.5em; }
+#ContentHeading div.heading.primitive p.issueTitle { font-weight: normal; margin-bottom: 0.5em; }
+#ContentHeading div.heading.primitive p.notes { color: rgb(136, 136, 136); font-size: 0.85em; font-weight: normal; }
+#ContentHeading div.heading.primitive a:hover { text-decoration: underline; }
+#ContentHeading ul.fulltextResources { height: 1.8em; margin: 0.2em 0pt 0pt ! important; }
+#ContentHeading ul.fulltextResources li.cpdCme, #ContentHeading ul.fulltextResources li.rightslink { float: right; font-weight: normal; }
+#ContentHeading .topicalCollections { font-size: 0.9em; }
+#EnableSubscriptionIndicatorsMenuItem { display: none; }
+body.ftxEnabled #DetailsContainer { display: none; }
+body.scriptDisabled #FulltextContainer { display: none; }
+#ContentPrimary div.collateral h2 { background-color: rgb(238, 238, 238); color: rgb(136, 136, 136); font-family: Myriad,Trebuchet MS,Sans-Serif; font-size: 1em; font-style: normal; margin: 0.4em; padding: 0.4em; }
+#ContentPrimary div.heading { padding: 0.2em 0.4em; }
+#ContentPrimary div.keywordReport { margin: 0pt 0.4em; padding: 0.4em; }
+#ContentPrimary div.keywordReport p { font-size: 1.1em; }
+#ContentPrimary div.keywordReport p.automaticCorrection { color: rgb(85, 153, 85); }
+#ContentPrimary div.keywordReport p.didYouMean { color: rgb(204, 51, 51); }
+#ContentPrimary div.section { margin: 0pt 0.5em; padding: 0.4em; }
+#ProtocolPrimaryFulltext { margin: 0pt ! important; padding: 0pt ! important; }
+#ContentPrimary dl dt, #ContentPrimary dl dd { background: url('dotbg-cccccc.gif') repeat-x scroll left top transparent; float: left; padding: 0.2em 0pt; }
+#ContentPrimary dl dt { color: rgb(153, 153, 153); font-size: 0.8em; width: 20%; }
+#ContentPrimary dl dd { width: 80%; }
+#ContentPrimary dl dd ol { margin-left: 1.8em; }
+#ContentPrimary fieldset.tools-menu { display: none; }
+#ContentPrimary fieldset .send-to { margin-left: 16em; }
+#ContentPrimary fieldset ol { font-size: 0.8em; margin: 2em; }
+#ContentPrimary fieldset .exportCitation { display: block; margin-left: 2em; }
+#ContentPrimary fieldset .exportCitation label { display: inline; float: none; }
+#ContentPrimary fieldset.exportCitation p label { width: auto; }
+#ContentPrimary fieldset.exportCitation .button { margin-top: 1em; }
+#ContentPrimary img.fulltextPreview { border: 1px solid rgb(204, 204, 204) ! important; }
+#ContentPrimary ol.citations { margin-left: 2em; }
+#ContentPrimary ol.citations li { margin-bottom: 0.8em; }
+#ContentPrimary ol.citations li ul { height: 1.4em; margin-top: 0.4em; }
+#ContentPrimary ol.citations li ul li { float: left; margin: 0pt 1em 0pt 0pt; }
+#ContentPrimary p.viewTitle { color: rgb(255, 141, 67); font-family: Minion,Garamond,Serif; font-size: 1.25em; line-height: 1.25em; padding: 0.4em; }
+#ContentPrimary p.guestEditors { color: rgb(119, 119, 119); font-size: 0.85em; font-weight: 700; padding: 0pt 0.6em; margin-top: 0pt; }
+#ContentPrimary ul.manifest li p.snippets { font-size: 0.85em; }
+#SearchTerms { display: none; }
+#ContentNavigation div ul { margin-left: 2em; }
+#ContentPrimary #CreateAdministrators { clear: left; }
+#ContentPrimary fieldset #ShoppingCart input[type="text"] { width: 4em; }
+#ContentPrimary fieldset #ShoppingCart label, #ContentPrimary fieldset #ShoppingCart .labelText { width: auto; display: inline; font-weight: 700; }
+#ContentPrimary fieldset #ShoppingCart .labelText { text-align: left; }
+#ContentPrimary #CreateAndSendMemberTokens label { width: 8em; }
+#ContentPrimary ol.footnote { width: 90%; padding: 0pt 10%; }
+#ContentPrimary div.answers { min-height: 24.4em; }
+#ContentPrimary div.contactUs { min-height: 22.6em; margin: 0.8em 0pt 0pt 0.8em; }
+#ContentPrimary div.doiText p a { text-decoration: underline; }
+#ContentPrimary div.doiText { min-height: 22.6em; margin: 0.8em 0pt 0pt 0.8em; }
+#ContentPrimary div.contactUs p a { text-decoration: underline; }
+#ContentPrimary div.results { min-height: 22.6em; margin: 0.4em; }
+#ContentPrimary a.external { white-space: nowrap; padding-right: 15px; background: url('external_site.gif') no-repeat scroll 100% 50% transparent; }
+#ContentPrimary p.Keyword { margin: 0.8em 0pt; }
+#ContentPrimary p.Keyword span.KeywordHeading { font-weight: bold; }
+#ContentPrimary div.ArticleNote { margin: 0.8em 0pt; }
+#ContentPrimary div.ArticleNote div.Important { border: 0.1em solid rgb(119, 119, 119); padding: 0.5em; display: block; margin: 0.8em 0pt; background: none repeat scroll 0% 0% rgb(239, 239, 239); }
+.Abstract[lang] { border-bottom: 1px solid rgb(51, 51, 51); padding-bottom: 1em; }
+.fulltextThumbnails { height: 135px; overflow: hidden; }
+.fulltextThumbnails.loading { background: url('ajax-loader.gif') no-repeat scroll center center transparent; }
+.fulltextThumbnails .toggle { background-image: none; font-size: 80%; font-style: normal; }
+.fulltextThumbnails li { display: inline-block; margin: 0pt 5px 1em; width: 18%; }
+.fulltextThumbnails li a { background-color: rgb(221, 221, 221); display: inline-block; border: 1px solid rgb(221, 221, 221); width: 100%; }
+.fulltextThumbnails .ajax-loader { background-image: url('ajax-loader.gif'); background-position: center center; background-repeat: no-repeat; position: static ! important; }
+.fulltextThumbnails img { margin: 0pt auto; vertical-align: bottom; width: 100%; }
+.fulltextThumbnails p { text-align: center; margin: 0.2em; }
+body.scriptDisabled #ContentSecondary div.section ul.panels { display: none; }
+#ContentSecondary { color: rgb(105, 105, 105); float: left; margin: 0.5em 0pt 0.5em 0.4em; width: 18em; }
+#ContentSecondary > div { font-size: 0.75em; }
+#ContentSecondary #Cockpit, #ContentSecondary div.advertisement {  }
+#ContentSecondary div.overview h1 { color: rgb(255, 141, 67); font-size: 1.25em; font-weight: bold; margin-bottom: 0.3em; }
+#ContentSecondary div.overview h1 span.subtitle { font-weight: bold; font-size: 0.9em; }
+#ContentSecondary div.heading h2 { border-left: 0.3em solid rgb(247, 96, 19); color: rgb(255, 141, 67); line-height: 1.2em; padding: 0pt 0.5em; }
+#ContentSecondary div.subsection h2 { background-color: rgb(255, 255, 255); border-bottom: 2px dotted rgb(204, 204, 204); margin: 0pt 0.3em; padding: 0.3em 0.2em; }
+#ContentSecondary div.section ul.panels li a { margin: 0.5em 0.5em 0pt; }
+#ContentSecondary div.section ul.panels li a:focus, #ContentSecondary div.section ul.panels li a:hover { background-color: rgb(239, 239, 239) ! important; }
+#ContentSecondary div.subsection a { display: inline; }
+#ContentSecondary div.subsection dl.details dd ol { margin-left: 1.5em; }
+#ContentSecondary div.subsection dl.details dd ul li.contributor a.email { display: block; }
+#ContentSecondary .cockpitFocusedElement { border: 3px inset rgb(0, 0, 0); }
+#ContentSecondary div.overview { padding: 0.3em; }
+#ContentSecondary div.overview p { display: inline; font-weight: bold; margin-bottom: 0.2em; }
+#ContentSecondary div.overview p a { display: inline; }
+#ContentSecondary div.overview span.doi { display: none; }
+#ContentSecondary div.section { background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(218, 218, 218); padding: 0.4em; }
+#ContentSecondary div.section div.subsection h4, #ContentSecondary div.section div.subsection p { padding: 0.4em; }
+#ContentSecondary div.section ul.panels { float: right; }
+#ContentSecondary div.section ul.panels li.ui-tabs-selected { display: none; }
+#ContentSecondary div.subsection { background-color: rgb(255, 255, 255); border: 0.4em solid rgb(239, 239, 239); }
+#ContentSecondary div.subsection div.accordion ul { margin: 0pt; padding: 0.4em; }
+#ContentSecondary div.subsection div.accordion ul li { padding: 0.1em 0.2em; }
+#ContentSecondary div.subsection ul li .title { border-bottom: 0pt none; }
+#ContentSecondary div.subsection ul li .contextTag {  }
+#ContentSecondary div.subsection ul.manifest { background-color: rgb(255, 255, 255); }
+#ContentSecondary div.subsection ul.manifest li .title, #ContentSecondary div.subsection ul.manifest li p, #ContentSecondary div.subsection ul.manifest li ul { padding: 0.1em 0.4em; }
+#ContentSecondary dl dt { color: rgb(170, 170, 170); margin-bottom: 0.2em; }
+#ContentSecondary dl dd { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; font-size: 1.1em; margin-bottom: 0.2em; padding-bottom: 0.2em; }
+#ContentSecondary ul.manifest li p.showButton .title { font-weight: bold; }
+#ContentSecondary ul.resources { clear: both; position: relative; }
+#ContentSecondary ul.resources li.details { position: absolute; right: 0pt; top: 0pt; }
+#ContentSecondary ul.sections li { background-color: rgb(255, 255, 255); line-height: 1.3em; margin-right: 0.3em; }
+#ContentSecondary ul.sections li.ui-tabs-selected { height: 1.6em; }
+#ContentSecondary ul.sections li.ui-tabs-selected a { border-left: 0.4em solid rgb(255, 141, 67); color: rgb(255, 141, 67); cursor: default; }
+#ContentSecondary ul.sections.count1 li, #ContentSecondary ul.sections.count2 li { width: 44.9%; }
+#BrowseSection ul.sections.count2 li {  }
+#ContentSecondary ul.sections.count3 li { width: 28%; }
+#ContentSecondary ul.selectors li.subjectSubgroup { background-color: rgb(240, 240, 240); }
+#ContentSecondary ul.selectors li.subject ul.selectors li.subject { background-color: rgb(251, 251, 251); }
+#ContentSecondaryAds { position: absolute; bottom: -10em; }
+#Descriptors p { color: rgb(255, 255, 255); font-weight: bold; padding: 0pt 0.2em 0.3em; }
+#Descriptors ul li { background-color: rgb(255, 255, 255); border: 4px solid rgb(255, 255, 255); margin: 0pt 0pt 2px; }
+#Descriptors ul li a { background: url('x-button.gif') no-repeat scroll left center transparent; padding: 0pt 0pt 0pt 16px; }
+#Descriptors ul li a:focus, #Descriptors ul li a:hover { background-image: url('x-button-hover.gif'); }
+#Descriptors ul li a span.dimensionName { font-weight: bold; padding-right: 0.2em; }
+#Filters div.scroll-pane { height: 15em; }
+#Refinements p { background-color: rgb(239, 239, 239); padding: 0pt 0.2em 0.3em; }
+#FindRegistration div, #Descriptors { background-color: rgb(200, 200, 200); padding: 0.4em; }
+#FindRegistration input { width: 14.3em; }
+.section.loading { background: url('ajax-loader.gif') no-repeat scroll center center transparent; }
+#ContentSecondary ul.resources { margin: 0pt 0pt 0.5em; height: auto; }
+#ContentSecondary ul.resources li { margin-top: 0.5em; float: none; }
+#ContentSecondary .subsection .external[href^="http://www.springeronline.com"], #ContentSecondary .subsection .external[href^="http://www.springer.com"] { background-image: url('springer-external-bg.png'); background-position: right bottom; background-repeat: no-repeat; color: rgb(238, 238, 238); display: block; padding: 0.4em; margin-bottom: 1px; }
+#ContentSecondary .subsection .external[href^="http://www.springeronline.com"]:hover, #ContentSecondary .subsection .external[href^="http://www.springer.com"]:hover { color: rgb(255, 255, 255) ! important; }
+#Cockpit .section .subsection { position: relative; }
+.scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution p, .scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution span.contentStatus, .scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution ul, .scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution .abstract, .scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution .relatedAbstract img.ajax-loader { display: none; }
+.scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution p.contentLabel, .scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution p.articleCategory, .scriptEnabled #ContentSecondary #RelatedSection ul.manifest li.primitive.contribution p.showButton { display: block; }
+.ui-dialog { border: medium none; }
+#HoverOverSummary { border-width: 1px 3px 3px 1px; border-style: dotted solid solid dotted; border-color: rgb(119, 119, 119); font-size: 0.75em; margin-left: 0pt; background-color: rgb(255, 255, 255); z-index: 2; overflow: hidden; }
+#HoverOverSummary p, #HoverOverSummary span.contribution, #HoverOverSummary ul { padding: 0.4em 1em; }
+#HoverOverSummary ul.resources { border-style: dotted; border-color: rgb(233, 232, 232); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 2px 0pt; }
+#HoverOverSummary ul.resources li { display: inline; float: none ! important; }
+.contributionSummary .publication { color: rgb(153, 153, 153); display: block; font-size: 1.2em; font-weight: bold; padding: 0pt 0pt 1em; text-transform: uppercase; }
+#HoverOverSummary .publication, #HoverOverSummary .publicationSeries { color: rgb(153, 153, 153); background-color: rgb(239, 239, 239); display: block; font-size: 1.2em; padding: 0.4em 0.5em; text-transform: uppercase; }
+#HoverOverSummary .publicationSeries { padding-bottom: 0pt; font-style: italic; }
+#HoverOverSummary .publication a, #HoverOverSummary .publicationSeries a { font-weight: bold; }
+.contributionSummary .title a, #HoverOverSummary .title a { color: rgb(255, 141, 67); font-family: Minion,Garamond,Serif; font-size: 1.8em; }
+#HoverOverSummary .authors { font-size: 1em; font-weight: bold; }
+#PopupinfoAbstract .ajax-loader { background: url('ajax-loader.gif') no-repeat scroll center center transparent; }
+#HoverOverSummary .ajax-loader { background: url('ajax-loader.gif') no-repeat scroll center center transparent; min-height: 150px; }
+#HoverOverSummary > .bridge { position: absolute; height: 5em; width: 10px; top: 10em; left: -9px; z-index: 3; background-color: rgb(255, 255, 255); }
+.abstract, .firstPagePreview { margin: 0pt 1em; padding: 0pt 0pt 1em; }
+.contributionSummary { background-color: rgb(255, 255, 238); clear: both; font-size: 0.9em; }
+div#Content div#ContentPrimary li.primitive div.contributionSummary img.ajax-loader { display: block; height: auto; margin: 2em auto; padding: 2em 0pt; position: static; }
+.contributionSummary .publication { color: rgb(153, 153, 153); display: block; font-size: 1.2em; font-weight: bold; padding: 0pt 0pt 1em; text-transform: uppercase; }
+#HoverOverSummary #PopupinfoAbstract div h2, .contributionSummary div h2 { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; border: medium none; color: rgb(255, 141, 67); margin: 0pt 0pt 0.4em; }
+#ContentPrimary ul.manifest li ul.resources li.summary-button { position: absolute; right: 0pt; top: 0pt; }
+.firstPagePreview img { display: block; margin: 1em auto; }
+#Cockpit li.primitive.contribution div.firstPagePreview { display: none; }
+#ContentSecondary #Cockpit .showButton .title { margin-right: 0.5em; padding: 0pt; }
+#ContentSecondary .subsection .showButton a { display: block; }
+.showButton .itemTag { display: block; font-size: 0.9em; width: 100%; }
+#PrimaryAbstractSection .subsection { background: none repeat scroll 0% 0% rgb(255, 255, 238); }
+#PrimaryAbstractSection .subsection.loading { background: url('ajax-loader.gif') no-repeat scroll center center transparent; height: 100px; }
+#ContentPrimary iframe.fulltext { border: medium none; width: 100%; height: 40em; }
+#PrimaryAbstractSection .ui-tabs-nav li { background: none repeat scroll 0% 0% rgb(255, 255, 238); border-style: solid; border-color: rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 0pt 3px 3px 0pt; display: inline-block; padding: 0.5em 1.5em; }
+#PrimaryAbstractSection .ui-tabs-nav li.ui-tabs-selected { border-bottom-color: rgb(255, 255, 238); }
+#AbstractSection div.Abstract span.AbstractHeading { display: none; }
+body.defaultPage #Content h2 { background-color: rgb(255, 255, 255); text-transform: uppercase; }
+body.defaultPage #ContentPrimary h2 { float: left; font-family: inherit; font-size: 0.9em; font-style: inherit; margin: 0pt 0pt 0pt 1em; padding: 0.2em 0.6em; text-align: left; }
+body.defaultPage #BrowseByContentType ul li a { background-color: rgb(255, 255, 255); color: rgb(255, 141, 67); display: block; font-size: 1.2em; font-weight: bold; height: 2.5em; margin-right: 4px; opacity: 0.85; padding: 0.25em 0.5em; }
+body.defaultPage #BrowseByContentType ul li.last a { margin-right: 0pt; }
+body.defaultPage #BrowseByContentType ul li a:focus, body.defaultPage #BrowseByContentType ul li a:hover { opacity: 1; filter: none; text-decoration: none; }
+body.defaultPage #OtherResources li a { color: inherit; display: block; height: 4.4em; opacity: 0.6; position: relative; }
+body.defaultPage #OtherResources li a:focus, body.defaultPage #OtherResources li a:hover { opacity: 1; }
+body.defaultPage #OtherResources li.authors a { background: url('home-authors.version.jpg') no-repeat scroll left bottom rgb(229, 216, 191); }
+body.defaultPage #OtherResources li.librarians a { background: url('home-librarians.version.jpg') no-repeat scroll left top rgb(193, 125, 88); }
+body.defaultPage #OtherResources li.societies a { background: url('home-societies.version.jpg') no-repeat scroll left bottom rgb(169, 175, 111); }
+body.defaultPage #ContentSecondary div.heading a { color: rgb(255, 141, 67); float: right; }
+body.defaultPage #BrowseByContentType { border-bottom: 0.25em solid rgb(239, 239, 239); }
+body.defaultPage #ContentPrimary div.heading { background: url('hatch-ffc48e-fce9d7.version.gif') repeat scroll 0% 0% rgb(252, 233, 215); border-bottom: 0.5em solid rgb(255, 255, 255); border-top: 0.4em solid rgb(255, 255, 255); height: 1em; line-height: 0.7em; margin: 0pt; padding: 0pt; }
+body.defaultPage #ContentSecondary div.scroll-pane { height: 35em; }
+body.defaultPage #BrowseByContentType div.background { background: url('home-browse-by-content.version.jpg') no-repeat scroll right center rgb(208, 218, 226); height: 10em; }
+body.defaultPage #BrowseByContentType ul li { float: left; margin-top: 5em; width: 20%; }
+body.defaultPage:lang(de) #BrowseByContentType ul li.books { width: 15%; }
+body.defaultPage:lang(de) #BrowseByContentType ul li.referenceWorks { width: 25%; }
+body.defaultPage #BrowseByContentType ul li a span { display: block; font-size: 0.8em; margin-top: 0.4em; }
+body.defaultPage #OtherResources { background-color: rgb(239, 239, 239); height: 10em; padding: 0pt; }
+body.defaultPage #OtherResources li { background-color: rgb(255, 255, 255); float: left; padding: 0pt; text-align: left; width: 32.85%; }
+body.defaultPage #OtherResources li a span { background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(216, 216, 216); display: block; font-size: 0.8em; padding: 0.5em; position: absolute; top: 100%; width: 95%; }
+body.defaultPage #OtherResources li.librarians { margin: 0pt 0.25em; }
+body.defaultPage #OtherResources li.societies { float: right; }
+body.defaultPage #ContentSecondary li { padding: 0.075em 0pt; }
+#SubjectSystem { overflow: hidden; }
+body.defaultPage #SubjectSystem li a, body.defaultPage #FeaturedLibraries li a { display: block; font-size: 1.1em; margin-left: 1.5em; padding: 0.1em 0.2em; }
+body.defaultPage #SubjectSystem li ul li { margin-left: 1.2em; }
+.expander { position: absolute; }
+body.defaultPage #SubjectSystem li .expander { background: url('down-arrow.version.gif') no-repeat scroll center center transparent; cursor: pointer; height: 11px; margin: 0.3em 0.4em; padding: 0pt; width: 11px; }
+body.defaultPage #SubjectSystem li .ajax-loader { background-image: url('ajax-loader-tiny.gif'); }
+body.defaultPage #SubjectSystem li.collapsed .expander { background-image: url('right-arrow.version.gif'); }
+.defaultPage iframe { overflow: hidden; }
+.defaultPage #OtherResources { border-top: 0.25em solid rgb(239, 239, 239); }
+.message-control, .heading-control { background-position: 0.5em center; background-repeat: no-repeat; border-style: dotted; border-width: 1px 0pt; padding: 1em 1em 1em 2em; position: relative; margin: 0.5em 1em; }
+.message-control a { text-decoration: underline; }
+.message-control a:focus, .message-control a:hover { text-decoration: none; }
+.message-control.error { background-image: url('error.gif'); background-color: rgb(255, 136, 136); }
+.message-control.information { background-image: url('information.gif'); background-color: rgb(238, 238, 238); }
+.message-control.question { background-image: url('question.gif'); }
+.message-control.warning { background-image: url('warning.gif'); background-color: Yellow; }
+.message-control.bullet { background-image: url('heading-bullet.gif'); }
+.heading-control { background: url('heading-bullet.gif') no-repeat scroll left 0.2em transparent; }
+fieldset .message-control.information { background-color: Transparent; border: medium none; padding: 0pt 0pt 0pt 2em; }
+.jScrollPaneContainer { position: relative; overflow: hidden; z-index: 1; }
+div.jScrollPaneTrack { background-color: rgb(239, 239, 239); border-left: 1px dotted rgb(204, 204, 204); border-right: 1px dotted rgb(204, 204, 204); position: absolute; cursor: pointer; right: 0pt; top: 0pt; height: 100%; }
+div.jScrollPaneTrack { background-color: rgb(255, 255, 255); border-color: rgb(255, 255, 255); }
+div.jScrollPaneDrag { background: url('scroll_grab.gif') no-repeat scroll center center rgb(216, 216, 216); border: 1px solid rgb(168, 168, 168); cursor: pointer; margin: 0pt 2px; overflow: hidden; position: absolute; width: 6px ! important; }
+div.jScrollPaneDrag { background-color: rgb(239, 239, 239); }
+div.jScrollPaneDragTop { position: absolute; top: 0pt; left: 0pt; overflow: hidden; }
+div.jScrollPaneDragBottom { position: absolute; bottom: 0pt; left: 0pt; overflow: hidden; }
+a.jScrollArrowUp { background: url('scroll_arrow_up.gif') no-repeat scroll center top rgb(239, 239, 239); border-left: 1px dotted rgb(204, 204, 204); border-right: 1px dotted rgb(204, 204, 204); display: block; height: 10px; overflow: hidden; position: absolute; right: 0pt; text-indent: -2000px; top: 0pt; z-index: 1; }
+div.subsection a.jScrollArrowUp { background-color: rgb(255, 255, 255); border-color: rgb(255, 255, 255); }
+a.jScrollArrowUp:hover, a.jScrollArrowDown:hover { background-position: 0pt -10px; }
+a.jScrollArrowDown { background: url('scroll_arrow_down.gif') no-repeat scroll center top rgb(239, 239, 239); border-left: 1px dotted rgb(204, 204, 204); border-right: 1px dotted rgb(204, 204, 204); bottom: 0pt; display: block; height: 10px; overflow: hidden; position: absolute; right: 0pt; text-indent: -2000px; z-index: 1; }
+div.subsection a.jScrollArrowDown { background-color: rgb(255, 255, 255); border-color: rgb(255, 255, 255); }
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover { background-position: 0pt -20px; }
+#ui-datepicker-div { z-index: 2; color: rgb(255, 255, 255); background-color: rgb(208, 208, 208); border: 1px solid rgb(128, 128, 128); display: none; border-radius: 5px 5px 5px 5px; padding: 2px; }
+#ui-datepicker-div table { border-collapse: separate; border-spacing: 0.2em; color: rgb(51, 51, 51); width: 100%; }
+#ui-datepicker-div table th { padding: 0.3em; }
+#ui-datepicker-div td { background-color: rgb(236, 236, 236); border: 1px solid rgb(136, 136, 136); text-align: center; border-radius: 2px 2px 2px 2px; padding: 0pt; }
+#ui-datepicker-div td.ui-datepicker-unselectable { border: medium none; background-color: rgb(208, 208, 208); }
+#ui-datepicker-div td.ui-datepicker-current-day a, #ui-datepicker-div td.ui-datepicker-days-cell-over a { font-weight: bolder; }
+#ui-datepicker-div .ui-state-highlight { color: rgb(227, 85, 37); font-weight: bold; }
+.ui-datepicker-header { background-color: rgb(227, 85, 37); border-radius: 5px 5px 5px 5px; padding: 0pt 0.5em; }
+.ui-datepicker-header .ui-datepicker-prev { float: left; padding: 0.2em 0pt; color: rgb(255, 255, 255); }
+.ui-datepicker-header .ui-datepicker-next { float: right; padding: 0.2em 0pt; color: rgb(255, 255, 255); }
+.ui-datepicker-header .ui-datepicker-next.ui-state-disabled:hover, .ui-datepicker-header .ui-datepicker-prev.ui-state-disabled:hover { cursor: pointer; }
+.ui-datepicker-header .ui-datepicker-next.ui-state-disabled, .ui-datepicker-header .ui-datepicker-prev.ui-state-disabled { color: rgb(119, 119, 119); }
+.ui-datepicker-header .ui-datepicker-next.ui-state-disabled:hover, .ui-datepicker-header .ui-datepicker-prev.ui-state-disabled:hover { text-decoration: none; cursor: default; }
+.ui-datepicker-header .ui-datepicker-title { padding: 0.2em 0pt; text-align: center; }
+.ui-datepicker-trigger { vertical-align: text-bottom; margin: 0pt 0.2em; }
+.ui-datepicker iframe { display: none; }
+.token-consumtion #TokenConsumptionPanel .textBox { display: inline; margin-left: 3em; }
+#TokenConsumptionPanel .example { display: block; }
+#IdentityHome { background-color: rgb(255, 255, 255); }
+#IdentityOptionsList { float: left; margin: 0.5em 1em; }
+#IdentityOptionsList li { position: relative; float: left; width: 24em; height: 8em; margin-bottom: 0.8em; margin-right: 0.8em; }
+#IdentityOptionsList a { font-weight: bold; }
+#IdentityOptionsList p { margin: 0.5em; }
+.token-list .type input { position: absolute; right: 1em; }
+#RemoteServiceUserTable th { text-align: left; }
+#RemoteServiceUserTable .RemoveButton { width: auto; }
+.manage-remote-service-user .user-id-textbox { display: inline ! important; }
+.identities-list { margin: 1em; }
+.identities-list li { float: left; position: relative; width: 50%; }
+.identities-list li > * { margin: 0.5em; }
+.identities-list input.remove-button { position: absolute; top: 2em; right: 1em; }
+.confirmationPanel { float: right; }
+#OtherOptionsList { margin: 0pt 0pt 0pt 0.5em; width: 30em; text-align: right; }
+#OtherOptionsList li { margin: 1em 0pt; }
+#OtherOptionsList p { text-align: left; margin: 0.5em 0pt; }
+.browse-identities-dialog { border-bottom: 1px solid rgb(119, 119, 119); }
+.identity-heading { padding: 0.5em; }
+.identity-heading img { float: left; padding: 0pt 0.5em; }
+.identity-heading table { margin: 0.5em; }
+#Content .institutional-login div { float: left; }
+#Content .institutional-login select { width: 100%; }
+#Institutions { width: 70%; }
+#Content .institutional-login label { width: auto; }
+#Content .institutional-login .rememberMe { display: inline; margin-left: 0pt; }
+.anonymous-only-checkbox { display: block; margin-left: 15.8em; }
+#ManageContracts fieldset { margin-top: 1em; float: left; }
+#ManageContracts div { clear: left; }
+#ManageContracts fieldset fieldset { margin-top: 0pt; }
+#ManageContracts fieldset fieldset legend { background-image: none; font-weight: normal; margin: 0pt; padding: 0pt; text-indent: -1em; }
+#ManageContracts fieldset fieldset input.text { display: inline; width: 8em; }
+#ManageContracts fieldset .checkBox { margin-left: 1em; }
+#ManageContracts #CreatedOn { margin: 0pt 1em 1em; }
+#ManageContracts .button-panel { margin-right: 8em; text-align: right; }
+.logInAsPanel { margin: 0pt 1em; }
+#ContentPrimary fieldset input.email { width: 20em; }
+#TokenUsage span.checkBox { margin-left: 5em; }
+#TokenExpirationDate label.expiration-date { width: 7em; }
+#TokenCreatedPanel caption { padding: 1em; }
+#TokenCreatedPanel .button-panel { margin: 0.5em 0pt 1em 12em; }
+fieldset.new-referrer input { display: inline; background: none repeat scroll 0% 0% red; }
+.identities-help-page #ContentPrimary fieldset label { margin-top: 0.5em; width: 8em; }
+.identities-help-page #ContentPrimary fieldset input { display: inline; }
+.identities-help-page #ContentPrimary p { margin: 1em; }
+#ShareThisMenu ul { background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 0.2em solid rgb(200, 200, 200) ! important; z-index: 1; top: 100%; width: 10em; }
+#ShareThisMenu:hover ul, #ShareThisMenu.show ul { left: 0pt; }
+#ShareThisMenu li { margin: 0pt; padding: 0.5em; }
+#ShareThisMenu li:last-child { border-bottom: medium none; }
+#ShareToolbar { height: 4em; margin: 0.2em; padding: 0.5em; text-align: center; }
+#ShareToolbar .share-this-sprite { font-weight: bold; }
+#ShareToolbar ul { height: 2em; padding: 0.5em; }
+#ShareToolbar li { display: inline; padding: 0pt 0.5em; }
+#SavedItemsList { padding: 0.5em 1em; }
+#SavedItemsList p, #SavedItemsList div { padding: 0.1em 0pt; }
+#ItemDetails .content-type, #SavedItemsList .content-type { font-size: 0.8em; }
+#ItemDetails .title, #SavedItemsList .title { font-size: 1.3em; }
+#ItemDetails .title a, #SavedItemsList .title a { color: rgb(247, 96, 19); }
+#ItemDetails .title a:focus, #ItemDetails .title a:hover, #SavedItemsList .title a:focus, #SavedItemsList .title a:hover { color: rgb(51, 51, 51); }
+#SavedItemsList .saved-item { border-bottom: 1px dotted rgb(170, 170, 170); padding: 0.25em 6em 0.25em 0pt; margin: 0.5em 0pt; position: relative; }
+#SavedItemsList .saved-items-toolbar { position: absolute; top: 0.5em; right: 0.5em; height: 1.5em; }
+#SavedItemsList li ul li { display: inline; }
+#SavedItemsList .saved-items-toolbar li { height: 1em; width: 2em; }
+#SavedItemsList .labels ul { display: inline; position: static; }
+#SavedItemsList .labels li + li:before { content: ","; }
+#SavedItemsList .labels li + li:last-child:before { content: " and "; }
+#SavedItemOptions fieldset fieldset { width: 30%; float: left; }
+#SavedItemOptions fieldset fieldset .checkBox { margin-left: 1.5em; }
+#RegisterForAnAlert .button-panel, #LabelSavedItem .button-panel { clear: left; }
+#RenameSavedItem input[type="text"] { width: 20em; }
+#LabelSavedItem li { float: left; width: 30%; }
+#LabelSavedItem li .checkBox { margin: 0.2em 1em; }
+#MigrateMessage { font-weight: bold; padding: 1em; }
+#MigrateMessage input { margin: 0pt 1em; }
+#ItemDetails { margin: 0pt 1em 0.2em; }
+#SavedItemsDelete { min-height: 10em; }
+#SavedItemsDelete h2 { padding-left: 1em; }
+#SavedItemsDelete p { margin: 1em; }
+#SavedItemsDelete a { text-decoration: underline; }
+#SavedItemsDelete a:focus, #SavedItemsDelete a:hover { text-decoration: none; }
+.saved-item-criteria > span { width: 10em; }
+#BrandCropper canvas { border: 1px solid black; }
+#BrandCropper { background-color: rgb(255, 255, 255); position: relative; padding: 0.5em; }
+#BrandCropper p { clear: left; padding: 1em; }
+#BrandCropper a { text-decoration: underline; }
+#BrandCropper a:focus, #BrandCropper a:hover { text-decoration: none; }
+#BrandCropper .message-control { padding: 1em 1em 1em 2em; }
+#BrandCropper p em { font-style: normal; }
+#CroppingPanel { margin: 0pt auto; padding: 1em; }
+.scriptDisabled #BrandCropper { display: none; }
+#JcropPanel { float: left; width: 30%; }
+#CroppingPanel, #SizingPanel, #ColorPanel { width: 30em; margin: 0.2em auto; text-align: center; }
+#CroppedPreview { background-color: rgb(255, 255, 255); background-position: center center; background-repeat: no-repeat; display: block; width: 15em; height: 3.8em; margin: 0pt auto; }
+#SizingPanel { margin: 1em auto; }
+#SizingPanel label { display: block; width: auto; margin: 0.4em 0pt; text-align: center; }
+#ColorPanel ul { border: 1px solid black; float: left; width: 100%; }
+#ColorPanel li { float: left; width: 9%; height: 20px; }
+#UploadInstructions { margin: 1em; }
+#PreviewContainer { border: 2px solid rgb(0, 0, 0); padding: 1em; }
+#Zoomer { margin: 1em 0pt 0pt; height: 1em; position: relative; background-color: rgb(160, 160, 160); border: 1px solid rgb(112, 112, 112); }
+#Zoomer a { position: absolute; height: 1.6em; top: -0.3em; width: 1.5em; background-color: rgb(160, 160, 160); border: 1px solid rgb(112, 112, 112); }
+.saved-image-display { width: 216px; height: 54px; }
+#ContentPrimarySearchAdvanced label { width: 15em; float: left; clear: left; margin-right: 1em; text-align: right; }
+#ContentPrimarySearchAdvanced label.inputParent { width: 100%; text-align: left; }
+#ContentPrimarySearchDocument fieldset { float: left; width: 45%; }
+#ContentPrimarySearchDocument fieldset label { width: 8em; }
+#ContentPrimarySearchPublications { clear: left; }
+#ContentPrimarySearchPublications label { width: 18em; }
+#ContentPrimarySearchPublications input { width: 30em; }
+#ContentPrimarySearchPublicationDateRange { clear: left; }
+#ContentPrimarySearchMastLimitResults div { margin-left: 45%; }
+.advanced-search-page #ContentPrimarySearchWithin label { display: inline; float: none; }
+.advanced-search-page #ContentPrimarySearchPublications label { width: 18em; }
+.advanced-search-page #ContentPrimarySearchPublicationDateRange .dates input { display: inline; }
+body.print #Content { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#Content { background: url('bgform.version.jpg') repeat scroll left top transparent; font-size: 1em; line-height: 1.2em; }
+#Content div.heading { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom rgb(255, 255, 255); color: rgb(153, 153, 153); padding: 0.5em; }
+#Content div.heading div.description, #Content div.heading div.viewSelection { clear: both; font-size: 1em; font-weight: bold; padding: 0.1em 0pt 0.4em; z-index: 2; }
+#Content div.heading.view h2 { clear: left; }
+#Content div.heading.view ul.descriptors { display: inline; }
+#Content div.heading.view ul.descriptors li { display: inline; margin-right: 0.3em; }
+#Content div.heading.view ul.descriptors li a { background: url('x-button.gif') no-repeat scroll center center transparent; padding: 0pt 0.7em; }
+#Content div.heading.view ul.descriptors li a span { display: none; }
+#Content div.heading.view.primitiveView div.title { color: inherit; float: right; font-size: 1.15em; padding: 0.4em 0pt; }
+#Content table tbody tr td p.title, #Content ul.manifest li p.title { color: rgb(136, 136, 136); font-weight: bold; }
+#Content table tbody tr td p.title span.subtitle #Content ul.manifest li p.title span.subtitle { font-size: 0.95em; }
+#Content table tbody tr td p.authors, #Content table tbody tr td p.editors, #Content ul.manifest li p.authors, #Content ul.manifest li p.editors { font-size: 0.85em; font-weight: bold; }
+#Content table tbody tr td p.coverage, #Content table tbody tr td p.enumeration, #Content ul.manifest li p.coverage, #Content ul.manifest li p.enumeration { font-size: 0.9em; font-style: italic; }
+#Content ul.manifest li p.contextTag { font-size: 0.9em; float: right; margin-left: 1em; }
+#Content ul.manifest li p.itemTag { color: rgb(153, 153, 153) ! important; }
+#Content ul.manifest li p.priceAndQuantity span span.label { font-weight: normal; margin-right: 0.4em; }
+#Content ul.manifest li p.priceAndQuantity span.price span.value { color: rgb(0, 136, 0); font-weight: bold; }
+#Content ul.manifest li.hasImage { min-height: 80px; }
+.scriptDisabled #Content ul.manifest li.hasImage p, .scriptDisabled #Content ul.manifest li.hasImage ul { margin: 0pt; }
+#Content ul.manifest li.hasImage div.preloadImage { border: 1px solid rgb(204, 204, 204); float: left; margin: 0pt; }
+#Content ul.manifest li.hasImage div.preloadImage { background: none no-repeat scroll 0pt 0pt rgb(239, 239, 239); }
+#Content ul.manifest li.hasImage div.preloadImage.coverImage { height: 60px; width: 45px; }
+#Content ul.manifest li.hasImage div.preloadImage.recognitionImage { height: 54px; width: 216px; }
+.scriptDisabled #Content ul.manifest li.hasImage div.coverImage { display: none; }
+#Content ul.manifest li.browser.hasImage p, #Content ul.manifest li.browser.hasImage ul, #Content ul.manifest li.primitive.hasImage p, #Content ul.manifest li.primitive.hasImage ul { margin-left: 55px; }
+#Content ul.resources { color: rgb(119, 119, 119); font-size: 0.9em; margin: 0.5em 0pt; position: relative; }
+#Content ul.resources li { border: 0pt none ! important; display: inline-block; font-weight: bold; margin-bottom: 0pt ! important; margin-right: 1em; padding: 0pt; vertical-align: middle; }
+#Content ul.resources li .sprite { display: inline-block; }
+#OrderSummary div.footer div div { height: 1.8em; }
+#OrderSummary div.footer div.total { background: url('dotbg-cccccc.gif') repeat-x scroll left top transparent; font-weight: bold; padding-top: 0.6em; }
+#OrderSummary div.footer div div span.label { float: left; }
+#OrderSummary div.footer div div span.value { float: right; }
+#OrderSummary div.footer div.priceSummary div span.value { color: rgb(0, 136, 0); }
+body.print #ContentPrimary { float: none; margin: 0pt; width: auto; }
+#ContentPrimary { background-color: rgb(255, 255, 255); color: rgb(119, 119, 119); float: right; line-height: 1.4em; margin-right: 0.3em; min-height: 17.4em; width: 49em; }
+#ContentPrimary div.advertisement { border: 1px solid rgb(238, 238, 238); clear: both; margin: 1em 0pt; padding: 0.5em; }
+#ContentPrimary div.heading { font-size: 0.9em; }
+#ContentPrimary p.title { font-family: Minion,Garamond,Serif; font-size: 1.2em; }
+#ContentPrimary div.feedback.primaryFeedback { min-height: 24em; }
+#ContentPrimary div.toolBox { background-color: rgb(255, 255, 238); border: 1px solid rgb(221, 221, 170); float: right; font-size: 0.9em; margin: 0.5em; min-height: 18em; width: 15em; }
+#ContentPrimary div.toolBox div.section { margin: 0pt; padding: 0.5em; }
+#ContentPrimary div.toolBox h2 { background-color: rgb(248, 248, 221); border-bottom: 1px dotted rgb(221, 221, 170); color: inherit; font-family: inherit; font-style: inherit; font-variant: inherit; font-size: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; -moz-font-feature-settings: inherit; -moz-font-language-override: inherit; font-weight: bold; padding: 0.2em 0.5em; }
+#ContentPrimary div.toolBox ul.selectors { border: medium none; float: none; height: auto; }
+#ContentPrimary div.toolBox ul.selectors li { border: medium none; background-image: none; float: none; padding: 0pt; }
+#ContentPrimary div.toolBox ul.selectors li a { color: inherit; display: block; font: inherit; text-transform: none; }
+#ContentPrimary div.toolBox ul.selectors li a:focus, #ContentPrimary div.toolBox ul.selectors li a:hover { background-color: rgb(255, 255, 252); }
+#ContentPrimary div.toolBox ul.selectors li span { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; display: block; padding: 0.3em 0.5em; }
+#ContentPrimary div.toolBox ul.selectors li span.current { background-color: rgb(255, 255, 255); color: rgb(255, 141, 67); }
+#ContentPrimary fieldset { clear: both; margin: 0.4em; padding: 0.5em; }
+#ContentPrimary fieldset.details { background-color: rgb(255, 255, 238); border: 1px solid rgb(221, 221, 170); min-height: 8em; padding: 0.5em; }
+#ContentPrimary fieldset.details div.field { margin: 0.2em 0.4em 0.2em 1em; }
+#ContentPrimary fieldset.wizard { background-color: rgb(246, 246, 246); border: 1px solid rgb(238, 238, 238); }
+#ContentPrimary fieldset.wizard div.wizardDialog fieldset.details { margin: 0.4em 0pt; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.termsOfUse { background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); font-size: 0.8em; height: 18em; margin: 0pt; overflow: auto; padding: 0.5em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.termsOfUse h4 { text-transform: uppercase; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.termsOfUse p { margin: 0pt 0pt 0.8em; }
+#ContentPrimary fieldset.wizard div.wizardDialog fieldset.field { border: medium none; margin: 0.4em 0.4em 0.4em 1em; padding: 0pt; }
+#ContentPrimary fieldset.wizard div.wizardDialog fieldset.field legend { float: left; font-weight: bold; text-align: right; width: 12em; }
+#ContentPrimary fieldset.wizard div.wizardDialog fieldset.field label { display: block; font-weight: normal; margin: 0pt 0pt 0.2em 12.2em; }
+#ContentPrimary fieldset div { margin: 0.4em 0.4em 0.4em 1em; }
+#ContentPrimary fieldset div.captcha span.hint { margin-right: 0.5em; }
+#ContentPrimary fieldset div.checkBox { margin: 0.4em; }
+#ContentPrimary fieldset div label { font-weight: normal; line-height: 1.5em; }
+#ContentPrimary fieldset.details div label { font-weight: bold; line-height: 1.5em; }
+#ContentPrimary fieldset div.checkBox input { margin-right: 0.8em; }
+#ContentPrimary fieldset div.checkBox label { font-weight: normal; width: auto ! important; }
+#ContentPrimary fieldset div.field fieldset { display: inline-block; }
+#ContentPrimary fieldset div.field fieldset label { font-weight: normal; width: auto; }
+#ContentPrimary fieldset div.field fieldset label input { margin-left: 0.5em; }
+#ContentPrimary fieldset div.field label { display: inline-block; margin-right: 0.5em; text-align: right; vertical-align: top; width: 12em; }
+#ContentPrimary fieldset div.field span.label { line-height: 1.5em; }
+#ContentPrimary fieldset div.field.checkBox input { margin-left: 13.8em; margin-right: 0.5em; }
+#ContentPrimary fieldset fieldset { margin: 0pt; padding: 0pt; }
+#ContentPrimary fieldset h2 { font-style: normal; margin-bottom: 0.4em; padding: 0pt; }
+#ContentPrimary fieldset legend.hideOffScreen, #ContentPrimary fieldset legend.hideOffScreen span { background: none repeat scroll 0% 0% rgb(255, 255, 255); margin: 0pt; padding: 0pt; }
+#ContentPrimary fieldset span.checkBox input { border: 1px solid rgb(204, 204, 204); }
+#ContentPrimary fieldset span.checkBox label { vertical-align: text-bottom; }
+#ContentPrimary fieldset dd { border-top: 0pt none; }
+#ContentPrimary fieldset input.no-label { margin-left: 15.6em; }
+#ContentPrimary fieldset.wizard div.wizardDialog { margin: 0pt; min-height: 14em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div p { margin: 0.4em 2em 1em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field { clear: both; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field div.captcha { float: left; margin: 0pt 0.5em 0pt 0pt; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field span.validator.hintCaptchaValidator { float: left; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field span.validator.hintCaptchaValidator span { display: block; padding: 0.45em 0.8em; width: 16em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field span.auxiliary { margin-left: 0.4em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field span.validator span { background-color: rgb(255, 255, 221); border: 1px solid rgb(221, 221, 170); color: rgb(170, 102, 102); margin-left: 0.4em; padding: 0.2em 0.5em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field span.checkBox label { width: auto; margin-left: 0.25em; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field.emailAddressBatchTextBoxField { margin: 0pt; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field.emailAddressBatchTextBoxField label { display: none; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.field.emailAddressBatchTextBoxField span.validator { vertical-align: top; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.feedback p { margin: 0.4em 0pt; }
+#ContentPrimary fieldset.wizard div.wizardDialog div.subfield { margin: 0pt 0pt 0pt 13.8em; }
+#ContentPrimary fieldset.wizard div.wizardDialog fieldset.details ul.manifest li p { clear: none; margin: 0pt; }
+#ContentPrimary fieldset.wizard div.wizardDialog p { clear: both; margin-bottom: 0.5em; }
+#ContentPrimary fieldset.wizard div.wizardDialog select.dropDownList { width: 12em; }
+#ContentPrimary fieldset.wizard div.wizardDialog select.dropDownList.longDropDownList { width: 16em; }
+#ContentPrimary fieldset.wizard div.wizardDialog select.dropDownList.shortDropDownList { width: 8em; }
+#ContentPrimary fieldset.wizard div.wizardDialog select.dropDownList.tinyDropDownList { width: 5em; }
+#ContentPrimary fieldset.wizard div.wizardDialog input.textBox { width: 12em; }
+#ContentPrimary fieldset.wizard div.wizardDialog input.textBox.longTextBox { width: 16em; }
+#ContentPrimary fieldset.wizard div.wizardDialog input.textBox.shortTextBox { width: 8em; }
+#ContentPrimary fieldset.wizard div.wizardDialog input.textBox.tinyTextBox { width: 5em; }
+#ContentPrimary fieldset.wizard div.wizardSubmit, #ContentPrimary fieldset.wizard div.wizardTransport { border-top: 1px solid rgb(221, 221, 221); margin: 0pt; padding-top: 0.4em; }
+#ContentPrimary fieldset.wizard div.wizardSubmit { padding-left: 13.5em; }
+#ContentPrimary fieldset.wizard div.wizardTransport { text-align: right; }
+#ContentPrimary fieldset input.button { margin-right: 0.5em; }
+#ContentPrimary fieldset table { font-size: 0.9em; text-align: left; }
+#ContentPrimary fieldset table tfoot, #ContentPrimary fieldset table thead { background-color: rgb(238, 238, 204); border: 1px solid rgb(221, 221, 170); }
+#ContentPrimary fieldset table tbody { background-color: rgb(255, 255, 224); border: 1px solid rgb(221, 221, 170); }
+#ContentPrimary fieldset table tbody tr { border-bottom: 1px solid rgb(238, 238, 187); }
+#ContentPrimary fieldset table tbody tr.alternate { background-color: rgb(255, 255, 244); }
+#ContentPrimary h2 { clear: both; }
+#ContentPrimary h3 { color: rgb(153, 153, 153); padding: 0.3em 0pt 0.5em; }
+#ContentPrimary a.button, #ContentPrimary input.button { background-color: rgb(232, 232, 232); border: 1px solid rgb(204, 204, 204); color: rgb(119, 119, 119); font-size: 0.75em; padding: 0.3em 0.6em; text-transform: uppercase; }
+#ContentPrimary .button:focus, #ContentPrimary a.button:hover, #ContentPrimary input.button:hover { background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); }
+#ContentPrimary a.button.fieldset-default, #ContentPrimary input.button.fieldset-default { background-color: rgb(255, 141, 67); color: rgb(255, 255, 255); font-weight: bold; }
+#ContentPrimary a.button.fieldset-default:focus, #ContentPrimary a.button.fieldset-default:hover, #ContentPrimary input.button.fieldset-default:focus, #ContentPrimary input.button.fieldset-default:hover { background-color: rgb(247, 96, 19); }
+#ContentPrimary input.button.disabled { background-color: rgb(204, 204, 204); color: rgb(232, 232, 232); }
+#ContentPrimary input.button.disabled:hover { background-color: rgb(204, 204, 204); color: rgb(232, 232, 232); }
+#ContentPrimary table tbody tr td p.title a, #ContentPrimary ul.manifest li p.title a { color: rgb(255, 141, 67); }
+#ContentPrimary ul.bulleted { list-style-type: square; list-style-position: inside; padding: 0.4em; }
+#ContentPrimary ul.bulleted li { margin: 0.2em; }
+#ContentPrimary ul.manifest { font-size: 0.9em; padding: 0.4em; }
+#ContentPrimary ul.manifest li { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; margin-bottom: 0.5em; overflow: hidden; padding: 0.2em 0pt; }
+#ContentPrimary ul.manifest .resources li { background: none repeat scroll 0% 0% transparent; }
+#ContentPrimary ul.manifest li.identity p.type { color: rgb(153, 153, 153) ! important; font-size: 0.9em; }
+#ContentPrimary ul.manifest li.identity.hasImage p, #ContentPrimary ul.manifest li.identity.hasImage ul { margin-left: 230px; }
+#ContentPrimary ul.manifest li input.button { border-radius: 2em 2em 2em 2em; background-color: rgb(221, 221, 221); color: rgb(119, 119, 119); font-size: 0.7em; font-weight: normal; padding: 0.2em 0.5em; }
+#ContentPrimary ul.manifest li input.button:focus, #ContentPrimary ul.manifest li input.button:hover { background-color: rgb(248, 248, 248); }
+#ContentPrimary ul.manifest li p.itemTag { color: rgb(153, 153, 153); font-size: 0.9em; }
+#ContentPrimary ul.manifest li p.buttons { margin: 0.4em 0pt; }
+#ContentPrimary ul.selectors { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; float: right; height: 2em; margin-bottom: 0.5em; }
+#ContentPrimary ul.selectors li { background: url('dotbg-cccccc.gif') repeat-y scroll left top transparent; float: left; padding: 0.25em 1em; }
+#ContentPrimary ul.selectors li a { color: rgb(255, 141, 67); font-size: 0.8em; font-weight: bold; text-transform: uppercase; }
+#ContentPrimary div.errorPage { margin: 0.8em 0pt 0pt 0.8em; min-height: 22.6em; }
+#InstitutionLogIn div.countries, #InstitutionLogIn div.institutions { float: left; margin: 0pt; }
+#InstitutionLogIn div.countries { width: 11.6em; }
+#InstitutionLogIn div.countries select { width: 12em; }
+#InstitutionLogIn div.institutions { width: 35em; }
+#InstitutionLogIn div.institutions input.fieldset-default { float: right; }
+#InstitutionLogIn div.institutions select { width: 38em; }
+#InstitutionLogIn div.institutions span.checkBox label { font-weight: normal; margin-left: 0.4em; }
+#InstitutionLogIn label { font-weight: bold; }
+#InstitutionLogIn div select { border: 1px solid rgb(204, 204, 204); color: inherit; margin: 0.4em 0pt; }
+#ContentHeading p.specialTitle { padding-bottom: 0.5em; }
+div.errorPage li { list-style: disc inside url('attention.png'); padding: 0.5em 0pt 0.25em 0.25em; }
+div.errorPage li kbd { font-weight: bold; font-style: oblique; }
+@media only screen and (max-device-width: 1024px) {
+  input.searchFor, input.button, input.textbox {  }
+  #HeaderSearchBasic span.legend { width: 6.5em; }
+  #HeaderSearchBasicCitation { width: 38.5em; margin: 0pt; padding: 0pt; }
+  #HeaderSearchBasic { width: 38.5em; }
+  #HeaderSearchBasic input { width: 6em; margin: 0pt; }
+  #HeaderSearchBasic input.searchFor { width: 31.8em; }
+  #HeaderSearchBasic input.searchFor:lang(de) { width: 36.5em; }
+  #HeaderSearchBasic input.textbox.authorOrEditor { width: 13em; }
+  body:last-child #HeaderSearchBasic input.textbox.publication { width: 13em; }
+  #ContentSecondary fieldset div input { width: 17em; }
+  #LoginForm input { width: 17em; }
+}
+div.wizard { background-color: rgb(246, 246, 246); border: 1px solid rgb(238, 238, 238); margin: 0.4em; padding: 0.5em; }
+div.wizard h2 { font-style: normal; padding: 0pt; }
+.deepdyve { opacity: 0; }
+.deepdyve .sprite { background: url('deepdyve_logo_16x71.png') no-repeat scroll left bottom transparent; vertical-align: bottom; }
+.deepdyve .sprite:focus { outline: medium none; }
+#ContentPrimary .deepdyve .button { background-color: rgb(221, 221, 221); border-radius: 2em 2em 2em 2em; color: rgb(119, 119, 119); font-weight: normal; font-size: 0.8em; padding: 0.2em 0.5em; }
+#ContentPrimary .deepdyve .button:hover { color: rgb(119, 119, 119) ! important; cursor: default; }
+.supportlinks { text-align: left; font-size: 0.9em; background-color: rgb(246, 246, 246); padding: 1em 0.4em 0pt; }
+.supportlinks li { list-style-type: none; padding: 0.1em 0.2em; vertical-align: middle; }
+.supportlinks a:hover { text-decoration: underline; }
+#ContentPrimary ul.topicalCollections li { background: none repeat scroll 0% 0% transparent; }
+#CheckOutSection div.footer { background-color: rgb(239, 239, 239); padding: 0.3em 0.5em; }
+#ContentSecondary a { display: block; }
+#ContentSecondary a:focus, #ContentSecondary a:hover { text-decoration: none; }
+#ContentSecondary div.heading { background-color: rgb(255, 255, 255); background-image: none; border: medium none ! important; margin: 0pt 0pt 2px; padding: 0.5em; }
+#ContentSecondary div.accordion h3 { background-color: rgb(232, 232, 232); border: 1px solid rgb(221, 221, 221); }
+#ContentSecondary div.accordion h3 span.ui-icon { background-position: center center; background-repeat: no-repeat; display: inline-block; height: 11px; margin-right: 0.4em; width: 11px; }
+#ContentSecondary div.accordion h3 span.ui-icon.ui-icon-triangle-1-s { background-image: url('down-arrow.version.gif'); }
+#ContentSecondary div.accordion h3 span.ui-icon.ui-icon-triangle-1-e { background-image: url('right-arrow.version.gif'); }
+#ContentSecondary div.accordion h3.ui-state-default:focus { background-color: rgb(252, 252, 252); }
+#ContentSecondary div.accordion h3.ui-state-default:hover { background-color: rgb(252, 252, 252); cursor: pointer; }
+#ContentSecondary div.accordion h4 { background-color: rgb(240, 240, 240); border-bottom: 1px dotted rgb(204, 204, 204); padding: 0.3em 0.5em; }
+#ContentSecondary div.advertisement { background-color: rgb(255, 255, 255); border: 0.5em solid rgb(255, 255, 255); margin-top: 0.5em; }
+#ContentSecondary div.section div.subsection h4 { background-color: rgb(255, 255, 255); border-bottom: medium none; }
+#ContentSecondary div.section div.subsection .manifest .primitive { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; padding-top: 0.5em; padding-bottom: 0.5em; }
+#ContentSecondary div.scroll-pane fieldset { background-color: rgb(246, 246, 246); height: 100%; padding: 0.4em; }
+#ContentSecondary div.subsection div.accordion h3 { background-color: rgb(248, 248, 248); }
+#ContentSecondary fieldset div input { width: 14.3em; }
+#ContentSecondary fieldset div input.goButton { margin-left: 0.3em; text-transform: uppercase; width: 3em; }
+#ContentSecondary fieldset.jumpTo div, #ContentSecondary fieldset.searchWithin div { padding: 0.4em; text-align: right; }
+#ContentSecondary fieldset.jumpTo div { background-color: rgb(221, 221, 221); }
+#ContentSecondary fieldset.jumpTo div input { width: 3em; }
+#ContentSecondary fieldset.searchWithin div { background-color: rgb(200, 200, 200); }
+#ContentSecondary h2 { background-color: rgb(239, 239, 239); margin-top: 2px; }
+#ContentSecondary h2, #ContentSecondary h3 { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; padding: 0.3em 0.5em; }
+#Modes h2 {  }
+#ContentSecondary h2 label { font-size: 100%; margin-top: 0pt; padding: 0pt; }
+#ContentSecondary input.button { background-color: rgb(245, 97, 20); border: 1px solid rgb(234, 87, 15); color: rgb(255, 255, 255); font-weight: bold; }
+#ContentSecondary div.subsection ul.selectors li { background-color: rgb(255, 255, 255); }
+#ContentSecondary div.subsection ul.selectors li span { border-bottom: medium none; padding: 0pt; }
+#ContentSecondary ul.selectors li { background-color: rgb(246, 246, 246); }
+#ContentSecondary ul.selectors.viewSelectors li { background-color: rgb(251, 251, 251); }
+#ContentSecondary ul.selectors li a:focus, #ContentSecondary ul.selectors li a:hover { background-color: rgb(255, 255, 255); }
+#ContentSecondary ul.selectors li span.selector { background: url('dotbg-cccccc.gif') repeat-x scroll left bottom transparent; display: block; padding: 0.3em 0.5em; }
+#ContentSecondary ul.selectors li span.selector.current { background-color: rgb(255, 255, 255); color: rgb(255, 141, 67); }
+#ContentSecondary ul.selectors li span.selector span.tag { color: rgb(136, 136, 136); float: right; padding-right: 0.2em; }
+#ContentSecondary ul.selectors li ul.selectors li span.selector { padding-left: 1.5em; }
+#ContentSecondary ul.selectors li ul.selectors li ul.selectors li span.slector { padding-left: 3em; }
+#ContentSecondary ul.featuredModeSelectors { background-color: rgb(200, 200, 200); font-size: 0.9em; height: 2.2em; padding: 0.5em; }
+#ContentSecondary ul.featuredModeSelectors.secondary { background-color: rgb(221, 221, 221); }
+#ContentSecondary ul.featuredModeSelectors li { float: left; line-height: 2em; margin-right: 0.3em; text-align: center; width: 32.5%; }
+#ContentSecondary ul.featuredModeSelectors.secondary li { margin: 0pt; text-align: left; width: 100%; }
+#ContentSecondary ul.featuredModeSelectors li.last { margin-right: 0pt; }
+#ContentSecondary ul.featuredModeSelectors li { background-color: rgb(239, 239, 239); }
+#ContentSecondary ul.featuredModeSelectors li span.selector { background-image: none; border: 1px solid rgb(153, 153, 153); font-weight: bold; padding: 0pt; }
+#ContentSecondary ul.featuredModeSelectors li span.selector.disabled { background-color: rgb(221, 221, 221); color: rgb(170, 170, 170); }
+#ContentSecondary ul.featuredModeSelectors.secondary li span.selector { border-color: rgb(187, 187, 187); padding-left: 0.8em; }
+.scriptEnabled #AboutSection { position: absolute; left: -10000px; }
+.scriptEnabled .ui-tabs #AboutSection { position: static; }
+#Stingray .reader { background: url('hatch-ffc48e-fce9d7.gif') repeat scroll 0% 0% transparent; }
+#Stingray .previewer { background: url('hatch-d0d0d0-f2f2f3.gif') repeat scroll 0% 0% transparent; }
+#Stingray .sprite { background-image: url('stingray-toolbar-sprites.gif'); }
+#Stingray .html-resource-sprite { background-image: url('sprite-sheet.gif'); left: 0pt; position: absolute; }
+#Stingray .thumbnail:focus, #Stingray .thumbnail:active, #Stingray .thumbnail:hover { outline: 2px solid rgb(247, 96, 19); }
+.Keyword { font-size: 12pt; }
+body.for-print { font-size: 12pt; background: none repeat scroll 0% 0% white; margin: 1.5em; }
+div.Abstract, div.Acknowledgments { margin-top: 1em; }
+div.AbstractSection { margin-top: 0.3em; }
+p.AuthorGroup { font-weight: bold; }
+.Contact, .Affiliation, .Citation { font-size: 10pt; font-family: Arial,Helvetica,sans-serif; }
+div.Capt { font-size: 10pt; margin-top: 1.5em; margin-bottom: 1.5em; font-family: Arial,Helvetica,sans-serif; }
+span.CaptCont, tbody.CaptCont { font-size: 10pt; font-family: Arial,Helvetica,sans-serif; }
+div.CaptCont { font-size: 10pt; margin-top: 0.3em; font-family: Arial,Helvetica,sans-serif; }
+.AbstractHeading, .KeywordHeading, .ArticleNoteHeading, .Acknowledgmentsheading, .CaptNr, div.SbLexicon { font-weight: bold; }
+table.Sidebar { background: none repeat scroll 0% 0% rgb(214, 214, 214); font-family: Arial,Helvetica,sans-serif; }
+.Term, .AbstractSectionHeading { font-style: italic; }
+table.OrderedList { font-size: 12pt; margin-left: 17pt; margin-bottom: 1em; margin-top: 1em; padding: 0.3em; }
+div.ListPara, div.AbstractPara, div.AcknowSimplePara, div.GlossaryDefSimplePara { margin-top: 0.3em; }
+div.GlossaryDefSimplePara { margin-left: 1.5em; margin-top: 0.3em; }
+div.Para, div.FormalPara, div.ArticleNote { margin-top: 1em; margin-bottom: 1em; }
+div.Motto { margin-top: 1em; margin-bottom: 1em; text-align: right; }
+div.Figure { margin-top: 1.5em; margin-bottom: 1em; }
+.PCode { font-family: 'Courier New'; }
+.Box { border-color: black; border-width: 2px; border-style: solid; padding: 0.5em; }
+.Important { border-color: black; border-width: 2px; border-style: solid; padding: 0.5em; background: none repeat scroll 0% 0% rgb(214, 214, 214); }
+.Example { border-left: 4px solid black; padding: 0.5em; }
+.Trailer { font-weight: bold; padding: 0.5em; }
+.Source { font-style: italic; }
+.LegalText { font-weight: bold; text-align: left; }
+div.GlossaryEntry { text-indent: -1.5em; margin-left: 1.5em; }
+table.Stack { font-size: 0.5em; }
+
+/* ::::: null ::::: */
+
+#Cockpit .section { min-height: 372px; }

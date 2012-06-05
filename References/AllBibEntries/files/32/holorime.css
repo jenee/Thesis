@@ -1,0 +1,77 @@
+
+/* ::::: http://www.wordspy.com/styles.css ::::: */
+
+body, html { margin: 0pt; padding: 0pt; background: none repeat scroll 0% 0% rgb(221, 221, 221); color: rgb(0, 0, 0); }
+body { min-width: 965px; }
+#wrap { background: none repeat scroll 0% 0% rgb(255, 255, 255); margin: 0pt auto; width: 1050px; border-top: 5px solid black; font-family: "Trebuchet MS",Verdana,Arial,"MS Sans Serif",Geneva,Helvetica,san-serif; font-size: 11pt; }
+#header {  }
+#main { float: left; width: 700px; margin-left: 5px; }
+#main h2, #main h3, #main p { padding: 0pt 1px; }
+#footer { clear: both; padding: 5px; margin: 5px; text-align: center; color: rgb(136, 136, 136); border-top: 1px solid rgb(136, 136, 136); }
+.entry1 { background-image: url('eyespy1.jpg'); background-repeat: no-repeat; background-position: 0pt 0px; }
+.entry2 { background-image: url('eyespy2.jpg'); background-repeat: no-repeat; background-position: 0pt 0px; }
+.entry3 { background-image: url('eyespy3.jpg'); background-repeat: no-repeat; background-position: 0pt 0px; }
+.entry4 { background-image: url('eyespy4.jpg'); background-repeat: no-repeat; background-position: 0pt 0px; }
+.entry5 { background-image: url('eyespy5.jpg'); background-repeat: no-repeat; background-position: 0pt 0px; }
+.entry6 { background-image: url('eyespy6.jpg'); background-repeat: no-repeat; background-position: 0pt 0px; }
+.entry-subheader { margin: 5px 40px; font-size: 9pt; font-weight: bold; color: rgb(153, 0, 0); }
+.entry-header { margin: 5px 20px; color: Navy; font-size: 16pt; font-weight: bold; text-decoration: none; }
+a.entry-header:link { margin: 5px 20px; color: Navy; font-size: 16pt; font-weight: bold; text-decoration: none; }
+a.entry-header:visited { margin: 5px 20px; color: Navy; font-size: 16pt; font-weight: bold; text-decoration: none; }
+.entry-definition { margin: 10px 40px 20px; font-size: 12pt; }
+.entry-heading { margin: 5px 40px; color: black; font-size: 14pt; font-weight: bold; }
+.entry-text { margin: 5px 40px; }
+.entry-citation { margin: 10px 40px 20px; padding: 10px; font-size: 11pt; background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); border: thin solid rgb(204, 204, 204); }
+.entry-footer { padding-top: 5px; font-weight: normal; font-size: 11pt; }
+.entry-footer-read-more { margin-left: 40px; padding-top: 0px; font-weight: normal; font-size: 11pt; }
+.entry-footer-posted-on { margin-left: 40px; margin-bottom: 20px; padding-top: 2px; font-weight: normal; color: rgb(136, 136, 136); font-size: 8pt; }
+#sidebar { float: right; width: 225px; margin-left: 10px; line-height: 150%; }
+#sidebar a { font-size: 11pt; }
+.sidebar-heading { font-size: 14pt; font-weight: bold; width: 95%; background-color: rgb(255, 255, 255); margin-top: 10px; }
+.sidebar-text { padding-bottom: 10px; margin-left: 10px; font-size: 11pt; }
+.page-title { padding-top: 10px; margin-left: 40px; font-weight: bold; color: rgb(0, 0, 0); font-size: 18pt; }
+.category-title { padding-top: 10px; margin-left: 20px; font-weight: bold; color: rgb(51, 51, 51); font-size: 14pt; }
+.category-list { margin-left: 30px; line-height: 150%; }
+.content-list { margin-left: 40px; line-height: 150%; font-size: 11pt; font-weight: normal; }
+a.content-list:link { margin-left: 40px; line-height: 150%; font-size: 11pt; }
+.archive-table { width: 300px; margin-left: 10px; }
+.archive-text { padding-top: 2px; margin-left: 40px; font-size: 11pt; line-height: 150%; }
+a.archive-text:link { padding-top: 2px; margin-left: 40px; font-size: 11pt; line-height: 150%; }
+.breadcrumb-table { width: 625px; margin-left: 30px; }
+.breadcrumb-text { padding-top: 2px; margin-left: 10px; font-weight: normal; color: rgb(136, 136, 136); font-size: 8pt; }
+a.breadcrumb-text:link { padding-top: 2px; margin-left: 10px; font-weight: normal; color: rgb(136, 136, 136); font-size: 8pt; }
+
+/* ::::: null ::::: */
+
+.recaptchatable td img { display: block; }
+.recaptchatable .recaptcha_r1_c1 { background: url('sprite.png') no-repeat scroll 0pt -63px transparent; width: 318px; height: 9px; }
+.recaptchatable .recaptcha_r2_c1 { background: url('sprite.png') no-repeat scroll -18px 0pt transparent; width: 9px; height: 57px; }
+.recaptchatable .recaptcha_r2_c2 { background: url('sprite.png') no-repeat scroll -27px 0pt transparent; width: 9px; height: 57px; }
+.recaptchatable .recaptcha_r3_c1 { background: url('sprite.png') no-repeat scroll 0pt 0pt transparent; width: 9px; height: 63px; }
+.recaptchatable .recaptcha_r3_c2 { background: url('sprite.png') no-repeat scroll -18px -57px transparent; width: 300px; height: 6px; }
+.recaptchatable .recaptcha_r3_c3 { background: url('sprite.png') no-repeat scroll -9px 0pt transparent; width: 9px; height: 63px; }
+.recaptchatable .recaptcha_r4_c1 { background: url('sprite.png') no-repeat scroll -43px 0pt transparent; width: 171px; height: 49px; }
+.recaptchatable .recaptcha_r4_c2 { background: url('sprite.png') no-repeat scroll -36px 0pt transparent; width: 7px; height: 57px; }
+.recaptchatable .recaptcha_r4_c4 { background: url('sprite.png') no-repeat scroll -214px 0pt transparent; width: 97px; height: 57px; }
+.recaptchatable .recaptcha_r7_c1 { background: url('sprite.png') no-repeat scroll -43px -49px transparent; width: 171px; height: 8px; }
+.recaptchatable .recaptcha_r8_c1 { background: url('sprite.png') no-repeat scroll -43px -49px transparent; width: 25px; height: 8px; }
+.recaptchatable .recaptcha_image_cell center img { height: 57px; }
+.recaptchatable .recaptcha_image_cell center { height: 57px; }
+.recaptchatable .recaptcha_image_cell { background-color: white; height: 57px; }
+#recaptcha_area, #recaptcha_table { width: 318px ! important; }
+.recaptchatable, #recaptcha_area tr, #recaptcha_area td, #recaptcha_area th { margin: 0pt ! important; border: 0pt none ! important; padding: 0pt ! important; border-collapse: collapse ! important; vertical-align: middle ! important; }
+.recaptchatable * { margin: 0pt; padding: 0pt; border: 0pt none; font-family: helvetica,sans-serif; font-size: 8pt; color: black; position: static; top: auto; left: auto; right: auto; bottom: auto; text-align: left ! important; }
+.recaptchatable #recaptcha_image { margin: auto; }
+.recaptchatable img { border: 0pt none ! important; margin: 0pt ! important; padding: 0pt ! important; }
+.recaptchatable a, .recaptchatable a:hover { outline: medium none; border: 0pt none ! important; padding: 0pt ! important; text-decoration: none; color: blue; background: none repeat scroll 0% 0% transparent ! important; font-weight: normal; }
+.recaptcha_input_area { position: relative ! important; width: 146px ! important; height: 45px ! important; margin-left: 20px ! important; margin-right: 5px ! important; margin-top: 4px ! important; background: none repeat scroll 0% 0% transparent ! important; }
+.recaptchatable label.recaptcha_input_area_text { margin: 0pt ! important; padding: 0pt ! important; position: static ! important; top: auto ! important; left: auto ! important; right: auto ! important; bottom: auto ! important; background: none repeat scroll 0% 0% transparent ! important; height: auto ! important; width: auto ! important; }
+.recaptcha_theme_red label.recaptcha_input_area_text, .recaptcha_theme_white label.recaptcha_input_area_text { color: black ! important; }
+.recaptcha_theme_blackglass label.recaptcha_input_area_text { color: white ! important; }
+.recaptchatable #recaptcha_response_field { width: 145px ! important; position: absolute ! important; bottom: 7px ! important; padding: 0pt ! important; margin: 0pt ! important; font-size: 10pt; }
+.recaptcha_theme_blackglass #recaptcha_response_field, .recaptcha_theme_white #recaptcha_response_field { border: 1px solid gray; }
+.recaptcha_theme_red #recaptcha_response_field { border: 1px solid rgb(204, 169, 64); }
+.recaptcha_audio_cant_hear_link { font-size: 7pt; color: black; }
+.recaptchatable { line-height: 1em; }
+#recaptcha_instructions_error { color: red ! important; }
+.recaptcha_is_showing_audio .recaptcha_only_if_image, .recaptcha_isnot_showing_audio .recaptcha_only_if_audio, .recaptcha_had_incorrect_sol .recaptcha_only_if_no_incorrect_sol, .recaptcha_nothad_incorrect_sol .recaptcha_only_if_incorrect_sol { display: none ! important; }

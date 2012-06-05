@@ -1,0 +1,1204 @@
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-global-sidebars.css ::::: */
+
+#col-2 { background-color: rgb(238, 238, 238); }
+#col-3 { background-color: rgb(216, 216, 216); }
+#col-2 div#docked-nav { position: fixed; top: 5px; border-width: 1px; border-style: solid; border-color: rgb(170, 170, 170) rgb(170, 170, 170) rgb(170, 170, 170) white; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; background-color: white; width: 210px; padding: 0px; margin: 5px 10px 0px 0px; }
+#col-2 div#docked-nav ol { list-style: none outside none; }
+#col-2 div#docked-nav div.content-box { margin: 0px; padding: 0px; }
+#col-2 div#docked-slugline { margin-left: 0pt; padding-left: 0pt; }
+#col-2 div#docked-slugline, #col-2 div#slugline, #col-2 .cb-corr-slug div.correction-for-article, #col-2 .cb-corr-slug div.retraction-for-article, #col-2 .cb-corr-slug div.revision-for-article { font-size: 86.38%; margin-left: 0pt; padding: 0pt 5px 0pt 0pt; }
+#col-2 div#docked-slugline .slug-metadata-note, #col-2 div#slugline .slug-metadata-note { display: block; margin-top: 3px; padding-bottom: 3px; }
+#col-2 div#docked-slugline cite, #col-2 div#slugline cite { margin: 3px 0pt; }
+#col-2 div.related-article { font-size: 80%; font-weight: bold; margin: 0pt 0pt 0pt 10px; padding: 5px; }
+#col-2 div.related-article a:hover { border-bottom: 1px dotted rgb(102, 0, 51); }
+#col-2 div.related-article a:active, #col-2 div.related-article a:link, #col-2 div.related-article a:visited { color: rgb(64, 64, 64); text-decoration: none; }
+#col-2 div.search-nav h4 { margin: 0pt 0pt 0.7em; text-align: center; }
+#col-2 #col-2-modify-search-results div { margin: 0px; padding: 0px; }
+#col-2 #col-2-modify-search-results div div { margin: inherit; padding: inherit; }
+div.content-box ol { list-style: none outside none; margin: 0pt; padding: 0pt; }
+div.content-box #content_box_errata { list-style: none outside none; }
+#col-2 div.content-box { margin: 1em 7px 0pt 0pt; font-size: 83.33%; background-color: rgb(219, 219, 219); border-right: 1px solid white; padding: 5px 12px 5px 0px; line-height: 1; }
+#col-3 div.content-box { margin: 0px; font-size: 83.33%; padding: 5px 0px; line-height: 1; }
+#col-2 .content-box h3 { font-size: 1.2em; margin: 0px; padding: 0.3em 0px 0.3em 5px; }
+#col-3 .content-box h3 { font-size: 1.2em; margin: 0px; padding: 0.3em 0px; }
+#col-2 .content-box h4 { font-size: 1.1em; margin: 0px; padding: 0.3em 0px 0.3em 9px; background-color: rgb(238, 238, 238); border-bottom: 1px solid rgb(185, 194, 141); height: 1.4em; }
+#col-2 div.content-box div.collapsed h4, #col-2 div.content-box div.collapsible h4 { clear: both; padding: 0.175em 0px 0.175em 9px; }
+div.content-box div.collapsible h4 a, div.content-box div.collapsed h4 a { color: black; }
+div.content-box div.collapsible h4 a:visited, div.content-box div.collapsed h4 a:visited { color: black; }
+div.content-box div.collapsible h4 a:hover, div.content-box div.collapsed h4 a:hover { border: medium none; }
+#col-3 .content-box h4 { font-size: 1.1em; margin: 0px; padding: 0.3em 0px; }
+#col-2 div.cb-contents { background-color: rgb(238, 238, 238); border-left: 1px solid rgb(213, 218, 186); margin: 0px; padding: 0px 0px 5px; }
+#col-3 div.cb-contents { margin: 0px; padding: 0px 0px 5px; }
+#col-2 div.cb-section { padding: 0px; margin: 0px 0px 0px -1px; border-left: 1px solid white; background-color: white; border-right: 10px solid rgb(238, 238, 238); }
+#col-2 div.cb-section ol { padding: 3px 0px; }
+#col-3 div.cb-section { padding: 3px 10px 3px 0pt; margin: 0pt; border-bottom: 1px solid rgb(185, 194, 141); }
+#col-2 div.content-box div.cb-slug, #col-2 div.content-box div.cb-corr-slug { padding-top: 3px; }
+div.content-box .cb-slug ol, div.content-box div.cb-corr-slug ol { border: 1px solid rgb(238, 238, 238); margin: 0pt 4px; }
+div.content-box .cb-section .cb-versions { margin: 5px 5px 0pt; border-top: 2px solid rgb(238, 238, 238); }
+#col-2 div.content-box .cb-section .cb-versions div { margin: 0pt 0pt 0pt 5px; padding: 0.5em 0pt 0pt; }
+div.content-box .cb-section .cb-versions .current-version { font-style: italic; font-weight: bold; margin-left: 0.5em; }
+#cb-art-cat ol, #cb-art-cat ul { margin: 0px 0px 0px 9px; padding: 0px; }
+#cb-art-cat ol span { font-weight: bold; }
+#col-2 #cb-art-cat ol ul { list-style: none outside none; margin-left: 9px; }
+#cb-art-cat ol li { margin-left: 0px; margin-bottom: 0.5em; line-height: 1.4; }
+#cb-art-cat ol li li { margin-bottom: 0px; }
+#cb-art-cat ol li li li { margin-left: 10%; }
+#col-3 div.content-box div.sidebar-etoc-link { border: medium none; padding-bottom: 0px; }
+#col-2 p.social-bookmarking-help { line-height: 1; margin: 5px 0pt 0pt; }
+#col-2 #article-cb-main .social-bookmark-links { margin: 0pt; padding: 0pt; border: medium none; }
+#col-2 #article-cb-main .social-bookmark-links a:hover { border: medium none; }
+#col-2 #article-cb-main .soc-bm-link-text { display: none; }
+#col-2 #article-cb-main div.relmgr-relation, #col-2 #article-cb-main li.relmgr-relation, #col-2 #docked-cb .relmgr-relation, #col-2 #article-cb-main div.relmgr-relation ol, #col-2 #docked-cb .relmgr-relation ol { margin: 0pt; padding: 0pt; }
+#col-2 #article-cb-main #cb-art-links ul#content_box_errata li.errata a, #col-2 #docked-cb ul#content_box_errata li.errata a { color: rgb(167, 7, 22); }
+#col-2 #article-cb-main #cb-art-links ol ul, #col-2 #docked-cb ol ul { list-style: none outside none; margin: 0pt; }
+#cb-art-soc div.social-bookmarking ul { width: 120px; }
+#col-2 #cb-loaded-hw-cited { margin: 0px; padding: 0px; }
+#col-2 #cb-loaded-hw-cited-none, #col-2 #cb-loaded-related-urls-none, #col-2 #cb-loaded-patientinform-none, #col-2 #cb-loaded-isi-cited-none, #col-2 #cb-loaded-isi-related-none { margin: 0px; padding: 0px; display: none; }
+div.cb-section li .oa-article { border-bottom: 1px solid rgb(170, 170, 170); display: block; padding: 0.2em 0px; margin: 0px; text-align: center; }
+div.cb-section li .oa-article span, div.cb-section li .oa-view { color: rgb(0, 0, 144); font-weight: bold; }
+div.cb-section li .free, div.cb-section li .free-to-you { margin-left: 0.5em; font-weight: bold; font-style: italic; }
+div.cb-section li .pdf-direct-link, div.cb-section li .variant-indicator { font-weight: bold; }
+#col-3 ol { list-style: none outside none; }
+#col-3 div.content-box { background-color: rgb(221, 221, 221); padding: 1em; }
+div.content-box .content-box-section { line-height: 1.4; }
+div.content-box a, div.content-box span.variant-indicator { line-height: 1.4; text-decoration: none; }
+div.content-box a:hover { border-bottom: 1px dotted rgb(102, 0, 51); }
+div.content-box a:link, div.content-box a:visited, div.content-box a:hover, div.content-box a:active { color: rgb(64, 64, 64); }
+#col-3 div.content-box .cb-section { margin-bottom: 0.5em; }
+#col-3 .cb-section, #col-3 .cb-section ol, #col-3 .cb-section ol li { margin: 0px; padding: 0px; }
+div.content-box div.cb-section .notice { font-weight: bold; }
+#col-2 a.prev-results-link, #col-2 a.next-results-link, div.content-box div.cb-section .notice a, div.content-box div.cb-section a.pdf-direct-link { background-color: rgb(255, 240, 184); }
+#col-2 span.open-access-note, ol.content-box-section-list li .oa-article span, ol.content-box-section-list li .oa-view { color: rgb(0, 0, 144); font-weight: bold; }
+form.searchbox { margin: 0px auto 1em; width: 100%; }
+form.searchbox #sidebar-search-input, form.searchbox #issue-search-input { margin-left: 0px; width: 115px; }
+form.searchbox #sidebar-search-go, form.searchbox #issue-search-go { width: 35px; margin-left: 5px; }
+#col-3 #sidebar-current-issue { background-color: rgb(192, 192, 192); border: 2px solid rgb(169, 169, 169); margin: 5px 10px; padding: 5px; }
+#sidebar-cur-issue-coverlines ul { list-style: square outside none; margin-left: 0px; padding-left: 0px; }
+#sidebar-cur-issue-coverlines ul li { padding-left: 0px; margin-left: 15px; }
+div.article-nav, div.search-nav, div.sidebar-issue-nav { white-space: nowrap; }
+div.article-nav span.toc-link, div.search-nav span.search-link, div.search-nav span.home-link { display: block; padding-top: 0.5em; }
+div#docked-slugline, div#slugline { color: rgb(51, 51, 0); font-weight: bold; }
+#col-2 div#slugline, #col-2 div#docked-slugline { margin: 0pt 5px; }
+div#docked-slugline cite, div#slugline cite { font-style: normal; display: block; color: rgb(51, 51, 0); font-weight: normal; }
+div#docked-slugline .slug-pub-date, div#docked-slugline .slug-pages, div#slugline cite .slug-pub-date, div#slugline cite .slug-pages { font-weight: bold; }
+.article-nav, .search-nav, .sidebar-issue-nav { margin: 0px 2em 1em; padding: 0.5em 0px; font-size: 83.33%; border: 1px solid rgb(192, 192, 192); text-align: center; }
+.article-nav a, .search-nav a, .sidebar-issue-nav a { color: black; font-weight: bold; text-decoration: none; }
+.article-nav a:hover, .search-nav a:hover, .sidebar-issue-nav a:hover { color: black; text-decoration: underline; }
+.current-issue { margin: 0.5em 0px 0.5em auto; width: 100%; }
+.current-issue img { border: 1px solid rgb(204, 204, 204); }
+#col-2 a.rss-link { background-image: url('rss.gif'); background-repeat: no-repeat; background-position: left center; padding-left: 15px; }
+#col-2 div.sidebar { background-color: rgb(211, 211, 211); border: 2px solid rgb(192, 192, 192); padding: 5px; margin: 10px 7px 5px; font-size: 90%; }
+#col-2 div.sidebar h4 { font-size: 1em; margin: 0pt; padding: 0.3em 0pt; font-weight: bold; }
+#col-2 div.sidebar .citemap-frequent-authors th, #col-2 div.sidebar .citemap-journal th { font-size: 1em; padding: 0.3em 2pt; font-weight: bold; }
+#col-2 div.sidebar .citemap-frequent-authors td.articles, #col-2 div.sidebar .citemap-journal td.articles { text-align: center; }
+#col-2 div.sidebar .citemap-frequent-authors td, #col-2 div.sidebar .citemap-journal td { font-size: 1em; padding: 0.3em 2pt; }
+#col-2 div.sidebar-qs { background-color: rgb(211, 211, 211); border: 1px solid rgb(192, 192, 192); padding: 5px; margin: 0px 7px 5px; font-size: 88%; }
+#col-2 p.qs-instructions { margin: 3px 0pt; }
+#col-2 div.sidebar-qs form.searchbox { margin: 0pt; }
+#col-2 div.sidebar-qs div { margin: 0pt; }
+#col-2 div.sidebar-qs img { padding: 0pt; margin: 5px 0pt 0pt 5px; }
+#col-2 div.sidebar ul.nav { margin: 0em; }
+ul.nav li { margin: 0.5em 0em 0.5em 1.5em; }
+ul.nav li.collapsible { list-style: none outside none; margin-left: 0.2em; }
+ul.nav a.selected { font-weight: bold; }
+#col-2 ul.prev-next { border: 1px solid rgb(192, 192, 192); display: block; line-height: 1.2; list-style-image: none; list-style-type: none; padding: 8px 0px; }
+#col-2 ul.prev-next, #col-2 .cover { margin: 0px; text-align: center; }
+#col-2 ul.prev-next li { display: inline; margin: 10px 0px; }
+#col-2 ul.prev-next li a { text-decoration: none; font-size: 0.75em; color: rgb(64, 64, 64); }
+#col-2 .cover-coverline { padding: 10px 0pt; margin-left: 0px; }
+#col-2 .cover-coverline h3 { border-top: 1px solid rgb(185, 194, 141); padding-top: 10px; font-size: 1em; }
+#col-2 .cover-coverline .cover-links { list-style: square outside none; margin-left: 0px; padding-left: 0px; }
+#col-2 .cover img { border: 1px solid rgb(51, 51, 0); margin-bottom: 10px; height: 178px; width: 134px; }
+#col-2 .toc-navigation cite, #col-2 .this-issue cite { font-size: 0.85em; font-style: normal; }
+#col-2 .toc-navigation .toc-links li, #col-2 .toc-navigation .data-supp-links li, #col-2 .this-issue .toc-links li { background-image: url('rightchevron.gif'); background-position: 0pt center; background-repeat: no-repeat; display: block; font-size: 0.85em; margin-left: 0px; padding: 2px 0pt 0pt 9px; white-space: normal; }
+#col-2 .issue-sections { border-top: 1px solid rgb(185, 194, 141); }
+#pageid-login #col-2 div#slugline { word-wrap: break-word; }
+#col-2 #cb-art-nav li img { display: none; }
+#col-3 .hwac-institutional-logo { margin: 1em auto; width: 150px; display: block; }
+#col-2 div.rateit { width: 100%; }
+#col-2 div#ratings, div#ratings div { margin: 0pt; padding: 0pt; }
+#col-2 div#ratings .rating-type, #col-2 div#ratings .rating-success { display: block; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-global-elements.css ::::: */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; border: 0px none; outline-style: none; font-weight: inherit; font-style: inherit; font-size: inherit; font-family: inherit; line-height: inherit; text-align: inherit; vertical-align: baseline; }
+a img, :link img, :visited img { border: 0px none; }
+:focus { outline: medium none; }
+body { line-height: 1.25; color: black; background: none repeat scroll 0% 0% white; }
+table { border-collapse: collapse; border-spacing: 0px; }
+caption, th, td { text-align: left; font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+body { font-size: 100%; line-height: 1; background: none no-repeat fixed 0% 0% white; color: black; font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif; }
+p, pre, label, ul, ol, dl, fieldset, address { margin: 1em 5%; }
+h1, h2, h3, h4, h5, h6 { margin: 0px 0px 0.4em; }
+h1, h2, h3, h4 { text-align: left; font-weight: bold; }
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+blockquote { margin: 1em 7%; }
+li, dd { margin-left: 5%; }
+fieldset { padding: 0.5em; }
+em { font-style: italic; }
+strong { font-weight: 700; }
+code, var, kbd, samp, pre { font-family: Courier New,Courier,monospace; }
+sup { font-size: 0.85em; vertical-align: super; line-height: 0; }
+sub { font-size: 0.85em; vertical-align: sub; line-height: 0; }
+div.hw-gen-page { font-size: 0.8em; padding: 0.5em 4em 2em 2em; }
+.hw-gen-page #skip-link { position: absolute; left: -9999px; }
+#content-block { margin: 0pt; padding: 0pt; border: 0pt none; line-height: 1.3; overflow: hidden; }
+#content-block p { margin: 15px 0px; padding: 0pt; border: 0pt none; line-height: 1.5; }
+#content-block { float: right; width: 518px; padding: 0px 20px 0px 5px; }
+#col-2, #col-3 { width: 210px; overflow: hidden; }
+#col-2 { float: left; }
+#proxied-contents #col-2 { float: left; }
+#proxied-contents #col-main { float: left; overflow: hidden; padding-right: 10px; width: 533px; }
+#footer { clear: both; }
+.banner-ads ul { list-style-type: none; }
+div.hw-gen-page img.adborder0 { border: 0px solid black; }
+div.hw-gen-page img.adborder1 { border: 1px solid black; }
+div.hw-gen-page img.adborder2 { border: 2px solid black; }
+div.hw-gen-page img.adborder3 { border: 3px solid black; }
+div.hw-gen-page img.adborder4 { border: 4px solid black; }
+div.hw-gen-page img.adborder5 { border: 5px solid black; }
+#content-block { float: left; }
+#col-2 div { margin: 0px 10px; padding: 5px; }
+#col-3 { float: right; }
+#col-3 div { margin: 0px 0px 0px 10px; padding: 5px; }
+#col-2, #col-3 { margin: 0px; padding: 5px 0px 0px; }
+#content-block, #col-2, #col-3 { margin-bottom: 0px; padding-bottom: 0px; }
+#col-2 { padding-right: 7px; }
+#authstring * { margin: 0px; padding: 0px; }
+#authstring { width: 640px; text-align: center; margin-bottom: 1.5em; }
+#authstring ul { list-style: none outside none; }
+#authstring li { display: inline; border-left: 1px solid gray; padding: 0em 0.4em; }
+#authstring .subscr-ref { font-weight: bold; border-left: medium none; }
+#authstring-img { padding: 0px 0px 1em; }
+#content-block h1, #content-block h2, #content-block h3, #content-block h4, #content-block h5, #content-block h6 { font-family: Georgia,'Times New Roman',serif; }
+#footer, #footer * { margin: 0px; padding: 0px; }
+#footer { text-align: center; }
+#footer ul { list-style: none outside none; font-size: 0.8em; }
+#footer li { display: inline; border-left: 1px solid gray; padding: 0px 0.4em; }
+#footer li a { color: black; }
+#footer .firstitem { border-left: medium none; }
+#footer .copyright { font-size: 0.8em; margin: 1em auto; }
+#footer .copyright a { color: rgb(102, 0, 51); }
+.cit span.accesscheck { display: none; }
+.sc { text-transform: uppercase; font-size: 0.85em; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-global-citation.css ::::: */
+
+.cit-list, .cit-list ol, .cit-list ul, .cit-list li, .cit-list div, .cit-list h2, .cit-list h3, .cit-list h4 { margin: 0px; padding: 0px; }
+.cit * { display: inline; }
+.cit script { display: none; }
+.cit li, .cit ul { margin: 0pt; padding: 0pt; }
+ul.cit-list, ul.related-list, ol.cit-response-list, .cit-list ul, .cit-list ol { list-style: none outside none; }
+li.cit, div.cit { display: block; margin: 0.7em 0px 0px; padding: 0.5em 0.3em; color: rgb(34, 34, 34); }
+.cit .cit-form-select label, .notonscreen { position: absolute; left: -9999px; }
+.cit.fromcover { background-color: rgb(185, 194, 141); }
+.cit.openaccess { background-color: rgb(204, 224, 249); }
+.cit.inaugural { background-color: rgb(217, 177, 63); }
+.cit h1, .cit h2, .cit h3, .cit h4 { margin: 0px; padding: 0px; }
+.cit .cit-form-select, .cit .cit-form-select input { position: absolute; }
+div.cit-metadata { display: block; }
+.cit .cit-metadata .cit-section { font-weight: bold; }
+.cit .cit-metadata .cit-response-list { padding-left: 3em; display: block; }
+.cit .cit-metadata .cit-response-list li { display: block; }
+.cit .cit-metadata .cit-response-list .cit-auth-list { padding-left: 0pt; }
+.cit .cit-metadata .cit-response-list .cit-auth-list * { display: inline; }
+.cit .cit-metadata .cit-response-list li span { white-space: nowrap; }
+.cit .cit-metadata .cit-title, .cit .cit-metadata .cit-title-note { display: block; color: rgb(17, 17, 17); font-size: 1em; font-weight: bolder; margin-top: 0.2em; padding-left: 3em; }
+.cit .cit-auth-list li span { white-space: nowrap; }
+.cit .cit-auth-list li span.cit-sep-separator { white-space: normal; }
+.toc-cit .cit-auth-list li.group-author .cit-auth, .cit .cit-auth-list li.group-author span, .cit .cit-auth-list li.group-author span { white-space: normal; }
+.toc-cit .cit-auth-list li.group-author.group-author-first-item { position: relative; left: -0.3em; }
+.cit cite { display: block; font-style: normal; margin-top: 0.25em; padding-left: 3em; }
+.cit .cit-metadata abbr.cit-jnl-abbrev { border: medium none; }
+.cit .cit-criteria-match { display: block; font-size: 0.85em; margin: 0.4em 0pt; padding: 0.2em 0.2em 0.2em 3.4em; }
+.cit .cit-external-content { display: block; font-style: normal; margin-top: 0.25em; padding-left: 3em; }
+.cit a { color: rgb(102, 0, 51); text-decoration: none; font-weight: bold; }
+.cit a:hover { color: rgb(102, 0, 51); text-decoration: underline; }
+.cit a:visited {  }
+.cit .cit-views, .cit .cit-author-summary-views { display: block; margin: 0.25em 0px; padding-left: 2.5em; }
+.cit .cit-views li a, .cit .cit-author-summary-views li a { padding-left: 9px; background-image: url('rightchevron.gif'); background-position: 0px center; background-repeat: no-repeat; }
+.cit .cit-views li, .cit .cit-author-summary-views li { padding-left: 0.5em; }
+.cit .cit-extra span { padding-left: 3em; margin-left: 0.5em; padding-top: 0.4em; font-size: 0.9em; font-weight: bold; text-transform: uppercase; }
+.ref-cit .cit-extra span { padding-left: 0em; margin-left: 0em; padding-top: inherit; font-size: 1em; font-weight: inherit; text-transform: none; }
+.cit .open-access-note { color: rgb(0, 0, 144); }
+.cit .related-articles { display: block; padding-left: 3em; }
+.cit .related-articles li { display: block; padding-left: 12px; font-style: italic; background-image: url('right.gif'); background-position: 0px center; background-repeat: no-repeat; }
+.gca-buttons { margin-top: 1.5em; }
+.gca-buttons input { background-color: rgb(238, 238, 238); border-style: solid; border-color: rgb(102, 102, 102); margin-right: 0.5em; }
+#pageid-toc .cit.has-thumbnail div.cit-metadata, #pageid-toc .cit.has-thumbnail div.cit-extra { display: block; margin-left: 100px; }
+img.cit-thumbnail { float: left; }
+#pageid-toc .cit.has-thumbnail .cit-title-group, #pageid-toc .cit.has-thumbnail .cit-first-element { display: block; }
+#pageid-toc .cit.has-thumbnail .cit-title-group { margin-left: 2em; }
+#pageid-toc .cit.has-thumbnail .cit-form-select { left: 100px; }
+#pageid-toc .cit.has-thumbnail .cit-form-select input { left: 10px; }
+li.condensed-cit, div.condensed-cit { padding: 0.1em 0.3em; font-size: 90%; }
+.condensed-cit .cit-metadata .cit-auth-list, .condensed-cit .cit-criteria-match, .condensed-cit .cit-metadata cite .cit-metadata-note, .condensed-cit .cit-metadata cite .cit-doi, .condensed-cit .cit-metadata cite .cit-pages .cit-sep, .condensed-cit .cit-metadata cite .cit-pages .cit-pages-lpage, .condensed-cit .cit-metadata cite .cit-pages .cit-last-page, .condensed-cit .cit-metadata cite .cit-sep-after-article-online-dates, .condensed-cit img.cit-thumbnail { display: none; }
+.cit .cit-metadata .cit-section, .cit .cit-metadata .cit-first-element { margin-left: 1.5em; padding-left: 0.4em; }
+.cit .cit-metadata .cit-first-element { display: block; }
+.condensed-cit .cit-metadata .cit-title { margin-left: 1.5em; padding-left: 0.2em; display: block; }
+.cit .cit-extra .print-on-demand-link { white-space: nowrap; text-transform: none; margin-left: 0pt; padding: 0pt; font-size: 1em; }
+.cit .cit-extra li.pod-link { display: inline-block; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-global-classes.css ::::: */
+
+.hidden, .nodata, .print-only { display: none; }
+div.sb-div { font-size: 1px; margin: 0pt; padding: 0pt; border: medium none; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-global-dynamic-elements.css ::::: */
+
+div#hovering-abs-close { padding: 0px; margin: 0px; }
+div#hovering-abs-close a { text-decoration: none; font-weight: bold; color: rgb(68, 68, 68); }
+div#hovering-abs-close a:hover { text-decoration: none; font-weight: bold; color: black; }
+div#hovering-abs-close a span { font-size: 0.667em; }
+div#hovering-abs h1 { font-size: 1em; padding: 0.4em; margin: 0.5em; }
+div#hovering-abs { background-color: rgb(216, 216, 216); padding: 0.4em; margin: 0.5em; border: 1px solid rgb(51, 51, 51); left: 140px; width: 405px; overflow: auto; font-size: 0.66em; line-height: 1.3; z-index: 99; }
+div#hovering-abs div { margin: 0pt; padding: 0pt; }
+div#hovering-abs p { margin: 0pt; padding: 0.4em 1em; }
+div#hovering-abs-ptr { background-image: url('abs-ptr.gif'); background-position: right bottom; position: absolute; margin: 0px; padding: 0px; left: 510px; top: 1200px; width: 32px; height: 32px; z-index: 99; }
+div#hovering-abs .xref-sep, div#hovering-abs .xref-aff, div#hovering-abs .xref-corresp, div#hovering-abs ol, div#hovering-abs ul, div#hovering-abs div.fn-group { display: none; }
+div#hovering-abs div.medline-abstract div { margin: 0pt; padding: 0.4em 1em; }
+div#hovering-abs div.medline-abstract div.subsection { margin: 0pt; padding: 0.4em 0pt; }
+div#hovering-abs div.medline-abstract p.medline-attribution { margin: 0pt; padding: 0.4em 1em; font-style: italic; }
+div.hw-gen-page .view-more { background-color: white; display: block; font-weight: bold; float: left; margin-left: -2px; margin-right: 5px; font-size: 0.833em; border: 1px solid rgb(220, 220, 220); text-decoration: none; width: 1.3em; height: 0.9em; text-align: center; padding-bottom: 0.4em; cursor: pointer; }
+div.hw-gen-page .view-more:hover { background-color: rgb(56, 56, 56); color: white; }
+.rateThis p.rateThis-helpText { padding: 0pt; margin: 0.1em 0pt; clear: both; }
+#col-2 .rateThis div { margin: 0pt; padding: 0pt; }
+.rateThis-scale { background: url('rating-stars.gif') repeat scroll 0pt 0pt transparent; display: block; height: 16px; position: relative; }
+.rateThis-scale .rateThis-overallRating { height: 16px; background: url('rating-stars.gif') repeat scroll left -16px transparent; position: absolute; display: none; }
+.rateThis-scale .rateThis-userRating { height: 16px; background: url('rating-stars.gif') repeat scroll left -32px transparent; position: absolute; display: none; }
+ul.rateThis { padding: 3px 3px 3px 10px; list-style-image: url('li-arrow.gif'); margin: 0pt 5px; }
+.rateThis h5 { font-size: 1em; float: none; padding: 0pt; margin: 0pt 0pt 0.2em; font-weight: bold; }
+.rateThis .rateThis-statistics { clear: both; font-size: 0.9em; }
+.rateThis .rateThis-status { clear: both; }
+.rateThis .rateThis-debug { clear: both; font-weight: bold; }
+#col-2 .rateThis div.rateThis-scale { margin: 2px 0pt; }
+
+/* ::::: http://qjmed.oxfordjournals.org/publisher/css/hw-publisher-sidebars.css ::::: */
+
+#col-2 { width: 214px; padding-right: 0px; }
+#col-3 * { position: static; }
+#col-3 { width: 200px; }
+#col-2 div.content-box { margin: 1em 0px 0pt 0pt; padding: 5px 0px 5px 0pt; border-right: 1px solid rgb(219, 219, 219); }
+#col-2 div.content-box span.issue-title a { line-height: inherit; }
+#col-2 div.cb-section { border-right: 1px solid rgb(238, 238, 238); }
+#col-2 .pap-subscribe ul { line-height: 1.3; }
+#col-2 div.sidebar-qs, #col-3 div.sidebar-qs { background-color: rgb(229, 223, 209); border: medium none; font-size: 88%; margin: 0pt 7px 5px; padding: 5px; }
+#col-2 .issue-sections { border-top: medium none; background-image: url('border_dotted_grey_horiz.gif'); background-position: center top; background-repeat: repeat-x; padding-top: 15px; margin: 15px 0pt; line-height: 1.2; }
+#col-2 div.toc-navigation .issue-sections li { background-image: url('arrow_black.gif'); background-position: 0px center; background-repeat: no-repeat; display: block; margin-left: 0px; margin-bottom: 2px; padding: 2px 0px 0px 9px; text-align: left; white-space: normal; }
+#col-2 div.toc-navigation .issue-sections li.issue-sub-sections { background-image: none; }
+#col-2 .copyright-statement { word-wrap: break-word; font-weight: normal; }
+div.content-box .cb-slug ol { border: medium none; }
+div.content-box ol > li { padding-left: 3px; }
+div.content-box div.cb-section .notice { font-weight: normal; }
+div.cb-section li .pdf-direct-link, div.cb-section li .variant-indicator { font-weight: normal; }
+div.cb-section li .pdf-direct-link, div.cb-section li.notice .free { font-weight: bold; }
+#col-2 div#slugline, #col-2 div#docked-slugline { margin: 0pt; padding-bottom: 5px; }
+#col-2 div#slugline cite { margin-bottom: 5px; }
+#col-2 div#slugline cite .slug-doi-wrapper { display: block; }
+#col-2 div#docked-nav { width: 213px; }
+div#docked-slugline .slug-pub-date, div#docked-slugline .slug-pages, div#slugline cite .slug-pub-date, div#slugline cite .slug-pages, div#slugline { font-weight: normal; }
+#col-2 div.content-box div.cb-section .notice a, #col-2 div.cb-section li .pdf-direct-link { background-color: transparent; }
+div.cb-section li .creative-commons-article span { color: rgb(0, 0, 144); font-weight: bold; }
+#col-2 div#cb-art-cat span.cat-type { display: none; }
+#col-3 .adv-search-link { padding-top: 3px; }
+#col-3 #header-qs-search-label, #col-3 div.js-marker { position: absolute; left: -9999px; }
+#col-3 div.most-links-box { float: left; margin: 0.75em 0pt 0pt 10px; padding-bottom: 10px; width: 182px; }
+#col-3 div.most-links-box h3 { float: right; visibility: hidden; }
+div.most-links-box ul { clear: both; margin: 0pt; padding: 0pt; list-style: none outside none; }
+div.most-links-box ul li { margin: 0pt; padding: 0pt; display: none; }
+div.most-links-box ul li.most-cur-sel { display: inline; }
+div.most-links-box ul li.most-cur-sel li { display: list-item; }
+#col-3 div.most-links-box ul li.most-cur-sel a, #col-3 div.most-links-box ul li.most-cur-sel div.most-list ol li a { color: rgb(0, 0, 0); }
+#col-3 div.most-links-box ul li.most-cur-sel a:hover { text-decoration: none; cursor: text; }
+#col-3 div.most-links-box div.most-list { background: none repeat scroll 0% 0% white; border: 1px solid rgb(204, 204, 204); margin: 0pt; padding: 0.5em; }
+#col-3 div.most-links-box ul li.most-cur-sel div.most-list a:hover { cursor: pointer; }
+#col-3 div.most-links-box div.most-list a.view-all { margin-left: 0px; }
+#col-3 div.most-links-box ol { clear: both; margin: 0pt; padding: 0.5em 0.5em 0.5em 15px; list-style: decimal outside url('most-cited-arrow.gif'); }
+div.most-links-box ol li { padding: 0pt; margin: 0.2em 0.4em; }
+div.most-links-box li a { font-size: 83.33%; color: rgb(102, 0, 51); text-decoration: none; }
+div.most-links-box div.most-list a:hover { border-bottom: 1px dotted rgb(102, 0, 51); }
+div.most-links-box .most-hide { display: none; }
+div.most-links-box ul.most-headings { clear: both; position: relative; display: inline; }
+div.most-links-box ul { clear: both; list-style: none outside none; margin: 0pt; padding: 0pt; position: relative; display: block; }
+div.most-links-box ul.most-headings li { background-position: right 1px; background-repeat: no-repeat; float: left; font-size: 1em; font-weight: bold; display: inline; }
+div.most-links-box ul li { display: none; margin: 0pt; padding: 0pt; }
+div.most-links-box ul.most-headings li.most-cur-sel { background-position: right top; }
+div.most-links-box ul li.most-cur-sel { display: inline; }
+div.most-links-box ul.most-headings li.most-cur-sel a { background-position: left top; color: black; padding-bottom: 3px; height: 16px; margin-bottom: -1px; }
+div.most-links-box ul.most-headings li a { background-position: left 1px; background-repeat: no-repeat; display: block; margin: 0pt; padding: 4px 7px 3px; }
+div.most-links-box li a, div.most-links-box li a:visited { color: rgb(102, 0, 51); font-size: 83.33%; text-decoration: none; }
+div.most-links-box ul.most-headings li { overflow: visible; background-position: right 1px; background-repeat: no-repeat; display: list-item; float: left; font-size: 1em; font-weight: bold; clear: right; }
+div.most-links-box ul li { display: none; margin: 0pt; padding: 0pt; }
+.most-headings .most-cur-sel a { background: none repeat scroll 0% 0% white; border-bottom: medium none; z-index: 1; }
+.most-headings a { border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(204, 204, 204) rgb(204, 204, 204) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; background: none repeat scroll 0% 0% rgb(242, 242, 242); line-height: 15px; margin-bottom: 5px; }
+div.most-links-box h4 { display: none; }
+#col-3 h3.cb-contents-header span { height: auto; width: auto; }
+#col-3 #sidebar-current-issue { background-color: transparent; border: medium none; }
+ul.tower-ads { text-align: center; margin-bottom: 10px; padding-bottom: 5px; }
+#col-2 div#cb-art-nav li { margin-bottom: 5px; }
+#col-2 div.cb-section ol, #col-2 #cb-art-cat ol ul { margin-left: 0pt; }
+#col-2 div#article-dyn-nav.content-box { margin-top: 2px; }
+#col-2 div.cb-contents { padding-bottom: 0pt; }
+#col-2 div#article-cb-main.content-box { padding-bottom: 0pt; }
+#col-2 #cb-speciality ol { background: url('sot_salus_sm.png') no-repeat scroll 0px 5px transparent; padding-top: 90px; }
+
+/* ::::: http://qjmed.oxfordjournals.org/publisher/css/hw-publisher-global.css ::::: */
+
+body, div, ul, li, dl, p, h1, h2, h3, h4, h5, h6, img, form, fieldset, legend, label, blockquote, acronym, abbr { border: 0pt none; padding: 0pt; margin: 0pt; }
+body, input, select { font-family: verdana,"Lucida Grande","Lucida Sans Unicode",Tahoma,Arial,Helvetica,sans-serif; }
+input, select { font-size: 1em; }
+ul { list-style: none outside none; }
+acronym { font-style: normal; }
+#content-block { width: 516px; padding: 0pt 15px 12px; }
+div.hw-gen-page { text-align: left; margin: auto; width: 960px; background-color: rgb(255, 255, 255); overflow: auto; padding: 0pt; }
+a:link { color: rgb(0, 0, 204); }
+a:visited { color: rgb(128, 128, 64); }
+.inline_button { position: relative; top: 5px; }
+.hw-gen-page .section h2 { color: rgb(73, 56, 42); font-weight: lighter; font-size: 120%; padding: 5px 8px 0px; }
+.hw-gen-page #content-block .block { display: block; margin: 0pt 0pt 10px; }
+.hw-gen-page #content-block .clear { display: block; clear: both; }
+.hw-gen-page .inline { display: inline; }
+.hw-gen-page .indent_1 { margin-left: 2em; }
+.hw-gen-page .indent_2 { margin-left: 4em; }
+.hw-gen-page .indent_3 { margin-left: 6em; }
+#content-block h2.tight { margin-bottom: 2px; }
+#content-block h2.unemphasised { background-color: transparent; background-position: 0px 10px; margin-bottom: 10px; }
+#content-block h3 { font-size: 1.1em; font-weight: bold; margin-bottom: 0pt; margin-top: 12px; }
+#content-block h3.unemphasised { color: rgb(129, 109, 91); }
+#content-block h3.emphasised { background-image: url('border_dotted_grey_horiz.gif'); background-position: center bottom; background-repeat: repeat-x; margin-right: 10px; padding-bottom: 8px; }
+#content-block h4 { color: rgb(129, 109, 91); font-size: 1em; font-weight: bold; margin: 10px 0pt; display: block; }
+#content-block .contact h4 { margin-bottom: 2px; }
+#content-block h4.unemphasised { font-weight: normal; }
+#content-block p { margin: 0pt 0pt 10px; }
+#content-block .separator_after { border-bottom: 1px solid rgb(255, 191, 0); padding-bottom: 10px; }
+#content-block ul.disc { list-style-type: disc; }
+#content-block ul.square { list-style-type: square; }
+#content-block ul.circle { list-style-type: circle; }
+#content-block ol.decimal { list-style-type: decimal; }
+#content-block ol.lroman { list-style-type: lower-roman; }
+#content-block ol.uroman { list-style-type: upper-roman; }
+#content-block ol.lalpha { list-style-type: lower-alpha; }
+#content-block ol.ualpha { list-style-type: upper-alpha; }
+#content-block ol li.note { list-style-type: decimal; }
+#content-block .hw-gen-page_list { margin-bottom: 12px; }
+fieldset { float: left; width: auto; }
+legend { position: relative; }
+.advanced_article_search #header { background-image: url('header_2.jpg'); }
+#content-block form#journal_search { background-color: rgb(229, 223, 209); margin-bottom: 20px; padding: 10px 15px; }
+#content-block form#journal_search label#label_in_subject { margin: 0pt 4px; }
+#content-block form#journal_search input#search_journals { width: 205px; }
+#content-block form#journal_search ul.emphasised li { margin: 0pt; }
+#content-block form#browse_by_subject { background-color: rgb(229, 223, 209); margin-bottom: 20px; padding: 10px 15px; }
+#content-block form#browse_by_subject select#browse_by_subject { width: 180px; }
+#content-block form#browse_by_subject ul.emphasised li { margin: 0pt; }
+h2#find_results_for { background-image: url('find_results_for.gif'); margin-bottom: 2px; }
+.article_search_results #header { background-image: url('header_7.jpg'); }
+.article_search_results .field_wrap { background-color: rgb(229, 223, 209); }
+.article_search_results #main_content strong.keyword { color: rgb(216, 69, 25); font-weight: bold; }
+.article_search_results #main_content #searched_for { background-image: url('border_dotted_grey_horiz.gif'); background-position: center bottom; background-repeat: repeat-x; padding-top: 8px; float: left; width: 100%; }
+.article_search_results #main_content #searched_for h3 { margin: 0pt 0pt 0pt 15px; }
+.article_search_results #main_content #searched_for ul li { margin: 6px 0pt 8px 15px; }
+.article_search_results #main_content #searched_for ul li a#search_again { background-image: url('search_again.gif'); background-repeat: no-repeat; display: block; height: 16px; width: 99px; }
+.article_search_results form#article_search { float: left; width: auto; margin-bottom: 20px; }
+.article_search_results form#article_search fieldset#results_format { width: 730px; }
+.article_search_results #main_content form#article_search input#refresh_results { margin: 10px 15px; }
+.article_search_results #main_content form#article_search { background-color: rgb(250, 247, 242); background-image: url('border_dotted_grey_horiz.gif'); background-position: center bottom; background-repeat: repeat-x; float: left; width: auto; }
+.article_search_results form#article_search fieldset#results_format legend { float: left; margin: 4px 0px 6px 15px; width: auto; }
+.article_search_results form#article_search fieldset#results_format .radio_wrap_first input, .article_search_results form#article_search fieldset#results_format .radio_wrap_second input, .article_search_results form#article_search fieldset#results_format .radio_wrap_third input, .article_search_results form#article_search fieldset#results_format .radio_wrap_fourth input { margin-left: 15px; }
+.article_search_results #main_content #article_results { float: left; width: auto; }
+.article_search_results #main_content #results_count { background: none repeat scroll 0% 0% rgb(255, 210, 0); float: left; width: 730px; }
+.article_search_results #main_content #results_count h3.text { color: rgb(255, 255, 255); font-size: 1em; font-weight: bold; padding: 4px 15px; margin: 0pt; }
+.article_search_results #main_content #article_results #checked_items_below_outer_wrap, .article_search_results #main_content #article_results #checked_items_above_outer_wrap { background-color: rgb(229, 223, 209); background-repeat: no-repeat; float: left; padding: 6px 0pt 4px; width: 730px; }
+.article_search_results #main_content #article_results #checked_items_below_outer_wrap { background-image: url('checkbox_arrow_down.gif'); background-position: 10px 6px; }
+.article_search_results #main_content #article_results #checked_items_above_outer_wrap { background-image: url('checkbox_arrow_up.gif'); background-position: 10px 3px; margin-top: 20px; }
+.article_search_results #main_content #article_results fieldset#checked_items_below #checked_items_below_wrap, .article_search_results #main_content #article_results fieldset#checked_items_above #checked_items_above_wrap { float: left; position: relative; left: 16em; margin-bottom: -1.6em; margin-right: -16em; top: -1.6em; width: 480px; }
+.article_search_results #main_content #article_results fieldset#checked_items_below, .article_search_results #main_content #article_results fieldset#checked_items_above { padding-left: 35px; }
+.article_search_results #main_content #article_results fieldset#checked_items_below .separator_before, .article_search_results #main_content #article_results fieldset#checked_items_above .separator_before { background-image: url('border_dotted_grey_vert.gif'); background-position: left center; background-repeat: no-repeat; float: left; margin-left: 5px; padding-left: 5px; width: auto; }
+.article_search_results #main_content #article_results fieldset#checked_items_below #go_first, .article_search_results #main_content #article_results fieldset#checked_items_above #go_second { top: 1px; padding-left: 10px; }
+.article_search_results #main_content #results_pages { float: left; text-align: center; margin: 20px 0pt; width: 100%; }
+.article_search_results #main_content #results_pages ul { margin: auto; width: 46em; }
+.article_search_results #main_content #results_pages ul li { float: left; margin: 0pt 1em; width: auto; }
+.article_search_results #main_content #results_pages ul li a#previous { background-image: url('previous.gif'); background-repeat: no-repeat; display: block; height: 16px; width: 81px; }
+.article_search_results #main_content #results_pages ul li a#next { background-image: url('next.gif'); background-repeat: no-repeat; display: block; height: 16px; width: 52px; }
+.article_search_results #main_content #results_pages ul li strong { display: block; float: left; margin-left: 1em; width: auto; }
+.article_search_results #main_content #results_pages ul li ul { float: left; margin: 0pt 1em; width: 15em; }
+.article_search_results #main_content #results_pages ul li ul li { display: inline; float: left; margin: 0pt 0pt 0pt 1em; width: 1em; }
+.article_search_results #main_content #results_pages ul li ul li { font-weight: bold; }
+.article_search_results #main_content .result { background-image: url('border_dotted_grey_horiz.gif'); background-position: center top; background-repeat: repeat-x; float: left; margin-top: 15px; padding-top: 15px; width: 100%; }
+.article_search_results #main_content .result .result_wrap { background-image: url('plain_grey_29.gif'); background-repeat: repeat-y; float: left; width: 730px; }
+.article_search_results #main_content .result .checkbox { display: inline; float: left; width: 30px; margin: 4px 6px 4px 4px; }
+.article_search_results #main_content .result .details { float: left; width: 690px; }
+.article_search_results #main_content .result .details .row { float: left; margin: 4px 0pt; width: 690px; }
+.article_search_results #main_content .result .details .field { float: left; margin-right: 10px; width: 90px; }
+.article_search_results #main_content .result .details .data { float: left; margin-right: 10px; width: 570px; }
+.article_search_results #main_content .result .details ul.links { float: left; padding-left: 100px; width: auto; }
+.article_search_results #main_content .result .details ul.links li { float: left; margin-right: 15px; width: auto; }
+.article_search_results #main_content .result .details .hw-gen-page { color: rgb(129, 109, 91); font-weight: bold; font-size: 0.8em; }
+.article_search_results #main_content .result .details .article_title { font-weight: bold; }
+.article_search_results #main_content .result .details .author { color: rgb(129, 109, 91); font-size: 0.8em; }
+.article_search_results #main_content .result .details .extract { font-size: 0.8em; }
+.article_search_results #main_content .result em { border-color: rgb(2, 150, 191); }
+.my_account #header { background-image: url('header_6.jpg'); }
+.my_account #content-block #logged_in_area { background: none repeat scroll 0% 0% rgb(255, 210, 0); margin-bottom: 20px; padding-bottom: 6px; }
+.my_account #content-block #logged_in_area h2 { border-bottom: 2px solid rgb(255, 255, 255); padding-bottom: 3px; }
+.my_account #content-block #logged_in_area h3 { padding-bottom: 4px; }
+.my_account #content-block #logged_in_area ul, .my_account #content-block #logged_in_area h3 { margin: 0pt 10px; }
+.my_account #content-block #logged_in_area ul li { background-position: 0pt 8px; border-top: 1px solid rgb(255, 237, 153); padding-top: 4px; margin-bottom: 5px; margin-left: 0pt; }
+.my_account #content-block .section h2#welcome { background-color: rgb(229, 223, 209); }
+#content-block h2#about_oxford_journals { background-image: url('about_oxford_journals.gif'); }
+#second .features h2#services { background-image: url('services.gif'); }
+#main_content h2#my_account { background-image: url('my_account.gif'); }
+#main_content h2#events { background-image: url('events.gif'); }
+#main_content h2#for_librarians { background-image: url('for_librarians.gif'); }
+.article_search_results #header h1#page_title { background-image: url('article_search_results.gif'); width: 286px; }
+.article_search_results #main_content h2#you_searched_for { background-image: url('you_searched_for.gif'); }
+.my_account #header h1#page_title { background-image: url('my_account_002.gif'); width: 131px; }
+.my_account #main_content h2#logged_in { background-image: url('logged_in.gif'); }
+.my_account #main_content h2#welcome { background-image: url('welcome.gif'); }
+#main_content form#journal_search label#label_search_journals { background-image: url('search_journals.gif'); background-repeat: no-repeat; display: block; height: 9px; margin: 4px 0pt; width: 148px; }
+div.cb-section li .creative-commons-article span { display: block; height: 0.1em; overflow: hidden; width: 0pt; }
+img.small_margin { margin: 3px; }
+img.medium_margin { margin: 5px; }
+img.large_margin { margin: 10px; }
+.hw-gen-page #alpha { margin-right: 16px; }
+.hw-gen-page #second { float: none; }
+.hw-gen-page #second .contact { width: auto; }
+.hw-gen-page #alpha, .hw-gen-page #beta { float: left; width: 250px; }
+.general_page #content { margin: 0pt 15px; }
+.general_page #content-block p { width: 99%; }
+.general_page #content-block ul.none, .general_page #content-block ul.disc, .general_page #content-block ul.square, .general_page #content-block ul.circle { margin: 0px; }
+.general_page #content-block ol.none, .general_page #content-block ol.decimal, .general_page #content-block ol.lroman, .general_page #content-block ol.uroman, .general_page #content-block ol.lalpha, .general_page #content-block ol.ualpha { margin: 15px; }
+div#inst_logo { text-align: center; }
+#content-block ul.cit-list li { margin-left: 0pt; }
+#content-block ol.cit-auth-list li { margin-left: 0pt; }
+div#content-block .cit-metadata h4 { padding-left: 3em; display: block; color: rgb(34, 34, 34); }
+div#content-block .cit-metadata h4.cit-first-element { padding-left: 0.5em; display: block; color: rgb(34, 34, 34); }
+#content-block a span.soc-bm-link-text { display: inline; height: auto; }
+#content-block #cited-by h2 { background-color: rgb(255, 210, 0); }
+#content-block p.no-pap-articles { margin-top: 8px; }
+#content-block .emailafriend-result h2 { font-size: 100%; }
+.math-toc li.results-cit { border: medium none; }
+.math-toc .cit ul.cit-auth-list, #pageid-search-results .cit ul.cit-auth-list { padding-left: 3em; }
+.cit.is-early-release .cit-metadata .cit-title { padding-left: 2.1em; }
+.cit.is-early-release ul.cit-auth-list { padding-left: 2.2em; }
+#pageid-pap-index span.cit-doi, #pageid-pap-bysection span.cit-doi, #pageid-pap-bycustom span.cit-doi { display: block; }
+.cit cite { font-size: 80%; padding-left: 2.5em; color: grey; }
+.results-cit.cit cite { padding-left: 3.7em; }
+#pageid-toc .cit cite .cit-ahead-of-print-date { display: none; }
+#pageid-toc .cit cite .cit-accepted-date { display: none; }
+ul#site-breadcrumbs li span.breadcrumb_subject { padding: 0pt 5px; }
+.cit .cit-extra span.ac-free, .cit .cit-extra span.ac-free-to-you { padding-left: 0pt; margin-left: 0pt; }
+.cit span.oup-manuscript-model-pap span.accepted-manuscript, .cit .cit-extra span.cit-flags span.corrected-proof, .cit .cit-extra span.cit-flags span.accepted-manuscript, .cit .cit-extra span.cit-flags span.uncorrected-proof { color: red; }
+.cit .cit-extra span.oup-manuscript-model-pap span { padding-left: 0pt; }
+#cb-art-nav.upper { text-transform: uppercase; }
+.cit-series-title span.hw-pub-sertitle-fasttrack { background-image: none; color: transparent; padding-right: 0pt; clear: both; height: 14px; }
+span.hw-pub-sertitle-hotpaper { background-image: url('hotpaper.gif'); margin-right: -20px; background-position: 0pt center; background-repeat: no-repeat; color: transparent; float: left; clear: both; line-height: 4; }
+span.hw-pub-sertitle-paediatricrheumatology { background-image: url('paediatricrheumatology.gif'); background-position: 0pt center; background-repeat: no-repeat; float: left; display: block; height: 45px; width: 16px; padding-right: 4px; color: transparent; }
+.sertitle-gif-by-js { margin-right: 2px; }
+ul#site-breadcrumbs li.empty { background: none repeat scroll 0% 0% transparent; margin: 0pt; padding: 0pt; }
+#pageid-search-results .results-summary span.search-results-count { margin-top: 25px; }
+#cb-art-nav a.xref-fn { display: none; }
+#pageid-archive .proxy-archive-by-year td.width2col { width: 50%; }
+#pageid-archive .proxy-archive-by-year td.width3col { width: 33%; }
+span.rightslink-date { display: none; }
+h4#all-alerts-modify-text { border: 3px outset; padding: 2px; width: 47px; margin: 2px 0pt; font-size: 90%; }
+div#proxied-contents h4#all-alerts-modify-text a { font-weight: bold; }
+span.sub-article-title {  }
+img.sub-article-title-bullet-js { margin-left: 2px; }
+span.sub-article-title.inherited-article-title { background-image: none; padding-left: 0pt; display: none; }
+#pageid-calendar-submit #calendar-submission fieldset, #pageid-calendar-search fieldset { float: none; }
+#pageid-calendar-submit input, #pageid-calendar-search input { font-size: 12px; }
+#pageid-calendar-submit #content-block #proxied-contents, #pageid-calendar-search #content-block #proxied-contents { font-size: 1.44em; }
+#pageid-forum-submit #content-block #proxied-contents fieldset, #pageid-eletters-submit #content-block #proxied-contents fieldset, #pageid-calendar-submit .field-help span, #pageid-calendar-search span { font-size: 100%; }
+#pageid-calendar-submit fieldset#calendar-submit-details td.field-name { width: 12em; }
+#pageid-calendar-submit fieldset legend, #pageid-calendar-search fieldset legend { position: static; }
+#pageid-calendar-search .limit-by-date span { display: block; }
+div#pageid-content.hide-cols { overflow: visible; }
+span.cit-elocation { display: none; }
+.toc-cit .cit-auth-list li.group-author.group-author-first-item { left: 0pt; }
+div#hovering-abs .abstract ul { display: block; }
+.cit .cit-extra span.nowuptodate-descr { color: rgb(0, 102, 51); display: block; font-weight: normal; padding-left: 0pt; text-transform: none; }
+#pageid-authindex .empty-data { padding: 20px 0pt; font-weight: bold; }
+ul.issue-title li { font-weight: bold; font-size: 200%; margin: 0pt 0.4em 0.4em 0pt; font-family: Georgia,'Times New Roman',serif; }
+div#pageid-collections.hw-gen-page div#content-block div#proxied-contents form.oup-collections input#contract-target { width: 0pt; }
+.oup-collections .arrows, .oup-collections .arrows.contracted { background-position: left top; background-repeat: no-repeat; }
+.oup-collections .arrows { background-image: url('darrow.gif'); }
+.oup-collections .arrows.contracted { background-image: url('rarrowsm.gif'); }
+.oup-collections .arrows dt { padding-left: 12px; }
+.oup-collections .arrows.contracted dd dt, .oup-collections .arrows.contracted dd ul { display: none; }
+#col-2 #article-cb-main div.cb-section ol li.cme-link { display: none; }
+
+/* ::::: http://qjmed.oxfordjournals.org/publisher/css/hw-publisher-ac.css ::::: */
+
+#hw-login-msg-box div.additional-access-denied-text { text-align: left; border: 1px solid rgb(0, 0, 0); padding: 5px; margin: 10px 0pt; }
+#hw-login-roles-signin-form fieldset { position: relative; float: none; width: auto; padding: 0.5em; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-content-figures.css ::::: */
+
+.callout { display: block; }
+div.callout ul.callout-links, div.callout ul.fig-services { margin: 0.2em 0em; }
+div.callout .callout-links li, div.callout .fig-services li { display: inline; margin-left: 0pt; list-style: none outside none; }
+div.callout .callout-links li a, div.callout .fig-services li a { margin-left: 0.2em; padding-left: 9px; background-image: url('rightchevron.gif'); background-position: 0px center; background-repeat: no-repeat; }
+div.callout .callout-links li a, div.callout .fig-services li a { color: rgb(102, 0, 51); white-space: nowrap; }
+div.article .fig, div.article .table { margin: 1em 20px; clear: both; }
+div.fig a.in-nw { display: none; }
+div.fig a.in-nw-vis { display: inline; }
+.fig-inline, .table-inline { font: 0.85em "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif; border: 1px dotted rgb(153, 153, 153); background-color: white; height: auto; width: 225px; padding: 1em; margin: 1em 5px 1em 10px; text-align: center; float: left; }
+.video-inline { width: auto; }
+.inline-expansion { width: 440px; }
+.fig-caption, .table-caption { background-color: rgb(238, 238, 238); padding: 1em 1em 0.25em; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(170, 170, 170) rgb(170, 170, 170) rgb(204, 204, 204); }
+.fig-caption p, .table-caption p, .fig-caption span, .table-caption span, .media-caption p, .media-caption span { text-align: left; }
+div.section span.disp-formula, .article span.disp-formula { display: block; text-align: center; padding: 0.5em 0pt 15px; overflow-x: auto; overflow-y: hidden; }
+div.section span.chem-struct, .article span.chem-struct { display: block; text-align: center; padding: 0.5em 0pt 15px; overflow-x: auto; overflow-y: hidden; }
+div.caption-clear, br.caption-clear { clear: both; }
+.fig-label, .table-label, .media-label { font-weight: bold; }
+.pos-anchor .fig-inline { width: 440px; padding: 8px; }
+.fig-caption ol { list-style-position: inside; }
+.fig-caption ol li { margin-bottom: 1em; margin-left: 0pt; }
+.fig-caption ol li p:first-child { display: inline; }
+div.section span.disp-formula.mj, .article span.disp-formula.mj { overflow-x: hidden; }
+div#content-block div.article div.fig-inline-video { width: auto; font: 0.85em "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif; height: auto; padding-top: 0px; margin: 0pt; text-align: center; clear: both; background-color: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); }
+div#content-block div.article div#play-in-place { width: auto; font: 0.85em "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif; height: auto; margin: 0pt; clear: both; padding: 1em; background-color: rgb(255, 255, 255); text-align: center; }
+div.article div#play-in-place object { padding: 0pt; background-color: white; border: medium none; }
+div#content-block div.article div.fig-inline-video-img-pop-out span.fig-inline-video-img-pop-out { display: block; font-size: 125%; }
+div#content-block div.article div.fig-inline-video-img-pop-out { width: 450px; height: auto; padding-top: 5px; margin: 0pt; text-align: center; background-color: rgb(255, 255, 255); }
+div#content-block div.fig-inline-video div#play-in-place span.inline-video-attrib { display: block; }
+div#content-block div.fig-inline-video div#play-in-place span.inline-video-permission { display: block; }
+div#play-in-place span.inline-video-attrib { display: block; }
+div#col-2 div#article-cb-main.content-box div.cb-contents div.cb-section ol li div.fig-inline-video-img-pop-out { margin: 0px; }
+div#content-block div.fig-inline-video div#play-in-place { background-color: rgb(238, 238, 238); }
+div#content-block div.article div.fig-inline-video div.fig-inline-video-img-pop-out { background-color: rgb(238, 238, 238); }
+div#content-block div.article div.fig-inline-video div.fig-caption span.inline-video-permission { display: block; text-align: center; }
+div#content-block div.article div.fig-caption span.inline-video-permission { display: block; text-align: center; }
+div#content-block div.article div.fig-caption span.inline-video-attrib { display: block; text-align: center; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-content-tables.css ::::: */
+
+div.hide-cols div.pagetype-content div.table-expansion table, div.hide-cols div.pagetype-content div.table-wrapper table { border-collapse: collapse; white-space: nowrap; }
+div.pagetype-content div.table-expansion table th, div.pagetype-content div.table-expansion table td, div.pagetype-content div.table-wrapper table th, div.pagetype-content div.table-wrapper table td { font-family: monospace; padding: 2px 4px; border-width: 1px; border-style: solid; border-color: rgb(192, 192, 192) rgb(232, 232, 232); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; }
+div.pagetype-content div.table-expansion table th, div.pagetype-content div.table-wrapper table th { border-bottom-width: 2px; font-weight: bold; }
+div.pagetype-content div.table-expansion table, div.pagetype-content div.table-wrapper table { border-right: 2px solid rgb(192, 192, 192); border-width: 1px 2px 2px; border-style: solid; border-color: rgb(192, 192, 192); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; }
+div#pageid-data-supp div#content-block div.table-wrapper { border: medium none; }
+div.pagetype-content div.table-expansion table .xref-bibr { font-size: 0.8em; vertical-align: super; color: rgb(64, 56, 56); }
+div.pagetype-content div.table-expansion table .xref-bibr:hover { border-bottom: medium none; color: rgb(64, 56, 56); }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-page-content.css ::::: */
+
+.highwire-marker-journal-article-start .highwire-marker-journal-article-end { display: none; }
+div.contributors div.affiliation-list { margin-top: 0.5em; }
+.hideaffil { position: absolute; left: -9999px; width: 5000px; }
+#content-block div.contributors div.affiliation-list address, #content-block div.contributors div.affiliation-list p { font-style: normal; padding: 0pt; margin: 0pt; }
+.hidenotes { position: absolute; left: -9999px; width: 5000px; }
+#hovering-ref { background-color: rgb(204, 204, 204); color: rgb(34, 34, 34); position: absolute; left: -9999px; font-size: 69.44%; padding: 0.5em; border-width: 1px 2px 2px 1px; border-style: solid; border-color: rgb(170, 170, 170) rgb(153, 153, 153) rgb(153, 153, 153) rgb(170, 170, 170); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; }
+#hovering-ref .cit-auth-list { font-weight: bolder; list-style: none outside none; padding: 0pt; display: inline; margin: 0pt; }
+#hovering-ref .cit-ed-list { list-style: none outside none; padding: 0pt; margin: 0pt; }
+#hovering-ref .cit-auth-list li, #hovering-ref .cit-ed-list li { display: inline; padding: 0pt; margin: 0pt; }
+#hovering-ref .duplicate { display: none; }
+#hovering-ref .cit-title { display: block; padding: 0pt; margin: 0pt; }
+#hovering-ref cite { font-style: normal; }
+#hovering-ref cite abbr.cit-jnl-abbrev, #hovering-ref cite .ie6-abbr-wrap { margin-right: 0.1em; font-style: italic; }
+#hovering-ref .cit-vol { font-weight: bolder; }
+div#pageid-content .article { text-align: justify; }
+div#pageid-content .article p q { display: block; margin: 0.5em 1em; padding: 0.5em; }
+div#pageid-content .article blockquote { display: block; font-size: 1.4em; font-weight: bolder; text-align: center; color: blue; margin: 0.5em 1em; padding: 0.5em 1em; border: 1px solid rgb(221, 221, 221); }
+div#pageid-content .article blockquote.speech { display: block; font-size: 1em; font-weight: normal; color: rgb(0, 0, 0); text-align: left; border: medium none; padding: 0pt; margin: 0pt; }
+div#pageid-content .article blockquote.speech { display: inherit; font-size: inherit; margin: inherit; padding: inherit; border: inherit; font-weight: inherit; text-align: inherit; color: inherit; }
+div#pageid-content .article blockquote.speech cite { font-weight: bold; margin-right: 0.2em; }
+div#pageid-content .figonly-view p { text-align: left; }
+div#pageid-content ol.figonly-list { list-style: none outside none; margin: 0pt; padding-left: 0pt; }
+div#pageid-content li.figonly-item { margin-left: 0pt; padding-left: 0pt; }
+div#pageid-content li.figonly-item div.fig { margin: 1em 5px 1em 10px; }
+div#pageid-content .article .ref-list { text-align: left; }
+div.major-section, div.sub-section { font-weight: bold; font-size: 0.833em; line-height: normal; margin: 0pt; padding: 0pt; }
+h1 { margin: 10px 0pt 0pt; padding: 0pt; }
+h1.expansion-article-title, h1.data-supp-article-title { margin: 10px 0pt; }
+div.nav-placeholder, div.section-nav a { display: block; color: rgb(170, 0, 0); text-decoration: none; width: 9px; height: 15px; background-position: left top; background-repeat: no-repeat; }
+div.section-nav a.prev-section-link { background-image: url('up.gif'); }
+div.section-nav a.next-section-link { background-image: url('down.gif'); }
+div.section-nav a span { position: absolute; left: -9999px; }
+div.contributors { text-align: left; }
+div.contributors ol.contributor-list { list-style: none outside none; margin: 15px 0pt 0pt; padding: 0pt; font-weight: bold; text-align: left; white-space: normal; }
+div.contributors ol.contributor-list li { display: inline; padding: 0pt; margin: 0pt; text-align: left; line-height: 1.7; white-space: normal; }
+div.contributors ol li a, div.extract-view div.contributors ol li span.xref-corresp, div.extract-view div.contributors ol li span.xref-aff, div.extract-view div.contributors ol li span.xref-fn { font-weight: normal; text-decoration: none; vertical-align: 0.2em; }
+div.contributors ol.corresp-list { list-style: none outside none; padding: 0pt; margin: 0pt; }
+div.contributors ol.corresp-list li { margin-left: 0pt; }
+div.contributors ol.corresp-list li.fn a, div.contributors .em-link a, div.contributors li.corresp a { font-weight: normal; text-decoration: none; vertical-align: 0em; }
+div.contributors ol.contributor-list li .name a { font-weight: bold; text-decoration: none; white-space: nowrap; color: rgb(51, 51, 51); vertical-align: 0pt; }
+div.contributors ol.contributor-list li .name a:hover { border-bottom: 1px dotted rgb(51, 51, 51); }
+div.contributors .xref-sep { vertical-align: 0.33em; }
+div.contributors ol.affiliation-list li { display: list-item; padding-left: 0pt; margin-left: 0pt; }
+div.contributors ol.affiliation-list { list-style: none outside none; font-weight: normal; }
+div.contributors ol.affiliation-list li address, div.contributors ol.corresp-list li address { display: inline; font-style: normal; padding: 0pt; margin: 0pt; border: 0pt none; }
+div.contributors ol.fn-track { list-style: none outside none; margin: 0pt; padding: 0pt; text-align: left; font-size: 0.833em; }
+div.contributors ol.fn-track li { padding: 0pt; margin: 5px 0pt 0pt; text-align: left; }
+div.article-edited-by { margin-top: 1em; }
+#extract-disclaimer { border: 1px solid rgb(200, 200, 200); padding: 0pt 1em; font-style: italic; margin: 0.5em 0pt; }
+#extract-disclaimer p { margin: 0.5em 0pt; padding: 0pt; }
+#footnotes p { text-align: left; }
+.article div.section { padding: 0pt; margin: 0pt; border: 0pt none; clear: both; }
+.article div.section h2, .article div#intro-header h2 { border-width: 0pt 0pt 2px; border-style: none none dotted; border-color: -moz-use-text-color -moz-use-text-color rgb(153, 153, 153); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; font-size: 125%; margin: 10px 0pt; }
+.article div.section h3, .article div.section h4, .article div.section h5 { padding: 0pt; margin: 0pt 5px 0pt 0pt; display: inline; font-size: 1em; }
+.article div.section h4, .article div.section h5 { font-style: italic; }
+.article div.section h4 em, .article div.section h5 em { font-style: normal; }
+ul.kwd-group { text-align: center; font-size: 0.833em; padding: 0.5em; margin: 0pt; font-weight: bold; border-top: 1px dotted rgb(153, 153, 153); border-bottom: 1px dotted rgb(153, 153, 153); line-height: 2; }
+ul.kwd-group li.kwd { display: inline; padding: 0.25em; margin: 0pt 0.7em; background-color: rgb(216, 216, 216); line-height: 2; white-space: normal; }
+ul.kwd-group li.kwd span { white-space: nowrap; }
+a.xref-bibr, a.xref-fig, a.xref-table { text-decoration: none; }
+a.xref-bibr:hover, a.xref-fig:hover, a.xref-table:hover { color: blue; }
+div#pageid-content div.table-expansion { overflow: auto; }
+span.statement-label { font-size: 120%; line-height: 1.5; padding-right: 0.5em; }
+#content-block p.p-lead { display: inline; }
+div.proposition span.statement-label { font-weight: bold; }
+div.proof span.statement-label { font-style: italic; }
+ol.cit-list { list-style: decimal outside none; margin-left: 2.5em; }
+ol.ref-use-labels { list-style: none outside none; margin-left: 0.5em; }
+ol.cit-list li { padding: 0.3em 0pt; display: list-item; }
+div.ref-cit .cit-metadata li { display: inline; }
+div.ref-cit .cit-metadata .duplicate, div.ref-cit .cit-metadata span.cit-pub-id-sep, div.ref-cit .cit-metadata span.cit-pub-id { display: none; }
+div.ref-cit .cit-metadata div.duplicate { display: none; }
+div.ref-list a.rev-xref-ref { font-size: 0.694em; font-weight: bolder; background-color: rgb(204, 204, 204); padding: 2px; }
+div.ref-list .rev-xref-ref, div.ref-list .rev-xref-ref:link { text-decoration: none; }
+div.ref-cit div.cit-extra a, span.inline-cit.ref-journal .cit-extra a { font-size: 88%; margin-left: 0.3em; padding-left: 9px; background-image: url('rightchevron.gif'); background-position: 0pt center; background-repeat: no-repeat; text-decoration: underline; white-space: nowrap; display: inline-block; }
+span.inline-cit.ref-journal .cit-extra a { display: inline; white-space: normal; }
+span.inline-cit.ref-journal .cit-extra span span { font-size: 1em; }
+div.ref-cit div.cit-extra a:hover, span.inline-cit.ref-journal .cit-extra a:hover { border-bottom: 0px none; }
+div.ref-cit div.cit-extra a.cit-ref-sprinkles-open-url-has-image, span.inline-cit.ref-journal .cit-extra a.cit-ref-sprinkles-open-url-has-image { background-image: none; padding-left: 0.1em; }
+div.ref-cit div.cit-extra a.cit-ref-sprinkles-open-url-has-image span, span.inline-cit.ref-journal .cit-extra a.cit-ref-sprinkles-open-url-has-image span { display: none; }
+div.ref-cit div.cit-extra a.cit-ref-sprinkles-open-url-has-image img, span.inline-cit.ref-journal .cit-extra a.cit-ref-sprinkles-open-url-has-image img { vertical-align: text-bottom; }
+div.ref-cit cite { font-style: normal; }
+div.ref-cit cite span.cit-source, div.ref-cit cite abbr.cit-jnl-abbrev, div.ref-cit cite span.cit-conf-name, div.ref-cit cite .ie6-abbr-wrap { margin-right: 0.1em; font-style: italic; }
+div.ref-cit .cit-vol { font-weight: bolder; }
+div.ref-cit, .ref-cit div, .ref-cit cite, .ref-cit ol, .ref-cit li { margin-left: 0pt; margin-right: 0pt; padding-left: 0pt; padding-right: 0pt; display: inline; }
+div.ref-cit.no-rev-xref, span.inline-cit.ref-journal.no-rev-xref { display: block; padding-top: 1px; margin-top: 0pt; }
+.ref-use-labels div.ref-cit.no-rev-xref { display: inline; }
+div.section .section-nav, div#intro-header .section-nav { float: right; background-color: white; padding: 0pt 0.5em 0pt 1em; }
+.view-more-img { margin: 0pt 0.5em 0pt 0.25em; }
+.article-options { float: right; }
+.article-options img { margin: 0pt 0.25em 0.5em; }
+.hw-related-articles {  }
+div.fn-group ul { list-style: none outside none; margin: 0pt; padding: 5px 0pt 0pt; }
+div.fn-group ul li { margin: 0pt; padding: 0.5em 0pt; text-align: left; border-bottom: 1px solid rgb(200, 200, 200); width: 95%; }
+div.fn-group ul li ul { margin: 0pt; padding: 0pt; }
+div.fn-group ul li ul li { padding: 0pt; border-bottom: medium none; width: 100%; }
+#content-block div.fn-group ul li p { margin: 0.5em 0pt; padding: 0pt; }
+div.fn-group li.corresp a.rev-xref { font-size: 0.694em; font-weight: bolder; background-color: rgb(204, 204, 204); padding: 2px; margin-right: 5px; }
+div.fn-group li.corresp a.rev-xref, div.fn-group li.corresp a.rev-xref:link { text-decoration: none; }
+li.glossary dl { margin: 0pt; padding: 0.5em 0pt; }
+li.glossary dt { float: left; clear: left; padding: 0.2em 1em; font-weight: bolder; }
+li.glossary dd { text-align: left; padding: 0.2em 1em; }
+a.inline-ad-match { text-decoration: underline; border-bottom: 1px solid; padding-bottom: 1px; color: rgb(104, 104, 104); }
+.search-term-highlight { color: rgb(204, 0, 0); font-weight: bold; }
+div#cb-entrez-links-placeholder { margin: 0pt; padding: 0pt; }
+div#cb-entrez-links-placeholder ul { list-style: none outside none; margin: 0pt; padding: 0pt; }
+div#cb-entrez-links-placeholder ul li { margin: 5px 0pt 0pt; }
+div#cb-entrez-links-placeholder ul ul { list-style: square outside none; }
+div#cb-entrez-links-placeholder ul ul li { margin: 0pt 0pt 0pt 15px; }
+#content-block div.social-bookmarking { clear: both; }
+ul.social-bookmark-links { margin: 1em 0pt 0pt; list-style: none outside none; border-top: 1px solid rgb(170, 170, 170); padding-top: 0.5em; }
+ul.social-bookmark-links li { padding: 0pt; margin: 0pt 10px 0pt 0pt; display: inline; font-size: 0.833em; }
+ul.social-bookmark-links li a, ul.social-bookmark-links li a:hover { text-decoration: none; }
+ul.social-bookmark-links a span:hover { border-bottom: 1px dotted; }
+ul.social-bookmark-links li span.soc-bm-link-text { margin-left: 4px; }
+#content-block ul.social-bookmark-links li { white-space: normal; }
+#content-block ul.social-bookmark-links li a { white-space: nowrap; }
+#content-block p.social-bookmarking-help { line-height: 1; margin: 5px 0pt 10px; }
+p.social-bookmarking-help a { text-decoration: none; font-size: 88%; }
+p.social-bookmarking-help a:hover { border-bottom: 1px dotted; }
+div#related-urls h2, div#cited-by h2, div#related h2, div#rel-related-article h2 { padding-left: 0pt; margin-left: 0pt; border-top: 1px solid rgb(170, 170, 170); padding-top: 0.5em; margin-top: 1em; }
+div#rel-related-article ul.related-list, div#related-urls ul.related-url-results { list-style: none outside none; padding-left: 0pt; margin-left: 0pt; }
+div#related-urls ul.related-url-results a, div#cited-by ul.cited-by-list, div#related ul.related-list { padding-left: 0pt; margin-left: 0pt; }
+div#cited-by ul.cited-by-list li.cit, div#related ul.related-list li.cit, div#rel-related-article ul.related-list li.cit { border: 1px solid rgb(187, 187, 187); border-collapse: collapse; }
+h1 a.xref-fn { text-decoration: none; font-size: 50%; vertical-align: super; }
+li.copyright-statement { list-style-type: none; margin-left: 0pt; }
+div#before_resource_rev_errata p a { color: rgb(167, 7, 22); }
+span.hltext { background-color: rgb(255, 216, 0); font-weight: bolder; }
+.underline { text-decoration: underline; }
+.list-romanlower { list-style-type: lower-roman; }
+.list-alphalower { list-style-type: lower-alpha; }
+.list-alphaupper { list-style-type: upper-alpha; }
+span.inline-l4-heading { font-weight: bolder; font-style: italic; margin-right: 0.2em; }
+#content-block div.contributors.intlv ol.contributor-list li { display: block; }
+#pageid-content .ref-cit a { word-wrap: break-word; white-space: normal; }
+#content-block ul.history-list { list-style-type: none; margin: 5px 0pt; padding: 0pt; clear: both; }
+ul.copyright-statement { list-style-type: none; }
+.cit .cit-auth-list li span.cit-collab { white-space: normal; }
+.rev-xref-ref, .rev-xref { font-family: "Lucida Sans Unicode",Arial,"Lucida Grande",Tahoma,Verdana,Helvetica,sans-serif; }
+ul.author-notes { list-style-type: none; }
+#content-block img.pdf-extract-img { width: 500px; }
+div.hide-cols #content-block img.pdf-extract-img { width: auto; }
+.corresp-list .corresp-label { font-size: 0.85em; line-height: 0; vertical-align: super; }
+.disp-formula-label { float: right; }
+#content-block .hw-popup-error { border: 2px solid black; margin: 1em; padding: 1em; }
+#content-block .hw-popup-error p { margin: 0pt; padding: 0pt 0pt 0.5em; }
+#content-block div.section p.h-lead { display: inline; }
+.disp-formula .MathJax_MathML { font-size: 150%; }
+.inline-formula .MathJax_MathML { font-size: 100%; }
+#rating-count { display: block; clear: both; padding-top: 3px; }
+#rateStatus { width: 100%; }
+#rateMe { width: 100%; height: auto; padding: 0px; margin: 0px; }
+#rateMe li { list-style: none outside none; }
+#rateMe a:hover { background: url('1000-hover.png') no-repeat scroll 0% 0% transparent; }
+#rateMe .on { background: url('1000.png') no-repeat scroll 0% 0% transparent; }
+#rateMe a { float: left; background: url('0.png') no-repeat scroll 0% 0% transparent; width: 16px; height: 15px; }
+#ratingSaved { display: none; }
+#quality { float: none; margin-top: 0.5em; }
+.saved { color: red; }
+div.rateit { display: inline-block; position: relative; -moz-user-select: none; }
+div.rateit div.rateit-range { position: relative; display: inline-block; background: url('star.gif') repeat scroll 0% 0% transparent; height: 16px; }
+div.rateit div.rateit-hover, div.rateit div.rateit-selected { position: absolute; }
+div.rateit div.rateit-hover { background: url('star.gif') repeat scroll left -32px transparent; }
+div.rateit div.rateit-hover-rtl { background-position: right -32px; }
+div.rateit div.rateit-selected { background: url('star.gif') repeat scroll left -16px transparent; }
+div.rateit div.rateit-selected-rtl { background-position: right -16px; }
+div.rateit div.rateit-reset { background: url('delete.gif') repeat scroll 0pt 0pt transparent; width: 16px; height: 16px; display: inline-block; float: left; }
+div.rateit div.rateit-reset:hover { background-position: 0pt -16px; }
+.table-center { text-align: center; }
+.table-left { text-align: left; }
+.table-right { text-align: right; }
+.highwire-journal-article-marker-end { clear: both; }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/jquery.fancybox-1.3.4.css ::::: */
+
+#fancybox-loading { position: fixed; top: 50%; left: 50%; width: 40px; height: 40px; margin-top: -20px; margin-left: -20px; cursor: pointer; overflow: hidden; z-index: 1104; display: none; }
+#fancybox-loading div { position: absolute; top: 0pt; left: 0pt; width: 40px; height: 480px; background-image: url('fancybox.png'); }
+#fancybox-overlay { position: absolute; top: 0pt; left: 0pt; width: 100%; z-index: 1100; display: none; }
+#fancybox-tmp { padding: 0pt; margin: 0pt; border: 0pt none; overflow: auto; display: none; }
+#fancybox-wrap { position: absolute; top: 0pt; left: 0pt; padding: 20px; z-index: 1101; outline: medium none; display: none; }
+#fancybox-outer { position: relative; width: 100%; height: 100%; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#fancybox-content { width: 0pt; height: 0pt; padding: 0pt; outline: medium none; position: relative; overflow: hidden; z-index: 1102; border: 0px solid rgb(255, 255, 255); }
+#fancybox-hide-sel-frame { position: absolute; top: 0pt; left: 0pt; width: 100%; height: 100%; background: none repeat scroll 0% 0% transparent; z-index: 1101; }
+#fancybox-close { position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; background: url('fancybox.png') repeat scroll -40px 0px transparent; cursor: pointer; z-index: 1103; display: none; }
+#fancybox-error { color: rgb(68, 68, 68); font: 12px/20px Arial; padding: 14px; margin: 0pt; }
+#fancybox-img { width: 100%; height: 100%; padding: 0pt; margin: 0pt; border: medium none; outline: medium none; line-height: 0; vertical-align: top; }
+#fancybox-frame { width: 100%; height: 100%; border: medium none; display: block; }
+#fancybox-left, #fancybox-right { position: absolute; bottom: 0px; height: 100%; width: 35%; cursor: pointer; outline: medium none; background: url('blank.gif') repeat scroll 0% 0% transparent; z-index: 1102; display: none; }
+#fancybox-left { left: 0px; }
+#fancybox-right { right: 0px; }
+#fancybox-left-ico, #fancybox-right-ico { position: absolute; top: 50%; left: -9999px; width: 30px; height: 30px; margin-top: -15px; cursor: pointer; z-index: 1102; display: block; }
+#fancybox-left-ico { background-image: url('fancybox.png'); background-position: -40px -30px; }
+#fancybox-right-ico { background-image: url('fancybox.png'); background-position: -40px -60px; }
+#fancybox-left:hover, #fancybox-right:hover { visibility: visible; }
+#fancybox-left:hover span { left: 20px; }
+#fancybox-right:hover span { left: auto; right: 20px; }
+.fancybox-bg { position: absolute; padding: 0pt; margin: 0pt; border: 0pt none; width: 20px; height: 20px; z-index: 1001; }
+#fancybox-bg-n { top: -20px; left: 0pt; width: 100%; background-image: url('fancybox-x.png'); }
+#fancybox-bg-ne { top: -20px; right: -20px; background-image: url('fancybox.png'); background-position: -40px -162px; }
+#fancybox-bg-e { top: 0pt; right: -20px; height: 100%; background-image: url('fancybox-y.png'); background-position: -20px 0px; }
+#fancybox-bg-se { bottom: -20px; right: -20px; background-image: url('fancybox.png'); background-position: -40px -182px; }
+#fancybox-bg-s { bottom: -20px; left: 0pt; width: 100%; background-image: url('fancybox-x.png'); background-position: 0px -20px; }
+#fancybox-bg-sw { bottom: -20px; left: -20px; background-image: url('fancybox.png'); background-position: -40px -142px; }
+#fancybox-bg-w { top: 0pt; left: -20px; height: 100%; background-image: url('fancybox-y.png'); }
+#fancybox-bg-nw { top: -20px; left: -20px; background-image: url('fancybox.png'); background-position: -40px -122px; }
+#fancybox-title { font-family: Helvetica; font-size: 12px; z-index: 1102; }
+.fancybox-title-inside { padding-bottom: 10px; text-align: center; color: rgb(51, 51, 51); background: none repeat scroll 0% 0% rgb(255, 255, 255); position: relative; }
+.fancybox-title-outside { padding-top: 10px; color: rgb(255, 255, 255); }
+.fancybox-title-over { position: absolute; bottom: 0pt; left: 0pt; color: rgb(255, 255, 255); text-align: left; }
+#fancybox-title-over { padding: 10px; background-image: url('fancy_title_over.png'); display: block; }
+.fancybox-title-float { position: absolute; left: 0pt; bottom: -20px; height: 32px; }
+#fancybox-title-float-wrap { border: medium none; border-collapse: collapse; width: auto; }
+#fancybox-title-float-wrap td { border: medium none; white-space: nowrap; }
+#fancybox-title-float-left { padding: 0pt 0pt 0pt 15px; background: url('fancybox.png') no-repeat scroll -40px -90px transparent; }
+#fancybox-title-float-main { color: rgb(255, 255, 255); line-height: 29px; font-weight: bold; padding: 0pt 0pt 3px; background: url('fancybox-x.png') repeat scroll 0px -40px transparent; }
+#fancybox-title-float-right { padding: 0pt 0pt 0pt 15px; background: url('fancybox.png') no-repeat scroll -55px -90px transparent; }
+.fancybox-ie6 #fancybox-close { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-left-ico { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-right-ico { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-title-over { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-title-float-left { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-title-float-main { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-title-float-right { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {  }
+#fancybox-loading.fancybox-ie6 { position: absolute; margin-top: 0pt; }
+#fancybox-loading.fancybox-ie6 div { background: none repeat scroll 0% 0% transparent; }
+.fancybox-ie .fancybox-bg { background: none repeat scroll 0% 0% transparent ! important; overflow: hidden; }
+.fancybox-ie #fancybox-bg-n {  }
+.fancybox-ie #fancybox-bg-ne {  }
+.fancybox-ie #fancybox-bg-e {  }
+.fancybox-ie #fancybox-bg-se {  }
+.fancybox-ie #fancybox-bg-s {  }
+.fancybox-ie #fancybox-bg-sw {  }
+.fancybox-ie #fancybox-bg-w {  }
+.fancybox-ie #fancybox-bg-nw {  }
+
+/* ::::: http://qjmed.oxfordjournals.org/shared/css/hw-global-colexpand.css ::::: */
+
+div.hide-cols { max-width: 970px; }
+div#content-option-box { float: right; padding: 5px; margin: 10px 0pt 0pt; }
+div#content-option-box ul, div#content-option-box li { margin: 0pt; padding: 0pt; }
+div#content-block div.option-box-docked { padding: 2px 2px 2px 1px; background-color: white; position: fixed; top: -10px; }
+div#content-option-box ul { list-style: none outside none; padding: 0pt; margin: 0pt; }
+div.hide-cols div#content-block { width: auto; }
+div#content-block li#content-toggle a { display: block; width: 24px; border: medium none; margin: 0pt; padding: 0pt; height: 13px; background: url('col-expand.gif') no-repeat scroll center center transparent; text-decoration: none; }
+div#content-block li#content-toggle a.expanded { background: url('col-contract.gif') no-repeat scroll right center transparent; }
+div#content-block li#content-toggle a span { display: none; }
+div.hide-cols div#cols-min { position: relative; clear: both; }
+.hide-cols div#col-2-min, .hide-cols div#col-3-min { width: 100px; height: 15px; float: right; }
+.hide-cols div#col-2-min { border-bottom: 1px dashed rgb(184, 184, 144); border-left: 1px solid rgb(128, 128, 0); background-color: rgb(226, 229, 208); }
+.hide-cols div#col-3-min { border-bottom: 1px dashed rgb(184, 184, 144); border-left: 1px solid rgb(128, 128, 0); border-right: 1px solid rgb(128, 128, 0); background-color: rgb(213, 218, 186); }
+.hide-cols div#col-2-min .view-more, .hide-cols div#col-3-min .view-more { color: black; border: medium none; margin: 0pt 2px; padding: 1px; float: right; width: 13px; height: 13px; background-color: inherit; background-image: url('pulldown.gif'); background-repeat: no-repeat; background-position: center center; }
+.hide-cols div#col-2-min .view-more:hover, .hide-cols div#col-3-min .view-more:hover { color: white; background-color: rgb(64, 64, 64); }
+div.hide-cols div#col-2, div.hide-cols div#col-3 { display: none; }
+div.hide-cols div#col-2.palette, div.hide-cols div#col-3.palette { display: block; position: absolute; height: auto; border: 1px solid gray; right: 0px; }
+div#pageid-content.hide-cols div.table-expansion, div#pageid-data-supp.hide-cols div#content-block .ds-img-wrap, div#pageid-data-supp.hide-cols div#content-block .table-wrapper { width: 98%; overflow: visible; }
+div.hide-cols div#content-block { width: auto; overflow: visible; clear: both; }
+div#pageid-data-supp.hide-cols div#content-block .table-wrapper { width: auto; overflow: visible; }
+div#pageid-data-supp.hide-cols div#content-block .table-wrapper table { border-collapse: collapse; }
+div#pageid-data-supp.hide-cols .table-wrapper table th, div#pageid-data-supp.hide-cols .table-wrapper table td { font-family: monospace; padding: 3px; border: 1px solid gray; }
+div#col-hover-close { position: absolute; left: 2px; top: 2px; line-height: 10px; height: 10px; margin: 0pt; padding: 1px 2px 2px; text-align: left; background-color: white; border: 1px solid gray; }
+div#col-hover-close a span { font-weight: bold; }
+div#col-hover-close a, div#col-hover-close a:link, div#col-hover-close a:hover, div#col-hover-close a:active { text-decoration: none; color: black; font-size: 80%; }
+
+/* ::::: http://qjmed.oxfordjournals.org/publisher/css/hw-publisher-page-content.css ::::: */
+
+#content-block div.article h3 { color: black; background-color: white; }
+#content-block div.article div.contributors { text-align: left; margin-bottom: 10px; }
+#content-block div.article div.fn-group { margin-bottom: 10px; }
+#content-block div.article .fig, div.article .table { padding-bottom: 0.5em; }
+div#pageid-content .article div.section { margin-top: 20px; }
+.article div.section h4 { font-size: 120%; line-height: 2; color: rgb(0, 0, 0); font-weight: bold; }
+.article div.section h3 { font-size: 120%; line-height: 2; color: rgb(0, 0, 0); font-weight: bold; }
+h3.kwd-header { border-top: 1px dotted rgb(153, 153, 153); line-height: 2; padding-top: 0.25em; }
+ul.kwd-group { border-top: medium none; }
+span.kwd-label, span.kwd-group-title { font-weight: bold; font-family: Georgia,'Times New Roman',serif; }
+span.kwd-group-title { display: none; }
+ul.kwd-group { padding: 0px 0px 0.25em; width: 516px; font-size: 100%; text-align: left; text-indent: 75px; margin-top: -2em; line-height: 2; }
+ul.kwd-group.jel { text-indent: 130px; }
+ul.kwd-group li.kwd:first-child span { background: none repeat scroll 0% 0% transparent; }
+ul.kwd-group li.kwd { background-color: transparent; display: inline; font-weight: normal; padding: 0pt; margin-left: 0pt; margin-right: 0pt; }
+ul.kwd-group li.kwd span { background: url('bullet.gif') no-repeat scroll left center transparent; display: inline; font-weight: normal; padding-left: 13px; padding-right: 0pt; margin-left: 0pt; }
+ul.kwd-group li.kwd a, #pageid-content #content-block div.product a, a.terms { color: rgb(64, 64, 64); text-decoration: none; }
+ul.kwd-group li.kwd a:hover, div.product a:hover, a.terms:hover { border-bottom: 1px dotted rgb(102, 0, 51); }
+#content-block div.product { margin: 8px 0pt; }
+#pageid-content #content-block div.article div.product span.name a, #pageid-content #content-block div.article div.product span.name a:hover, #pageid-content #content-block div.article div.product span.name a:visited, #pageid-content #content-block div.article div.product span.name a:link, #pageid-content #content-block div.article div.product span.name a:active { color: rgb(64, 64, 64); text-decoration: none; border: medium none; cursor: text; }
+.key-word-lable-xml { display: none; }
+div#hovering-ref { font-size: 75%; background-color: rgb(255, 255, 255); text-align: left; }
+div.ref-cit ol.cit-auth-list { font-size: 90%; }
+div.ref-cit cite a { padding-left: 0.3em; }
+div.ref-list .cit cite { font-size: 100%; color: black; }
+div.ref-list .cit .cit-name-suffix { padding-left: 0.6em; }
+div.ref-list .cit-vol { font-weight: normal; }
+.cit .cit-auth-list li span { white-space: normal; }
+#content-block div.contributors ol.contributor-list li { margin: 0pt; }
+a.rev-xref { text-decoration: none; background-color: rgb(204, 204, 204); font-weight: bolder; margin-right: 2px; }
+div.ref-cit.no-rev-xref { display: inline; }
+div#pageid-content .article blockquote { color: black; text-align: left; font-weight: normal; font-size: 101%; }
+div#pageid-content .article blockquote.verse-group { border: medium none; }
+div.pagetype-content div.table-expansion table th, div.pagetype-content div.table-expansion table td, div.pagetype-content div.table-wrapper table th, div.pagetype-content div.table-wrapper table td { font-family: verdana,sans-serif; border-color: transparent; }
+div.pagetype-content div.table-expansion table, div.pagetype-content div.table-wrapper table { border: medium none ! important; }
+div.pagetype-content div.table-expansion div.table-foot { background-color: rgb(238, 238, 238); border-color: rgb(204, 204, 204) rgb(170, 170, 170) rgb(170, 170, 170) rgb(204, 204, 204); border-style: solid; border-width: 1px; padding: 1em 1em 0.25em; }
+div#pageid-content .article li.copyright-statement { text-align: left; }
+div#pageid-content .article ul.list-unord { list-style-type: disc; margin-left: 5%; }
+div#pageid-content div.convention, div#pageid-content div.corollary, div#pageid-content div.definition, div#pageid-content div.lemma, div#pageid-content div.proof, div#pageid-content div.proposition, div#pageid-content div.remark, div#pageid-content div.theorem { margin-left: 5%; }
+h1 xref-fn, h1 a.xref-fn, h1 a.xref-fn sup { font-size: 90%; }
+div.contributors ol li a.xref-corresp, .corresp .corresp-label, .fn-label { font-size: 0.85em; vertical-align: super; }
+.disp-formula-label { float: right; }
+#pageid-content .app .table-inline { width: auto; margin: 0pt; }
+#pageid-content .app div.table { margin: 0pt; }
+#pageid-content .corresp br { display: none; }
+#pageid-content .corresp strong { font-weight: normal; font-style: italic; margin-right: 3px; }
+div.contributors ol li address a { vertical-align: middle; }
+div.ref-cit cite span.cit-source, div.ref-cit cite abbr.cit-jnl-abbrev, div.ref-cit cite span.cit-conf-name, div.ref-cit cite .ie6-abbr-wrap, div#hovering-ref cite abbr.cit-jnl-abbrev, div#hovering-ref cite .ie6-abbr-wrap { font-style: normal ! important; }
+#pageid-content .pos-anchor .table-inline { width: auto; }
+#pageid-content .pos-anchor div.table-inline td { padding-left: 3px; }
+div.hide-cols { position: relative; }
+div.hide-cols div#col-2.palette, div.hide-cols div#col-3.palette { z-index: 20; right: 2px; }
+li.glossary dt.def-list-title { float: none; }
+#pageid-content .boxed-text { background-color: rgb(238, 238, 238); padding: 10px; margin: 5px 0pt; border: 1px solid rgb(102, 102, 102); }
+#pageid-content #content-block div.article .boxed-text h3 { background-color: transparent; }
+div#pageid-content span.p-label { margin-right: 8px; }
+span.sensitive-text { display: none; }
+div#pageid-content .article blockquote.speech cite { margin-right: 0.5em; }
+.general_page #content-block li p { width: auto; }
+div.article { font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif; }
+#pageid-content a.xref-fn { vertical-align: baseline; }
+#pageid-content a.xref-fn sup { vertical-align: super; }
+#cb-art-soc div.social-bookmarking { margin: 5px 0pt 0pt; padding: 0pt; }
+#cb-art-soc div.social-bookmarking ul { width: 100%; }
+ul.social-bookmark-links li { font-size: 90%; margin: 0pt 8px 0pt 0pt; }
+#col-2 div#cb-art-soc.cb-section ol { padding-left: 10px; }
+#cb-art-soc ol > li:first-child a { background-image: url('envelope.jpg'); background-repeat: no-repeat; display: inline-block; width: 16px; height: 16px; }
+#cb-art-soc ol > li:first-child { float: left; margin: 7px 10px 0pt 0pt; width: 16px; height: 16px; }
+#cb-art-soc ol > li { display: inline-block; }
+#cb-art-soc p.social-bookmarking-help { margin-left: -30px; }
+.sans-serif { font-family: sans-serif; }
+.pos-anchor .table-inline { float: none; }
+.authorurlblock ul.authorurls { margin-top: 3px; }
+.authorurlblock ul.authorurls li { margin-left: 5px; }
+div.article .graphic-with-uri { clear: both; margin: 1em 20px; }
+.graphic-with-uri-inline { background-color: white; border: 1px dotted rgb(153, 153, 153); float: left; font: 0.85em "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,Arial,Helvetica,sans-serif; height: auto; margin: 1em 5px 1em 10px; padding: 1em; text-align: center; }
+.graphic-with-uri-caption { background-color: rgb(238, 238, 238); border-color: rgb(204, 204, 204) rgb(170, 170, 170) rgb(170, 170, 170) rgb(204, 204, 204); border-style: solid; border-width: 1px; padding: 1em 1em 0.25em; }
+.graphic-with-uri .graphic-label { font-weight: bold; }
+
+/* ::::: http://qjmed.oxfordjournals.org/resource/css/hw20.css ::::: */
+
+body { background-color: rgb(220, 216, 204); border: 0pt none; margin: 0pt; padding: 0pt; text-align: center; }
+#content-block div.article { text-align: left; }
+div.hw-gen-page, div.sidebar-issue-nav, div.article-nav, #col2, #col3, #col-2 div.sidebar, #col-2 .toc-navigation .toc-links li, #col-2 .toc-navigation .data-supp-links li, #col-2 .this-issue .toc-links li, #col-2 div#docked-slugline, #col-2 div#slugline, #col-2 .cb-corr-slug div.correction-for-article, #col-2 .cb-corr-slug div.retraction-for-article, #col-2 .cb-corr-slug div.revision-for-article, #col-2 div.content-box, #col-3 #sidebar-current-issue, #col-3 .features .feature, div.hw-gen-page #content-block fieldset, div.hw-gen-page #content-block .search-buttons, #pageid-collections.hw-gen-page #content-block, #pageid-collections.hw-gen-page #content-block #proxied-contents #col-2, #pageid-collections.hw-gen-page #content-block #proxied-contents #col-2 div.sidebar-related-coll, #pageid-collections.hw-gen-page #content-block #proxied-contents #col-2 div.sidebar-related-coll ul li, .search-nav, #pageid-login.hw-gen-page #content-block, #hw-login-sign-in-group, #hw-login-sign-in-box, #hw-ac-standalone-form, #hw-login-sign-in-box .hw-login-option-list, .hw-login-extra-group, .hw-login-extra-group span.help-links a, .hw-login-extra-group-above-signin, #pageid-login.hw-gen-page #content-block #hw-login-sign-in-group #hw-login-sign-in-box form.hw-ac-standalone-form fieldset, .hw-gen-page #primary_nav a { font-size: 100%; }
+#site-breadcrumbs, #col-2, #col-3, #content-block, div.hw-gen-page #content-block fieldset, div.hw-gen-page #content-block .search-buttons, #pageid-collections.hw-gen-page #content-block, #pageid-login.hw-gen-page #content-block, .hw-gen-page #primary_nav a { font-size: 70%; }
+a, a.link, #site-breadcrumbs a:link, .content-block a:link, #col-2 a:link, #col-3 a:link, div.contributors ol.contributor-list li .name a:link, div.contributors li.corresp a:link, div.article a:link, div.article li.kwd a:link, #col-2 div.article-nav a:link, ol.cit-list li .cit-extra a:link, #pageid-collections.hw-gen-page #content-block #proxied-contents #col-2 a:link, .search-nav a:link, #pageid-login.hw-gen-page #content-block a:link, #secondary_footer #copyright a:link { color: rgb(0, 0, 204); text-decoration: none; }
+#site-breadcrumbs a:visited, .content-block a:visited, #col-2 a:visited, #col-3 a:visited, ol.cit-list li .cit-extra a:visited, #pageid-collections.hw-gen-page #content-block #proxied-contents #col-2 a:visited, .search-nav a:visited, #pageid-login.hw-gen-page #content-block a:visited, #secondary_footer #copyright a:visited { color: purple; text-decoration: none; }
+.content-block a:hover, .content-block a:active, #col-2 a:hover, #col-2 a:active, #col-3 a:hover, #col-3 a:active, div.contributors ol.contributor-list li .name a:hover, div.contributors li.corresp a:hover, div.article a:hover, div.article li.kwd a:hover, div.article a.terms:hover li, #site-breadcrumbs a:hover, ol.cit-list li .cit-extra a:hover, #pageid-collections.hw-gen-page #content-block #proxied-contents #col-2 a:hover, .search-nav a:hover, #pageid-login.hw-gen-page #content-block a:hover, #secondary_footer #copyright a:hover { text-decoration: underline; }
+#col-2 div.article-nav a:hover { color: rgb(0, 0, 204); }
+#col-2 div.article-nav a:visited { color: purple; }
+#col-2 a.collapse-toggle { color: black; }
+div.contributors ol.contributor-list li .name a:hover, div.content-box a:hover, div.article li.kwd a.kwd-search { border-bottom: medium none; }
+div#proxied-contents a { font-weight: normal; }
+#primary_nav a, #secondary_nav a, #header a, #primary_footer a, #secondary_footer a { color: rgb(0, 0, 0); }
+p.hide { border: 0pt none; margin: 0pt; padding: 0pt; }
+#primary_nav div, #secondary_nav div, #header div, #primary_footer div, #secondary_footer div { border: 0pt none; font-family: verdana,sans-serif; font-size: 70%; margin: 0pt; padding: 0pt; }
+#primary_nav ul, #secondary_nav ul, #header ul, #primary_footer ul, #secondary_footer ul { border: 0pt none; list-style: none outside none; margin: 0pt; padding: 0pt; }
+#primary_nav ul li, #secondary_nav ul li, #header ul li, #primary_footer ul li, #secondary_footer ul li { border: 0pt none; margin: 0pt; padding: 0pt; }
+#primary_nav, #secondary_nav, #primary_footer { float: left; width: 100%; }
+#header strong#page_logo { background-image: url('oj_logo.gif'); background-repeat: no-repeat; display: block; height: 15px; margin: 33px 0pt 6px 22px; width: 266px; }
+#header strong#page_logo a { display: block; height: 15px; width: 266px; }
+#header em#tag_line { background-image: url('tag_line.gif'); background-repeat: no-repeat; display: block; height: 5px; margin: 0pt 0pt 6px 22px; width: 201px; }
+.journal #secondary_nav strong#page_logo { background-image: url('oj_logo_002.gif'); background-repeat: no-repeat; background-position: left top; float: left; height: 9px; margin: 4px 0pt 0pt 22px; width: 142px; }
+.journal #secondary_nav strong#page_logo a { display: block; height: 9px; width: 142px; }
+#oas_top, #ad-top { margin: auto auto 10px; clear: both; text-align: center; }
+#oas_bottom, #ad-footer { margin: auto auto 10px; clear: both; position: relative; z-index: 10; text-align: center; }
+#oas_bottom, #ad-footer { position: relative; z-index: 10; }
+#oas_top img, #oas_bottom img, #ad-top img, #ad-footer img { display: block; margin: 0pt auto; }
+#oas_right1 { margin: auto auto 10px; clear: both; text-align: center; }
+#oas_right1 a img { margin-left: 30px; }
+.ad_hidden { display: none; }
+.ad_unhidden { display: block; }
+.ad_working { visibility: hidden; }
+div#oas_top.ad_unhidden { text-align: center; }
+div#proxied-contents table.proxy-archive-by-year { margin-left: auto; margin-right: auto; }
+div#proxied-contents table.proxy-archive-by-year th, div#proxied-contents table.proxy-archive-by-year td { padding: 5px; }
+div#pageid-archive #content-block table.proxy-archive-by-year td.proxy-archive-by-year-month h3 { background-color: rgb(238, 238, 238); padding: 5px; font-size: 1.2em; font-weight: bold; border-bottom: 1px solid rgb(185, 194, 141); }
+div#hovering-abs { background-color: rgb(255, 255, 255); text-align: left; }
+div#hovering-abs-ptr { background-image: url('abs-ptr.white.gif'); }
+div#hovering-abs h2 { font-size: 90%; padding: 0pt 0.4em 0.4em; margin: 0pt 0.5em 0.5em; }
+div#hovering-abs .abstract h2 { margin-top: 0.4em; padding-top: 0.5em; }
+div#hovering-abs h1 { padding-bottom: 0.1em; margin-bottom: 0.1em; font-size: 120%; font-family: Georgia,'Times New Roman',serif; }
+div#hovering-abs span.kwd-group-title { display: none; }
+p.hide, #primary_nav ul li a span, #primary_nav ul li strong span, #secondary_nav ul li a span, #secondary_nav ul li strong span, #secondary_nav strong span, #header strong span, #header em span, #header h1 span, #header h2 span, #page_title h1 span, #primary_footer strong span, #primary_footer em span { display: block; height: 0.1em; overflow: hidden; width: 0pt; }
+p.hide { margin-bottom: -0.1em; }
+#hw div.referrer-based-search-line { font-family: arial,sans-serif; font-size: 0.75em; background-color: yellow; padding: 3px 25px; margin: 0px 4px 5px 0px; }
+#hw div#issue-title p { font-family: arial,sans-serif; font-size: 0.75em; background-color: rgb(238, 238, 238); width: 450px; padding: 10px; border: 1px solid silver; }
+#hw div#issue-title p strong { font-weight: normal; }
+#inst_logo { text-align: right; }
+#inst_logo a img { border: medium none; }
+span.hw-pub-sertitle-fasttrack { background-image: url('fasttrack.png'); background-position: 0pt center; background-repeat: no-repeat; padding-right: 40px; color: transparent; }
+a.xref-fn sup { font-size: 0.83em; line-height: 0.5em; vertical-align: baseline; position: relative; top: -0.4em; }
+a.xref-fn { line-height: 0; }
+div.cit-extra { display: block; }
+#col-3 #sidebar-current-issue ol { text-align: center; }
+#col-3 #sidebar-current-issue .cb-section { border-bottom: medium none; margin: 0pt; }
+#col-3 #cover { border: 1px solid rgb(192, 192, 192); }
+#col-2 .cover img { border: 1px solid rgb(192, 192, 192); }
+div.ref-list a.rev-xref-ref, a.rev-xref { background-color: transparent; border: 1px solid silver; padding: 0pt 2px; margin: 0pt 2px; }
+div.ref-list a.rev-xref-ref:hover, a.rev-xref:hover { background-color: silver; }
+.strike { text-decoration: line-through; }
+.ac-free-to-you { display: none; }
+.content-box span.free { display: none; }
+div#content-block .cit-metadata h4.cit-first-element { padding-left: 2em; }
+ul.history-list { text-align: right; }
+#content-block #cited-by h2 { background-color: transparent; }
+#col-3 #second .feature img { display: block; margin-left: auto; margin-right: auto; }
+div.license, ul.copyright-statement { display: block; margin-top: 1em; }
+div.ref-cit span.cit-comment a, a.cit-ref-sprinkles { font-weight: normal; }
+span.cit-reflinks-full-text span.free-full-text { color: green; }
+div#pageid-content .article p q { border-left: 1em solid rgb(238, 238, 238); }
+div#content-block .cit-metadata h4 { margin: 0pt; }
+img.cover { border: 1px solid silver; }
+html body.general_page div#pageid-eletters.hw-gen-page div#col-2 div.sidebar ol { margin-left: 2em; }
+div#content-block div.cit div.cit-metadata ul.cit-auth-list { display: block; }
+ol.results-cit-list .cit-auth-list { display: block; }
+div#pageid-search-results.hw-gen-page div#content-block ol.results-cit-list li.results-cit div.results-cit div.cit-metadata ul.cit-auth-list { margin-left: 0pt; }
+#pageid-content #content-block h2 { padding-left: 0em; padding-bottom: 0.25em; }
+div#slugline { text-align: center; }
+div#pageid-content div#col-2 div.cb-contents li { margin-bottom: 3px; }
+div#pageid-content div#col-3 div#second div.features div.feature li { margin-bottom: 3px; }
+div#pageid-content div#col-3 .feature { padding-bottom: 0px; margin-bottom: 1.5em; }
+#pageid-toc .hw-pub-sertitle-editorschoice { display: inline; }
+.hw-pub-sertitle-editorschoice { text-transform: capitalize; }
+div#pageid-tag-index div#content-block ol.results-cit-list ul.cit-auth-list { margin-left: 3em; }
+div#pageid-tag-index div#content-block div.search-nav { border: medium none; }
+ul.supplement-list li.issue-cit { margin: 0pt 0pt 1em; }
+#pageid-search-results #col-2 ul.results-actions li { margin-bottom: 0.5em; }
+#pageid-toc.hw-gen-page #content-block div.toc-level ul.cit-list li.cit div.cit-extra ul.cit-views li.last-item p.nowuptodate-info { border: 1px solid silver; color: rgb(0, 102, 51); display: block; font-weight: normal; padding: 0pt 0.5em 0.5em 0pt; width: 97%; text-transform: none; text-align: center; margin-top: 0.5em; }
+#pageid-content #content-block .verse-group p.verse-line { line-height: 1; }
+div#bnArticleRecs ol { list-style-type: none; }
+a:visited { color: purple; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div#article-cb-main.content-box div.cb-contents div#cb-art-bn.cb-section h4.cb-section-header { height: 100%; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div#article-cb-main.content-box div.cb-contents div#cb-art-bn.cb-section ul li div#bnArticleRecs ol li div.bn_g_result_title { display: list-item; list-style-type: circle; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div#article-cb-main.content-box div.cb-contents div#cb-art-bn.cb-section ul li div#bnArticleRecs { padding-left: 3px; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div#article-cb-main.content-box div.cb-contents div#cb-art-bn.cb-section ul { background-color: rgb(238, 238, 238); }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div.pds-box div.pds-box-outer div.pds-box-inner div.pds-box-top div.pds-question div.pds-question-outer div.pds-question-inner div.pds-question-top { font-size: 1em; padding: 0pt 0pt 5px; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div.pds-box div.pds-box-outer div.pds-box-inner div.pds-box-top div.pds-answer span#pds-answer4935539 span.pds-answer-group { padding: 0pt; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div.pds-box div.pds-box-outer div.pds-box-inner div.pds-box-top div.pds-vote { padding: 0pt; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div.pds-box div.pds-box-outer div.pds-box-inner div.pds-box-top div.pds-vote div.pds-votebutton-outer span.pds-links { padding: 0pt; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div.pds-box div.pds-box-outer div.pds-box-inner div.pds-box-top div.pds-vote div.pds-votebutton-outer span.pds-links a { font-size: 0.8em; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div.pds-box div.pds-box-outer div.pds-box-inner div.pds-box-top div.pds-vote div.pds-votebutton-outer { margin: 5px 0pt 0pt; }
+html body.general_page div#pageid-content.hw-gen-page div#content-block p { font-size: 115%; }
+ol.cit-list li { font-size: 110%; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block div.additional-access-denied-text { display: none; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block div#hw-login-instruction { background-color: rgb(239, 239, 239); text-align: center; font-size: 100%; padding: 5px 0pt; display: block; color: black; font-weight: bold; margin-bottom: 15px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-item-group div#hw-login-content-item { margin-bottom: 15px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-item-group div#hw-login-content-item ul.cit-auth-list { font-size: 50%; display: none; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-instruction { margin-bottom: 0px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-rbac-group { margin-bottom: 20px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-sign-in-group { margin-bottom: 20px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-sign-in-box { margin-top: 10px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-sign-in-box ul.hw-login-option-list { line-height: 90%; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-ppv-group { margin-bottom: 20px; }
+html body.general_page.journal div#pageid-login.hw-gen-page div#content-block #hw-login-shib-athens-group { margin-bottom: 15px; }
+html body.general_page div#pageid-content.hw-gen-page div#col-2 div#article-cb-main.content-box div.cb-contents div.cb-section ol li.cb-versions div ol.version-list li.current-li a { text-decoration: underline; background-color: yellow; padding: 3px; line-height: 2em; }
+div#col-3 div.sidebar-qs { margin: 0pt 5px 5px; background-color: rgb(238, 238, 238); }
+div#col-3 div.sidebar-qs form.searchbox { margin: 2px; }
+div#col-3 div.sidebar-qs form.searchbox input.inline_button { position: relative; }
+div#pageid-search.hw-gen-page div#col-3 div.sidebar-qs { display: none; }
+#col-3 div.most-links-box .most-list li { padding-bottom: 3px; }
+div#responses { margin-top: 10px; }
+li.notice.correction-links { background-color: yellow; margin-right: 5px; }
+div#hw-login-review-subs { display: none; }
+img.hwac-institutional-logo { margin: 5px 10px 0px 0px; }
+li.social-bookmarking-item.social-bookmarking-item-googleplus { display: none; }
+#pageid-content #oas_top { min-height: 24px; height: auto ! important; }
+.overline { margin-top: 20px; margin-bottom: 20px; font: bold 1.25em Georgia,'Times New Roman',serif; color: rgb(85, 85, 85); }
+div#col-2 div.sidebar-qs { background-color: rgb(238, 238, 238); border: 1px solid rgb(255, 255, 255); }
+.proxy-archive-cover-images img { border: 1px solid silver; }
+div.license { font-size: 90%; }
+td.crossref-cite { vertical-align: middle; }
+tr.crossref-space-row { display: none; }
+#pageid-toc .hw-pub-property-meeting_abstract ul.cit-first-element.cit-auth-list { display: none; }
+#pageid-toc .hw-pub-property-meeting_abstract .sub-article-title { display: block; margin: 0pt 0pt 0.5em; font-weight: normal; }
+#pageid-toc .hw-pub-property-meeting_abstract img.sub-article-title-bullet-js { display: none; }
+
+/* ::::: http://qjmed.oxfordjournals.org/resource/css/h20-oup-header.css ::::: */
+
+#primary_nav { background-color: rgb(184, 170, 158); background-image: url('nav_separator_dark_grey.gif'); background-position: 264px 2px; background-repeat: no-repeat; padding-top: 8px; padding-bottom: 6px; }
+#primary_nav ul { float: left; margin-left: 4px; width: auto; }
+#primary_nav ul li { display: inline; float: left; margin-left: 8px; margin-right: 8px; width: auto; }
+#primary_nav ul li.selected { background-image: url('arrow_white.gif'); background-position: 0pt 1px; background-repeat: no-repeat; margin-left: 0px; padding-left: 8px; }
+#primary_nav ul li a:hover { background-position: -140px 0px; }
+#primary_nav ul li.separator_after { margin-right: 18px; }
+#primary_nav ul li a, #primary_nav ul li strong { background-repeat: no-repeat; float: left; height: 9px; }
+#primary_nav ul li#nav_our_journals a, #primary_nav ul li#nav_our_journals strong { background-image: url('our_journals.gif'); width: 93px; }
+#primary_nav ul li#nav_access_purchase a, #primary_nav ul li#nav_access_purchase strong { background-image: url('access_purchase.gif'); width: 128px; }
+#primary_nav ul li#nav_for_authors a, #primary_nav ul li#nav_for_authors strong { background-image: url('for_authors.gif'); width: 84px; }
+#primary_nav ul li#nav_for_librarians a, #primary_nav ul li#nav_for_librarians strong { background-image: url('for_librarians_002.gif'); width: 97px; }
+#primary_nav ul li#nav_for_societies a, #primary_nav ul li#nav_for_societies strong { background-image: url('for_societies.gif'); width: 88px; }
+#primary_nav ul li#nav_corporate_services a, #primary_nav ul li#nav_corporate_services strong { background-image: url('corporate_services.gif'); width: 134px; }
+#primary_nav ul li#nav_our_journals strong { background-image: url('our_journals_selected.gif'); }
+#primary_nav ul li#nav_access_purchase strong { background-image: url('access_purchase_selected.gif'); }
+#primary_nav ul li#nav_buy_online { margin-right: 86px; }
+#primary_nav ul li#nav_for_authors strong { background-image: url('for_authors_selected.gif'); }
+#primary_nav ul li#nav_for_librarians strong { background-image: url('for_librarians_selected.gif'); }
+#primary_nav ul li#nav_for_societies strong { background-image: url('for_societies_selected.gif'); }
+#primary_nav ul li#nav_corporate_services strong { background-image: url('corporate_services_selected.gif'); }
+.journal #primary_nav { background-position: 495px 2px; }
+.journal #primary_nav ul li a:hover { background-position: -150px 0pt; }
+.journal #primary_nav ul li#nav_subscriptions { margin-right: 86px; }
+.journal #primary_nav ul li#nav_about_this_journal a, .journal #primary_nav ul li#nav_about_this_journal strong { background-image: url('about_this_journal.gif'); width: 129px; }
+.journal #primary_nav ul li#nav_about_this_journal strong { background-image: url('about_this_journal_selected.gif'); }
+.journal #primary_nav ul li#nav_contact_this_journal a, .journal #primary_nav ul li#nav_contact_this_journal strong { background-image: url('contact_this_journal.gif'); width: 144px; }
+.journal #primary_nav ul li#nav_contact_this_journal strong { background-image: url('contact_this_journal_selected.gif'); }
+.journal #primary_nav ul li#nav_subscriptions a, .journal #primary_nav ul li#nav_subscriptions strong { background-image: url('subscriptions.gif'); width: 96px; }
+.journal #primary_nav ul li#nav_subscriptions strong { background-image: url('subscriptions.gif'); }
+.journal #primary_nav ul li#nav_current_issue a, .journal #primary_nav ul li#nav_current_issue strong { background-image: url('current_issue.gif'); width: 96px; }
+.journal #primary_nav ul li#nav_current_issue strong { background-image: url('current_issue_selected.gif'); }
+.journal #primary_nav ul li#nav_archive a, .journal #primary_nav ul li#nav_archive strong { background-image: url('archive.gif'); width: 53px; }
+.journal #primary_nav ul li#nav_archive strong { background-image: url('archive_selected.gif'); }
+.journal #primary_nav ul li#nav_search a, .journal #primary_nav ul li#nav_search strong { background-image: url('search.gif'); width: 48px; }
+.journal #primary_nav ul li#nav_search strong { background-image: url('search.gif'); }
+#secondary_nav { background-color: rgb(73, 56, 42); }
+#secondary_nav ul { float: right; padding-bottom: 4px; padding-top: 6px; width: auto; }
+#secondary_nav ul li { display: inline; float: left; margin-right: 12px; padding-left: 8px; width: auto; }
+#secondary_nav ul li.selected { background-image: url('arrow_white.gif'); background-repeat: no-repeat; }
+#secondary_nav ul li a:hover { background-position: -80px 0px; }
+#secondary_nav ul li a, #secondary_nav ul li strong { background-repeat: no-repeat; float: left; height: 8px; }
+#secondary_nav ul li#nav_about_us a, #secondary_nav ul li#nav_about_us strong { background-image: url('about_us.gif'); width: 61px; }
+#secondary_nav ul li#nav_news a, #secondary_nav ul li#nav_news strong { background-image: url('news.gif'); width: 33px; }
+#secondary_nav ul li#nav_contact_us a, #secondary_nav ul li#nav_contact_us strong { background-image: url('contact_us.gif'); width: 74px; }
+#secondary_nav ul li#nav_my_account a, #secondary_nav ul li#nav_my_account strong { background-image: url('my_account_003.gif'); width: 78px; }
+#secondary_nav ul li#nav_my_basket a, #secondary_nav ul li#nav_my_basket strong { background-image: url('my_basket.gif'); width: 67px; }
+#user_nav { background-color: rgb(238, 238, 238); float: left; width: 100%; }
+#user_nav #authstring { display: inline; float: left; margin: 0pt 15px 0em; padding: 4px 0pt 5px; width: auto; color: brown; font-size: 11px; }
+#user_nav #authstring li { border-left: medium none; }
+#user_nav a { color: rgb(0, 0, 0); text-decoration: none; }
+#user_nav a:hover { color: rgb(181, 127, 15); text-decoration: underline; }
+#header { background-repeat: no-repeat; height: 113px; float: left; width: 100%; }
+#header h1#page_title { background-repeat: no-repeat; display: block; height: 14px; margin: 12px 0pt 0pt 22px; font-weight: lighter; font-family: verdana,sans-serif; font-size: 130%; color: white; text-transform: uppercase; }
+#header ul.emphasised li { background-image: url('arrow_black_002.gif'); background-position: 0pt 5px; background-repeat: no-repeat; padding-left: 8px; }
+ul#site-breadcrumbs { float: left; padding-left: 7px; width: 99%; }
+ul#site-breadcrumbs li { background-image: url('arrow_black_002.gif'); background-position: 0pt 0.45em; background-repeat: no-repeat; float: left; margin-right: 4px; padding-left: 8px; width: auto; margin-top: 10px; margin-bottom: 18px; padding-bottom: 2px; }
+ul#site-breadcrumbs li.first { background-image: none; }
+
+/* ::::: http://qjmed.oxfordjournals.org/resource/css/h20-oup-footer.css ::::: */
+
+#primary_footer { background-color: rgb(171, 156, 143); background-position: 194px -32px; background-repeat: no-repeat; }
+#primary_footer #site_logo { float: left; padding-left: 20px; margin-top: 20px; width: auto; }
+#primary_footer #site_logo strong { background-image: url('footer_ouptext.gif'); background-repeat: no-repeat; display: block; height: 55px; margin-bottom: 6px; width: 219px; }
+#primary_footer #site_logo em { background-repeat: no-repeat; display: block; height: 6px; width: 177px; }
+#primary_footer #third_nav ul { text-align: right; margin-top: 26px; margin-right: 20px; width: auto; }
+#primary_footer #third_nav ul li { display: inline; margin-left: 10px; }
+#primary_footer #third_nav ul li a { color: rgb(255, 255, 255); }
+#primary_footer #other_oup_sites { clear: both; background-image: url('border_dotted_white_horiz.gif'); background-repeat: repeat-x; float: left; margin-top: 20px; margin-bottom: 20px; width: 100%; }
+#primary_footer #other_oup_sites form { clear: both; float: right; padding: 14px 20px 0pt; width: auto; }
+#primary_footer #other_oup_sites form label { display: block; color: rgb(255, 255, 255); margin-bottom: 2px; }
+#secondary_footer { background-image: url('border_dotted_grey_horiz_002.gif'); background-repeat: repeat-x; padding-top: 5px; padding-bottom: 5px; text-align: right; }
+#secondary_footer #copyright { margin-right: 15px; width: auto; }
+#secondary_footer #issn { margin-right: 15px; width: auto; }
+#disclaimer { font-size: 70%; margin: 0pt 15px 15px; font-family: verdana,sans-serif; color: grey; clear: both; }
+
+/* ::::: http://qjmed.oxfordjournals.org/resource/css/h20-oup-sidebars.css ::::: */
+
+#col-3 { margin: 0pt; padding: 0pt; background-color: white; }
+#col-3 div { margin: 0pt; padding: 0pt; }
+#col-3 div.cb-contents { width: 100%; margin: 0pt; padding: 0px; }
+#col-3 div.cb-contents .cb-section, #col-3 div.cb-contents .cb-section.sidebar-etoc-link { padding: 5px; }
+#col-3 #sidebar-current-issue.content-box { background-color: white; padding: 0pt; margin: 0px 0px 0px 5px; }
+#col-3 #sidebar-current-issue.content-box .current-issue { text-align: center; }
+#col-3 #sidebar-current-issue.content-box .cb-contents-header { background-color: rgb(238, 238, 238); padding: 5px; border-bottom: 1px solid rgb(185, 194, 141); }
+#col-3 #second { margin: 0px 0px 0px 2.5px; }
+#col-3 .feature { background-color: white; }
+#col-3 .features .feature h2 { background-color: rgb(238, 238, 238); padding: 5px; font-size: 1.2em; border-bottom: 1px solid rgb(185, 194, 141); }
+#col-3 .features .feature { margin-bottom: 5px; padding-bottom: 5px; }
+#col-3 .features .feature h3 { font-size: 1.1em; font-weight: bold; padding: 0px 0px 5px 5px; }
+#col-3 .features .feature h4 { font-size: 1em; font-weight: bold; padding: 0px; margin: 0pt 8px 8px; }
+#col-3 .features .feature h5 { color: rgb(129, 109, 91); font-size: 1.1em; font-weight: bold; margin-left: 8px; margin-right: 8px; }
+#col-3 .features .feature img { margin: 0pt 8px 12px; }
+#col-3 .features .feature p { margin: 0pt 8px 8px; }
+#col-3 .features .feature ul { margin: 1em 5%; list-style: none outside none; }
+#col-3 .features .feature li { background-image: none; display: block; margin-left: 0px; margin-bottom: 2px; padding: 2px 0px 0px; text-align: left; white-space: normal; }
+#col-3 .features .feature.special { background-color: rgb(237, 232, 225); margin-left: 1px; }
+#col-3 .features .feature.promo h2 { background-color: transparent; font-size: 1.1em; font-weight: bold; height: auto; margin: 0pt 0pt 10px 8px; padding: 10px 8px 4px 0pt; }
+#col-3 .features .feature.promo h2 em { color: rgb(129, 109, 91); display: block; font-style: normal; margin: 2px 0pt; }
+#col-3 .features .feature.stronger { padding-bottom: 6px; }
+#col-3 .features .feature.stronger h2 { margin: 0pt; }
+#col-3 .features.separator_after .feature, #col-3 .features .separator_after { padding-bottom: 15px; }
+#col-3 .features.separator_after .feature.last { background-position: 0pt -1px; border: 0pt none; margin-bottom: 0pt; }
+#col-3 .features .feature.separator_before { padding-top: 15px; }
+#col-3 .features.separator_after .feature.followed_on { background-image: none; border: 0pt none; }
+#col-3 .features .feature .separator_after, #col-3 #first .features .feature .separator_after { border: 0pt none; padding-bottom: 5px; margin-bottom: 10px; }
+#col-3 .features .feature p.separator_after { padding-bottom: 16px; border: 0pt none; }
+#col-3 .features .feature h3.separator_after { padding-bottom: 10px; border: 0pt none; }
+#col-2 #cb-art-bn h4 { height: 35px; }
+#col-2 #cb-art-bn #bnArticleRecs h4 { height: auto; background-color: inherit; border: medium none; }
+#col-2 .pds-box-outer { width: 160px; }
+#col-2 .pds-box-outer label.pds-input-label { width: 100px; }
+#col-2 .PDS_Poll .pds-box { width: 180px; }
+a.bn_g_result_link { position: relative; color: rgb(0, 0, 0); }
+a.bn_g_result_link div.bn_mouseoverdiv { display: none; font: 12px Arial; padding: 0px; margin: 0px; z-index: 25; }
+a.bn_g_result_link:hover div.bn_mouseoverdiv { display: block; position: absolute; width: 175px; text-align: center; }
+a.bn_g_result_link:hover span.bn_journaltitle { display: block; border: 1px solid silver; text-align: center; background-color: rgb(255, 255, 204); color: black; padding: 2px; text-decoration: none; }
+a.bn_g_result_link:hover span.bn_authorslist { display: block; border-right: 1px solid silver; border-left: 1px solid silver; border-bottom: 1px solid silver; text-align: left; color: black; font-size: 10px; background-color: rgb(255, 255, 255); padding: 5px; text-decoration: none; }
+a.bn_g_result_link:hover span.bn_viewCount { display: block; border-right: 1px solid silver; border-left: 1px solid silver; border-bottom: 1px solid silver; text-align: center; font-size: 10px; background-color: rgb(255, 255, 255); font-weight: normal; color: black; padding: 2px; text-decoration: none; }
+a.bn_g_result_link:hover br { display: none; }
+p#bnHelp { margin-left: 10px; }
+
+/* ::::: http://qjmed.oxfordjournals.org/site/resource/qjmedj_h20.css ::::: */
+
+.homepage #header { background-image: url('qjmedj_header.jpg'); width: 760px; height: 97px; }
+.homepage #header h1#page_title { background-image: url('qjmedj_title.jpg'); margin-top: 34px; width: 494px; height: 44px; }
+.hw-gen-page #header { background-image: url('qjmedj_header.jpg'); width: 960px; height: 97px; }
+.hw-gen-page #header h1#page_title { background-image: url('qjmedj_title.jpg'); margin-top: 34px; height: 44px; width: 494px; }
+.hw-gen-page #header h1#page_title a { display: block; height: 44px; width: 361px; }

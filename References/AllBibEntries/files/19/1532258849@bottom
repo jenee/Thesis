@@ -1,0 +1,5 @@
+function OAS_RICH(position) {
+if (position == 'Bottom') {
+document.write ('<A HREF="http://oas.oxfordjournals.org/5c/qjmed.oxfordjournals.org/content/102/4/301.full/L32/944366643/Bottom/OxfordJournals/H_QJMED_OJ_ANY_06DEC11_RW/QJM_Ed_choice_banner_ad.gif/67554867566b2f4d4c33734141524f78?x" target="_top"><IMG SRC="http://imagec16.247realmedia.com/0/OxfordJournals/H_QJMED_OJ_ANY_06DEC11_RW/QJM_Ed_choice_banner_ad.gif"  ALT="Read Michael Bannon?s Editor?s Choice articles from QJM"  BORDER="0"></A>');
+}
+}
