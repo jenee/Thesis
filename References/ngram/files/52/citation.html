@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html class=" ext-strict">
+
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="wpd_version" content="0.2">
+<meta name="wpd_baseurl" content="http://dl.acm.org/citation.cfm?id=176316">
+<meta name="wpd_url" content="http://dl.acm.org/citation.cfm?id=176316">
+<meta name="wpd_date" content="2012-05-06T00:57Z">
+<script type="text/javascript">_cf_loadingtexthtml="<img alt=' ' src='/CFIDE/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/CFIDE/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_clientid='434DF60CDD1FE55AEFA16E6D435E845D';</script><script type="text/javascript" src="cfmessage.js"></script>
+<script type="text/javascript" src="cfajax.js"></script>
+<script type="text/javascript" src="cfform.js"></script>
+<script type="text/javascript" src="masks.js"></script>
+<script type="text/javascript" src="cfformhistory.js"></script>
+<script type="text/javascript" src="cfrichtexteditor.js"></script>
+<script type="text/javascript" src="fckeditor.js"></script>
+<script type="text/javascript" src="yahoo-dom-event.js"></script>
+<script type="text/javascript" src="animation-min.js"></script>
+<script type="text/javascript" src="ext-yui-adapter.js"></script>
+<script type="text/javascript" src="ext-core.js"></script>
+<script type="text/javascript" src="tabs.js"></script>
+<script type="text/javascript" src="cflayout.js"></script>
+
+<script type="text/javascript" src="resizable.js"></script>
+<script type="text/javascript" src="dragdrop.js"></script>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript" src="state-min.js"></script>
+<script type="text/javascript" src="widget-core.js"></script>
+<script type="text/javascript" src="dialogs.js"></script>
+<script type="text/javascript" src="cfwindow.js"></script>
+
+
+
+
+
+
+
+<title>Class-based n-gram models of natural language</title>
+
+ 
+
+
+<script type="text/javascript" src="cffp.js"></script>
+
+
+<script type="text/javascript">
+
+ function expandcollapse(anchor,whichone) {
+	 var inner = document.getElementById(anchor);
+	 var theshow = "toShow" + whichone;
+ 	 var thehide = "toHide" + whichone;
+	 var span = document.getElementById(theshow);
+     span.style.display = (span.style.display=='inline')?'none':'inline';
+     var span = document.getElementById(thehide);
+     span.style.display = (span.style.display=='none')?'inline':'none';
+     inner.innerHTML = (inner.innerHTML=='collapse')?'expand':'collapse';
+    }
+
+  function setDiv() {
+	var m = document.getElementById('divmain');
+	var mh = m.offsetHeight;
+	var t = document.getElementById('divtools');
+	var th = t.offsetHeight;
+	var tg = document.getElementById('divtags');
+	var tgh = tg.offsetHeight;
+	var calcheight = mh - th;
+	if (tgh > calcheight  ){
+	  var x = (th + tgh) - mh;
+	  if ( (th + tgh) - mh < 65) {
+	  }
+	  else {
+		 document.getElementById('divtags').innerHTML = ""; 
+		 var tg = document.getElementById('divtags');
+		 var tgh = tg.offsetHeight;
+		 tg.style.height = tgh  + 'px';
+	  }
+	}
+	else {
+		tg.style.height = calcheight + 'px';
+		document.getElementById('divtags').innerHTML = "";
+	}
+
+//  do I need to check after I resize to be sure I didn't go too big?
+//	var tg2 = document.getElementById('divtags');
+//	var tgh2 = tg.offsetHeight;	
+//	if (tgh2 > mh + 65) {
+//	  var y = mh + 65;
+//	  alert('expanded too much ' + tgh2 + ' should be at most ' + y);
+//	  tg.style.height = y + 'px';
+//	  document.getElementById('divtags').innerHTML = "";
+//	}
+
+  }
+</script>
+
+<script type="text/javascript">
+
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+
+
+
+<meta name="citation_journal_title" content="Computational Linguistics"> <meta name="citation_publisher" content="MIT Press"> <meta name="citation_authors" content="Brown, Peter F.; deSouza, Peter V.; Mercer, Robert L.; Pietra, Vincent J. Della; Lai, Jenifer C."> <meta name="citation_title" content="Class-based n -gram models of natural language"> <meta name="citation_date" content="12/01/1992"> <meta name="citation_volume" content="18"> <meta name="citation_issue" content="4"> <meta name="citation_issn" content="0891-2017"> <meta name="citation_firstpage" content="467"> <meta name="citation_lastpage" content="479"> <meta name="citation_abstract_html_url" content="http://dl.acm.org/citation.cfm?id=176313.176316"> <meta name="citation_pdf_url" content="http://dl.acm.org/ft_gateway.cfm?id=176316&type=pdf"> 
+
+
+
+<script type="text/javascript">
+
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+</script>
+
+<script type="text/javascript">
+
+	ColdFusion.Ajax.importTag('CFFORM');
+</script>
+
+<script type="text/javascript">
+
+	ColdFusion.Ajax.importTag('CFDIV');
+</script>
+
+<script type="text/javascript">
+
+	ColdFusion.Ajax.importTag('CFTEXTAREA');
+</script>
+
+<script type="text/javascript">
+
+	ColdFusion.Ajax.importTag('CFLAYOUT-TAB');
+</script>
+
+	<script type="text/javascript">
+
+		var _cf_layout_init_1338944242701=function()
+		{
+			var _cf_layout=ColdFusion.Layout.initializeTabLayout("citationdetails");
+			ColdFusion.Layout.addTab(_cf_layout,"abstract","<span>Abstract</span>",false,false);
+			ColdFusion.Layout.selectTab('citationdetails','abstract');_cf_bind_init_1338944242702=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'abstract','bindExpr':['tab_abstract.cfm?id=176316&usebody=tabbody&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242702);
+			ColdFusion.Layout.addTab(_cf_layout,"formats","<span>Source Materials</span>",false,false);_cf_bind_init_1338944242703=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'formats','bindExpr':['tab_formats.cfm?id=176316&type=article&usebody=tabbody&sellOnline=0&purchaseable=free&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242703);
+			ColdFusion.Layout.addTab(_cf_layout,"authors","<span>Authors</span>",false,false);_cf_bind_init_1338944242704=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'authors','bindExpr':['tab_authors2.cfm?id=176316&usebody=tabbody&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242704);
+			ColdFusion.Layout.addTab(_cf_layout,"references","<span>References</span>",false,false);_cf_bind_init_1338944242705=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'references','bindExpr':['tab_references.cfm?id=176316&type=article&usebody=tabbody&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242705);
+			ColdFusion.Layout.addTab(_cf_layout,"citedby","<span>Cited By</span>",false,false);_cf_bind_init_1338944242706=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'citedby','bindExpr':['tab_citings.cfm?id=176316&usebody=tabbody&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242706);
+			ColdFusion.Layout.addTab(_cf_layout,"indexterms","<span style='color:#999999'>Index Terms</span>",false,false);_cf_bind_init_1338944242707=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'indexterms','bindExpr':['tab_indexterms.cfm?id=176316&usebody=tabbody&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242707);
+			ColdFusion.Layout.addTab(_cf_layout,"source","<span>Publication</span>",false,false);_cf_bind_init_1338944242708=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'source','bindExpr':['tab_source.cfm?id=176316&usebody=tabbody&type=article&sellOnline=0&purchaseable=free&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242708);
+			ColdFusion.Layout.addTab(_cf_layout,"revs","<span style='color:#999999'>Reviews</span>",false,false);_cf_bind_init_1338944242709=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'revs','bindExpr':['tab_reviews.cfm?id=176316&logged=1&curclient_no=NO&usebody=tabbody&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242709);
+			ColdFusion.Layout.addTab(_cf_layout,"comments","<span>Comments</span>",false,true);_cf_bind_init_1338944242710=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'comments','bindExpr':['tab_comments.cfm?id=176316&logged=1&loggedbyip=1&curclient_no=NO&usebody=tabbody&full_name=&email=&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242710);
+			ColdFusion.Layout.addTab(_cf_layout,"prox","<span>Table of Contents</span>",false,false);_cf_bind_init_1338944242711=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'prox','bindExpr':['tab_about.cfm?id=176316&type=article&parent_id=176313&parent_type=issue&title=Class%2Dbased%20%3Ci%3En%3C%2Fi%3E%2Dgram%20models%20of%20natural%20language&toctitle=Computational%20Linguistics&tocissue_date=Volume%2018%20Issue%204%2C%20December%201992&notoc=0&usebody=tabbody&tocnext_id=972450&tocnext_str=Volume 19 Issue 1, March 1993&tocprev_id=146384&tocprev_str=Volume 18 Issue 3, September 1992&toctype=issue&cfid=107293521&cftoken=46956420']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242711);
+		};ColdFusion.Event.registerOnLoad(_cf_layout_init_1338944242701);
+	</script>
+	
+<script type="text/javascript">
+
+	ColdFusion.Ajax.importTag('CFWINDOW');
+</script>
+
+<script type="text/javascript">
+
+	var _cf_window_init_1338944242713=function()
+	{
+		_cf_bind_init_1338944242714=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'theguide_body','bindExpr':['whatisguide.cfm']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242714);var _cf_window=ColdFusion.Window.create('theguide','The ACM Guide to Computing Literature','whatisguide.cfm',{ modal:false, closable:true, divid:'cf_window1338944242712', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1338944242713);
+</script>
+
+<script type="text/javascript">
+
+	var _cf_window_init_1338944242716=function()
+	{
+		_cf_bind_init_1338944242717=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'thetags_body','bindExpr':['showthetags.cfm?id=176316']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242717);var _cf_window=ColdFusion.Window.create('thetags','All Tags','showthetags.cfm?id=176316',{ modal:false, closable:true, divid:'cf_window1338944242715', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1338944242716);
+</script>
+
+<script type="text/javascript">
+
+	var _cf_window_init_1338944242719=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theformats','Export Formats','',{ modal:false, closable:true, divid:'cf_window1338944242718', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:250, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1338944242719);
+</script>
+
+<script type="text/javascript">
+
+	var _cf_window_init_1338944242721=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theexplaination','','',{ modal:false, closable:true, divid:'cf_window1338944242720', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1338944242721);
+</script>
+
+<script type="text/javascript">
+
+	var _cf_window_init_1338944242723=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theservices','','',{ modal:false, closable:true, divid:'cf_window1338944242722', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1338944242723);
+</script>
+
+<script type="text/javascript">
+
+	var _cf_window_init_1338944242725=function()
+	{
+		_cf_bind_init_1338944242726=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'savetobinder_body','bindExpr':['savetobinder.cfm?id=176316']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1338944242726);var _cf_window=ColdFusion.Window.create('savetobinder','Save to Binder','savetobinder.cfm?id=176316',{ modal:false, closable:true, divid:'cf_window1338944242724', draggable:true, resizable:true, fixedcenter:true, width:600, height:600, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false, _cf_refreshOnShow:true});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1338944242725);
+</script>
+<div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="citation_1.html" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0pt none; left: 0pt; top: 0pt;" title="AddThis utility frame" id="_atssh592"></iframe></div><script src="core013.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="citation.css" media="all">
+</head>
+<body class=" ext-gecko ext-mac" id="ext-gen6" style="text-align: center;" onload="window.focus();">
+
+<script type="text/javascript">
+
+						addthis_pub             = 'acm'; 
+						//addthis_logo            = 'http://www.addthis.com/images/yourlogo.png';
+						addthis_logo            = 'http://dl.acm.org/images/ACM_transparent.png';
+						addthis_logo_background = 'c2d5fc';
+						addthis_logo_color      = '000000';
+						addthis_brand           = 'Citation Page';
+						addthis_options         = 'favorites, email, slashdot, citeulike, digg, delicious, twitter, myspace, facebook, google, more';
+						</script>
+                        
+<script src="ac_runactivecontent.js" type="text/javascript"></script>
+
+
+
+
+<div style="width: 940px; margin-left: auto; margin-right: auto; text-align: left;">
+<a id="CIT"></a>
+
+
+
+<table style="table-layout: fixed; margin-top: 5px; margin-bottom: 10px; border: 0px none; width: 100%; border-collapse: collapse;">
+	
+    <tbody><tr style="vertical-align: top;">
+		
+		<td style="padding-left: 5px; padding-right: 10px; padding-bottom: 0px; width: 300px;" class="small-link-text"><img src="acmdl_logo.jpg" alt="ACM DL" style="border: 0px none;" usemap="#port">
+		</td>
+        
+        <td style="padding-left: 5px; padding-right: 10px; padding-bottom: 0px;" class="small-link-text">
+        	<table style="width: 100%; border-collapse: collapse; padding: 0px;">
+			<tbody><tr><td style="text-align: center;">
+				
+                              <table>
+                              <tbody><tr>
+                              <td style="text-align: center;">
+                                <div style="margin: 5px auto; color: rgb(53, 107, 32); font-size: 11pt; line-height: 130%; height: 63px;">
+
+								  CSPU San Luis Obispo
+                                </div>
+                              </td>
+                              </tr>
+                              </tbody></table>
+                        
+					</td>		
+			</tr>
+			</tbody></table> 
+        </td>
+		<td style="padding-top: 0px; padding-left: 0px; padding-bottom: 0px; text-align: right;" class="small-link-text">
+			 <p style="margin-top: 0px; margin-bottom: 10px;">
+					
+                            <a href="https://dl.acm.org/signin.cfm?cfid=107293521&cftoken=46956420" class="small-link-text" title="Sign in to personalize your Digital Library experience">SIGN IN</a>
+                            &nbsp;&nbsp;<a href="https://dl.acm.org/signin.cfm?cfid=107293521&cftoken=46956420" class="small-link-text" title="Sign up to personalize your Digital Library experience">SIGN UP</a>
+						
+			 </p>
+            
+			<table style="padding: 5px; border-collapse: collapse; float: right;">
+				
+				
+                            
+                            <tbody><tr>
+                            <td class="small-link-text" style="text-align: right;">
+                            <form name="qiksearch" action="http://dl.acm.org/results.cfm?h=1&cfid=107293521&cftoken=46956420" method="post">
+                           
+                           
+                            
+                                     
+                                    <span style="margin-left: 0px;"><label><input name="query" size="34" value=" " type="text"></label>&nbsp;
+                                    <input style="vertical-align: top;" alt="Search" name="Go" src="search_small.jpg" type="image">
+                                    
+                                    </span>
+							  </form>
+                                </td>
+                            </tr>
+                          
+				  
+			</tbody></table>
+
+			
+			
+		</td>
+
+	</tr>
+    
+    
+    <tr><td colspan="3" class="small-link-text" style="padding-bottom: 5px; padding-top: 0px; text-align: center;">
+		<div style="margin: 0px auto; color: rgb(53, 107, 32); line-height: 10%;"> </div>
+         
+         </td>
+    </tr>
+    </tbody></table>
+	
+<map name="port" id="port"> 
+  <area shape="rect" coords="1,1,60,50" href="http://www.acm.org/" alt="ACM Home Page">
+  <area shape="rect" coords="65,1,275,68" href="http://dl.acm.org/dl.cfm?CFID=107293521&CFTOKEN=46956420" alt="ACM Digital Library Home Page">
+</map>
+
+<table style="table-layout: fixed; width: 100%; padding: 0px;">
+	<tbody><tr style="vertical-align: top;">
+		<td style="padding-right: 10px; text-align: left;" class="small-link-text">
+        	<div id="divmain" style="border: 1px solid rgb(53, 107, 32);">
+				 
+				<div class="large-text" style="text-align: left; margin-left: 2px; margin-bottom: 5px;">
+					
+                    	<h1 class="mediumb-text" style="margin-top: 0px; margin-bottom: 0px;"><strong>Class-based <i>n</i>-gram models of natural language</strong></h1>
+                        
+                </div>
+                
+                  
+
+<table class="medium-text" style="border-collapse: collapse; padding: 0px;">
+
+<colgroup><col style="width: 540px;">
+
+</colgroup><tbody><tr style="vertical-align: top;">
+  <td>
+    <table style="border-collapse: collapse; padding: 2px;" class="medium-text">
+      <colgroup><col style="width: 80px;">
+      <col style="width: auto;">
+      </colgroup><tbody><tr style="vertical-align: top;">
+        
+          <td style="white-space: nowrap;">Full Text:</td>
+          <td>
+               <a name="FullTextPDF" title="FullText PDF" href="http://dl.acm.org/ft_gateway.cfm?id=176316&ftid=250880&dwn=1&CFID=107293521&CFTOKEN=46956420" target="_top"><img src="pdf_logo.gif" alt="PDF" class="fulltext_lnk" border="0">PDF</a> 
+               	<div style="margin-top: 10px;">see <a href="http://dl.acm.org/citation.cfm?id=176316&picked=formats&CFID=107293521&CFTOKEN=46956420" title="Source Materials Tab">source materials</a> below for <a href="http://dl.acm.org/citation.cfm?id=176316&picked=formats&CFID=107293521&CFTOKEN=46956420" title="Source Materials Tab">more options</a></div>
+                
+
+             
+          </td>
+        
+      </tr>
+    </tbody></table>
+
+	
+        <table style="margin-top: 10px; border-collapse: collapse; padding: 2px;" class="medium-text">
+            <colgroup><col style="width: 80px;">
+            
+            </colgroup><tbody><tr>
+            <td nowrap="nowrap" valign="top">
+
+             Authors:
+                
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="http://dl.acm.org/author_page.cfm?id=81100013352&coll=DL&dl=ACM&trk=0&cfid=107293521&cftoken=46956420" title="Author Profile Page" target="_self">Peter F. Brown</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="http://dl.acm.org/inst_page.cfm?id=1011639&CFID=107293521&CFTOKEN=46956420" title="Institutional Profile Page"><small>IBM T. J. Watson Research Center</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="http://dl.acm.org/author_page.cfm?id=81319490355&coll=DL&dl=ACM&trk=0&cfid=107293521&cftoken=46956420" title="Author Profile Page" target="_self">Peter V. deSouza</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="http://dl.acm.org/inst_page.cfm?id=1011639&CFID=107293521&CFTOKEN=46956420" title="Institutional Profile Page"><small>IBM T. J. Watson Research Center</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="http://dl.acm.org/author_page.cfm?id=81413594171&coll=DL&dl=ACM&trk=0&cfid=107293521&cftoken=46956420" title="Author Profile Page" target="_self">Robert L. Mercer</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="http://dl.acm.org/inst_page.cfm?id=1011639&CFID=107293521&CFTOKEN=46956420" title="Institutional Profile Page"><small>IBM T. J. Watson Research Center</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="http://dl.acm.org/author_page.cfm?id=81452617512&coll=DL&dl=ACM&trk=0&cfid=107293521&cftoken=46956420" title="Author Profile Page" target="_self">Vincent J. Della Pietra</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="http://dl.acm.org/inst_page.cfm?id=1011639&CFID=107293521&CFTOKEN=46956420" title="Institutional Profile Page"><small>IBM T. J. Watson Research Center</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="http://dl.acm.org/author_page.cfm?id=81452599497&coll=DL&dl=ACM&trk=0&cfid=107293521&cftoken=46956420" title="Author Profile Page" target="_self">Jenifer C. Lai</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="http://dl.acm.org/inst_page.cfm?id=1011639&CFID=107293521&CFTOKEN=46956420" title="Institutional Profile Page"><small>IBM T. J. Watson Research Center</small></a>
+                      	
+            </td>
+            </tr>
+            
+        </tbody></table>
+    
+
+  </td>
+
+  <td rowspan="20" nowrap="nowrap">
+	<table class="medium-text" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+        	<td style="padding-bottom: 5px;" align="center">
+			  
+               <img src="apdf.jpg" title="Class-based &lt;i&gt;n&lt;/i&gt;-gram models of natural language" alt="Class-based &lt;i&gt;n&lt;/i&gt;-gram models of natural language" border="0" height="90" width="60"> 
+              </td>
+              <td align="left" nowrap="nowrap" valign="top">
+
+	             1992 Article<br>
+                 
+        	 </td>
+        </tr>
+        
+        <tr>
+        	<td colspan="2" style="padding-bottom: 5px;" valign="baseline">
+            <img src="stats.jpg" alt="Bibliometrics Data">&nbsp;
+            <a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=1','theexplaination');" title="Bibliometrics: explained">Bibliometrics</a>
+            </td>
+         </tr>
+         <tr>
+            <td class="small-text" colspan="2" style="padding-left: 30px;" valign="top">
+
+				
+	                    	&middot;&nbsp;Downloads (6 Weeks): 58<br>
+    	                    &middot;&nbsp;Downloads (12 Months): 492<br>
+                          
+                        &middot;&nbsp;Citation Count: 301 
+			</td>
+         </tr>
+
+	</tbody></table>
+  </td>
+</tr>
+</tbody></table>
+
+<br clear="all">
+
+<table class="medium-text" border="0" cellpadding="2" cellspacing="0">
+
+<tbody><tr valign="top">
+    <td colspan="3"><table class="medium-text" border="0" cellpadding="1" cellspacing="0">
+
+<tbody><tr valign="top">
+    <td style="padding-top: 10px;" nowrap="nowrap">Published in:</td>
+</tr>
+
+	<tr valign="top">
+    	<td style="padding-bottom: 0px;" nowrap="nowrap">&middot;&nbsp;Journal</td>
+	</tr>
+    <tr valign="top">
+	    <td style="padding-left: 10px;">
+
+		   Computational Linguistics <a href="http://dl.acm.org/citation.cfm?id=176316" target="_self" class="small-link-text"></a> 
+              <a href="http://dl.acm.org/citation.cfm?id=J25&picked=prox&cfid=107293521&cftoken=46956420" target="_self" class="small-link-text">archive</a>
+		   
+        </td>
+	</tr>
+    
+    <tr valign="top">
+	    <td style="padding-left: 10px; padding-bottom: 10px;">Volume 18 Issue 4, December 1992 
+          	<br>
+          Pages  467-479 
+               <br>
+            <span class="small-link-text">MIT Press</span> <span class="small-link-text">Cambridge, MA</span><span class="small-link-text">, USA</span> 
+                <br>           
+                
+	                    <a href="http://dl.acm.org/citation.cfm?id=176313&picked=prox&cfid=107293521&cftoken=46956420" target="_self" class="small-link-text">table&nbsp;of&nbsp;contents</a>
+    				
+      </td>
+	</tr>
+	 
+
+</tbody></table></td>
+</tr>
+
+</tbody></table>
+
+                  
+                 <br clear="all">
+			</div>
+			
+		</td>
+		<td style="padding-left: 5px; vertical-align: top; text-align: left; width: 170px;" class="small-link-text">
+	
+            <div id="divtools" style="background-color: rgb(236, 233, 216); text-align: left; padding-top: 5px; padding-bottom: 5px;">
+              <div class="medium-text" style="margin-left: 3px; margin-top: 10px;"><h1 class="mediumb-text" style="margin-top: -15px;"><strong>Tools and Resources</strong></h1></div>
+
+
+<ul title="Tools and Resources" style="list-style: none inside none; margin-left: 0px; padding-left: 0em; text-indent: 5px; margin-bottom: 0px;">
+
+
+<li style="list-style-image: url('toc_small.gif'); margin-top: 10px;"><span style="margin-left: 6px;">
+   <span class="small-link-text">TOC Service:</span>
+   	  
+	  <img src="blanks.gif" alt="Spacer Image reserves space for checkmark when TOC Service is updated" name="saved" border="0">
+      <ul style="margin-left: 0pt; padding-left: 0pt; display: inline;">
+      	
+        <li style="list-style: none outside none; display: inline;"><br><img src="email_small.gif" alt="Toc Alert via Email" border="0" hspace="3"><a href="http://dl.acm.org/To%20use%20this%20Feature,%20you%20must%20login%20with%20your%20personal%20ACM%20Web%20Account." class="small-link-text">Email</a></li>
+        <li style="list-style: none outside none; display: inline;"><img src="rss_small.gif" alt="Toc Alert via Email" border="0" hspace="3"><a href="http://dl.acm.org/To%20use%20this%20Feature,%20you%20must%20login%20with%20your%20personal%20ACM%20Web%20Account." class="small-link-text">RSS</a></li>
+		        
+      </ul>
+    </span>
+</li>
+
+    <li style="list-style-image: url('binder.gif'); margin-top: 10px;"><span style="margin-left: 6px;">
+    <a href="http://dl.acm.org/To%20use%20this%20Feature,%20you%20must%20login%20with%20your%20personal%20ACM%20Web%20Account." class="small-link-text">Save to Binder</a>
+     </span></li>
+
+
+
+
+
+<li style="list-style-image: url('binder_green.gif'); margin-top: 10px;"><span style="margin-left: 6px; margin-bottom: 0px;">
+   <span class="small-link-text">Export Formats:</span>
+      <ul style="margin-left: 0pt; padding-left: 0pt; margin-bottom: 0px;">
+        <li style="list-style: disc outside none; display: inline; margin-bottom: 0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=176316&expformat=bibtex','theformats');" class="small-link-text">BibTeX</a></li>
+        <li style="list-style: disc outside none; display: inline; margin-bottom: 0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=176316&expformat=endnotes','theformats');" class="small-link-text">EndNote</a></li>
+        <li style="list-style: disc outside none; display: inline; margin-bottom: 0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=176316&expformat=acmref','theformats');" class="small-link-text">ACM&nbsp;Ref</a></li>
+      </ul>
+    </span>
+</li>
+
+
+
+
+
+
+</ul>           
+
+  <!-- ADDTHIS BUTTON BEGIN -->
+  
+  <!-- ADDTHIS BUTTON END -->
+
+<p class="small-link-text" style="padding-top: 0px; margin-left: 6px; margin-bottom: 0px;">Share:</p>
+  <!-- AddThis Button BEGIN -->
+
+
+
+<!-- AddThis Button BEGIN -->
+<div style="margin-left: 5px;" class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_google"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_slashdot"></a>
+<a class="addthis_button_reddit"></a>
+
+
+<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=250&username=acm" class="addthis_button_expanded" title="more"></a>
+</div>
+<script type="text/javascript" src="addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+  
+ 
+
+  
+  
+            </div>
+            
+		</td>
+	</tr>
+    
+</tbody></table>
+
+
+
+</div>
+
+
+<div class="layout" style="width: 940px; margin-left: auto; margin-right: auto; text-align: left;">
+
+
+
+
+<div id="fback" style="text-align: left; padding-top: 10px; padding-bottom: 20px;">
+<span class="small-text" style="padding-right: 10px; margin-bottom: 0px;">
+<a title="feedback" href="mailto:portal-feedback@hq.acm.org?subject=Comments_on_new_design" style="vertical-align: middle;"><img src="feedbackg.gif" alt="feedback" border="0" height="19" width="20"></a>
+<a title="feedback" href="mailto:portal-feedback@hq.acm.org?subject=Comments_on_new_design"><strong>Feedback</strong></a>
+
+<span style="padding: 10px;">|</span>
+
+
+
+
+<span>Switch to <a href="http://dl.acm.org/citation.cfm?id=176316&preflayout=flat">single page view</a> (no tabs) <noscript><span style="margin-left:20px;">**Javascript is not enabled and is required for the "tabbed view" or switch to the <a href="citation.cfm?id=176316&preflayout=flat">single page view</a>**</span></noscript></span>
+
+
+</span>
+
+
+
+</div>
+<div id="citationdetails">
+	
+	<div id="abstract" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="formats" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="authors" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="references" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="citedby" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="indexterms" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="source" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="revs" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="comments" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> <div id="prox" class="ytab" style="overflow: auto;">
+		
+		
+	 </div> 
+ </div> 
+</div>
+
+
+ <p class="small-text" align="center">Powered by <a id="theguide" name="theguide" href="javascript:ColdFusion.Window.show('theguide')"><img src="poweredbyacm.jpg" alt="The ACM Guide to Computing Literature" border="0" height="11" width="336"></a></p>
+
+
+
+ <br>
+<div class="footerbody" align="center">
+
+	
+
+	The ACM Digital Library is published by the Association for Computing Machinery. Copyright &copy; 2012 ACM, Inc.<br>
+	<a href="http://www.acm.org/publications/policies/usage">Terms of Usage</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/code-of-ethics">Code of Ethics</a>&nbsp;&nbsp;	  
+	<a href="http://www.acm.org/about/contact-us">Contact Us</a>
+
+<br><br>
+Useful downloads: 
+<a href="http://www.adobe.com/products/acrobat/readstep2.html"><img src="pdf_logo_002.gif" alt="" border="0" height="16" width="16"> Adobe Acrobat</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_top"><img src="qtlogo.gif" alt="" border="0" height="16" width="16"> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://www.microsoft.com/windows/windowsmedia/download/default.asp" target="_top"><img src="wmv.gif" alt="" border="0" height="15" width="16"> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_top"><img src="realplayer.gif" alt="" border="0" height="18" width="20"> Real Player</a>
+
+</div> 
+
+
+
+<div id="cf_window1338944242712" class="yuiextdlg">
+	
+	<div id="theguide_title" class="x-dlg-hd">
+
+		The ACM Guide to Computing Literature
+	 </div>
+	<div id="theguide_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1338944242715" class="yuiextdlg">
+	
+	<div id="thetags_title" class="x-dlg-hd">
+
+		All Tags
+	 </div>
+	<div id="thetags_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1338944242718" class="yuiextdlg">
+	
+	<div id="theformats_title" class="x-dlg-hd">
+
+		Export Formats
+	 </div>
+	<div id="theformats_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1338944242720" class="yuiextdlg">
+	
+	<div id="theexplaination_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div id="theexplaination_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1338944242722" class="yuiextdlg">
+	
+	<div id="theservices_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div id="theservices_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1338944242724" class="yuiextdlg">
+	
+	<div id="savetobinder_title" class="x-dlg-hd">
+
+		Save to Binder
+	 </div>
+	<div id="savetobinder_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> 
+
+
+</body>
+</html>

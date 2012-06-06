@@ -35,9 +35,10 @@
 #include "Metrics.h"
 #include "../OronymCode/wordBreakdown.h"
 
+#define TREE_SCALE 0.5
 
-#define DEFAULT_RADIUS .5
-#define DEFAULT_BRANCH_LEN 4.0
+#define DEFAULT_RADIUS ( 0.5 * TREE_SCALE )
+#define DEFAULT_BRANCH_LEN ( 4.0 * TREE_SCALE)
 #define SPHERE_MULTIPLIER 1.5
 
 int maxWordFreq = DICTIONARY_MIN_FREQ - 1;

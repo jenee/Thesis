@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<meta name="wpd_version" content="0.2">
+<meta name="wpd_baseurl" content="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">
+<meta name="wpd_url" content="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">
+<meta name="wpd_date" content="2012-05-06T02:44Z">
+
+<title>The CMU Pronouncing Dictionary</title>
+
+</head>
+<body bgcolor="#ffffff">
+
+<title>The CMU Pronouncing Dictionary</title>
+<h2>
+<a href="http://www.cs.cmu.edu/"><img src="scslogo-s.gif" align="MIDDLE" border="0" height="72" width="72"></a>
+The CMU Pronouncing Dictionary</h2>
+<center>
+<a href="http://www.speech.cs.cmu.edu/speech/">Speech at CMU</a> | 
+<a href="#about">about</a> | 
+
+<a href="#lookup">query</a> | 
+<a href="#phones">phonemes</a> <br>
+</center>
+
+<a name="lookup">
+<hr>
+<h3><img src="blue-ball.gif">
+Look up the pronunciation for a word or a sentence in CMUdict (v. 0.7a)</h3></a>
+
+<ul>
+<form action="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">
+<input name="in" size="40" value="C M U Dictionary" type="text">
+<input value="Pronounce it!" type="submit"><br>
+<input name="stress" value="-s" type="checkbox"> Show Lexical Stress
+</form>
+</ul>
+
+<hr>
+<h3><img src="blue-ball.gif">
+Download the current CMU dictionary from SourceForge</h3>
+<dd>
+<tt><a href="https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/cmudict/">https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/cmudict/</a></tt>.
+</dd><dd>
+
+Find an error? Please contact the developers. We will look at the problem and improve the dictionary. (See at bottom for contact information.)
+</dd>
+
+
+<a name="about">
+<hr>
+<h3><img src="blue-ball.gif"> 
+About the CMU dictionary</h3></a>
+<dd>
+
+The <b><a href="http://www.cmu.edu/">Carnegie Mellon University</a> 
+Pronouncing Dictionary</b> is a machine-readable
+pronunciation dictionary for North American English that contains over 
+<b>125,000 words</b> and their transcriptions. <p>
+</p></dd>
+
+<dd>
+
+This format is particularly useful for speech recognition and synthesis,
+as it has mappings from words to their pronunciations in the given
+phoneme set.  The current phoneme set contains 39 phonemes, for which the
+vowels may carry lexical stress. 
+<ul>
+
+     0   No stress<br>
+     1   Primary stress<br>
+     2   Secondary stress
+</ul>
+
+</dd>
+
+<dd>
+<!--
+To suggest words or pronunciations to add, please contact
+us at <A HREF="mailto:cmudict@cs.cmu.edu">cmudict@cs.cmu.edu</A>.
+-->
+</dd>
+<p><b>Note</b> that this dictionary is <em>not</em> in the format
+you want to use for the Sphinx decoder. For that purpose, either go to SourceForge or use the following
+<a href="http://www.speech.cs.cmu.edu/tools/">tool</a>. </p><p>
+
+<a name="phones"></a></p><hr><a name="phones">
+<h3><img src="blue-ball.gif">
+Phoneme Set</h3>
+
+The current phoneme set has 39 phonemes, not counting varia due to lexical stress.
+This phoneme (or more accurately, phone) set is based on the ARPAbet symbol set developed
+for speech recognition uses. 
+You can find a </a><a href="http://en.wikipedia.org/wiki/Arpabet">description of the ARPAbet on Wikipedia</a>, 
+as well information on how it relates to the standard IPA symbol set.
+
+<pre>        Phoneme Example Translation
+        ------- ------- -----------
+        AA	odd     AA D
+        AE	at	AE T
+        AH	hut	HH AH T
+        AO	ought	AO T
+        AW	cow	K AW
+        AY	hide	HH AY D
+        B 	be	B IY
+        CH	cheese	CH IY Z
+        D 	dee	D IY
+        DH	thee	DH IY
+        EH	Ed	EH D
+        ER	hurt	HH ER T
+        EY	ate	EY T
+        F 	fee	F IY
+        G 	green	G R IY N
+        HH	he	HH IY
+        IH	it	IH T
+        IY	eat	IY T
+        JH	gee	JH IY
+        K 	key	K IY
+        L 	lee	L IY
+        M 	me	M IY
+        N 	knee	N IY
+        NG	ping	P IH NG
+        OW	oat	OW T
+        OY	toy	T OY
+        P 	pee	P IY
+        R 	read	R IY D
+        S 	sea	S IY
+        SH	she	SH IY
+        T 	tea	T IY
+        TH	theta	TH EY T AH
+        UH	hood	HH UH D
+        UW	two	T UW
+        V 	vee	V IY
+        W 	we	W IY
+        Y 	yield	Y IY L D
+        Z 	zee	Z IY
+        ZH	seizure	S IY ZH ER
+</pre>
+<hr>
+<font size="-1">
+<i>this cgi was created by <a href="http://www.linkedin.com/in/kevinlenzo">kevin lenzo</a>,
+and the source code is freely available.
+
+for correspondence about this interface, including
+options you'd like to see, please contact
+<a href="mailto:sphinx+web@cs.cmu.edu">sphinx+web@cs.cmu.edu</a>.
+</i></font><i>
+
+
+</i></body>
+</html>

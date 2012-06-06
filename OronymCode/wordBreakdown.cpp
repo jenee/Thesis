@@ -839,13 +839,6 @@ vector< phone > getNoEmphsPhoneVect(vector< phone > phoneVectOrig ) {
    return phoneVectNoEmphs;
 }
 
-vector< string > getVoicingVariationsOfSampaStr ( string sampaStr ) {
-   assert(0);
-}
-vector< vector< phone > > getVoicingVariationsOfPhoneVect ( vector< phone >  phoneVectOrig ) {
-   assert(0);
-}
-
 string getSampaStrWithoutGlottalStops ( string sampaStr ) {
    string noGlottalsStr;
    vector< phone > tempPhoneVect = parseSAMPAintoPhonemes( sampaStr );
@@ -894,6 +887,14 @@ vector< phone > getNoContigDupesPhoneVect(vector< phone > phoneVectOrig ) {
       }
    }
    return noContigDupesPhoneVect;
+}
+
+
+vector< string > getVoicingVariationsOfSampaStr ( string sampaStr ) {
+   assert(0);
+}
+vector< vector< phone > > getVoicingVariationsOfPhoneVect ( vector< phone >  phoneVectOrig ) {
+   assert(0);
 }
 
 

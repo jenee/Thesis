@@ -714,12 +714,17 @@ void find_and_replace(std::string& source, std::string const& find, std::string 
 */
 
 int main(int argc, char** argv) {
+
+   if ( argc >= 2 ) {
+      cerr << argv[1] <<endl;
+      orthoPhraseRoot = argv[1];
+   } else {
    //orthoPhraseRoot = "visual representation of the phonetic ambiguity of the written word";
    //orthoPhraseRoot = "tilt angle bonus round award";
    //orthoPhraseRoot = "tilt angle bonus round quit";
    //orthoPhraseRoot = "tilt angle break round quit";
    
-   orthoPhraseRoot = "iced ink";
+      orthoPhraseRoot = "iced ink";
 
    //orthoPhraseRoot = "empty till is sad";
    //orthoPhraseRoot = "empty till is sadface";
@@ -733,7 +738,7 @@ int main(int argc, char** argv) {
    //orthoPhraseRoot = "a nice";
    //orthoPhraseRoot = "a nice cold";
    //orthoPhraseRoot = "a nice cold hour";
-
+   }
 
    //set up glut window
    glutInit(&argc, argv);
