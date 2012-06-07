@@ -1,0 +1,10 @@
+document.write('');
+ 
+;(function(a,b){ 
+a='http://ad.yieldmanager.com/st?ad_type=ad&ad_size=160x600&section=1720482'
+b= Math.floor(Math.random() * 1e6) 
+a+= '&' + b
+document.write('<script src="' + a + '"><\/script>')
+})();
+
+document.write(' ');

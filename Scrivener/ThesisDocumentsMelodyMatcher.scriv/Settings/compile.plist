@@ -505,13 +505,13 @@ p.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform
 	<key>SCRCompileRemoveAllHyperlinksKey</key>
 	<false/>
 	<key>SCRCompileRemoveCommentsKey</key>
-	<true/>
+	<false/>
 	<key>SCRCompileRemoveFootnotesKey</key>
 	<false/>
 	<key>SCRCompileRemoveHighlightingKey</key>
 	<false/>
 	<key>SCRCompileRemoveInlineAnnotationsKey</key>
-	<true/>
+	<false/>
 	<key>SCRCompileRemoveTextColorKey</key>
 	<false/>
 	<key>SCRCompileRestrictWidthOfStitchedTablesKey</key>

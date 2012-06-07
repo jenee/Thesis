@@ -72,7 +72,8 @@ void buildAndDrawFullTree( string orthoPhrase ) {
 
    glPushMatrix();
    {
-      glTranslated(0.0, -1.0* DEFAULT_BRANCH_LEN , 0.0);
+      //glTranslated(0.0, -1.0* DEFAULT_BRANCH_LEN , 0.0);
+      //glTranslated(0.0, 2.0* DEFAULT_BRANCH_LEN , 0.0);
       materials(GreenShiny);
       drawSphere(DEFAULT_RADIUS);
     
@@ -224,7 +225,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             {
                materials(RedShiny);
                //glRotated( radiansToDegrees(-1.0*tiltAngle), 0, 0, 1.0);
-               glTranslated(0.0, -curYOffset / 2.0 , 0.0);
+               glTranslated(0.0, -curYOffset / 4.0 , 0.0);
 
                //glScaled( 1.0,  SPHERE_MULTIPLIER, 1.0);
                drawSphere( lastRadius * SPHERE_MULTIPLIER );

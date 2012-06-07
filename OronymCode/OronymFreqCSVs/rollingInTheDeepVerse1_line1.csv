@@ -1,0 +1,3 @@
+TEST getCSVofWordFreqsForPhrase, orthoPhrase =there's a fire burning in my heart
+there's a fire burning in my heart , there's , 8518 , a , 7536297 , fire , 61834 , burning , 8885 , in , 5366299 , my , 915231 , heart , 42038 , 
+NO TESTS FAILED! :) 

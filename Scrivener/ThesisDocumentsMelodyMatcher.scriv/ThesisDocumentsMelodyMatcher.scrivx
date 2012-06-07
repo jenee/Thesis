@@ -149,17 +149,17 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1826,512</TextSelection>
+                                <TextSelection>2374,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="59" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                        <BinderItem ID="59" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-06-05 18:58:35 -0700">
                             <Title>Final Phonetic Dictionary Choice</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>525,0</TextSelection>
+                                <TextSelection>1649,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="61" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -169,7 +169,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>284,484</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="60" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -749,7 +749,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>16,8</TextSelection>
+                                        <TextSelection>911,0</TextSelection>
                                     </TextSettings>
                                     <References>
                                         <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
@@ -782,7 +782,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>862,0</TextSelection>
+                                        <TextSelection>904,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                                 <BinderItem ID="140" Type="Text" Created="2012-06-05 01:23:34 -0700" Modified="2012-06-05 01:30:43 -0700">
@@ -809,8 +809,38 @@
                         <TextSelection>0,0</TextSelection>
                     </TextSettings>
                     <Children>
-                        <BinderItem ID="22" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
+                        <BinderItem ID="22" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-06-05 17:54:27 -0700">
                             <Title>Comparison to Existing Systems:</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>803,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="141" Type="Text" Created="2012-06-05 17:54:32 -0700" Modified="2012-06-05 17:54:36 -0700">
+                            <Title>Soundex</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="142" Type="Text" Created="2012-06-05 17:54:39 -0700" Modified="2012-06-05 17:54:42 -0700">
+                            <Title>Metaphoneme</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="143" Type="Text" Created="2012-06-05 17:59:59 -0700" Modified="2012-06-05 17:59:59 -0700">
+                            <Title>Untitled</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
@@ -1497,7 +1527,7 @@
         </Collection>
         <Collection Type="RecentSearch" ID="5C131A55-FED7-415D-A243-36EC1E62F7B1" Color="0.922 0.91 0.98">
             <Title>Search Results</Title>
-            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">linguistic</SearchSettings>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">SAMPA</SearchSettings>
         </Collection>
     </Collections>
     <LabelSettings>
@@ -1524,7 +1554,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="166" Characters="1658" Date="2012-06-04 19:22:04 -0700"></PreviousSession>
+        <PreviousSession Words="0" Characters="0" Date="2012-06-04 19:22:04 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

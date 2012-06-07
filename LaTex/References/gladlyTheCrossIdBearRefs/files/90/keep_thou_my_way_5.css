@@ -1,0 +1,22 @@
+
+/* ::::: null ::::: */
+
+a { color: rgb(0, 0, 255); }
+body, table, div, ul, li { margin: 0pt; padding: 0pt; }
+
+/* ::::: null ::::: */
+
+#ads { height: 279px; left: 0px; position: absolute; top: 0px; width: 336px; }
+#ads ul { list-style: none outside none; }
+#ads ul li { clear: both; float: left; line-height: 0; padding: 1px 4px; overflow: hidden; text-align: center; width: 328px; height: 277px; }
+.adc { height: 277px; table-layout: fixed; width: 100%; }
+.adt { font-size: 15px; font-weight: bold; line-height: 1.2; }
+.adt:hover { color: rgb(255, 0, 0); }
+.adtuc { white-space: nowrap; }
+.adb { color: rgb(0, 0, 0); font-size: 15px; line-height: 1.2; }
+.adu { color: rgb(130, 130, 130); font-size: 10px; line-height: 1.2; overflow: hidden; text-decoration: underline; text-overflow: ellipsis; white-space: nowrap; }
+.adus { cursor: pointer; }
+
+/* ::::: null ::::: */
+
+.attribution li { float: right; height: 18px; }

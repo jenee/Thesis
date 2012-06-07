@@ -1,0 +1,2 @@
+if(window.location.host.indexOf("yieldmanager")<0 )
+document.write(decodeURIComponent("%3Cscript%20src%3D%22http%3A%2F%2Fa1.interclick.com%2FgetInPageJS.aspx%3Fa%3D54%26b%3D50302%26cid%3D634632594254226520%22%3E%20%3C%2Fscript%3E%3Cnoscript%3E%3Ca%20href%3D%22http%3A%2F%2Fa1.interclick.com%2FgetInPageTarget.aspx%3Fa%3D54%26b%3D50302%26cid%3D634632594254226520%22%3E%20%3Cimg%20src%3D%22http%3A%2F%2Fa1.interclick.com%2FgetInPageImage.aspx%3Fa%3D54%26b%3D50302%26cid%3D634632594254226520%22%20border%3D'0'%3E%3C%2Fa%3E%3C%2Fnoscript%3E"))

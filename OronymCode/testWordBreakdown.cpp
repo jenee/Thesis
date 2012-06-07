@@ -24,11 +24,12 @@ void teardownTests() {
 
 bool testDiscoverOronymsForPhrase( string orthoPhrase ) {
    assert( testsSetup );
-   cout << "TESTING discoverOronymsForPhrase; orthoPhrase = " << orthoPhrase << endl;
+   cerr << "TESTING discoverOronymsForPhrase; orthoPhrase = " << orthoPhrase << endl;
    vector<string> oronymPhrases = discoverOronymsForPhrase( orthoPhrase );
    cout << "!Discovered "<<oronymPhrases.size()<<" oronyms:"<<endl;
    for( int i = 0; i < oronymPhrases.size(); i++) {
-      //cout << i<<": '";
+      //cout << i<<": '"
+      //cout <<"\\item ";
       cout <<oronymPhrases.at(i)<< endl;
       //cout << "'"<<endl;
    }
@@ -36,7 +37,7 @@ bool testDiscoverOronymsForPhrase( string orthoPhrase ) {
 }
 
 bool testDiscoverOronymsForPhrase() {
-   return testDiscoverOronymsForPhrase("a nice cold shower");
+   return testDiscoverOronymsForPhrase("a nice cold hour");
 }
 
 bool testFindAllPhoneSeqsForOrthoPhrase(string orthoPhrase) {
@@ -349,6 +350,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "empty our e-mail" );
    orthoPhrases.push_back( "empty our email" );
    } */
+   /*mech turk answers*
    {
       orthoPhrases.push_back( "	a nice cold hour	" );
       orthoPhrases.push_back( "	an ice cold dower	" );
@@ -500,7 +502,8 @@ vector<string> buildVectorOfStrings() {
       orthoPhrases.push_back( "	a nice gold dower	" );
       orthoPhrases.push_back( "	i saw tower	" );
    }
-   /*
+   */
+   
    {
    orthoPhrases.push_back( "n' ay scold hour" );
    orthoPhrases.push_back( "n' ay scold our" );
@@ -793,7 +796,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "on ice-cold hour" );
    orthoPhrases.push_back( "on ice-cold our" );
    }
-   */
+
    return orthoPhrases;
 }
 

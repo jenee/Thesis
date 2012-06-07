@@ -1,0 +1,1 @@
+document.write(unescape("%3CSCRIPT%20language%3D%27JavaScript1.1%27%20SRC%3D%22http%3A//ad.doubleclick.net/adj/N4912.128132.INTERCLICK/B6487163.71%3Bsz%3D160x600%3Bpc%3D%5BTPAS_ID%5D%3Bclick%3Dhttp%3A//a1.interclick.com/icaid/269085/tid/1a0c3b77-4ae4-41b9-9f32-6e9aeeb827bb/click.ic%3F%3Bord%3D634745715434903488%3F%22%3E%0A%3C/SCRIPT%3E"));

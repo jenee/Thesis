@@ -1,0 +1,65 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=Bv2sgyFzPT_WuGOuLlAKB_eTvBfvJxqoDi8OssRyz4P_YjQGAiCcQARgBII-UoREoBDgAUKrChOv7_____wFgyc75hsij4BqgAZWn094DsgEYZGljdGlvbmFyeS5yZWZlcmVuY2UuY29tyAEB2gE1aHR0cDovL2RpY3Rpb25hcnkucmVmZXJlbmNlLmNvbS9icm93c2UvbW9uZGVncmVlbj9zPXT4AQHAAgnIArO4nhmoAwHoA2zoA7YB9QMADACA9QMAAAAQiAYB&amp;num=1&amp;cid=5Gh-Nq2JhH2hJPUADmcrbo3O&amp;sig=AOD64_3cJTNVeOBD4ztRsDVXUNvW79quwQ&amp;client=ca-aj-lexico-dict&amp;adurl=http://www.lumosity.com/landing%3Frefer%3D703%26a%3DExerciseYourBrain_Fight_Text%26Network%3DContent%26kw%3D%26ad%3D7526092659%26SiteTarget%3Ddictionary.reference.com"; 
+google_ad.visible_url = "www.lumosity.com"; 
+google_ad.line1 = "Exercise Your Brain"; 
+google_ad.line2 = "Games You Didn\x26#39;t Know Existed"; 
+google_ad.line3 = "to Fight Brain Decline and Aging."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "site"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=BJUSByFzPT_WuGOuLlAKB_eTvBciq96sCgNaLuSTYi7R6sNQyEAIYAiCPlKERKAQ4AFCT-fCsAmDJzvmGyKPgGqABosjo6wOyARhkaWN0aW9uYXJ5LnJlZmVyZW5jZS5jb23IAQHaATVodHRwOi8vZGljdGlvbmFyeS5yZWZlcmVuY2UuY29tL2Jyb3dzZS9tb25kZWdyZWVuP3M9dMACAcgCmKmwIqgDAegDbOgDtgH1AwAMAID1AwAAABCIBgE&amp;num=2&amp;cid=5Gh-Nq2JhH2hJPUADmcrbo3O&amp;sig=AOD64_3D2H0aupr2__NFlemMDkG0-U4aKQ&amp;client=ca-aj-lexico-dict&amp;adurl=http://pixel.everesttech.net/2437/cq%3Fev_sid%3D3%26ev_ln%3D%26ev_crx%3D9692845632%26ev_mt%3D%26ev_n%3Dd%26ev_ltx%3D%26ev_pl%3Ddictionary.reference.com%26url%3Dhttp%253A//www.microsoft.com/student/en/us/software/windows/default.aspx%253Fcbid%253Dstudent%2526CMXID%253Def_sem%2526semid%253Def_GGL_29881pt2%2526WT.srch%253D1%2526category%253DStudent%2526wt.mc_id%253DWindowsStudent_SEM_FY12"; 
+google_ad.visible_url = "Microsoft.com/Student"; 
+google_ad.line1 = "Windows 7 For Students"; 
+google_ad.line2 = "Buy Windows 7 on a Student\x26#39;s Budget"; 
+google_ad.line3 = "With Student Deals From Windows."; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=BkhB7yFzPT_WuGOuLlAKB_eTvBaKPnYQC-qPy5ynKrbPYFfCqKxADGAMgj5ShESgEOABQ7sSc5_v_____AWDJzvmGyKPgGqAB8Ia77AOyARhkaWN0aW9uYXJ5LnJlZmVyZW5jZS5jb23IAQHaATVodHRwOi8vZGljdGlvbmFyeS5yZWZlcmVuY2UuY29tL2Jyb3dzZS9tb25kZWdyZWVuP3M9dIACAcACBMgCusi5GKgDAegDbOgDtgH1AwAMAID1AwAAABCIBgE&amp;num=3&amp;cid=5Gh-Nq2JhH2hJPUADmcrbo3O&amp;sig=AOD64_2BxouFcNEOv3bIIMW8dxV-EWsevQ&amp;client=ca-aj-lexico-dict&amp;adurl=http://www.htc.com/us/%3Fextcid%3DHTCONE-GoogleSEM"; 
+google_ad.visible_url = "www.htc.com/htcone"; 
+google_ad.line1 = "The New HTC One"; 
+google_ad.line2 = "No Need to Wait. The Phone of the"; 
+google_ad.line3 = "Summer is Already Here. Learn More."; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 4; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "site"; 
+google_ad.url = "http://googleads.g.doubleclick.net/aclk?sa=L&amp;ai=BEWiXyFzPT_WuGOuLlAKB_eTvBfzf5roCrJvqmR_W-K7_AtCdJRAEGAQgj5ShESgEOABQ3e_jpgVgyc75hsij4BqyARhkaWN0aW9uYXJ5LnJlZmVyZW5jZS5jb23IAQHaATVodHRwOi8vZGljdGlvbmFyeS5yZWZlcmVuY2UuY29tL2Jyb3dzZS9tb25kZWdyZWVuP3M9dMACAcgCtJP_IqgDAegDbOgDtgH1AwAMAID1AwAAABA&amp;num=4&amp;sig=AOD64_2-nB0fqprSXrnzUgryWkvwJv-N2A&amp;client=ca-aj-lexico-dict&amp;adurl=http://track.searchignite.com/si/cm/tracking/clickredirect.aspx%3Fsicontent%3D1%26sicreative%3D8281938780%26sitrackingid%3D251913813"; 
+google_ad.visible_url = "AutoTrader.com"; 
+google_ad.line1 = "Find The Car You Want"; 
+google_ad.line2 = "Find A Car In Your Area."; 
+google_ad.line3 = "View New \x26amp; Used Local Listings Now!"; 
+google_ad.regionname = ""; 
+google_ads[3] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://dictionary.reference.com/browse/mondegreen%253Fs%253Dt%26hl%3Den%26client%3Dca-aj-lexico-dict%26adU%3Dwww.lumosity.com%26adT%3DExercise%2BYour%2BBrain%26adU%3DMicrosoft.com/Student%26adT%3DWindows%2B7%2BFor%2BStudents%26adU%3Dwww.htc.com/htcone%26adT%3DThe%2BNew%2BHTC%2BOne%26adU%3DAutoTrader.com%26adT%3DFind%2BThe%2BCar%2BYou%2BWant%26gl%3DUS%26hideleadgen%3D1\x26usg\x3dAFQjCNF06tdsFdW3GmCtLOy6fUjDm6Dnhw";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}
