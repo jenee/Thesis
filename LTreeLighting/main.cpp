@@ -18,12 +18,43 @@ double degreesToRadians(double degs) {
 }
 
 
+/* Scale a value onto a logarithmic scale, with a minimum and maximum based on
+ * minWordFreq and maxWordFreq.
+ *
+ * http://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value
+ *                     (b-a)(log(freqVal + 1) - min)
+ *     scaledRadius = -------------------------------  + a
+ *                          max - min
+ */
+double scaleFreqToRadius( int freqVal ) {
+  assert ( maxWordFreq != DICTIONARY_MIN_FREQ - 1 );
+  assert ( minWordFreq != DICTIONARY_MAX_FREQ + 1 );
+
+  double a = minRadius; /* The minimum value we want after scaling */
+  double b = maxRadius; /* The maximum value we want after scaling */
+
+  /* On a linear scale, some higher frequencies dominate the graph, making all
+   * the smaller ones look the same.  To prevent this, scale values down using
+   * the natural log function.  We also need to shift the graph right by one
+   * because log(0) is undefined. */
+  freqVal = log(1.0 + freqVal);
+  double max = log(1.0 + maxWordFreq); /* Our max input number, scales to b */
+  double min = log(1.0 + minWordFreq); /* Our min input number, scales to a */
+
+  double scaledRadius = ( ( b - a )*( freqVal - min ) );
+  scaledRadius /= ( max - min );
+  scaledRadius += a;
+
+  return scaledRadius;
+}
+
+
 /*http://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value
  *                     (b-a)(freqVal - min)
  *     scaledRadius = ----------------------  + a
  *                          max - min
  */
-double scaleFreqToRadius( int freqVal ) {
+double scaleLinearFreqToRadius( int freqVal ) {
    assert ( maxWordFreq != DICTIONARY_MIN_FREQ - 1 );
    assert ( minWordFreq != DICTIONARY_MAX_FREQ + 1 );
    
@@ -73,10 +104,11 @@ void buildAndDrawFullTree( string orthoPhrase ) {
    glPushMatrix();
    {
       //glTranslated(0.0, -1.0* DEFAULT_BRANCH_LEN , 0.0);
-      //glTranslated(0.0, 2.0* DEFAULT_BRANCH_LEN , 0.0);
+      glTranslated(0.0, DEFAULT_BRANCH_LEN / 2.0 , 0.0);
       materials(GreenShiny);
       drawSphere(DEFAULT_RADIUS);
-    
+      glTranslated(0.0, DEFAULT_BRANCH_LEN / -2.0 , 0.0);
+
    
       materials(allMaterials.at( mat % allMaterials.size () ) );
 
@@ -146,7 +178,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
    
    if( firstWords.size() > 1 ) {
       curDeltaXOffset = ( deltaXOffset * totalTreeWidth ) / spacersNeeded;
-
+      
       curFarRightXOffset =  ( deltaXOffset * totalTreeWidth ) / 2.0 ; 
       
       double halfBranch = deltaYOffset / 2.0;
@@ -225,7 +257,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             {
                materials(RedShiny);
                //glRotated( radiansToDegrees(-1.0*tiltAngle), 0, 0, 1.0);
-               glTranslated(0.0, -curYOffset / 4.0 , 0.0);
+               glTranslated(0.0, ( (lastRadius * SPHERE_MULTIPLIER) - curYOffset ) / 2.0 , 0.0);
 
                //glScaled( 1.0,  SPHERE_MULTIPLIER, 1.0);
                drawSphere( lastRadius * SPHERE_MULTIPLIER );
@@ -238,7 +270,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             //cerr<<"successfulEndOfPhrase! drawSphere!"<<endl;
             glPushMatrix();
             {
-               glTranslated(0.0, -curYOffset / 2.0 , 0.0);
+               glTranslated(0.0, ( (lastRadius * SPHERE_MULTIPLIER) - curYOffset ) / 2.0 , 0.0);
                materials(GreenShiny);
                drawSphere( lastRadius * SPHERE_MULTIPLIER );
                materials(allMaterials.at( mat % allMaterials.size () ) );
@@ -743,7 +775,7 @@ int main(int argc, char** argv) {
 
    //set up glut window
    glutInit(&argc, argv);
-   glutInitWindowSize(800, 600);
+   glutInitWindowSize(1200, 800);
    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
    glutCreateWindow(orthoPhraseRoot.c_str());
    glClearColor(1.0, 1.0, 1.0, 1.0); // set bg to white

@@ -35,22 +35,22 @@
 #include "Metrics.h"
 #include "../OronymCode/wordBreakdown.h"
 
-#define TREE_SCALE 1.0 //0.5
+#define TREE_SCALE .5
 
 #define DEFAULT_RADIUS ( 0.5 * TREE_SCALE )
 #define DEFAULT_BRANCH_LEN ( 4.0 * TREE_SCALE)
-#define SPHERE_MULTIPLIER 1.1
+#define SPHERE_MULTIPLIER 1.5
 
 int maxWordFreq = DICTIONARY_MIN_FREQ - 1;
 int minWordFreq = DICTIONARY_MAX_FREQ + 1; 
 
-const double minRadius = DEFAULT_RADIUS / 6.0 ;
-const double maxRadius =  DEFAULT_RADIUS * 3.0;
+const double minRadius = DEFAULT_RADIUS / 2.0 ;
+const double maxRadius =  DEFAULT_RADIUS * 2.0;
 
-const double farRightTiltAngle = 45.0;//135.0; //90.0; //45.0;
+const double farRightTiltAngle = 45.0; //135.0; //90.0; //45.0;
 const double farLeftTiltAngle = -1.0 * farRightTiltAngle;
 
-const double deltaXOffset = maxRadius*2.0;//1.0;//( DEFAULT_BRANCH_LEN / 4.0 );      
+const double deltaXOffset = maxRadius*2.0; //( DEFAULT_BRANCH_LEN / 4.0 );   2.0* maxRadius;//1.0;//    
 const double deltaYOffset = DEFAULT_BRANCH_LEN;// * 1.1;        
 
 
