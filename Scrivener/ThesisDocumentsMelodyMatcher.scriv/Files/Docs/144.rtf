@@ -1,0 +1,20 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red33\green87\blue172;}
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 In the field of speech recognition, an algorithm must learn to tell the difference between "a nice rock" or "a gneiss rock". These identical-sounding phrases are called oronyms. Word frequency dictionaries are often used by speech recognition systems to help resolve phonetic sequences with more than one possible orthographic phrase, by looking up which oronym of the root phonetic sequence contains the most common words. However, this approach is highly dependent upon the correctness of the frequency values in the word frequency dictionary. \
+\
+Our paper demonstrates a technique used to validate word frequency dictionary values. We use oronym trees to compare phrase frequency values from dictionaries, to the frequency with which our human test subjects heard different variations of the root phrase.\
+\
+Given any valid English phrase, herein referred to as the root phrase, our system will first generate all possible correct phonetic sequences for a General American accent. Then, it parses through these phonetic transcriptions depth-first, looking for valid orthographic words for each subsequent phonetic subsequence, generating full and partial phrases from these words.\'a0\'a0In the event that the entire phonetic sequence branch can be parsed into a valid orthographic phrase, we save this orthographic phrase as an oronym of the root phrase.\
+\
+We also developed a visual representation of the oronym trees, to allow for visualizing phonetic dead-ends.\'a0\'a0In the event that a branch's phonetic ``tail" is not orthographically interpretable, we visually ``dead-end" the branch by drawing a red sphere. A particularly strong orthographic partial phrase before a phonetic dead-end can mislead a listener, causing them to lose track of the words in the rest of the phrase.\'a0 \'a0In the event that the entire phonetic sequence can be parsed into a valid orthographic phrase, we indicate this successfully-found oronym with a green sphere.\'a0\'a0\
+\
+Using the oronyms generated from our oronym tree, we then conducted a user study. Our multi-phase user study, incorporating over \cf2 \\numResponsesPhaseTwoUserStudy\cf0 data points from \cf2 \\uniqueUsersPhaseTwoUserStudy \cf0 test subjects.\'a0\'a0In it, we tested the validity of our oronym generation by having participants record themselves reading an oronym phrase. Then, a second set of subjects transcribed the recordings.\'a0\'a0\
+\
+In the first phase, we generated oronym strings for the phrase \cf2 \\emph\{\cf0 ``a nice cold hour''\cf2 \}\cf0 ,\'a0\'a0and had over \cf2 \\uniqueUsersPhaseOneUserStudy \cf0 people make\cf2 \\numResponsesPhaseOneUserStudy \cf0 recordings of the most common oronyms for that phrase. We then compared their pronunciations to the pronunciations we were expecting, and found that in all cases, the recorded phrase's phonemics matched our expectations.\'a0\'a0In the second phase, we selected \cf2 \\recordingsPhaseTwoUserStudy\cf0 of the phase one recordings, and had \cf2 \\numTranscriptionsPerRecordingPhaseTwoUserStudy \cf0 different people transcribe each one.\'a0\'a0\
+\
+If the frequency dictionary's frequency values were correct for the phrase words, we would expect that the most commonly transcribed phrases in our user study would roughly correspond with our metric for the most likely oronym interpretation of the root phrase. In the cases where this did not happen, we could conclude that the frequency dictionary was in error for that phrase. However, we found a signicant difference between the expected and actual occurances of transcription. From this, we can conclude that the frequency dictionary that we used is flawed.\
+}

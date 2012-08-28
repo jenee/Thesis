@@ -1,0 +1,16 @@
+\label{abstractSection}
+
+\begin{abstract}
+
+
+In this project, we developed a visualization of the ambiguity of written prose.  Given a textual phrase, our program determines all oronyms for that phrase, or possible ways that that phrase is likely to be misheard.  It then creates an oronym parse-tree visualization, with each branch fork indicating that a phonetic sequence can be interpreted in more than one way. Each branch segment represents an orthographic word, and the branch radius is scaled to the word's frequency of use in everyday language.  
+
+Given any valid English phrase, our system will first generate all possible correct phonetic sequences for a General American accent. Then, it parses through these phonetic transcriptions depth-first, looking for valid orthographic words for each subsequent phonetic subsequence, generating full and partial phrases from these words.  While it is doing so, a tree branch is generated on screen for each possible orthographic divergence. In the event that a branch's phonetic ``tail" is not orthographically interpretable, we visually ``dead-end" the branch by drawing a red sphere.  In the event that the entire phonetic sequence can be parsed into a valid orthographic phrase, we indicate this successfully-found oronym with a green sphere.  
+
+This visual representation allows users to see how many ways a phrase can be interpreted, and most novelly, where dead-end interpretations of the phrase's phonetic sequence exist.  A particularly strong orthographic partial phrase before a phonetic dead-end can mislead a listener, causing them to lose track of the words in the rest of the phrase.  
+
+Our visual representation does not take into account n-gram word-proximity, which causes the visual representation to incorrectly weight some branch paths. However, we find it satisfactorily weights the likelihood that a listener will follow an oronym branch's particular interpretation as they listen to a phrase.
+
+In addition to implementing the visualization, we did a multi-phase user study, incorporating over \numResponsesPhaseTwoUserStudy data points from \uniqueUsersPhaseTwoUserStudy test subjects.  In it, we tested the validity of our oronym generation by having participants record themselves reading an oronym phrase. Then, a second set of subjects transcribed the recordings.  In the first phase, we generated oronym strings for the phrase \emph{``a nice cold hour''},  and had over \uniqueUsersPhaseOneUserStudy people make \numResponsesPhaseOneUserStudy recordings of the most common oronyms for that phrase. We then compared their pronunciations to the pronunciations we were expecting, and found that in all cases, the recorded phrase's phonemics matched our expectations.  In the second phase, we selected \recordingsPhaseTwoUserStudy of the phase one recordings, and had \numTranscriptionsPerRecordingPhaseTwoUserStudy different people transcribe each one.  In the aggregated transcriptions, the most commonly transcribed phrases roughly corresponded with our metric for the most likely oronym interpretation of the phrase in the recording. 
+
+\end{abstract}

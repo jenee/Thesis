@@ -50,6 +50,16 @@
                         <SelectedSubdocumentIDs>63</SelectedSubdocumentIDs>
                     </CorkboardAndOutliner>
                     <Children>
+                        <BinderItem ID="144" Type="Text" Created="2012-08-18 00:00:32 -0700" Modified="2012-08-18 20:54:00 -0700">
+                            <Title>NEW abstract</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>2307,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
                         <BinderItem ID="63" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:13:34 -0700">
                             <Title>Overview of Melody Matcher</Title>
                             <MetaData>
@@ -117,7 +127,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>636,0</TextSelection>
+                                <TextSelection>0,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="138" Type="Text" Created="2012-06-04 23:49:47 -0700" Modified="2012-06-04 23:53:39 -0700">
@@ -128,6 +138,26 @@
                             </MetaData>
                             <TextSettings>
                                 <TextSelection>312,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="146" Type="Text" Created="2012-08-18 00:02:06 -0700" Modified="2012-08-18 00:02:06 -0700">
+                            <Title>Untitled</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="145" Type="Text" Created="2012-08-18 00:00:32 -0700" Modified="2012-08-18 00:00:32 -0700">
+                            <Title>Untitled</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -381,7 +411,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>343,242</TextSelection>
                             </TextSettings>
                             <References>
                                 <Reference BinderID="121" Destination="[Internal Link]">NEXT TODO</Reference>
@@ -977,6 +1007,28 @@
                         <TextSelection>180,12</TextSelection>
                     </TextSettings>
                 </BinderItem>
+                <BinderItem ID="147" Type="Folder" Created="2012-08-18 00:02:12 -0700" Modified="2012-08-18 00:02:15 -0700">
+                    <Title>Graphs</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Children>
+                        <BinderItem ID="148" Type="Text" Created="2012-08-18 00:02:17 -0700" Modified="2012-08-18 20:52:57 -0700">
+                            <Title>Bubble chart explanations</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1617,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
             </Children>
         </BinderItem>
         <BinderItem ID="82" Type="Folder" Created="2012-05-09 11:11:16 -0700" Modified="2012-05-09 11:11:19 -0700">
@@ -1215,7 +1267,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <TextSelection>674,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
                 <BinderItem ID="11" Type="Text" Created="2012-05-07 23:21:23 -0700" Modified="2012-05-07 23:22:50 -0700">
@@ -1225,7 +1277,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <TextSelection>1176,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
                 <BinderItem ID="12" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:00:42 -0700">
@@ -1518,6 +1570,58 @@
                         <TextSelection>0,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
+                <BinderItem ID="149" Type="Text" Created="2012-08-18 16:08:39 -0700" Modified="2012-08-18 16:08:39 -0700">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem ID="150" Type="Folder" Created="2012-08-18 16:08:51 -0700" Modified="2012-08-18 16:09:07 -0700">
+            <Title>Mechanical Turk Oronym Testing</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+                <NotesTextSelection>0,0</NotesTextSelection>
+            </MetaData>
+            <TextSettings>
+                <TextSelection>0,0</TextSelection>
+            </TextSettings>
+            <Children>
+                <BinderItem ID="151" Type="Text" Created="2012-08-18 16:09:09 -0700" Modified="2012-08-18 16:09:22 -0700">
+                    <Title>A nice coal dower</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>172,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="152" Type="Text" Created="2012-08-18 16:48:44 -0700" Modified="2012-08-18 16:49:29 -0700">
+                    <Title>An ice cold hour</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2347,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="153" Type="Text" Created="2012-08-18 22:45:02 -0700" Modified="2012-08-18 23:14:12 -0700">
+                    <Title>Selection criteria for oronyms to record</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
             </Children>
         </BinderItem>
     </Binder>
@@ -1527,7 +1631,7 @@
         </Collection>
         <Collection Type="RecentSearch" ID="5C131A55-FED7-415D-A243-36EC1E62F7B1" Color="0.922 0.91 0.98">
             <Title>Search Results</Title>
-            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">SAMPA</SearchSettings>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">voic</SearchSettings>
         </Collection>
     </Collections>
     <LabelSettings>
@@ -1554,7 +1658,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2012-06-04 19:22:04 -0700"></PreviousSession>
+        <PreviousSession Words="848" Characters="5535" Date="2012-08-17 23:59:36 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

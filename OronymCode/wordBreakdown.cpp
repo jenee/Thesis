@@ -761,8 +761,12 @@ int getTotalFreqForPhrase( string orthoPhrase ) {
    
    vector<string> phraseWords = strTokOnWhitespace( orthoPhrase );
    
+   //cerr << "--numPhraseWords = "<< phraseWords.size() <<endl;
+   
    for(  int i = 0; i < phraseWords.size(); i++ ) {
+      //cerr << "--["<<i<<"]:"<< phraseWords.at(i) <<endl;
       freqSum += queryDBwithOrthoForFreq( phraseWords.at(i) );
+      
    }
    
    //assert(0);
@@ -798,8 +802,11 @@ vector<string> getCSVofAllPhraseFreqs( vector<string> orthoPhrases ) {
    string delim = " , ";
    for (int i = 0; i < orthoPhrases.size(); i++) {
       cerr<<"."<<i;
-      string csvLine = orthoPhrases.at( i );
+      string csvLine = trimWhitespace( orthoPhrases.at( i ) );
+      //cerr<<csvLine <<endl;
       int totalFreq = getTotalFreqForPhrase( csvLine );
+      //cerr<<totalFreq <<endl;
+
       csvLine.append( delim );
       stringstream os;
       os << totalFreq;

@@ -26,7 +26,7 @@ double degreesToRadians(double degs) {
  *     scaledRadius = -------------------------------  + a
  *                          max - min
  */
-double scaleFreqToRadius( int freqVal ) {
+double scaleLogFreqToRadius( int freqVal ) {
   assert ( maxWordFreq != DICTIONARY_MIN_FREQ - 1 );
   assert ( minWordFreq != DICTIONARY_MAX_FREQ + 1 );
 
@@ -54,7 +54,7 @@ double scaleFreqToRadius( int freqVal ) {
  *     scaledRadius = ----------------------  + a
  *                          max - min
  */
-double scaleLinearFreqToRadius( int freqVal ) {
+double scaleFreqToRadius( int freqVal ) {
    assert ( maxWordFreq != DICTIONARY_MIN_FREQ - 1 );
    assert ( minWordFreq != DICTIONARY_MAX_FREQ + 1 );
    
@@ -778,7 +778,9 @@ int main(int argc, char** argv) {
    glutInitWindowSize(1200, 800);
    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
    glutCreateWindow(orthoPhraseRoot.c_str());
-   glClearColor(1.0, 1.0, 1.0, 1.0); // set bg to white
+   //glClearColor(0.10, 0.478, 0.878, 1.0); // set bg to blue
+   //glClearColor(1.0, 1.0, 1.0, 1.0); // set bg to white
+   glClearColor(0.0, 0.0, 0.0, 1.0); // set bg to black
    
    //set up glut callbacks
    glutDisplayFunc(display);

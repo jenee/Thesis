@@ -1,0 +1,220 @@
+% Cal Poly Thesis
+% 
+% based on UC Thesis format
+%
+% modified by Mark Barry 2/07.
+%
+
+
+
+
+\documentclass[12pt]{ucthesis}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+    \pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue \fi
+
+\usepackage{url}
+\ifpdf
+
+
+    \usepackage[pdftex]{graphicx}
+    % Update title and author below...
+    \usepackage[pdftex,plainpages=false,breaklinks=true,colorlinks=true,urlcolor=blue,citecolor=blue,%
+                                       linkcolor=blue,bookmarks=true,bookmarksopen=true,%
+                                       bookmarksopenlevel=3,pdfstartview=FitV,
+                                       pdfauthor={Jennifer ``Jenee" Gayle Hughes},
+                                       pdftitle={Misheard Me Oronym Tree: A Visualization of Phonetic Ambiguity in Prose Intended For Third-Party Performance},
+                                       pdfkeywords={thesis, masters, cal poly}
+                                       ]{hyperref}
+    %Options with pdfstartview are FitV, FitB and FitH
+    \pdfcompresslevel=1
+
+\else
+    \usepackage{graphicx}
+\fi
+
+\usepackage{appendix}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[letterpaper]{geometry}
+\usepackage[overload]{textcase}
+
+\usepackage{alltt} % for monospace with emph, http://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting
+
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{fancyvrb}
+
+\usepackage{colortbl} %for tablefilter output 
+\usepackage{longtable,lscape} %for tablefilter output, and for making some of the fatter tables fit
+
+\usepackage{chngpage} % To change margins on only one page
+
+\bibliographystyle{abbrv}
+
+\setlength{\parindent}{0.25in} \setlength{\parskip}{6pt}
+
+\geometry{verbose,nohead,tmargin=1.25in,bmargin=1in,lmargin=1.5in,rmargin=1.3in}
+
+\setcounter{tocdepth}{2}
+
+
+% Different font in captions (single-spaced, bold) ------------
+\newcommand{\captionfonts}{\small\bf\ssp}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1: #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
+% ---------------------------------------
+
+
+
+
+\begin{document}
+
+% Declarations for Front Matter
+
+% Update fields below!
+%\title{Melody Matcher: A Graphical Approach to Analyzing the Intelligibility of Song Lyrics Using Music-Linguistic Algorithms}
+%\title{Melody Matcher: A Visual Representation of the Intelligibility of Song Lyrics Using Music-Linguistic Analysis}
+%\title{~cutesy name tbd~ (BUMM- Based Upon Melody Matcher): A Visual Analysis of the Intelligibility of Song Lyrics Using a Music-Linguistic Approach}
+\title{Misheard Me Oronym Tree: A Visualization of Phonetic Ambiguity in Prose Intended For Third-Party Performance}
+\author{Jennifer ``Jenee" Gayle Hughes}
+\degreemonth{June} \degreeyear{2012} \degree{Master of Science}
+\defensemonth{June} \defenseyear{2012}
+\numberofmembers{3} \chair{Zo\"{e} Wood, Ph.D.} \othermemberA{Franz Kurfess, Ph.D.} \othermemberB{John Clements, Ph.D.} \field{Computer Science} \campus{San Luis Obispo}
+\copyrightyears{seven}
+
+\maketitle
+
+
+%---------Global defs--------------
+%\include{variableDefs}
+
+\gdef \uniqueUsersPhaseOneUserStudy {12 }
+\gdef \numResponsesPhaseOneUserStudy {72 }
+\gdef \numOronymsPhaseOneUserStudy {56 }
+\gdef \numForthRightOohOronymPhrases {10 }
+
+\gdef \uniqueUsersPhaseTwoUserStudy {208 }
+\gdef \uniqueUsersPhaseTwoUserStudyUSA {127 }
+
+\gdef \numResponsesPhaseTwoUserStudy {851 }
+\gdef \numResponsesPhaseTwoUserStudyUSA {489 }
+\gdef \numResponsesPhaseTwoUserStudyIndia {239 }
+\gdef \numResponsesPhaseTwoUserStudyEngland {37 }
+\gdef \numResponsesPhaseTwoUserStudyCanada{35 }
+
+\gdef \recordingsPhaseTwoUserStudy {15 }
+
+\gdef \numTranscriptionsPerRecordingPhaseTwoUserStudy {30 to 60 }
+
+\gdef \phaseTwoUserStudyTranscriptionsANiceCoalDower {45 }
+\gdef \phaseTwoUserStudyTranscriptionsANiceColdHour {53 }
+\gdef \phaseTwoUserStudyTranscriptionsANighScoldHour {49 }
+%\gdef \phaseTwoUserStudyTranscriptions { }
+%\gdef \phaseTwoUserStudyTranscriptions { }
+%\gdef \phaseTwoUserStudyTranscriptions { }
+%\gdef \phaseTwoUserStudyTranscriptions { }
+%\gdef \phaseTwoUserStudyTranscriptions { }
+
+
+
+%-------------------
+
+
+
+
+\begin{frontmatter}
+
+% Custom made for Cal Poly (by Mark Barry, modified by Andrew Tsui).
+\copyrightpage
+
+% Custom made for Cal Poly (by Andrew Tsui).
+\committeemembershippage
+
+\include{abstractSection}
+
+
+
+%\begin{acknowledgements}
+
+%   Thank you...
+
+%\end{acknowledgements}
+
+
+\tableofcontents
+
+
+\listoftables
+
+\listoffigures
+
+\end{frontmatter}
+
+\pagestyle{plain}
+
+
+
+
+\renewcommand{\baselinestretch}{1.66}
+
+
+% ------------- Main chapters here --------------------
+
+\include{vocab}
+
+\include{intro}
+
+%\include{relatedWork}
+%\include{background}
+
+\include{implementation}
+
+
+\include{userStudy}
+
+\include{results}
+
+\include{futureWork}
+
+\include{conclusion}
+
+
+
+% ------------- End main chapters ----------------------
+
+
+
+\clearpage
+\bibliography{jeneeBib}
+\bibliographystyle{plain}
+%\addcontentsline{toc}{chapter}{Bibliography}
+\appendix
+\include{appendices}
+\include{sampaTable}
+\include{phaseOneBubbleCharts}
+\include{aNiceColdHourOronymWithFreqsTable}
+
+
+\end{document}
+

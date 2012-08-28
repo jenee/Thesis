@@ -58,6 +58,9 @@ Jennifer Hughes</p>
 <hr/>
 <ul>
 <li>
+<p class="binderItem"><strong>NEW abstract</strong><br/>In the field of speech recognition, an algorithm must learn to tell the difference between "a nice rock" or "a gneiss rock". These identical-sounding phrases are called oronyms. Word frequency dictionaries are often used by speech recognition systems to help resolve phonetic sequences with more than one possible orthographic phrase, by looking up which oronym of the root phonetic sequence contains the most common words. However, this approach is highly dependent upon the correctness of the frequ...</p>
+</li>
+<li>
 <p class="binderItem"><strong>Overview of Melody Matcher</strong><br/>Overview of Melody Matcher<br/>
 Melody Matcher aims to replicate the human ability to identify lyrics in a song that are easily misheard.  Lyrics can be misunderstood due to:<br/>
  • Lyric/Music emphasis mismatch, due to:<br/>
@@ -109,6 +112,12 @@ Thesis does not:<br/>
 —Handle similar sound substitution voice/voiceless<br/>
 —</p>
 </li>
+<li>
+<p class="binderItem"><strong>Untitled</strong></p>
+</li>
+<li>
+<p class="binderItem"><strong>Untitled</strong></p>
+</li>
 </ul>
 <hr/>
 <li>
@@ -123,10 +132,9 @@ I started off by looking at MIT’s .  Eventually, I was led to a paper that, wh
 </li>
 <li>
 <p class="binderItem"><strong>Final Phonetic Dictionary Choice</strong><br/>Final Phonetic Dictionary Choice<br/>
-I used the UNISYN dictionary, using General American SAMPA output, as the base for my phonetic dictionary.  <br/>
-First, I downloaded the dictionary and related files from the UNISYN website.<br/>
-Once I’d extracted them, I attempted to run the provided perl scripts to turn the UNISYN phonetic symbols into SAMPA phonetic symbols, using the procedure specified in Section 6.1 of their Documentation1_3.pdf, and towncode “gam”.<br/>
-There were a few errors in translation I fixed ma...</p>
+We used the UNISYN dictionary, using General American SAMPA output, as the base for our phonetic dictionary.  <br/>
+First, we downloaded the dictionary and related files from the UNISYN website.<br/>
+Once we’d extracted them, we attempted to run the provided perl scripts to turn the UNISYN meta-phonetic symbols into SAMPA phonetic symbols, using the procedure specified in Section 6.1 of UNISYN Documentation1_3.pdf, and the towncode “gam” (which indicated that we want pronu...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Transfer of Phonetic dictionary into SQL Database</strong><br/>Transfer of Phonetic dictionary into SQL Database<br/>
@@ -199,7 +207,7 @@ NOTE_LEN (required field) is the length of the note that t...</p>
 <p class="binderItem"><strong>Structure of a Syllable-EXAMPLES</strong><br/><br/>
 Examples<br/>
 For simplicity’s sake, the note length will not vary on all the following examples.<br/>
- Example 1: “o” <br/>
+Example 1: “o” <br/>
 (Single Syllable, Single Phone)               .<br/>
 o::IN/NNP/NN/LS: "ou :{o}<br/>
 WORD<br/>
@@ -263,7 +271,7 @@ n<br/>
 <br/>
 <br/>
 Example 2: “no” <br/>
-(Single Syllable, No Coda, Single-Phone Nucleus and Onset...</p>
+(Single Syllable, No Coda, Single-Phone Nucleus and Onset)...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Syllable Structure</strong><br/>Syllable Structure<br/>
@@ -473,7 +481,7 @@ i<br/>
 see<br/>
 long (e)<br/>
 1<br/>
-I**<br/>
+I**<br/>
 city<br/>
 short (i)<br/>
 0<br/>
@@ -481,7 +489,7 @@ short (i)<br/>
 E<br/>
 <br/>
 bed<br/>
-short...</p>
+short ...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Consonants</strong><br/>Consonants<br/>
@@ -1083,7 +1091,19 @@ V<br/>
 naIs<br/>
 kould<br/>
 SaU`r<br/>
-SYL_PARTonnucdonnucdonnucdonnucdVnaIskoulSaU`rd...</p>
+SYL_PARTonnucdonnucdonnucdonnucdVnaIskoulSaU`rd<br/>
+<br/>
+WORD<br/>
+an<br/>
+ice<br/>
+cold<br/>
+shower<br/>
+SAMPSYL<br/>
+Vn<br/>
+aIs<br/>
+kould<br/>
+SaU`r<br/>
+SYL_...</p>
 </li>
 <li>
 <p class="binderItem"><strong>First Option for Algorithm/Approach </strong><br/>First Option for Algorithm/Approach <br/>
@@ -1154,6 +1174,15 @@ FindAllPhoneSeqsForOrthoPhrase ( string orthoPhrase ) {<br/>
 Tra-la-lyrics is the closest system that exists to the proposed system.  It takes lyrics in Portuguese, and matches them via emphases to the music.  This is different from our system, because our system will use English-language lyrics.<br/>
 <br/>
 There are many systems that take lyrics and match them with notes, but very few use any sort of rhythmic rule set to do so.  Karaoke systems match lyrics to music on a time-based system, which is inadequate for our purposes.  How...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Soundex</strong></p>
+</li>
+<li>
+<p class="binderItem"><strong>Metaphoneme</strong></p>
+</li>
+<li>
+<p class="binderItem"><strong>Untitled</strong></p>
 </li>
 </ul>
 <hr/>
@@ -1246,6 +1275,23 @@ USER STUDY:<br/>
 <br/>
 MAYBE I shouldn’t have the tree grow. Maybe I should do it non-realtime.</p>
 </li>
+<li>
+<p class="binderItem"><strong>Graphs</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Bubble chart explanations</strong><br/>Bubble chart explanations<br/>
+<br/>
+The results of phase two of the user study are depicted by bubble charts in Figures (x) through (y).<br/>
+There is one chart per recording, and one bubble for every significant transcription of that recording*<br/>
+<br/>
+ The x axis shows the expected frequency of transcription for each phrase. <br/>
+ This is measured by a simple summation of all the frequency dictionary values for each word in the phrase.<br/>
+ <br/>
+ The y axis shows the total number of times that each phrase was transcribed over...</p>
+</li>
+</ul>
 </ul>
 
 </td>

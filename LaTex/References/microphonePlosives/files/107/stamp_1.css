@@ -1,0 +1,14 @@
+
+/* ::::: null ::::: */
+
+BODY { margin: 10px 0pt 0pt; padding: 0pt; }
+A { color: rgb(227, 114, 34); text-decoration: none; }
+IMG { border: 0pt none; }
+#ieee-banner { position: relative; clear: both; height: 73px; max-width: 950px; min-width: 800px; margin: 0pt auto; background: url('bg.frame.l.gif') no-repeat scroll 0% 0% transparent; font-family: Verdana,'Bitstream Vera Sans',Geneva,sans-serif; line-height: 1.1; font-size: 11px; color: rgb(0, 102, 153); }
+* HTML #ieee-banner {  }
+#inner { height: 40px; background: url('bg.frame.r.gif') no-repeat scroll 100% 0pt transparent; padding: 11px 140px 0pt 195px; }
+.text { text-align: center; }
+.title { margin-bottom: 4px; font-weight: bold; }
+IMG#logo_xplore { position: absolute; left: 30px; top: 12px; }
+IMG#logo_ieee { position: absolute; right: 36px; top: 14px; }
+#remove-frame { position: absolute; right: 4px; top: 3px; }
