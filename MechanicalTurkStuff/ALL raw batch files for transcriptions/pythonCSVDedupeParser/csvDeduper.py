@@ -7,7 +7,12 @@ import time
 def toPyDate(dateStr):
    #takes dates of this format: 'Fri Jun 08 09:21:50 PDT 2012'
    # format % explanations at: http://www.geezer.org/sw/mvform/doc/strftime.txt
+   print "dateStr: " + dateStr
    timeStruct = time.strptime( dateStr, "%a %b %d %I:%M:%S %Z %Y" )
+   
+   ''' this version looks for the current time zone
+   timeStruct = time.strptime( dateStr, "%a %b %d %I:%M:%S %Z %Y" )
+   '''
    epochTime = time.mktime(timeStruct)
    print epochTime
    return epochTime
@@ -37,12 +42,15 @@ for s in fields  :
 
 workerIdIndex = 15 #WorkerID, column P
 taskIdIndex = 0 #hitID, column A
-submitDateIndex = 19 #submitTime column S
+submitDateIndex = 18 #submitTime column S
 
 HIT = 1
 workerArg = array[HIT][workerIdIndex]
 taskArg = array[HIT][taskIdIndex]
 submitDate = array[HIT][submitDateIndex]
+
+print "worker: " +workerArg
+print "task : " +taskArg
 
 epochTest = toPyDate(submitDate)
 print epochTest
