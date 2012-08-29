@@ -8,12 +8,13 @@ def toPyDate(dateStr):
    #takes dates of this format: 'Fri Jun 08 09:21:50 PDT 2012'
    # format % explanations at: http://www.geezer.org/sw/mvform/doc/strftime.txt
    print "dateStr: " + dateStr
-   timeStruct = time.strptime( dateStr, "%a %b %d %I:%M:%S %Z %Y" )
+   timeStruct = time.strptime( dateStr, "%a %b %d %H:%M:%S %Z %Y" )
    
    ''' this version looks for the current time zone
    timeStruct = time.strptime( dateStr, "%a %b %d %I:%M:%S %Z %Y" )
    '''
-   epochTime = time.mktime(timeStruct)
+   epochTime = time.mktime(timeStruct) - time.timezone
+
    print epochTime
    return epochTime
 
