@@ -42,6 +42,7 @@ def allTasksWithURL(origHitList, urlString):
 
 def getEarliestHit( workerHitList ):
 	global submitDateIndex
+	import pdb;pdb.set_trace()
 	sortedHitList = sorted( workerHitList, key=lambda task: task[ submitDateIndex ] )
 	return sortedHitList[0]
 
