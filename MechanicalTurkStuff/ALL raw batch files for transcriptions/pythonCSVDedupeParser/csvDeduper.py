@@ -29,7 +29,7 @@ filename = sys.argv[1]
 
 #print filename
 # got this from here: http://stackoverflow.com/questions/1532810/how-to-read-lines-from-a-file-into-a-multidimensional-array-or-an-array-of-list
-array = list( csv.reader( open( filename, "rU"), dialect=csv.excel_tab) )
+array = list( csv.reader( open( filename, "rU") ) )
 #print array[0]
 #print array[1]
 
@@ -40,21 +40,19 @@ submitDateIndex = 18 #submitTime column S
 #HIT = 1
 #workerArg = array[HIT][workerIdIndex]
 #taskArg = array[HIT][taskIdIndex]
-#submitDate = array[HIT][submitDateIndex]
+submitDate = array[1][submitDateIndex]
 
 #print "worker: " +workerArg
 #print "task : " +taskArg
 
-#epochTest = toPyDate(submitDate)
-#print epochTest
+epochTest = toPyDate(submitDate)
+print epochTest
 print
 i = 0
 for HIT in array:
    string = ""
    j = 0
-   #print HIT
    for field in HIT:
-      #string += "\""
       if i == 0:
          string += field;
       elif j == submitDateIndex:
@@ -63,7 +61,6 @@ for HIT in array:
          string += field;
       j = j + 1
       string += ", "
-      #string += "\", "
    print string
    i = i + 1
 print
