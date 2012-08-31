@@ -27,9 +27,9 @@ if len(sys.argv) < 2:
 
 filename = sys.argv[1]
 
-print filename
+#print filename
 # got this from here: http://stackoverflow.com/questions/1532810/how-to-read-lines-from-a-file-into-a-multidimensional-array-or-an-array-of-list
-array = list( csv.reader( open( filename ) ) )
+array = list( csv.reader( open( filename, "rU"), dialect=csv.excel_tab) )
 #print array[0]
 #print array[1]
 
@@ -62,6 +62,7 @@ for HIT in array:
       else:
          string += field;
       j = j + 1
+      string += ", "
       #string += "\", "
    print string
    i = i + 1
