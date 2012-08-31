@@ -1,18 +1,6 @@
 import sys
 import csv
-
-if len(sys.argv) < 2:
-   sys.stderr.write('Usage: sys.argv[0] ')
-   sys.exit(1)
-
-filename = sys.argv[1]
-
-# got this from here: http://stackoverflow.com/questions/1532810/how-to-read-lines-from-a-file-into-a-multidimensional-array-or-an-array-of-list
-origHitList = list( csv.reader( open( filename, "rU") ) )
-
-dedupedTaskList = []
-
-uniqueURLlist = buildUniqueURLlist()
+from collections import defaultdict
 
 workerIdIndex = 15 		#WorkerID, column P
 urlIndex = 27 			#input.audioURL, column AB
@@ -22,25 +10,6 @@ statusIndex = 16		#AssignmentStatus, column Q
 answerIndex = 28 		#Answer.answer, column AC
 countryIndex = 29 		#Answer.country, column AD
 
-
-for urlString in uniqueURLlist
-
-	urlTaskList = allTasksWithURL(origHitList, urlString)
-	
-	#set default hash entry to a blank list 
-	workerCountDict = defaultdict(list)
-
-	for HIT in urlTaskList
-		workerCountDict[ HIT[workerIDIndex] ].append(HIT) 
-
-	for workerHITList in workerCountDict
-		dedupedTaskList.add( getEarliestHit (workerHITList) )
-
-for HIT in dedupedTaskList:
-	if HIT[statusIndex] != "Rejected" and
-		HIT[answerIndex].strip() != "" and
-		HIT[countryIndex].strip() != "" : 
-		print HIT
 
 def buildUniqueURLlist():
 	uniqueURLlist = []
@@ -62,18 +31,52 @@ def buildUniqueURLlist():
 	uniqueURLlist.append(" http://ani.pe/jenee/A.17.141.wav")
 	uniqueURLlist.append(" http://ani.pe/jenee/A.17.135.wav")
 	return uniqueURLlist
-			 
 
 def allTasksWithURL(origHitList, urlString):
+	global urlIndex
 	urlList = []
 	for HIT in origHitList:
 		if HIT[urlIndex] == urlString:
 			urlList.append( HIT )
 	return urlList
-			
 
 def getEarliestHit( workerHitList ):
-	sortedHitList = sorted( workerHitList, key=lamba HIT: HIT[ submitDateIndex ] ) 
+	global submitDateIndex
+	sortedHitList = sorted( workerHitList, key=lambda task: task[ submitDateIndex ] )
 	return sortedHitList[0]
-		
 
+
+
+if len(sys.argv) < 2:
+   sys.stderr.write('Usage: sys.argv[0] ')
+   sys.exit(1)
+
+filename = sys.argv[1]
+
+# got this from here: http://stackoverflow.com/questions/1532810/how-to-read-lines-from-a-file-into-a-multidimensional-array-or-an-array-of-list
+origHitList = list( csv.reader( open( filename, "rU") ) )
+
+dedupedTaskList = []
+
+uniqueURLlist = buildUniqueURLlist()
+
+
+
+for urlString in uniqueURLlist:
+
+	urlTaskList = allTasksWithURL(origHitList, urlString)
+	
+	#set default hash entry to a blank list 
+	workerCountDict = defaultdict(list)
+
+	for HIT in urlTaskList:
+		workerCountDict[ HIT[workerIdIndex] ].append(HIT) 
+
+	for workerHITList in workerCountDict:
+		dedupedTaskList.append( getEarliestHit (workerHITList) )
+
+for HIT in dedupedTaskList:
+	if( HIT[statusIndex] != "Rejected" and
+		HIT[answerIndex].strip() != "" and
+		HIT[countryIndex].strip() != "" ): 
+		print HIT
