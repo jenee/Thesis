@@ -1,5 +1,6 @@
 import sys
 import csv
+import time
 from collections import defaultdict
 
 workerIdIndex = 15 		#WorkerID, column P
@@ -42,9 +43,24 @@ def allTasksWithURL(origHitList, urlString):
 
 def getEarliestHit( workerHitList ):
 	global submitDateIndex
-	import pdb;pdb.set_trace()
-	sortedHitList = sorted( workerHitList, key=lambda task: task[ submitDateIndex ] )
-	return sortedHitList[0]
+	#import pdb;pdb.set_trace()
+	#print >> sys.stderr, "*****************************************************"	
+	#print >> sys.stderr, "*****************************************************"	
+	#print >> sys.stderr,  workerHitList	
+	#sortedHitList = sorted( workerHitList, key=lambda task: task[ submitDateIndex ] )
+	#return sortedHitList[0]
+	firstHit=workerHitList[0]
+	earliestDate = firstHit[submitDateIndex]#time.time() #Today
+	
+	
+	for HIT in workerHitList:
+		if earliestDate > HIT[submitDateIndex]:
+			firstHit = HIT
+			earliestDate = firstHit[submitDateIndex] 
+			
+		
+		
+	return firstHit
 
 
 
@@ -66,14 +82,16 @@ uniqueURLlist = buildUniqueURLlist()
 for urlString in uniqueURLlist:
 
 	urlTaskList = allTasksWithURL(origHitList, urlString)
-	
 	#set default hash entry to a blank list 
 	workerCountDict = defaultdict(list)
 
 	for HIT in urlTaskList:
 		workerCountDict[ HIT[workerIdIndex] ].append(HIT) 
 
-	for workerHITList in workerCountDict:
+	#print >> sys.stderr,  workerCountDict[" A3HBWVAVKRASDF"]	
+	#print >> sys.stderr,  getEarliestHit( workerCountDict[" A3HBWVAVKRASDF"])	
+
+	for curWorkerID, workerHITList in workerCountDict.iteritems():
 		dedupedTaskList.append( getEarliestHit (workerHITList) )
 
 for HIT in dedupedTaskList:
