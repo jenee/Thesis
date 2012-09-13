@@ -55,7 +55,7 @@ def getEarliestHit( workerHitList ):
 	earliestDate = firstHit[submitDateIndex]#time.time() #Today
 	
 	for HIT in workerHitList:
-		if earliestDate > HIT[submitDateIndex]:
+		if int(earliestDate) > int(HIT[submitDateIndex]):
 			firstHit = HIT
 			earliestDate = firstHit[submitDateIndex] 
 		
