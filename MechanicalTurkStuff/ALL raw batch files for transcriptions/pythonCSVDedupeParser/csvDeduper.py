@@ -11,6 +11,8 @@ statusIndex = 16		#AssignmentStatus, column Q
 answerIndex = 28 		#Answer.answer, column AC
 countryIndex = 29 		#Answer.country, column AD
 
+def debugPrint(item):
+   print >> sys.stderr, str(item)
 
 def buildUniqueURLlist():
 	uniqueURLlist = []
@@ -52,17 +54,21 @@ def getEarliestHit( workerHitList ):
 	firstHit=workerHitList[0]
 	earliestDate = firstHit[submitDateIndex]#time.time() #Today
 	
-	
 	for HIT in workerHitList:
 		if earliestDate > HIT[submitDateIndex]:
 			firstHit = HIT
 			earliestDate = firstHit[submitDateIndex] 
-			
-		
 		
 	return firstHit
 
+def printCSVRow(rowList):
+   #method described here: http://en.kioskea.net/faq/2091-python-read-and-write-csv-files#writing-a-csv-file
+   #c = csv.writer(open("MYFILE.csv", "wb"))
+   #c.writerow(
+   print rowList
 
+
+# BEGIN MAIN PROGRAM
 
 if len(sys.argv) < 2:
    sys.stderr.write('Usage: sys.argv[0] ')
@@ -72,17 +78,19 @@ filename = sys.argv[1]
 
 # got this from here: http://stackoverflow.com/questions/1532810/how-to-read-lines-from-a-file-into-a-multidimensional-array-or-an-array-of-list
 origHitList = list( csv.reader( open( filename, "rU") ) )
-
+#debugPrint(origHitList[0])
 dedupedTaskList = []
 
 uniqueURLlist = buildUniqueURLlist()
+#debugPrint(uniqueURLlist)
 
 
 
 for urlString in uniqueURLlist:
 
 	urlTaskList = allTasksWithURL(origHitList, urlString)
-	#set default hash entry to a blank list 
+	#debugPrint(urlTaskList)
+   #set default hash entry to a blank list 
 	workerCountDict = defaultdict(list)
 
 	for HIT in urlTaskList:
@@ -94,8 +102,11 @@ for urlString in uniqueURLlist:
 	for curWorkerID, workerHITList in workerCountDict.iteritems():
 		dedupedTaskList.append( getEarliestHit (workerHITList) )
 
+#print Header
+printCSVRow(origHitList[0])
+
 for HIT in dedupedTaskList:
 	if( HIT[statusIndex] != "Rejected" and
 		HIT[answerIndex].strip() != "" and
 		HIT[countryIndex].strip() != "" ): 
-		print HIT
+		print printCSVRow(HIT)
