@@ -12,7 +12,8 @@ answerIndex = 28 		#Answer.answer, column AC
 countryIndex = 29 		#Answer.country, column AD
 
 def debugPrint(item):
-   print >> sys.stderr, str(item)
+   dummyVar = "" 
+   #print >> sys.stderr, str(item)
 
 def buildUniqueURLlist():
 	uniqueURLlist = []
@@ -62,9 +63,6 @@ def getEarliestHit( workerHitList ):
 	return firstHit
 
 def printCSVRow(rowList):
-   #method described here: http://en.kioskea.net/faq/2091-python-read-and-write-csv-files#writing-a-csv-file
-   #c = csv.writer(open("MYFILE.csv", "wb"))
-   #c.writerow(
    rowStr = ""
    for item in rowList:
       rowStr +=  item 
@@ -113,4 +111,5 @@ for HIT in dedupedTaskList:
 	if( HIT[statusIndex] != "Rejected" and
 		HIT[answerIndex].strip() != "" and
 		HIT[countryIndex].strip() != "" ): 
-		print printCSVRow(HIT)
+		dummyVarTwo = ""
+		printCSVRow(HIT)
