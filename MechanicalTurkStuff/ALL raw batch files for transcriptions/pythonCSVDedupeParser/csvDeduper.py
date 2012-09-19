@@ -65,7 +65,11 @@ def printCSVRow(rowList):
    #method described here: http://en.kioskea.net/faq/2091-python-read-and-write-csv-files#writing-a-csv-file
    #c = csv.writer(open("MYFILE.csv", "wb"))
    #c.writerow(
-   print rowList
+   rowStr = ""
+   for item in rowList:
+      rowStr +=  item 
+      rowStr += ", "
+   print rowStr
 
 
 # BEGIN MAIN PROGRAM
