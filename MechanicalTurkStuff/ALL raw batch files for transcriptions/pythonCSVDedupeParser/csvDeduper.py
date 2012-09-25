@@ -10,6 +10,7 @@ submitDateIndex = 18 	#submitTime column S
 statusIndex = 16		#AssignmentStatus, column Q
 answerIndex = 28 		#Answer.answer, column AC
 countryIndex = 29 		#Answer.country, column AD
+markDuplicateIndex = 31  # NEW COLUMN, column AG, 
 
 def debugPrint(item):
    dummyVar = "" 
@@ -70,6 +71,13 @@ def printCSVRow(rowList):
    print rowStr
 
 
+def markDuplicateHITs(workerHitList):
+   global markDuplicateIndex
+   for HIT in workerHitList:
+      HIT[markDuplicateIndex] = "DUPLICATE"
+   return workerHitList
+   #return getEarliestHit(PP workerHitList )
+
 # BEGIN MAIN PROGRAM
 
 if len(sys.argv) < 2:
@@ -102,7 +110,16 @@ for urlString in uniqueURLlist:
 	#print >> sys.stderr,  getEarliestHit( workerCountDict[" A3HBWVAVKRASDF"])	
 
 	for curWorkerID, workerHITList in workerCountDict.iteritems():
-		dedupedTaskList.append( getEarliestHit (workerHITList) )
+		####APPROACH 1: Mark duplicates for manual review
+		if len(workerHITList) > 1:
+			#mark duplicates
+			markDuplicateHITs( workerHITList )
+		#add all HITs to the new csv
+		dedupedTaskList.extend( workerHITList)
+
+		#### APPROACH 2: auto-delete newer duplicates
+		#The line below appends only the earliest Hit to the new csv 
+		#dedupedTaskList.append( getEarliestHit (workerHITList) )
 
 #print Header
 printCSVRow(origHitList[0])
