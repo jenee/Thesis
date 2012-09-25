@@ -111,15 +111,15 @@ for urlString in uniqueURLlist:
 
 	for curWorkerID, workerHITList in workerCountDict.iteritems():
 		####APPROACH 1: Mark duplicates for manual review
-		if len(workerHITList) > 1:
-			#mark duplicates
-			markDuplicateHITs( workerHITList )
-		#add all HITs to the new csv
-		dedupedTaskList.extend( workerHITList)
+		#if len(workerHITList) > 1:
+			##mark duplicates
+			#markDuplicateHITs( workerHITList )
+		##add all HITs to the new csv
+		#dedupedTaskList.extend( workerHITList)
 
 		#### APPROACH 2: auto-delete newer duplicates
 		#The line below appends only the earliest Hit to the new csv 
-		#dedupedTaskList.append( getEarliestHit (workerHITList) )
+		dedupedTaskList.append( getEarliestHit (workerHITList) )
 
 #print Header
 printCSVRow(origHitList[0])
