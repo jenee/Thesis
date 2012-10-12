@@ -127,7 +127,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>1834,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="138" Type="Text" Created="2012-06-04 23:49:47 -0700" Modified="2012-06-04 23:53:39 -0700">
@@ -1626,7 +1626,7 @@
         </BinderItem>
     </Binder>
     <Collections>
-        <Collection Type="Binder" ID="86D3F2A7-C081-417D-9C1E-F659661B9759" Color="0.782988 0.815995 0.850718">
+        <Collection Type="Binder" ID="86D3F2A7-C081-417D-9C1E-F659661B9759" Color="0.781821 0.815851 0.850501">
             <Title>Binder</Title>
         </Collection>
         <Collection Type="RecentSearch" ID="5C131A55-FED7-415D-A243-36EC1E62F7B1" Color="0.922 0.91 0.98">
@@ -1658,7 +1658,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="848" Characters="5535" Date="2012-08-17 23:59:36 -0700"></PreviousSession>
+        <PreviousSession Words="0" Characters="0" Date="2012-09-26 10:38:48 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

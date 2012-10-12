@@ -3519,6 +3519,11 @@ o	Take a breath in between.
 
 </Text>
         </Document>
+        <Document ID="20">
+            <Title>Abstract (System purpose and tasks to be performed...</Title>
+            <Text>Abstract (System purpose and tasks to be performed):
+This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases. The program will ultimately rely upon user input for "fitness" criteria, but will initially match lyrics with melodies based upon some rules.</Text>
+        </Document>
         <Document ID="16">
             <Title>delimited_ALL Documentation as of 2012-05-07-4</Title>
             <Text>#
@@ -3765,11 +3770,6 @@ return sum;
 
                noth-ing but mam-mals
        1 – 0 – 1 – 1 – 0</Text>
-        </Document>
-        <Document ID="20">
-            <Title>Abstract (System purpose and tasks to be performed...</Title>
-            <Text>Abstract (System purpose and tasks to be performed):
-This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases. The program will ultimately rely upon user input for "fitness" criteria, but will initially match lyrics with melodies based upon some rules.</Text>
         </Document>
         <Document ID="99">
             <Title>Fickle Phones in the Coda</Title>
@@ -6771,6 +6771,23 @@ Make the note for the first plosive’s syllable longer, and put a small rest in
 put a small rest in between
 Take a breath in between.</Text>
         </Document>
+        <Document ID="144">
+            <Title>NEW abstract</Title>
+            <Text>In the field of speech recognition, an algorithm must learn to tell the difference between "a nice rock" or "a gneiss rock". These identical-sounding phrases are called oronyms. Word frequency dictionaries are often used by speech recognition systems to help resolve phonetic sequences with more than one possible orthographic phrase, by looking up which oronym of the root phonetic sequence contains the most common words. However, this approach is highly dependent upon the correctness of the frequency values in the word frequency dictionary. 
+
+Our paper demonstrates a technique used to validate word frequency dictionary values. We use oronym trees to compare phrase frequency values from dictionaries, to the frequency with which our human test subjects heard different variations of the root phrase.
+
+Given any valid English phrase, herein referred to as the root phrase, our system will first generate all possible correct phonetic sequences for a General American accent. Then, it parses through these phonetic transcriptions depth-first, looking for valid orthographic words for each subsequent phonetic subsequence, generating full and partial phrases from these words.  In the event that the entire phonetic sequence branch can be parsed into a valid orthographic phrase, we save this orthographic phrase as an oronym of the root phrase.
+
+We also developed a visual representation of the oronym trees, to allow for visualizing phonetic dead-ends.  In the event that a branch's phonetic ``tail" is not orthographically interpretable, we visually ``dead-end" the branch by drawing a red sphere. A particularly strong orthographic partial phrase before a phonetic dead-end can mislead a listener, causing them to lose track of the words in the rest of the phrase.   In the event that the entire phonetic sequence can be parsed into a valid orthographic phrase, we indicate this successfully-found oronym with a green sphere.  
+
+Using the oronyms generated from our oronym tree, we then conducted a user study. Our multi-phase user study, incorporating over \numResponsesPhaseTwoUserStudydata points from \uniqueUsersPhaseTwoUserStudy test subjects.  In it, we tested the validity of our oronym generation by having participants record themselves reading an oronym phrase. Then, a second set of subjects transcribed the recordings.  
+
+In the first phase, we generated oronym strings for the phrase \emph{``a nice cold hour''},  and had over \uniqueUsersPhaseOneUserStudy people make\numResponsesPhaseOneUserStudy recordings of the most common oronyms for that phrase. We then compared their pronunciations to the pronunciations we were expecting, and found that in all cases, the recorded phrase's phonemics matched our expectations.  In the second phase, we selected \recordingsPhaseTwoUserStudyof the phase one recordings, and had \numTranscriptionsPerRecordingPhaseTwoUserStudy different people transcribe each one.  
+
+If the frequency dictionary's frequency values were correct for the phrase words, we would expect that the most commonly transcribed phrases in our user study would roughly correspond with our metric for the most likely oronym interpretation of the root phrase. In the cases where this did not happen, we could conclude that the frequency dictionary was in error for that phrase. However, we found a signicant difference between the expected and actual occurances of transcription. From this, we can conclude that the frequency dictionary that we used is flawed.
+</Text>
+        </Document>
         <Document ID="33">
             <Title>Psuedocode: (where this is a phone)</Title>
             <Text>Psuedocode: (where this is a phone)
@@ -7206,6 +7223,9 @@ Just like the weight of phones cannot be fully quantified in isolation, syllable
 If a syllable’s last phone is the same as the next syllable’s first phone, then it you can disregard the weight of one of them.  Singers often only sing one of them, and use it for both words. For example:  Bake cookies becomes : bay-cookies  Stars shining becomes : star-shining.  Yelp peppers becomes: yell-peppers.  
 There are several other rules, which I’ve put in the algorithm/formula, but haven’t written out yet. That’s on the menu for the Week 10 update.</Text>
         </Document>
+        <Document ID="145">
+            <Title>Untitled</Title>
+        </Document>
         <Document ID="35">
             <Title>Structure of a Syllable</Title>
             <Text>Structure of a Syllable
@@ -7589,6 +7609,9 @@ Turns out, syllables are horrible ways of measuring duration.  They are, however
 	(slot weight ) ;;CALCULATE_ELSEWHERE
 )</Text>
         </Document>
+        <Document ID="146">
+            <Title>Untitled</Title>
+        </Document>
         <Document ID="40">
             <Title>Fickle Phones in the Coda</Title>
             <Text>Fickle Phones in the Coda
@@ -7597,6 +7620,9 @@ Phones That Stay In Coda:
 “m” in “sam-ba”
 Phones That Move to Next Syllable’s Onset:
 “d” in “un-a-void-a-ble”</Text>
+        </Document>
+        <Document ID="150">
+            <Title>Mechanical Turk Oronym Testing</Title>
         </Document>
         <Document ID="37">
             <Title>System Design:</Title>
@@ -7741,6 +7767,23 @@ There are several other rules, which I’ve put in the algorithm/formula, but ha
 
 As per my original schedule for completion, I do not yet have a program prototype.  I felt it was more important to get the data format nailed down, because it’s the majority of the problem.  Also important at this point was finding a usable dictionary, separated by syllables and pronunciation.</Text>
         </Document>
+        <Document ID="147">
+            <Title>Graphs</Title>
+        </Document>
+        <Document ID="151">
+            <Title>A nice coal dower</Title>
+            <Text>A nice coal dower
+
+!Discovered 6 phoneseqs:
+---"e"naIs"koul"daU`r
+---@"naIs"koul"daU`r
+---"A"naIs"koul"daU`r
+---"e"nis"koul"daU`r
+---@"nis"koul"daU`r
+---"A"nis"koul"daU`r
+
+</Text>
+        </Document>
         <Document ID="39">
             <Title>Data Format</Title>
             <Text>Data Format
@@ -7812,8 +7855,38 @@ Though syllable weight is a generally infinite relative scale, there are three m
 3.	one or more coda.
 This means that the two main things we need to look at when determining syllable weight and length are vowel type in the nucleus, and coda complexity.</Text>
         </Document>
-        <Document ID="3">
-            <Title>Untitled</Title>
+        <Document ID="148">
+            <Title>Bubble chart explanations</Title>
+            <Text>Bubble chart explanations
+
+The results of phase two of the user study are depicted by bubble charts in Figures (x) through (y).
+There is one chart per recording, and one bubble for every significant transcription of that recording*
+
+ The x axis shows the expected frequency of transcription for each phrase. 
+ This is measured by a simple summation of all the frequency dictionary values for each word in the phrase.
+ 
+ The y axis shows the total number of times that each phrase was transcribed over all recordings.
+ 
+ The size of the bubble indicated how many times each phrase was transcribed for the particular recording that the chart represents.
+ 
+ *A significant transcription is defined as one that is an exact match of the recording's script, or 
+  that which was transcribed more than once. This excludes one-off transcriptions. By discarding most one-off transcriptions, we
+  are ignoring 46, or 6.07%, of our recorded transcriptions, which we judged to be an acceptable loss.
+   
+
+The results of phase two of the user study are depicted by bubble charts in Figures (x) through (y).
+There is one chart per recording, and one bubble for every significant transcription of that recording*
+
+ The x axis shows the expected frequency of transcription for each phrase, which is computed by a simple summation of all the frequency dictionary values for each word in the phrase.
+ 
+ The y axis shows the total number of times that each phrase was transcribed over all recordings.
+ 
+ The size of the bubble indicated how many times each phrase was transcribed for the particular recording that the chart represents.
+ 
+ *A significant transcription is defined as one that is an exact match of the recording's script, or 
+  any transcription which accounted for more than 1% of total transcriptions.  
+  This excludes any transcription that was transcribed less than five times. By discarding uncommon transcriptions, we removed 49 extraneous data points, or 13.67% of our recorded transcriptions, which we judged to be an acceptable loss.
+   </Text>
         </Document>
         <Document ID="44">
             <Title>UGLY_The Basic Structure of a Syllable</Title>
@@ -7827,6 +7900,9 @@ Part        Ortho	    SAMPA
 Onset: 	c		k
 Nucleus:	a		{
 Coda:		t		 t</Text>
+        </Document>
+        <Document ID="3">
+            <Title>Untitled</Title>
         </Document>
         <Document ID="4">
             <Title>ALL Documentation as of 2012-05-07</Title>
@@ -10490,6 +10566,165 @@ BIBLIOGRAPHY:
  
 [iv] INCLUDE THE PARTS OF SPEECH TABLE!</Text>
         </Document>
+        <Document ID="152">
+            <Title>An ice cold hour</Title>
+            <Text>An ice cold hour
+
+ 152 oronyms:
+
+'n' ay scold hour 
+'n' ay scold our 
+'n' ay skol dour 
+'n' ay skol dower 
+'n' aye scold hour 
+'n' aye scold our 
+'n' aye skol dour 
+'n' aye skol dower 
+'n' eye scold hour 
+'n' eye scold our 
+'n' eye skol dour 
+'n' eye skol dower 
+'n' i scold hour 
+'n' i scold our 
+'n' i skol dour 
+'n' i skol dower 
+'n' ice coal dour 
+'n' ice coal dower 
+'n' ice cold hour 
+'n' ice cold our 
+'n' ice cole dour 
+'n' ice cole dower 
+'n' ice kohl dour 
+'n' ice kohl dower 
+'n' ice-cold hour 
+'n' ice-cold our 
+a gneiss coal dour 
+a gneiss coal dower 
+a gneiss cold hour 
+a gneiss cold our 
+a gneiss cole dour 
+a gneiss cole dower 
+a gneiss kohl dour 
+a gneiss kohl dower 
+a nice coal dour 
+a nice coal dower 
+a nice cold hour 
+a nice cold our 
+a nice cole dour 
+a nice cole dower 
+a nice kohl dour 
+a nice kohl dower 
+a nigh scold hour 
+a nigh scold our 
+a nigh skol dour 
+a nigh skol dower 
+a nye scold hour 
+a nye scold our 
+a nye skol dour 
+a nye skol dower 
+an ay scold hour 
+an ay scold our 
+an ay skol dour 
+an ay skol dower 
+an aye scold hour 
+an aye scold our 
+an aye skol dour 
+an aye skol dower 
+an eye scold hour 
+an eye scold our 
+an eye skol dour 
+an eye skol dower 
+an i scold hour 
+an i scold our 
+an i skol dour 
+an i skol dower 
+an ice coal dour 
+an ice coal dower 
+an ice cold hour 
+an ice cold our 
+an ice cole dour 
+an ice cole dower 
+an ice kohl dour 
+an ice kohl dower 
+an ice-cold hour 
+an ice-cold our 
+ann ay scold hour 
+ann ay scold our 
+ann ay skol dour 
+ann ay skol dower 
+ann aye scold hour 
+ann aye scold our 
+ann aye skol dour 
+ann aye skol dower 
+ann eye scold hour 
+ann eye scold our 
+ann eye skol dour 
+ann eye skol dower 
+ann i scold hour 
+ann i scold our 
+ann i skol dour 
+ann i skol dower 
+ann ice coal dour 
+ann ice coal dower 
+ann ice cold hour 
+ann ice cold our 
+ann ice cole dour 
+ann ice cole dower 
+ann ice kohl dour 
+ann ice kohl dower 
+ann ice-cold hour 
+ann ice-cold our 
+anne ay scold hour 
+anne ay scold our 
+anne ay skol dour 
+anne ay skol dower 
+anne aye scold hour 
+anne aye scold our 
+anne aye skol dour 
+anne aye skol dower 
+anne eye scold hour 
+anne eye scold our 
+anne eye skol dour 
+anne eye skol dower 
+anne i scold hour 
+anne i scold our 
+anne i skol dour 
+anne i skol dower 
+anne ice coal dour 
+anne ice coal dower 
+anne ice cold hour 
+anne ice cold our 
+anne ice cole dour 
+anne ice cole dower 
+anne ice kohl dour 
+anne ice kohl dower 
+anne ice-cold hour 
+anne ice-cold our 
+o' gneiss coal dour 
+o' gneiss coal dower 
+o' gneiss cold hour 
+o' gneiss cold our 
+o' gneiss cole dour 
+o' gneiss cole dower 
+o' gneiss kohl dour 
+o' gneiss kohl dower 
+o' nice coal dour 
+o' nice coal dower 
+o' nice cold hour 
+o' nice cold our 
+o' nice cole dour 
+o' nice cole dower 
+o' nice kohl dour 
+o' nice kohl dower 
+o' nigh scold hour 
+o' nigh scold our 
+o' nigh skol dour 
+o' nigh skol dower 
+o' nye scold hour 
+o' nye scold our 
+o' nye skol dour 
+o' nye skol dower </Text>
+        </Document>
         <Document ID="5">
             <Title>Melody Matcher </Title>
             <Text>Melody Matcher 
@@ -12182,6 +12417,9 @@ long (o)
 1
 a</Text>
         </Document>
+        <Document ID="149">
+            <Title>Untitled</Title>
+        </Document>
         <Document ID="46">
             <Title>SCRATCHVowel Types_bland</Title>
             <Text>Vowel Types
@@ -12923,6 +13161,24 @@ transfer:2:VB/VBP: tr{ns"f3`r :{trans==fer}:7184
 My next step, to get these into the format that I need for my program , was to split up the fields into sub-fields to make them into a .csv (but using tabs as the field delimeter). I decided to do that like this (I'm using | as the field delimeter here, because it looks better, even though I'm using tabs for parsing)
 
 &lt;ortho> | : | &lt;uniqID</Text>
+        </Document>
+        <Document ID="153">
+            <Title>Selection criteria for oronyms to record</Title>
+            <Text>Selection criteria for oronyms to record and recordings to transcribe
+
+Given that “a nice cold hour” has (#) oronyms, and “an ice cold hour has (#), it was necessary to narrow down the number of oronyms that we used for our user study.  
+
+To select which oronyms we would submit to MT to record, we decided to on the following selection criteria:
+-We discarded oronyms that included words with frequency values of less than 30.  Asking a general audience to pronouce uncommon words would likely result in a high rate of unusable recordings. Including uncommon words wouldn’t be testing our algorithm—it would be testing the vocabulary of the user study subjects, which we’re uninterested in.
+-We discarded upper-case pronunciations in the case of oronyms with words whose pronunciation changes depending upon their capitalization (for example, “nice” == naIs; “Nice” == nis (as in niece) ),   
+-We discarded oronym phrases that included implicit punctuation. For example, the phrase “Anne I scold our”, has an implicit comma between Anne and I.  We did this to avoid halting or “dramatic” recording of phrases.
+-We discarded oronyms with any words whose pronunciation is position specific, such as “ ’n’ “, normally found in “Rock ’n’ Roll”;  or   “ o’ ” , normally found in “top o’ the morning”.
+-We only chose oronyms for which all pronunciations of the child oronym phrases were also found in the pronunciations of the root oronym phrase. For example, a root phrase that begins with “a” would have an child oronym phrase that begins with “et”, using French pronunciation and dropping the trailing ’t’ . However, “et” can also be pronounced with the t, using an American accent. Since our root phrase doesn’t include that ’t’ sound, child oronym phrases that begin with “et” have at least one pronunciation not match the root phrase’s pronunciation.  So, we discard all child oronyms that begin with “et”.
+
+Criteria for transcription recordings
+
+-To limit the number of possible oronyms, we decided that all recordings should be oronyms of BOTH “an ice cold hour” and “a nice cold hour”
+-The pronunciation of the recording must match the expected pronunciation derived from the phonetic dictionary.</Text>
         </Document>
         <Document ID="8">
             <Title>> | &lt;uniqIDString> | : | &lt;partOfSpeech> | : | &lt;ext...</Title>
