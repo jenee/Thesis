@@ -13617,6 +13617,60 @@ Meaning:                    No Emphasis &lt; Secondary Emphasis &lt; Primary Emp
 Example:                   Straw-be-rry   1 – 2 – 0 
 The fact that the emphasis scale for the symbols goes 0, 2, 1 is a little counter-intuitive, but it works better for most cases to pretend that 2 doesn't exist. Secondary emphases are pretty rare in English, so most of the time, we'll only need to use 1's and 0's in our Lyric BRS's.</Text>
         </Document>
+        <Document ID="154">
+            <Title>Statistical measurment of expected versus actual frequency</Title>
+            <Text>
+Statistical comparison of expected phrase frequency metric versus transcription oftenness}
+
+
+\gdef \phrase1 {``a nice cold hour’’ }
+\gdef \unisynFreqForPhrase1 {7851662 }
+\gdef \USATranscriptionsOfPhrase1 {125 } 
+
+\gdef \phrase2 {``an ice cold hour’’ }
+\gdef \unisynFreqForPhrase2 {931028 }
+\gdef \USATranscriptionsOfPhrase2 {191 } 
+
+\gdef \unisynCombinedFreq {8782690 }  %combined freq of phrases 1 and 2
+\gdef \USACombinedTranscriptions {316 } %combined transcription count of phrases 1 and 2
+
+\gdef \alphaSigFigs {0.01 } 
+\gdef \pvalue {0.8940 }
+
+
+Statistical measurement of expected versus actual phrase frequency
+
+
+Givens for Phrase (1) (\phrase1) :
+Calculated metric: \unisynFreqForPhrase1
+Actual count: x = \USATranscriptionsOfPhrase1
+
+
+Givens for Phrase (2) (\phrase2) :
+Calculated metric: \unisynFreqForPhrase2
+Actual count: x = \USATranscriptionsOfPhrase2
+
+\alpha = significance Level = \alphaSigFigs
+
+Calculated sum: \unisynFreqForPhrase1 + \unisynFreqForPhrase2 =  \unisynCombinedFreq
+Actual sum: \USATranscriptionsOfPhrase1 + \USATranscriptionsOfPhrase2 = \USACombinedTranscriptions
+
+p = population proportion of \phrase1 occurrences
+p = \unisynFreqForPhrase1   \div  \unisynCombinedFreq  = \pvalue 
+
+H_{o} :  p = \pvalue 
+H_{a} :  p \neq \pvalue 
+
+Actual: 
+\USATranscriptionsOfPhrase1  \div \USACombinedTranscriptions  = 
+
+1-proportion z-test
+If pvalue &lt; \alpha, reject H_{o}
+
+p \approx 0 &lt; \alphaSigFigs
+
+So, reject H_{o}</Text>
+        </Document>
         <Document ID="111">
             <Title>Future Work</Title>
         </Document>

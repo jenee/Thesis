@@ -1,0 +1,12 @@
+COCA Frequencies
+word  freq  #texts
+A  9247774  168619
+nice 44905  24781
+cold 44480  23031
+hour 55464  31288
+
+an 1365998  159720
+ice   33196 13366
+
+a nice cold hour = 247719
+an ice cold hour = 227405

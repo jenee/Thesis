@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red30\green87\blue172;}
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \
+Statistical comparison of expected phrase frequency metric versus transcription oftenness\cf2 \}\
+\
+\cf0 \
+\pard\pardeftab720
+\cf2 \\gdef \\phrase1 \{``a nice cold hour\'92\'92 \}\cf0 \
+\cf2 \\gdef \\unisynFreqForPhrase1 \{\cf0 7851662 \cf2 \}\
+\\gdef \\USATranscriptionsOfPhrase1 \{\cf0 125 \cf2 \} \cf0 \
+\
+\cf2 \\gdef \\phrase2 \{``an ice cold hour\'92\'92 \}\cf0 \
+\cf2 \\gdef \\unisynFreqForPhrase2 \{\cf0 931028 \cf2 \}\
+\\gdef \\USATranscriptionsOfPhrase2 \{\cf0 191 \cf2 \} \cf0 \
+\
+\cf2 \\gdef \\unisynCombinedFreq \{\cf0 8782690 \cf2 \}  %combined freq of phrases 1 and 2\cf0 \
+\cf2 \\gdef \\USACombinedTranscriptions \{\cf0 316 \cf2 \} %combined transcription count of phrases 1 and 2\cf0 \
+\
+\\gdef \\alphaSigFigs \{0.01 \} \
+\\gdef \\pvalue \{0.8940 \}\
+\
+\
+Statistical measurement of expected versus actual phrase frequency\
+\
+\
+Givens for Phrase (1) (\cf2 \\phrase1\cf0 ) :\
+Calculated metric: \cf2 \\unisynFreqForPhrase1\cf0 \
+Actual count: x = \cf2 \\USATranscriptionsOfPhrase1\
+\
+\pard\pardeftab720
+\cf0 \
+Givens for Phrase (2) (\cf2 \\phrase2\cf0 ) :\
+Calculated metric: \cf2 \\unisynFreqForPhrase2\cf0 \
+Actual count: x = \cf2 \\USATranscriptionsOfPhrase2\
+\
+\cf0 \\alpha = significance Level = \\alphaSigFigs\
+\
+Calculated sum: \cf2 \\unisynFreqForPhrase1 + \\unisynFreqForPhrase2 =  \\unisynCombinedFreq\cf0 \
+Actual sum: \cf2 \\USATranscriptionsOfPhrase1 + \\USATranscriptionsOfPhrase2 = \\USACombinedTranscriptions\cf0 \
+\
+p = population proportion of \\phrase1 occurrences\
+p = \cf2 \\unisynFreqForPhrase1   \\div  \\unisynCombinedFreq  = \cf0 \\pvalue \
+\
+H_\{o\} :  p = \\pvalue \
+H_\{a\} :  p \\neq \\pvalue \
+\
+Actual: \
+\pard\pardeftab720
+\cf2 \\USATranscriptionsOfPhrase1  \\div \\USACombinedTranscriptions  = \
+\
+1-proportion z-test\
+If pvalue < \\alpha, reject H_\{o\}\
+\
+p \\approx 0 < \cf0 \\alphaSigFigs\
+\
+So, reject H_\{o\}}

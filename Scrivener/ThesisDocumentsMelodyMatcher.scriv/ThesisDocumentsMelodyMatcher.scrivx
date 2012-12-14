@@ -827,6 +827,16 @@
                                 </BinderItem>
                             </Children>
                         </BinderItem>
+                        <BinderItem ID="154" Type="Text" Created="2012-12-04 21:37:21 -0800" Modified="2012-12-04 22:04:29 -0800">
+                            <Title>Statistical measurment of expected versus actual frequency</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>171,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
                     </Children>
                 </BinderItem>
                 <BinderItem ID="112" Type="Folder" Created="2012-05-09 11:54:59 -0700" Modified="2012-05-09 11:55:02 -0700">
@@ -1658,7 +1668,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2012-09-26 10:38:48 -0700"></PreviousSession>
+        <PreviousSession Words="0" Characters="0" Date="2012-12-04 21:37:02 -0800"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
