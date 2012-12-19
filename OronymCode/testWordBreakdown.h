@@ -1,6 +1,8 @@
 #ifndef TEST_WORD_BREAKDOWN_H
 #define TEST_WORD_BREAKDOWN_H
 
+#include<stdlib.h> //for atoi in runAllDefaultTests
+
 #include "wordBreakdown.h"
 #include "2dStackedBarTreeViz.h"
 
@@ -44,6 +46,9 @@ void test_DrawRect( int width, int height );
 void test_DrawStackedBar();
 void test_DrawStackedBar( std::string rootPhrase );
 void test_DrawStackedBar( std::vector<std::string> phrases );
+bool test_getAllFirstWords();
+bool test_getAllFirstWords( std::string rootPhrase );
+bool test_getAllFirstWords( std::vector<std::string> phrases );
 
 std::vector<std::string> buildVectorOfStrings();
 void oldMain();

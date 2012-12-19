@@ -287,7 +287,7 @@ void drawBranchesAtFork( vector< string > fullPhrases, double lastRadius, double
             drawBranch( radiansToDegrees( tiltAngle ), curXOffset, curYOffset, newAdditiveRadius, lastRadius );
          
             //find all phrases in fullPhrases that start with that firstWord
-            vector<string> tailsVect = getAllPhrasesWithPrefix( curFirstWord, fullPhrases);
+            vector<string> tailsVect = getAllOrthoTailPhrasesOf( curFirstWord, fullPhrases);
             
             //DEBUG WITH COLORSSS for each branch level
             materials(allMaterials.at( ++mat % allMaterials.size () ) );

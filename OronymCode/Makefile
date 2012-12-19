@@ -1,27 +1,23 @@
 CC    = g++
 CFLAGS   = -lsqlite3  -pedantic
 
-all: cleantree cleanTest treeGUI testStackedBar testWordBreakdown
+all: cleantree cleanTest treeGUI testWordBreakdown
   
 treeGUI:  wordBreakdown.* ../LTreeLighting/*.h ../LTreeLighting/*.cpp
 	echo "--------------------------COMPILE treeGUI----------------------------"
 	$(CC) $(CFLAGS) -framework GLUT -framework OpenGL  -g -o $@ $^
  
-test: cleanTest testWordBreakdown testStackedBar
+test:  testWordBreakdown 
 
 testWordBreakdown: wordBreakdown.cpp testWordBreakdown.cpp 2dStackedBarTreeViz.cpp
 	echo "----------------------COMPILE testWordBreakdown----------------------"
 	$(CC) $(CFLAGS) -g -o testWordBreakdown $^
-	
-testStackedBar: testWordBreakdown 
-	echo "----------------------COMPILE testWordBreakdown----------------------"
-	$(CC) $(CFLAGS) -g -o testStackedBar $^
 
 runTest: test 
 	echo "......................RUN testWordBreakdown......................"
 	./testWordBreakdown all
 
-warnings: wordBreakdown.cpp wordBreakdown.h testWordBreakdown.cpp testWordBreakdown.h 
+warnings: wordBreakdown.cpp testWordBreakdown.cpp 2dStackedBarTreeViz.cpp
 	echo "------------COMPILE testWordBreakdown with ALL warnings----------------"
 	$(CC) $(CFLAGS) -Wall -g -o testWordBreakdown $^
 
@@ -40,6 +36,6 @@ cleantree:
 	echo "--------------------------------CLEANTREE----------------------------"
 	rm -rf treeGUI
 
-clean: 
+clean: cleanTest cleantree
 	echo "-----------------------------------CLEAN----------------------------"
 	rm -rf wordBreakdown a.out *.dSYM testWordBreakdown treeGUI

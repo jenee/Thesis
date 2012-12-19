@@ -11,6 +11,10 @@ int heightConst = 1;
 //Need a library that allows me to draw a rectangle on an x/y coordinate grid
 
 
+int getValueForWord( string word ) {
+   return queryDBwithOrthoForFreq( word );
+}
+
 void generateStackedBarGraphOronymTree( vector <string> phrases ) {
    int fullWidth = 80;
    x=0; //top left
@@ -22,17 +26,17 @@ void generateStackedBarGraphOronymTree( vector <string> phrases ) {
 void drawStackedBar( int width, vector <string> tailPhrases) {
    translateYBy(heightConst);
    int sum = 0;
-   vector<string> firstWords = getFirstWords(tailPhrases); //function defined elsewhere 
+   vector<string> firstWords = getAllFirstWords(tailPhrases); //function defined elsewhere 
    for (int i = 0; i < firstWords.size(); i++) {
-      int freqTemp = getFreqForOrtho( firstWords[i] ); //function defined elsewhere 
+      int freqTemp = getValueForWord( firstWords[i] ); //function defined elsewhere 
       sum += freqTemp;
    }
    for (int i = 0; i < firstWords.size(); i++) {
-      int freqTemp = getFreqForOrtho( firstWords[i] ); //function defined elsewhere 
+      int freqTemp = getValueForWord( firstWords[i] ); //function defined elsewhere 
       float ratio = freqTemp / sum;
       float scaledWidth = width * ratio;
       int widthDrawn = drawBar(scaledWidth);
-      vector<string> newTails = getTails( firstWords[i], tailPhrases ); //function defined elsewhere 
+      vector<string> newTails = getAllOrthoTailPhrasesOf( firstWords[i], tailPhrases ); //function defined elsewhere 
       drawStackedBar( widthDrawn, newTails );
    }
 
@@ -47,7 +51,7 @@ int drawBar(float width) {
       drawWidth = width;
    }
    drawRectangle(drawWidth, heightConst);
-   translateXBy(Width); //to set up for the next rectangle to be drawn
+   translateXBy(width); //to set up for the next rectangle to be drawn
 }
 
 void translateYBy(int height) {

@@ -344,7 +344,7 @@ void test_DrawStackedBar( vector<string> phrases ) {
 }
 
 void test_DrawStackedBar( string rootPhrase ) {
-   vector<string> phrases = discoverOronymsForPhrase( orthoPhrase );
+   vector<string> phrases = discoverOronymsForPhrase( rootPhrase );
    test_DrawStackedBar(phrases);
 }
 
@@ -364,6 +364,26 @@ void test_DrawRect( int width ) {
 
 void test_DrawRect() {
    test_DrawRect(3);
+}
+
+
+
+bool test_getAllFirstWords() {
+   test_getAllFirstWords("what no incense stinks");
+}
+
+bool test_getAllFirstWords( string rootPhrase ) {
+   vector<string> phrases = discoverOronymsForPhrase( rootPhrase );
+   test_getAllFirstWords(phrases);
+
+}
+
+bool test_getAllFirstWords( vector<string> phrases ) {
+   cerr <<"TEST getAllFirstWords, phrases.size() ="<< phrases.size()<<endl;
+   vector<string> firsts = getAllFirstWords( phrases );
+   for(int i=0; i < firsts.size(); i++) {
+      cout << i<<": "<< firsts[i]<< endl;
+   }
 }
 
 
@@ -1339,10 +1359,18 @@ bool runAllDefaultTests() {
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= test_getCSVofWordFreqsForPhrase();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= test_DrawRect();
+   test_DrawRect();
+   testsPassed &= true;
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= test_DrawStackedBar();
+   test_DrawStackedBar();
+   testsPassed &= true;
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_getAllFirstWords();
  /*
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
@@ -1377,6 +1405,7 @@ void usageMessage() {
    cout << "\n\t\t getCSVofWordFreqsForPhrase";
    cout << "\n\t\t generateStackedBarGraphOronymTree";   
    cout << "\n\t\t drawRectangle";   
+   cout << "\n\t\t getAllFirstWords";   
 
    cout << "\n\t\t help";
    cout << "\n\t\t oldMain\n";
@@ -1433,9 +1462,13 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "getCSVofAllPhraseFreqs") == 0 ) {
          allTestsPassed &= test_getCSVofAllPhraseFreqs();
       } else if( strcmp( argv[1], "generateStackedBarGraphOronymTree") == 0 ) {
-         allTestsPassed &= test_DrawStackedBar();
+         test_DrawStackedBar();
+         allTestsPassed &= true;
       } else if( strcmp( argv[1], "drawRectangle") == 0 ) {
-         allTestsPassed &= test_DrawRect();
+         test_DrawRect();
+         allTestsPassed &= true;
+      } else if( strcmp( argv[1], "getAllFirstWords") == 0 ) {
+         allTestsPassed &= test_getAllFirstWords();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -1483,9 +1516,13 @@ int main(int argc, char* argv[]) {
          cerr << "Error: cannot pass test_getCSVofEachPhrasesWordsFreqs argument from command line"<<endl;
          usageMessage();
       } else if( strcmp( argv[1], "generateStackedBarGraphOronymTree") == 0 ) {
-         allTestsPassed &= test_DrawStackedBar( argv[2] );
+         test_DrawStackedBar( argv[2] );
+         allTestsPassed &= true;
       } else if( strcmp( argv[1], "drawRectangle") == 0 ) {
-         allTestsPassed &= test_DrawRect( argv[2] );
+         test_DrawRect( atoi( argv[2] ) );
+         allTestsPassed &= true;
+      } else if( strcmp( argv[1], "getAllFirstWords") == 0 ) {
+         allTestsPassed &= test_getAllFirstWords( argv[2] );
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

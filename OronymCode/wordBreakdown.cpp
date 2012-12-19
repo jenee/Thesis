@@ -657,8 +657,18 @@ string FirstWord(const string& line) {
    return trimWhitespace( firstWordToken );
 }
 
+vector<string> getAllFirstWords( vector<string> origPhrases ) {
+   vector<string> firstWords;
+   for(int i = 0; i < origPhrases.size(); i++) {
+      string tempFirstWord = FirstWord( origPhrases[i] );
+      if( std::find(firstWords.begin(), firstWords.end(), tempFirstWord) != firstWords.end() ) {
+         firstWords.push_back(tempFirstWord);
+      } 
+   }
+   return firstWords;
+}
 
-vector< string> getAllPhrasesWithPrefix(string prefix, vector<string> fullPhrases) {
+vector< string> getAllOrthoTailPhrasesOf(string prefix, vector<string> fullPhrases) {
    set<string> tailPhrases;
    for (int j = 0; j < fullPhrases.size(); j++) {
       if( prefix == FirstWord( fullPhrases.at(j) ) ) {
