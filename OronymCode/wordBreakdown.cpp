@@ -658,10 +658,14 @@ string FirstWord(const string& line) {
 }
 
 vector<string> getAllFirstWords( vector<string> origPhrases ) {
+   cerr<< "##### getAllFirstWords, origPhrases.size() = " << origPhrases.size() << " ######" << endl;
    vector<string> firstWords;
    for(int i = 0; i < origPhrases.size(); i++) {
       string tempFirstWord = FirstWord( origPhrases[i] );
-      if( std::find(firstWords.begin(), firstWords.end(), tempFirstWord) != firstWords.end() ) {
+      cerr << "#orig phrase "<<i<<": \""<< origPhrases[i] <<"\";" ;
+      cerr << "firstWord = "<< tempFirstWord << endl;
+      if( firstWords.empty() || std::find(firstWords.begin(), firstWords.end(), tempFirstWord) == firstWords.end() ) {
+         cerr << "##FOUND WORD!" << endl;
          firstWords.push_back(tempFirstWord);
       } 
    }
@@ -669,25 +673,27 @@ vector<string> getAllFirstWords( vector<string> origPhrases ) {
 }
 
 vector< string> getAllOrthoTailPhrasesOf(string prefix, vector<string> fullPhrases) {
+   cerr<< "##### getAllOrthoTailPhrasesOf, prefix = " << prefix << " ######" << endl;
    set<string> tailPhrases;
    for (int j = 0; j < fullPhrases.size(); j++) {
+      cerr << "root phrase: "<< fullPhrases[j] << endl;
       if( prefix == FirstWord( fullPhrases.at(j) ) ) {
-         //cerr<<"curFirstWord='"<<prefix<<"';"; 
+         cerr<<"curFirstWord='"<<prefix<<"';"; 
          //remove firstWord from those phrases
          string tempFull = fullPhrases.at(j);
          string tempTail = tempFull.substr( tempFull.find(' ') +1 );
-         //cerr<< "tail = '"<<tempTail<<"'"<<endl;
+         cerr<< "tail = '"<<tempTail<<"'"<<endl;
          tailPhrases.insert( trimWhitespace( tempTail ) );
       }
    }
    //convert set to vector
    vector<string> tailsVect( tailPhrases.begin(), tailPhrases.end() );
-   /*DEBUG
+   ///*DEBUG
    cerr << "for '"<< prefix <<"', we have "<<tailsVect.size()<<" tailPhrases: "<<endl;
    for(int tp = 0;tp < tailsVect.size(); tp++ ) {
       cerr << "~~~"<<tp<<": "<< tailsVect.at(tp) <<endl;
    }
-   *///END DEBUG
+   //*///END DEBUG
    return tailsVect;
 }
 
