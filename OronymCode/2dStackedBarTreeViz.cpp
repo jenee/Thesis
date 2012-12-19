@@ -1,12 +1,9 @@
-2dstacked bar visualization code
-
+// bar visualization code
+//Need a library that allows me to draw a rectangle on an x/y coordinate grid
 
 void generateStackedBarGraphOronymTree( vector <string> phrases ) {
    int fullWidth = 80;
-   
    drawStackedBar( fullWidth, phrases );
-   
-
 } 
 
 
