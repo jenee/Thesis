@@ -32,6 +32,10 @@ Psuedo Code Formula for Determining Syllable “fit”...
             <Title>Syllable length and ease of utterance</Title>
             <Text>The general idea is that some sounds flow better into one sound as opposed to another.</Text>
         </Document>
+        <Document ID="72">
+            <Title>delimited_ALL Documentation as of 2012-05-07-55</Title>
+            <Text>#</Text>
+        </Document>
         <Document ID="68">
             <Title>Using Search to Identify Phone Sequences in Lyrics...</Title>
             <Text>Using Search to Identify Phone Sequences in Lyrics with Multiple Interpretations
@@ -75,9 +79,35 @@ The ideal way to think about searching for patterns is by picturing the phoeneti
 When there are ties for word nodes, you can determine the most likely interpretation by checking the frequency of each word.  For example, the sequence "n aI s" is much more likely to be "nice" than "gneiss".
 So, back to our original oronym: "A nice cold shower/An ice cold shower".  Using the dictionary tree method above, we can break down the phones according to the following diagram:</Text>
         </Document>
-        <Document ID="72">
-            <Title>delimited_ALL Documentation as of 2012-05-07-55</Title>
-            <Text>#</Text>
+        <Document ID="73">
+            <Title>delimited_ALL Documentation as of 2012-05-07-56</Title>
+            <Text>#
+Likelihood of hearing this as a prefix or as complete
+weighted ratio of (sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
+weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
+weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
+ (We'll eventually compute the likelihood of aural interpretation of each subsubphrase and store it in this data structure / use this data structure to see which aural interpretation is most likely). 
+
+
+
+For each phone P in origPhonePhrase:
+Construct a phoneSubPhrase structure.
+set phone S = P
+add phone S to the phoneSubPhrase structure
+set i = 0
+clear list-of-partial-matches
+while (there is a partial or full dictionary match for phoneSubPhrase )
+Add exact word matches and their frequencies to the phoneSubSubPhrase structure for  S
+Add partial/prefix word matches' dictionary entries to list-of-partial-matches
+compute heuristic to determine continuation or not
+i++
+continue
+compare heuristics of each phoneSubSubPhrase  in this phoneSubPhrase, weighting them accordingly.  Determine which is most likely.
+continue;
+For each word in the original lyrics:
+find the phoneSubPhrase  that corresponds to the first phone in the word
+Determine how likely the phone breakdown is to be heard correctly by comparing the heuristics.
+Report findings to user.</Text>
         </Document>
         <Document ID="69">
             <Title>First Option for Algorithm/Approach </Title>
@@ -115,36 +145,6 @@ foreach (Phone p in SequenceToInterpret)
 		else ////SOMEHOW GET THE WORD SEQUENCE….
 	}
 }</Text>
-        </Document>
-        <Document ID="73">
-            <Title>delimited_ALL Documentation as of 2012-05-07-56</Title>
-            <Text>#
-Likelihood of hearing this as a prefix or as complete
-weighted ratio of (sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
-weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
-weighted ratio of ( sum/avg of frequency of  all matches) to ( sum/avg of frequency of  all prefix-ed words)
- (We'll eventually compute the likelihood of aural interpretation of each subsubphrase and store it in this data structure / use this data structure to see which aural interpretation is most likely). 
-
-
-
-For each phone P in origPhonePhrase:
-Construct a phoneSubPhrase structure.
-set phone S = P
-add phone S to the phoneSubPhrase structure
-set i = 0
-clear list-of-partial-matches
-while (there is a partial or full dictionary match for phoneSubPhrase )
-Add exact word matches and their frequencies to the phoneSubSubPhrase structure for  S
-Add partial/prefix word matches' dictionary entries to list-of-partial-matches
-compute heuristic to determine continuation or not
-i++
-continue
-compare heuristics of each phoneSubSubPhrase  in this phoneSubPhrase, weighting them accordingly.  Determine which is most likely.
-continue;
-For each word in the original lyrics:
-find the phoneSubPhrase  that corresponds to the first phone in the word
-Determine how likely the phone breakdown is to be heard correctly by comparing the heuristics.
-Report findings to user.</Text>
         </Document>
         <Document ID="122">
             <Title>http://truben.no/latex/table/</Title>
@@ -602,6 +602,9 @@ STEP 2 (is valid):
         <Document ID="119">
             <Title>New Folder</Title>
         </Document>
+        <Document ID="80">
+            <Title>Untitled</Title>
+        </Document>
         <Document ID="76">
             <Title>Evaluation Plan:  At this time, evaluators should ...</Title>
             <Text>Evaluation Plan:  At this time, evaluators should read through this document, and check out the Excel Spreadsheet with the examples in it.
@@ -772,9 +775,6 @@ return sum;
 
                noth-ing but mam-mals
        1 – 0 – 1 – 1 – 0</Text>
-        </Document>
-        <Document ID="80">
-            <Title>Untitled</Title>
         </Document>
         <Document ID="81">
             <Title>Phonetic Dictionary</Title>
@@ -3519,11 +3519,6 @@ o	Take a breath in between.
 
 </Text>
         </Document>
-        <Document ID="20">
-            <Title>Abstract (System purpose and tasks to be performed...</Title>
-            <Text>Abstract (System purpose and tasks to be performed):
-This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases. The program will ultimately rely upon user input for "fitness" criteria, but will initially match lyrics with melodies based upon some rules.</Text>
-        </Document>
         <Document ID="16">
             <Title>delimited_ALL Documentation as of 2012-05-07-4</Title>
             <Text>#
@@ -3770,6 +3765,11 @@ return sum;
 
                noth-ing but mam-mals
        1 – 0 – 1 – 1 – 0</Text>
+        </Document>
+        <Document ID="20">
+            <Title>Abstract (System purpose and tasks to be performed...</Title>
+            <Text>Abstract (System purpose and tasks to be performed):
+This project aims to facilitate semi-automated composition of melody and accompanying lyrics, by way of matching the musical emphases of a piece with the textual emphases of the lyrical phrases. The program will ultimately rely upon user input for "fitness" criteria, but will initially match lyrics with melodies based upon some rules.</Text>
         </Document>
         <Document ID="99">
             <Title>Fickle Phones in the Coda</Title>
@@ -7540,6 +7540,18 @@ Turns out, syllables are horrible ways of measuring duration.  They are, however
 </Text>
             <Comments>G. Lees, The Modern Rhyming Dictionary, Cherry Lane Music, 1987.</Comments>
         </Document>
+        <Document ID="40">
+            <Title>Fickle Phones in the Coda</Title>
+            <Text>Fickle Phones in the Coda
+Look, phones in the coda are like an easily-distracted dog.  One moment, you think they’re with you, right behind you, and then next, you turn around, and notice that they’re less “behind you” than they are “in front of the person behind you”.  You are the syllable in this metaphor, and the person behind you is the syllable that comes after you.  Your dog is the last consonant in your coda.  Certain “dogs” will go join the “person” behind you, while others will stick with you!  Don’t judge—it’s just the way they are.  But you need to know if your dog’s going to stick with you or not.  
+Phones That Stay In Coda:
+“m” in “sam-ba”
+Phones That Move to Next Syllable’s Onset:
+“d” in “un-a-void-a-ble”</Text>
+        </Document>
+        <Document ID="150">
+            <Title>Mechanical Turk Oronym Testing</Title>
+        </Document>
         <Document ID="36">
             <Title>CLIPS definition of a phone and its subparts</Title>
             <Text>CLIPS definition of a phone and its subparts
@@ -7611,54 +7623,6 @@ Turns out, syllables are horrible ways of measuring duration.  They are, however
         </Document>
         <Document ID="146">
             <Title>Untitled</Title>
-        </Document>
-        <Document ID="40">
-            <Title>Fickle Phones in the Coda</Title>
-            <Text>Fickle Phones in the Coda
-Look, phones in the coda are like an easily-distracted dog.  One moment, you think they’re with you, right behind you, and then next, you turn around, and notice that they’re less “behind you” than they are “in front of the person behind you”.  You are the syllable in this metaphor, and the person behind you is the syllable that comes after you.  Your dog is the last consonant in your coda.  Certain “dogs” will go join the “person” behind you, while others will stick with you!  Don’t judge—it’s just the way they are.  But you need to know if your dog’s going to stick with you or not.  
-Phones That Stay In Coda:
-“m” in “sam-ba”
-Phones That Move to Next Syllable’s Onset:
-“d” in “un-a-void-a-ble”</Text>
-        </Document>
-        <Document ID="150">
-            <Title>Mechanical Turk Oronym Testing</Title>
-        </Document>
-        <Document ID="37">
-            <Title>System Design:</Title>
-            <Text>System Design:
-I will be using pre-existing music-composition data formats, modified to fit my needs.  First, I will be using parts of the WEDELMUSIC music and lyrics format, with a few changes:
-I will modify the Syllable class to include two more fields: an enum emphasis, whose values can be PRIMARY, SECONDARY, TERTIARY, or NEUTRAL; and a string sampa, whose value is the SAMPA representation of the syllable.
-I will create a parent class Word for Syllable objects that belong in the same word. 
-I will (likely) not be implementing a display mechanism for the multi-bar or multi-note-per-bar functionality inherent in the design.  However, I’ll probably keep the functionality intact.
-Specifically, I will be focusing on implementing the following classes:
-MainScore
-SquareBrk
-Part
-Measure
-Figure (Abstract Class)
-Note (subclassed into Note1_N, where 1/N is the note duration.  EX: Note1, Note1_2, Note1_4, Note1_8, Note1_16)
-Rest (similarly subclassed)
-Anchor (represents a point between two Figures, like a breath.
-Space (represents a symbol that takes up space, but has no duration, like a Clef or Key Signature)
-Chord (contains a group of simple Notes with the same duration)
-Beam (contains a sequence of Figures that should have a bar drawn across the top, i.e., consecutive Notes with a duration of 1/8 note or less.)
-Header
-Syllable
-HorizontalSym (Abstract Class)
-Slur
-Tie
-Tuple
-Crescendo
-Diminuendo
-Wave
-TrillAWave
-Change8va
-Arrow
-KeySignature
-Time
-
-Overall, use-case specifications have not changed. much.  Under “Specifications”-> ”Optimal User Functionality” on the preliminary proposal doc, I’ve dropped the second bullet point.  This means the idea of developing multiple melodies has been removed, as well as multiple lyric phrases.</Text>
         </Document>
         <Document ID="41">
             <Title>Calculating Weight/Length of Independent Syllables</Title>
@@ -7741,6 +7705,42 @@ Make the note for the first plosive’s syllable longer, and put a small rest in
 put a small rest in between
 Take a breath in between.</Text>
         </Document>
+        <Document ID="37">
+            <Title>System Design:</Title>
+            <Text>System Design:
+I will be using pre-existing music-composition data formats, modified to fit my needs.  First, I will be using parts of the WEDELMUSIC music and lyrics format, with a few changes:
+I will modify the Syllable class to include two more fields: an enum emphasis, whose values can be PRIMARY, SECONDARY, TERTIARY, or NEUTRAL; and a string sampa, whose value is the SAMPA representation of the syllable.
+I will create a parent class Word for Syllable objects that belong in the same word. 
+I will (likely) not be implementing a display mechanism for the multi-bar or multi-note-per-bar functionality inherent in the design.  However, I’ll probably keep the functionality intact.
+Specifically, I will be focusing on implementing the following classes:
+MainScore
+SquareBrk
+Part
+Measure
+Figure (Abstract Class)
+Note (subclassed into Note1_N, where 1/N is the note duration.  EX: Note1, Note1_2, Note1_4, Note1_8, Note1_16)
+Rest (similarly subclassed)
+Anchor (represents a point between two Figures, like a breath.
+Space (represents a symbol that takes up space, but has no duration, like a Clef or Key Signature)
+Chord (contains a group of simple Notes with the same duration)
+Beam (contains a sequence of Figures that should have a bar drawn across the top, i.e., consecutive Notes with a duration of 1/8 note or less.)
+Header
+Syllable
+HorizontalSym (Abstract Class)
+Slur
+Tie
+Tuple
+Crescendo
+Diminuendo
+Wave
+TrillAWave
+Change8va
+Arrow
+KeySignature
+Time
+
+Overall, use-case specifications have not changed. much.  Under “Specifications”-> ”Optimal User Functionality” on the preliminary proposal doc, I’ve dropped the second bullet point.  This means the idea of developing multiple melodies has been removed, as well as multiple lyric phrases.</Text>
+        </Document>
         <Document ID="103">
             <Title>The Basic Structure of a Syllable</Title>
             <Text>The Basic Structure of a Syllable
@@ -7761,15 +7761,6 @@ Just like the weight of phones cannot be fully quantified in isolation, syllable
 If a syllable’s last phone is the same as the next syllable’s first phone, then it you can disregard the weight of one of them.  Singers often only sing one of them, and use it for both words. For example:  Bake cookies becomes : bay-cookies  Stars shining becomes : star-shining.  Yelp peppers becomes: yell-peppers.  
 There are several other rules, which I’ve put in the algorithm/formula, but haven’t written out yet. That’s on the menu for the Week 10 update.</Text>
         </Document>
-        <Document ID="38">
-            <Title>Prototype and Implementation</Title>
-            <Text>Prototype and Implementation
-
-As per my original schedule for completion, I do not yet have a program prototype.  I felt it was more important to get the data format nailed down, because it’s the majority of the problem.  Also important at this point was finding a usable dictionary, separated by syllables and pronunciation.</Text>
-        </Document>
-        <Document ID="147">
-            <Title>Graphs</Title>
-        </Document>
         <Document ID="151">
             <Title>A nice coal dower</Title>
             <Text>A nice coal dower
@@ -7783,6 +7774,20 @@ As per my original schedule for completion, I do not yet have a program prototyp
 ---"A"nis"koul"daU`r
 
 </Text>
+        </Document>
+        <Document ID="38">
+            <Title>Prototype and Implementation</Title>
+            <Text>Prototype and Implementation
+
+As per my original schedule for completion, I do not yet have a program prototype.  I felt it was more important to get the data format nailed down, because it’s the majority of the problem.  Also important at this point was finding a usable dictionary, separated by syllables and pronunciation.</Text>
+        </Document>
+        <Document ID="147">
+            <Title>Graphs</Title>
+        </Document>
+        <Document ID="43">
+            <Title>NO FOOTNOTE_Syllable Length</Title>
+            <Text>Syllable Length
+I had not thought of the issue of note-length/weight vs. syllable-length/weight when matching lyrics to music, but came to my attention during the literature review. The general idea is that it takes longer to say some sounds than it does others, and that some sounds flow better into one sound as opposed to another.  I’ve decided that this is important enough for the success of the project that I need to include it, and figure out the rules involved.</Text>
         </Document>
         <Document ID="39">
             <Title>Data Format</Title>
@@ -7841,11 +7846,6 @@ NEUTRAL means there is no extraordinary emphasis on the syllable.
 A rough diagram to show how these interact with the whole structure is below:
 The class “Word” is needed, because otherwise, I would have no way to eventually extend my parser to include things like rhyme-matching, synonym-swapping, etc.  I may still need to add fields to Word, as I think of them, but these are sufficient for now.</Text>
         </Document>
-        <Document ID="43">
-            <Title>NO FOOTNOTE_Syllable Length</Title>
-            <Text>Syllable Length
-I had not thought of the issue of note-length/weight vs. syllable-length/weight when matching lyrics to music, but came to my attention during the literature review. The general idea is that it takes longer to say some sounds than it does others, and that some sounds flow better into one sound as opposed to another.  I’ve decided that this is important enough for the success of the project that I need to include it, and figure out the rules involved.</Text>
-        </Document>
         <Document ID="104">
             <Title>Determining Syllable Weight and Length</Title>
             <Text>Determining Syllable Weight and Length
@@ -7854,6 +7854,178 @@ Though syllable weight is a generally infinite relative scale, there are three m
 2.	a dipthong/tripthong in the nucleus
 3.	one or more coda.
 This means that the two main things we need to look at when determining syllable weight and length are vowel type in the nucleus, and coda complexity.</Text>
+        </Document>
+        <Document ID="152">
+            <Title>An ice cold hour</Title>
+            <Text>An ice cold hour
+
+ 152 oronyms:
+
+'n' ay scold hour 
+'n' ay scold our 
+'n' ay skol dour 
+'n' ay skol dower 
+'n' aye scold hour 
+'n' aye scold our 
+'n' aye skol dour 
+'n' aye skol dower 
+'n' eye scold hour 
+'n' eye scold our 
+'n' eye skol dour 
+'n' eye skol dower 
+'n' i scold hour 
+'n' i scold our 
+'n' i skol dour 
+'n' i skol dower 
+'n' ice coal dour 
+'n' ice coal dower 
+'n' ice cold hour 
+'n' ice cold our 
+'n' ice cole dour 
+'n' ice cole dower 
+'n' ice kohl dour 
+'n' ice kohl dower 
+'n' ice-cold hour 
+'n' ice-cold our 
+a gneiss coal dour 
+a gneiss coal dower 
+a gneiss cold hour 
+a gneiss cold our 
+a gneiss cole dour 
+a gneiss cole dower 
+a gneiss kohl dour 
+a gneiss kohl dower 
+a nice coal dour 
+a nice coal dower 
+a nice cold hour 
+a nice cold our 
+a nice cole dour 
+a nice cole dower 
+a nice kohl dour 
+a nice kohl dower 
+a nigh scold hour 
+a nigh scold our 
+a nigh skol dour 
+a nigh skol dower 
+a nye scold hour 
+a nye scold our 
+a nye skol dour 
+a nye skol dower 
+an ay scold hour 
+an ay scold our 
+an ay skol dour 
+an ay skol dower 
+an aye scold hour 
+an aye scold our 
+an aye skol dour 
+an aye skol dower 
+an eye scold hour 
+an eye scold our 
+an eye skol dour 
+an eye skol dower 
+an i scold hour 
+an i scold our 
+an i skol dour 
+an i skol dower 
+an ice coal dour 
+an ice coal dower 
+an ice cold hour 
+an ice cold our 
+an ice cole dour 
+an ice cole dower 
+an ice kohl dour 
+an ice kohl dower 
+an ice-cold hour 
+an ice-cold our 
+ann ay scold hour 
+ann ay scold our 
+ann ay skol dour 
+ann ay skol dower 
+ann aye scold hour 
+ann aye scold our 
+ann aye skol dour 
+ann aye skol dower 
+ann eye scold hour 
+ann eye scold our 
+ann eye skol dour 
+ann eye skol dower 
+ann i scold hour 
+ann i scold our 
+ann i skol dour 
+ann i skol dower 
+ann ice coal dour 
+ann ice coal dower 
+ann ice cold hour 
+ann ice cold our 
+ann ice cole dour 
+ann ice cole dower 
+ann ice kohl dour 
+ann ice kohl dower 
+ann ice-cold hour 
+ann ice-cold our 
+anne ay scold hour 
+anne ay scold our 
+anne ay skol dour 
+anne ay skol dower 
+anne aye scold hour 
+anne aye scold our 
+anne aye skol dour 
+anne aye skol dower 
+anne eye scold hour 
+anne eye scold our 
+anne eye skol dour 
+anne eye skol dower 
+anne i scold hour 
+anne i scold our 
+anne i skol dour 
+anne i skol dower 
+anne ice coal dour 
+anne ice coal dower 
+anne ice cold hour 
+anne ice cold our 
+anne ice cole dour 
+anne ice cole dower 
+anne ice kohl dour 
+anne ice kohl dower 
+anne ice-cold hour 
+anne ice-cold our 
+o' gneiss coal dour 
+o' gneiss coal dower 
+o' gneiss cold hour 
+o' gneiss cold our 
+o' gneiss cole dour 
+o' gneiss cole dower 
+o' gneiss kohl dour 
+o' gneiss kohl dower 
+o' nice coal dour 
+o' nice coal dower 
+o' nice cold hour 
+o' nice cold our 
+o' nice cole dour 
+o' nice cole dower 
+o' nice kohl dour 
+o' nice kohl dower 
+o' nigh scold hour 
+o' nigh scold our 
+o' nigh skol dour 
+o' nigh skol dower 
+o' nye scold hour 
+o' nye scold our 
+o' nye skol dour 
+o' nye skol dower </Text>
+        </Document>
+        <Document ID="44">
+            <Title>UGLY_The Basic Structure of a Syllable</Title>
+            <Text>The Basic Structure of a Syllable
+A syllable has a syllable nucleus, an optional onset and an optional coda. 
+The syllable nucleus is the anchor of the syllable, and as such, is typically the sound that a singer will “hold” while on a note.  It is normally a vowel, but can also be a sonorant, or “singable” consonant, like m, n, l, or r, if no vowel exists.  All syllables must have nuclei, for the purposes of this project.
+The onset is all the sounds that occur before the syllable nucleus.  Typically, these are consonants.  The existence of a syllable onset is common, but not guaranteed. In English, it can contain between zero and three consonants.
+The coda of a syllable is all the sounds that occur after the syllable nucleus.  Again, these are typically consonants. The having a syllable coda is more rare than having a syllable onset.  In English, it can contain between zero and four consonants (five with pluralization).
+Example:   cat
+Part        Ortho	    SAMPA	
+Onset: 	c		k
+Nucleus:	a		{
+Coda:		t		 t</Text>
         </Document>
         <Document ID="148">
             <Title>Bubble chart explanations</Title>
@@ -7887,19 +8059,6 @@ There is one chart per recording, and one bubble for every significant transcrip
   any transcription which accounted for more than 1% of total transcriptions.  
   This excludes any transcription that was transcribed less than five times. By discarding uncommon transcriptions, we removed 49 extraneous data points, or 13.67% of our recorded transcriptions, which we judged to be an acceptable loss.
    </Text>
-        </Document>
-        <Document ID="44">
-            <Title>UGLY_The Basic Structure of a Syllable</Title>
-            <Text>The Basic Structure of a Syllable
-A syllable has a syllable nucleus, an optional onset and an optional coda. 
-The syllable nucleus is the anchor of the syllable, and as such, is typically the sound that a singer will “hold” while on a note.  It is normally a vowel, but can also be a sonorant, or “singable” consonant, like m, n, l, or r, if no vowel exists.  All syllables must have nuclei, for the purposes of this project.
-The onset is all the sounds that occur before the syllable nucleus.  Typically, these are consonants.  The existence of a syllable onset is common, but not guaranteed. In English, it can contain between zero and three consonants.
-The coda of a syllable is all the sounds that occur after the syllable nucleus.  Again, these are typically consonants. The having a syllable coda is more rare than having a syllable onset.  In English, it can contain between zero and four consonants (five with pluralization).
-Example:   cat
-Part        Ortho	    SAMPA	
-Onset: 	c		k
-Nucleus:	a		{
-Coda:		t		 t</Text>
         </Document>
         <Document ID="3">
             <Title>Untitled</Title>
@@ -10566,164 +10725,14 @@ BIBLIOGRAPHY:
  
 [iv] INCLUDE THE PARTS OF SPEECH TABLE!</Text>
         </Document>
-        <Document ID="152">
-            <Title>An ice cold hour</Title>
-            <Text>An ice cold hour
-
- 152 oronyms:
-
-'n' ay scold hour 
-'n' ay scold our 
-'n' ay skol dour 
-'n' ay skol dower 
-'n' aye scold hour 
-'n' aye scold our 
-'n' aye skol dour 
-'n' aye skol dower 
-'n' eye scold hour 
-'n' eye scold our 
-'n' eye skol dour 
-'n' eye skol dower 
-'n' i scold hour 
-'n' i scold our 
-'n' i skol dour 
-'n' i skol dower 
-'n' ice coal dour 
-'n' ice coal dower 
-'n' ice cold hour 
-'n' ice cold our 
-'n' ice cole dour 
-'n' ice cole dower 
-'n' ice kohl dour 
-'n' ice kohl dower 
-'n' ice-cold hour 
-'n' ice-cold our 
-a gneiss coal dour 
-a gneiss coal dower 
-a gneiss cold hour 
-a gneiss cold our 
-a gneiss cole dour 
-a gneiss cole dower 
-a gneiss kohl dour 
-a gneiss kohl dower 
-a nice coal dour 
-a nice coal dower 
-a nice cold hour 
-a nice cold our 
-a nice cole dour 
-a nice cole dower 
-a nice kohl dour 
-a nice kohl dower 
-a nigh scold hour 
-a nigh scold our 
-a nigh skol dour 
-a nigh skol dower 
-a nye scold hour 
-a nye scold our 
-a nye skol dour 
-a nye skol dower 
-an ay scold hour 
-an ay scold our 
-an ay skol dour 
-an ay skol dower 
-an aye scold hour 
-an aye scold our 
-an aye skol dour 
-an aye skol dower 
-an eye scold hour 
-an eye scold our 
-an eye skol dour 
-an eye skol dower 
-an i scold hour 
-an i scold our 
-an i skol dour 
-an i skol dower 
-an ice coal dour 
-an ice coal dower 
-an ice cold hour 
-an ice cold our 
-an ice cole dour 
-an ice cole dower 
-an ice kohl dour 
-an ice kohl dower 
-an ice-cold hour 
-an ice-cold our 
-ann ay scold hour 
-ann ay scold our 
-ann ay skol dour 
-ann ay skol dower 
-ann aye scold hour 
-ann aye scold our 
-ann aye skol dour 
-ann aye skol dower 
-ann eye scold hour 
-ann eye scold our 
-ann eye skol dour 
-ann eye skol dower 
-ann i scold hour 
-ann i scold our 
-ann i skol dour 
-ann i skol dower 
-ann ice coal dour 
-ann ice coal dower 
-ann ice cold hour 
-ann ice cold our 
-ann ice cole dour 
-ann ice cole dower 
-ann ice kohl dour 
-ann ice kohl dower 
-ann ice-cold hour 
-ann ice-cold our 
-anne ay scold hour 
-anne ay scold our 
-anne ay skol dour 
-anne ay skol dower 
-anne aye scold hour 
-anne aye scold our 
-anne aye skol dour 
-anne aye skol dower 
-anne eye scold hour 
-anne eye scold our 
-anne eye skol dour 
-anne eye skol dower 
-anne i scold hour 
-anne i scold our 
-anne i skol dour 
-anne i skol dower 
-anne ice coal dour 
-anne ice coal dower 
-anne ice cold hour 
-anne ice cold our 
-anne ice cole dour 
-anne ice cole dower 
-anne ice kohl dour 
-anne ice kohl dower 
-anne ice-cold hour 
-anne ice-cold our 
-o' gneiss coal dour 
-o' gneiss coal dower 
-o' gneiss cold hour 
-o' gneiss cold our 
-o' gneiss cole dour 
-o' gneiss cole dower 
-o' gneiss kohl dour 
-o' gneiss kohl dower 
-o' nice coal dour 
-o' nice coal dower 
-o' nice cold hour 
-o' nice cold our 
-o' nice cole dour 
-o' nice cole dower 
-o' nice kohl dour 
-o' nice kohl dower 
-o' nigh scold hour 
-o' nigh scold our 
-o' nigh skol dour 
-o' nigh skol dower 
-o' nye scold hour 
-o' nye scold our 
-o' nye skol dour 
-o' nye skol dower </Text>
+        <Document ID="45">
+            <Title>UGLY_Determining Syllable Weight and Length</Title>
+            <Text>Determining Syllable Weight and Length
+Though syllable weight is a generally infinite relative scale, there are three main classifications of syllable weight:  Light, Heavy, and SuperHeavy.  Some important indicators of a long, or heavy, syllable are as follows:
+a long vowel in the nucleus
+a dipthong/tripthong in the nucleus
+one or more coda.
+This means that the two main things we need to look at when determining syllable weight and length are vowel type in the nucleus, and coda complexity.</Text>
         </Document>
         <Document ID="5">
             <Title>Melody Matcher </Title>
@@ -10771,15 +10780,6 @@ TIMELINE:	 PAGEREF _TOC197578289 \H 75
 So. I bet you're all wondering what's happening with my thesis. If so, you fit into one of these groups:  1) you're working on a thesis? What's it about?  2) oh, that melody matcher thing you've been mumbling about for the past few years? How's that work again?  3) yeah, I know you're working on your thesis. I keep hearing you talk about all the gory details. But what does it look like?
 
 4) But how do you know it really works?  I'll be addressing group</Text>
-        </Document>
-        <Document ID="45">
-            <Title>UGLY_Determining Syllable Weight and Length</Title>
-            <Text>Determining Syllable Weight and Length
-Though syllable weight is a generally infinite relative scale, there are three main classifications of syllable weight:  Light, Heavy, and SuperHeavy.  Some important indicators of a long, or heavy, syllable are as follows:
-a long vowel in the nucleus
-a dipthong/tripthong in the nucleus
-one or more coda.
-This means that the two main things we need to look at when determining syllable weight and length are vowel type in the nucleus, and coda complexity.</Text>
         </Document>
         <Document ID="105">
             <Title>SCRATCHVowel Types_with footnotes</Title>
@@ -11198,6 +11198,126 @@ dipthong, sonorant, short(u)
 
 </Text>
             <Comments>** The UNISYN dictionary was created in the UK, and as such, sometimes has funny pronunciation mixes.  This mainly presents itself in the “I”/”i” and “U”/”u” gaps.  A person from the South would pronounce “here” as “hI`r”, but a person from the West Coast pronouces it “hir”.  UNISYN pronounces it as “hI`r”. The usage of the Southern accent for i vs I is consistent, but UNISYN has some West Coast accent.  It actually uses an accent called “General American”, which is spoken in the midwest. Who decided to make Nebraska and Illinois the linguistic flag-bearers of our tongue? Honestly.</Comments>
+        </Document>
+        <Document ID="153">
+            <Title>Selection criteria for oronyms to record</Title>
+            <Text>Selection criteria for oronyms to record and recordings to transcribe
+
+Given that “a nice cold hour” has (#) oronyms, and “an ice cold hour has (#), it was necessary to narrow down the number of oronyms that we used for our user study.  
+
+To select which oronyms we would submit to MT to record, we decided to on the following selection criteria:
+-We discarded oronyms that included words with frequency values of less than 30.  Asking a general audience to pronouce uncommon words would likely result in a high rate of unusable recordings. Including uncommon words wouldn’t be testing our algorithm—it would be testing the vocabulary of the user study subjects, which we’re uninterested in.
+-We discarded upper-case pronunciations in the case of oronyms with words whose pronunciation changes depending upon their capitalization (for example, “nice” == naIs; “Nice” == nis (as in niece) ),   
+-We discarded oronym phrases that included implicit punctuation. For example, the phrase “Anne I scold our”, has an implicit comma between Anne and I.  We did this to avoid halting or “dramatic” recording of phrases.
+-We discarded oronyms with any words whose pronunciation is position specific, such as “ ’n’ “, normally found in “Rock ’n’ Roll”;  or   “ o’ ” , normally found in “top o’ the morning”.
+-We only chose oronyms for which all pronunciations of the child oronym phrases were also found in the pronunciations of the root oronym phrase. For example, a root phrase that begins with “a” would have an child oronym phrase that begins with “et”, using French pronunciation and dropping the trailing ’t’ . However, “et” can also be pronounced with the t, using an American accent. Since our root phrase doesn’t include that ’t’ sound, child oronym phrases that begin with “et” have at least one pronunciation not match the root phrase’s pronunciation.  So, we discard all child oronyms that begin with “et”.
+
+Criteria for transcription recordings
+
+-To limit the number of possible oronyms, we decided that all recordings should be oronyms of BOTH “an ice cold hour” and “a nice cold hour”
+-The pronunciation of the recording must match the expected pronunciation derived from the phonetic dictionary.</Text>
+        </Document>
+        <Document ID="149">
+            <Title>Untitled</Title>
+        </Document>
+        <Document ID="46">
+            <Title>SCRATCHVowel Types_bland</Title>
+            <Text>Vowel Types
+The English language only has five (and a half) letters representing vowels: a, e, i, o, u, and sometimes y.  However, there are many, many different vowel sounds.  Thankfully, the SAMPA alphabet already helps us enumerate them.  The following charts are adapted from the Wikipedia entry for “SAMPA Chart for English”, primarily using the GenAm accent).
+SAMPA vowels
+Notation
+
+Example(s)
+Type
+Heaviness
+A
+
+father, not, law
+short (o)
+0
+i
+
+see
+long (e)
+1
+I**
+city
+short (i)
+0
+
+E
+
+bed
+short (e)
+0
+3` or `
+
+bird, winner
+short (u?)
+0
+{
+
+lad, cat, ran
+short (a)
+0
+V
+
+run, enough
+long (central vowel)
+1
+U
+
+put
+long (u?)
+1
+u
+
+soon, through
+short(u)
+0
+@
+
+about
+short (schwa)
+0
+e
+
+day
+long (a)
+1
+aI
+
+my, height
+dipthong, long(I), short (i)
+2
+O
+
+or, shore
+long (o)
+1
+a#
+DNE in GenAm
+long (I)
+DNE in GenAm
+OI~ *
+boy
+dipthong, long (o), short(i)
+2
+oU or ou+
+boat
+dipthong, long (o) long(u)
+3
+aU**
+now
+dipthong, long(I) long(u)
+3
+
+ju
+
+use, pupil
+dipthong, sonorant, short(u)
+1.5
+</Text>
         </Document>
         <Document ID="6">
             <Title>3 today.  As you already know, Melody matcher is a...</Title>
@@ -12417,108 +12537,6 @@ long (o)
 1
 a</Text>
         </Document>
-        <Document ID="149">
-            <Title>Untitled</Title>
-        </Document>
-        <Document ID="46">
-            <Title>SCRATCHVowel Types_bland</Title>
-            <Text>Vowel Types
-The English language only has five (and a half) letters representing vowels: a, e, i, o, u, and sometimes y.  However, there are many, many different vowel sounds.  Thankfully, the SAMPA alphabet already helps us enumerate them.  The following charts are adapted from the Wikipedia entry for “SAMPA Chart for English”, primarily using the GenAm accent).
-SAMPA vowels
-Notation
-
-Example(s)
-Type
-Heaviness
-A
-
-father, not, law
-short (o)
-0
-i
-
-see
-long (e)
-1
-I**
-city
-short (i)
-0
-
-E
-
-bed
-short (e)
-0
-3` or `
-
-bird, winner
-short (u?)
-0
-{
-
-lad, cat, ran
-short (a)
-0
-V
-
-run, enough
-long (central vowel)
-1
-U
-
-put
-long (u?)
-1
-u
-
-soon, through
-short(u)
-0
-@
-
-about
-short (schwa)
-0
-e
-
-day
-long (a)
-1
-aI
-
-my, height
-dipthong, long(I), short (i)
-2
-O
-
-or, shore
-long (o)
-1
-a#
-DNE in GenAm
-long (I)
-DNE in GenAm
-OI~ *
-boy
-dipthong, long (o), short(i)
-2
-oU or ou+
-boat
-dipthong, long (o) long(u)
-3
-aU**
-now
-dipthong, long(I) long(u)
-3
-
-ju
-
-use, pupil
-dipthong, sonorant, short(u)
-1.5
-</Text>
-        </Document>
         <Document ID="50">
             <Title>Effect of Note Intervals on Musical Emphasis Patte...</Title>
             <Text>Effect of Note Intervals on Musical Emphasis Patterns
@@ -13162,24 +13180,6 @@ My next step, to get these into the format that I need for my program , was to s
 
 &lt;ortho> | : | &lt;uniqID</Text>
         </Document>
-        <Document ID="153">
-            <Title>Selection criteria for oronyms to record</Title>
-            <Text>Selection criteria for oronyms to record and recordings to transcribe
-
-Given that “a nice cold hour” has (#) oronyms, and “an ice cold hour has (#), it was necessary to narrow down the number of oronyms that we used for our user study.  
-
-To select which oronyms we would submit to MT to record, we decided to on the following selection criteria:
--We discarded oronyms that included words with frequency values of less than 30.  Asking a general audience to pronouce uncommon words would likely result in a high rate of unusable recordings. Including uncommon words wouldn’t be testing our algorithm—it would be testing the vocabulary of the user study subjects, which we’re uninterested in.
--We discarded upper-case pronunciations in the case of oronyms with words whose pronunciation changes depending upon their capitalization (for example, “nice” == naIs; “Nice” == nis (as in niece) ),   
--We discarded oronym phrases that included implicit punctuation. For example, the phrase “Anne I scold our”, has an implicit comma between Anne and I.  We did this to avoid halting or “dramatic” recording of phrases.
--We discarded oronyms with any words whose pronunciation is position specific, such as “ ’n’ “, normally found in “Rock ’n’ Roll”;  or   “ o’ ” , normally found in “top o’ the morning”.
--We only chose oronyms for which all pronunciations of the child oronym phrases were also found in the pronunciations of the root oronym phrase. For example, a root phrase that begins with “a” would have an child oronym phrase that begins with “et”, using French pronunciation and dropping the trailing ’t’ . However, “et” can also be pronounced with the t, using an American accent. Since our root phrase doesn’t include that ’t’ sound, child oronym phrases that begin with “et” have at least one pronunciation not match the root phrase’s pronunciation.  So, we discard all child oronyms that begin with “et”.
-
-Criteria for transcription recordings
-
--To limit the number of possible oronyms, we decided that all recordings should be oronyms of BOTH “an ice cold hour” and “a nice cold hour”
--The pronunciation of the recording must match the expected pronunciation derived from the phonetic dictionary.</Text>
-        </Document>
         <Document ID="8">
             <Title>> | &lt;uniqIDString> | : | &lt;partOfSpeech> | : | &lt;ext...</Title>
             <Text>> | &lt;uniqIDString> | : | &lt;partOfSpeech> | : | &lt;extendedOrtho> | : | &lt;freq> |  &lt;FullSAMPAstring> | : | syllableBreakdown(see below)... | '\n' |
@@ -13785,6 +13785,37 @@ Music BRS
 1 – 
 We can actually use that knowledge to narrow down the scope of our problem.  We only have to look at the note interval on "mals", since its note interval connects back to "mam-".
 When we look at the note interval on "mals", we find that it's negative.  This is perfect, since "mals" should be less emphasized than "mam-".</Text>
+        </Document>
+        <Document ID="155">
+            <Title>iced ink oronym info</Title>
+            <Text>0~~>aye sting xxx
+0~~>aye stink ___SUCCESS!___
+0~~>ay sting xxx
+0~~>ay stink ___SUCCESS!___
+0~~>eye sting xxx
+0~~>eye stink ___SUCCESS!___
+0~~>i sting xxx
+0~~>i stink ___SUCCESS!___
+0~~>ice ting xxx
+0~~>ice xxx
+0~~>iced ink ___SUCCESS!___
+0~~>fff
+DEDUPLICATION TIME!
+!Discovered 5 oronyms:
+ay stink ___SUCCESS!___
+aye stink ___SUCCESS!___
+eye stink ___SUCCESS!___
+i stink ___SUCCESS!___
+iced ink ___SUCCESS!___
+NO TESTS FAILED! :) 
+
+
+Oronym freqs:
+TEST getCSVofWordFreqsForPhrase, orthoPhrase =aye ay eye i ice sting stink ting iced ink 
+aye ay eye i ice sting stink ting iced ink  , aye , 130503 , ay , 6633 , eye , 26750 , i , 9937877 , ice , 12202 , sting , 1472 , stink , 1294 , ting , 124 , iced , 402 , ink , 2589 , 
+
+
+</Text>
         </Document>
         <Document ID="54">
             <Title>Example: Van Halen, Running With the Devil</Title>
