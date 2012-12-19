@@ -337,6 +337,36 @@ bool test_getCSVofEachPhrasesWordsFreqs() {
    return  test_getCSVofEachPhrasesWordsFreqs ( orthoPhrases );
 }
 
+
+
+void test_DrawStackedBar( vector<string> phrases ) {
+   generateStackedBarGraphOronymTree( phrases );
+}
+
+void test_DrawStackedBar( string rootPhrase ) {
+   vector<string> phrases = discoverOronymsForPhrase( orthoPhrase );
+   test_DrawStackedBar(phrases);
+}
+
+void test_DrawStackedBar() {
+   test_DrawStackedBar("time may tell");
+}
+
+
+
+void test_DrawRect( int width, int height ) {
+   drawRectangle( width,  height);
+}
+
+void test_DrawRect( int width ) {
+   test_DrawRect(width, 1);
+}
+
+void test_DrawRect() {
+   test_DrawRect(3);
+}
+
+
 vector<string> buildVectorOfStrings() {
    vector<string> orthoPhrases;
    /*
@@ -1308,11 +1338,11 @@ bool runAllDefaultTests() {
    testsPassed &= test_getCSVofEachPhrasesWordsFreqs();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= test_getCSVofWordFreqsForPhrase();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_DrawRect();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_DrawStackedBar();
  /*
-   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= 
-   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
-   testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
@@ -1329,22 +1359,25 @@ void usageMessage() {
    cout << "Usage: ./testWordBreakdown [test type option] [input]\n"; 
    cout << "Available options: ";
    cout << "\n\t\t all";
-   cout << "\n\t\t discoverOronymsForPhrase";
+   cout << "\n\t\t discoverOronymsForPhrase";   
+   cout << "\n\t\t queryDBwithOrthoForSampaStrs";
+   cout << "\n\t\t queryDBwithOrthoForFreq";
+   cout << "\n\t\t findAllPhoneSeqsForOrthoPhrase";   
+   cout << "\n\t\t getCSVofEachPhrasesWordsFreqs";
+   cout << "\n\t\t getTotalFreqForPhrase";
    cout << "\n\t\t stripSampaStrOfEmph";
    cout << "\n\t\t getSampaStrWithoutGlottalStops";
    cout << "\n\t\t getSampaStrWithoutContiguousDuplicatePhones";
    cout << "\n\t\t strTokOnWhitespace";
-   cout << "\n\t\t findAllPhoneSeqsForOrthoPhrase";
    cout << "\n\t\t findPhoneTreeForOrthoPhrase";
-   cout << "\n\t\t queryDBwithOrthoForSampaStrs";
    cout << "\n\t\t queryDBForOrthoStrsWithSampaPrefix";
-   cout << "\n\t\t queryDBwithOrthoForFreq";
    cout << "\n\t\t queryDBwithSampaForOrthoStrs";
    cout << "\n\t\t trimWhitespace";
-   cout << "\n\t\t getTotalFreqForPhrase";
-   cout << "\n\t\t getCSVofWordFreqsForPhrase";
    cout << "\n\t\t getCSVofAllPhraseFreqs";
-   cout << "\n\t\t getCSVofEachPhrasesWordsFreqs";
+   cout << "\n\t\t getCSVofWordFreqsForPhrase";
+   cout << "\n\t\t generateStackedBarGraphOronymTree";   
+   cout << "\n\t\t drawRectangle";   
+
    cout << "\n\t\t help";
    cout << "\n\t\t oldMain\n";
 }
@@ -1399,6 +1432,10 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= test_getCSVofEachPhrasesWordsFreqs();
       } else if( strcmp( argv[1], "getCSVofAllPhraseFreqs") == 0 ) {
          allTestsPassed &= test_getCSVofAllPhraseFreqs();
+      } else if( strcmp( argv[1], "generateStackedBarGraphOronymTree") == 0 ) {
+         allTestsPassed &= test_DrawStackedBar();
+      } else if( strcmp( argv[1], "drawRectangle") == 0 ) {
+         allTestsPassed &= test_DrawRect();
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -1445,6 +1482,10 @@ int main(int argc, char* argv[]) {
       } else if( strcmp( argv[1], "getCSVofEachPhrasesWordsFreqs") == 0 ) {
          cerr << "Error: cannot pass test_getCSVofEachPhrasesWordsFreqs argument from command line"<<endl;
          usageMessage();
+      } else if( strcmp( argv[1], "generateStackedBarGraphOronymTree") == 0 ) {
+         allTestsPassed &= test_DrawStackedBar( argv[2] );
+      } else if( strcmp( argv[1], "drawRectangle") == 0 ) {
+         allTestsPassed &= test_DrawRect( argv[2] );
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

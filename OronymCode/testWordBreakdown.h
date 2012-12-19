@@ -2,6 +2,7 @@
 #define TEST_WORD_BREAKDOWN_H
 
 #include "wordBreakdown.h"
+#include "2dStackedBarTreeViz.h"
 
 void setupTests();
 void teardownTests();
@@ -37,6 +38,12 @@ bool test_getCSVofAllPhraseFreqs( std::vector<std::string> orthoPhrases );
 bool test_getCSVofAllPhraseFreqs();
 bool test_getCSVofEachPhrasesWordsFreqs( std::vector<std::string> orthoPhrases );
 bool test_getCSVofEachPhrasesWordsFreqs();
+void test_DrawRect();
+void test_DrawRect( int width );
+void test_DrawRect( int width, int height );
+void test_DrawStackedBar();
+void test_DrawStackedBar( std::string rootPhrase );
+void test_DrawStackedBar( std::vector<std::string> phrases );
 
 std::vector<std::string> buildVectorOfStrings();
 void oldMain();
