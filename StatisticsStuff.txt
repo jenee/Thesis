@@ -1,0 +1,33 @@
+
+
+
+
+Givens for Phrase (1) (\phrase1) :
+Calculated metric: \unisynFreqForPhrase1
+Actual count: x = \USATranscriptionsOfPhrase1
+
+
+Givens for Phrase (2) (\phrase2) :
+Calculated metric: \unisynFreqForPhrase2
+Actual count: x = \USATranscriptionsOfPhrase2
+
+\alpha = significance Level = \alphaSigFigs
+
+Calculated sum: \unisynFreqForPhrase1 + \unisynFreqForPhrase2 =  \unisynCombinedFreq
+Actual sum: \USATranscriptionsOfPhrase1 + \USATranscriptionsOfPhrase2 = \USACombinedTranscriptions
+
+p = population proportion of \phrase1 occurrences
+p = \unisynFreqForPhrase1   \div  \unisynCombinedFreq  = \pvalue 
+
+H_{o} :  p = \expectedProportionOfPhrase1Occurances 
+H_{a} :  p \neq \expectedProportionOfPhrase1Occurances 
+
+Actual: 
+\USATranscriptionsOfPhrase1  \div \USACombinedTranscriptions  = 
+
+1-proportion z-test
+If pvalue < \alpha, reject H_{o}
+
+p \approx 0 < \alphaSigFigs
+
+So, reject H_{o}
