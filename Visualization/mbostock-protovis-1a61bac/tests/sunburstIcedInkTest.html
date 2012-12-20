@@ -42,16 +42,16 @@ vis.render();
 /* Update the layout's size method and re-render. */
 function update(method) {
   switch (method) {
-    case "byte": partition.size(function(d) d.nodeValue); break;
-    case "file": partition.size(function(d) d.firstChild ? 0 : 1); break;
+    case "freqMetric": partition.size(function(d) d.nodeValue); break;
+    case "equalWeight": partition.size(function(d) d.firstChild ? 0 : 1); break;
   }
   vis.render();
 }
 
     </script>
     <br><b>Size:</b> <select id="menu" onchange="update(this.value)">
-      <option value="byte" selected>bytes</option>
-      <option value="file">files</option>
+      <option value="freqMetric" selected>Paths weighted by freq metric </option>
+      <option value="equalWeight">Equal Weight to all paths</option>
     </select>
   </div></div></body>
 </html>
