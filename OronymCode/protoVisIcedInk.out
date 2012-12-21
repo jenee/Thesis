@@ -1,19 +1,19 @@
 TEST makeProtvisDiagram, testPhrases.size() =5
 var root = { 
-___ay: {
-______stink: 8583102,
-___}
-___aye: {
-______stink: 168870882,
-___}
-___eye: {
-______stink: 34614500,
-___}
-___i: {
-______stink: 12859612838,
-___}
-___iced: {
-______ink: 1040778,
-___}
+   ay: {
+      stink: 8583102,
+   }
+   aye: {
+      stink: 168870882,
+   }
+   eye: {
+      stink: 34614500,
+   }
+   i: {
+      stink: 12859612838,
+   }
+   iced: {
+      ink: 1040778,
+   }
 };
 NO TESTS FAILED! :) 

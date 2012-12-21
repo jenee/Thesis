@@ -96,7 +96,7 @@ void writeProtovisDataLevel( vector <string> tailPhrases, long curMultiplicative
    vector<string> firstWords = getAllFirstWords(tailPhrases); //function defined elsewhere 
    
    int spacesPerTab = 3;
-   string indent( numTabs * spacesPerTab, '_' );
+   string indent( numTabs * spacesPerTab, ' ' );
       
    for (int i = 0; i < firstWords.size(); i++) {
       string curFirst = firstWords[i];
