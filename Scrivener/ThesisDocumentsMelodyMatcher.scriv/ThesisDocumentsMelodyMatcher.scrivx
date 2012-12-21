@@ -772,6 +772,16 @@
                                         <TextSelection>9638,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
+                                <BinderItem ID="177" Type="Text" Created="2012-12-20 18:24:07 -0800" Modified="2012-12-20 18:24:17 -0800">
+                                    <Title>why that's insane</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>0,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
                             </Children>
                         </BinderItem>
                         <BinderItem ID="136" Type="Text" Created="2012-06-03 07:02:03 -0700" Modified="2012-06-03 07:02:42 -0700">
@@ -1890,7 +1900,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="15293" Characters="90957" Date="2012-12-18 13:09:46 -0800"></PreviousSession>
+        <PreviousSession Words="37" Characters="263" Date="2012-12-18 13:09:46 -0800"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

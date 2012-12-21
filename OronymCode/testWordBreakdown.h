@@ -54,6 +54,9 @@ bool test_removeSuccessAndDeadendIndicatorsFromString(std::string test);
 bool test_stripOronymOutputOfEndIndicators();
 bool test_stripOronymOutputOfEndIndicators( std::string rootPhrase);
 bool test_stripOronymOutputOfEndIndicators( std::vector<std::string> test);
+bool test_makeProtvisDiagram();
+bool test_makeProtvisDiagram( std::string rootPhrase);
+bool test_makeProtvisDiagram( std::vector<std::string> test);
 
 
 std::vector<std::string> buildVectorOfStrings();

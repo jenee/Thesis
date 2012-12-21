@@ -458,6 +458,50 @@ bool test_stripOronymOutputOfEndIndicators( vector<string> testPhrases ) {
    }
    return retVal;
 }
+
+
+bool test_makeProtvisDiagram() {
+
+   bool retVal = true;
+   
+   vector<string> testPhrases;
+   testPhrases.push_back("why that sin sane");
+   testPhrases.push_back("why that sin seine");
+   testPhrases.push_back("why that's in sane");
+   testPhrases.push_back("why that's in seine");
+   testPhrases.push_back("why that's inn sane");
+   testPhrases.push_back("why that's inn seine");
+   testPhrases.push_back("why that's insane");
+   
+   retVal &= test_makeProtvisDiagram( testPhrases );
+   return retVal;
+}
+
+bool test_makeProtvisDiagram( string rootPhrase ) {
+
+   bool retVal = true;
+   
+   vector<string> testPhrases = discoverOronymsForPhrase( rootPhrase );
+
+   retVal &= test_makeProtvisDiagram( testPhrases );
+   
+   return retVal;
+}
+
+bool test_makeProtvisDiagram( vector<string> testPhrases ) {
+   cout <<"TEST makeProtvisDiagram, testPhrases.size() ="<< testPhrases.size()<<endl;
+
+   bool retVal = true;
+   
+   makeProtvisDiagram(testPhrases);
+   
+   
+   return true;
+}
+
+
+
+
 vector<string> buildVectorOfStrings() {
    vector<string> orthoPhrases;
    /*
@@ -1441,6 +1485,8 @@ bool runAllDefaultTests() {
    testsPassed &= test_removeSuccessAndDeadendIndicatorsFromString();
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= test_stripOronymOutputOfEndIndicators();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_makeProtvisDiagram();
  /*
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
@@ -1483,6 +1529,7 @@ void usageMessage() {
    cout << "\n\t\t getAllFirstWords";   
    cout << "\n\t\t removeSuccessAndDeadendIndicatorsFromString"; 
    cout << "\n\t\t stripOronymOutputOfEndIndicators";  
+   cout << "\n\t\t makeProtvisDiagram";
 
    cout << "\n\t\t help";
    cout << "\n\t\t oldMain\n";
@@ -1550,6 +1597,9 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= test_removeSuccessAndDeadendIndicatorsFromString( );
       } else if( strcmp( argv[1], "stripOronymOutputOfEndIndicators") == 0 ) {
          allTestsPassed &= test_stripOronymOutputOfEndIndicators( );
+      } else if( strcmp( argv[1], "makeProtvisDiagram") == 0 ) {
+         allTestsPassed &= test_makeProtvisDiagram( );
+         
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -1608,7 +1658,9 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= test_removeSuccessAndDeadendIndicatorsFromString( argv[2] );
       } else if( strcmp( argv[1], "stripOronymOutputOfEndIndicators") == 0 ) {
          allTestsPassed &= test_stripOronymOutputOfEndIndicators( argv[2] );
-  
+      } else if( strcmp( argv[1], "makeProtvisDiagram") == 0 ) {
+         allTestsPassed &= test_makeProtvisDiagram( argv[2] );
+         
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";

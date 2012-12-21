@@ -664,8 +664,10 @@ vector<string> getAllFirstWords( vector<string> origPhrases ) {
       string tempFirstWord = FirstWord( origPhrases[i] );
       cerr << "#orig phrase "<<i<<": \""<< origPhrases[i] <<"\";" ;
       cerr << "firstWord = "<< tempFirstWord << endl;
+      
+      //
       if( firstWords.empty() || std::find(firstWords.begin(), firstWords.end(), tempFirstWord) == firstWords.end() ) {
-         cerr << "##FOUND WORD!" << endl;
+         cerr << "##FOUND WORD "<<tempFirstWord <<" in getAllFirstWords!" << endl;
          firstWords.push_back(tempFirstWord);
       } 
    }
@@ -685,15 +687,25 @@ vector< string> getAllOrthoTailPhrasesOf(string prefix, vector<string> fullPhras
          // find(' ') returns the index of the first space it finds in tempFull
          // we add one to find's result so that the substring starts after the space
          string tempTail = tempFull.substr( tempFull.find(' ') +1 );
-         
          cerr<< "tail = '"<<tempTail<<"'"<<endl;
+
+         if( tempTail != prefix ) {
+            //If there were no spaces in the original phrase, then the prefix 
+            // will be identical to the tail. This is because our substr/find
+            // combo above won't work if there are no spaces. It'll return
+            // string::npos, and string::npos+1 is one past the end position. 
+            // for some reason, this just makes it assign the whole string to 
+            // the tail? We'll see.
+            //To handle the no-spaces case, we only add the tail to the tailPhrases 
+            // if tempTail != prefix 
          
-         string trimmedTempTail = trimWhitespace( tempTail );
+            string trimmedTempTail = trimWhitespace( tempTail );
          
-         //if trimmedTempTail is a non-empty string, add it
-         if ( trimmedTempTail.length() >= 1 ) {
-            tailPhrases.insert( trimmedTempTail );
-         }
+            //if trimmedTempTail is a non-empty string, add it
+            if ( trimmedTempTail.length() >= 1 ) {
+               tailPhrases.insert( trimmedTempTail );
+            }
+         } 
       }
    }
    //convert set to vector
