@@ -88,24 +88,41 @@ vector<string> stripOronymOutputOfEndIndicators ( vector<string> phrases ) {
 
 void makeProtvisDiagram ( vector <string> phrases ) {
    cout << "var root = { " << endl;
-   writeProtovisDataLevel( phrases, 1 );
-   cout << "}"<<endl;
+   writeProtovisDataLevel( stripOronymOutputOfEndIndicators( phrases ) , 1, 1);
+   cout << "};"<<endl;
 }
 
-void writeProtovisDataLevel( vector <string> tailPhrases, int curMultiplicativeVal ) {
+void writeProtovisDataLevel( vector <string> tailPhrases, int curMultiplicativeVal, int numTabs ) {
    vector<string> firstWords = getAllFirstWords(tailPhrases); //function defined elsewhere 
    
+   int spacesPerTab = 3;
+   string indent( numTabs * spacesPerTab, ' ' );
+      
    for (int i = 0; i < firstWords.size(); i++) {
-      int freqTemp = getValueForWord( firstWords[i] ); //function defined elsewhere 
+      string curFirst = firstWords[i];
       
-      assert(0);
-      //todo: write things!  
+      int freqTemp = getValueForWord( curFirst ); //function defined elsewhere
+      int newMultiplicativeVal = curMultiplicativeVal * freqTemp;
       
-      vector<string> newTails = getAllOrthoTailPhrasesOf( firstWords[i], tailPhrases ); //function defined elsewhere 
+      cout << indent << curFirst <<": ";
       
-      writeProtovisDataLevel( newTails, curMultiplicativeVal * freqTemp );
+      vector<string> newTails = getAllOrthoTailPhrasesOf( curFirst, tailPhrases ); //function defined elsewhere 
+      
+      if(newTails.size() > 0 ) {
+         //if curFirst is a parent node (has tail phrases)
+         cout << "{" << endl;
+         writeProtovisDataLevel( newTails, newMultiplicativeVal, numTabs + 1 );
+         cout << "}" << endl;
+      } else {
+         //if curFirst is a child node
+         cout << newMultiplicativeVal;
+         //if this isn't the last word in the list, put a comma
+         if ( i <= ( firstWords.size() - 1 ) ) {
+            cout << ",";
+         }
+         cout << endl;
+      }
    }
-   
 }
 
 
