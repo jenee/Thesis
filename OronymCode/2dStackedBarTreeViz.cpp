@@ -92,7 +92,7 @@ void makeProtvisDiagram ( vector <string> phrases ) {
    cout << "};"<<endl;
 }
 
-void writeProtovisDataLevel( vector <string> tailPhrases, int curMultiplicativeVal, int numTabs ) {
+void writeProtovisDataLevel( vector <string> tailPhrases, long curMultiplicativeVal, int numTabs ) {
    vector<string> firstWords = getAllFirstWords(tailPhrases); //function defined elsewhere 
    
    int spacesPerTab = 3;
@@ -101,8 +101,8 @@ void writeProtovisDataLevel( vector <string> tailPhrases, int curMultiplicativeV
    for (int i = 0; i < firstWords.size(); i++) {
       string curFirst = firstWords[i];
       
-      int freqTemp = getValueForWord( curFirst ); //function defined elsewhere
-      int newMultiplicativeVal = curMultiplicativeVal * freqTemp;
+      long freqTemp = getValueForWord( curFirst ); //function defined elsewhere
+      long newMultiplicativeVal = curMultiplicativeVal * freqTemp;
       
       cout << indent << curFirst <<": ";
       
@@ -112,7 +112,7 @@ void writeProtovisDataLevel( vector <string> tailPhrases, int curMultiplicativeV
          //if curFirst is a parent node (has tail phrases)
          cout << "{" << endl;
          writeProtovisDataLevel( newTails, newMultiplicativeVal, numTabs + 1 );
-         cout << "}" << endl;
+         cout << indent << "}" << endl;
       } else {
          //if curFirst is a child node
          cout << newMultiplicativeVal;
