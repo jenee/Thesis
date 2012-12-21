@@ -87,12 +87,12 @@ vector<string> stripOronymOutputOfEndIndicators ( vector<string> phrases ) {
 
 
 void makeProtvisDiagram ( vector <string> phrases ) {
-   cout << "var root = { " << endl;
-   writeProtovisDataLevel( stripOronymOutputOfEndIndicators( phrases ) , 1, 1);
+   cout << "var oronymRoot = { " << endl;
+   writeProtovisDataLevel( stripOronymOutputOfEndIndicators( phrases ) , 0, 1);
    cout << "};"<<endl;
 }
 
-void writeProtovisDataLevel( vector <string> tailPhrases, long curMultiplicativeVal, int numTabs ) {
+void writeProtovisDataLevel( vector <string> tailPhrases, long curWeightVal, int numTabs ) {
    vector<string> firstWords = getAllFirstWords(tailPhrases); //function defined elsewhere 
    
    int spacesPerTab = 3;
@@ -102,7 +102,7 @@ void writeProtovisDataLevel( vector <string> tailPhrases, long curMultiplicative
       string curFirst = firstWords[i];
       
       long freqTemp = getValueForWord( curFirst ); //function defined elsewhere
-      long newMultiplicativeVal = curMultiplicativeVal * freqTemp;
+      long newWeightVal = curWeightVal + freqTemp;
       
       cout << indent << curFirst <<": ";
       
@@ -111,11 +111,11 @@ void writeProtovisDataLevel( vector <string> tailPhrases, long curMultiplicative
       if(newTails.size() > 0 ) {
          //if curFirst is a parent node (has tail phrases)
          cout << "{" << endl;
-         writeProtovisDataLevel( newTails, newMultiplicativeVal, numTabs + 1 );
+         writeProtovisDataLevel( newTails, newWeightVal, numTabs + 1 );
          cout << indent << "}" << endl;
       } else {
          //if curFirst is a child node
-         cout << newMultiplicativeVal;
+         cout << newWeightVal;
          //if this isn't the last word in the list, put a comma
          if ( i <= ( firstWords.size() - 1 ) ) {
             cout << ",";
