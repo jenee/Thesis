@@ -688,7 +688,7 @@ vector< string> getAllOrthoTailPhrasesOf(string prefix, vector<string> fullPhras
          
          cerr<< "tail = '"<<tempTail<<"'"<<endl;
          
-         trimmedTempTail = trimWhitespace( tempTail )
+         string trimmedTempTail = trimWhitespace( tempTail );
          
          //if trimmedTempTail is a non-empty string, add it
          if ( trimmedTempTail.length() >= 1 ) {
