@@ -681,9 +681,19 @@ vector< string> getAllOrthoTailPhrasesOf(string prefix, vector<string> fullPhras
          cerr<<"curFirstWord='"<<prefix<<"';"; 
          //remove firstWord from those phrases
          string tempFull = fullPhrases.at(j);
+         
+         // find(' ') returns the index of the first space it finds in tempFull
+         // we add one to find's result so that the substring starts after the space
          string tempTail = tempFull.substr( tempFull.find(' ') +1 );
+         
          cerr<< "tail = '"<<tempTail<<"'"<<endl;
-         tailPhrases.insert( trimWhitespace( tempTail ) );
+         
+         trimmedTempTail = trimWhitespace( tempTail )
+         
+         //if trimmedTempTail is a non-empty string, add it
+         if ( trimmedTempTail.length() >= 1 ) {
+            tailPhrases.insert( trimmedTempTail );
+         }
       }
    }
    //convert set to vector
