@@ -49,6 +49,12 @@ void test_DrawStackedBar( std::vector<std::string> phrases );
 bool test_getAllFirstWords();
 bool test_getAllFirstWords( std::string rootPhrase );
 bool test_getAllFirstWords( std::vector<std::string> phrases );
+bool test_removeSuccessAndDeadendIndicatorsFromString();
+bool test_removeSuccessAndDeadendIndicatorsFromString(std::string test);
+bool test_stripOronymOutputOfEndIndicators();
+bool test_stripOronymOutputOfEndIndicators( std::string rootPhrase);
+bool test_stripOronymOutputOfEndIndicators( std::vector<std::string> test);
+
 
 std::vector<std::string> buildVectorOfStrings();
 void oldMain();

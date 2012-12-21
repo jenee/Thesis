@@ -6,6 +6,7 @@ vector< vector <string> > allBars;
 int x;
 int y;
 int heightConst = 1;
+int fullWidth = 80;
 
 // bar visualization code
 //Need a library that allows me to draw a rectangle on an x/y coordinate grid
@@ -16,7 +17,6 @@ int getValueForWord( string word ) {
 }
 
 void generateStackedBarGraphOronymTree( vector <string> phrases ) {
-   int fullWidth = 80;
    x=0; //top left
    y=-1; //top left
    drawStackedBar( fullWidth, phrases );
@@ -43,6 +43,71 @@ void drawStackedBar( int width, vector <string> tailPhrases) {
    translateYBy( -1 * heightConst);
    translateXBy( -1 * width);
 }
+
+string removeSuccessAndDeadendIndicatorsFromString( string orig ) {
+   string newString;
+   size_t endPosition = string::npos;
+   string deadEndIndic1 = "xxx";
+   string deadEndIndic2 = "fff";
+   string successIndic = "___SUCCESS!___";
+   
+   if( string::npos != ( endPosition = orig.find( deadEndIndic1 ) ) ){
+      newString = orig.substr(0, endPosition);
+   } else if( string::npos != ( endPosition = orig.find( deadEndIndic2 ) ) ){
+      newString = orig.substr(0, endPosition);
+   } else if( string::npos != ( endPosition = orig.find( successIndic ) ) ) {
+      newString = orig.substr(0, endPosition);
+   } else {
+      newString = orig;
+   }
+   
+   //Error checking to see that it was actually removed
+   if( string::npos !=  newString.find( deadEndIndic1 ) || 
+         string::npos !=  newString.find( deadEndIndic2 ) ||
+         string::npos !=  newString.find( successIndic ) ) {
+      assert(0);
+      //this should NEVER happen. 
+   }
+   
+   return trimWhitespace(newString);
+}
+
+
+vector<string> stripOronymOutputOfEndIndicators ( vector<string> phrases ) {
+   vector<string> newPhrases;
+   
+   for(int i = 0; i < phrases.size(); i++ ) {
+      string strippedStr;
+      strippedStr = removeSuccessAndDeadendIndicatorsFromString( phrases[i] );
+      newPhrases.push_back( strippedStr );
+   }
+   return newPhrases;
+}
+
+
+
+void makeProtvisDiagram ( vector <string> phrases ) {
+   cout << "var root = { " << endl;
+   writeProtovisDataLevel( phrases, 1 );
+   cout << "}"<<endl;
+}
+
+void writeProtovisDataLevel( vector <string> tailPhrases, int curMultiplicativeVal ) {
+   vector<string> firstWords = getAllFirstWords(tailPhrases); //function defined elsewhere 
+   
+   for (int i = 0; i < firstWords.size(); i++) {
+      int freqTemp = getValueForWord( firstWords[i] ); //function defined elsewhere 
+      
+      assert(0);
+      //todo: write things!  
+      
+      vector<string> newTails = getAllOrthoTailPhrasesOf( firstWords[i], tailPhrases ); //function defined elsewhere 
+      
+      writeProtovisDataLevel( newTails, curMultiplicativeVal * freqTemp );
+   }
+   
+}
+
 
 /*returns width drawn*/
 int drawBar(float width) {

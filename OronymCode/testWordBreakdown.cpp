@@ -369,12 +369,12 @@ void test_DrawRect() {
 
 
 bool test_getAllFirstWords() {
-   test_getAllFirstWords("what no incense stinks");
+   return test_getAllFirstWords("what no incense stinks");
 }
 
 bool test_getAllFirstWords( string rootPhrase ) {
    vector<string> phrases = discoverOronymsForPhrase( rootPhrase );
-   test_getAllFirstWords(phrases);
+   return test_getAllFirstWords(phrases);
 
 }
 
@@ -384,9 +384,80 @@ bool test_getAllFirstWords( vector<string> phrases ) {
    for(int i=0; i < firsts.size(); i++) {
       cout << i<<": "<< firsts[i]<< endl;
    }
+   return true;
 }
 
+bool test_removeSuccessAndDeadendIndicatorsFromString() {
+   bool retVal = true;
+   retVal &= test_removeSuccessAndDeadendIndicatorsFromString("dead end indic x's xxx");   
+   retVal &= test_removeSuccessAndDeadendIndicatorsFromString("dead end indic f's fff");
+   retVal &= test_removeSuccessAndDeadendIndicatorsFromString("success indic ___SUCCESS!___");
+   return retVal;
+}
 
+bool test_removeSuccessAndDeadendIndicatorsFromString(string test) {
+   string newStr = removeSuccessAndDeadendIndicatorsFromString(test);
+   cout << "\'"<<test<<"\' ---> \'"<<newStr<<"\'"<<endl;
+   string deadEndIndic1 = "xxx";
+   string deadEndIndic2 = "fff";
+   string successIndic = "___SUCCESS!___";
+   
+   if( string::npos ==  newStr.find( deadEndIndic1 ) || 
+         string::npos ==  newStr.find( deadEndIndic2 ) ||
+         string::npos ==  newStr.find( successIndic ) ) {
+      return true;
+   } else {
+      return false;
+   }
+}
+bool test_stripOronymOutputOfEndIndicators() {
+
+   bool retVal = true;
+   
+   vector<string> testPhrases;
+   testPhrases.push_back("dead end indic x's xxx");   
+   testPhrases.push_back("dead end indic f's fff");
+   testPhrases.push_back("success indic ___SUCCESS!___");
+   
+   retVal &= test_stripOronymOutputOfEndIndicators( testPhrases );
+   return retVal;
+}
+
+bool test_stripOronymOutputOfEndIndicators( string rootPhrase ) {
+
+   bool retVal = true;
+   
+   vector<string> testPhrases = discoverOronymsForPhrase( rootPhrase );
+
+   retVal &= test_stripOronymOutputOfEndIndicators( testPhrases );
+   
+   return retVal;
+}
+
+bool test_stripOronymOutputOfEndIndicators( vector<string> testPhrases ) {
+   cout <<"TEST stripOronymOutputOfEndIndicators, testPhrases.size() ="<< testPhrases.size()<<endl;
+
+   bool retVal = true;
+   string deadEndIndic1 = "xxx";
+   string deadEndIndic2 = "fff";
+   string successIndic = "___SUCCESS!___";
+   
+   vector<string> newStrings = stripOronymOutputOfEndIndicators(testPhrases);
+   
+   for(int i = 0; i < testPhrases.size(); i++) {
+      string newStr = newStrings[i];
+      cout << "\'"<<testPhrases[i]<<"\' ---> \'"<<newStr<<"\'"<<endl;
+      if( string::npos ==  newStr.find( deadEndIndic1 ) || 
+          string::npos ==  newStr.find( deadEndIndic2 ) ||
+            string::npos ==  newStr.find( successIndic ) ) {
+         retVal &= true;
+      } else {
+         cout << "<>FAILED stripOronymOutputOfEndIndicators, newStr = "<<newStr <<endl;
+         retVal &= false;
+      }
+   }
+   return retVal;
+}
 vector<string> buildVectorOfStrings() {
    vector<string> orthoPhrases;
    /*
@@ -1366,6 +1437,10 @@ bool runAllDefaultTests() {
    testsPassed &= true;
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= test_getAllFirstWords();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_removeSuccessAndDeadendIndicatorsFromString();
+   cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
+   testsPassed &= test_stripOronymOutputOfEndIndicators();
  /*
    cout<< endl<<endl<< "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"<<endl;
    testsPassed &= 
@@ -1406,6 +1481,8 @@ void usageMessage() {
    cout << "\n\t\t generateStackedBarGraphOronymTree";   
    cout << "\n\t\t drawRectangle";   
    cout << "\n\t\t getAllFirstWords";   
+   cout << "\n\t\t removeSuccessAndDeadendIndicatorsFromString"; 
+   cout << "\n\t\t stripOronymOutputOfEndIndicators";  
 
    cout << "\n\t\t help";
    cout << "\n\t\t oldMain\n";
@@ -1469,6 +1546,10 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= true;
       } else if( strcmp( argv[1], "getAllFirstWords") == 0 ) {
          allTestsPassed &= test_getAllFirstWords();
+      } else if( strcmp( argv[1], "removeSuccessAndDeadendIndicatorsFromString") == 0 ) {
+         allTestsPassed &= test_removeSuccessAndDeadendIndicatorsFromString( );
+      } else if( strcmp( argv[1], "stripOronymOutputOfEndIndicators") == 0 ) {
+         allTestsPassed &= test_stripOronymOutputOfEndIndicators( );
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
@@ -1523,6 +1604,11 @@ int main(int argc, char* argv[]) {
          allTestsPassed &= true;
       } else if( strcmp( argv[1], "getAllFirstWords") == 0 ) {
          allTestsPassed &= test_getAllFirstWords( argv[2] );
+      } else if( strcmp( argv[1], "removeSuccessAndDeadendIndicatorsFromString") == 0 ) {
+         allTestsPassed &= test_removeSuccessAndDeadendIndicatorsFromString( argv[2] );
+      } else if( strcmp( argv[1], "stripOronymOutputOfEndIndicators") == 0 ) {
+         allTestsPassed &= test_stripOronymOutputOfEndIndicators( argv[2] );
+  
       } else {
          cout << "!!-----Invalid usage-----!!\n";
          cout << "!!-----input: " << argv[0] <<" "<< argv[1]<<" "<<"-----!!\n";
