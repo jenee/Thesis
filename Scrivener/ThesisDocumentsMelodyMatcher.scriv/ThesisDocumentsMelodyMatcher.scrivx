@@ -1249,24 +1249,34 @@
                                 <TextSelection>1179,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="176" Type="Text" Created="2012-12-19 04:14:11 -0800" Modified="2012-12-19 04:16:33 -0800">
+                        <BinderItem ID="176" Type="Text" Created="2012-12-19 04:14:11 -0800" Modified="2012-12-28 20:53:59 -0800">
                             <Title>wave 2 selection criteria</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>476,0</TextSelection>
+                                <TextSelection>744,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="178" Type="Text" Created="2012-12-28 16:47:58 -0800" Modified="2012-12-28 19:34:50 -0800">
-                            <Title>Transcription Pie Charts</Title>
+                        <BinderItem ID="178" Type="Text" Created="2012-12-28 16:47:58 -0800" Modified="2012-12-28 21:08:26 -0800">
+                            <Title>Transcription Pie Charts- per country</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>491,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="180" Type="Text" Created="2012-12-28 21:08:00 -0800" Modified="2012-12-28 21:08:30 -0800">
+                            <Title>Transcriptions Per Recording</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>551,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -1832,6 +1842,16 @@
                         <TextSelection>0,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
+                <BinderItem ID="179" Type="Text" Created="2012-12-28 21:07:42 -0800" Modified="2012-12-28 21:08:09 -0800">
+                    <Title>Untitled</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
             </Children>
         </BinderItem>
         <BinderItem ID="150" Type="Folder" Created="2012-08-18 16:08:51 -0700" Modified="2012-08-18 16:09:07 -0700">
@@ -1910,7 +1930,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="258" Characters="1517" Date="2012-12-28 16:47:34 -0800"></PreviousSession>
+        <PreviousSession Words="444" Characters="2374" Date="2012-12-28 16:47:34 -0800"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
