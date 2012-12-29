@@ -1259,7 +1259,7 @@
                                 <TextSelection>744,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
-                        <BinderItem ID="178" Type="Text" Created="2012-12-28 16:47:58 -0800" Modified="2012-12-28 21:08:26 -0800">
+                        <BinderItem ID="178" Type="Text" Created="2012-12-28 16:47:58 -0800" Modified="2012-12-28 23:30:39 -0800">
                             <Title>Transcription Pie Charts- per country</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
@@ -1852,6 +1852,16 @@
                         <TextSelection>1,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
+                <BinderItem ID="181" Type="Text" Created="2012-12-28 23:26:12 -0800" Modified="2012-12-28 23:26:19 -0800">
+                    <Title></Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
             </Children>
         </BinderItem>
         <BinderItem ID="150" Type="Folder" Created="2012-08-18 16:08:51 -0700" Modified="2012-08-18 16:09:07 -0700">
@@ -1930,7 +1940,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="444" Characters="2374" Date="2012-12-28 16:47:34 -0800"></PreviousSession>
+        <PreviousSession Words="491" Characters="2725" Date="2012-12-28 16:47:34 -0800"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
