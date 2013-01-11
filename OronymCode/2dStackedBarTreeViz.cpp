@@ -112,7 +112,10 @@ void writeProtovisDataLevel( vector <string> tailPhrases, long curWeightVal, int
          //if curFirst is a parent node (has tail phrases)
          cout << "{" << endl;
          writeProtovisDataLevel( newTails, newWeightVal, numTabs + 1 );
-         cout << indent << "}" << endl;
+         cout << indent << "}" ;
+         if( i < firstWords.size() - 1 ) {
+            cout << ",";
+         }
       } else {
          //if curFirst is a child node
          cout << newWeightVal;
@@ -122,6 +125,8 @@ void writeProtovisDataLevel( vector <string> tailPhrases, long curWeightVal, int
          }
          cout << endl;
       }
+      cout << endl;
+
    }
 }
 
