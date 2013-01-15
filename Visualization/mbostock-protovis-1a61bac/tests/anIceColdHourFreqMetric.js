@@ -82,7 +82,7 @@ var anIceColdHourRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 71892,
 
          our: 473502,
@@ -254,7 +254,7 @@ var anIceColdHourRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 866031,
 
          our: 1267641,
@@ -344,7 +344,7 @@ var anIceColdHourRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 89217,
 
          our: 490827,
@@ -434,7 +434,7 @@ var anIceColdHourRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 82668,
 
          our: 484278,
