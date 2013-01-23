@@ -1024,7 +1024,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>238,0</TextSelection>
+                                <TextSelection>744,1</TextSelection>
                             </TextSettings>
                         </BinderItem>
                     </Children>
@@ -1098,7 +1098,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>0,0</TextSelection>
+                                <TextSelection>948,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="25" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -1933,7 +1933,7 @@
         </Collection>
         <Collection Type="RecentSearch" ID="5C131A55-FED7-415D-A243-36EC1E62F7B1" Color="0.922 0.91 0.98">
             <Title>Search Results</Title>
-            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">voic</SearchSettings>
+            <SearchSettings Operator="Exact" Type="All" CaseSensitive="No">statist</SearchSettings>
         </Collection>
     </Collections>
     <LabelSettings>
@@ -1960,7 +1960,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="278" Characters="1596" Date="2013-01-09 11:37:53 -0800"></PreviousSession>
+        <PreviousSession Words="0" Characters="0" Date="2013-01-09 11:37:53 -0800"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
