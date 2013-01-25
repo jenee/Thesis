@@ -58,7 +58,16 @@ Jennifer Hughes</p>
 <hr/>
 <ul>
 <li>
-<p class="binderItem"><strong>NEW abstract</strong><br/>In the field of speech recognition, an algorithm must learn to tell the difference between "a nice rock" or "a gneiss rock". These identical-sounding phrases are called oronyms. Word frequency dictionaries are often used by speech recognition systems to help resolve phonetic sequences with more than one possible orthographic phrase, by looking up which oronym of the root phonetic sequence contains the most common words. However, this approach is highly dependent upon the correctness of the frequ...</p>
+<p class="binderItem"><strong>NEW abstract</strong><br/>Abstract<br/>
+Misheard Me Oronym Tree: Using Oronym Trees to Validate the Correctness of<br/>
+Frequency Dictionaries<br/>
+Jennifer \Jenee" Gayle Hughes<br/>
+In the <br/>
+eld of speech recognition, an algorithm must learn to tell the dierence<br/>
+between "a nice rock" and "a gneiss rock". These identical-sounding phrases are<br/>
+called oronyms. Word frequency dictionaries are often used by speech recognition<br/>
+systems to help resolve phonetic sequences with more than one possible ortho-<br/>
+graphic phrase interpretation, by l...</p>
 </li>
 <li>
 <p class="binderItem"><strong>Overview of Melody Matcher</strong><br/>Overview of Melody Matcher<br/>
@@ -88,9 +97,6 @@ This project aims to facilitate semi-automated composition of melody and accompa
 <p class="binderItem"><strong>So. I bet you're all wondering what's happening wi...</strong><br/>So. I bet you're all wondering what's happening with my thesis. If so, you fit into one of these groups:  1) you're working on a thesis? What's it about?  2) oh, that melody matcher thing you've been mumbling about for the past few years? How's that work again?  3) yeah, I know you're working on your thesis. I keep hearing you talk about all the gory details. But what does it look like?<br/>
 <br/>
 4) But how do you know it really works?  I'll be addressing group #3 today.  As you already know, Melody matc...</p>
-</li>
-<li>
-<p class="binderItem"><strong>FINAL abstract</strong><br/>Melody Matcher </p>
 </li>
 <li>
 <p class="binderItem"><strong>visual representation of the ambiguity of the written</strong><br/>visual representation of the phonetic ambiguity of the written word.  When writing with the expectation that ones words will be uttered by one party to an entirely different audience, you must take into account several layers of ambiguity:<br/>
@@ -1663,6 +1669,63 @@ There is one chart per recording, and one bubble for every significant transcrip
  <br/>
  The y axis shows the total number of times that each phrase was transcribed over...</p>
 </li>
+<li>
+<p class="binderItem"><strong>Sunbursts</strong><br/>I </p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>How to read a sunburst diagram</strong><br/>To read the sunburst diagram, start at the very center, labelled “root”. Then, pick any one segement from the first ring surrounding the root. The word contained in this segment will be the first word in your phrase.<br/>
+<br/>
+Look at all the outer segments that directly touch the first segment you picked. Pick one of those outer segments. That segment is the second word in your phrase.<br/>
+<br/>
+Continue this process until you reach a segment that has no subsequent segments. At this point, you will have a full p...</p>
+</li>
+<li>
+<p class="binderItem"><strong>How I generated the diagram</strong><br/>To generate these sunburst diagrams, we modified our existing C++ program to output data in the Protovis js format. <br/>
+<br/>
+Protovis sunburst data format:<br/>
+var root = {<br/>
+ Child1: {<br/>
+  Child1A: {<br/>
+   Child1Ai: actualCount,<br/>
+   Child1Aii: actualCount<br/>
+  },<br/>
+  Child1B: {<br/>
+   Child1Bi: actualCount<br/>
+  }<br/>
+ }, <br/>
+ Child2: {<br/>
+  Child2A: {<br/>
+   Child2Ai: actualCount,<br/>
+   Child2Aii: actualCount<br/>
+  }<br/>
+ }<br/>
+};<br/>
+   <br/>
+<br/>
+The labels before the colons are displayed on the diagram in their respective segment. <br/>
+<br/>
+Some minor adjustments were ma...</p>
+</li>
+<li>
+<p class="binderItem"><strong>I stink</strong><br/>Here are sunburst diagrams for the oronyms of the phrase "I stink". "I stink" has five different oronyms: "iced ink", "ay stink", "aye stink", "eye stink" and "I stink". The five different outer segments (which are easier to see on the equal-weighted sunburst diagram) represent the end word of each of those oronyms. The sunburst diagram that uses the frequency metric (which looks like a purple bullseye) shows that people are overwhelmingly more likely to hear "I stink" than any other possible or...</p>
+</li>
+<li>
+<p class="binderItem"><strong>An Ice Cold Hour</strong><br/>These graphs are sunburst diagrams, and they represent all the oronyms of the phrase "an ice cold hour". One has all possibilities equally weighted, and the other is weighted by my frequency metric). I generated them with Protovis using data generated by my C++ program. </p>
+</li>
+</ul>
+<hr/>
+<li>
+<p class="binderItem"><strong>RecordingsPerTranscription</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>Explanation of Graph Layout</strong><br/>The Recordings Per Transcription charts show what recordings produced each transcription, and also compares the observed incidence of those transcriptions with the expected UNISYN frequency metric. The Y axis lists the transcribed phrases.  The upper X axis corresponds to the smaller, multi-colored bars. Each bar represents the number of times that a transcribed phrase was observed for a particular recording. <br/>
+The lower X axis corresponds to the large blue bars. They represent the  calculated UN...</p>
+</li>
+</ul>
 </ul>
 <hr/>
 <li>

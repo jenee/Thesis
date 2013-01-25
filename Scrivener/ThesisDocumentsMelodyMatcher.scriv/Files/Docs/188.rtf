@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fnil\fcharset0 Cochin;}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue255;\red255\green0\blue0;\red0\green128\blue0;
+\red128\green0\blue255;\red255\green0\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\fi360\sl288\slmult1\pardirnatural
+
+\f0\fs28 \cf0 To generate these sunburst diagrams, we modified our existing C++ program to output data in the Protovis js format. \
+\
+Protovis sunburst data format:\
+var \cf2 root\cf0  = \{\
+	\cf3 Child1\cf0 : \{\
+		\cf4 Child1A\cf0 : \{\
+			\cf5 Child1Ai\cf0 : \cf6 actualCount\cf0 ,\
+			\cf5 Child1Aii\cf0 : \cf6 actualCount\cf0 \
+		\},\
+		\cf4 Child1B\cf0 : \{\
+			\cf5 Child1Bi\cf0 : \cf6 actualCount\cf0 \
+		\}\
+	\},	\
+	\cf3 Child2\cf0 : \{\
+		\cf4 Child2A\cf0 : \{\
+			\cf5 Child2Ai\cf0 : \cf6 actualCount\cf0 ,\
+			\cf5 Child2Aii\cf0 : \cf6 actualCount\cf0 \
+		\}\
+	\}\
+\};\
+			\
+\
+The labels before the colons are displayed on the diagram in their respective segment. \
+\
+Some minor adjustments were made to the C++ output. The Protovis document format doesn\'92t allow for non-alphanumeric characters to appear in labels, so words like \'93ice-cold\'94 or \'93it\'92s\'94 caused errors. We removed all non-alphanumeric characters so that the sunbursts would generate. \
+\
+\
+One of the main benefits of the Protovis data format is that, once you have your data, you can trivially generate many different types of graphs. For our data format, we can general both sunburst and icicle graph views.  We chose to use sunburst graphs, but having both options was nice.\
+\
+}
