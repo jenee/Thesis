@@ -22,6 +22,8 @@
 
 //GLOBALS for phraseParsing
 typedef std::string phone;
+enum DBType { UNISYN, COCA, OTHER_DB };
+
 #define DICTIONARY_MAX_FREQ 16006650 // the frequency of "the" 
 #define DICTIONARY_MIN_FREQ 0 
 #define deadEndDelim1 "xxx" //formerly "DEADBEEF"
@@ -92,7 +94,7 @@ std::string phoneVectToString( std::vector< phone > phoneVect );
 void printDatabaseResultsRows();
 void DDDDDDDDDDDEBUG(std::string s);
 
-void connectToPhoneticDictionaryDatabase(std::string databaseFilename);
+void connectToPhoneticDictionaryDatabase(std::string databaseFilename="");
 void cleanupDatabase();
 
 #endif

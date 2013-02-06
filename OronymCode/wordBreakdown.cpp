@@ -6,7 +6,7 @@ using namespace std;
 //GLOBALS for database access
 sqlite3 *db;
 vector< vector< string > > databaseResults;
-
+DBType dbflag;
 
 
 
@@ -26,7 +26,7 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
 bool confirmDatabaseInitialization() {
    bool allValsInitialized = true;
    if(db == NULL ) {
-      connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
+      connectToPhoneticDictionaryDatabase();
    }
    allValsInitialized &= (db != NULL);
 }
