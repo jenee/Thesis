@@ -7,7 +7,7 @@ bool testsSetup = false;
 void setupTests() {
    allTestsPassed = true;
    if( testsSetup == false ) {
-      connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
+      connectToFreqDictionaryDatabase();
       testsSetup = true;
    }
 }
@@ -481,7 +481,12 @@ bool test_makeProtvisDiagram( string rootPhrase ) {
 
    bool retVal = true;
    
-   vector<string> testPhrases = discoverOronymsForPhrase( rootPhrase );
+   /*for this particular branch, we can't discover oronyms, so
+   substitute in pre-built vector*/
+   cerr << "In this COCA branch, unique oronyms cannot be created on the fly.";
+   cerr << endl << "Substituting the oronyms for \'an ice cold hour\'" <<endl;
+   vector<string> testPhrases = buildVectorOfStrings();
+                        //discoverOronymsForPhrase( rootPhrase );
 
    retVal &= test_makeProtvisDiagram( testPhrases );
    
@@ -668,7 +673,7 @@ vector<string> buildVectorOfStrings() {
       orthoPhrases.push_back( "	i saw tower	" );
    }
    */
-   /*   
+    
    {
    orthoPhrases.push_back( "n' ay scold hour" );
    orthoPhrases.push_back( "n' ay scold our" );
@@ -961,7 +966,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "on ice-cold hour" );
    orthoPhrases.push_back( "on ice-cold our" );
    }
-*/
+
    /*
    {
    orthoPhrases.push_back( "	on ice-cold our  	" );
@@ -1056,7 +1061,8 @@ orthoPhrases.push_back( "	a nye scold our  	" );
 orthoPhrases.push_back( "	a nice cold our  	" );
 orthoPhrases.push_back( "	an ice cold our  	" );
 
-   } */
+   } 
+   */
    /*
    {
    orthoPhrases.push_back("	'n' ay scold hour 	");
@@ -1213,6 +1219,7 @@ orthoPhrases.push_back( "	an ice cold our  	" );
    orthoPhrases.push_back("	o' nye skol dower 	");
    }
 */
+/*
    {
    orthoPhrases.push_back( "	a light cold hour	" );
    orthoPhrases.push_back( "	a nice bold hour	" );
@@ -1393,13 +1400,15 @@ orthoPhrases.push_back( "	an ice cold our  	" );
    orthoPhrases.push_back( "	then ice hole power	" );
    orthoPhrases.push_back( "	then ices co the where	" );
    orthoPhrases.push_back( "	we nice old hour	" );
+
    }
+    */
    return orthoPhrases;
 }
 
 void oldMain() {
 
-   connectToPhoneticDictionaryDatabase("/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict");
+   connectToFreqDictionaryDatabase();
 
    string phrase = "A nice cold shower";
 

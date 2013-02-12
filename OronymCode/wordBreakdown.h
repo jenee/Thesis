@@ -22,7 +22,6 @@
 
 //GLOBALS for phraseParsing
 typedef std::string phone;
-enum DBType { UNISYN, COCA, OTHER_DB };
 
 #define DICTIONARY_MAX_FREQ 16006650 // the frequency of "the" 
 #define DICTIONARY_MIN_FREQ 0 
@@ -37,7 +36,7 @@ typedef struct MetaWord {
 
 static int callback(void *queryterm, int nCol, char **values, char **headers);
 
-bool confirmInitVals();
+bool confirmDatabaseInitialization();
 
 std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::string> sampaWords );
 std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWord );
@@ -94,7 +93,7 @@ std::string phoneVectToString( std::vector< phone > phoneVect );
 void printDatabaseResultsRows();
 void DDDDDDDDDDDEBUG(std::string s);
 
-void connectToPhoneticDictionaryDatabase(std::string databaseFilename="");
+void connectToFreqDictionaryDatabase(std::string databaseFilename="");
 void cleanupDatabase();
 
 #endif

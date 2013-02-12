@@ -6,7 +6,7 @@ using namespace std;
 //GLOBALS for database access
 sqlite3 *db;
 vector< vector< string > > databaseResults;
-DBType dbflag;
+
 
 
 
@@ -26,9 +26,10 @@ static int callback(void *queryterm, int nCol, char **values, char **headers){
 bool confirmDatabaseInitialization() {
    bool allValsInitialized = true;
    if(db == NULL ) {
-      connectToPhoneticDictionaryDatabase();
+      connectToFreqDictionaryDatabase();
    }
    allValsInitialized &= (db != NULL);
+   return allValsInitialized;
 }
 
 vector< vector<phone> > getPhoneSeqsForSampaStrs( vector<string> sampaStrings ) {
@@ -465,11 +466,17 @@ int queryDBwithOrthoForFreq( string orthoWord ) {
    
    string lowercaseOrthoWord = toLowerCase( orthoWord );
 
-   sprintf(sqlQuery, "select freq from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
+   sprintf(sqlQuery, "select freq from COCA_500k_wordlist where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
    
+   //I'm honestly not sure what's going on here, entirely.
+   //from what I gather, it returns a vector of strings that should have at most 
+   // one string in it,
    vector<string> SAMPAvals = queryDBforStrings( sqlQuery, lowercaseOrthoWord );
    int result = 0;
 
+   //that string returned is a numerical value, and so we use stringstream
+   // to turn it into an actual number. At least, that's what it looks like
+   // this does, and it's been returning the correct values, so there's that!
    if( SAMPAvals.size() > 0 ) {
       stringstream( SAMPAvals.at(0) ) >> result;
    }
@@ -1082,13 +1089,14 @@ void DDDDDDDDDDDEBUG(string s) {
 	cerr << s << endl;	
 }
   
-void connectToPhoneticDictionaryDatabase(string databaseFilename) {
+void connectToFreqDictionaryDatabase(string databaseFilename) {
    int rc;
    
    char* databaseName = (char*) malloc( sizeof(char*) * MAX_DATABASE_FILE_PATH_LEN );
    
    if( databaseFilename.empty() ) {
-      databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict";
+      //databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/phoneticDict";
+      databaseName = "/Users/admin/Documents/Thesis/SQLiteDatabases/COCA_500k_wordlist_DB";
    } else {
       sprintf(databaseName, "%s", databaseFilename.c_str());
    }
@@ -1105,9 +1113,11 @@ void connectToPhoneticDictionaryDatabase(string databaseFilename) {
    }
 }
 
+
 void cleanupDatabase() {
    confirmDatabaseInitialization();
    sqlite3_close(db);
+
 }
 /*
 vector<string>  getPhrasePhonemes(string phrase) {

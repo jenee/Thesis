@@ -1,0 +1,24 @@
+Since this branch uses the COCA freq database, 
+(which has no phonetic data),
+any function that needs phonetic data WILL NOT WORK.
+
+This branch has MANY broken functions. 
+
+HERE ARE THE ONLY FUNCTIONS THAT ARE INTENDED TO WORK:
+
+in WORDBREAKDOWN.CPP
+connectToFreqDictionaryDatabase
+queryDBwithOrthoForFreq
+
+in TESTWORDBREAKDOWN.CPP
+test_makeProtvisDiagram
+
+in 2DSTACKEDBARTREEVIZ.CPP
+getValueForWord
+makeProtvisDiagram
+writeProtovisDataLevel
+
+Any functions that these depend on may be expected to work ONLY
+in the situation that the above higher-level functions call for.
+
+
