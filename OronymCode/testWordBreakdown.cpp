@@ -683,10 +683,12 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "n' aye scold our" );
    orthoPhrases.push_back( "n' aye skol dour" );
    orthoPhrases.push_back( "n' aye skol dower" );
+   /*
    orthoPhrases.push_back( "n' e scold hour" );
    orthoPhrases.push_back( "n' e scold our" );
    orthoPhrases.push_back( "n' e skol dour" );
    orthoPhrases.push_back( "n' e skol dower" );
+   */
    orthoPhrases.push_back( "n' eye scold hour" );
    orthoPhrases.push_back( "n' eye scold our" );
    orthoPhrases.push_back( "n' eye skol dour" );
@@ -713,6 +715,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "a gneiss cole dower" );
    orthoPhrases.push_back( "a gneiss kohl dour" );
    orthoPhrases.push_back( "a gneiss kohl dower" );
+   /*
    orthoPhrases.push_back( "a knee scold hour" );
    orthoPhrases.push_back( "a knee scold our" );
    orthoPhrases.push_back( "a knee skol dour" );
@@ -721,6 +724,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "a ne scold our" );
    orthoPhrases.push_back( "a ne skol dour" );
    orthoPhrases.push_back( "a ne skol dower" );
+   */
    orthoPhrases.push_back( "a nice coal dour" );
    orthoPhrases.push_back( "a nice coal dower" );
    orthoPhrases.push_back( "a nice cold hour" );
@@ -729,6 +733,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "a nice cole dower" );
    orthoPhrases.push_back( "a nice kohl dour" );
    orthoPhrases.push_back( "a nice kohl dower" );
+   /*
    orthoPhrases.push_back( "a niece coal dour" );
    orthoPhrases.push_back( "a niece coal dower" );
    orthoPhrases.push_back( "a niece cold hour" );
@@ -737,6 +742,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "a niece cole dower" );
    orthoPhrases.push_back( "a niece kohl dour" );
    orthoPhrases.push_back( "a niece kohl dower" );
+   */
    orthoPhrases.push_back( "a nigh scold hour" );
    orthoPhrases.push_back( "a nigh scold our" );
    orthoPhrases.push_back( "a nigh skol dour" );
@@ -745,6 +751,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "a nye scold our" );
    orthoPhrases.push_back( "a nye skol dour" );
    orthoPhrases.push_back( "a nye skol dower" );
+   /*
    orthoPhrases.push_back( "ah gneiss coal dour" );
    orthoPhrases.push_back( "ah gneiss coal dower" );
    orthoPhrases.push_back( "ah gneiss cold hour" );
@@ -785,6 +792,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "ah nye scold our" );
    orthoPhrases.push_back( "ah nye skol dour" );
    orthoPhrases.push_back( "ah nye skol dower" );
+   */
    orthoPhrases.push_back( "an ay scold hour" );
    orthoPhrases.push_back( "an ay scold our" );
    orthoPhrases.push_back( "an ay skol dour" );
@@ -793,10 +801,12 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "an aye scold our" );
    orthoPhrases.push_back( "an aye skol dour" );
    orthoPhrases.push_back( "an aye skol dower" );
+   /*
    orthoPhrases.push_back( "an e scold hour" );
    orthoPhrases.push_back( "an e scold our" );
    orthoPhrases.push_back( "an e skol dour" );
    orthoPhrases.push_back( "an e skol dower" );
+   */
    orthoPhrases.push_back( "an eye scold hour" );
    orthoPhrases.push_back( "an eye scold our" );
    orthoPhrases.push_back( "an eye skol dour" );
@@ -867,6 +877,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "anne ice kohl dower" );
    orthoPhrases.push_back( "anne ice-cold hour" );
    orthoPhrases.push_back( "anne ice-cold our" );
+   /*
    orthoPhrases.push_back( "eh gneiss coal dour" );
    orthoPhrases.push_back( "eh gneiss coal dower" );
    orthoPhrases.push_back( "eh gneiss cold hour" );
@@ -947,6 +958,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "et nye scold our" );
    orthoPhrases.push_back( "et nye skol dour" );
    orthoPhrases.push_back( "et nye skol dower" );
+   */
    orthoPhrases.push_back( "o' gneiss coal dour" );
    orthoPhrases.push_back( "o' gneiss coal dower" );
    orthoPhrases.push_back( "o' gneiss cold hour" );
@@ -955,6 +967,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "o' gneiss cole dower" );
    orthoPhrases.push_back( "o' gneiss kohl dour" );
    orthoPhrases.push_back( "o' gneiss kohl dower" );
+   /*
    orthoPhrases.push_back( "o' knee scold hour" );
    orthoPhrases.push_back( "o' knee scold our" );
    orthoPhrases.push_back( "o' knee skol dour" );
@@ -963,6 +976,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "o' ne scold our" );
    orthoPhrases.push_back( "o' ne skol dour" );
    orthoPhrases.push_back( "o' ne skol dower" );
+   */
    orthoPhrases.push_back( "o' nice coal dour" );
    orthoPhrases.push_back( "o' nice coal dower" );
    orthoPhrases.push_back( "o' nice cold hour" );
@@ -971,6 +985,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "o' nice cole dower" );
    orthoPhrases.push_back( "o' nice kohl dour" );
    orthoPhrases.push_back( "o' nice kohl dower" );
+   /*
    orthoPhrases.push_back( "o' niece coal dour" );
    orthoPhrases.push_back( "o' niece coal dower" );
    orthoPhrases.push_back( "o' niece cold hour" );
@@ -979,6 +994,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "o' niece cole dower" );
    orthoPhrases.push_back( "o' niece kohl dour" );
    orthoPhrases.push_back( "o' niece kohl dower" );
+   */
    orthoPhrases.push_back( "o' nigh scold hour" );
    orthoPhrases.push_back( "o' nigh scold our" );
    orthoPhrases.push_back( "o' nigh skol dour" );
@@ -987,6 +1003,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "o' nye scold our" );
    orthoPhrases.push_back( "o' nye skol dour" );
    orthoPhrases.push_back( "o' nye skol dower" );
+   /*
    orthoPhrases.push_back( "on ay scold hour" );
    orthoPhrases.push_back( "on ay scold our" );
    orthoPhrases.push_back( "on ay skol dour" );
@@ -1017,6 +1034,7 @@ vector<string> buildVectorOfStrings() {
    orthoPhrases.push_back( "on ice kohl dower" );
    orthoPhrases.push_back( "on ice-cold hour" );
    orthoPhrases.push_back( "on ice-cold our" );
+   */
    }
 
    /*
