@@ -28,20 +28,6 @@ var oronymRoot = {
 
          }
       },
-      e: {
-         scold: {
-            hour: 41570,
-
-            our: 115885,
-
-         },
-         skol: {
-            dour: 10546,
-
-            dower: 10104,
-
-         }
-      },
       eye: {
          scold: {
             hour: 55821,
@@ -130,34 +116,6 @@ var oronymRoot = {
 
          }
       },
-      knee: {
-         scold: {
-            hour: 206536,
-
-            our: 280851,
-
-         },
-         skol: {
-            dour: 175512,
-
-            dower: 175070,
-
-         }
-      },
-      ne: {
-         scold: {
-            hour: 200536,
-
-            our: 274851,
-
-         },
-         skol: {
-            dour: 169512,
-
-            dower: 169070,
-
-         }
-      },
       nice: {
          coal: {
             dour: 197101,
@@ -181,32 +139,6 @@ var oronymRoot = {
             dour: 194406,
 
             dower: 193964,
-
-         }
-      },
-      niece: {
-         coal: {
-            dour: 173586,
-
-            dower: 173144,
-
-         },
-         cold: {
-            hour: 224204,
-
-            our: 298519,
-
-         },
-         cole: {
-            dour: 172602,
-
-            dower: 172160,
-
-         },
-         kohl: {
-            dour: 170891,
-
-            dower: 170449,
 
          }
       },
@@ -239,142 +171,6 @@ var oronymRoot = {
          }
       }
    },
-   ah: {
-      gneiss: {
-         coal: {
-            dour: 9470,
-
-            dower: 9028,
-
-         },
-         cold: {
-            hour: 60088,
-
-            our: 134403,
-
-         },
-         cole: {
-            dour: 8486,
-
-            dower: 8044,
-
-         },
-         kohl: {
-            dour: 6775,
-
-            dower: 6333,
-
-         }
-      },
-      knee: {
-         scold: {
-            hour: 43674,
-
-            our: 117989,
-
-         },
-         skol: {
-            dour: 12650,
-
-            dower: 12208,
-
-         }
-      },
-      ne: {
-         scold: {
-            hour: 37674,
-
-            our: 111989,
-
-         },
-         skol: {
-            dour: 6650,
-
-            dower: 6208,
-
-         }
-      },
-      nice: {
-         coal: {
-            dour: 34239,
-
-            dower: 33797,
-
-         },
-         cold: {
-            hour: 84857,
-
-            our: 159172,
-
-         },
-         cole: {
-            dour: 33255,
-
-            dower: 32813,
-
-         },
-         kohl: {
-            dour: 31544,
-
-            dower: 31102,
-
-         }
-      },
-      niece: {
-         coal: {
-            dour: 10724,
-
-            dower: 10282,
-
-         },
-         cold: {
-            hour: 61342,
-
-            our: 135657,
-
-         },
-         cole: {
-            dour: 9740,
-
-            dower: 9298,
-
-         },
-         kohl: {
-            dour: 8029,
-
-            dower: 7587,
-
-         }
-      },
-      nigh: {
-         scold: {
-            hour: 37402,
-
-            our: 111717,
-
-         },
-         skol: {
-            dour: 6378,
-
-            dower: 5936,
-
-         }
-      },
-      nye: {
-         scold: {
-            hour: 37422,
-
-            our: 111737,
-
-         },
-         skol: {
-            dour: 6398,
-
-            dower: 5956,
-
-         }
-      }
-   },
    an: {
       ay: {
          scold: {
@@ -401,20 +197,6 @@ var oronymRoot = {
             dour: 160632,
 
             dower: 160190,
-
-         }
-      },
-      e: {
-         scold: {
-            hour: 201290,
-
-            our: 275605,
-
-         },
-         skol: {
-            dour: 170266,
-
-            dower: 169824,
 
          }
       },
@@ -479,276 +261,184 @@ var oronymRoot = {
 
       }
    },
-   eh: {
-      gneiss: {
-         coal: {
-            dour: 4933,
+   ann: {
+      ay: {
+         scold: {
+            hour: 37917,
 
-            dower: 4491,
+            our: 112232,
+
+         },
+         skol: {
+            dour: 6893,
+
+            dower: 6451,
+
+         }
+      },
+      aye: {
+         scold: {
+            hour: 38123,
+
+            our: 112438,
+
+         },
+         skol: {
+            dour: 7099,
+
+            dower: 6657,
+
+         }
+      },
+      eye: {
+         scold: {
+            hour: 62008,
+
+            our: 136323,
+
+         },
+         skol: {
+            dour: 30984,
+
+            dower: 30542,
+
+         }
+      },
+      i: {
+         scold: {
+            hour: 174444,
+
+            our: 248759,
+
+         },
+         skol: {
+            dour: 143420,
+
+            dower: 142978,
+
+         }
+      },
+      ice: {
+         coal: {
+            dour: 23254,
+
+            dower: 22812,
 
          },
          cold: {
-            hour: 55551,
+            hour: 73872,
 
-            our: 129866,
-
-         },
-         cole: {
-            dour: 3949,
-
-            dower: 3507,
-
-         },
-         kohl: {
-            dour: 2238,
-
-            dower: 1796,
-
-         }
-      },
-      knee: {
-         scold: {
-            hour: 39137,
-
-            our: 113452,
-
-         },
-         skol: {
-            dour: 8113,
-
-            dower: 7671,
-
-         }
-      },
-      ne: {
-         scold: {
-            hour: 33137,
-
-            our: 107452,
-
-         },
-         skol: {
-            dour: 2113,
-
-            dower: 1671,
-
-         }
-      },
-      nice: {
-         coal: {
-            dour: 29702,
-
-            dower: 29260,
-
-         },
-         cold: {
-            hour: 80320,
-
-            our: 154635,
+            our: 148187,
 
          },
          cole: {
-            dour: 28718,
+            dour: 22270,
 
-            dower: 28276,
-
-         },
-         kohl: {
-            dour: 27007,
-
-            dower: 26565,
-
-         }
-      },
-      niece: {
-         coal: {
-            dour: 6187,
-
-            dower: 5745,
-
-         },
-         cold: {
-            hour: 56805,
-
-            our: 131120,
-
-         },
-         cole: {
-            dour: 5203,
-
-            dower: 4761,
+            dower: 21828,
 
          },
          kohl: {
-            dour: 3492,
+            dour: 20559,
 
-            dower: 3050,
-
-         }
-      },
-      nigh: {
-         scold: {
-            hour: 32865,
-
-            our: 107180,
-
-         },
-         skol: {
-            dour: 1841,
-
-            dower: 1399,
+            dower: 20117,
 
          }
       },
-      nye: {
-         scold: {
-            hour: 32885,
+      icecold: {
+         hour: 37710,
 
-            our: 107200,
+         our: 112025,
 
-         },
-         skol: {
-            dour: 1861,
-
-            dower: 1419,
-
-         }
       }
    },
-   et: {
-      gneiss: {
-         coal: {
-            dour: 8806,
+   anne: {
+      ay: {
+         scold: {
+            hour: 35873,
 
-            dower: 8364,
+            our: 110188,
+
+         },
+         skol: {
+            dour: 4849,
+
+            dower: 4407,
+
+         }
+      },
+      aye: {
+         scold: {
+            hour: 36079,
+
+            our: 110394,
+
+         },
+         skol: {
+            dour: 5055,
+
+            dower: 4613,
+
+         }
+      },
+      eye: {
+         scold: {
+            hour: 59964,
+
+            our: 134279,
+
+         },
+         skol: {
+            dour: 28940,
+
+            dower: 28498,
+
+         }
+      },
+      i: {
+         scold: {
+            hour: 172400,
+
+            our: 246715,
+
+         },
+         skol: {
+            dour: 141376,
+
+            dower: 140934,
+
+         }
+      },
+      ice: {
+         coal: {
+            dour: 21210,
+
+            dower: 20768,
 
          },
          cold: {
-            hour: 59424,
+            hour: 71828,
 
-            our: 133739,
-
-         },
-         cole: {
-            dour: 7822,
-
-            dower: 7380,
-
-         },
-         kohl: {
-            dour: 6111,
-
-            dower: 5669,
-
-         }
-      },
-      knee: {
-         scold: {
-            hour: 43010,
-
-            our: 117325,
-
-         },
-         skol: {
-            dour: 11986,
-
-            dower: 11544,
-
-         }
-      },
-      ne: {
-         scold: {
-            hour: 37010,
-
-            our: 111325,
-
-         },
-         skol: {
-            dour: 5986,
-
-            dower: 5544,
-
-         }
-      },
-      nice: {
-         coal: {
-            dour: 33575,
-
-            dower: 33133,
-
-         },
-         cold: {
-            hour: 84193,
-
-            our: 158508,
+            our: 146143,
 
          },
          cole: {
-            dour: 32591,
+            dour: 20226,
 
-            dower: 32149,
-
-         },
-         kohl: {
-            dour: 30880,
-
-            dower: 30438,
-
-         }
-      },
-      niece: {
-         coal: {
-            dour: 10060,
-
-            dower: 9618,
-
-         },
-         cold: {
-            hour: 60678,
-
-            our: 134993,
-
-         },
-         cole: {
-            dour: 9076,
-
-            dower: 8634,
+            dower: 19784,
 
          },
          kohl: {
-            dour: 7365,
+            dour: 18515,
 
-            dower: 6923,
-
-         }
-      },
-      nigh: {
-         scold: {
-            hour: 36738,
-
-            our: 111053,
-
-         },
-         skol: {
-            dour: 5714,
-
-            dower: 5272,
+            dower: 18073,
 
          }
       },
-      nye: {
-         scold: {
-            hour: 36758,
+      icecold: {
+         hour: 35666,
 
-            our: 111073,
+         our: 109981,
 
-         },
-         skol: {
-            dour: 5734,
-
-            dower: 5292,
-
-         }
       }
    },
    o: {
@@ -778,34 +468,6 @@ var oronymRoot = {
 
          }
       },
-      knee: {
-         scold: {
-            hour: 37917,
-
-            our: 112232,
-
-         },
-         skol: {
-            dour: 6893,
-
-            dower: 6451,
-
-         }
-      },
-      ne: {
-         scold: {
-            hour: 31917,
-
-            our: 106232,
-
-         },
-         skol: {
-            dour: 893,
-
-            dower: 451,
-
-         }
-      },
       nice: {
          coal: {
             dour: 28482,
@@ -829,32 +491,6 @@ var oronymRoot = {
             dour: 25787,
 
             dower: 25345,
-
-         }
-      },
-      niece: {
-         coal: {
-            dour: 4967,
-
-            dower: 4525,
-
-         },
-         cold: {
-            hour: 55585,
-
-            our: 129900,
-
-         },
-         cole: {
-            dour: 3983,
-
-            dower: 3541,
-
-         },
-         kohl: {
-            dour: 2272,
-
-            dower: 1830,
 
          }
       },
@@ -885,110 +521,6 @@ var oronymRoot = {
             dower: 199,
 
          }
-      }
-   },
-   on: {
-      ay: {
-         scold: {
-            hour: 197873,
-
-            our: 272188,
-
-         },
-         skol: {
-            dour: 166849,
-
-            dower: 166407,
-
-         }
-      },
-      aye: {
-         scold: {
-            hour: 198079,
-
-            our: 272394,
-
-         },
-         skol: {
-            dour: 167055,
-
-            dower: 166613,
-
-         }
-      },
-      e: {
-         scold: {
-            hour: 207713,
-
-            our: 282028,
-
-         },
-         skol: {
-            dour: 176689,
-
-            dower: 176247,
-
-         }
-      },
-      eye: {
-         scold: {
-            hour: 221964,
-
-            our: 296279,
-
-         },
-         skol: {
-            dour: 190940,
-
-            dower: 190498,
-
-         }
-      },
-      i: {
-         scold: {
-            hour: 334400,
-
-            our: 408715,
-
-         },
-         skol: {
-            dour: 303376,
-
-            dower: 302934,
-
-         }
-      },
-      ice: {
-         coal: {
-            dour: 183210,
-
-            dower: 182768,
-
-         },
-         cold: {
-            hour: 233828,
-
-            our: 308143,
-
-         },
-         cole: {
-            dour: 182226,
-
-            dower: 181784,
-
-         },
-         kohl: {
-            dour: 180515,
-
-            dower: 180073,
-
-         }
-      },
-      icecold: {
-         hour: 197666,
-
-         our: 271981,
-
       }
    }
 };
