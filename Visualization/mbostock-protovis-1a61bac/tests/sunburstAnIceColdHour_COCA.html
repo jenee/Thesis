@@ -24,7 +24,7 @@ var vis = new pv.Panel()
     .bottom(0);
 
 var partition = vis.add(pv.Layout.Partition.Fill)
-    .nodes(pv.dom(anIceColdHourRoot).root("root").nodes())
+    .nodes(pv.dom(oronymRoot).root("root").nodes())
     .size(function(d) d.nodeValue)
     .order("descending")
     .orient("radial");

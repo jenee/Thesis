@@ -96,7 +96,7 @@ var oronymRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 31523,
 
          our: 105838,
@@ -472,7 +472,7 @@ var oronymRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 191243,
 
          our: 265558,
@@ -984,7 +984,7 @@ var oronymRoot = {
 
          }
       },
-      ice-cold: {
+      icecold: {
          hour: 197666,
 
          our: 271981,
