@@ -28,7 +28,7 @@ bool confirmDatabaseInitialization() {
    if(db == NULL ) {
       connectToPhoneticDictionaryDatabase();
    }
-   allValsInitialized &= (db != NULL);
+   return allValsInitialized &= (db != NULL);
 }
 
 vector< vector<phone> > getPhoneSeqsForSampaStrs( vector<string> sampaStrings ) {
@@ -467,9 +467,16 @@ int queryDBwithOrthoForFreq( string orthoWord ) {
 
    sprintf(sqlQuery, "select freq from phoneticDictTable where lower(ortho) = \"%s\"",lowercaseOrthoWord.c_str()); 
    
+   //I'm honestly not sure what's going on here, entirely.
+   //from what I gather, it returns a vector of strings that should have at most 
+   // one string in it
    vector<string> SAMPAvals = queryDBforStrings( sqlQuery, lowercaseOrthoWord );
    int result = 0;
 
+
+   //the string returned is a numerical value, and so we use stringstream
+   // to turn it into an actual number. At least, that's what it looks like
+   // this does, and it's been returning the correct values, so there's that!
    if( SAMPAvals.size() > 0 ) {
       stringstream( SAMPAvals.at(0) ) >> result;
    }

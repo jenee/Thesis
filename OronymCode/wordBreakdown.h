@@ -37,7 +37,7 @@ typedef struct MetaWord {
 
 static int callback(void *queryterm, int nCol, char **values, char **headers);
 
-bool confirmInitVals();
+bool confirmDatabaseInitialization();
 
 std::vector< std::vector<phone> > getPhoneSeqsForSampaStrs( std::vector<std::string> sampaWords );
 std::vector< std::vector<phone> > getPhoneSeqsForOrthoWord( std::string orthoWord );
