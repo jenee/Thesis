@@ -582,14 +582,14 @@
                                         <TextSelection>0,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
-                                <BinderItem ID="155" Type="Text" Created="2012-12-14 13:25:58 -0800" Modified="2012-12-18 13:55:35 -0800">
+                                <BinderItem ID="155" Type="Text" Created="2012-12-14 13:25:58 -0800" Modified="2013-03-05 19:03:57 -0800">
                                     <Title>iced ink oronym info</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>725,0</TextSelection>
+                                        <TextSelection>433,195</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                                 <BinderItem ID="156" Type="Text" Created="2012-12-18 13:09:53 -0800" Modified="2012-12-18 13:12:16 -0800">
@@ -1088,7 +1088,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>948,0</TextSelection>
+                                <TextSelection>546,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="25" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:09:09 -0700">
@@ -1237,7 +1237,7 @@
                                 <TextSelection>0,0</TextSelection>
                             </TextSettings>
                             <Children>
-                                <BinderItem ID="187" Type="Text" Created="2013-01-24 15:49:09 -0800" Modified="2013-01-24 15:54:35 -0800">
+                                <BinderItem ID="187" Type="Text" Created="2013-01-24 15:49:09 -0800" Modified="2013-03-06 11:54:02 -0800">
                                     <Title>How to read a sunburst diagram</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -1296,7 +1296,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>1157,0</TextSelection>
+                                        <TextSelection>610,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                             </Children>
@@ -1330,7 +1330,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>744,0</TextSelection>
+                                <TextSelection>581,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="178" Type="Text" Created="2012-12-28 16:47:58 -0800" Modified="2013-01-09 11:39:06 -0800">
@@ -1340,7 +1340,7 @@
                                 <NotesTextSelection>0,0</NotesTextSelection>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>4148,6</TextSelection>
+                                <TextSelection>4405,0</TextSelection>
                             </TextSettings>
                         </BinderItem>
                         <BinderItem ID="180" Type="Text" Created="2012-12-28 21:08:00 -0800" Modified="2012-12-29 03:06:44 -0800">
@@ -1995,7 +1995,7 @@
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <TextSelection>1816,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
@@ -2034,7 +2034,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2013-01-24 15:14:45 -0800"></PreviousSession>
+        <PreviousSession Words="16" Characters="91" Date="2013-03-03 12:08:06 -0800"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
