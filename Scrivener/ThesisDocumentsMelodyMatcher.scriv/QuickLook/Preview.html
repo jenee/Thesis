@@ -920,9 +920,10 @@ i stink ___SUCCESS!___<br/>
 iced ink ___SUCCESS!___<br/>
 NO TESTS FAILED! :) <br/>
 <br/>
-<br/>
-Oronym freqs:<br/>
-TEST getCSVofWordFreqsForPhrase, orthoPhrase =aye ay...</p>
+aye sting xxx<br/>
+aye stink ___SUCCESS!___<br/>
+ay sting xxx<br/>
+ay stink ___SUC...</p>
 </li>
 <li>
 <p class="binderItem"><strong>rock n roll oronym info</strong><br/>0***sampa phrase after append  _"__r__A__k__"__E__n__"__r__ou__l_<br/>
@@ -1674,11 +1675,11 @@ There is one chart per recording, and one bubble for every significant transcrip
 <hr/>
 <ul>
 <li>
-<p class="binderItem"><strong>How to read a sunburst diagram</strong><br/>To read the sunburst diagram, start at the very center, labelled “root”. Then, pick any one segement from the first ring surrounding the root. The word contained in this segment will be the first word in your phrase.<br/>
+<p class="binderItem"><strong>How to read a sunburst diagram</strong><br/>To read the sunburst diagram, start at the very center, labelled “root”. Then, pick any one segment from the first ring surrounding the root. The word contained in this segment will be the first word in your phrase.<br/>
 <br/>
-Look at all the outer segments that directly touch the first segment you picked. Pick one of those outer segments. That segment is the second word in your phrase.<br/>
+Look at all the outer segments that directly touch the first segment you picked. Pick one of those outer segments. The word in that segment is the second word in your phrase.<br/>
 <br/>
-Continue this process until you reach a segment that has no subsequent segments. At this point, you will have a full p...</p>
+Continue this process until you reach a segment that has no subsequent outer segments. At this point, you w...</p>
 </li>
 <li>
 <p class="binderItem"><strong>How I generated the diagram</strong><br/>To generate these sunburst diagrams, we modified our existing C++ program to output data in the Protovis js format. <br/>
@@ -1732,6 +1733,64 @@ The lower X axis corresponds to the large blue bars. They represent the  calcula
 </li>
 <hr/>
 <ul>
+<li>
+<p class="binderItem"><strong>Mechanical Turk Oronym Testing</strong></p>
+</li>
+<hr/>
+<ul>
+<li>
+<p class="binderItem"><strong>A nice coal dower</strong><br/>A nice coal dower<br/>
+<br/>
+!Discovered 6 phoneseqs:<br/>
+---"e"naIs"koul"daU`r<br/>
+---@"naIs"koul"daU`r<br/>
+---"A"naIs"koul"daU`r<br/>
+---"e"nis"koul"daU`r<br/>
+---@"nis"koul"daU`r<br/>
+---"A"nis"koul"daU`r<br/>
+</p>
+</li>
+<li>
+<p class="binderItem"><strong>An ice cold hour</strong><br/>An ice cold hour<br/>
+<br/>
+ 152 oronyms:<br/>
+<br/>
+'n' ay scold hour <br/>
+'n' ay scold our <br/>
+'n' ay skol dour <br/>
+'n' ay skol dower <br/>
+'n' aye scold hour <br/>
+'n' aye scold our <br/>
+'n' aye skol dour <br/>
+'n' aye skol dower <br/>
+'n' eye scold hour <br/>
+'n' eye scold our <br/>
+'n' eye skol dour <br/>
+'n' eye skol dower <br/>
+'n' i scold hour <br/>
+'n' i scold our <br/>
+'n' i skol dour <br/>
+'n' i skol dower <br/>
+'n' ice coal dour <br/>
+'n' ice coal dower <br/>
+'n' ice cold hour <br/>
+'n' ice cold our <br/>
+'n' ice cole dour <br/>
+'n' ice cole dower <br/>
+'n' ice kohl dour <br/>
+'n' ice kohl dower <br/>
+'n' ice-cold ...</p>
+</li>
+<li>
+<p class="binderItem"><strong>Selection criteria for oronyms to record</strong><br/>Selection criteria for oronyms to record and recordings to transcribe<br/>
+<br/>
+Given that ``a nice cold hour'' has (#) oronyms, and ``an ice cold hour’’ has (#), it was necessary to narrow down the number of oronyms recorded in phase one of our user study.  <br/>
+<br/>
+To select which oronyms we would submit to Mechanical Turk for workers to record, we decided to on the following selection criteria:<br/>
+-We discarded oronyms that included words with frequency values of less than 30.  Asking a general audience to pron...</p>
+</li>
+</ul>
+<hr/>
 <li>
 <p class="binderItem"><strong>Wave 1 Oronym Selection Criteria</strong><br/>For Phase one, we chose to have our users record some of the more-common oronyms of the phrase “a nice cold hour”.  That particular phrase has 290 separate oronyms, which was far more than we wanted to record.  We decided to pare down our oronym recording selection using the following criteria:<br/>
 (1) Discard all oronym phrases that contain words that capitalize to proper nouns, if that capitalization leads to alternative pronunciation (Example: nice -> “Nice” pronounced like “niece”.<br/>
@@ -1831,6 +1890,11 @@ Selection of transcriptions to chart:<br/>
 (1) Transcriptions must appear in more than one recording<br/>
 (2) Transcriptions must appear more than once in at least one recording<br/>
 (3) Transcriptions </p>
+</li>
+<li>
+<p class="binderItem"><strong>Phase 2 resutls</strong><br/><br/>
+<br/>
+We gathered \numTotalTranscriptionsPhaseTwo transcriptions for our \recordingsPhaseTwoUserStudy recorded phrases, with each recording garnering \numTranscriptionsPerRecordingPhaseTwoUserStudy transcriptions each.  Worldwide, the top four most-frequently transcribed phrases made up for 70% of total transcriptions.  The top transcribed phrase worldwide was ``an ice cold hour'', with \phaseTwoUserStudyTimesTranscribedAnIceColdHour transcriptions, followed by  ``a nice cold hour'', with \phaseTwoU...</p>
 </li>
 </ul>
 </ul>
