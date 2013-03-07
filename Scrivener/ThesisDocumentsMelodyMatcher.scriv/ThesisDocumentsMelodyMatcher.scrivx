@@ -1244,7 +1244,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>2,0</TextSelection>
+                                        <TextSelection>0,713</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                                 <BinderItem ID="188" Type="Text" Created="2013-01-24 15:54:35 -0800" Modified="2013-01-24 16:04:20 -0800">
@@ -1254,7 +1254,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>1041,0</TextSelection>
+                                        <TextSelection>0,1041</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                                 <BinderItem ID="185" Type="Text" Created="2013-01-24 15:47:26 -0800" Modified="2013-01-24 15:47:51 -0800">
@@ -1264,7 +1264,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>505,0</TextSelection>
+                                        <TextSelection>0,505</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                                 <BinderItem ID="186" Type="Text" Created="2013-01-24 15:48:54 -0800" Modified="2013-01-24 15:49:11 -0800">
@@ -1313,6 +1313,48 @@
                         <TextSelection>0,0</TextSelection>
                     </TextSettings>
                     <Children>
+                        <BinderItem ID="150" Type="Folder" Created="2012-08-18 16:08:51 -0700" Modified="2012-08-18 16:09:07 -0700">
+                            <Title>Mechanical Turk Oronym Testing</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                            <Children>
+                                <BinderItem ID="151" Type="Text" Created="2012-08-18 16:09:09 -0700" Modified="2012-08-18 16:09:22 -0700">
+                                    <Title>A nice coal dower</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>172,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="152" Type="Text" Created="2012-08-18 16:48:44 -0700" Modified="2012-08-18 16:49:29 -0700">
+                                    <Title>An ice cold hour</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>2347,0</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                                <BinderItem ID="153" Type="Text" Created="2012-08-18 22:45:02 -0700" Modified="2013-03-06 21:19:07 -0800">
+                                    <Title>Selection criteria for oronyms to record</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                        <NotesTextSelection>0,0</NotesTextSelection>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>71,1901</TextSelection>
+                                    </TextSettings>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
                         <BinderItem ID="172" Type="Text" Created="2012-12-19 04:05:45 -0800" Modified="2012-12-19 04:22:46 -0800">
                             <Title>Wave 1 Oronym Selection Criteria</Title>
                             <MetaData>
@@ -1954,48 +1996,6 @@
                     </MetaData>
                     <TextSettings>
                         <TextSelection>0,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-            </Children>
-        </BinderItem>
-        <BinderItem ID="150" Type="Folder" Created="2012-08-18 16:08:51 -0700" Modified="2012-08-18 16:09:07 -0700">
-            <Title>Mechanical Turk Oronym Testing</Title>
-            <MetaData>
-                <IncludeInCompile>Yes</IncludeInCompile>
-                <NotesTextSelection>0,0</NotesTextSelection>
-            </MetaData>
-            <TextSettings>
-                <TextSelection>0,0</TextSelection>
-            </TextSettings>
-            <Children>
-                <BinderItem ID="151" Type="Text" Created="2012-08-18 16:09:09 -0700" Modified="2012-08-18 16:09:22 -0700">
-                    <Title>A nice coal dower</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                        <NotesTextSelection>0,0</NotesTextSelection>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>172,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem ID="152" Type="Text" Created="2012-08-18 16:48:44 -0700" Modified="2012-08-18 16:49:29 -0700">
-                    <Title>An ice cold hour</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                        <NotesTextSelection>0,0</NotesTextSelection>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>2347,0</TextSelection>
-                    </TextSettings>
-                </BinderItem>
-                <BinderItem ID="153" Type="Text" Created="2012-08-18 22:45:02 -0700" Modified="2012-08-18 23:14:12 -0700">
-                    <Title>Selection criteria for oronyms to record</Title>
-                    <MetaData>
-                        <IncludeInCompile>Yes</IncludeInCompile>
-                        <NotesTextSelection>0,0</NotesTextSelection>
-                    </MetaData>
-                    <TextSettings>
-                        <TextSelection>1816,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
