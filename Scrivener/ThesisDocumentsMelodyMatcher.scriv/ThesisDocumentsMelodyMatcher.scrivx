@@ -7,14 +7,24 @@
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
             <Children>
-                <BinderItem ID="121" Type="Text" Created="2012-05-10 12:20:50 -0700" Modified="2012-05-10 12:33:27 -0700">
-                    <Title>NEXT TODO</Title>
+                <BinderItem ID="198" Type="Text" Created="2013-04-03 15:20:05 -0700" Modified="2013-04-03 15:20:38 -0700">
+                    <Title>TODO April 3</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>377,0</TextSelection>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem ID="121" Type="Text" Created="2012-05-10 12:20:50 -0700" Modified="2013-04-03 15:20:03 -0700">
+                    <Title>NEXT TODO (old)</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <NotesTextSelection>0,0</NotesTextSelection>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
                 <BinderItem ID="17" Type="Text" Created="2012-05-09 11:00:42 -0700" Modified="2012-05-09 11:56:31 -0700">
@@ -1338,7 +1348,7 @@
                                         <NotesTextSelection>0,0</NotesTextSelection>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>3398,289</TextSelection>
+                                        <TextSelection>1157,0</TextSelection>
                                     </TextSettings>
                                 </BinderItem>
                             </Children>
@@ -2106,7 +2116,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2012-05-09 10:41:34 -0700" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="1940" Characters="12141" Date="2013-03-03 12:08:06 -0800"></PreviousSession>
+        <PreviousSession Words="767" Characters="4757" Date="2013-04-03 14:38:24 -0700"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>
