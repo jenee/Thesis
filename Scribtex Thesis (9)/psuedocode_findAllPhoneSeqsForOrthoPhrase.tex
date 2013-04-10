@@ -1,0 +1,38 @@
+
+\setlength\LTleft{-2in}
+\begin{figure}
+\begin{verbatim}
+findAllPhoneSeqsForOrthoPhrase( orthoPhrase ) {
+  allFullPhrasePhoneSeqs = empty list of list of phones
+  orthoWords = split orthoPhrase on spaces
+  
+  origNumFullPhrases = 0
+  for( orthoWord in orthoWords with index i ) {
+    nextWordSampaPhoneSeqs = possible phone seqs following orthoWord
+    
+    if ( orthoWord is the first word in orthoPhrase ) {
+      for( phoneSubSeq in nextWordSampaPhoneSeqs ) {
+        append phoneSubSeq to allFullPhrasePhoneSeqs[i]
+      }
+    } else {
+      origNumFullPhrases = allFullPhrasePhoneSeqs.size()
+      if there’s more than one vector <phone> in nextWordSampaPhoneSeqs
+        then we need to create duplicates of all existing allFullPhrasePhoneSeqs
+    }
+    
+    for( m = 0 to allPhrasePhoneSeqs.size() ) {
+      phraseToAppendIndex = m / origNumFullPhrases
+      phoneSeqToAppend = nextWordSampaPhoneSeqs[phraseToAppendIndex]
+      append phoneSeqToAppend to allFullPhrasePhoneSeqs[m]
+    }
+  }
+
+  return allFullPhrasePhoneSeqs
+}
+\end{verbatim}
+\captionfonts
+\caption[Pseudocode for findAllPhoneSeqsForOrthoPhrase]{ Algorithm to get all phonetic sequences for an orthographic phrase. }
+\label{fig:psuedoCode:findAllPhoneSeqsForOrthoPhrase}
+\end{figure}
+%\setlength\LTleft{2in}
+

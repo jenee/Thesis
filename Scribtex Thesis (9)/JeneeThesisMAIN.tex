@@ -1,0 +1,352 @@
+% Cal Poly Thesis
+% 
+% based on UC Thesis format
+%
+% modified by Mark Barry 2/07.
+%
+
+
+
+
+\documentclass[12pt]{ucthesis}
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+    \pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue \fi
+
+\usepackage{url}
+\ifpdf
+
+
+    \usepackage[pdftex]{graphicx}
+    % Update title and author below...
+    \usepackage[pdftex,plainpages=false,breaklinks=true,colorlinks=true,urlcolor=blue,citecolor=blue,%
+                                       linkcolor=blue,bookmarks=true,bookmarksopen=true,%
+                                       bookmarksopenlevel=3,pdfstartview=FitV,
+                                       pdfauthor={Jennifer ``Jenee'' Gayle Hughes},
+                                       pdftitle={Misheard Me Oronyminator: Using Oronyms to Validate the Correctness of Frequency Dictionaries},
+                                       pdfkeywords={thesis, masters, cal poly}
+                                       ]{hyperref}
+    %Options with pdfstartview are FitV, FitB and FitH
+    \pdfcompresslevel=1
+
+\else
+    \usepackage{graphicx}
+\fi
+
+\usepackage{appendix}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[letterpaper]{geometry}
+\usepackage[overload]{textcase}
+
+
+\usepackage{alltt} % for monospace with emph, http://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting
+
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{fancyvrb}
+
+\usepackage{colortbl} %for tablefilter output 
+\usepackage{longtable,lscape} %for tablefilter output, and for making some of the fatter tables fit
+
+\usepackage{chngpage} % To change margins on only one page
+
+\usepackage{pdfpages} % include pdfs as pages in the document. cmd to do so: \includepdf[pages={-}]{myfile.pdf}
+  % reference: http://stackoverflow.com/questions/2739159/inserting-a-pdf-file-in-latex
+
+\bibliographystyle{abbrv}
+
+\setlength{\parindent}{0.25in} \setlength{\parskip}{6pt}
+
+\geometry{verbose,nohead,tmargin=1.25in,bmargin=1in,lmargin=1.5in,rmargin=1.3in}
+
+\setcounter{tocdepth}{2}
+
+
+% Different font in captions (single-spaced, bold) ------------
+\newcommand{\captionfonts}{\small\bf\ssp}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1: #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
+% ---------------------------------------
+
+
+
+
+\begin{document}
+
+% Declarations for Front Matter
+
+% Update fields below!
+%\title{Melody Matcher: A Graphical Approach to Analyzing the Intelligibility of Song Lyrics Using Music-Linguistic Algorithms}
+%\title{Melody Matcher: A Visual Representation of the Intelligibility of Song Lyrics Using Music-Linguistic Analysis}
+%\title{~cutesy name tbd~ (BUMM- Based Upon Melody Matcher): A Visual Analysis of the Intelligibility of Song Lyrics Using a Music-Linguistic Approach}
+%\title{Misheard Me Oronym Tree: A Visualization of Phonetic Ambiguity in Prose Intended For Third-Party Performance}
+\title{Misheard Me Oronyminator: Using Oronyms to Validate the Correctness of Frequency Dictionaries}
+\author{Jennifer ``Jenee'' Gayle Hughes}
+\degreemonth{April} \degreeyear{2013} \degree{Master of Science}
+\defensemonth{June} \defenseyear{2012}
+\numberofmembers{3} \chair{Zo\"{e} Wood, Ph.D.} \othermemberA{Franz Kurfess, Ph.D.} \othermemberB{John Clements, Ph.D.} \field{Computer Science} \campus{San Luis Obispo}
+\copyrightyears{seven}
+
+\maketitle
+
+
+%---------Global defs--------------
+%\include{variableDefs}
+
+\gdef \anIceColdHourOronymCount {152 }
+\gdef \aNiceColdHourOronymCount {290 }
+\gdef \forthRyeToOronymCount {39 }
+
+\gdef \phaseOneANiceColdHourOronymsRecordedUnique {48 }
+\gdef \phaseOneFourthRyeToOronymsRecordedUnique {10 }
+\gdef \phaseOneTotalOronymsRecordedUnique {58 }
+
+\gdef \phaseOneANiceColdHourOronymsRecordedTotal {62 }
+\gdef \phaseOneFourthRyeToOronymsRecordedTotal{15 }
+
+\gdef \uniqueUsersPhaseOneUserStudy {a dozen }
+\gdef \numResponsesPhaseOneUserStudy {72 }
+\gdef \numOronymsPhaseOneUserStudy {48 } % same as phaseOneANiceColdHourOronymsRecordedUnique
+\gdef \numForthRightOohOronymPhrases {10 }% same as phaseOneFourthRyeToOronymsRecordedUnique
+\gdef \numCorrectPronunciationPhaseOneUserStudy {71 }
+
+\gdef \uniqueUsersPhaseTwoUserStudy {208 }
+\gdef \uniqueUsersPhaseTwoUserStudyUSA {127 }
+
+\gdef \numResponsesPhaseTwoUserStudy {851 }
+\gdef \numResponsesPhaseTwoUserStudyUSA {489 }
+\gdef \numResponsesPhaseTwoUserStudyIndia {239 }
+\gdef \numResponsesPhaseTwoUserStudyEngland {37 }
+\gdef \numResponsesPhaseTwoUserStudyCanada{35 }
+
+\gdef \recordingsPhaseTwoUserStudy {15 }
+
+\gdef \numTranscriptionsPerRecordingPhaseTwoUserStudy {74 }
+\gdef \numTotalTranscriptionsPhaseTwo {953 }
+\gdef \numUniqueTranscriptionsPhaseTwo {53 }
+\gdef \numUniqueTranscriptionsWithinEpsilonPhaseTwo {11 }
+\gdef \phaseTwoToleratedEpsilon {5 }
+
+
+\gdef \phaseTwoUserStudyTimesTranscribedAnIceColdHour {352 }   % an ice cold hour
+\gdef \phaseTwoUserStudyTimesTranscribedANiceColdHour {217 }   % a nice cold hour
+\gdef \phaseTwoUserStudyTimesTranscribedANiceGoldHour {63 }    % a nice gold hour
+\gdef \phaseTwoUserStudyTimesTranscribedInIceColdHour {38 }    % in ice cold hour
+\gdef \phaseTwoUserStudyTimesTranscribedAnIceGoldHour {18 }    % an ice gold hour
+\gdef \phaseTwoUserStudyTimesTranscribedAnEyeScoldHour {13 }   % an eye scold hour
+
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingANiceCoalDower {73 }    %    a nice coal dower
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingANiceColdHour {72 }    %    a nice cold our
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingANighScoldHour {69 }    %    a nigh scold our
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingANyeScoldHour {71 }    %    a nye scold hour
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingANyeScoldOur {72 }    %    a nye scold our
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnAyeScoldHour {70 }    %    an aye scold hour
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnEyeScoldOur {71 }    %    an eye scold our
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnIceCoalDower {69 }    %    an ice coal dower
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnIceColdOur {72 }    %    an ice cold our
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnIceColeDower {67 }    %    an ice cole dower
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnIceKohlDower {75 }    %    an ice kohl dower
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnIceDASHColdHour {101 }    %    an ice-cold hour
+\gdef \phaseTwoUserStudyTranscriptionsForRecordingAnIceDASHColdOur {73 }    %    an ice-cold our
+
+
+
+%%An ice cold hour; 
+%%----observed count
+\gdef \transcriptionsPerCountryAnIceColdHourEnglishDominant {218 }
+\gdef \transcriptionsPerCountryAnIceColdHourNonNative {134 }
+
+%%----observed percentage
+\gdef \percentTranscriptionsPerCountryAnIceColdHourEnglishDominant {36 }
+\gdef \percentTranscriptionsPerCountryAnIceColdHourNonNative {38 }
+
+
+%%A nice cold hour; 
+%%----observed count
+\gdef \transcriptionsPerCountryANiceColdHourEnglishDominant {133 }
+\gdef \transcriptionsPerCountryANiceColdHourNonNative {84 }
+
+%%----observed percentage
+\gdef \percentTranscriptionsPerCountryANiceColdHourEnglishDominant {22 }
+\gdef \percentTranscriptionsPerCountryANiceColdHourNonNative {24 }
+
+%%A nice gold hour; 
+%%----observed count
+\gdef \transcriptionsPerCountryANiceGoldHourEnglishDominant {62 }
+\gdef \transcriptionsPerCountryANiceGoldHourNonNative {1 }
+
+%%----observed percentage
+\gdef \percentTranscriptionsPerCountryANiceGoldHourEnglishDominant {10 }
+\gdef \percentTranscriptionsPerCountryANiceGoldHourNonNative {0.2 }
+
+
+%%In ice cold hour; 
+%%-----observed count
+\gdef \transcriptionsPerCountryInIceColdHourEnglishDominant {14 }
+\gdef \transcriptionsPerCountryInIceColdHourNonNative {24 }
+
+%%----observed percentage
+\gdef \percentTranscriptionsPerCountryInIceColdHourEnglishDominant {2 }
+\gdef \percentTranscriptionsPerCountryInIceColdHourNonNative {7 }
+
+%%An ice gold hour; 
+%%----observed count
+\gdef \transcriptionsPerCountryAnIceGoldHourEnglishDominant {18 }
+\gdef \transcriptionsPerCountryAnIceGoldHourNonNative {0 }
+
+%%----observed percentage
+\gdef \percentTranscriptionsPerCountryAnIceGoldHourEnglishDominant {3 }
+\gdef \percentTranscriptionsPerCountryAnIceGoldHourNonNative {0 }
+
+
+
+
+
+
+
+\gdef \phraseOne {``a nice cold hour'' }
+\gdef \unisynFreqForPhraseOne {7851662 }
+\gdef \cocaFreqForPhraseOne {247719 }
+\gdef \USATranscriptionsOfPhraseOne {125 } 
+
+\gdef \phraseTwo {``an ice cold hour'' }
+\gdef \unisynFreqForPhraseTwo {931028 }
+\gdef \cocaFreqForPhraseTwo {227405 }
+\gdef \USATranscriptionsOfPhraseTwo {191 } 
+
+\gdef \unisynCombinedFreq {8782690 }  %combined freq of phrases 1 and 2
+\gdef \cocaCombinedFreq {475124 }  %combined freq of phrases 1 and 2
+\gdef \USACombinedTranscriptions {316 } %combined transcription count of phrases 1 and 2
+
+\gdef \alphaSigFigs {0.01 } 
+\gdef \expectedProportionOfPhraseOneOccurances {0.8934 }
+\gdef \observedProportionOfPhraseOneOccurances {0.3956 }
+\gdef \expectedProportionOfPhraseOneOccurancesCOCA {0.4793 }
+
+\gdef \UNISYNzVal{18.0971 }
+\gdef \COCAzVal{3.0428 }
+
+\gdef \pvalue {0.0000 }
+\gdef \pvalueCOCA {0.0023 }
+
+\gdef \cocaDocCountForA {168619 }
+\gdef \cocaDocCountForAn {159720 }
+\gdef \cocaDocCountForNice {24781 }
+\gdef \cocaDocCountForIce {13366 }
+\gdef \cocaDocCountForCold {23031 }
+\gdef \cocaDocCountForHour {31288 }
+
+
+
+
+%-------------------
+
+
+
+
+\begin{frontmatter}
+
+% Custom made for Cal Poly (by Mark Barry, modified by Andrew Tsui).
+\copyrightpage
+
+% Custom made for Cal Poly (by Andrew Tsui).
+\committeemembershippage
+
+\include{abstractSection}
+
+
+
+%\begin{acknowledgements}
+
+%   Thank you...
+
+%\end{acknowledgements}
+
+
+\tableofcontents
+
+
+\listoftables
+
+\listoffigures
+
+\end{frontmatter}
+
+\pagestyle{plain}
+
+
+
+
+\renewcommand{\baselinestretch}{1.66}
+
+
+% ------------- Main chapters here --------------------
+
+\include{vocab}
+
+\include{intro}
+
+%%%%\include{relatedWork}
+%%%%%\include{background}
+
+\include{implementation}
+
+
+\include{userStudy}
+
+\include{results}
+
+\include{futureWork}
+
+\include{conclusion}
+
+
+
+% ------------- End main chapters ----------------------
+
+\clearpage
+
+\pagebreak
+\appendix
+
+\include{appendices}
+\addcontentsline{toc}{chapter}{Appendices}
+\input{appendix}
+
+%\include{table:phrasesRecorded}
+
+%\include{phaseOneBubbleCharts}
+%\include{aNiceColdHourOronymWithFreqsTable}
+
+
+\pagebreak
+\clearpage
+
+\bibliographystyle{plain}
+\bibliography{jeneeBib}
+%\addcontentsline{toc}{chapter}{Bibliography}
+
+
+\end{document}
+

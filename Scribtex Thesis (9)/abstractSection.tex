@@ -1,0 +1,17 @@
+\label{abstractSection}
+
+\begin{abstract}
+
+
+In the field of speech recognition, an algorithm must learn to tell the difference between ``a nice rock'' and ``a gneiss rock''. These identical-sounding phrases are called oronyms. Word frequency dictionaries are often used by speech recognition systems to help resolve phonetic sequences with more than one possible orthographic phrase interpretation, by looking up which oronym of the root phonetic sequence contains the most-common words.
+
+Our paper demonstrates a technique used to validate word frequency dictionary values.We chose to use frequency values from the UNISYN dictionary, which tallies each word on a per-occurance basis, using a proprietary text corpus, to calculate word frequency.
+
+In the first phase of our user study, we generated oronym strings for the phrase \emph{``a nice cold hour''},  and had over \uniqueUsersPhaseOneUserStudy people make \phaseOneANiceColdHourOronymsRecordedTotal recordings of the most-common oronyms for that phrase.  In the second phase, we selected \recordingsPhaseTwoUserStudy of the phase one recordings, and had \numTranscriptionsPerRecordingPhaseTwoUserStudy different people transcribe each one, for a total of \numTotalTranscriptionsPhaseTwo transcriptions overall.  
+
+If the frequency dictionary values for our test phrases accurately reflected the real-world expectations of actual listeners, we would expect that the most-commonly transcribed phrases in our user study would roughly correspond with our metric for the most likely oronym interpretation of the root phrase. 
+
+During the course of our study, we found that using per-occurance frequency values when computing our overall-phrase-frequency metric caused the end result to be thrown off by excessively common words, such as ``the'', ``is'', and ``a''. These super-common words had such high per-occurance tallies that they overpowered any effect that any regular word had on a frequency metric. However, when we tally on a document-count basis, instead of a by-occurance basis, we found that this effect was mitigated. 
+
+
+\end{abstract}
